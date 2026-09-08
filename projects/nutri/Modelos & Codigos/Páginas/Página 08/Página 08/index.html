@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page | Nome do Seu Produto</title>
+    <link rel="stylesheet" href="./assets/tailwind.css">
+    <link rel="stylesheet" href="./assets/fonts.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020617;
+            color: white;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, .font-anton {
+            font-family: 'Anton', sans-serif;
+            text-transform: uppercase;
+        }
+        .font-righteous {
+            font-family: 'Righteous', cursive;
+        }
+        
+        /* Custom Animations */
+        @keyframes pulse-text {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .pulse-text {
+            animation: pulse-text 2s infinite ease-in-out;
+        }
+
+        /* Gradient Text Highlight - Now Cyan to Teal */
+        .background-destaque {
+            background: linear-gradient(90deg, #22d3ee, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding: 0 4px;
+        }
+
+        /* Game Button Style - Updated to Orange */
+        .game-button {
+            position: relative;
+            background: #ea580c; /* orange-600 */
+            color: white;
+            padding: 15px 30px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(234, 88, 12, 0.4);
+            border-radius: 4px;
+        }
+        .game-button:hover {
+            background: #c2410c; /* orange-700 */
+            transform: translateY(-2px);
+        }
+        .game-button p {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+        .game-button .square {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: white;
+            border: 1px solid #ea580c; /* orange-600 */
+        }
+        .top-left { top: -4px; left: -4px; }
+        .top-right { top: -4px; right: -4px; }
+        .bottom-left { bottom: -4px; left: -4px; }
+        .bottom-right { bottom: -4px; right: -4px; }
+
+        /* Marquee / Sliding Text */
+        @keyframes sliding {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .sliding-container {
+            display: flex;
+            white-space: nowrap;
+            animation: sliding 20s linear infinite;
+        }
+
+        /* Infinite Scroll for Images */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-scroll {
+            display: flex;
+            width: max-content;
+            animation: scroll 40s linear infinite;
+        }
+        .animate-scroll:hover {
+            animation-play-state: paused;
+        }
+
+        /* Glassmorphism / Cards - Dark Slate */
+        .card-dark {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Feature Card Professional Hover Effect */
+        .feature-card {
+            background: rgba(15, 23, 42, 0.6); /* Transparent dark blue */
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(34, 211, 238, 0.1) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background: rgba(15, 23, 42, 0.95);
+            border-color: rgba(34, 211, 238, 0.4); /* Cyan border hint */
+            box-shadow: 0 20px 40px -15px rgba(6, 182, 212, 0.2); /* Cyan glow shadow */
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-card .icon-box {
+            transition: all 0.4s ease;
+        }
+        
+        .feature-card:hover .icon-box {
+            transform: scale(1.1) rotate(5deg);
+            background-color: #22d3ee; /* Bright Cyan */
+            box-shadow: 0 0 15px rgba(34, 211, 238, 0.6);
+        }
+
+        /* Scroll reveal colors - Updated to Teal */
+        .reveal-text {
+            opacity: 0.2;
+            transition: opacity 0.5s ease;
+        }
+        .reveal-text.active {
+            opacity: 1;
+            color: #10b981;
+        }
+
+        /* Custom Scrollbar - Updated to Cyan */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #020617;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0891b2;
+            border-radius: 10px;
+        }
+
+        /* Utility to hide scrollbar */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+
+  <script defer src="./assets/index-CNY4K8F_.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>

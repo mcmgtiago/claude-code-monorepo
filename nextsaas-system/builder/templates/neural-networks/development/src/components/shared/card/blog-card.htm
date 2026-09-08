@@ -1,0 +1,42 @@
+<article
+  class="group underline-hover-effect-black w-full space-y-4 rounded-3xl bg-white p-4 lg:p-6"
+>
+  <figure class="{=$img-class} h-[276px] w-full overflow-hidden rounded-2xl">
+    <a href="./blog-details.html">
+      <img
+        src="{=$image}"
+        alt="{=$title}"
+        class="size-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 group-hover:rotate-1"
+      />
+    </a>
+  </figure>
+
+  <div class="space-y-4">
+    <time
+      class="font-inter-tight text-tagline-4 text-background-13/80 inline-block font-normal"
+      datetime="2025-07-05"
+    >
+      {=$date}
+    </time>
+
+    <div class="flex items-center justify-start gap-x-2">
+      <div
+        class="bg-background-13/5 text-background-13/50 font-inter-tight text-tagline-3 rounded-sm px-3 py-1 font-normal"
+      >
+        {=$badge1}
+      </div>
+      <div
+        class="bg-background-13/5 text-background-13/50 font-inter-tight text-tagline-3 rounded-sm px-3 py-1 font-normal"
+      >
+        {=$badge2}
+      </div>
+    </div>
+
+    <a
+      href="./blog-details.html"
+      class="font-sora blog-title-black text-sora-heading-5 text-background-13/90 line-clamp-2"
+    >
+      <h3>{=$title}</h3>
+    </a>
+  </div>
+</article>

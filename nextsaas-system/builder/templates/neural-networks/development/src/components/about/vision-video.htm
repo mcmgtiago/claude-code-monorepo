@@ -1,0 +1,39 @@
+<!-- video  -->
+<section data-opai-animate data-delay="0.1" class="lp:pb-44! pb-20 md:pb-25 lg:pb-30">
+  <div class="main-container">
+    <div
+      class="group relative h-[400px] overflow-hidden rounded-2xl bg-neutral-800 md:h-[550px] lg:h-[785px]"
+    >
+      <video
+        data-about-video
+        class="size-full object-cover"
+        src="/video/video.mp4"
+        muted
+        playsinline
+        loop
+        autoplay
+        preload="auto"
+      ></video>
+      <button
+        data-about-video-control
+        data-play="true"
+        type="button"
+        class="group/control absolute top-1/2 left-1/2 flex size-18 -translate-x-1/2 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white opacity-0 outline-2 outline-[#beab9a] backdrop-blur-xl transition-all duration-300 ease-in-out group-hover:opacity-100 hover:scale-105"
+        aria-label="Toggle play"
+      >
+        <span class="relative flex size-full items-center justify-center">
+          <span
+            class="play-icon absolute translate-y-0 opacity-100 transition-all duration-300 group-data-[play=true]/control:translate-y-6 group-data-[play=true]/control:opacity-0"
+          >
+            <Component src="src/components/shared/icon/play.htm" />
+          </span>
+          <span
+            class="pause-icon absolute translate-y-6 opacity-0 transition-all duration-300 group-data-[play=true]/control:translate-y-0 group-data-[play=true]/control:opacity-100"
+          >
+            <Component src="src/components/shared/icon/pause-icon.htm" />
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+</section>

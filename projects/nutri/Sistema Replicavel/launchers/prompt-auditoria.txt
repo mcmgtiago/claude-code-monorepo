@@ -1,0 +1,15 @@
+COMO USAR: envie este prompt ao agente após substituir os campos. `WORKSPACE_ROOT` e `PROJECT_ROOT` devem ser absolutos. `REPORT_ONLY` cria/atualiza somente `_project/qa-report.md`; `FIX_P0_P1` também pode alterar os arquivos estritamente necessários às correções.
+
+WORKSPACE_ROOT = "[PENDENTE: raiz absoluta do workspace]"
+SYSTEM_ROOT = "${WORKSPACE_ROOT}/Sistema Replicavel"
+
+Use `${SYSTEM_ROOT}/07-PROMPT-ORQUESTRADOR.md` e `${SYSTEM_ROOT}/09-CHECKLIST-QA.md`.
+
+CONFIGURAÇÃO
+PROJECT_ROOT = "[PENDENTE: diretório do projeto]"
+EXECUTION_MODE = "AUDIT"
+AUDIT_ACTION = "[REPORT_ONLY | FIX_P0_P1]"
+RELEASE_TARGET = "[PROTOTYPE | PRODUCTION | UNKNOWN]"
+REGULATED_PROFILE = "[HEALTH | FITNESS | GENERAL]"
+
+Infira stack e tipo de projeto a partir dos arquivos. Audite sem presumir redesign. Priorize falhas observáveis de conteúdo/evidência, conversão, links/formulários, responsividade, acessibilidade, motion, performance, SEO, privacidade e dependências. Em `FIX_P0_P1`, inspecione scripts antes de executar comandos e faça a menor correção segura. Em `REPORT_ONLY`, não instale, não rode código não confiável e não altere a implementação.

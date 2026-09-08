@@ -1,0 +1,11 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#1F2937"/>
+  <circle cx="980" cy="120" r="260" fill="#25D366" opacity="0.25"/>
+  <circle cx="170" cy="560" r="220" fill="#DC2626" opacity="0.16"/>
+  <rect x="80" y="80" width="1040" height="470" rx="38" fill="white" opacity="0.95"/>
+  <text x="120" y="190" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#25D366">Praga Zero Dedetização</text>
+  <text x="120" y="285" font-family="Arial, sans-serif" font-size="68" font-weight="900" fill="#1F2937">Dedetização 24h</text>
+  <text x="120" y="360" font-family="Arial, sans-serif" font-size="36" font-weight="600" fill="#6B7280">Produtos ANVISA • Pet friendly • Garantia escrita</text>
+  <rect x="120" y="420" width="360" height="72" rx="36" fill="#25D366"/>
+  <text x="165" y="466" font-family="Arial, sans-serif" font-size="30" font-weight="800" fill="white">Orçamento grátis</text>
+</svg>

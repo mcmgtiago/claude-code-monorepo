@@ -1,0 +1,20 @@
+COMO USAR: envie este prompt ao agente após substituir todos os campos entre colchetes. `WORKSPACE_ROOT` e `PROJECT_ROOT` devem ser caminhos absolutos. Este fluxo pode alterar o projeto e os arquivos de `_project/`.
+
+Use `${SYSTEM_ROOT}/07-PROMPT-ORQUESTRADOR.md` como instrução principal.
+
+CONFIGURAÇÃO
+WORKSPACE_ROOT = "[PENDENTE: raiz absoluta do workspace]"
+SYSTEM_ROOT = "${WORKSPACE_ROOT}/Sistema Replicavel"
+PROJECT_ROOT = "[PENDENTE: diretório do site]"
+CLIENT_MATERIALS_ROOT = "[PENDENTE: diretório dos materiais originais do cliente]"
+LOCAL_CODE_AUTHORIZATION = "[CONFIRMED | PENDING | DENIED]"
+PROJECT_TYPE = "[SITE_PROFISSIONAL | SITE_CLINICA_ESTUDIO | GENERIC_SITE]"
+REGULATED_PROFILE = "[FISIOTERAPIA | EDUCACAO_FISICA | MULTIPROFISSIONAL | GENERAL]"
+STACK_PROFILE = "[STATIC | REACT | EXISTING]"
+EXECUTION_MODE = "[GATED | AUTO]"
+RELEASE_TARGET = "[PROTOTYPE | PRODUCTION]"
+AUDIT_ACTION = "NOT_APPLICABLE"
+PRIMARY_GOAL = "[PENDENTE]"
+PRIMARY_CTA = "[PENDENTE: ação e destino]"
+
+Organize materiais sem alterar originais; leia tudo e extraia identidade/cores com fonte; determine sitemap e copy integral. Consulte o catálogo e depois inspecione o código real de `Páginas`, `HERO`, `Blocos` e `Efeitos`. Selecione obrigatoriamente 1 base de página, 3 heroes distintos, 1 bloco e 1 efeito elegível. Após direção única, `hero_type` e plano, implemente somente três versões do hero da home em `_project/hero-variants/v1`, `v2` e `v3`, com mesma copy/CTA/tokens. Pare em `AWAITING_HERO_APPROVAL`. Não implemente restante da home, rotas internas, QA final ou handoff antes da escolha humana registrada.

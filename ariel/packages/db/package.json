@@ -1,0 +1,13 @@
+{
+  "name": "@ariel/db",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "push": "node migrations/apply.mjs",
+    "seed": "node seeds/seed.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "dotenv": "^16.4.5"
+  }
+}

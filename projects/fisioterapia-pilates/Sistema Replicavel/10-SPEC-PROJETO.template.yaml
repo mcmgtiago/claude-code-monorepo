@@ -1,0 +1,461 @@
+schema_version: "2.2"
+# draft | AWAITING_HERO_APPROVAL | implementation | BLOCKED | CONDITIONAL | PASS
+status: draft
+
+project:
+  name: null
+  slug: null
+  root: null
+  service_line: null
+  # LP_FISIOTERAPIA | LP_PILATES | LP_REABILITACAO | LP_PROGRAMA |
+  # LP_PRODUTO | SITE_PROFISSIONAL | SITE_CLINICA_ESTUDIO |
+  # PERFORMANCE_MOVIMENTO | GENERIC_LP | GENERIC_SITE
+  type: null
+  # FISIOTERAPIA | EDUCACAO_FISICA | MULTIPROFISSIONAL | GENERAL
+  regulated_profile: null
+  stack_profile: null
+  execution_mode: null
+  release_target: null
+  audit_action: null
+  owner: null
+  target_date: null
+
+workflow:
+  # discovery | strategy | copy | direction | blueprint | hero_sprint |
+  # awaiting_hero_approval | implementation | qa | handoff
+  phase: discovery
+  first_code_delivery: hero_variants
+
+materials:
+  root: null
+  organized: false
+  originals_preserved: null
+  # Manifest shape: { id, category, original_path, owner, license, quality,
+  # duplicate_of, sensitive, allowed_uses, status }
+  manifest: []
+  # Identity source shape: { id, attribute, value, source, classification,
+  # confidence, approver, status }
+  identity_sources: []
+
+objective:
+  business_goal: null
+  primary_conversion: null
+  primary_cta:
+    label: null
+    destination: null
+    integration: null
+  secondary_conversion: null
+  traffic_sources: []
+  traffic_temperature: null
+  success_metric: null
+  baseline: null
+
+evidence:
+  # Record shape: { id, statement, source, status, allowed_uses }
+  facts: []
+  # Asset shape: { id, path, owner, license, status, allowed_uses }
+  assets: []
+  # Claim shape: { id, text, evidence_ids, reviewer, status, allowed_routes }
+  claims: []
+  # Hypothesis/unknown/forbidden shape: { id, description, impact, owner, status }
+  hypotheses: []
+  unknowns: []
+  forbidden: []
+
+copy:
+  # draft | complete_for_hero | approved
+  status: draft
+  artifact: "_project/copy.md"
+  completed_routes: []
+  evidence_snapshot: null
+  completed_at: null
+
+brand:
+  public_name: null
+  legal_name: null
+  profession: null
+  specialty: null
+  professional_registration: null
+  technical_responsible: null
+  # Professional shape: { name, public_role, profession, council, region,
+  # registration, specialties, responsibility, evidence_ids }
+  professionals: []
+  positioning: null
+  voice:
+    attributes: []
+    use: []
+    avoid: []
+  existing_tokens: {}
+  assets_root: null
+
+service_context:
+  # Examples: physiotherapy, pilates, rehabilitation, movement_performance,
+  # education. Pilates does not define the responsible profession.
+  primary_category: null
+  service_nature: null
+  pilates_application: null
+  responsible_professions: []
+  primary_needs: []
+  functional_goals: []
+  activity_contexts: []
+  diagnosis_source: null
+  initial_step: null
+  assessment_required: null
+  referral_requirements: []
+  scope_boundaries: []
+  redirect_or_exclusion_criteria: []
+  emergency_guidance: null
+  emergency_guidance_evidence_id: null
+
+audience:
+  primary: null
+  secondary: null
+  excluded: null
+  context: null
+  awareness_stage: null
+  recognized_problem: null
+  underlying_problem: null
+  desired_outcome: null
+  prior_attempts: []
+  objections: []
+  vocabulary: []
+  accessibility_needs: []
+
+offer:
+  name: null
+  category: null
+  description: null
+  mechanism: null
+  deliverables: []
+  process: []
+  initial_contact: null
+  assessment_description: null
+  duration: null
+  session_duration: null
+  frequency: null
+  modality: null
+  session_format: null
+  max_group_size: null
+  equipment: []
+  accessibility: []
+  support: null
+  price:
+    display: false
+    amount: null
+    installments: null
+    recurrence: null
+  guarantee_or_cancellation: null
+  limitations: []
+  for_whom: []
+  not_for_whom: []
+
+message:
+  core_promise: null
+  supporting_message: null
+  profession_and_scope_statement: null
+  individual_variability_statement: null
+  emergency_statement: null
+  differentiators: []
+  proof_hierarchy: []
+  objection_responses: []
+  trust_microcopy: []
+
+architecture:
+  model: null
+  rationale: null
+  pages:
+    - path: "/"
+      purpose: null
+      primary_keyword: null
+      primary_cta: null
+      # Section shape: { id, purpose, question, evidence_ids, cta, mobile_order }
+      sections: []
+  mobile_order_notes: []
+  navigation:
+    type: null
+    items: []
+  footer_requirements: []
+
+visual:
+  route: null
+  secondary_influence: null
+  # SPLIT_PORTRAIT | EDITORIAL_MEDIA | CINEMATIC_MEDIA | GRID_TECHNICAL |
+  # PRODUCT_DEMO | PERFORMANCE_ACTION
+  hero_type: null
+  fingerprint:
+    authority: null
+    temperature: null
+    energy: null
+    density: null
+    expression: null
+  concept: null
+  tokens:
+    color: {}
+    typography: {}
+    spacing: {}
+    radius: {}
+    shadow: {}
+  grid:
+    max_width: null
+    columns: null
+    gutter: null
+  photography:
+    direction: null
+    required_shots: []
+  icon_family: null
+  motion_level: null
+  motion_signature: null
+
+references:
+  local_corpus_priority: required
+  local_code_authorization:
+    # CONFIRMED | PENDING | DENIED
+    status: PENDING
+    source: null
+    scope: null
+    confirmed_by: null
+    date: null
+  required_categories:
+    # pending | inspected | selected | blocked
+    pages: pending
+    heroes: pending
+    blocks: pending
+    effects: pending
+  primary_page: null
+  hero_candidates: []
+  approved_hero_source: null
+  block: null
+  effect: null
+  visual_images: []
+  decisions:
+    - source: null
+      source_files_read: []
+      role: null
+      catalog_status: null
+      reuse_level: null
+      authorization: null
+      kept_code: []
+      changed_code: []
+      extracted: []
+      rejected: []
+      provenance: null
+      dependencies: []
+      fallback: null
+      validation: []
+
+hero_sprint:
+  scope: home_or_primary_route_hero
+  hero_type: null
+  required_variant_count: 3
+  shared_copy_source: "_project/copy.md"
+  shared_tokens: true
+  shared_cta: true
+  first_visual_code_delivery: true
+  variants_root: "_project/hero-variants"
+  indexing: noindex
+  variants:
+    - id: v1
+      source: null
+      source_files_read: []
+      catalog_status: null
+      preview_path: "_project/hero-variants/v1"
+      reuse_level: null
+      authorization: null
+      kept_code: []
+      rejected_code: []
+      dependencies: []
+      fallback: null
+      validation_status: not_started
+    - id: v2
+      source: null
+      source_files_read: []
+      catalog_status: null
+      preview_path: "_project/hero-variants/v2"
+      reuse_level: null
+      authorization: null
+      kept_code: []
+      rejected_code: []
+      dependencies: []
+      fallback: null
+      validation_status: not_started
+    - id: v3
+      source: null
+      source_files_read: []
+      catalog_status: null
+      preview_path: "_project/hero-variants/v3"
+      reuse_level: null
+      authorization: null
+      kept_code: []
+      rejected_code: []
+      dependencies: []
+      fallback: null
+      validation_status: not_started
+  # not_started | building | awaiting_approval | approved
+  status: not_started
+  selected_variant: null
+  rest_implementation_allowed: false
+  deploy_excluded: true
+
+technical:
+  framework: null
+  language: null
+  package_manager: null
+  build_command: null
+  test_command: null
+  lint_command: null
+  deploy_target: null
+  publish_root: null
+  deploy_exclude:
+    - "_project/**"
+    - ".env*"
+    - "**/*.log"
+    - "**/*.bak"
+  subpath_support: false
+  paths_relative: true
+  motion_stack: null
+  # Dependency shape: { name, version, direct, source, license, integrity, purpose, decision }
+  dependencies: []
+  integrations:
+    # Every integration references privacy.processing_operations IDs.
+    form:
+      provider: null
+      processing_operation_ids: []
+    whatsapp:
+      provider: null
+      processing_operation_ids: []
+    scheduling:
+      provider: null
+      processing_operation_ids: []
+    checkout:
+      provider: null
+      processing_operation_ids: []
+    analytics:
+      provider: null
+      processing_operation_ids: []
+    consent:
+      provider: null
+      processing_operation_ids: []
+  progressive_enhancement:
+    no_js: null
+    reduced_motion: null
+    media_fallback: null
+  performance_budget:
+    lcp_seconds: 2.5
+    cls: 0.1
+    inp_ms: 200
+    initial_js_gzip_kb: 150
+    initial_page_weight_kb: 1500
+    max_font_families: 2
+    signature_effects: 1
+
+seo:
+  default_index: null
+  default_meta_robots: null
+  canonical_base: null
+  title_pattern: null
+  description_pattern: null
+  og_image: null
+  sitemap: null
+  robots_txt:
+    policy: null
+    sitemap_urls: []
+  structured_data: []
+  local_business_data_source: null
+  # Route shape: { path, robots_txt_allowed, meta_robots, x_robots_tag,
+  # canonical, title, description, og_image, schema, sitemap_included }
+  routes: []
+
+privacy:
+  controller: null
+  operators: []
+  purposes: []
+  data_collected: []
+  sensitive_data_collected: null
+  storage: null
+  recipients: []
+  processing_locations: []
+  retention: null
+  disposal: null
+  privacy_policy_url: null
+  consent_required: null
+  consent_version: null
+  withdrawal_channel: null
+  minors_in_scope: null
+  cookie_categories: []
+  # Operation shape: { id, purpose, data_categories, sensitive, controller,
+  # operators, recipients, processing_locations, retention, disposal,
+  # legal_basis_decision, rights_channel, consent_version, technical_controls }
+  processing_operations: []
+
+compliance:
+  professional_review:
+    required: null
+    decided_by: null
+    scope_reviewed: null
+    rationale: null
+    decision_date: null
+    reviewer: null
+    reviewer_role: null
+    reviewer_registration: null
+  regulatory_sources_checked: []
+  scope_boundaries: []
+  claims_reviewed: []
+  testimonial_permissions: []
+  image_permissions: []
+  disclaimer: null
+
+qa:
+  required_viewports: [320, 375, 768, 1024, 1440]
+  browsers: []
+  assistive_technology: []
+  keyboard: required
+  zoom_200: required
+  reduced_motion: required
+  no_js: conditional
+  automated_tools: []
+  accessibility_conformance_claim: false
+  wcag_matrix_path: null
+  field_metrics_source: null
+  prelaunch_required_status: not_started
+  deploy_validation_status: not_started
+  field_monitoring_plan: null
+  performance_lab_results: []
+  budget_exceptions: []
+  blockers_open: []
+  status: not_started
+
+approvals:
+  g1:
+    status: pending
+    decision: null
+    approver: null
+    date: null
+  g2:
+    status: pending
+    decision: null
+    approver: null
+    date: null
+  g3:
+    status: pending
+    decision: null
+    approver: null
+    date: null
+  hero:
+    # Human approval required in GATED and AUTO.
+    status: pending
+    decision: null
+    selected_variant: null
+    approver: null
+    date: null
+
+release:
+  publishable: false
+  reason: draft
+  deployed_url: null
+  preview_access: null
+
+decision_log:
+  - date: null
+    decision: null
+    rationale: null
+    owner: null

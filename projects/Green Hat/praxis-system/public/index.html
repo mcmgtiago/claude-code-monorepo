@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRÁXIS — Demo | Dr. Carlos Mendes, Urologista</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- LANDING PAGE DEMO -->
+  <div class="demo-container">
+    <!-- Left: Landing Page -->
+    <div class="landing">
+      <header class="header">
+        <div class="logo">
+          <span class="logo-praxis">PRÁXIS</span>
+        </div>
+        <nav class="nav">
+          <a href="#sobre">Sobre</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <div class="hero-content">
+          <span class="badge">UROLOGIA · PORTO ALEGRE</span>
+          <h1 class="hero-title">Dr. Carlos Mendes</h1>
+          <p class="hero-subtitle">Urologista dedicado à sua saúde íntima com discrição e cuidado profissional</p>
+          <div class="hero-cta">
+            <button class="btn-primary" onclick="openChat()">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12a8.5 8.5 0 0 1-8.5 8.5 8.38 8.38 0 0 1-3.6-.8L3 21l1.4-5.4A8.5 8.5 0 1 1 21 12z"/>
+              </svg>
+              Conversar pelo WhatsApp
+            </button>
+            <a href="#servicos" class="btn-secondary">Ver serviços</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="image-placeholder">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+              <path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93"/>
+              <path d="M8.56 13.44A6 6 0 0 0 6 18h12a6 6 0 0 0-2.56-4.56"/>
+              <path d="M14 22h-4"/>
+              <path d="M12 18v4"/>
+              <circle cx="12" cy="6" r="1"/>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="features" id="sobre">
+        <div class="feature">
+          <div class="feature-icon">🔒</div>
+          <h3>100% Confidencial</h3>
+          <p>Seus dados e conversas são protegidos com criptografia de ponta.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">⏰</div>
+          <h3>Atendimento 24h</h3>
+          <p>Agende a qualquer hora, mesmo fora do horário comercial.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🏥</div>
+          <h3>15+ Anos de Experiência</h3>
+          <p>Mais de 10.000 pacientes atendidos com excelência.</p>
+        </div>
+      </section>
+
+      <section class="services" id="servicos">
+        <h2>Serviços</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h4>Consulta Urológica</h4>
+            <p class="service-price">R$ 350</p>
+            <p class="service-time">45 minutos</p>
+            <ul>
+              <li>Avaliação completa</li>
+              <li>Plano de tratamento</li>
+              <li>Receita digital</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <h4>Exame de PSA</h4>
+            <p class="service-price">R$ 200</p>
+            <p class="service-time">20 minutos</p>
+            <ul>
+              <li>Coleta rápida</li>
+              <li>Resultado em 24h</li>
+              <li>Laudo digital</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <h4>Retorno</h4>
+            <p class="service-price">R$ 180</p>
+            <p class="service-time">30 minutos</p>
+            <ul>
+              <li>Acompanhamento</li>
+              <li>Ajustes de tratamento</li>
+              <li>Orientações</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contato">
+        <h2>Entre em Contato</h2>
+        <div class="contact-info">
+          <p>📍 Av. Ipiranga, 1000 — Porto Alegre, RS</p>
+          <p>📞 (51) 99999-9999</p>
+          <p>🕐 Seg-Sex, 8h-18h</p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>© 2026 Dr. Carlos Mendes — Urologista | Powered by PRÁXIS</p>
+      </footer>
+    </div>
+
+    <!-- Right: Chat Widget -->
+    <div class="chat-container" id="chatContainer">
+      <div class="chat-header">
+        <div class="chat-avatar">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 21v-2a8 8 0 0 1 16 0v2"/>
+          </svg>
+        </div>
+        <div class="chat-info">
+          <h3>Atendimento Dr. Carlos</h3>
+          <p class="chat-status">● Online · Resposta em segundos</p>
+        </div>
+        <button class="chat-close" onclick="closeChat()" aria-label="Fechar">✕</button>
+      </div>
+
+      <div class="chat-messages" id="chatMessages">
+        <!-- Messages will be inserted here -->
+      </div>
+
+      <div class="chat-input-area">
+        <div class="chat-quick-actions" id="quickActions">
+          <button class="quick-action" onclick="sendQuickMessage('Quero agendar uma consulta')">
+            📅 Agendar consulta
+          </button>
+          <button class="quick-action" onclick="sendQuickMessage('Tenho uma dúvida sobre urologia')">
+            ❓ Tirar dúvida
+          </button>
+          <button class="quick-action" onclick="sendQuickMessage('Estou com um sintoma')">
+            🩺 Tenho um sintoma
+          </button>
+        </div>
+
+        <div class="chat-input-container">
+          <textarea
+            id="chatInput"
+            placeholder="Digite sua mensagem..."
+            rows="1"
+            onkeydown="if(event.key === 'Enter' && !event.shiftKey) { event.preventDefault(); sendMessage(); }"
+          ></textarea>
+          <button class="btn-send" onclick="sendMessage()" aria-label="Enviar">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13"/>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat Toggle Button -->
+    <button class="chat-toggle" id="chatToggle" onclick="openChat()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 12a8.5 8.5 0 0 1-8.5 8.5 8.38 8.38 0 0 1-3.6-.8L3 21l1.4-5.4A8.5 8.5 0 1 1 21 12z"/>
+      </svg>
+      <span class="chat-toggle-text">Conversar agora</span>
+    </button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

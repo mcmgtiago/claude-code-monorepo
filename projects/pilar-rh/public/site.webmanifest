@@ -1,0 +1,16 @@
+{
+  "name": "PILAR Recursos Humanos",
+  "short_name": "PILAR",
+  "description": "Recrutamento, trabalho temporário, terceirização, administração de pessoal e desenvolvimento de equipes.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbfaf7",
+  "theme_color": "#10283f",
+  "icons": [
+    {
+      "src": "/brand/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

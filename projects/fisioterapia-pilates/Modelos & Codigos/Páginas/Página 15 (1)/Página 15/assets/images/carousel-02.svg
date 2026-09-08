@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 640" width="360" height="640">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060d1a"/>
+      <stop offset="100%" stop-color="#0e2040"/>
+    </linearGradient>
+    <radialGradient id="glow2" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="360" height="640" fill="url(#bg2)"/>
+  <rect width="360" height="640" fill="url(#glow2)"/>
+  <line x1="0" y1="160" x2="360" y2="160" stroke="#1a2040" stroke-width="0.8"/>
+  <line x1="0" y1="320" x2="360" y2="320" stroke="#1a2040" stroke-width="0.8"/>
+  <line x1="0" y1="480" x2="360" y2="480" stroke="#1a2040" stroke-width="0.8"/>
+  <line x1="120" y1="0" x2="120" y2="640" stroke="#1a2040" stroke-width="0.8"/>
+  <line x1="240" y1="0" x2="240" y2="640" stroke="#1a2040" stroke-width="0.8"/>
+  <!-- phone body -->
+  <rect x="110" y="130" width="140" height="280" rx="20" ry="20" fill="#0f172a" stroke="#7c3aed" stroke-width="1.5"/>
+  <rect x="155" y="133" width="50" height="10" rx="5" fill="#1e1b4b"/>
+  <rect x="120" y="152" width="120" height="218" rx="4" ry="4" fill="#0d1a2e"/>
+  <!-- person speaking -->
+  <circle cx="180" cy="205" r="30" fill="#2e1065"/>
+  <path d="M142 265 Q180 245 218 265 L218 305 Q180 312 142 305 Z" fill="#2e1065"/>
+  <!-- speech waves / audio waveform -->
+  <rect x="145" y="315" width="6" height="20" rx="3" fill="#7c3aed" opacity="0.7"/>
+  <rect x="157" y="308" width="6" height="34" rx="3" fill="#7c3aed" opacity="0.9"/>
+  <rect x="169" y="312" width="6" height="26" rx="3" fill="#7c3aed"/>
+  <rect x="181" y="305" width="6" height="40" rx="3" fill="#a78bfa"/>
+  <rect x="193" y="310" width="6" height="30" rx="3" fill="#7c3aed"/>
+  <rect x="205" y="316" width="6" height="18" rx="3" fill="#7c3aed" opacity="0.7"/>
+  <!-- microphone icon bottom -->
+  <rect x="174" y="344" width="12" height="18" rx="6" fill="#7c3aed" stroke="#a78bfa" stroke-width="1"/>
+  <path d="M166 358 Q166 372 180 372 Q194 372 194 358" stroke="#a78bfa" stroke-width="1.5" fill="none"/>
+  <line x1="180" y1="372" x2="180" y2="380" stroke="#a78bfa" stroke-width="1.5"/>
+  <!-- home bar -->
+  <rect x="155" y="400" width="50" height="4" rx="2" fill="#1e1b4b"/>
+  <!-- label -->
+  <text x="180" y="460" font-family="Arial,sans-serif" font-size="14" fill="#a78bfa" text-anchor="middle" font-weight="600">Falando para a câmera</text>
+  <text x="180" y="480" font-family="Arial,sans-serif" font-size="11" fill="#334155" text-anchor="middle">Edição Ninja</text>
+</svg>

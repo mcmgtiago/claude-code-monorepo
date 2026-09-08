@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Presence & Performance — 3 Packages to Put Your Business on Google</title>
+<style>
+  /* ===== RESET & BASE ===== */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #1a1a2e;
+    background: #ffffff;
+  }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* ===== NAVIGATION ===== */
+  .nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e5e7eb;
+    padding: 16px 0;
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo {
+    font-size: 20px; font-weight: 800; color: #5b21b6;
+    letter-spacing: -0.5px;
+  }
+  .logo span { color: #f59e0b; }
+  .nav-links { display: flex; gap: 32px; align-items: center; }
+  .nav-links a {
+    color: #374151; text-decoration: none; font-size: 15px; font-weight: 500;
+    transition: color .2s;
+  }
+  .nav-links a:hover { color: #5b21b6; }
+  .btn-nav {
+    background: #5b21b6; color: white !important;
+    padding: 10px 20px; border-radius: 8px;
+    transition: background .2s;
+  }
+  .btn-nav:hover { background: #4c1d95; }
+
+  /* ===== HERO ===== */
+  .hero {
+    padding: 80px 0 100px;
+    background: linear-gradient(135deg, #faf5ff 0%, #fff7ed 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(91,33,182,0.08) 0%, transparent 70%);
+  }
+  .badge {
+    display: inline-block;
+    background: #fef3c7; color: #92400e;
+    padding: 6px 16px; border-radius: 999px;
+    font-size: 13px; font-weight: 600;
+    margin-bottom: 24px;
+    border: 1px solid #fde68a;
+  }
+  .hero h1 {
+    font-size: 56px; line-height: 1.1; font-weight: 800;
+    color: #1a1a2e; margin-bottom: 24px;
+    letter-spacing: -1.5px;
+  }
+  .hero h1 .highlight {
+    background: linear-gradient(135deg, #5b21b6, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero p.lead {
+    font-size: 20px; color: #4b5563;
+    max-width: 680px; margin: 0 auto 40px;
+  }
+  .hero-cta {
+    display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+  .btn-primary {
+    background: #5b21b6; color: white;
+    padding: 16px 32px; border-radius: 10px;
+    font-size: 16px; font-weight: 600;
+    text-decoration: none;
+    border: none; cursor: pointer;
+    box-shadow: 0 10px 30px rgba(91,33,182,0.25);
+    transition: transform .2s, box-shadow .2s;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(91,33,182,0.35);
+  }
+  .btn-secondary {
+    background: white; color: #1a1a2e;
+    padding: 16px 32px; border-radius: 10px;
+    font-size: 16px; font-weight: 600;
+    text-decoration: none;
+    border: 2px solid #e5e7eb;
+    transition: border-color .2s;
+  }
+  .btn-secondary:hover { border-color: #5b21b6; }
+  .trust-bar {
+    display: flex; gap: 32px; justify-content: center; flex-wrap: wrap;
+    font-size: 14px; color: #6b7280;
+  }
+  .trust-bar span { display: flex; align-items: center; gap: 6px; }
+
+  /* ===== SECTIONS ===== */
+  section { padding: 80px 0; }
+  .section-title {
+    text-align: center; margin-bottom: 16px;
+    font-size: 40px; font-weight: 800;
+    color: #1a1a2e; letter-spacing: -1px;
+  }
+  .section-subtitle {
+    text-align: center; color: #6b7280;
+    font-size: 18px; max-width: 600px;
+    margin: 0 auto 60px;
+  }
+
+  /* ===== PROBLEM / SOLUTION ===== */
+  .problem { background: #f9fafb; }
+  .problem-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  .problem-card {
+    background: white; padding: 32px;
+    border-radius: 12px; border: 1px solid #e5e7eb;
+  }
+  .problem-card .icon {
+    width: 48px; height: 48px;
+    background: #fee2e2; color: #dc2626;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; margin-bottom: 16px;
+  }
+  .problem-card h3 {
+    font-size: 18px; margin-bottom: 8px; color: #1a1a2e;
+  }
+  .problem-card p { color: #6b7280; font-size: 15px; }
+
+  /* ===== PRICING ===== */
+  .pricing { background: linear-gradient(180deg, #ffffff 0%, #faf5ff 100%); }
+  .pricing-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px; max-width: 1100px; margin: 0 auto;
+  }
+  .plan {
+    background: white; padding: 40px 32px;
+    border-radius: 16px;
+    border: 2px solid #e5e7eb;
+    position: relative;
+    transition: transform .3s, box-shadow .3s;
+  }
+  .plan:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  }
+  .plan.featured {
+    border-color: #5b21b6;
+    box-shadow: 0 20px 50px rgba(91,33,182,0.15);
+    transform: scale(1.02);
+  }
+  .plan-badge {
+    position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+    background: #5b21b6; color: white;
+    padding: 6px 16px; border-radius: 999px;
+    font-size: 12px; font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .plan-name {
+    font-size: 14px; font-weight: 700;
+    color: #5b21b6; text-transform: uppercase;
+    letter-spacing: 1px; margin-bottom: 8px;
+  }
+  .plan-tagline {
+    font-size: 16px; color: #6b7280; margin-bottom: 24px;
+    font-style: italic;
+  }
+  .plan-price {
+    display: flex; align-items: baseline; gap: 4px;
+    margin-bottom: 8px;
+  }
+  .plan-price .currency { font-size: 24px; font-weight: 700; color: #1a1a2e; }
+  .plan-price .amount {
+    font-size: 56px; font-weight: 800; color: #1a1a2e;
+    letter-spacing: -2px;
+  }
+  .plan-price .period { font-size: 16px; color: #6b7280; }
+  .plan-desc {
+    color: #6b7280; font-size: 14px;
+    margin-bottom: 24px; padding-bottom: 24px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .plan-features { list-style: none; margin-bottom: 32px; }
+  .plan-features li {
+    padding: 8px 0; font-size: 15px;
+    color: #374151;
+    display: flex; align-items: flex-start; gap: 10px;
+  }
+  .plan-features li::before {
+    content: '✓'; color: #10b981; font-weight: 800;
+    flex-shrink: 0;
+  }
+  .plan-features li.no::before { content: '✗'; color: #d1d5db; }
+  .plan-features li.no { color: #9ca3af; text-decoration: line-through; }
+  .btn-plan {
+    display: block; width: 100%;
+    background: #1a1a2e; color: white;
+    padding: 14px; border-radius: 10px;
+    text-align: center; text-decoration: none;
+    font-weight: 600; font-size: 15px;
+    transition: background .2s;
+  }
+  .btn-plan:hover { background: #5b21b6; }
+  .plan.featured .btn-plan { background: #5b21b6; }
+  .plan.featured .btn-plan:hover { background: #4c1d95; }
+
+  /* ===== HOW IT WORKS ===== */
+  .how-it-works { background: #1a1a2e; color: white; }
+  .how-it-works .section-title { color: white; }
+  .how-it-works .section-subtitle { color: #9ca3af; }
+  .steps {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 32px;
+  }
+  .step {
+    text-align: center;
+  }
+  .step-num {
+    width: 56px; height: 56px;
+    background: linear-gradient(135deg, #5b21b6, #f59e0b);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; font-weight: 800;
+    margin: 0 auto 20px;
+  }
+  .step h3 { font-size: 20px; margin-bottom: 12px; }
+  .step p { color: #9ca3af; font-size: 15px; }
+
+  /* ===== TESTIMONIALS ===== */
+  .testimonials { background: #f9fafb; }
+  .testimonial-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  .testimonial {
+    background: white; padding: 32px;
+    border-radius: 12px; border: 1px solid #e5e7eb;
+  }
+  .stars { color: #f59e0b; margin-bottom: 16px; font-size: 18px; }
+  .testimonial blockquote {
+    color: #374151; font-size: 15px;
+    margin-bottom: 20px; font-style: italic;
+  }
+  .testimonial-author {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .avatar {
+    width: 44px; height: 44px;
+    background: linear-gradient(135deg, #5b21b6, #f59e0b);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-weight: 700;
+  }
+  .author-info strong { display: block; font-size: 15px; }
+  .author-info span { color: #6b7280; font-size: 13px; }
+
+  /* ===== FAQ ===== */
+  .faq-list { max-width: 760px; margin: 0 auto; }
+  .faq-item {
+    background: white; margin-bottom: 12px;
+    border-radius: 10px; border: 1px solid #e5e7eb;
+    overflow: hidden;
+  }
+  .faq-q {
+    padding: 20px 24px; cursor: pointer;
+    font-weight: 600; font-size: 16px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .faq-q::after { content: '+'; font-size: 24px; color: #5b21b6; }
+  .faq-item.open .faq-q::after { content: '−'; }
+  .faq-a {
+    padding: 0 24px; max-height: 0; overflow: hidden;
+    color: #6b7280; font-size: 15px;
+    transition: max-height .3s, padding .3s;
+  }
+  .faq-item.open .faq-a {
+    padding: 0 24px 20px;
+    max-height: 300px;
+  }
+
+  /* ===== FINAL CTA ===== */
+  .final-cta {
+    background: linear-gradient(135deg, #5b21b6 0%, #4c1d95 100%);
+    color: white; text-align: center;
+  }
+  .final-cta h2 {
+    font-size: 40px; font-weight: 800; margin-bottom: 16px;
+    color: white;
+  }
+  .final-cta p {
+    font-size: 18px; color: rgba(255,255,255,0.9);
+    max-width: 600px; margin: 0 auto 32px;
+  }
+  .final-cta .btn-primary {
+    background: #f59e0b; color: #1a1a2e;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  }
+  .final-cta .btn-primary:hover { background: #fbbf24; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #1a1a2e; color: #9ca3af;
+    padding: 40px 0 24px; text-align: center;
+    font-size: 14px;
+  }
+  footer .logo { color: white; margin-bottom: 16px; display: inline-block; }
+  footer p { margin-bottom: 8px; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 36px; }
+    .hero p.lead { font-size: 17px; }
+    .section-title { font-size: 30px; }
+    .nav-links { display: none; }
+    .plan.featured { transform: scale(1); }
+    .final-cta h2 { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <div class="logo">Digital<span>Pro</span></div>
+    <div class="nav-links">
+      <a href="#packages">Packages</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="btn-nav">Get Started</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="container">
+    <span class="badge">🚀 Limited spots this month</span>
+    <h1>Get Your Business <span class="highlight">On Google</span><br>And Turn Clicks Into Customers</h1>
+    <p class="lead">Professional website + Google My Business + Google Ads — done for you in days, not months. Choose the package that fits your goals.</p>
+    <div class="hero-cta">
+      <a href="#packages" class="btn-primary">See the 3 Packages →</a>
+      <a href="#how" class="btn-secondary">How it works</a>
+    </div>
+    <div class="trust-bar">
+      <span>✓ No long contracts</span>
+      <span>✓ Delivered in 5–15 days</span>
+      <span>✓ One-time payment</span>
+      <span>✓ 30-day support</span>
+    </div>
+  </div>
+</header>
+
+<!-- ===== PROBLEM ===== -->
+<section class="problem">
+  <div class="container">
+    <h2 class="section-title">Is your business invisible online?</h2>
+    <p class="section-subtitle">If your customers can't find you on Google, you're losing money to competitors every single day.</p>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="icon">📉</div>
+        <h3>No website or outdated one</h3>
+        <p>Customers search Google before buying. Without a professional site, they go straight to your competitor.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">📍</div>
+        <h3>No Google Maps presence</h3>
+        <p>76% of local searches result in a phone call within 24 hours. If you're not on Maps, you're invisible.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">💸</div>
+        <h3>No ads, no leads</h3>
+        <p>Waiting for organic traffic takes months. Google Ads puts you at the top of the search results in hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section class="pricing" id="packages">
+  <div class="container">
+    <h2 class="section-title">Choose your package</h2>
+    <p class="section-subtitle">Three options designed for every stage — from "just starting" to "scale fast".</p>
+
+    <div class="pricing-grid">
+
+      <!-- PLAN 1 -->
+      <div class="plan">
+        <div class="plan-name">Essential</div>
+        <div class="plan-tagline">"Start existing online"</div>
+        <div class="plan-price">
+          <span class="currency">$</span>
+          <span class="amount">97</span>
+        </div>
+        <p class="plan-desc">One-time payment · Delivered in 5 business days</p>
+        <ul class="plan-features">
+          <li>One-page website (hero, about, services, contact)</li>
+          <li>Modern, responsive design (mobile-first)</li>
+          <li>Basic SEO (titles, meta, page speed)</li>
+          <li>Floating WhatsApp button</li>
+          <li>Google My Business — full setup or claim</li>
+          <li>Profile optimization (categories, hours, photos)</li>
+          <li>1 launch post on Google</li>
+          <li class="no">Advanced SEO + keyword research</li>
+          <li class="no">Lead capture forms</li>
+          <li class="no">Google Ads setup</li>
+        </ul>
+        <a href="#contact" class="btn-plan">Start with Essential</a>
+      </div>
+
+      <!-- PLAN 2 (FEATURED) -->
+      <div class="plan featured">
+        <span class="plan-badge">MOST POPULAR</span>
+        <div class="plan-name">Growth</div>
+        <div class="plan-tagline">"Attract your first customers from Google"</div>
+        <div class="plan-price">
+          <span class="currency">$</span>
+          <span class="amount">197</span>
+        </div>
+        <p class="plan-desc">One-time payment · Delivered in 10 business days</p>
+        <ul class="plan-features">
+          <li>Everything in <strong>Essential</strong>, plus:</li>
+          <li>Full institutional site (up to 5 pages)</li>
+          <li>Intermediate SEO + local keywords</li>
+          <li>Contact form with email delivery</li>
+          <li>GMB advanced (weekly posts, photos, FAQ)</li>
+          <li>Google Ads — full account setup</li>
+          <li>1 active campaign (Search or Maps)</li>
+          <li>Conversion tracking installed</li>
+          <li>1 consulting session (30 min)</li>
+        </ul>
+        <a href="#contact" class="btn-plan">Choose Growth →</a>
+      </div>
+
+      <!-- PLAN 3 -->
+      <div class="plan">
+        <div class="plan-name">Acceleration</div>
+        <div class="plan-tagline">"Scale with ads and conquer the top"</div>
+        <div class="plan-price">
+          <span class="currency">$</span>
+          <span class="amount">297</span>
+        </div>
+        <p class="plan-desc">One-time payment · Delivered in 15 business days</p>
+        <ul class="plan-features">
+          <li>Everything in <strong>Growth</strong>, plus:</li>
+          <li>Complete site (up to 8 pages + copywriting)</li>
+          <li>Advanced SEO (schema, technical, blog ready)</li>
+          <li>Google Ads — 2 to 3 campaigns (Search + Display + Maps)</li>
+          <li>Dedicated landing pages for each campaign</li>
+          <li>A/B testing of ads</li>
+          <li>Management + optimization for 30 days</li>
+          <li>Monthly performance report</li>
+          <li>Priority support (WhatsApp) + competitor audit</li>
+        </ul>
+        <a href="#contact" class="btn-plan">Go with Acceleration</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="how-it-works" id="how">
+  <div class="container">
+    <h2 class="section-title">How it works</h2>
+    <p class="section-subtitle">A simple, proven 4-step process — from kickoff to your first leads.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Discovery call</h3>
+        <p>30-minute call to understand your business, goals, and audience.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Build & review</h3>
+        <p>We design your site, set up GMB, and launch campaigns. You review at each step.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Go live</h3>
+        <p>Your site goes online, GMB is verified, and ads start running within 24 hours.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Grow</h3>
+        <p>We optimize, you receive leads. Monthly reports keep you in the loop.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials">
+  <div class="container">
+    <h2 class="section-title">Trusted by local businesses</h2>
+    <p class="section-subtitle">Real results from real clients.</p>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Within 2 weeks I was receiving 5+ calls per day from Google. Best $297 I ever spent."</blockquote>
+        <div class="testimonial-author">
+          <div class="avatar">JR</div>
+          <div class="author-info">
+            <strong>James R.</strong>
+            <span>Plumbing services · Texas</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"The team set up everything — site, GMB, ads. I just watched the leads come in. Highly recommend."</blockquote>
+        <div class="testimonial-author">
+          <div class="avatar">MK</div>
+          <div class="author-info">
+            <strong>Maria K.</strong>
+            <span>Beauty salon · Florida</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Professional, fast, and the copy actually converts. Got my money back in the first month."</blockquote>
+        <div class="testimonial-author">
+          <div class="avatar">DL</div>
+          <div class="author-info">
+            <strong>David L.</strong>
+            <span>Law firm · California</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq">
+  <div class="container">
+    <h2 class="section-title">Frequently asked questions</h2>
+    <p class="section-subtitle">Everything you need to know before getting started.</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">How long until my site is live?</div>
+        <div class="faq-a">Essential: 5 business days · Growth: 10 days · Acceleration: 15 days. We move fast without sacrificing quality.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do I need to provide content?</div>
+        <div class="faq-a">No. We handle the copy. You only need to provide your logo, business info, and any photos you'd like to include.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What about domain and hosting?</div>
+        <div class="faq-a">Domain (.com) and paid hosting are quoted separately if needed. We guide you through free options for Essential.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you manage the Google Ads?</div>
+        <div class="faq-a">Yes — Growth includes 1 active campaign with setup. Acceleration includes management and optimization for 30 days.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if I don't like the design?</div>
+        <div class="faq-a">Every package includes 1 round of revisions per stage. We work with you until it's right.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How do I pay?</div>
+        <div class="faq-a">50% upfront to start, 50% on delivery. Or full payment with a 5% discount. Pix, Stripe, and bank transfer accepted.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta" id="contact">
+  <div class="container">
+    <h2>Ready to get found on Google?</h2>
+    <p>Choose your package and let's build something that actually brings customers to your door.</p>
+    <a href="#" class="btn-primary">Talk to us on WhatsApp →</a>
+    <p style="margin-top:24px; font-size:14px; opacity:0.7;">Reply within 2 hours · No commitment · Free consultation</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="logo">Digital<span>Pro</span></div>
+    <p>Website · Google My Business · Google Ads</p>
+    <p>© 2026 Digital Pro. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // FAQ toggle
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      q.parentElement.classList.toggle('open');
+    });
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,377 @@
+/*** 
+=============================================
+    Faq Style1 Area Css
+=============================================
+***/
+.faq-style1-area {
+    position: relative;
+    display: block;
+    background: #ffffff;
+    padding: 120px 0 120px;
+    z-index: 1;
+}
+
+.faq-style1-area .faq-style1-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 67%;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;
+    max-width: calc((100% - 1170px) / 2 + 1170px);
+    margin-right: auto;
+    z-index: -1;
+}
+
+
+.faq-form-box {
+    position: relative;
+    display: block;
+    max-width: 500px;
+    width: 100%;
+    border: 4px solid #ffffff;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+    padding: 52px 56px 52px;
+    z-index: 1;
+}
+
+.faq-form-box .pattern-bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0;
+    right: 0px;
+    background-color: #f5f5f5;
+    background-repeat: repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+
+
+
+.faq-form-box .sec-title {
+    padding-bottom: 34px;
+}
+
+.faq-form-box .sec-title h2 {
+    color: var(--thm-black);
+}
+
+.faq-form-box .sec-title p {
+    margin: 6px 0 0;
+}
+
+
+
+.faq-form-box form {
+    position: relative;
+    display: block;
+}
+
+.faq-form-box form .input-box {
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+.faq-form-box form input[type="text"],
+.faq-form-box form input[type="email"],
+.faq-form-box form textarea {
+    position: relative;
+    display: block;
+    background: #ffffff;
+    width: 100%;
+    height: 60px;
+    border: 0px solid #ecf2f6;
+    color: #757575;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 0px;
+    transition: all 500ms ease;
+    font-family: var(--thm-font);
+}
+
+.faq-form-box form textarea {
+    height: 105px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.faq-form-box form input[type="text"]:focus {
+    color: #171717;
+    border-color: #fff;
+}
+
+.faq-form-box form input[type="email"]:focus {
+    color: #171717;
+    border-color: #fff;
+}
+
+.faq-form-box form textarea:focus {
+    color: #171717;
+    border-color: #fff;
+}
+
+.faq-form-box form input[type="text"]::-webkit-input-placeholder {
+    color: #757575;
+}
+
+.faq-form-box form input[type="text"]:-moz-placeholder {
+    color: #757575;
+}
+
+.faq-form-box form input[type="text"]::-moz-placeholder {
+    color: #757575;
+}
+
+.faq-form-box form input[type="text"]:-ms-input-placeholder {
+    color: #757575;
+}
+
+.faq-form-box form input[type="email"]::-webkit-input-placeholder {
+    color: #757575;
+}
+
+.faq-form-box form input[type="email"]:-moz-placeholder {
+    color: #757575;
+}
+
+.faq-form-box form input[type="email"]::-moz-placeholder {
+    color: #757575;
+}
+
+.faq-form-box form input[type="email"]:-ms-input-placeholder {
+    color: #757575;
+}
+
+.faq-form-box form textarea::-webkit-input-placeholder {
+    color: #757575;
+}
+
+.faq-form-box form textarea:-moz-placeholder {
+    color: #757575;
+}
+
+.faq-form-box form textarea::-moz-placeholder {
+    color: #757575;
+}
+
+.faq-form-box form textarea:-ms-input-placeholder {
+    color: #757575;
+}
+
+
+/** nice-select **/
+.faq-form-box form .select-box {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+
+.faq-form-box form .button-box {
+    position: relative;
+    display: block;
+}
+
+.faq-form-box form .button-box button {
+    display: block;
+    width: 100%;
+}
+
+
+
+.faq-style1__content {
+    position: relative;
+    display: block;
+}
+
+.faq-style1__content .sec-title {}
+
+.faq-style1__content .inner-content {
+    position: relative;
+    display: block;
+}
+
+.accordion-box {
+    position: relative;
+    display: block;
+}
+
+.accordion-box .block {
+    position: relative;
+    display: block;
+    background: #ffffff;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: all 500ms ease;
+}
+
+.accordion-box .block:last-child {
+    margin-bottom: 0px;
+}
+
+.accordion-box .block .acc-content.current {
+    display: block;
+}
+
+.accordion-box .block .acc-btn {
+    position: relative;
+    display: block;
+    background: #fff;
+    padding: 21px 70px 21px 30px;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+.accordion-box .block .acc-btn.active {
+    background: #262e39;
+}
+
+.accordion-box .block .acc-btn h3 {
+    color: var(--thm-black);
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+    transition: all 500ms ease;
+}
+
+.accordion-box .block .acc-btn h3 span {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    color: var(--thm-base);
+    font-size: 20px;
+}
+
+.accordion-box .block .acc-btn.active h3 {
+    color: #ffffff;
+}
+
+.accordion-box .block .acc-btn .icon-outer {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: var(--thm-black);
+    font-size: 12px;
+    text-align: center;
+    line-height: 34px;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid #e7e7e7;
+    transform: translateY(-50%) rotate(-90deg);
+    transition: all 500ms ease;
+    z-index: 1;
+}
+
+.accordion-box .block .acc-btn.active .icon-outer {
+    color: #fff;
+    border-color: var(--thm-base);
+    background-color: var(--thm-base);
+    transform: translateY(-50%) rotate(360deg);
+}
+
+/***
+.accordion-box .block .acc-btn.active .icon-outer i:before {
+    position: relative;
+    font-size: 25px;
+    font-family: flaticon !important;
+    font-weight: 400;
+    margin: 0px;
+    content: "\f113";
+}
+**/
+.accordion-box .block .acc-content {
+    position: relative;
+    display: none;
+    padding-top: 32px;
+    padding-left: 30px;
+    padding-right: 60px;
+    padding-bottom: 34px;
+}
+
+.accordion-box .block .acc-content p {
+    margin: 0;
+}
+
+
+
+/*** 
+=============================================
+    Faq Page One Css
+=============================================
+***/
+.faq-page-one {
+    position: relative;
+    display: block;
+    background: #ffffff;
+    padding: 120px 0 120px;
+}
+
+.faq-form-box--style2 {
+    position: relative;
+    display: block;
+    background: #f5f5f5;
+    padding: 55px 30px 54px;
+    max-width: 100%;
+    border: none;
+    box-shadow: none;
+}
+
+.faq-form-box--style2 .top-title {
+    position: relative;
+    display: block;
+    padding-bottom: 34px;
+}
+
+.faq-form-box--style2 .top-title h3 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 600;
+    margin: 0 0 15px;
+}
+
+.faq-form-box--style2 .top-title p {
+    margin: 0;
+}
+
+.faq-form-box--style2 form .input-box {
+    margin-bottom: 22px;
+}
+
+.faq-form-box--style2 form textarea {
+    height: 125px;
+}
+
+.faq-form-box--style2 form .button-box {
+    padding-top: 10px;
+}
+
+.faq-form-box--style2 .bottom-box {
+    position: relative;
+    display: block;
+    padding-top: 23px;
+    text-align: center;
+}
+
+.faq-form-box--style2 .bottom-box p {
+    margin: 0;
+}
+
+.faq-form-box--style2 .bottom-box p span {
+    color: var(--thm-base);
+}

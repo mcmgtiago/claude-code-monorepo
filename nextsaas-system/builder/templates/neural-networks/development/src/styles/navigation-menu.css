@@ -1,0 +1,136 @@
+/**
+ * Navigation Menu Styles
+ * JavaScript-controlled navigation menu styles
+ */
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item .nav-arrow {
+  transition: transform 0.3s ease;
+}
+
+.nav-item.active .nav-arrow {
+  transform: rotate(180deg);
+}
+
+.nav-item.menu-active .nav-arrow {
+  transform: rotate(180deg);
+}
+
+.mega-menu,
+.dropdown-menu,
+.customer-dropdown-menu {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  visibility: hidden;
+}
+
+.mega-menu.active,
+.dropdown-menu.active,
+.customer-dropdown-menu.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.mega-menu-bridge,
+.dropdown-menu-bridge {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.nav-item.active .mega-menu-bridge,
+.nav-item.active .dropdown-menu-bridge {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mega-menu.active {
+  transform: translateY(0);
+}
+
+.dropdown-menu.active {
+  transform: translateY(0);
+}
+
+.mega-menu,
+.dropdown-menu,
+.customer-dropdown-menu {
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    pointer-events 0s 0.3s;
+}
+
+.mega-menu.active,
+.dropdown-menu.active,
+.customer-dropdown-menu.active {
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    pointer-events 0s 0s;
+}
+
+.nav-item:hover .nav-arrow {
+  transform: rotate(180deg);
+}
+
+.mega-menu {
+  z-index: 50;
+}
+
+.dropdown-menu,
+.customer-dropdown-menu {
+  z-index: 50;
+}
+
+@media (max-width: 1279px) {
+  .mega-menu,
+  .dropdown-menu {
+    display: none !important;
+  }
+}
+
+@keyframes menuSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes menuSlideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+}
+
+.mega-menu.active,
+.dropdown-menu.active {
+  animation: menuSlideIn 0.3s ease forwards;
+}
+
+.nav-item:focus-within .nav-arrow {
+  transform: rotate(180deg);
+}
+
+.nav-item:focus-within .mega-menu,
+.nav-item:focus-within .dropdown-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}

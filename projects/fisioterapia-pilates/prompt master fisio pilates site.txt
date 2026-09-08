@@ -1,0 +1,52 @@
+PROMPT MASTER CONTROLADO: SITE DE FISIOTERAPIA E PILATES
+
+COMO USAR
+Substitua os campos entre colchetes e envie este texto a um agente com acesso ao workspace. `PROJECT_ROOT` deve ser um caminho absoluto. Para um projeto de cliente ou com claims sensíveis, prefira `EXECUTION_MODE=GATED`.
+
+Você está operando o sistema de sites para profissionais, clínicas e estúdios de fisioterapia, Pilates, reabilitação e movimento. Trabalhe diretamente nos arquivos do projeto.
+
+FONTE DE VERDADE
+1. Leia `C:/Users/Administrator/Desktop/Fisioterapia & Pilates/AGENTS.md`.
+2. Use `SYSTEM_ROOT/07-PROMPT-ORQUESTRADOR.md` como instrução principal.
+3. Siga a ordem de leitura e todos os gates definidos pelo sistema.
+4. Use `SYSTEM_ROOT/launchers/prompt-site.txt` como contrato resumido deste fluxo.
+
+CONFIGURAÇÃO
+WORKSPACE_ROOT = "C:/Users/Administrator/Desktop/Fisioterapia & Pilates"
+SYSTEM_ROOT = "${WORKSPACE_ROOT}/Sistema Replicavel"
+PROJECT_ROOT = "[PENDENTE: diretório absoluto do site]"
+CLIENT_MATERIALS_ROOT = "[PENDENTE: diretório absoluto dos materiais originais]"
+LOCAL_CODE_AUTHORIZATION = "[CONFIRMED | PENDING | DENIED]"
+PROJECT_TYPE = "[SITE_PROFISSIONAL | SITE_CLINICA_ESTUDIO | GENERIC_SITE]"
+REGULATED_PROFILE = "[FISIOTERAPIA | EDUCACAO_FISICA | MULTIPROFISSIONAL | GENERAL]"
+STACK_PROFILE = "[STATIC | REACT | EXISTING]"
+EXECUTION_MODE = "[GATED | AUTO]"
+RELEASE_TARGET = "[PROTOTYPE | PRODUCTION]"
+AUDIT_ACTION = "NOT_APPLICABLE"
+PRIMARY_GOAL = "[PENDENTE: resultado de negócio]"
+PRIMARY_CTA = "[PENDENTE: ação e destino real]"
+
+DADOS DISPONÍVEIS
+CLIENT_OR_PROJECT_INPUT = "[PENDENTE: materiais, profissionais, serviços, unidades, links, textos e observações fornecidos]"
+
+REGRAS DE PARTIDA
+- Antes de definir o sitemap, confirme profissionais, papéis, CREFITO/CREF quando aplicável, responsabilidade técnica, serviços, unidades, públicos, conversão e intenção de busca.
+- Pilates é um método, não uma profissão. Identifique quem conduz avaliação, tratamento e aulas; não use “equipe” para ocultar responsabilidades.
+- Crie rota própria somente para serviço real com responsável, conteúdo substancial, logística e intenção distinta. Não gere páginas para diagnósticos apenas para ampliar SEO.
+- Separe claramente fisioterapia, Pilates, reabilitação, performance, programa e produto quando a operação realmente fizer essa distinção.
+- Não invente profissão, registro, especialidade, diagnóstico, prognóstico, preço, convênio, agenda, unidade, acessibilidade, equipamento, prova, depoimento ou resultado.
+- Não prometa cura, ausência de dor, correção postural, prevenção de lesão, recuperação completa ou retorno ao esporte em prazo fixo.
+- Formulário público não é anamnese nem triagem. Área do paciente e coleta clínica exigem sistema separado e seguro.
+- Use `[PENDENTE: ...]` somente nos documentos Markdown de `_project/`; em `spec.yaml`, use `null` e `evidence.unknowns`. Nenhum placeholder entra em produção.
+- Organize materiais sem destruir originais; leia tudo e extraia identidade/cores com fonte antes da copy.
+- Conclua sitemap, arquitetura e copy integral de todas as rotas antes de escolher direção ou tipo de hero.
+- Consulte o catálogo e depois leia o código real dos candidatos. `Modelos & Codigos/Páginas`, `HERO`, `Blocos` e `Efeitos` são bases obrigatórias; `Ref Design` é opcional e secundário.
+- Selecione 1 página, 3 heroes distintos, 1 bloco e 1 efeito elegível. Com autorização confirmada, adapte o código local real; não apenas imite. Não transfira copy, identidade, mídia, dado ou claim do demo.
+- Não escreva código antes de brief, arquitetura, copy completa, direção única, `hero_type` e plano. Primeira exceção: exatamente V1/V2/V3 do hero da home.
+- Preserve a stack existente, componentes globais e um único runtime principal de motion.
+
+EXECUÇÃO
+Crie/atualize artefatos em `PROJECT_ROOT/_project/`. Determine sitemap enxuto e copy integral. Após gates pré-hero, implemente somente `_project/hero-variants/v1`, `v2` e `v3` para a home, com mesma copy, CTA, tokens e `hero_type`, cada uma baseada em hero local distinto. Valide e pare em `AWAITING_HERO_APPROVAL`, inclusive em `AUTO`. Não escolha vencedora nem implemente restante da home, rotas internas, QA final ou handoff. Após escolha humana registrada, retome implementação, QA de todas as rotas e handoff sincronizados ao `spec.yaml` 2.2.
+
+SAÍDA FINAL
+No sprint inicial, informe `AWAITING_HERO_APPROVAL`, caminhos V1/V2/V3 e peça escolha objetiva. Após implementação completa, informe arquivos principais, verificações, pendências, status `BLOCKED`, `CONDITIONAL` ou `PASS` e se é publicável. Não use nota subjetiva.

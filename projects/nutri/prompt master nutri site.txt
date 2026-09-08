@@ -1,0 +1,223 @@
+# PROMPT MASTER: SITE COMPLETO MULTI-PÁGINAS - Escritório / Clínica de Nutrição
+# UI/UX Pro Max + Framer Motion + 21st.dev
+
+**REFERÊNCIAS TÉCNICAS OBRIGATÓRIAS:**
+1. UI/UX Pro Max Skill: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
+2. Framer Motion Dictionary: https://www.framer.com/dictionary/framer-motion
+3. 21st.dev Components: https://21st.dev/community/components
+4. Frontend Design: https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md
+5. impeccable: npx skills add pbakaus/impeccable
+
+Ative o modo [Frontend-Design-Pro-Max]. Siga estas regras estritas para qualquer interface, componente ou código UI gerado:
+
+1. [Anti-Generic]: Não use paletas de cinza padrão (como gray-100/500). Substitua por slates, zincs ou tons quentes/frios que combinem com a marca. Não use raios de curvatura padrão (rounded-md); prefira cantos retos cirúrgicos (rounded-sm) ou design orgânico fluido (rounded-2xl) dependendo do contexto.
+2. [Micro-Interactions]: Todo elemento interativo DEVE ter estados hover, focus-visible (com anel de outline visível), active e disabled explicitamente estilizados com transições suaves (transition-all duration-200).
+3. [Typography Hierarchy]: Use uma escala tipográfica rigorosa. Títulos devem ter tracking-tight e pesos bem definidos (font-bold ou font-black). Subtítulos e labels devem usar tracking-wide e text-muted.
+4. [Density & Breathing Room]: Respeite o espaço em branco. Use paddings generosos (p-6 a p-12 em seções grandes) e gaps consistentes (gap-4 ou gap-6). Nunca sufoque o conteúdo.
+5. [Realism over Placeholders]: Proibido usar "Lorem Ipsum", "Título 1" ou dados genéricos. Crie dados simulados ultra-realistas, com nomes, valores financeiros, datas e métricas que façam sentido para o modelo de negócios da aplicação.
+6. [Layout Flow]: Evite simetria repetitiva. Intercale layouts de grade (grid) com listas limpas e seções assimétricas para guiar o olho do usuário.
+7. [Visual Anchors]: Use badges de status discretos, ícones semanticamente corretos e bordas sutis (border-opacity baixa) para criar profundidade e separação, em vez de backgrounds pesados.
+
+## PAPEL
+Você é um time sênior de estúdio que cobra R$25k por site:
+- Diretor de Arte Health Premium (editorial, não clínica fria)
+- UX/UI Designer especialista em sites multi-páginas de saúde (arquitetura + conversão)
+- Motion Designer (transições entre páginas)
+- Design System Lead
+- UX Writer para clínica (tom institucional mas humano)
+- SEO Técnico
+
+Objetivo: criar um SITE COMPLETO, não landing, para escritório/clínica de nutrição com 2 a 6 profissionais, que transmita estrutura, equipe, método e confiança.
+
+## 0) MATERIAIS DE ENTRADA
+- Logo, paleta, fotos da equipe, consultório, recepção
+- Instagram da clínica e das nutris
+- Lista de serviços, especialidades, convênios, unidades
+- Textos sobre método, diferenciais, história do escritório
+- CRNs da equipe
+
+Se não houver: usar [HIPÓTESE] com placeholders premium.
+
+## 1) OBJETIVO DO SITE
+- Posicionar como escritório referência, não autônoma solo
+- Apresentar equipe (gerar conexão antes da consulta)
+- Explicar método da clínica (padronização + personalização)
+- Mostrar estrutura física e atendimento online
+- Converter em 3 canais: WhatsApp, Formulário, Agendamento online
+- Respeitar CFN: sem antes/depois, sem promessa de kg, sem "melhor"
+
+## 2) ARQUITETURA / SITEMAP (OBRIGATÓRIO)
+
+Entregar site com esta estrutura de arquivos (RELATIVO, funciona em subpasta /clinica/):
+
+/
+- index.html (HOME)
+- sobre.html (SOBRE O ESCRITÓRIO)
+- equipe.html (EQUIPE - grid de profissionais)
+- equipe/[slug].html (PERFIL INDIVIDUAL - ex: equipe/ana-souza.html) [GERAR 2 EXEMPLOS]
+- abordagens.html (LISTAGEM DE ESPECIALIDADES)
+- abordagens/[slug].html (DETALHE - ex: abordagens/emagrecimento.html, saude-intestinal.html) [GERAR 2 EXEMPLOS]
+- como-funciona.html (MÉTODO / PROCESSO)
+- estrutura.html (ESTRUTURA FÍSICA / UNIDADES)
+- contato.html (CONTATO + FORM)
+- obrigado.html (PÓS-FORM)
+- privacidade.html
+
+Total mínimo: 12 arquivos html.
+
+## 3) DESIGN SYSTEM - ESCRITÓRIO ROBUSTO
+Conceito: "Clínica Editorial" - parece revista de bem-estar, não hospital.
+
+Tokens :root:
+- bg: #FFFBF6, surface: #FFFFFF, surface-2: #F6F1EB, surface-3: #EDE8E2
+- primary: #5B6B5A (sage institucional), primary-dark: #3F4A3E
+- accent: #D88C6A (terracota humanizado)
+- text: #1C1E1B, muted: #6E746E, border: #E7E0D9
+- Tipografia: Display: Fraunces ou Instrument Serif (títulos), Interface: Plus Jakarta Sans ou Satoshi
+- Radius: 20px cards, full botões, 16px inputs
+- Grid: 1160px max, 20px padding mobile, respiro 120px entre seções
+
+Evitar: verde limão, fotos de balança, ícones genéricos de folha em excesso.
+
+## 4) FRAMEWORK 3 PILARES
+
+Pilar A - Design Intelligence (UI/UX Pro Max):
+- Componentes com hierarquia editorial, muito respiro, fotos grandes com borda suave, equipe em cards com foto P&B que fica color no hover.
+
+Pilar B - Motion (Framer Motion):
+- Transição suave entre páginas (fade da main)
+- Header que encolhe ao scroll
+- Cards da equipe com reveal stagger
+- Modal de agendamento global com spring
+
+Pilar C - 21st.dev Curation:
+- Team grid, service cards, location cards, testimonial carousel, FAQ, pricing table, timeline, contact + map.
+
+## 5) ESPECIFICAÇÃO POR PÁGINA (DETALHADA)
+
+**5.1 index.html (HOME - Conversão):**
+- Header fixo global + CTA "Agendar avaliação"
+- Hero institucional: Headline sobre escritório + sub + foto da equipe + badges (X anos, +X pacientes, CRNs)
+- Bloco "Somos um escritório, não uma dieta pronta"
+- Grid 6 especialidades com link para abordagens/[slug].html
+- Bloco equipe preview (3 fotos + link para equipe.html)
+- Método em 4 passos visual
+- Prova social (Google reviews)
+- Unidades / Online
+- CTA final + form global
+
+**5.2 sobre.html:**
+- História, missão, valores, fotos bastidores
+- Timeline da clínica
+- Diferenciais vs autônoma
+
+**5.3 equipe.html:**
+- Grid de profissionais (foto, nome, CRN, especialidade, mini bio)
+- Filtro por especialidade (JS vanilla)
+- Cada card leva para equipe/[slug].html
+
+**5.4 equipe/[slug].html (perfil):**
+- Foto grande, nome, CRN, formação, abordagens, frase, Instagram, botão agendar com essa nutri específica (passar parâmetro?nutri=ana no form)
+
+**5.5 abordagens.html:**
+- Listagem de todas as abordagens com ícone sutil + descrição curta + CTA
+
+**5.6 abordagens/[slug].html (detalhe):**
+- H1 da especialidade, para quem é / para quem não é, como trabalhamos, o que inclui, FAQ específico da especialidade, CTA "Quero acompanhamento em [especialidade]"
+
+**5.7 como-funciona.html:**
+- Timeline completo: 1.Primeira consulta 2.Exames 3.Plano 4.Acompanhamento 5.Alta com autonomia, o que levar, duração, valores (sem preço fechado se não quiser), online vs presencial
+
+**5.8 estrutura.html:**
+- Fotos do consultório, recepção, endereço(s) com mapa embed, estacionamento, acessibilidade, fotos 360 se tiver
+
+**5.9 contato.html:**
+- Form completo (nome, whatsapp, objetivo, unidade preferida, nutri preferida, mensagem) + WhatsApp cards por unidade + horários + mapa
+
+**5.10 obrigado.html:**
+- Confirmação pós-form com próximos passos e botão WhatsApp
+
+**5.11 privacidade.html:** LGPD simples
+
+## 6) COMPONENTES GLOBAIS (OBRIGATÓRIO EM TODAS AS PÁGINAS)
+
+- Header global: logo + nav (Sobre, Equipe, Abordagens, Como funciona, Estrutura, Contato) + CTA. Mobile drawer com animação. Ativo com underline.
+- Footer global: logo, NAP de cada unidade, CRNs, Instagram, links rápidos, selo "Site ético CFN"
+- Modal/drawer de agendamento global: abre com qualquer elemento [data-form="open"], contém form, fecha com ESC, X, clique fora. Deve funcionar em TODAS as páginas (incluir JS global)
+- Breadcrumb nas internas: Home > Equipe > Ana
+- CTA flutuante mobile: botão WhatsApp fixo bottom
+- Toast de sucesso
+
+## 7) ENTREGA TÉCNICA MULTI-PÁGINAS (CRÍTICO)
+
+- Entregar como ZIP ou pasta com todos os.html
+- PROIBIDO caminho absoluto /assets/ ou /img/. Tudo RELATIVO:./assets/css/style.css ou./abordagens/emagrecimento.html ou../index.html
+- Funcionar se hospedado em subpasta: ex: seudominio.com.br/nutricao/ ou seudominio.com.br/clinica/
+- CSS e JS compartilhados: criar /assets/css/main.css e /assets/js/main.js (relativo)
+- Usar Tailwind CDN ou CSS puro, Google Fonts, JS vanilla (sem build, sem npm)
+- Cada página com title, meta description únicos, H1 único, canonical relativo
+- Schema: Organization + LocalBusiness + Person (para cada nutri) + FAQPage
+- Form: action para WhatsApp com mensagem montada + fallback mailto, validação
+
+Estrutura de pastas esperada:
+/
+- index.html
+- sobre.html
+- equipe.html
+- equipe/
+    - ana-souza.html
+    - joao-lima.html
+- abordagens.html
+- abordagens/
+    - emagrecimento.html
+    - saude-intestinal.html
+- como-funciona.html
+- estrutura.html
+- contato.html
+- obrigado.html
+- privacidade.html
+- assets/
+    - css/main.css
+    - js/main.js
+    - img/ (se precisar)
+
+## 8) CRO PARA ESCRITÓRIO
+
+- CTA primário: "Agendar avaliação" (global)
+- CTA secundário: "Conhecer equipe", "Ver abordagens"
+- Prova social perto de todo CTA
+- Formulário global com campo "Nutri de preferência" e "Unidade"
+- Microcopy: "Resposta em até 2h úteis | Equipe real no WhatsApp"
+
+## 9) COPY - TOM INSTITUCIONAL HUMANO
+
+- Evitar "nós somos apaixonados". Focar em método, estrutura, equipe.
+- Ex: "Um escritório com método, não uma dieta solta no WhatsApp"
+- Headlines por página prontas + CTAs
+
+## 10) SEO MULTI-PÁGINAS
+
+- Title template: [Página] | [Nome do Escritório] | Nutricionista em [Cidade]
+- Internlinking: toda página linka para 2 abordagens + 2 perfis de equipe
+- Sitemap.xml gerado (opcional em comentário)
+
+## 11) CHECKLIST FINAL
+
+- Todos os links relativos funcionando entre pastas (testar../)
+- Modal funciona em todas as páginas
+- Mobile-first 375px, menu drawer acessível
+- Contraste AA, foco visível
+- Sem antes/depois, sem promessa de peso
+- Pronto pra subir via FTP
+
+## 12) FORMATO DE SAÍDA
+
+Entregar:
+1. Diagnóstico de marca
+2. Sitemap visual
+3. Design System (tokens)
+4. Blueprint por página (o que tem em cada)
+5. Copy completa por página (H1, H2, CTAs)
+6. Código completo em ZIP com estrutura acima
+
+Qualidade: dar nota 0-10 para Arquitetura, Coerência, Conversão, Prontidão. Explicar como elevar <9.

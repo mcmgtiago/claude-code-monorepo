@@ -1,0 +1,24 @@
+{
+  "name": "seven-universe",
+  "version": "1.0.0",
+  "description": "Seven Universe — Multi-World AI RPG",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.28.0",
+    "@tailwindcss/postcss": "^4.3.3",
+    "next": "^15.5.23",
+    "react": "^19.2.8",
+    "tailwindcss": "^4.3.3",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.1",
+    "@types/react": "^19.2.18",
+    "typescript": "^5.9.3"
+  }
+}

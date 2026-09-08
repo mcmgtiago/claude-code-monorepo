@@ -1,0 +1,369 @@
+/* ═══════════════════════════════════════════════════════════
+   KIT: canadadsgn-infoproduto — EFEITOS
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Texto gradiente (rosa → pink) ── */
+.kit-text-gradient {
+  background: var(--kit-gradient-accent-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* ── Heading "sliced" (branco → cinza com clip) ── */
+.kit-heading-sliced {
+  background: linear-gradient(180deg, #FFFFFF 45%, #666666 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── Glassmorphism ── */
+.kit-glass {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--kit-radius-lg);
+}
+
+.kit-glass--strong {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ── Sombra brilho magenta ── */
+.kit-glow {
+  box-shadow: var(--kit-shadow-glow);
+}
+
+/* ── Linha decorativa com glow ── */
+.kit-line-glow {
+  height: 1px;
+  width: 85px;
+  margin: 0 auto;
+  background: var(--kit-gradient-caption-glow);
+  box-shadow: 0 9px 27px 0 rgba(190, 224, 195, 0.3);
+  border-radius: var(--kit-radius-pill);
+}
+
+/* ── Pseudo-elemento decorativo: pontos nos cantos ── */
+.kit-corner-dots {
+  position: relative;
+}
+
+.kit-corner-dots::before,
+.kit-corner-dots::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--kit-primary);
+}
+
+.kit-corner-dots::before {
+  top: -4px;
+  left: -4px;
+}
+
+.kit-corner-dots::after {
+  bottom: -4px;
+  right: -4px;
+}
+
+/* ── Separador gradiente ── */
+.kit-separator {
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--kit-primary) 30%,
+    var(--kit-primary-light) 50%,
+    var(--kit-primary) 70%,
+    transparent 100%
+  );
+  opacity: 0.5;
+  border: none;
+}
+
+/* ── Overlay escuro para seções com background image ── */
+.kit-overlay {
+  position: relative;
+}
+
+.kit-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 12, 12, 0.7);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.kit-overlay > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Borda rosa sutil ── */
+.kit-border-accent {
+  border: 1px solid var(--kit-primary);
+}
+
+.kit-border-accent-subtle {
+  border: 1px solid rgba(223, 24, 99, 0.25);
+}
+
+/* ── Hover de escala suave ── */
+.kit-hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.kit-hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* ── Hover opacidade ── */
+.kit-hover-fade {
+  transition: opacity 0.3s ease;
+}
+
+.kit-hover-fade:hover {
+  opacity: 0.8;
+}
+
+/* ── Filtro desaturação no container ── */
+.kit-filter-gray-on-hover {
+  transition: filter 0.3s ease;
+}
+
+.kit-filter-gray-on-hover:hover {
+  filter: grayscale(100%) blur(1px);
+}
+
+/* ── Gradiente radial de fundo (seções especiais) ── */
+.kit-bg-radial-glow {
+  background: radial-gradient(
+    circle at 50% 30%,
+    rgba(223, 24, 99, 0.12) 0%,
+    transparent 60%
+  );
+}
+
+/* ── Clip path de seção diagonal ── */
+.kit-clip-diagonal {
+  clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0 100%);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   EFEITOS AMBIENTAIS — BLUR SPHERES (glow de fundo)
+   Recria as 8 esferas .blur da página original
+   ═══════════════════════════════════════════════════════════ */
+
+.kit-ambient-glow {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.kit-blur-sphere {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  animation: kit-sphere-drift 20s ease-in-out infinite alternate;
+}
+
+.kit-blur-sphere--pink {
+  background: radial-gradient(circle, rgba(223, 24, 99, 0.4) 0%, transparent 70%);
+}
+
+.kit-blur-sphere--purple {
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, transparent 70%);
+}
+
+.kit-blur-sphere--warm {
+  background: radial-gradient(circle, rgba(252, 114, 167, 0.25) 0%, transparent 70%);
+}
+
+/* Posições variadas para cada esfera */
+.kit-blur-sphere--1 {
+  width: 400px; height: 400px;
+  top: -10%; left: -5%;
+  animation-duration: 18s;
+}
+.kit-blur-sphere--2 {
+  width: 300px; height: 300px;
+  top: 20%; right: -8%;
+  animation-duration: 22s;
+  animation-delay: -5s;
+}
+.kit-blur-sphere--3 {
+  width: 350px; height: 350px;
+  bottom: -5%; left: 40%;
+  animation-duration: 25s;
+  animation-delay: -10s;
+}
+.kit-blur-sphere--4 {
+  width: 250px; height: 250px;
+  top: 50%; right: 20%;
+  animation-duration: 20s;
+  animation-delay: -3s;
+}
+
+@keyframes kit-sphere-drift {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(30px, -20px) scale(1.05); }
+  66%  { transform: translate(-20px, 15px) scale(0.95); }
+  100% { transform: translate(10px, -10px) scale(1.02); }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   CARD GLOW HOVER — Efeito radial glow ao hover
+   ═══════════════════════════════════════════════════════════ */
+
+.kit-card-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.kit-card-glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(223, 24, 99, 0.12) 0%,
+    transparent 40%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.kit-card-glow:hover::after {
+  opacity: 1;
+}
+
+/* Corner dots que aparecem no hover (inspirado em cards-dark-grid) */
+.kit-card-glow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  background:
+    radial-gradient(circle at 0% 0%, var(--kit-primary) 1.5px, transparent 1.5px),
+    radial-gradient(circle at 100% 0%, var(--kit-primary) 1.5px, transparent 1.5px),
+    radial-gradient(circle at 0% 100%, var(--kit-primary) 1.5px, transparent 1.5px),
+    radial-gradient(circle at 100% 100%, var(--kit-primary) 1.5px, transparent 1.5px);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.kit-card-glow:hover::before {
+  opacity: 0.8;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SECTION GLOW — Brilho sutil de fundo por seção
+   ═══════════════════════════════════════════════════════════ */
+
+.kit-section-glow-top {
+  position: relative;
+}
+
+.kit-section-glow-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(223, 24, 99, 0.3) 20%,
+    rgba(252, 114, 167, 0.5) 50%,
+    rgba(223, 24, 99, 0.3) 80%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.kit-section-glow-top::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 100px;
+  background: radial-gradient(ellipse at top, rgba(223, 24, 99, 0.08) 0%, transparent 80%);
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   BUTTON PULSE — Animação de glow pulsante no CTA
+   ═══════════════════════════════════════════════════════════ */
+
+.kit-btn-pulse {
+  animation: kit-btn-glow-pulse 3s ease-in-out infinite;
+}
+
+@keyframes kit-btn-glow-pulse {
+  0%, 100% {
+    box-shadow:
+      0 -27px 80px 0 rgba(223, 24, 99, 0.22),
+      0 -9.855px 29.201px 0 rgba(223, 24, 99, 0.15),
+      0 -4.785px 14.177px 0 rgba(223, 24, 99, 0.12),
+      0 -2.346px 6.95px 0 rgba(223, 24, 99, 0.1),
+      0 -0.927px 2.748px 0 rgba(223, 24, 99, 0.07);
+  }
+  50% {
+    box-shadow:
+      0 -27px 80px 0 rgba(223, 24, 99, 0.35),
+      0 -9.855px 29.201px 0 rgba(223, 24, 99, 0.25),
+      0 -4.785px 14.177px 0 rgba(223, 24, 99, 0.2),
+      0 0 40px 5px rgba(223, 24, 99, 0.15),
+      0 0 80px 10px rgba(223, 24, 99, 0.08);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   NOISE TEXTURE — Textura sutil de ruído para profundidade
+   ═══════════════════════════════════════════════════════════ */
+
+.kit-noise::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  mix-blend-mode: overlay;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   VIGNETTE — Efeito vinheta sutil nas bordas da viewport
+   ═══════════════════════════════════════════════════════════ */
+
+.kit-vignette::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  background: radial-gradient(ellipse at center, transparent 50%, rgba(0, 0, 0, 0.4) 100%);
+}

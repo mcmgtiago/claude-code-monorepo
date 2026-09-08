@@ -1,0 +1,121 @@
+Você é um designer sênior especializado em identidades institucionais brasileiras premium. Crie 3-5 VARIANTES VISUAIS DISTINTAS do HERO section para a homepage institucional da PILAR Recursos Humanos, uma empresa brasileira tradicional de RH com 18 anos de mercado.
+
+CONTEXTO DA MARCA:
+- Nome: PILAR Recursos Humanos
+- Assinatura: "Pessoas certas. Relações que permanecem."
+- Posicionamento: Tradicional, confiável, próximo, brasileiro. NÃO startup SaaS.
+- Tom: Profissional, claro, respeitoso, humano, seguro, objetivo. SEM exageros publicitários.
+- Públicos: Empresas (50-5.000 colaboradores) e profissionais buscando vagas
+
+PALETA PILAR (USE EXATAMENTE):
+--navy: #10283f (azul-marinho profundo)
+--wine: #8b3e4d (vinho institucional — CTAs)
+--sand: #d1b98c (dourado fosco — detalhes)
+--ivory: #f5f1e9 (marfim — seções editoriais)
+--paper: #fbfaf7 (fundo principal — NUNCA fundo escuro no hero)
+--ink: #20272c (textos pretos)
+
+TIPOGRAFIA:
+- Manrope (sans): Navegação, corpo, botões
+- Newsreader (serif): Títulos institucionais — usar COM EQUILÍBRIO, nunca em tudo
+- IBM Plex Mono: Eyebrows, labels, números, datas
+
+ESTRUTURA OBRIGATÓRIA (TODAS AS VARIANTES):
+Desktop (min-height 760px):
+- Grid 12 colunas: esquerda (6 colunas) + direita (6 colunas)
+- Fundo: --paper (#fbfaf7), NUNCA fundo escuro
+
+Coluna Esquerda:
+- Eyebrow: "RECURSOS HUMANOS COM EXPERIÊNCIA E PROXIMIDADE" (com elemento vinho antes)
+- Headline: "Pessoas certas tornam o crescimento mais seguro." (Newsreader apenas em "mais seguro")
+  • Font-size: clamp(3rem, 6.2vw, 6.8rem)
+  • Line-height: 0.92
+  • Tracking: -0.055em
+- Subheadline: "A PILAR apoia empresas em recrutamento, trabalho temporário, terceirização, administração de pessoal e desenvolvimento de equipes."
+- 2 CTAs: "Solicitar uma proposta" (vinho primário) + "Encontrar uma vaga" (secundário)
+- Microcopy: "Atendimento consultivo, processos claros e acompanhamento próximo em todas as etapas."
+- 3 Indicadores: 18 anos | 12 mil contratações | 9 estados
+- Nota pequena: "Indicadores ilustrativos. Substituir pelos dados oficiais antes da publicação."
+
+Coluna Direita:
+- Bloco de mídia (vídeo/foto) proporção 4:5
+- Cantos: 24px
+- Etiqueta superior: "ATENDIMENTO EM ANDAMENTO"
+- Bloco inferior: "PROCESSO ATIVO — Recrutamento para operação logística — 42 posições em acompanhamento"
+- Deve parecer ficha operacional, NÃO dashboard SaaS
+
+Mobile (todas as variantes):
+- 1 coluna
+- Headline primeiro
+- CTAs full-width
+- Mídia abaixo
+- Indicadores em grid 2 colunas
+
+REFERÊNCIA VISUAL (O QUE O HERO DEVE LEMBRAR):
+- Escritório institucional brasileiro
+- Relatório executivo bem diagramado
+- Publicação editorial
+- Empresa consolidada de consultoria
+- Material impresso de alta qualidade
+- Atendimento próximo e organizado
+
+PROIBIDO (NEM PENSE EM):
+Neon, verde-lima, roxo tecnológico, gradientes multicoloridos, glassmorphism, blobs, ilustrações 3D, ícones flutuantes, emojis, avatares de IA, pessoas geradas por IA, excesso de cantos arredondados, aparência dashboard financeiro, animações constantes, textos gigantes, pessoas sorrindo para notebooks, apertos de mão artificiais, equipes comemorando, ícones de mãos/corações/quebra-cabeças/cérebros, aparência agência de marketing, cores EIXO (laranja/preto), sliders autoplay, interface de app
+
+═══════════════════════════════════════════════
+
+ENTREGUE 3-5 VARIANTES, cada uma com direção de arte DISTINTA mas fiel à marca:
+
+VARIANTE A — "DIÁRIO OPERACIONAL"
+Direção: Página editorial de revista/diário institucional brasileira
+- Tipografia dominante, fotografia ~50% do espaço
+- Forte hierarquia tipográfica
+- Newsreader generosa na headline
+- Indicadores em linha discreta com mono
+- Pouco ornamento, muito conteúdo
+- CTA vinho sólido + alternativa em contorno
+- Sensação: editorial, profissional, leitura clara
+
+VARIANTE B — "FICHA DE PROCESSO"
+Direção: Página de abertura de dossiê/processo aberto
+- Mais densidade informacional no lado direito
+- Etiqueta superior + ficha PROCESSO ATIVO com 42 posições destacada
+- Esquerda com headline espaçada
+- Indicadores em pequenos blocos com borda fina
+- Tom: sóbrio, executivo, confidencial, processual
+- Elementos de "ficha administrativa"
+- Sensação: operacional, organizado, formal
+
+VARIANTE C — "ATENDIMENTO CONSULTIVO"
+Direção: Sala de reunião institucional
+- Mais calor humano, menos densidade de ficha
+- Fotografia/vídeo com PESSOAS REAIS em escritório (não posed de banco de imagens)
+- Headline tipográfica generosa, não quebrada
+- CTAs lado a lado com forte hierarquia
+- Elemento distintivo: pequena trilha de breadcrumb ("Início › Soluções")
+- Menos densidade, mais acolhida
+- Sensação: próxima, consultiva, humana, segura
+
+[OPCIONAIS] VARIANTE D e E — CRIATIVIDADE
+Se você tiver outras ideias que respeitem o briefing, crie 1-2 variantes extras:
+- Variante D: Sua escolha (fotografia grande? Layout assimétrico? Tipografia mais bold?)
+- Variante E: Sua escolha
+
+═══════════════════════════════════════════════
+
+PARA CADA VARIANTE ENTREGADA:
+
+1. Componente React/TypeScript completo (ou código pronto para implementar)
+2. Use EXATAMENTE as variáveis CSS listadas
+3. Tipografia conforme escala definida
+4. Imagens de placeholder com proporção correta (4:5 para mídia)
+5. Responsividade mobile/tablet/desktop
+6. Sem libs de UI prontas, sem shadcn, sem template
+7. Design system tokens exportados
+8. Guia de implementação (CSS, Tailwind, Motion)
+9. Notas sobre diferenças de cada variante
+10. Exportar como: PNG mockup + design file + código pronto
+
+Começe com VARIANTE A e mostre o visual antes de passar para B, C, D, E.
+
+O OUTPUT ESPERADO é principalmente VISUAL (designs, mockups, protótipos), não código. Código React já existe, você refina esteticamente no Open Design.

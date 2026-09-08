@@ -1,0 +1,1289 @@
+/*** 
+=============================================
+    Blog Style1 Area Css
+=============================================
+***/
+.blog-style1-area {
+    position: relative;
+    display: block;
+    background: #ffffff;
+    padding: 120px 0 80px;
+}
+
+.blog-top-title {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 49px;
+}
+
+.blog-style1-area .sec-title {
+    padding-bottom: 0;
+}
+
+.blog-style1-area .sec-title.pdbtm50 {
+    padding-bottom: 50px;
+}
+
+.blog-style1__button {
+    position: relative;
+    display: block;
+    line-height: 0;
+    padding-bottom: 11px;
+}
+
+.single-blog-style1 {
+    position: relative;
+    display: block;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+    margin-bottom: 40px;
+}
+
+.single-blog-style1:hover {
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+.single-blog-style1 .img-holder {
+    position: relative;
+    display: block;
+}
+
+.single-blog-style1 .img-holder .inner {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.single-blog-style1 .img-holder .inner::before {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    background-color: rgba(var(--thm-base-rgb), .80);
+    border-radius: 50%;
+    -webkit-transform: translateX(90%, 90%);
+    transform: translateX(90%, 90%);
+    opacity: 0.70;
+    z-index: 1;
+}
+
+.single-blog-style1:hover .img-holder .inner::before {
+    -webkit-animation: circle .95s;
+    animation: circle .95s;
+}
+
+.single-blog-style1 .img-holder img {
+    width: 100%;
+    transform: scale(1.0);
+}
+
+.single-blog-style1:hover .img-holder img {
+    transform: scale(1.1) rotate(1deg);
+}
+
+
+
+.single-blog-style1 .categories-date-box {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+.single-blog-style1 .categories-date-box .categories-box {
+    position: relative;
+    display: block;
+    float: left;
+    height: 55px;
+    background-color: rgba(var(--thm-black-rgb), .90);
+    padding: 17px 20px 15px;
+    margin-right: 3px;
+}
+
+.single-blog-style1 .categories-date-box .categories-box h6 {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.single-blog-style1 .categories-date-box .categories-box h6 span:before {
+    position: relative;
+    display: inline-block;
+    padding-right: 8px;
+    color: var(--thm-base);
+    font-size: 16px;
+    top: 2px;
+}
+
+.single-blog-style1 .categories-date-box .date-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    width: 55px;
+    height: 55px;
+    background-color: var(--thm-base);
+    text-align: center;
+}
+
+.single-blog-style1 .categories-date-box .date-box h3 {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.single-blog-style1 .categories-date-box .date-box h3 span {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+
+.single-blog-style1 .text-holder {
+    position: relative;
+    display: block;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-top: none;
+    padding: 28px 30px 0;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+
+.single-blog-style1:hover .text-holder {
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+.single-blog-style1 .text-holder .blog-title {
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.single-blog-style1 .text-holder .blog-title a {
+    color: var(--thm-black);
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+
+.single-blog-style1 .text-holder .blog-title a:hover {
+    color: var(--thm-base);
+}
+
+.single-blog-style1 .text-holder .text {
+    position: relative;
+    display: block;
+    padding-top: 10px;
+}
+
+.single-blog-style1 .text-holder .text p {
+    margin: 0;
+}
+
+.single-blog-style1 .text-holder .bottom-box {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 29px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    z-index: 1;
+}
+
+.single-blog-style1 .text-holder .bottom-box .pattern-bg {
+    position: absolute;
+    top: 0px;
+    left: -31px;
+    bottom: 0;
+    right: -31px;
+    background-color: #ffffff;
+    background-repeat: repeat;
+    border-top: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    z-index: -1;
+    background-position: center;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+
+.single-blog-style1 .text-holder .bottom-box .left {
+    position: relative;
+    display: block;
+}
+
+
+
+.single-blog-style1 .text-holder .bottom-box .right {
+    position: relative;
+    display: block;
+}
+
+.single-blog-style1 .text-holder .bottom-box .right ul {
+    overflow: hidden;
+}
+
+.single-blog-style1 .text-holder .bottom-box .right ul li {
+    position: relative;
+    float: left;
+    margin-right: 20px;
+}
+
+.single-blog-style1 .text-holder .bottom-box .right ul li:last-child {
+    margin-right: 0;
+}
+
+.single-blog-style1 .text-holder .bottom-box .right ul li a {
+    color: var(--thm-gray);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: var(--thm-font-2);
+}
+
+.single-blog-style1 .text-holder .bottom-box .right ul li a:hover {
+    color: var(--thm-base);
+}
+
+.single-blog-style1 .text-holder .bottom-box .right ul li a span:before {
+    position: relative;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.single-blog-style1 .text-holder .bottom-box .right ul li a .share {
+    font-size: 18px;
+}
+
+
+
+/*** 
+=============================================
+    Blog Style2 Area Css
+=============================================
+***/
+.blog-style2-area {
+    position: relative;
+    display: block;
+    background: #f5f5f5;
+    padding: 120px 0 120px;
+}
+
+.single-blog-style2 {
+    margin: 0;
+}
+
+
+.single-blog-style2 .date-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--thm-base);
+    text-align: center;
+    z-index: 2;
+}
+
+.single-blog-style2 .date-box h3 {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.single-blog-style2 .date-box h3 span {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.single-blog-style2 .img-holder .gradient-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgb(33, 49, 64);
+    background: linear-gradient(0deg, rgba(33, 49, 64, 1) 0%, rgba(33, 49, 64, 0) 50%);
+    z-index: 1;
+}
+
+.single-blog-style2 .img-holder .overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 30px 24px;
+    z-index: 2;
+}
+
+.single-blog-style2 .img-holder .overlay-content h6 {
+    color: var(--thm-base);
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 7px;
+}
+
+.single-blog-style2 .img-holder .overlay-content h6 span::before {
+    position: relative;
+    display: inline-block;
+    padding-right: 10px;
+    top: 2px;
+}
+
+.single-blog-style2 .img-holder .overlay-content .blog-title {
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+.single-blog-style2 .img-holder .overlay-content .blog-title a {
+    color: #ffffff;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+
+.single-blog-style2 .img-holder .overlay-content .blog-title a:hover {
+    color: var(--thm-base);
+}
+
+
+.single-blog-style2 .text-holder {
+    border: 0px solid;
+    padding: 0;
+}
+
+.single-blog-style2 .text-holder .bottom-box {
+    margin-top: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+}
+
+.single-blog-style2 .text-holder .bottom-box .pattern-bg {
+    top: 0px;
+    left: 0px;
+    bottom: 0;
+    right: 0px;
+    border: none;
+}
+
+
+
+
+.blog-style2-carousel {
+    position: relative;
+    display: block;
+}
+
+.blog-style2-carousel.owl-carousel .owl-stage-outer {
+    padding-bottom: 0px;
+    overflow: visible;
+}
+
+.blog-style2-carousel.owl-carousel .owl-stage-outer .owl-item {
+    opacity: 0;
+    -webkit-transform: perspective(400px) rotateX(90deg) scaleY(0.5);
+    -ms-transform: perspective(400px) rotateX(90deg) scaleY(0.5);
+    transform: perspective(400px) rotateX(90deg) scaleY(0.5);
+    -webkit-transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    transform-origin: bottom;
+    transition-delay: .1s;
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+    transition-property: all;
+}
+
+.blog-style2-carousel.owl-carousel .owl-stage-outer .owl-item.active {
+    opacity: 1;
+    -webkit-transform: perspective(400px) rotateX(0deg) scaleY(1.0);
+    -ms-transform: perspective(400px) rotateX(0deg) scaleY(1.0);
+    transform: perspective(400px) rotateX(0deg) scaleY(1.0);
+    transition-delay: .1s;
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+    transition-property: all;
+}
+
+
+
+/*** 
+=============================================
+    Blog Page Css
+=============================================
+***/
+.blog-page {
+    position: relative;
+    display: block;
+    background: #ffffff;
+    padding: 120px 0 120px;
+}
+
+
+.single-blog-style1--blog-large {
+    margin-bottom: 50px;
+}
+
+.single-blog-style1--blog-large .text-holder .blog-title {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.single-blog-style1--blog-large .text-holder .text {
+    padding-top: 13px;
+}
+
+
+
+/*** 
+=============================================
+    Blog Page Three Css
+=============================================
+***/
+
+.single-blog-style1--blog-list {}
+
+.single-blog-style1--blog-list .text-holder {
+    border: 0px solid #e5e5e5;
+    padding: 28px 30px 0;
+    margin-left: -30px;
+    z-index: 1;
+}
+
+.single-blog-style1--blog-list:hover {
+    box-shadow: 0px 5px 15px 5px rgb(0 0 0 / 10%);
+}
+
+.single-blog-style1--blog-list .text-holder:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: -1px;
+    border: 1px solid #e4e4e4;
+    border-left: none;
+    z-index: -1;
+}
+
+.single-blog-style1--blog-list .categories-date-box {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-bottom: 28px;
+}
+
+.single-blog-style1--blog-list .categories-date-box .categories-box {
+    background-color: #ffffff;
+    padding: 17px 20px 15px;
+    margin-left: 10px;
+    margin-right: 0;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+}
+
+.single-blog-style1--blog-list .categories-date-box .categories-box h6 {
+    color: #757575;
+}
+
+.single-blog-style1--blog-list .text-holder .bottom-box .pattern-bg {
+    top: 0px;
+    left: -30px;
+    bottom: 0;
+    right: -30px;
+    border-top: 1px solid #e5e5e5;
+    border-left: 0px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    border-right: 0px solid #e5e5e5;
+}
+
+
+
+
+/*** 
+=============================================
+    Blog Details Css
+=============================================
+***/
+.blog-details-content {
+    position: relative;
+    display: block;
+}
+
+.single-blog-style1--blog-large.blog-details {
+    margin-bottom: 60px;
+}
+
+.single-blog-style1--blog-large.blog-details .text-holder {
+    padding: 32px 30px 0;
+}
+
+.single-blog-style1--blog-large.blog-details .text-holder .top-text {
+    position: relative;
+    display: block;
+    padding-bottom: 36px;
+}
+
+.single-blog-style1--blog-large.blog-details .text-holder .top-text .top {
+    position: relative;
+    display: block;
+    padding-left: 60px
+}
+
+.single-blog-style1--blog-large.blog-details .text-holder .top-text .top .big-text {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background: var(--thm-base);
+    color: #ffffff;
+    font-size: 48px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.single-blog-style1--blog-large.blog-details .text-holder .top-text .top .inner-text {
+    position: relative;
+    display: block;
+    padding-left: 20px;
+}
+
+.single-blog-style1--blog-large.blog-details .text-holder .top-text .top .inner-text p {
+    margin: 0;
+}
+
+.single-blog-style1--blog-large.blog-details .text-holder .top-text .inner p {
+    margin: 0;
+}
+
+.single-blog-style1--blog-large.blog-details .text-holder .top-text .inner p+p {
+    margin-top: 16px;
+}
+
+
+.single-blog-style1--blog-large.blog-details .text-holder .text {
+    padding-top: 23px;
+}
+
+.single-blog-style1--blog-large.blog-details .text-holder .text p+p {
+    margin-top: 16px;
+}
+
+
+
+.blog-details-quote-box {
+    position: relative;
+    display: block;
+    background: #f5f5f5;
+    padding: 33px 40px 37px;
+    margin: 34px 0 37px;
+}
+
+.blog-details-quote-box:before {
+    content: "";
+    position: absolute;
+    left: 40px;
+    bottom: -5px;
+    right: 40px;
+    height: 5px;
+    background: var(--thm-base);
+    transition: all 0.4s cubic-bezier(0.62, 0.21, 0.45, 1.52);
+}
+
+.blog-details-quote-box:hover:before {
+    left: 0;
+    right: 0;
+}
+
+.blog-details-quote-box .inner-content {
+    position: relative;
+    display: block;
+    padding-left: 70px;
+}
+
+.blog-details-quote-box .inner-content .icon {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    color: var(--thm-base);
+    font-size: 45px;
+    line-height: 34px;
+}
+
+.blog-details-quote-box .inner-content .inner-text {
+    position: relative;
+    display: block;
+    padding-left: 27px;
+}
+
+.blog-details-quote-box .inner-content .inner-text:before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    bottom: 3px;
+    width: 2px;
+    background: var(--thm-base);
+}
+
+.blog-details-quote-box .inner-content .inner-text h3 {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+    margin: 0 0 18px;
+}
+
+.blog-details-quote-box .inner-content .inner-text h5 {
+    color: #757575;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+.blog-details-text-1 {
+    position: relative;
+    display: block;
+}
+
+.blog-details-text-1 p {
+    margin: 0;
+}
+
+
+
+.blog-details-text-2 {
+    position: relative;
+    display: block;
+    padding: 35px 0 27px;
+}
+
+.blog-details-text-2 h2 {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 600;
+    margin: 0 0 23px;
+}
+
+.blog-details-text-2 p {
+    margin: 0;
+}
+
+
+
+.blog-details-text-3 {
+    position: relative;
+    display: block;
+}
+
+.blog-details-text-3 .top-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-bottom: 9px;
+}
+
+.blog-details-text-3 .top-title .icon {
+    width: 30px;
+}
+
+.blog-details-text-3 .top-title .icon span:before {
+    color: var(--thm-base);
+}
+
+.blog-details-text-3 .top-title h3 {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+.blog-details-text-3 .inner-text {
+    position: relative;
+    display: block;
+}
+
+.blog-details-text-3 .inner-text p {
+    margin: 0;
+}
+
+
+
+
+.blog-details-text-4 {
+    position: relative;
+    display: block;
+    padding-top: 27px;
+}
+
+.blog-details-text-4 .top-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-bottom: 9px;
+}
+
+.blog-details-text-4 .top-title .icon {
+    width: 30px;
+}
+
+.blog-details-text-4 .top-title .icon span:before {
+    color: var(--thm-base);
+}
+
+.blog-details-text-4 .top-title h3 {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+.blog-details-text-4 .inner-text {
+    position: relative;
+    display: block;
+    padding-bottom: 15px;
+}
+
+.blog-details-text-4 .inner-text p {
+    margin: 0;
+}
+
+
+.blog-details-text-4 ul {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+}
+
+.blog-details-text-4 ul li {
+    position: relative;
+    display: block;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.blog-details-text-4 ul li:last-child {
+    margin-bottom: 0;
+}
+
+.blog-details-text-4 ul li:before {
+    font-family: flaticon !important;
+    content: "\f164" !important;
+    position: absolute;
+    top: 1px;
+    left: 0px;
+    transition: .5s;
+    transform: perspective(400px) scaleX(1.0) rotate(180deg);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    font-size: 14px;
+}
+
+
+.single-blog-style1--blog-large.blog-details .text-holder .bottom-box {
+    margin-top: 55px;
+    padding-top: 21px;
+    padding-bottom: 21px;
+}
+
+
+
+
+.tag-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.tag-box .title {
+    position: relative;
+    display: block;
+}
+
+.tag-box .title h4 {
+    color: var(--thm-base);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.tag-box .tag-list {
+    position: relative;
+    display: block;
+    padding-left: 10px;
+}
+
+.tag-box .tag-list ul {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.tag-box .tag-list ul li {
+    position: relative;
+    display: block;
+    float: left;
+    margin-right: 5px;
+}
+
+.tag-box .tag-list ul li:last-child {
+    margin-right: 0;
+}
+
+.tag-box .tag-list ul li a {
+    color: #1c1c27;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+
+.tag-box .tag-list ul li a:hover {
+    color: var(--thm-base);
+}
+
+
+
+
+.blog-prev-next-option {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 29px 30px 29px;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+}
+
+.blog-prev-next-option:before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    bottom: 30px;
+    width: 1px;
+    background: #e5e5e5;
+}
+
+.blog-prev-next-option .single-box {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 50%;
+}
+
+.blog-prev-next-option .single-box .img-box {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 70px;
+    height: 70px;
+}
+
+
+
+.blog-prev-next-option .single-box .button-box {
+    position: relative;
+    top: -3px;
+    display: block;
+    line-height: 16px;
+}
+
+.blog-prev-next-option .single-box .button-box a {
+    color: #757575;
+}
+
+.blog-prev-next-option .single-box .button-box a:hover {
+    color: var(--thm-base);
+}
+
+.blog-prev-next-option .single-box h3 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    margin: 6px 0 0;
+}
+
+.blog-prev-next-option .single-box h3 a {
+    color: var(--thm-black);
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+
+.blog-prev-next-option .single-box h3 a:hover {
+    color: var(--thm-base);
+}
+
+
+.blog-prev-next-option .single-box.left {
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.blog-prev-next-option .single-box.left .title-box {
+    padding-left: 20px;
+}
+
+.blog-prev-next-option .single-box.right {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.blog-prev-next-option .single-box.right .title-box {
+    padding-right: 20px;
+}
+
+
+
+.blog-details-author-box {
+    position: relative;
+    display: block;
+    padding-top: 76px;
+}
+
+.blog-details-author-box .inner-title {
+    position: relative;
+    display: block;
+    padding-bottom: 36px;
+}
+
+.blog-details-author-box .inner-title h2 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+.blog-details-author {
+    position: relative;
+    display: block;
+    background: #f5f5f5;
+    padding: 40px 40px 40px;
+}
+
+.blog-details-author .inner-box {
+    position: relative;
+    display: block;
+}
+
+.blog-details-author .inner-box .img-box {
+    width: 100px;
+}
+
+.blog-details-author .inner-box .img-box img {
+    width: 100%;
+}
+
+.blog-details-author .inner-box .img-box,
+.blog-details-author .inner-box .text {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.blog-details-author .inner-box .text {
+    position: relative;
+    padding-left: 30px;
+}
+
+.blog-details-author .inner-box .text h3 {
+    position: relative;
+    top: -2px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.blog-details-author .inner-box .text p {
+    margin: 0;
+}
+
+.blog-details-author .inner-box .text .social-links {
+    position: relative;
+    display: block;
+    padding-top: 24px;
+}
+
+
+
+/*** 
+=============================================
+   comments Box Css
+=============================================
+***/
+.comment-box {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding-top: 76px;
+}
+
+.comment-box .inner-title {
+    position: relative;
+    display: block;
+    padding-bottom: 15px;
+}
+
+.comment-box .inner-title h2 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+.comment-box .outer-box {
+    position: relative;
+    display: block;
+}
+
+.comment-box .single-comment {
+    position: relative;
+    display: block;
+    padding-top: 21px;
+    margin-bottom: 30px;
+}
+
+.comment-box .single-comment.marginleft30 {
+    margin-left: 30px;
+}
+
+.comment-box .single-comment .inner {
+    position: relative;
+    display: block;
+    border: 1px solid #e5e5e5;
+    padding: 40px 30px 36px;
+}
+
+.comment-box .single-comment-box {
+    position: relative;
+    display: block;
+    padding-left: 80px;
+    min-height: 80px;
+}
+
+.comment-box .single-comment-box .img-holder {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 80px;
+    height: 80px;
+}
+
+.comment-box .single-comment-box .img-holder img {
+    width: 100%;
+}
+
+.comment-box .single-comment-box .text-holder {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    min-height: 80px;
+}
+
+.comment-box .single-comment-box .text-holder .top {
+    position: relative;
+    display: block;
+    top: -3px;
+}
+
+.comment-box .single-comment-box .text-holder .top h3 {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.comment-box .single-comment-box .text-holder .top h3 span {
+    position: relative;
+    display: inline-block;
+    padding-left: 5px;
+    color: var(--thm-base);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.comment-box .single-comment-box .text-holder .text {
+    position: relative;
+    display: block;
+    padding-top: 9px;
+}
+
+.comment-box .single-comment-box .text-holder .text p {
+    margin: 0;
+}
+
+
+
+.comment-box .single-comment .reply {
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    z-index: 2;
+}
+
+.comment-box .single-comment .reply a {
+    position: relative;
+    display: inline-block;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    padding: 10px 25px 10px;
+    color: var(--thm-black);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 0px;
+    font-family: var(--thm-font-2);
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+
+.comment-box .single-comment .reply a:hover {
+    color: #ffffff;
+    border-color: var(--thm-base);
+    background-color: var(--thm-base);
+}
+
+
+
+
+
+
+
+
+/*** 
+=============================================
+   Add Comment Box Css
+=============================================
+***/
+.add-comment-box {
+    position: relative;
+    display: block;
+    padding: 56px 60px 60px;
+    background: #ffffff;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+.add-comment-box .inner-title {
+    position: relative;
+    display: block;
+    padding-bottom: 26px;
+}
+
+.add-comment-box .inner-title h2 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 600;
+    margin: 0 0 8px;
+}
+
+.add-comment-box .inner-title p {
+    margin: 0;
+}
+
+.add-comment-box #add-comment-form {
+    position: relative;
+    display: block;
+}
+
+.add-comment-box #add-comment-form .input-box {
+    position: relative;
+    display: block;
+    margin-bottom: 23px;
+}
+
+.add-comment-box #add-comment-form .input-box .field-label {
+    position: relative;
+    display: block;
+    padding-bottom: 9px;
+}
+
+.add-comment-box #add-comment-form .input-box .field-label p {
+    margin: 0;
+}
+
+.add-comment-box #add-comment-form input[type="text"],
+.add-comment-box #add-comment-form input[type="email"],
+.add-comment-box #add-comment-form textarea {
+    position: relative;
+    display: block;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    width: 100%;
+    height: 60px;
+    color: #757575;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding: 0 30px;
+    border-radius: 0px;
+    transition: all 500ms ease;
+    font-family: var(--thm-font);
+}
+
+.add-comment-box #add-comment-form textarea {
+    height: 120px;
+    padding: 14px 30px;
+}
+
+.add-comment-box #add-comment-form input[type="text"]:focus {
+    border-color: var(--thm-base);
+}
+
+.add-comment-box #add-comment-form input[type="email"]:focus {
+    border-color: var(--thm-base);
+}
+
+.add-comment-box #add-comment-form textarea:focus {
+    border-color: var(--thm-base);
+}
+
+.add-comment-box #add-comment-form .button-box {
+    position: relative;
+    display: block;
+    padding-top: 20px;
+    line-height: 0;
+}
+
+.add-comment-box #add-comment-form .button-box button {
+    padding-left: 50px;
+    padding-right: 50px;
+}

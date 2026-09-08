@@ -1,0 +1,14 @@
+{
+  "name": "nextsaas-system",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js",
+    "extract": "node scripts/extract-sections.js && node scripts/extract-html-fragments.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "express": "^4.21.0",
+    "cors": "^2.8.5"
+  }
+}

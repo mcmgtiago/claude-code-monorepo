@@ -1,0 +1,45 @@
+<svg width="900" height="1800" viewBox="0 0 900 1800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="450" y1="0" x2="450" y2="1800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#611329"/>
+      <stop offset="0.58" stop-color="#3B0918"/>
+      <stop offset="1" stop-color="#25050F"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(526 422) rotate(90) scale(422 312)">
+      <stop stop-color="#FF8A5B" stop-opacity="0.82"/>
+      <stop offset="1" stop-color="#FF8A5B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="title" x1="176" y1="1198" x2="648" y2="1312" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF4F1"/>
+      <stop offset="1" stop-color="#EC4A79"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1800" rx="44" fill="url(#bg)"/>
+  <rect width="900" height="1800" rx="44" fill="url(#glow)"/>
+  <circle cx="226" cy="1398" r="176" fill="#7D1637" fill-opacity="0.34"/>
+  <circle cx="698" cy="248" r="168" fill="#FF9D70" fill-opacity="0.18"/>
+
+  <g opacity="0.22" stroke="#D65C80" stroke-width="2">
+    <path d="M148 148C164 132 176 120 192 104"/>
+    <path d="M208 148C224 132 236 120 252 104"/>
+    <path d="M178 118H222"/>
+    <path d="M670 248C686 232 698 220 714 204"/>
+    <path d="M730 248C746 232 758 220 774 204"/>
+    <path d="M700 218H744"/>
+  </g>
+
+  <rect x="112" y="226" width="676" height="826" rx="34" fill="url(#glow)" fill-opacity="0.34"/>
+
+  <path d="M612 346C538 356 456 430 410 526C360 630 350 744 372 842C388 910 426 968 486 1020C376 980 300 876 286 746C270 578 346 398 486 326C530 304 572 294 612 290V346Z" fill="#F5D8C5" fill-opacity="0.94"/>
+  <path d="M606 346C670 350 730 400 754 472C776 532 760 600 714 646C676 684 624 706 570 706C556 706 542 704 528 700C590 678 640 626 660 558C678 492 670 426 636 374C626 360 616 352 606 346Z" fill="#E2B2A3" fill-opacity="0.84"/>
+
+  <text x="166" y="1258" fill="url(#title)" font-family="Cormorant Garamond, serif" font-size="122" letter-spacing="-5">Alimentos</text>
+  <text x="166" y="1382" fill="#EC4A79" font-family="Cormorant Garamond, serif" font-size="126" letter-spacing="-5">Anticâncer</text>
+
+  <text x="170" y="1476" fill="#F8E8E6" font-family="Mulish, Arial, sans-serif" font-size="42" font-weight="600">Para você não esquecer de nada</text>
+  <text x="242" y="1534" fill="#F8E8E6" font-family="Mulish, Arial, sans-serif" font-size="42" font-weight="600">quando for ao mercado</text>
+
+  <text x="176" y="1680" fill="#F7E3E6" fill-opacity="0.74" font-family="Mulish, Arial, sans-serif" font-size="26">Ana Julia Linhares</text>
+  <path d="M622 1648H760" stroke="#F7E3E6" stroke-opacity="0.52" stroke-width="3"/>
+  <text x="776" y="1680" fill="#F7E3E6" font-family="Cormorant Garamond, serif" font-size="56">AC</text>
+</svg>

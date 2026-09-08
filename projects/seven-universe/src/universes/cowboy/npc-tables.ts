@@ -1,0 +1,7 @@
+import type { NpcTables } from '../types';
+export const COWBOY_NPC_TABLES: NpcTables = {
+  names: ['Jesse', 'Wyatt', 'Cole', 'Hank', 'Buck', 'Clint', 'Dutch', 'Emmett', 'Silas', 'Boone', 'Abigail', 'Sadie', 'Bonnie', 'Clara', 'Martha', 'Ezra', 'Gus', 'Colter', 'Levi', 'Otis', 'Rufus', 'Cassidy', 'Dolores', 'Jedediah', 'Amos', 'Wade', 'Roscoe', 'Tobias', 'Nate', 'Virgil'],
+  roles: ['pistoleiro errante', 'xerife de cidade', 'fora-da-lei', 'dono de saloon', 'caçador de recompensas', 'fazendeiro de gado', 'jogador profissional', 'ferreiro', 'dona de bordel', 'minerador de ouro', 'batedor nativo', 'delegado', 'condutor de diligência', 'pregador itinerante', 'ladrão de trens'],
+  traits: ['durão', 'desconfiado', 'ganancioso', 'honrado', 'covarde', 'vingativo', 'leal', 'cínico', 'religioso', 'sedento por ouro', 'protetor', 'sanguinário', 'oportunista', 'melancólico', 'destemido'],
+  appearance: { build: ['magro e curtido pelo sol', 'robusto', 'alto e imponente', 'baixo e ágil', 'compleição de trabalho duro'], hair: ['bigode espesso', 'barba por fazer', 'cabelo grisalho sob chapéu', 'careca sob o sombrero', 'cabelo longo desgrenhado'], clothing: ['poncho e chapéu de aba larga', 'colete de couro e esporas', 'vestido de saloon com espartilho', 'trapos empoeirados de andarilho', 'distintivo de xerife no peito'], detail: ['revólver no coldre gasto', 'cicatriz de bala', 'cheira a whisky e pólvora', 'esporas que tilintam', 'olhar frio de duelista'] },
+};

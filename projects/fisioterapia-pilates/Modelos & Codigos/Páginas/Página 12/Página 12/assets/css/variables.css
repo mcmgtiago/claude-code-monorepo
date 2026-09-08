@@ -1,0 +1,115 @@
+:root {
+  /* ══ Cores ══ */
+  --kit-primary: #242426;
+  --kit-primary-75: rgba(36, 36, 38, 0.75);
+  --kit-primary-50: rgba(36, 36, 38, 0.50);
+  --kit-primary-25: rgba(36, 36, 38, 0.25);
+  --kit-dark: #35363b;
+  --kit-dark-alt: #4d4f57;
+  --kit-dark-muted: #58718a;
+  --kit-white: #ffffff;
+  --kit-white-80: rgba(255, 255, 255, 0.80);
+  --kit-white-50: rgba(255, 255, 255, 0.50);
+  --kit-bg-light: #ebeff5;
+  --kit-bg-surface: #ebedfa;
+  --kit-accent-lime: #d9ff5c;
+  --kit-accent-purple: #c0adff;
+  --kit-accent-blue: #b8deff;
+  --kit-accent-pink: #fae9e6;
+  --kit-accent-beige: #e0c5b6;
+  --kit-accent-steel: #a5b2cf;
+  --kit-border-light: #d9d5dc;
+  --kit-border-subtle: rgba(36, 38, 105, 0.18);
+
+  /* ══ Gradientes ══ */
+  --kit-gradient-dark-section: linear-gradient(180deg, #343647 0%, #35363b 99%);
+  --kit-gradient-light-section: linear-gradient(180deg, #ebeff5 0%, #fff 100%);
+  --kit-gradient-white-to-light: linear-gradient(180deg, #fff 0%, #ebeff5 100%);
+  --kit-gradient-light-to-white: linear-gradient(180deg, #fff 0%, #ebedfa 100%);
+  --kit-gradient-radial-hero: radial-gradient(134% 100% at 50% 0%, #fff 0%, #ebedfa 100%);
+  --kit-gradient-white-fade-50: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, transparent 100%);
+  --kit-gradient-white-fade-75: linear-gradient(180deg, rgba(255,255,255,0.75) 0%, transparent 100%);
+  --kit-gradient-transparent-to-white: linear-gradient(180deg, transparent 0%, #fff 100%);
+
+  /* ══ Tipografia ══ */
+  --kit-font-heading: 'Inter Display', 'Inter', sans-serif;
+  --kit-font-body: 'Inter Display', 'Inter', sans-serif;
+  --kit-font-mono: 'Fragment Mono', monospace;
+  --kit-fs-h1: 88px;
+  --kit-lh-h1: 110px;
+  --kit-ls-h1: -3.52px;
+  --kit-fs-h1-alt: 64px;
+  --kit-lh-h1-alt: 80px;
+  --kit-ls-h1-alt: -2.56px;
+  --kit-fs-h2: 56px;
+  --kit-lh-h2: 67.2px;
+  --kit-ls-h2: -2.24px;
+  --kit-fs-h3: 36px;
+  --kit-lh-h3: 45px;
+  --kit-ls-h3: -1.08px;
+  --kit-fs-h4: 32px;
+  --kit-lh-h4: 46.4px;
+  --kit-ls-h4: -0.96px;
+  --kit-fs-h5: 20px;
+  --kit-lh-h5: 28px;
+  --kit-ls-h5: -0.4px;
+  --kit-fs-h6: 14px;
+  --kit-lh-h6: 21px;
+  --kit-fs-body: 16px;
+  --kit-lh-body: 24px;
+  --kit-fs-body-sm: 14px;
+  --kit-lh-body-sm: 21px;
+  --kit-fs-caption: 12px;
+  --kit-lh-caption: 18px;
+  --kit-fs-label: 13px;
+  --kit-lh-label: 16px;
+  --kit-fw-normal: 400;
+  --kit-fw-medium: 500;
+  --kit-fw-semibold: 600;
+
+  /* ══ Espaçamento ══ */
+  --kit-section-py: 120px;
+  --kit-section-py-sm: 80px;
+  --kit-section-px: 40px;
+  --kit-container-max: 1200px;
+  --kit-gap-xs: 8px;
+  --kit-gap-sm: 12px;
+  --kit-gap-md: 16px;
+  --kit-gap-lg: 24px;
+  --kit-gap-xl: 40px;
+  --kit-gap-2xl: 64px;
+  --kit-gap-3xl: 80px;
+
+  /* ══ Bordas ══ */
+  --kit-radius-xs: 8px;
+  --kit-radius-sm: 12px;
+  --kit-radius-md: 16px;
+  --kit-radius-lg: 20px;
+  --kit-radius-xl: 24px;
+  --kit-radius-2xl: 32px;
+  --kit-radius-full: 9999px;
+  --kit-border-width: 1px;
+  --kit-border-color: rgba(36, 38, 105, 0.18);
+
+  /* ══ Sombras ══ */
+  --kit-shadow-card: 0 0.637px 1.147px -0.813px rgba(79,86,130,0.11),
+                     0 1.932px 3.477px -1.625px rgba(79,86,130,0.11),
+                     0 5.106px 9.191px -2.438px rgba(79,86,130,0.1),
+                     0 16px 28.8px -3.25px rgba(79,86,130,0.06);
+  --kit-shadow-card-lg: 0 0.806px 0.806px -0.469px rgba(54,54,71,0.19),
+                        0 1.911px 1.911px -0.938px rgba(54,54,71,0.18),
+                        0 3.486px 3.486px -1.406px rgba(54,54,71,0.18),
+                        0 5.795px 5.795px -1.875px rgba(54,54,71,0.17),
+                        0 9.358px 9.358px -2.344px rgba(54,54,71,0.16),
+                        0 15.318px 15.318px -2.813px rgba(54,54,71,0.15),
+                        0 26.377px 26.377px -3.281px rgba(54,54,71,0.12),
+                        0 48px 48px -3.75px rgba(54,54,71,0.06);
+  --kit-shadow-card-md: 0 0.848px 0.848px -0.625px rgba(54,54,71,0.15),
+                        0 2.168px 2.168px -1.25px rgba(54,54,71,0.14),
+                        0 4.346px 4.346px -1.875px rgba(54,54,71,0.14),
+                        0 8.239px 8.239px -2.5px rgba(54,54,71,0.13),
+                        0 16.376px 16.376px -3.125px rgba(54,54,71,0.1),
+                        0 36px 36px -3.75px rgba(54,54,71,0.05);
+  --kit-shadow-glow: 0 0 0 12px rgba(255,255,255,0.25);
+  --kit-shadow-glow-sm: 0 0 0 4px rgba(255,255,255,0.25);
+}

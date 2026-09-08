@@ -1,0 +1,11 @@
+<svg width="186" height="38" viewBox="0 0 186 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g opacity="0.95">
+    <text x="0" y="25" fill="#D7D8D3" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="400">Daybreak</text>
+    <g transform="translate(140 7)" stroke="#A5A891" stroke-width="1.9" stroke-linecap="round">
+      <path d="M10 0V18"/>
+      <path d="M1.5 4L18.5 14"/>
+      <path d="M18.5 4L1.5 14"/>
+      <path d="M0 9H20"/>
+    </g>
+  </g>
+</svg>

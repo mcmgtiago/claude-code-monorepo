@@ -1,0 +1,307 @@
+schema_version: "2.0"
+status: draft
+
+project:
+  name: null
+  slug: null
+  root: null
+  type: null
+  regulated_profile: null
+  stack_profile: null
+  execution_mode: null
+  release_target: null
+  audit_action: null
+  owner: null
+  target_date: null
+
+objective:
+  business_goal: null
+  primary_conversion: null
+  primary_cta:
+    label: null
+    destination: null
+    integration: null
+  secondary_conversion: null
+  traffic_sources: []
+  traffic_temperature: null
+  success_metric: null
+  baseline: null
+
+evidence:
+  # Record shape: { id, statement, source, status, allowed_uses }
+  facts: []
+  # Asset shape: { id, path, owner, license, status, allowed_uses }
+  assets: []
+  # Claim shape: { id, text, evidence_ids, reviewer, status, allowed_routes }
+  claims: []
+  # Hypothesis/unknown/forbidden shape: { id, description, impact, owner, status }
+  hypotheses: []
+  unknowns: []
+  forbidden: []
+
+brand:
+  public_name: null
+  profession: null
+  specialty: null
+  professional_registration: null
+  positioning: null
+  voice:
+    attributes: []
+    use: []
+    avoid: []
+  existing_tokens: {}
+  assets_root: null
+
+audience:
+  primary: null
+  secondary: null
+  excluded: null
+  context: null
+  awareness_stage: null
+  recognized_problem: null
+  underlying_problem: null
+  desired_outcome: null
+  prior_attempts: []
+  objections: []
+  vocabulary: []
+  accessibility_needs: []
+
+offer:
+  name: null
+  category: null
+  description: null
+  mechanism: null
+  deliverables: []
+  process: []
+  duration: null
+  modality: null
+  support: null
+  price:
+    display: false
+    amount: null
+    installments: null
+    recurrence: null
+  guarantee_or_cancellation: null
+  limitations: []
+  for_whom: []
+  not_for_whom: []
+
+message:
+  core_promise: null
+  supporting_message: null
+  differentiators: []
+  proof_hierarchy: []
+  objection_responses: []
+  trust_microcopy: []
+
+architecture:
+  model: null
+  rationale: null
+  pages:
+    - path: "/"
+      purpose: null
+      primary_keyword: null
+      primary_cta: null
+      # Section shape: { id, purpose, question, evidence_ids, cta, mobile_order }
+      sections: []
+  mobile_order_notes: []
+  navigation:
+    type: null
+    items: []
+  footer_requirements: []
+
+visual:
+  route: null
+  secondary_influence: null
+  fingerprint:
+    authority: null
+    temperature: null
+    energy: null
+    density: null
+    expression: null
+  concept: null
+  tokens:
+    color: {}
+    typography: {}
+    spacing: {}
+    radius: {}
+    shadow: {}
+  grid:
+    max_width: null
+    columns: null
+    gutter: null
+  photography:
+    direction: null
+    required_shots: []
+  icon_family: null
+  motion_level: null
+  motion_signature: null
+
+references:
+  primary_page: null
+  hero: null
+  block: null
+  effect: null
+  visual_images: []
+  decisions:
+    - source: null
+      role: null
+      reuse_level: null
+      extracted: []
+      rejected: []
+      provenance: null
+      dependencies: []
+      fallback: null
+      validation: []
+
+technical:
+  framework: null
+  language: null
+  package_manager: null
+  build_command: null
+  test_command: null
+  lint_command: null
+  deploy_target: null
+  publish_root: null
+  deploy_exclude:
+    - "_project/**"
+    - ".env*"
+    - "**/*.log"
+    - "**/*.bak"
+  subpath_support: false
+  paths_relative: true
+  motion_stack: null
+  # Dependency shape: { name, version, direct, source, license, integrity, purpose, decision }
+  dependencies: []
+  integrations:
+    # Every integration references privacy.processing_operations IDs.
+    form:
+      provider: null
+      processing_operation_ids: []
+    whatsapp:
+      provider: null
+      processing_operation_ids: []
+    scheduling:
+      provider: null
+      processing_operation_ids: []
+    checkout:
+      provider: null
+      processing_operation_ids: []
+    analytics:
+      provider: null
+      processing_operation_ids: []
+    consent:
+      provider: null
+      processing_operation_ids: []
+  progressive_enhancement:
+    no_js: null
+    reduced_motion: null
+    media_fallback: null
+  performance_budget:
+    lcp_seconds: 2.5
+    cls: 0.1
+    inp_ms: 200
+    initial_js_gzip_kb: 150
+    initial_page_weight_kb: 1500
+    max_font_families: 2
+    signature_effects: 1
+
+seo:
+  default_index: null
+  default_meta_robots: null
+  canonical_base: null
+  title_pattern: null
+  description_pattern: null
+  og_image: null
+  sitemap: null
+  robots_txt:
+    policy: null
+    sitemap_urls: []
+  structured_data: []
+  local_business_data_source: null
+  # Route shape: { path, robots_txt_allowed, meta_robots, x_robots_tag,
+  # canonical, title, description, og_image, schema, sitemap_included }
+  routes: []
+
+privacy:
+  controller: null
+  operators: []
+  purposes: []
+  data_collected: []
+  sensitive_data_collected: null
+  storage: null
+  recipients: []
+  processing_locations: []
+  retention: null
+  disposal: null
+  privacy_policy_url: null
+  consent_required: null
+  consent_version: null
+  withdrawal_channel: null
+  minors_in_scope: null
+  cookie_categories: []
+  # Operation shape: { id, purpose, data_categories, sensitive, controller,
+  # operators, recipients, processing_locations, retention, disposal,
+  # legal_basis_decision, rights_channel, consent_version, technical_controls }
+  processing_operations: []
+
+compliance:
+  health_review:
+    required: null
+    decided_by: null
+    rationale: null
+    decision_date: null
+    reviewer: null
+  claims_reviewed: []
+  testimonial_permissions: []
+  image_permissions: []
+  disclaimer: null
+
+qa:
+  required_viewports: [320, 375, 768, 1024, 1440]
+  browsers: []
+  assistive_technology: []
+  keyboard: required
+  zoom_200: required
+  reduced_motion: required
+  no_js: conditional
+  automated_tools: []
+  accessibility_conformance_claim: false
+  wcag_matrix_path: null
+  field_metrics_source: null
+  prelaunch_required_status: not_started
+  deploy_validation_status: not_started
+  field_monitoring_plan: null
+  performance_lab_results: []
+  budget_exceptions: []
+  blockers_open: []
+  status: not_started
+
+approvals:
+  g1:
+    status: pending
+    decision: null
+    approver: null
+    date: null
+  g2:
+    status: pending
+    decision: null
+    approver: null
+    date: null
+  g3:
+    status: pending
+    decision: null
+    approver: null
+    date: null
+
+release:
+  publishable: false
+  reason: draft
+  deployed_url: null
+  preview_access: null
+
+decision_log:
+  - date: null
+    decision: null
+    rationale: null
+    owner: null

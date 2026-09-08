@@ -1,0 +1,5164 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Nutricionista em Portugal | Amanda Pacheco</title>
+    <meta
+      name="description"
+      content="Acompanhamento nutricional de Amanda Pacheco, em Portugal, para cuidar da saúde e da alimentação com ciência, autonomia e sem dietas extremas."
+    />
+    <meta name="theme-color" content="#20382f" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_PT" />
+    <meta
+      property="og:title"
+      content="Amanda Pacheco | Nutrição com direção, sem extremos"
+    />
+    <meta
+      property="og:description"
+      content="Um acompanhamento nutricional que traduz ciência e rotina em escolhas possíveis de manter."
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1600&q=85"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%2320382f'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='serif' font-size='24' fill='white'%3EAP%3C/text%3E%3C/svg%3E"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap"
+      />
+    </noscript>
+
+    <script>
+      window.tailwind = window.tailwind || {};
+      window.tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              limestone: "#f4f0e8",
+              shell: "#fefcf8",
+              ink: "#1f2622",
+              pine: "#20382f",
+              sage: "#82947e",
+              lichen: "#dde5d7",
+              clay: "#ad654e",
+              blush: "#ead8d0",
+            },
+            fontFamily: {
+              display: ["Newsreader", "Georgia", "serif"],
+              sans: ["Manrope", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com" defer></script>
+
+    <style>
+      /* ================================================================
+       AMANDA PACHECO — CLÍNICA EDITORIAL ATLÂNTICA
+       Tokens e componentes ficam neste ficheiro para permitir publicação
+       em subpastas sem build. Validar dados, integrações e licenças antes do go-live.
+       ================================================================ */
+      :root {
+        --bg: #f4f0e8;
+        --surface: #fefcf8;
+        --surface-2: #e9ede4;
+        --surface-3: #ead8d0;
+        --primary: #20382f;
+        --primary-hover: #172b24;
+        --primary-soft: #dde5d7;
+        --accent: #ad654e;
+        --accent-hover: #8f4938;
+        --accent-soft: #f1ddd5;
+        --text: #1f2622;
+        --text-muted: #5b665f;
+        --border: rgba(32, 56, 47, 0.16);
+        --border-strong: rgba(32, 56, 47, 0.3);
+        --success: #426a4c;
+        --error: #a34040;
+        --info: #55788d;
+        --focus: #d08a71;
+        --shadow-soft: 0 24px 70px rgba(30, 48, 40, 0.1);
+        --shadow-card: 0 14px 40px rgba(30, 48, 40, 0.08);
+        --container: 1160px;
+        --header-height: 78px;
+        --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: calc(var(--header-height) + 22px);
+      }
+
+      body {
+        margin: 0;
+        min-width: 320px;
+        overflow-x: hidden;
+        padding-bottom: calc(78px + env(safe-area-inset-bottom));
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Manrope", system-ui, sans-serif;
+        font-size: 16px;
+        line-height: 1.65;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body.modal-open {
+        overflow: hidden;
+      }
+
+      img,
+      svg {
+        display: block;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+      }
+
+      button,
+      summary,
+      a {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      button {
+        border: 0;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      ::selection {
+        background: var(--accent-soft);
+        color: var(--primary);
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .skip-link {
+        position: fixed;
+        z-index: 200;
+        top: 12px;
+        left: 12px;
+        transform: translateY(-160%);
+        border-radius: 999px;
+        background: var(--primary);
+        color: #fff;
+        padding: 12px 18px;
+        font-size: 14px;
+        font-weight: 700;
+        transition: transform 200ms var(--ease);
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+        outline: 3px solid var(--focus);
+        outline-offset: 3px;
+      }
+
+      .site-container {
+        width: min(calc(100% - 40px), var(--container));
+        margin-inline: auto;
+      }
+
+      .section {
+        position: relative;
+        padding-block: clamp(92px, 10vw, 154px);
+      }
+
+      .section-compact {
+        padding-block: clamp(72px, 8vw, 112px);
+      }
+
+      .display {
+        margin: 0;
+        font-family: "Newsreader", Georgia, serif;
+        font-weight: 400;
+        letter-spacing: -0.035em;
+        line-height: 0.98;
+        text-wrap: balance;
+      }
+
+      .section-title {
+        max-width: 840px;
+        font-size: clamp(2.65rem, 6.5vw, 5.4rem);
+      }
+
+      .section-title-sm {
+        font-size: clamp(2.35rem, 5vw, 4.45rem);
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 22px;
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        line-height: 1.35;
+      }
+
+      .eyebrow::before {
+        width: 26px;
+        height: 1px;
+        background: currentColor;
+        content: "";
+      }
+
+      .eyebrow-light {
+        color: #dfe7dc;
+      }
+
+      .lede {
+        max-width: 650px;
+        margin: 26px 0 0;
+        color: var(--text-muted);
+        font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+        line-height: 1.72;
+        text-wrap: pretty;
+      }
+
+      .accent-italic {
+        color: var(--accent);
+        font-style: italic;
+        font-weight: 400;
+      }
+
+      .btn {
+        position: relative;
+        display: inline-flex;
+        min-height: 52px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        padding: 13px 23px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        line-height: 1.25;
+        min-width: 0;
+        text-align: center;
+        white-space: normal;
+        transition:
+          transform 200ms var(--ease),
+          background-color 200ms var(--ease),
+          color 200ms var(--ease),
+          border-color 200ms var(--ease),
+          box-shadow 200ms var(--ease),
+          opacity 200ms var(--ease);
+      }
+
+      .btn svg {
+        width: 18px;
+        height: 18px;
+        flex: 0 0 auto;
+        transition: transform 200ms var(--ease);
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn:hover svg {
+        transform: translateX(3px);
+      }
+
+      .btn:active {
+        transform: translateY(0) scale(0.98);
+      }
+
+      .btn:focus-visible,
+      .icon-button:focus-visible,
+      .nav-link:focus-visible,
+      .mobile-nav-link:focus-visible,
+      .footer-link:focus-visible,
+      summary:focus-visible,
+      .text-link:focus-visible {
+        outline: 3px solid var(--focus);
+        outline-offset: 4px;
+      }
+
+      .btn:disabled,
+      .btn[aria-disabled="true"] {
+        cursor: not-allowed;
+        opacity: 0.48;
+        transform: none;
+        box-shadow: none;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: #fff;
+        box-shadow: 0 12px 28px rgba(32, 56, 47, 0.18);
+      }
+
+      .btn-primary:hover {
+        background: var(--primary-hover);
+        box-shadow: 0 16px 34px rgba(32, 56, 47, 0.23);
+      }
+
+      .btn-primary:active {
+        background: #11221c;
+      }
+
+      .btn-secondary {
+        border-color: var(--border-strong);
+        background: rgba(254, 252, 248, 0.56);
+        color: var(--primary);
+      }
+
+      .btn-secondary:hover {
+        border-color: var(--primary);
+        background: var(--surface);
+      }
+
+      .btn-light {
+        background: #fff;
+        color: var(--primary);
+        box-shadow: 0 14px 34px rgba(10, 24, 18, 0.16);
+      }
+
+      .btn-light:hover {
+        background: #f6f1e8;
+      }
+
+      .btn-full {
+        width: 100%;
+      }
+
+      .text-link {
+        display: inline-flex;
+        min-height: 44px;
+        align-items: center;
+        gap: 8px;
+        color: var(--primary);
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: underline;
+        text-decoration-color: rgba(32, 56, 47, 0.35);
+        text-underline-offset: 5px;
+        transition:
+          color 200ms var(--ease),
+          text-decoration-color 200ms var(--ease),
+          transform 200ms var(--ease);
+      }
+
+      .text-link:hover {
+        color: var(--accent-hover);
+        text-decoration-color: currentColor;
+        transform: translateX(2px);
+      }
+
+      .text-link:active {
+        transform: translateX(0);
+      }
+
+      .site-header {
+        position: fixed;
+        z-index: 80;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: var(--header-height);
+        border-bottom: 1px solid transparent;
+        transition:
+          background-color 250ms var(--ease),
+          border-color 250ms var(--ease),
+          box-shadow 250ms var(--ease);
+      }
+
+      .site-header.is-scrolled {
+        border-color: var(--border);
+        background: rgba(244, 240, 232, 0.88);
+        box-shadow: 0 10px 34px rgba(28, 44, 37, 0.06);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+      }
+
+      .header-inner {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .brand {
+        display: inline-flex;
+        min-height: 46px;
+        align-items: center;
+        gap: 11px;
+        border-radius: 8px;
+        transition:
+          opacity 200ms var(--ease),
+          transform 200ms var(--ease);
+      }
+
+      .brand:hover {
+        opacity: 0.78;
+        transform: translateY(-1px);
+      }
+
+      .brand:active {
+        transform: translateY(0);
+      }
+
+      .brand:focus-visible {
+        outline: 3px solid var(--focus);
+        outline-offset: 4px;
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 38px;
+        height: 38px;
+        place-items: center;
+        border: 1px solid var(--border-strong);
+        border-radius: 50%;
+        color: var(--primary);
+        font-family: "Newsreader", Georgia, serif;
+        font-size: 17px;
+        font-style: italic;
+        line-height: 1;
+      }
+
+      .brand-copy {
+        display: grid;
+        line-height: 1.08;
+      }
+
+      .brand-name {
+        color: var(--primary);
+        font-family: "Newsreader", Georgia, serif;
+        font-size: 19px;
+        letter-spacing: -0.02em;
+      }
+
+      .brand-role {
+        margin-top: 4px;
+        color: var(--text-muted);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+      }
+
+      .desktop-nav {
+        display: none;
+        align-items: center;
+        gap: 28px;
+      }
+
+      .nav-link {
+        position: relative;
+        display: inline-flex;
+        min-height: 44px;
+        align-items: center;
+        border-radius: 6px;
+        color: #3d4942;
+        font-size: 13px;
+        font-weight: 600;
+        transition: color 200ms var(--ease);
+      }
+
+      .nav-link::after {
+        position: absolute;
+        right: 0;
+        bottom: 7px;
+        left: 0;
+        height: 1px;
+        transform: scaleX(0);
+        transform-origin: right;
+        background: var(--accent);
+        content: "";
+        transition: transform 200ms var(--ease);
+      }
+
+      .nav-link:hover {
+        color: var(--primary);
+      }
+
+      .nav-link:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+
+      .nav-link:active {
+        color: var(--accent-hover);
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .header-cta {
+        display: none;
+      }
+
+      .icon-button {
+        display: inline-grid;
+        width: 46px;
+        height: 46px;
+        place-items: center;
+        border: 1px solid var(--border);
+        border-radius: 50%;
+        background: rgba(254, 252, 248, 0.62);
+        color: var(--primary);
+        cursor: pointer;
+        transition:
+          background-color 200ms var(--ease),
+          border-color 200ms var(--ease),
+          transform 200ms var(--ease),
+          opacity 200ms var(--ease);
+      }
+
+      .icon-button svg {
+        width: 21px;
+        height: 21px;
+      }
+
+      .icon-button:hover {
+        border-color: var(--primary);
+        background: var(--surface);
+        transform: translateY(-1px);
+      }
+
+      .icon-button:active {
+        transform: scale(0.96);
+      }
+
+      .icon-button:disabled {
+        cursor: not-allowed;
+        opacity: 0.45;
+        transform: none;
+      }
+
+      .hero {
+        position: relative;
+        display: grid;
+        min-height: 100svh;
+        align-items: center;
+        overflow: hidden;
+        padding-top: calc(var(--header-height) + 46px);
+        padding-bottom: 72px;
+        isolation: isolate;
+      }
+
+      .hero::before {
+        position: absolute;
+        z-index: -3;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(32, 56, 47, 0.055) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(32, 56, 47, 0.055) 1px, transparent 1px);
+        background-size: 56px 56px;
+        content: "";
+        -webkit-mask-image: linear-gradient(
+          to bottom,
+          #000 0%,
+          rgba(0, 0, 0, 0.88) 62%,
+          transparent 98%
+        );
+        mask-image: linear-gradient(
+          to bottom,
+          #000 0%,
+          rgba(0, 0, 0, 0.88) 62%,
+          transparent 98%
+        );
+      }
+
+      .hero::after {
+        position: absolute;
+        z-index: -2;
+        top: -180px;
+        right: -180px;
+        width: 560px;
+        height: 560px;
+        border-radius: 50%;
+        background: rgba(183, 111, 88, 0.13);
+        filter: blur(95px);
+        content: "";
+      }
+
+      .hero-contours {
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        bottom: 1%;
+        width: min(680px, 72vw);
+        color: rgba(32, 56, 47, 0.11);
+        pointer-events: none;
+      }
+
+      .hero-grid {
+        display: grid;
+        align-items: center;
+        gap: 54px;
+      }
+
+      .hero-copy {
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero-kicker {
+        display: inline-flex;
+        min-height: 36px;
+        align-items: center;
+        gap: 9px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: rgba(254, 252, 248, 0.58);
+        padding: 7px 13px 7px 9px;
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        backdrop-filter: blur(8px);
+      }
+
+      .hero-kicker-dot {
+        width: 18px;
+        height: 18px;
+        border: 5px solid var(--primary-soft);
+        border-radius: 50%;
+        background: var(--primary);
+      }
+
+      .hero-title {
+        max-width: 760px;
+        margin-top: 25px;
+        font-size: clamp(3.6rem, 11vw, 7.15rem);
+      }
+
+      .hero-title .line-accent {
+        display: block;
+        color: var(--accent);
+        font-style: italic;
+      }
+
+      .hero-subtitle {
+        max-width: 625px;
+        margin: 27px 0 0;
+        color: var(--text-muted);
+        font-size: clamp(1.05rem, 2.1vw, 1.3rem);
+        line-height: 1.68;
+        text-wrap: pretty;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        margin-top: 33px;
+      }
+
+      .hero-microcopy {
+        display: flex;
+        align-items: flex-start;
+        gap: 9px;
+        margin: 18px 0 0;
+        color: var(--text-muted);
+        font-size: 12px;
+        line-height: 1.55;
+      }
+
+      .hero-microcopy svg {
+        width: 16px;
+        height: 16px;
+        flex: 0 0 auto;
+        margin-top: 2px;
+        color: var(--success);
+      }
+
+      .hero-visual {
+        position: relative;
+        width: min(100%, 490px);
+        margin-inline: auto;
+        padding: 16px 16px 0;
+      }
+
+      .hero-visual::before {
+        position: absolute;
+        z-index: -1;
+        top: 6%;
+        right: -5%;
+        width: 84%;
+        height: 84%;
+        border-radius: 50% 50% 28% 35% / 37% 42% 24% 30%;
+        background: var(--primary-soft);
+        content: "";
+        transform: rotate(6deg);
+      }
+
+      .portrait-frame {
+        position: relative;
+        overflow: hidden;
+        min-height: 520px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 48% 48% 28px 28px / 34% 34% 28px 28px;
+        background: #d8ddd5;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .portrait-frame img {
+        width: 100%;
+        height: 100%;
+        min-height: 520px;
+        object-fit: cover;
+        object-position: 50% 37%;
+        filter: saturate(0.82) contrast(0.96) sepia(0.06);
+      }
+
+      .portrait-frame::after {
+        position: absolute;
+        inset: auto 0 0;
+        height: 38%;
+        background: linear-gradient(
+          to top,
+          rgba(18, 35, 28, 0.38),
+          transparent
+        );
+        content: "";
+        pointer-events: none;
+      }
+
+      .portrait-caption {
+        position: absolute;
+        z-index: 2;
+        right: 28px;
+        bottom: 22px;
+        left: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        border-radius: 999px;
+        background: rgba(23, 43, 36, 0.86);
+        color: #fff;
+        padding: 8px 11px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+      }
+
+      .portrait-caption::before {
+        width: 32px;
+        height: 1px;
+        flex: 0 0 auto;
+        background: rgba(255, 255, 255, 0.72);
+        content: "";
+      }
+
+      .visual-note {
+        position: absolute;
+        z-index: 4;
+        top: 43%;
+        left: -12px;
+        width: min(210px, 54%);
+        border-radius: 18px;
+        background: rgba(254, 252, 248, 0.84);
+        padding: 16px 17px;
+        color: var(--primary);
+        box-shadow: 0 16px 35px rgba(30, 48, 40, 0.13);
+        font-family: "Newsreader", Georgia, serif;
+        font-size: 19px;
+        font-style: italic;
+        line-height: 1.3;
+        backdrop-filter: blur(13px);
+      }
+
+      .visual-note span {
+        display: block;
+        margin-top: 7px;
+        color: var(--text-muted);
+        font-family: "Manrope", system-ui, sans-serif;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .credential-tag {
+        position: absolute;
+        z-index: 5;
+        right: -6px;
+        bottom: 74px;
+        display: inline-flex;
+        max-width: 200px;
+        align-items: center;
+        gap: 9px;
+        border-radius: 999px;
+        background: var(--primary);
+        color: #fff;
+        padding: 11px 14px;
+        box-shadow: 0 12px 30px rgba(24, 45, 36, 0.22);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        line-height: 1.3;
+      }
+
+      .credential-tag svg {
+        width: 15px;
+        height: 15px;
+        flex: 0 0 auto;
+      }
+
+      .trust-band {
+        position: relative;
+        z-index: 3;
+        margin-top: 62px;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .trust-grid {
+        display: grid;
+      }
+
+      .trust-item {
+        display: flex;
+        min-height: 92px;
+        align-items: center;
+        gap: 14px;
+        border-bottom: 1px solid var(--border);
+        padding: 22px 0;
+      }
+
+      .trust-item:last-child {
+        border-bottom: 0;
+      }
+
+      .trust-icon {
+        display: grid;
+        width: 42px;
+        height: 42px;
+        flex: 0 0 auto;
+        place-items: center;
+        border: 1px solid var(--border);
+        border-radius: 50%;
+        color: var(--primary);
+      }
+
+      .trust-icon svg {
+        width: 19px;
+        height: 19px;
+      }
+
+      .trust-copy strong {
+        display: block;
+        color: var(--primary);
+        font-size: 13px;
+        line-height: 1.3;
+      }
+
+      .trust-copy span {
+        display: block;
+        margin-top: 4px;
+        color: var(--text-muted);
+        font-size: 12px;
+        line-height: 1.4;
+      }
+
+      .empathy-grid {
+        display: grid;
+        gap: 55px;
+      }
+
+      .empathy-copy {
+        align-self: start;
+      }
+
+      .pain-list {
+        display: grid;
+        gap: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .pain-item {
+        display: grid;
+        grid-template-columns: 42px 1fr;
+        gap: 16px;
+        border-top: 1px solid var(--border);
+        padding: 24px 0;
+      }
+
+      .pain-item:last-child {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .pain-check {
+        display: grid;
+        width: 34px;
+        height: 34px;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--primary-soft);
+        color: var(--primary);
+      }
+
+      .pain-check svg {
+        width: 17px;
+        height: 17px;
+      }
+
+      .pain-item p {
+        margin: 2px 0 0;
+        color: #39463f;
+        font-size: clamp(1rem, 1.7vw, 1.12rem);
+        line-height: 1.6;
+      }
+
+      .pain-item strong {
+        color: var(--text);
+        font-weight: 700;
+      }
+
+      .manifesto {
+        position: relative;
+        overflow: hidden;
+        background: var(--primary);
+        color: #fff;
+        isolation: isolate;
+      }
+
+      .manifesto::before {
+        position: absolute;
+        z-index: -2;
+        top: -240px;
+        left: -240px;
+        width: 620px;
+        height: 620px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 50%;
+        box-shadow:
+          0 0 0 78px rgba(255, 255, 255, 0.025),
+          0 0 0 156px rgba(255, 255, 255, 0.018),
+          0 0 0 234px rgba(255, 255, 255, 0.012);
+        content: "";
+      }
+
+      .manifesto::after {
+        position: absolute;
+        z-index: -1;
+        right: -180px;
+        bottom: -230px;
+        width: 520px;
+        height: 520px;
+        border-radius: 50%;
+        background: rgba(183, 111, 88, 0.24);
+        filter: blur(100px);
+        content: "";
+      }
+
+      .manifesto-grid {
+        display: grid;
+        gap: 50px;
+      }
+
+      .manifesto-quote {
+        max-width: 900px;
+        font-size: clamp(3.05rem, 8.2vw, 7.5rem);
+        color: #f5f1e8;
+      }
+
+      .manifesto-quote em {
+        color: #d9b0a1;
+        font-weight: 400;
+      }
+
+      .manifesto-aside {
+        align-self: end;
+        border-left: 1px solid rgba(255, 255, 255, 0.22);
+        padding-left: 22px;
+      }
+
+      .manifesto-aside p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.73);
+        font-size: 15px;
+        line-height: 1.75;
+      }
+
+      .manifesto-aside .btn {
+        margin-top: 25px;
+      }
+
+      .specialties-header {
+        display: grid;
+        gap: 24px;
+        margin-bottom: 58px;
+      }
+
+      .specialties-intro {
+        max-width: 500px;
+        align-self: end;
+        color: var(--text-muted);
+        font-size: 17px;
+        line-height: 1.75;
+      }
+
+      .specialty-grid {
+        display: grid;
+        gap: 16px;
+      }
+
+      .specialty-card {
+        position: relative;
+        min-height: 270px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        background: rgba(254, 252, 248, 0.7);
+        padding: 27px;
+        transition:
+          transform 250ms var(--ease),
+          border-color 250ms var(--ease),
+          box-shadow 250ms var(--ease),
+          background-color 250ms var(--ease);
+      }
+
+      .specialty-card::after {
+        position: absolute;
+        right: -68px;
+        bottom: -82px;
+        width: 180px;
+        height: 180px;
+        border: 1px solid rgba(32, 56, 47, 0.1);
+        border-radius: 50%;
+        box-shadow:
+          0 0 0 25px rgba(32, 56, 47, 0.025),
+          0 0 0 50px rgba(32, 56, 47, 0.018);
+        content: "";
+        transition: transform 350ms var(--ease);
+      }
+
+      .specialty-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--border-strong);
+        background: var(--surface);
+        box-shadow: var(--shadow-card);
+      }
+
+      .specialty-card:hover::after {
+        transform: translate(-10px, -9px) scale(1.05);
+      }
+
+      .specialty-card.featured {
+        background: var(--primary-soft);
+      }
+
+      .specialty-card.clay {
+        background: var(--accent-soft);
+      }
+
+      .specialty-card.dark {
+        border-color: rgba(255, 255, 255, 0.12);
+        background: var(--primary);
+        color: #fff;
+      }
+
+      .specialty-icon {
+        display: grid;
+        width: 46px;
+        height: 46px;
+        place-items: center;
+        border: 1px solid var(--border);
+        border-radius: 50%;
+        background: rgba(254, 252, 248, 0.62);
+        color: var(--primary);
+      }
+
+      .specialty-icon svg {
+        width: 21px;
+        height: 21px;
+      }
+
+      .specialty-card.dark .specialty-icon {
+        border-color: rgba(255, 255, 255, 0.22);
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+      }
+
+      .specialty-card h3 {
+        max-width: 330px;
+        margin: 35px 0 0;
+        color: var(--primary);
+        font-family: "Newsreader", Georgia, serif;
+        font-size: clamp(1.7rem, 3vw, 2.25rem);
+        font-weight: 400;
+        letter-spacing: -0.025em;
+        line-height: 1.05;
+      }
+
+      .specialty-card p {
+        position: relative;
+        z-index: 1;
+        max-width: 410px;
+        margin: 13px 0 0;
+        color: var(--text-muted);
+        font-size: 14px;
+        line-height: 1.67;
+      }
+
+      .specialty-card.dark h3,
+      .specialty-card.dark p {
+        color: #fff;
+      }
+
+      .specialty-card.dark p {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .method-section {
+        overflow: clip;
+        background: var(--surface-2);
+      }
+
+      .method-intro {
+        display: grid;
+        gap: 35px;
+        margin-bottom: 68px;
+      }
+
+      .method-name {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--accent-hover);
+        font-family: "Newsreader", Georgia, serif;
+        font-size: 23px;
+        font-style: italic;
+      }
+
+      .method-name svg {
+        width: 38px;
+        height: 38px;
+      }
+
+      .method-summary {
+        max-width: 480px;
+        align-self: end;
+        color: var(--text-muted);
+        font-size: 17px;
+        line-height: 1.75;
+      }
+
+      .method-stack {
+        position: relative;
+        display: grid;
+        gap: 20px;
+      }
+
+      .method-cta {
+        margin-top: 42px;
+      }
+
+      .method-card {
+        position: relative;
+        display: grid;
+        min-height: 430px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        border-radius: 26px;
+        background: var(--surface);
+        box-shadow: 0 -5px 36px rgba(32, 56, 47, 0.06);
+      }
+
+      .method-card:nth-child(2) {
+        background: #e1e8dd;
+      }
+
+      .method-card:nth-child(3) {
+        background: #edddd6;
+      }
+
+      .method-card:nth-child(4) {
+        border-color: rgba(255, 255, 255, 0.12);
+        background: var(--primary);
+        color: #fff;
+      }
+
+      .method-card-copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px;
+      }
+
+      .method-card-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .method-index {
+        color: var(--text-muted);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .method-card:nth-child(4) .method-index {
+        color: rgba(255, 255, 255, 0.58);
+      }
+
+      .method-dot {
+        width: 10px;
+        height: 10px;
+        border: 2px solid currentColor;
+        border-radius: 50%;
+        color: var(--accent);
+      }
+
+      .method-card h3 {
+        max-width: 560px;
+        margin: 48px 0 0;
+        color: var(--primary);
+        font-family: "Newsreader", Georgia, serif;
+        font-size: clamp(2.8rem, 7vw, 5.8rem);
+        font-weight: 400;
+        letter-spacing: -0.04em;
+        line-height: 0.94;
+      }
+
+      .method-card:nth-child(4) h3 {
+        color: #fff;
+      }
+
+      .method-card-bottom {
+        display: grid;
+        gap: 22px;
+        margin-top: 44px;
+      }
+
+      .method-card p {
+        max-width: 570px;
+        margin: 0;
+        color: var(--text-muted);
+        font-size: 15px;
+        line-height: 1.72;
+      }
+
+      .method-card:nth-child(4) p {
+        color: rgba(255, 255, 255, 0.72);
+      }
+
+      .method-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .method-tag {
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 8px 11px;
+        color: var(--primary);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .method-card:nth-child(4) .method-tag {
+        border-color: rgba(255, 255, 255, 0.18);
+        color: rgba(255, 255, 255, 0.82);
+      }
+
+      .method-visual {
+        position: relative;
+        display: none;
+        overflow: hidden;
+        border-left: 1px solid var(--border);
+      }
+
+      .method-card:nth-child(4) .method-visual {
+        border-color: rgba(255, 255, 255, 0.12);
+      }
+
+      .method-visual::before,
+      .method-visual::after {
+        position: absolute;
+        border: 1px solid currentColor;
+        border-radius: 50%;
+        content: "";
+      }
+
+      .method-visual::before {
+        top: 50%;
+        left: 50%;
+        width: 320px;
+        height: 320px;
+        transform: translate(-50%, -50%);
+        color: rgba(32, 56, 47, 0.15);
+        box-shadow:
+          0 0 0 54px rgba(32, 56, 47, 0.035),
+          0 0 0 108px rgba(32, 56, 47, 0.025);
+      }
+
+      .method-visual::after {
+        top: calc(50% - 8px);
+        left: calc(50% - 8px);
+        width: 16px;
+        height: 16px;
+        border: 4px solid currentColor;
+        background: var(--surface);
+        color: var(--accent);
+      }
+
+      .method-card:nth-child(4) .method-visual::before {
+        color: rgba(255, 255, 255, 0.12);
+        box-shadow:
+          0 0 0 54px rgba(255, 255, 255, 0.025),
+          0 0 0 108px rgba(255, 255, 255, 0.018);
+      }
+
+      .method-card:nth-child(4) .method-visual::after {
+        background: var(--primary);
+      }
+
+      .method-axis {
+        position: absolute;
+        top: 10%;
+        bottom: 10%;
+        left: 50%;
+        width: 1px;
+        background: rgba(32, 56, 47, 0.14);
+      }
+
+      .method-card:nth-child(4) .method-axis {
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      .about-grid {
+        display: grid;
+        gap: 55px;
+      }
+
+      .about-visual {
+        position: relative;
+        min-height: 530px;
+      }
+
+      .about-photo {
+        position: absolute;
+        inset: 0 42px 58px 0;
+        overflow: hidden;
+        border-radius: 26px 26px 150px 26px;
+        background: #d9ddd3;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .about-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(0.78) contrast(0.94) sepia(0.06);
+      }
+
+      .about-card {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: min(285px, 78%);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        background: rgba(254, 252, 248, 0.93);
+        padding: 21px;
+        box-shadow: var(--shadow-card);
+        backdrop-filter: blur(12px);
+      }
+
+      .about-card-label {
+        display: block;
+        color: var(--accent-hover);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .about-card p {
+        margin: 9px 0 0;
+        color: var(--primary);
+        font-family: "Newsreader", Georgia, serif;
+        font-size: 21px;
+        font-style: italic;
+        line-height: 1.34;
+      }
+
+      .about-content {
+        align-self: center;
+      }
+
+      .about-body {
+        display: grid;
+        gap: 18px;
+        margin-top: 28px;
+        color: var(--text-muted);
+        font-size: 16px;
+        line-height: 1.78;
+      }
+
+      .about-body p {
+        margin: 0;
+      }
+
+      .credential-list {
+        display: grid;
+        margin: 35px 0 0;
+        border-top: 1px solid var(--border);
+      }
+
+      .credential-row {
+        display: grid;
+        gap: 5px;
+        border-bottom: 1px solid var(--border);
+        padding: 17px 0;
+      }
+
+      .credential-row dt {
+        color: var(--text-muted);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .credential-row dd {
+        margin: 0;
+        color: var(--primary);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .about-content .btn {
+        margin-top: 30px;
+      }
+
+      .proof-section {
+        background: #e8ddd6;
+      }
+
+      .proof-header {
+        display: grid;
+        gap: 34px;
+        margin-bottom: 48px;
+      }
+
+      .proof-note {
+        max-width: 470px;
+        align-self: end;
+        color: #665b55;
+        font-size: 15px;
+        line-height: 1.72;
+      }
+
+      .proof-grid {
+        display: grid;
+        gap: 14px;
+      }
+
+      .proof-card {
+        display: flex;
+        min-height: 310px;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px dashed rgba(32, 56, 47, 0.32);
+        border-radius: 22px;
+        background: rgba(254, 252, 248, 0.54);
+        padding: 26px;
+      }
+
+      .proof-status {
+        display: inline-flex;
+        width: fit-content;
+        align-items: center;
+        gap: 7px;
+        border: 1px solid rgba(163, 64, 64, 0.22);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.45);
+        color: #7c3535;
+        padding: 7px 10px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .proof-status::before {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: currentColor;
+        content: "";
+      }
+
+      .proof-card blockquote {
+        margin: 38px 0;
+        color: var(--primary);
+        font-family: "Newsreader", Georgia, serif;
+        font-size: clamp(1.65rem, 3vw, 2.2rem);
+        font-style: italic;
+        line-height: 1.34;
+      }
+
+      .proof-card footer {
+        border-top: 1px solid var(--border);
+        padding-top: 16px;
+        color: var(--text-muted);
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .formats-header {
+        display: grid;
+        gap: 28px;
+        margin-bottom: 52px;
+      }
+
+      .formats-intro {
+        max-width: 520px;
+        color: var(--text-muted);
+        font-size: 16px;
+        line-height: 1.75;
+      }
+
+      .format-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+      }
+
+      .format-card {
+        display: flex;
+        min-width: 0;
+        min-height: 510px;
+        flex-direction: column;
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        background: rgba(254, 252, 248, 0.76);
+        padding: 28px;
+        transition:
+          transform 250ms var(--ease),
+          box-shadow 250ms var(--ease),
+          border-color 250ms var(--ease);
+      }
+
+      .format-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--border-strong);
+        box-shadow: var(--shadow-card);
+      }
+
+      .format-card.featured {
+        border-color: var(--primary);
+        background: var(--primary);
+        color: #fff;
+      }
+
+      .format-topline {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+      }
+
+      .format-label {
+        color: var(--accent-hover);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .format-card.featured .format-label {
+        color: #e8b9a8;
+      }
+
+      .format-icon {
+        display: grid;
+        width: 42px;
+        height: 42px;
+        place-items: center;
+        border: 1px solid var(--border);
+        border-radius: 50%;
+        color: var(--primary);
+      }
+
+      .format-icon svg {
+        width: 19px;
+        height: 19px;
+      }
+
+      .format-card.featured .format-icon {
+        border-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
+      }
+
+      .format-card h3 {
+        margin: 31px 0 0;
+        color: var(--primary);
+        font-family: "Newsreader", Georgia, serif;
+        font-size: clamp(2rem, 3vw, 2.25rem);
+        font-weight: 400;
+        letter-spacing: -0.03em;
+        line-height: 1;
+      }
+
+      .format-card.featured h3 {
+        color: #fff;
+      }
+
+      .format-description {
+        min-height: 72px;
+        margin: 15px 0 0;
+        color: var(--text-muted);
+        font-size: 14px;
+        line-height: 1.66;
+      }
+
+      .format-card.featured .format-description {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .format-price {
+        margin: 25px 0 0;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        padding: 17px 0;
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+      }
+
+      .format-card.featured .format-price {
+        border-color: rgba(255, 255, 255, 0.16);
+        color: #fff;
+      }
+
+      .format-features {
+        display: grid;
+        gap: 13px;
+        margin: 25px 0 30px;
+        padding: 0;
+        list-style: none;
+      }
+
+      .format-features li {
+        display: grid;
+        grid-template-columns: 18px 1fr;
+        gap: 10px;
+        color: #3c4942;
+        font-size: 13px;
+        line-height: 1.48;
+      }
+
+      .format-features svg {
+        width: 16px;
+        height: 16px;
+        margin-top: 2px;
+        color: var(--success);
+      }
+
+      .format-card.featured .format-features li {
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .format-card.featured .format-features svg {
+        color: #c7dfc8;
+      }
+
+      .format-card .btn {
+        margin-top: auto;
+      }
+
+      .faq-section {
+        background: var(--surface);
+      }
+
+      .faq-grid {
+        display: grid;
+        gap: 55px;
+      }
+
+      .faq-list {
+        border-top: 1px solid var(--border);
+      }
+
+      .faq-cta {
+        margin-top: 28px;
+      }
+
+      .faq-item {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .faq-item summary {
+        display: grid;
+        min-height: 86px;
+        cursor: pointer;
+        grid-template-columns: 1fr 38px;
+        align-items: center;
+        gap: 18px;
+        border-radius: 6px;
+        color: var(--primary);
+        font-family: "Newsreader", Georgia, serif;
+        font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+        line-height: 1.32;
+        list-style: none;
+        transition:
+          color 200ms var(--ease),
+          transform 200ms var(--ease);
+      }
+
+      .faq-item summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .faq-item summary:hover {
+        color: var(--accent-hover);
+        transform: translateX(5px);
+      }
+
+      .faq-item summary:active {
+        color: var(--primary);
+        transform: translateX(0);
+      }
+
+      .faq-plus {
+        display: grid;
+        width: 36px;
+        height: 36px;
+        place-items: center;
+        border: 1px solid var(--border);
+        border-radius: 50%;
+        transition:
+          transform 250ms var(--ease),
+          background-color 250ms var(--ease),
+          border-color 250ms var(--ease);
+      }
+
+      .faq-plus svg {
+        width: 17px;
+        height: 17px;
+      }
+
+      .faq-item[open] .faq-plus {
+        transform: rotate(45deg);
+        border-color: var(--primary);
+        background: var(--primary);
+        color: #fff;
+      }
+
+      .faq-answer {
+        max-width: 670px;
+        padding: 0 52px 28px 0;
+        color: var(--text-muted);
+        font-size: 15px;
+        line-height: 1.74;
+      }
+
+      .faq-answer p {
+        margin: 0;
+      }
+
+      .contact-map {
+        position: relative;
+        overflow: hidden;
+        border-radius: 28px;
+        background: var(--surface-2);
+      }
+
+      .contact-map::before {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(32, 56, 47, 0.075) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(32, 56, 47, 0.075) 1px, transparent 1px);
+        background-size: 38px 38px;
+        content: "";
+        -webkit-mask-image: radial-gradient(
+          circle at 60% 45%,
+          #000 0%,
+          transparent 70%
+        );
+        mask-image: radial-gradient(
+          circle at 60% 45%,
+          #000 0%,
+          transparent 70%
+        );
+      }
+
+      .contact-map-grid {
+        position: relative;
+        z-index: 2;
+        display: grid;
+      }
+
+      .contact-copy {
+        padding: 34px 28px 44px;
+      }
+
+      .contact-details {
+        display: grid;
+        margin: 32px 0 0;
+        border-top: 1px solid var(--border);
+      }
+
+      .contact-detail {
+        display: grid;
+        grid-template-columns: 34px 1fr;
+        gap: 14px;
+        border-bottom: 1px solid var(--border);
+        padding: 18px 0;
+      }
+
+      .contact-detail svg {
+        width: 20px;
+        height: 20px;
+        margin-top: 2px;
+        color: var(--accent-hover);
+      }
+
+      .contact-detail strong {
+        display: block;
+        color: var(--primary);
+        font-size: 13px;
+      }
+
+      .contact-detail span {
+        display: block;
+        margin-top: 3px;
+        color: var(--text-muted);
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .map-art {
+        position: relative;
+        min-height: 430px;
+        overflow: hidden;
+        border-top: 1px solid var(--border);
+      }
+
+      .map-ring {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 260px;
+        height: 260px;
+        transform: translate(-50%, -50%);
+        border: 1px solid rgba(32, 56, 47, 0.18);
+        border-radius: 50%;
+        box-shadow:
+          0 0 0 55px rgba(32, 56, 47, 0.04),
+          0 0 0 110px rgba(32, 56, 47, 0.025);
+      }
+
+      .map-pin {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: grid;
+        width: 72px;
+        height: 72px;
+        transform: translate(-50%, -50%);
+        place-items: center;
+        border-radius: 50% 50% 50% 8px;
+        background: var(--primary);
+        color: #fff;
+        box-shadow: 0 18px 36px rgba(32, 56, 47, 0.22);
+        rotate: -45deg;
+      }
+
+      .map-pin svg {
+        width: 28px;
+        height: 28px;
+        rotate: 45deg;
+      }
+
+      .map-label {
+        position: absolute;
+        right: 24px;
+        bottom: 24px;
+        left: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.64);
+        border-radius: 16px;
+        background: rgba(254, 252, 248, 0.82);
+        padding: 15px 17px;
+        color: var(--primary);
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.5;
+        backdrop-filter: blur(12px);
+      }
+
+      .final-cta {
+        position: relative;
+        overflow: hidden;
+        background: var(--primary);
+        color: #fff;
+        isolation: isolate;
+      }
+
+      .final-glow {
+        position: absolute;
+        z-index: -1;
+        border-radius: 50%;
+        filter: blur(100px);
+        pointer-events: none;
+      }
+
+      .final-glow-one {
+        top: -170px;
+        right: 0;
+        width: min(440px, 80vw);
+        height: min(440px, 80vw);
+        background: rgba(183, 111, 88, 0.28);
+      }
+
+      .final-glow-two {
+        bottom: -240px;
+        left: 0;
+        width: min(500px, 90vw);
+        height: min(500px, 90vw);
+        background: rgba(130, 148, 126, 0.22);
+      }
+
+      .final-grid {
+        display: grid;
+        gap: 52px;
+      }
+
+      .final-copy {
+        align-self: start;
+      }
+
+      .final-title {
+        max-width: 700px;
+        color: #f8f4ec;
+        font-size: clamp(3.25rem, 8vw, 6.6rem);
+      }
+
+      .final-title em {
+        color: #dcb4a5;
+        font-weight: 400;
+      }
+
+      .final-copy > p {
+        max-width: 560px;
+        margin: 25px 0 0;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 16px;
+        line-height: 1.76;
+      }
+
+      .final-points {
+        display: grid;
+        gap: 13px;
+        margin: 30px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .final-points li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 13px;
+      }
+
+      .final-points svg {
+        width: 16px;
+        height: 16px;
+        color: #d1e2d2;
+      }
+
+      .form-card {
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 26px;
+        background: var(--surface);
+        color: var(--text);
+        padding: clamp(24px, 4vw, 38px);
+        box-shadow: 0 30px 80px rgba(5, 18, 12, 0.22);
+      }
+
+      .form-heading {
+        margin: 0;
+        color: var(--primary);
+        font-family: "Newsreader", Georgia, serif;
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        font-weight: 400;
+        letter-spacing: -0.03em;
+        line-height: 1.05;
+      }
+
+      .form-intro {
+        margin: 11px 0 0;
+        color: var(--text-muted);
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      .lead-form {
+        display: grid;
+        gap: 17px;
+        margin-top: 25px;
+      }
+
+      .field-grid {
+        display: grid;
+        gap: 17px;
+      }
+
+      .field {
+        display: grid;
+        gap: 7px;
+      }
+
+      .field label,
+      .field-label {
+        color: var(--primary);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .field-control {
+        width: 100%;
+        min-height: 52px;
+        border: 1px solid var(--border-strong);
+        border-radius: 14px;
+        outline: none;
+        background: #fff;
+        color: var(--text);
+        padding: 12px 14px;
+        font-size: 14px;
+        transition:
+          border-color 200ms var(--ease),
+          box-shadow 200ms var(--ease),
+          background-color 200ms var(--ease),
+          opacity 200ms var(--ease);
+      }
+
+      select.field-control {
+        appearance: none;
+        background-image:
+          linear-gradient(45deg, transparent 50%, var(--primary) 50%),
+          linear-gradient(135deg, var(--primary) 50%, transparent 50%);
+        background-position:
+          calc(100% - 18px) 22px,
+          calc(100% - 13px) 22px;
+        background-repeat: no-repeat;
+        background-size:
+          5px 5px,
+          5px 5px;
+        padding-right: 42px;
+      }
+
+      .field-control::placeholder {
+        color: #8a938e;
+      }
+
+      .field-control:hover {
+        border-color: var(--primary);
+      }
+
+      .field-control:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 4px rgba(32, 56, 47, 0.12);
+      }
+
+      .field-control:disabled {
+        cursor: not-allowed;
+        background: #eeece7;
+        opacity: 0.62;
+      }
+
+      .field-control[aria-invalid="true"] {
+        border-color: var(--error);
+        box-shadow: 0 0 0 3px rgba(163, 64, 64, 0.1);
+      }
+
+      .field-error {
+        min-height: 17px;
+        margin: 0;
+        color: var(--error);
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 1.45;
+      }
+
+      .consent-row {
+        display: grid;
+        grid-template-columns: 20px 1fr;
+        align-items: start;
+        gap: 10px;
+      }
+
+      .consent-row input {
+        width: 18px;
+        height: 18px;
+        margin: 2px 0 0;
+        accent-color: var(--primary);
+        cursor: pointer;
+      }
+
+      .consent-row input:focus-visible {
+        outline: 3px solid var(--focus);
+        outline-offset: 3px;
+      }
+
+      .consent-row input:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+
+      .consent-row label {
+        color: var(--text-muted);
+        cursor: pointer;
+        font-size: 11px;
+        line-height: 1.55;
+      }
+
+      .consent-row a {
+        color: var(--primary);
+        font-weight: 700;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .consent-row a:hover {
+        color: var(--accent-hover);
+      }
+
+      .consent-row a:focus-visible {
+        outline: 3px solid var(--focus);
+        outline-offset: 3px;
+      }
+
+      .form-trust {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        margin: 0;
+        color: var(--text-muted);
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .form-trust svg {
+        width: 14px;
+        height: 14px;
+        flex: 0 0 auto;
+        margin-top: 1px;
+        color: var(--success);
+      }
+
+      .form-success {
+        border: 1px solid rgba(66, 106, 76, 0.25);
+        border-radius: 14px;
+        background: rgba(221, 229, 215, 0.7);
+        color: #25462f;
+        padding: 13px 14px;
+        font-size: 12px;
+        line-height: 1.55;
+      }
+
+      .form-success[hidden] {
+        display: none;
+      }
+
+      .site-footer {
+        background: #172a23;
+        color: #fff;
+        padding: 64px 0 92px;
+      }
+
+      .footer-grid {
+        display: grid;
+        gap: 46px;
+      }
+
+      .footer-brand .brand-name {
+        color: #fff;
+        font-size: 25px;
+      }
+
+      .footer-brand .brand-role {
+        color: rgba(255, 255, 255, 0.54);
+      }
+
+      .footer-brand .brand-mark {
+        border-color: rgba(255, 255, 255, 0.28);
+        color: #fff;
+      }
+
+      .footer-summary {
+        max-width: 380px;
+        margin: 21px 0 0;
+        color: rgba(255, 255, 255, 0.62);
+        font-size: 13px;
+        line-height: 1.7;
+      }
+
+      .footer-column h3 {
+        margin: 0 0 18px;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+
+      .footer-links {
+        display: grid;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .footer-link {
+        display: inline-flex;
+        min-height: 36px;
+        align-items: center;
+        border-radius: 4px;
+        color: rgba(255, 255, 255, 0.64);
+        font-size: 12px;
+        transition:
+          color 200ms var(--ease),
+          transform 200ms var(--ease);
+      }
+
+      .footer-link:hover {
+        color: #fff;
+        transform: translateX(3px);
+      }
+
+      .footer-link:active {
+        color: #dcb4a5;
+        transform: translateX(1px);
+      }
+
+      .footer-data {
+        display: grid;
+        gap: 8px;
+        color: rgba(255, 255, 255, 0.62);
+        font-size: 12px;
+        line-height: 1.55;
+      }
+
+      .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 54px;
+        border-top: 1px solid rgba(255, 255, 255, 0.11);
+        padding-top: 22px;
+        color: rgba(255, 255, 255, 0.62);
+        font-size: 11px;
+        line-height: 1.6;
+      }
+
+      dialog {
+        border: 0;
+        outline: none;
+        padding: 0;
+      }
+
+      dialog::backdrop {
+        background: rgba(10, 22, 17, 0.58);
+        backdrop-filter: blur(6px);
+      }
+
+      .drawer-dialog {
+        width: min(100%, 570px);
+        max-width: none;
+        height: 100dvh;
+        max-height: none;
+        margin: 0 0 0 auto;
+        overflow: visible;
+        background: transparent;
+      }
+
+      .drawer-panel {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        background: var(--surface);
+        padding: 24px 20px 38px;
+        overscroll-behavior: contain;
+      }
+
+      .drawer-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 24px;
+      }
+
+      .drawer-eyebrow {
+        display: block;
+        color: var(--accent-hover);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .drawer-title {
+        margin: 7px 0 0;
+        color: var(--primary);
+        font-family: "Newsreader", Georgia, serif;
+        font-size: clamp(2rem, 7vw, 3.25rem);
+        font-weight: 400;
+        letter-spacing: -0.035em;
+        line-height: 1;
+      }
+
+      .drawer-dialog .form-card {
+        border: 0;
+        border-radius: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+
+      .menu-dialog {
+        width: 100%;
+        max-width: none;
+        height: 100dvh;
+        max-height: none;
+        margin: 0;
+        background: var(--primary);
+        color: #fff;
+      }
+
+      .menu-panel {
+        display: flex;
+        min-height: 100%;
+        flex-direction: column;
+        padding: 19px 20px 30px;
+      }
+
+      .menu-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .menu-header .brand-name,
+      .menu-header .brand-mark {
+        color: #fff;
+      }
+
+      .menu-header .brand-mark {
+        border-color: rgba(255, 255, 255, 0.28);
+      }
+
+      .menu-header .brand-role {
+        color: rgba(255, 255, 255, 0.54);
+      }
+
+      .menu-header .icon-button {
+        border-color: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.07);
+        color: #fff;
+      }
+
+      .mobile-nav {
+        display: grid;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+      .mobile-nav-link {
+        display: flex;
+        min-height: 76px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 4px;
+        color: #fff;
+        font-family: "Newsreader", Georgia, serif;
+        font-size: clamp(2rem, 9vw, 3.6rem);
+        line-height: 1.2;
+        transition:
+          color 200ms var(--ease),
+          transform 200ms var(--ease);
+      }
+
+      .mobile-nav-link:first-child {
+        border-top: 1px solid rgba(255, 255, 255, 0.14);
+      }
+
+      .mobile-nav-link span {
+        color: rgba(255, 255, 255, 0.42);
+        font-family: "Manrope", system-ui, sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+      }
+
+      .mobile-nav-link:hover {
+        color: #e6b9aa;
+        transform: translateX(8px);
+      }
+
+      .mobile-nav-link:active {
+        color: #fff;
+        transform: translateX(3px);
+      }
+
+      .menu-footer {
+        display: grid;
+        gap: 14px;
+      }
+
+      .menu-footer p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.54);
+        font-size: 12px;
+        line-height: 1.55;
+      }
+
+      .mobile-sticky {
+        position: fixed;
+        z-index: 70;
+        right: 12px;
+        bottom: max(12px, env(safe-area-inset-bottom));
+        left: 12px;
+        padding: 6px;
+        border-radius: 999px;
+        background: rgba(254, 252, 248, 0.86);
+        box-shadow: 0 16px 42px rgba(22, 42, 33, 0.18);
+        backdrop-filter: blur(14px);
+        transition:
+          opacity 200ms var(--ease),
+          transform 200ms var(--ease),
+          visibility 200ms var(--ease);
+      }
+
+      .mobile-sticky .btn {
+        min-height: 50px;
+      }
+
+      .mobile-sticky.is-hidden {
+        visibility: hidden;
+        transform: translateY(130%);
+        opacity: 0;
+      }
+
+      .js .hero-reveal {
+        transform: translateY(18px);
+        opacity: 0;
+      }
+
+      .js.is-loaded .hero-reveal {
+        transform: translateY(0);
+        opacity: 1;
+        transition:
+          transform 650ms var(--ease),
+          opacity 650ms var(--ease);
+        transition-delay: var(--hero-delay, 0ms);
+      }
+
+      .js [data-reveal] {
+        transform: translateY(16px);
+        opacity: 0;
+        transition:
+          transform 560ms var(--ease),
+          opacity 560ms var(--ease);
+        transition-delay: var(--reveal-delay, 0ms);
+      }
+
+      .js [data-reveal="left"] {
+        transform: translateY(16px);
+      }
+
+      .js [data-reveal="right"] {
+        transform: translateY(16px);
+      }
+
+      .js [data-reveal].is-visible {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+
+      @media (min-width: 640px) {
+        .site-container {
+          width: min(calc(100% - 56px), var(--container));
+        }
+
+        .hero-actions {
+          flex-direction: row;
+          align-items: center;
+        }
+
+        .hero-actions .btn {
+          width: auto;
+        }
+
+        .trust-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .trust-item {
+          border-right: 1px solid var(--border);
+          border-bottom: 0;
+          padding: 20px;
+        }
+
+        .trust-item:first-child {
+          padding-left: 0;
+        }
+
+        .trust-item:last-child {
+          border-right: 0;
+          padding-right: 0;
+        }
+
+        .specialty-grid,
+        .proof-grid,
+        .format-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .specialty-card:last-child {
+          grid-column: 1 / -1;
+        }
+
+        .field-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .drawer-panel {
+          padding: 32px 36px 44px;
+        }
+
+        .footer-bottom {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+
+      @media (min-width: 768px) {
+        body {
+          padding-bottom: 0;
+        }
+
+        .header-cta {
+          display: inline-flex;
+        }
+
+        .hero {
+          padding-bottom: 86px;
+        }
+
+        .hero-visual {
+          padding: 22px 22px 0;
+        }
+
+        .portrait-frame,
+        .portrait-frame img {
+          min-height: 620px;
+        }
+
+        .manifesto-grid {
+          grid-template-columns: minmax(0, 1fr) minmax(260px, 0.32fr);
+          align-items: end;
+        }
+
+        .specialty-grid {
+          grid-template-columns: repeat(12, minmax(0, 1fr));
+        }
+
+        .specialty-card:nth-child(1) {
+          grid-column: span 7;
+        }
+
+        .specialty-card:nth-child(2) {
+          grid-column: span 5;
+        }
+
+        .specialty-card:nth-child(3),
+        .specialty-card:nth-child(4),
+        .specialty-card:nth-child(5) {
+          grid-column: span 4;
+        }
+
+        .specialty-card:nth-child(6) {
+          grid-column: 1 / -1;
+          min-height: 240px;
+        }
+
+        .method-card {
+          grid-template-columns: minmax(0, 1.45fr) minmax(270px, 0.55fr);
+        }
+
+        .method-card-copy {
+          padding: 42px;
+        }
+
+        .method-visual {
+          display: block;
+        }
+
+        .credential-row {
+          grid-template-columns: minmax(150px, 0.42fr) 1fr;
+          align-items: center;
+          gap: 20px;
+        }
+
+        .proof-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .contact-map-grid {
+          grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+        }
+
+        .contact-copy {
+          padding: 52px;
+        }
+
+        .map-art {
+          min-height: 560px;
+          border-top: 0;
+          border-left: 1px solid var(--border);
+        }
+
+        .footer-grid {
+          grid-template-columns: 1.4fr repeat(3, minmax(130px, 0.55fr));
+        }
+
+        .mobile-sticky {
+          display: none;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        :root {
+          --header-height: 86px;
+        }
+
+        .desktop-nav {
+          display: flex;
+        }
+
+        .menu-toggle {
+          display: none;
+        }
+
+        .hero {
+          padding-top: calc(var(--header-height) + 38px);
+        }
+
+        .hero-grid {
+          grid-template-columns: minmax(0, 1.18fr) minmax(380px, 0.82fr);
+          gap: 58px;
+        }
+
+        .hero-title {
+          font-size: clamp(5rem, 7.25vw, 7.25rem);
+        }
+
+        .hero-visual {
+          justify-self: end;
+        }
+
+        .empathy-grid {
+          grid-template-columns: minmax(0, 0.9fr) minmax(460px, 1.1fr);
+          gap: 90px;
+        }
+
+        .empathy-copy {
+          position: sticky;
+          top: calc(var(--header-height) + 40px);
+        }
+
+        .specialties-header,
+        .method-intro,
+        .proof-header,
+        .formats-header {
+          grid-template-columns: minmax(0, 1.25fr) minmax(350px, 0.75fr);
+          align-items: end;
+        }
+
+        .method-stack {
+          gap: 28px;
+        }
+
+        .method-card {
+          position: sticky;
+          top: calc(var(--header-height) + 22px);
+          min-height: 570px;
+        }
+
+        .method-card:nth-child(2) {
+          top: calc(var(--header-height) + 38px);
+        }
+
+        .method-card:nth-child(3) {
+          top: calc(var(--header-height) + 54px);
+        }
+
+        .method-card:nth-child(4) {
+          top: calc(var(--header-height) + 70px);
+        }
+
+        .method-card-copy {
+          padding: 52px;
+        }
+
+        .method-card h3 {
+          font-size: clamp(4rem, 6vw, 6.5rem);
+        }
+
+        .method-card-bottom {
+          grid-template-columns: minmax(0, 1fr) minmax(250px, 0.58fr);
+          align-items: end;
+        }
+
+        .about-grid {
+          grid-template-columns: minmax(400px, 0.9fr) minmax(0, 1.1fr);
+          gap: 90px;
+        }
+
+        .about-visual {
+          min-height: 720px;
+        }
+
+        .faq-grid {
+          grid-template-columns: minmax(330px, 0.65fr) minmax(0, 1.35fr);
+          gap: 90px;
+        }
+
+        .faq-intro {
+          position: sticky;
+          top: calc(var(--header-height) + 40px);
+          align-self: start;
+        }
+
+        .format-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .final-grid {
+          grid-template-columns: minmax(0, 1.02fr) minmax(430px, 0.78fr);
+          gap: 82px;
+        }
+      }
+
+      @media (min-width: 1280px) {
+        .hero-grid {
+          gap: 88px;
+        }
+
+        .hero-visual {
+          margin-right: -12px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto !important;
+        }
+
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+        }
+
+        .js .hero-reveal,
+        .js [data-reveal] {
+          transform: none !important;
+          opacity: 1 !important;
+        }
+
+        .method-card {
+          position: relative !important;
+          top: auto !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+
+    <header class="site-header" id="site-header">
+      <div class="site-container header-inner">
+        <a class="brand" href="#inicio">
+          <span class="brand-mark" aria-hidden="true">AP</span>
+          <span class="brand-copy">
+            <span class="brand-name">Amanda Pacheco</span>
+            <span class="brand-role">Nutrição com norte</span>
+          </span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Navegação principal">
+          <a class="nav-link" href="#abordagem">Abordagem</a>
+          <a class="nav-link" href="#metodo">Método</a>
+          <a class="nav-link" href="#sobre">Sobre</a>
+          <a class="nav-link" href="#consultas">Consultas</a>
+          <a class="nav-link" href="#duvidas">Dúvidas</a>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            class="btn btn-primary header-cta"
+            type="button"
+            data-form="open"
+            data-entry-point="header"
+          >
+            Marcar consulta
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </button>
+          <button
+            class="icon-button menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            >
+              <path d="M4 8h16M4 16h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <svg
+          class="hero-contours"
+          aria-hidden="true"
+          viewBox="0 0 700 700"
+          fill="none"
+        >
+          <path
+            d="M651 337c-49-112-54-204-151-248-93-42-175 5-271 25C121 137 32 194 35 315c3 113 95 163 170 234 69 66 147 128 250 91 96-35 121-130 160-214 14-31 51-55 36-89Z"
+            stroke="currentColor"
+          />
+          <path
+            d="M607 342c-43-91-51-167-130-205-78-37-148 1-226 18-88 18-159 65-157 164 2 91 76 134 138 192 57 54 122 103 205 73 79-29 101-106 134-174 12-27 48-46 36-68Z"
+            stroke="currentColor"
+          />
+          <path
+            d="M557 348c-35-69-47-128-108-159-63-31-120-3-182 11-68 15-124 52-123 128 1 70 59 104 108 149 44 42 95 80 159 57 62-23 79-83 105-135 11-21 51-35 41-51Z"
+            stroke="currentColor"
+          />
+          <path
+            d="M505 353c-27-48-42-90-87-114-47-25-91-4-137 6-50 11-93 39-92 95 1 52 44 77 81 111 33 32 71 59 118 42 46-17 60-61 80-99 9-18 45-29 37-41Z"
+            stroke="currentColor"
+          />
+        </svg>
+
+        <div class="site-container">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <div class="hero-kicker hero-reveal" style="--hero-delay: 80ms">
+                <span class="hero-kicker-dot" aria-hidden="true"></span>
+                Nutricionista · Portugal
+              </div>
+              <h1
+                class="display hero-title hero-reveal"
+                id="hero-title"
+                style="--hero-delay: 160ms"
+              >
+                Comer bem sem viver em guerra
+                <span class="line-accent">com a comida.</span>
+              </h1>
+              <p class="hero-subtitle hero-reveal" style="--hero-delay: 240ms">
+                Um acompanhamento nutricional que traduz ciência, rotina e
+                prazer em escolhas que fazem sentido para si — sem planos
+                impossíveis nem culpa à mesa.
+              </p>
+              <div class="hero-actions hero-reveal" style="--hero-delay: 320ms">
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  data-form="open"
+                  data-entry-point="hero"
+                >
+                  Quero marcar a minha avaliação
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </button>
+                <a class="btn btn-secondary" href="#metodo">
+                  Conhecer o acompanhamento
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </a>
+              </div>
+              <p class="hero-microcopy hero-reveal" style="--hero-delay: 400ms">
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>
+                Modo de demonstração · Nenhum dado é transmitido ou guardado
+              </p>
+            </div>
+
+            <figure class="hero-visual hero-reveal" style="--hero-delay: 250ms">
+              <div class="portrait-frame">
+                <img
+                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1200&q=85"
+                  srcset="
+                    https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=640&q=82   640w,
+                    https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=960&q=84   960w,
+                    https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1200&q=85 1200w
+                  "
+                  sizes="(min-width: 1024px) 42vw, (min-width: 640px) 490px, calc(100vw - 72px)"
+                  alt="Retrato editorial ilustrativo para representar Amanda Pacheco"
+                  width="1200"
+                  height="1500"
+                  fetchpriority="high"
+                  decoding="async"
+                />
+              </div>
+              <div class="visual-note" aria-hidden="true">
+                Ciência traduzida para a vida real.
+                <span>Sem extremos · sem julgamento</span>
+              </div>
+              <div class="credential-tag">
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="m12 3 2.3 4.7 5.2.8-3.8 3.7.9 5.2-4.6-2.5-4.6 2.5.9-5.2-3.8-3.7 5.2-.8L12 3Z"
+                  />
+                </svg>
+                Nutricionista · Portugal
+              </div>
+              <figcaption class="portrait-caption">
+                Imagem ilustrativa <span>Fotografia de demonstração</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="trust-band hero-reveal" style="--hero-delay: 480ms">
+            <div class="trust-grid">
+              <div class="trust-item">
+                <span class="trust-icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M12 3v18M3 12h18" />
+                    <circle cx="12" cy="12" r="8" />
+                  </svg>
+                </span>
+                <span class="trust-copy"
+                  ><strong>Olhar individual</strong
+                  ><span>A sua história antes de qualquer plano.</span></span
+                >
+              </div>
+              <div class="trust-item">
+                <span class="trust-icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M9 3h6M10 9h4M8 3v6l-3 8a3 3 0 0 0 2.8 4h8.4a3 3 0 0 0 2.8-4l-3-8V3"
+                    />
+                  </svg>
+                </span>
+                <span class="trust-copy"
+                  ><strong>Ciência aplicada</strong
+                  ><span>Decisões explicadas, não regras soltas.</span></span
+                >
+              </div>
+              <div class="trust-item">
+                <span class="trust-icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"
+                    />
+                  </svg>
+                </span>
+                <span class="trust-copy"
+                  ><strong>Sem terrorismo alimentar</strong
+                  ><span
+                    >Cuidado com respeito, contexto e autonomia.</span
+                  ></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="abordagem" aria-labelledby="empathy-title">
+        <div class="site-container empathy-grid">
+          <div class="empathy-copy" data-reveal="left">
+            <p class="eyebrow">Talvez isto lhe soe familiar</p>
+            <h2 class="display section-title-sm" id="empathy-title">
+              O problema talvez nunca tenha sido
+              <span class="accent-italic">falta de disciplina.</span>
+            </h2>
+            <p class="lede">
+              Quando a estratégia exige uma vida que não existe, desistir não é
+              fracasso. É um sinal de que precisa de um caminho mais realista,
+              mais informado e verdadeiramente seu.
+            </p>
+          </div>
+
+          <ul
+            class="pain-list"
+            aria-label="Situações comuns no início do acompanhamento"
+          >
+            <li class="pain-item" data-reveal style="--reveal-delay: 0ms">
+              <span class="pain-check" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m7 12 3 3 7-7" /></svg
+              ></span>
+              <p>
+                <strong>Tenta organizar a alimentação,</strong> mas a rotina
+                muda e sente que volta sempre ao início.
+              </p>
+            </li>
+            <li class="pain-item" data-reveal style="--reveal-delay: 60ms">
+              <span class="pain-check" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m7 12 3 3 7-7" /></svg
+              ></span>
+              <p>
+                <strong>Já seguiu regras demasiado rígidas</strong> e acabou
+                entre controlo, culpa e perda de confiança.
+              </p>
+            </li>
+            <li class="pain-item" data-reveal style="--reveal-delay: 120ms">
+              <span class="pain-check" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m7 12 3 3 7-7" /></svg
+              ></span>
+              <p>
+                <strong>Recebe informação contraditória</strong> e já não sabe o
+                que faz sentido para o seu corpo.
+              </p>
+            </li>
+            <li class="pain-item" data-reveal style="--reveal-delay: 180ms">
+              <span class="pain-check" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m7 12 3 3 7-7" /></svg
+              ></span>
+              <p>
+                <strong>Tem pouco tempo para cozinhar</strong> e sente que
+                cuidar de si exige horas que não tem.
+              </p>
+            </li>
+            <li class="pain-item" data-reveal style="--reveal-delay: 240ms">
+              <span class="pain-check" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m7 12 3 3 7-7" /></svg
+              ></span>
+              <p>
+                <strong>Quer sentir mais energia e segurança,</strong> sem
+                transformar cada refeição num teste de força de vontade.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section manifesto" aria-labelledby="manifesto-title">
+        <div class="site-container manifesto-grid">
+          <div data-reveal="left">
+            <p class="eyebrow eyebrow-light">Uma nova possibilidade</p>
+            <h2 class="display manifesto-quote" id="manifesto-title">
+              A sua vida não precisa caber numa dieta.
+              <em>A alimentação é que precisa caber na sua vida.</em>
+            </h2>
+          </div>
+          <aside class="manifesto-aside" data-reveal="right">
+            <p>
+              Em vez de começar por proibições, o acompanhamento procura
+              entender padrões, contexto clínico, preferências e o que é
+              sustentável para si.
+            </p>
+            <button
+              class="btn btn-light"
+              type="button"
+              data-form="open"
+              data-entry-point="manifesto"
+            >
+              Conversar com a Amanda
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </button>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="specialties-title">
+        <div class="site-container">
+          <div class="specialties-header">
+            <div data-reveal="left">
+              <p class="eyebrow">O seu ponto de partida</p>
+              <h2 class="display section-title" id="specialties-title">
+                Cuidado que parte do que está a viver
+                <span class="accent-italic">agora.</span>
+              </h2>
+            </div>
+            <p class="specialties-intro" data-reveal="right">
+              Na primeira conversa, pode explicar o que procura sem escolher um
+              diagnóstico ou encaixar-se antecipadamente num serviço.
+            </p>
+          </div>
+
+          <div class="specialty-grid">
+            <article class="specialty-card featured" data-reveal>
+              <span class="specialty-icon" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 3v18M5 7h14M7 17h10" /></svg
+              ></span>
+              <h3>Rotina e organização</h3>
+              <p>
+                O que acontece nos dias corridos, nas compras e nas refeições
+                que precisam de ser mais simples.
+              </p>
+            </article>
+
+            <article
+              class="specialty-card"
+              data-reveal
+              style="--reveal-delay: 60ms"
+            >
+              <span class="specialty-icon" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M8 3v5a4 4 0 0 0 8 0V3M12 12v9M8 17h8" /></svg
+              ></span>
+              <h3>Dúvidas sobre alimentação</h3>
+              <p>
+                As perguntas que acumulou e a informação contraditória que torna
+                as escolhas menos claras.
+              </p>
+            </article>
+
+            <article class="specialty-card" data-reveal>
+              <span class="specialty-icon" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="8" r="4" />
+                  <path d="M12 12v9M8 17h8" /></svg
+              ></span>
+              <h3>Tentativas anteriores</h3>
+              <p>
+                O que já experimentou, o que foi difícil de manter e o que não
+                quer repetir.
+              </p>
+            </article>
+
+            <article
+              class="specialty-card clay"
+              data-reveal
+              style="--reveal-delay: 60ms"
+            >
+              <span class="specialty-icon" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4 12a8 8 0 1 0 16 0M8 12a4 4 0 0 0 8 0M12 3v9"
+                  /></svg
+              ></span>
+              <h3>Relação com as escolhas</h3>
+              <p>
+                Como regras, culpa ou o pensamento de “tudo ou nada” aparecem no
+                seu quotidiano.
+              </p>
+            </article>
+
+            <article
+              class="specialty-card"
+              data-reveal
+              style="--reveal-delay: 120ms"
+            >
+              <span class="specialty-icon" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M4 17h3l3-10 4 13 3-8h3" /></svg
+              ></span>
+              <h3>Objetivos pessoais</h3>
+              <p>
+                O que gostaria de compreender ou mudar e por que isso importa
+                neste momento.
+              </p>
+            </article>
+
+            <article class="specialty-card dark" data-reveal>
+              <span class="specialty-icon" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 4h14v16H5zM8 8h8M8 12h5M8 16h7" /></svg
+              ></span>
+              <h3>Contexto do dia a dia</h3>
+              <p>
+                Preferências, horários, acesso a alimentos e outros fatores que
+                ajudam a enquadrar o pedido.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section method-section"
+        id="metodo"
+        aria-labelledby="method-title"
+      >
+        <div class="site-container">
+          <div class="method-intro">
+            <div data-reveal="left">
+              <p class="method-name">
+                <svg aria-hidden="true" viewBox="0 0 48 48" fill="none">
+                  <circle
+                    cx="24"
+                    cy="24"
+                    r="20"
+                    stroke="currentColor"
+                    stroke-width="1.3"
+                  />
+                  <path
+                    d="m29.5 18.5-3.2 7.8-7.8 3.2 3.2-7.8 7.8-3.2Z"
+                    stroke="currentColor"
+                    stroke-width="1.3"
+                  />
+                  <circle cx="24" cy="24" r="2" fill="currentColor" />
+                </svg>
+                Acompanhamento em quatro etapas
+              </p>
+              <h2 class="display section-title" id="method-title">
+                Um caminho claro para construir
+                <span class="accent-italic">autonomia.</span>
+              </h2>
+            </div>
+            <p class="method-summary" data-reveal="right">
+              Quatro momentos que transformam informação em direção prática. O
+              método não impõe um mapa pronto: ajuda a desenhar o seu.
+            </p>
+          </div>
+
+          <div class="method-stack">
+            <article class="method-card">
+              <div class="method-card-copy">
+                <div>
+                  <div class="method-card-top">
+                    <span class="method-index">Etapa 01 · Escutar</span
+                    ><span class="method-dot" aria-hidden="true"></span>
+                  </div>
+                  <h3>Ver a pessoa inteira.</h3>
+                </div>
+                <div class="method-card-bottom">
+                  <p>
+                    A consulta começa pela sua história: rotina, saúde, relação
+                    com a comida, preferências, dificuldades, exames quando
+                    pertinentes e objetivos. Antes de propor, é preciso
+                    compreender.
+                  </p>
+                  <div class="method-tags">
+                    <span class="method-tag">Avaliação ampla</span
+                    ><span class="method-tag">Contexto clínico</span
+                    ><span class="method-tag">Rotina</span>
+                  </div>
+                </div>
+              </div>
+              <div class="method-visual" aria-hidden="true">
+                <span class="method-axis"></span>
+              </div>
+            </article>
+
+            <article class="method-card">
+              <div class="method-card-copy">
+                <div>
+                  <div class="method-card-top">
+                    <span class="method-index">Etapa 02 · Traduzir</span
+                    ><span class="method-dot" aria-hidden="true"></span>
+                  </div>
+                  <h3>Dar sentido à ciência.</h3>
+                </div>
+                <div class="method-card-bottom">
+                  <p>
+                    A informação técnica transforma-se em prioridades claras e
+                    numa estratégia alimentar personalizada. Cada escolha é
+                    explicada para que saiba não apenas o que fazer, mas porquê.
+                  </p>
+                  <div class="method-tags">
+                    <span class="method-tag">Prioridades</span
+                    ><span class="method-tag">Estratégia</span
+                    ><span class="method-tag">Clareza</span>
+                  </div>
+                </div>
+              </div>
+              <div class="method-visual" aria-hidden="true">
+                <span class="method-axis"></span>
+              </div>
+            </article>
+
+            <article class="method-card">
+              <div class="method-card-copy">
+                <div>
+                  <div class="method-card-top">
+                    <span class="method-index">Etapa 03 · Integrar</span
+                    ><span class="method-dot" aria-hidden="true"></span>
+                  </div>
+                  <h3>Fazer caber na rotina.</h3>
+                </div>
+                <div class="method-card-bottom">
+                  <p>
+                    O plano deixa de ser uma folha ideal e passa a funcionar em
+                    dias reais: refeições fora, pouco tempo, família, trabalho,
+                    preferências e imprevistos incluídos.
+                  </p>
+                  <div class="method-tags">
+                    <span class="method-tag">Aplicação prática</span
+                    ><span class="method-tag">Flexibilidade</span
+                    ><span class="method-tag">Repertório</span>
+                  </div>
+                </div>
+              </div>
+              <div class="method-visual" aria-hidden="true">
+                <span class="method-axis"></span>
+              </div>
+            </article>
+
+            <article class="method-card">
+              <div class="method-card-copy">
+                <div>
+                  <div class="method-card-top">
+                    <span class="method-index">Etapa 04 · Sustentar</span
+                    ><span class="method-dot" aria-hidden="true"></span>
+                  </div>
+                  <h3>Ajustar até ganhar autonomia.</h3>
+                </div>
+                <div class="method-card-bottom">
+                  <p>
+                    O acompanhamento observa o que resultou, o que precisa de
+                    mudar e como avançar sem depender para sempre de um plano. O
+                    destino é tomar decisões com mais confiança.
+                  </p>
+                  <div class="method-tags">
+                    <span class="method-tag">Acompanhamento</span
+                    ><span class="method-tag">Ajustes</span
+                    ><span class="method-tag">Autonomia</span>
+                  </div>
+                </div>
+              </div>
+              <div class="method-visual" aria-hidden="true">
+                <span class="method-axis"></span>
+              </div>
+            </article>
+          </div>
+
+          <div class="method-cta" data-reveal>
+            <button
+              class="btn btn-primary"
+              type="button"
+              data-form="open"
+              data-entry-point="metodo"
+            >
+              Quero perceber o meu caminho
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="sobre" aria-labelledby="about-title">
+        <div class="site-container about-grid">
+          <div class="about-visual" data-reveal="left">
+            <div class="about-photo">
+              <img
+                src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=82"
+                srcset="
+                  https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=640&q=80   640w,
+                  https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=960&q=81   960w,
+                  https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=82 1200w
+                "
+                sizes="(min-width: 1024px) 43vw, calc(100vw - 82px)"
+                alt="Imagem ilustrativa de uma rotina alimentar natural e possível"
+                width="1200"
+                height="1500"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="about-card">
+              <span class="about-card-label">Filosofia de cuidado</span>
+              <p>
+                “A melhor estratégia é a que continua a fazer sentido quando a
+                vida acontece.”
+              </p>
+            </div>
+          </div>
+
+          <div class="about-content" data-reveal="right">
+            <p class="eyebrow">Sobre Amanda</p>
+            <h2 class="display section-title-sm" id="about-title">
+              Antes de falar de planos alimentares, Amanda começa por
+              <span class="accent-italic">ouvir.</span>
+            </h2>
+            <div class="about-body">
+              <p>
+                Na consulta, a história não começa no prato. Começa nos dias
+                corridos, nas tentativas anteriores, no que dá prazer, no que
+                preocupa e no que precisa de mudar sem perder o que torna a vida
+                sua.
+              </p>
+              <p>
+                A proposta é unir rigor técnico e proximidade para que a
+                nutrição deixe de ser mais uma fonte de pressão e passe a
+                oferecer clareza, direção e autonomia.
+              </p>
+            </div>
+
+            <dl class="credential-list">
+              <div class="credential-row">
+                <dt>Nome</dt>
+                <dd>Amanda Pacheco</dd>
+              </div>
+              <div class="credential-row">
+                <dt>Profissão</dt>
+                <dd>Nutricionista</dd>
+              </div>
+              <div class="credential-row">
+                <dt>País</dt>
+                <dd>Portugal</dd>
+              </div>
+            </dl>
+
+            <button
+              class="btn btn-primary"
+              type="button"
+              data-form="open"
+              data-entry-point="sobre"
+            >
+              Marcar uma primeira conversa
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section proof-section" aria-labelledby="proof-title">
+        <div class="site-container">
+          <div class="proof-header">
+            <div data-reveal="left">
+              <p class="eyebrow">Ética também comunica</p>
+              <h2 class="display section-title-sm" id="proof-title">
+                Confiança não se fabrica.
+                <span class="accent-italic">Constrói-se com verdade.</span>
+              </h2>
+            </div>
+            <p class="proof-note" data-reveal="right">
+              Nenhum testemunho, número ou resultado foi fornecido para esta
+              versão. A página preserva esse espaço sem fabricar autoridade.
+            </p>
+          </div>
+
+          <div class="proof-grid">
+            <article class="proof-card" data-reveal>
+              <span class="proof-status">Critério editorial</span>
+              <blockquote>“Nenhum relato entra sem autorização.”</blockquote>
+              <footer>
+                Identidade e contexto só podem ser publicados com consentimento
+                documentado.
+              </footer>
+            </article>
+            <article
+              class="proof-card"
+              data-reveal
+              style="--reveal-delay: 70ms"
+            >
+              <span class="proof-status">Critério editorial</span>
+              <blockquote>“Nenhum número substitui a evidência.”</blockquote>
+              <footer>
+                A página não usa métricas de pacientes, estrelas ou volume de
+                atendimentos sem fonte verificável.
+              </footer>
+            </article>
+            <article
+              class="proof-card"
+              data-reveal
+              style="--reveal-delay: 140ms"
+            >
+              <span class="proof-status">Critério editorial</span>
+              <blockquote>“Nenhum resultado é garantido.”</blockquote>
+              <footer>
+                Sem antes e depois, promessas terapêuticas ou expectativas
+                iguais para todas as pessoas.
+              </footer>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="consultas" aria-labelledby="formats-title">
+        <div class="site-container">
+          <div class="formats-header">
+            <div data-reveal="left">
+              <p class="eyebrow">Informação antes da consulta</p>
+              <h2 class="display section-title" id="formats-title">
+                Decidir com clareza começa por conhecer
+                <span class="accent-italic">as condições.</span>
+              </h2>
+            </div>
+            <p class="formats-intro" data-reveal="right">
+              Os serviços, modalidades, duração, suporte e preços não foram
+              fornecidos. Por isso, esta versão não apresenta pacotes ou valores
+              como se estivessem confirmados.
+            </p>
+          </div>
+
+          <div class="format-grid">
+            <article class="format-card" data-reveal>
+              <div class="format-topline">
+                <span class="format-label">Para começar</span>
+                <span class="format-icon" aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M8 2v4M16 2v4M3 10h18M5 5h14a2 2 0 0 1 2 2v14H3V7a2 2 0 0 1 2-2Z"
+                    /></svg
+                ></span>
+              </div>
+              <h3>Motivo do contacto</h3>
+              <p class="format-description">
+                Explique apenas, de forma breve, o que gostaria de esclarecer
+                numa primeira conversa.
+              </p>
+              <p class="format-price">Informação inicial</p>
+              <ul class="format-features">
+                <li>
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="m5 12 4 4L19 6" /></svg
+                  ><span>Motivo geral do contacto</span>
+                </li>
+                <li>
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="m5 12 4 4L19 6" /></svg
+                  ><span>Canal preferido para resposta</span>
+                </li>
+                <li>
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="m5 12 4 4L19 6" /></svg
+                  ><span>Sem partilha de dados clínicos no formulário</span>
+                </li>
+                <li>
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="m5 12 4 4L19 6" /></svg
+                  ><span>Sem compromisso automático</span>
+                </li>
+              </ul>
+              <button
+                class="btn btn-secondary btn-full"
+                type="button"
+                data-form="open"
+                data-entry-point="plano-avaliacao"
+              >
+                Abrir pedido demonstrativo<svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </button>
+            </article>
+
+            <article
+              class="format-card featured"
+              data-reveal
+              style="--reveal-delay: 70ms"
+            >
+              <div class="format-topline">
+                <span class="format-label">Antes de marcar</span>
+                <span class="format-icon" aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M4 19V5M4 19h16M8 15l3-4 3 2 5-7" /></svg
+                ></span>
+              </div>
+              <h3>Detalhes do serviço</h3>
+              <p class="format-description">
+                A versão publicável deve explicar claramente o serviço
+                disponível antes de pedir qualquer decisão.
+              </p>
+              <p class="format-price">Transparência comercial</p>
+              <ul class="format-features">
+                <li>
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="m5 12 4 4L19 6" /></svg
+                  ><span>Âmbito e entregas confirmados</span>
+                </li>
+                <li>
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="m5 12 4 4L19 6" /></svg
+                  ><span>Modalidade e disponibilidade</span>
+                </li>
+                <li>
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="m5 12 4 4L19 6" /></svg
+                  ><span>Duração, frequência e suporte</span>
+                </li>
+                <li>
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="m5 12 4 4L19 6" /></svg
+                  ><span>Preço e política de cancelamento</span>
+                </li>
+              </ul>
+              <button
+                class="btn btn-light btn-full"
+                type="button"
+                data-form="open"
+                data-entry-point="plano-essencial"
+              >
+                Abrir pedido demonstrativo<svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </button>
+            </article>
+
+            <article
+              class="format-card"
+              data-reveal
+              style="--reveal-delay: 140ms"
+            >
+              <div class="format-topline">
+                <span class="format-label">Sem pressão</span>
+                <span class="format-icon" aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"
+                    /></svg
+                ></span>
+              </div>
+              <h3>Decisão informada</h3>
+              <p class="format-description">
+                Confirme identificação, condições e privacidade antes de avançar
+                com um serviço de saúde.
+              </p>
+              <p class="format-price">Escolha consciente</p>
+              <ul class="format-features">
+                <li>
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="m5 12 4 4L19 6" /></svg
+                  ><span>Identificação profissional verificável</span>
+                </li>
+                <li>
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="m5 12 4 4L19 6" /></svg
+                  ><span>Limites do serviço</span>
+                </li>
+                <li>
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="m5 12 4 4L19 6" /></svg
+                  ><span>Privacidade e tratamento de dados</span>
+                </li>
+                <li>
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="m5 12 4 4L19 6" /></svg
+                  ><span>Canal de contacto confirmado</span>
+                </li>
+              </ul>
+              <button
+                class="btn btn-secondary btn-full"
+                type="button"
+                data-form="open"
+                data-entry-point="plano-proximo"
+              >
+                Abrir pedido demonstrativo<svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section faq-section"
+        id="duvidas"
+        aria-labelledby="faq-title"
+      >
+        <div class="site-container faq-grid">
+          <div class="faq-intro" data-reveal="left">
+            <p class="eyebrow">Dúvidas reais, respostas claras</p>
+            <h2 class="display section-title-sm" id="faq-title">
+              Antes de marcar, é natural querer
+              <span class="accent-italic">perceber melhor.</span>
+            </h2>
+            <p class="lede">
+              Se a sua pergunta não estiver aqui, pode deixá-la no formulário. A
+              conversa começa com clareza, não com pressão.
+            </p>
+            <button
+              class="btn btn-primary faq-cta"
+              type="button"
+              data-form="open"
+              data-entry-point="faq"
+            >
+              Fazer uma pergunta<svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="faq-list" data-reveal="right">
+            <details class="faq-item" open>
+              <summary>
+                Tenho de deixar de comer pão ou cortar tudo o que gosto?<span
+                  class="faq-plus"
+                  aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  >
+                    <path d="M12 5v14M5 12h14" /></svg
+                ></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  Não. O objetivo é construir escolhas possíveis de manter,
+                  considerando preferências, rotina, contexto clínico e
+                  objetivos individuais. Restrições só fazem sentido quando
+                  existe indicação adequada — não como regra automática.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>
+                Já tentei várias dietas. O que será diferente?<span
+                  class="faq-plus"
+                  aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  >
+                    <path d="M12 5v14M5 12h14" /></svg
+                ></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  O acompanhamento começa pela sua história e pelo que tem
+                  dificultado a consistência. A estratégia é revista ao longo do
+                  percurso, em vez de entregar regras fixas e esperar que a sua
+                  vida se adapte a elas.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>
+                Onde e em que modalidade decorrem as consultas?<span
+                  class="faq-plus"
+                  aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  >
+                    <path d="M12 5v14M5 12h14" /></svg
+                ></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  A localidade e as modalidades de atendimento ainda não foram
+                  confirmadas para esta página. Consulte essa informação antes
+                  de marcar.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>
+                E se eu não gostar ou não tiver tempo de cozinhar?<span
+                  class="faq-plus"
+                  aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  >
+                    <path d="M12 5v14M5 12h14" /></svg
+                ></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  As orientações podem partir do seu nível de autonomia na
+                  cozinha, do tempo disponível e dos alimentos a que tem acesso.
+                  A estratégia deve funcionar nos seus dias, incluindo refeições
+                  simples e escolhas fora de casa.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>
+                É preciso contar calorias ou pesar todos os alimentos?<span
+                  class="faq-plus"
+                  aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  >
+                    <path d="M12 5v14M5 12h14" /></svg
+                ></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  Não existe uma regra igual para todos. As ferramentas
+                  escolhidas dependem do objetivo, do contexto e da relação que
+                  tem com a alimentação. O método deve aumentar clareza — não
+                  vigilância constante.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>
+                Quanto tempo dura o acompanhamento?<span
+                  class="faq-plus"
+                  aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  >
+                    <path d="M12 5v14M5 12h14" /></svg
+                ></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  A duração e a frequência ainda não estão publicadas. Confirme
+                  os formatos, o que está incluído e as condições antes de
+                  assumir qualquer compromisso.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>
+                O seguro de saúde comparticipa a consulta?<span
+                  class="faq-plus"
+                  aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  >
+                    <path d="M12 5v14M5 12h14" /></svg
+                ></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  A comparticipação varia conforme seguradora, apólice e
+                  documentação emitida. Confirme diretamente com o seu seguro e
+                  pergunte à profissional que documentos pode efetivamente
+                  emitir.
+                </p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>
+                Como marco a primeira consulta?<span
+                  class="faq-plus"
+                  aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  >
+                    <path d="M12 5v14M5 12h14" /></svg
+                ></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  Nesta demonstração, o formulário apenas valida os campos e não
+                  envia dados. O canal real de marcação será indicado quando a
+                  integração e a informação de contacto forem aprovadas.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-compact" aria-labelledby="location-title">
+        <div class="site-container">
+          <div class="contact-map" data-reveal>
+            <div class="contact-map-grid">
+              <div class="contact-copy">
+                <p class="eyebrow">Informação de atendimento</p>
+                <h2 class="display section-title-sm" id="location-title">
+                  Portugal, com logística por confirmar.
+                </h2>
+                <p class="lede">
+                  A página não indica morada, modalidade, horários ou contacto
+                  enquanto esses dados não forem confirmados pela profissional.
+                </p>
+                <div class="contact-details">
+                  <div class="contact-detail">
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"
+                      />
+                      <circle cx="12" cy="10" r="2.5" />
+                    </svg>
+                    <div><strong>País</strong><span>Portugal</span></div>
+                  </div>
+                  <div class="contact-detail">
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="3" y="5" width="18" height="12" rx="2" />
+                      <path d="M8 21h8M12 17v4" />
+                    </svg>
+                    <div>
+                      <strong>Modalidade</strong
+                      ><span>Não publicada nesta versão</span>
+                    </div>
+                  </div>
+                  <div class="contact-detail">
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="9" />
+                      <path d="M12 7v5l3 2" />
+                    </svg>
+                    <div>
+                      <strong>Horários</strong
+                      ><span>Não publicados nesta versão</span>
+                    </div>
+                  </div>
+                  <div class="contact-detail">
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"
+                      />
+                    </svg>
+                    <div>
+                      <strong>Contacto</strong
+                      ><span>Não ativado neste protótipo</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="map-art" aria-hidden="true">
+                <span class="map-ring"></span>
+                <span class="map-pin"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M12 3v18M3 12h18" />
+                    <circle cx="12" cy="12" r="7" /></svg
+                ></span>
+                <span class="map-label"
+                  >Portugal · Composição editorial sem indicação geográfica
+                  exata.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section final-cta"
+        id="marcar"
+        aria-labelledby="final-title"
+      >
+        <span class="final-glow final-glow-one" aria-hidden="true"></span>
+        <span class="final-glow final-glow-two" aria-hidden="true"></span>
+        <div class="site-container final-grid">
+          <div class="final-copy" data-reveal="left">
+            <p class="eyebrow eyebrow-light">
+              O próximo passo pode ser mais leve
+            </p>
+            <h2 class="display final-title" id="final-title">
+              Não precisa de tentar sozinho <em>outra vez.</em>
+            </h2>
+            <p>
+              Este formulário permite testar o fluxo de contacto enquanto a
+              integração real não está aprovada. Não introduza dados pessoais
+              verdadeiros nesta demonstração.
+            </p>
+            <ul class="final-points">
+              <li>
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="m5 12 4 4L19 6" /></svg
+                >Sem compromisso automático
+              </li>
+              <li>
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="m5 12 4 4L19 6" /></svg
+                >Sem envio para terceiros
+              </li>
+              <li>
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="m5 12 4 4L19 6" /></svg
+                >Nenhum dado é transmitido nesta demonstração
+              </li>
+            </ul>
+          </div>
+
+          <div class="form-card" data-reveal="right">
+            <h3 class="form-heading">Comece por uma conversa.</h3>
+            <p class="form-intro">
+              Use dados fictícios. Os campos marcados são necessários para
+              testar a validação.
+            </p>
+            <form class="lead-form" id="final-form" data-lead-form novalidate>
+              <input
+                type="hidden"
+                name="entry_point"
+                value="formulario-final"
+              />
+              <div class="field-grid">
+                <div class="field">
+                  <label for="final-name">Nome *</label>
+                  <input
+                    class="field-control"
+                    id="final-name"
+                    name="name"
+                    type="text"
+                    autocomplete="name"
+                    placeholder="Como prefere ser chamado(a)?"
+                    aria-describedby="final-name-error"
+                    required
+                  />
+                  <p
+                    class="field-error"
+                    id="final-name-error"
+                    data-error-for="name"
+                    aria-live="polite"
+                  ></p>
+                </div>
+                <div class="field">
+                  <label for="final-phone">WhatsApp com indicativo *</label>
+                  <input
+                    class="field-control"
+                    id="final-phone"
+                    name="phone"
+                    type="tel"
+                    inputmode="tel"
+                    autocomplete="tel"
+                    placeholder="Ex.: +351 912 345 678"
+                    aria-describedby="final-phone-error"
+                    required
+                  />
+                  <p
+                    class="field-error"
+                    id="final-phone-error"
+                    data-error-for="phone"
+                    aria-live="polite"
+                  ></p>
+                </div>
+              </div>
+              <div class="field-grid">
+                <div class="field">
+                  <label for="final-goal">Objetivo principal *</label>
+                  <select
+                    class="field-control"
+                    id="final-goal"
+                    name="goal"
+                    aria-describedby="final-goal-error"
+                    required
+                  >
+                    <option value="">Escolha uma opção</option>
+                    <option>Organizar a alimentação</option>
+                    <option>Esclarecer dúvidas gerais</option>
+                    <option>Rever tentativas anteriores</option>
+                    <option>Melhorar a relação com as escolhas</option>
+                    <option>Conhecer os serviços disponíveis</option>
+                    <option>Outro motivo</option>
+                  </select>
+                  <p
+                    class="field-error"
+                    id="final-goal-error"
+                    data-error-for="goal"
+                    aria-live="polite"
+                  ></p>
+                </div>
+                <div class="field">
+                  <label for="final-difficulty">Maior dificuldade hoje *</label>
+                  <select
+                    class="field-control"
+                    id="final-difficulty"
+                    name="difficulty"
+                    aria-describedby="final-difficulty-error"
+                    required
+                  >
+                    <option value="">Escolha uma opção</option>
+                    <option>Falta de tempo</option>
+                    <option>Falta de rotina</option>
+                    <option>Culpa ou relação difícil com a comida</option>
+                    <option>Informação contraditória</option>
+                    <option>Não sei por onde começar</option>
+                    <option>Outra dificuldade</option>
+                  </select>
+                  <p
+                    class="field-error"
+                    id="final-difficulty-error"
+                    data-error-for="difficulty"
+                    aria-live="polite"
+                  ></p>
+                </div>
+              </div>
+              <div class="field">
+                <label for="final-source">Como conheceu a Amanda?</label>
+                <select class="field-control" id="final-source" name="source">
+                  <option value="">Opcional</option>
+                  <option>Instagram</option>
+                  <option>Google</option>
+                  <option>Indicação</option>
+                  <option>Outro canal</option>
+                </select>
+                <p class="field-error" aria-hidden="true"></p>
+              </div>
+              <div>
+                <div class="consent-row">
+                  <input
+                    id="final-consent"
+                    name="consent"
+                    type="checkbox"
+                    aria-describedby="final-consent-error"
+                    required
+                  />
+                  <label for="final-consent"
+                    >Confirmo que compreendi que esta demonstração não transmite
+                    nem guarda os dados inseridos. *</label
+                  >
+                </div>
+                <p
+                  class="field-error"
+                  id="final-consent-error"
+                  data-error-for="consent"
+                  aria-live="polite"
+                ></p>
+              </div>
+              <button class="btn btn-primary btn-full" type="submit">
+                <span data-button-label>Preparar pedido de marcação</span
+                ><svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </button>
+              <p class="form-trust">
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <rect x="5" y="10" width="14" height="10" rx="2" />
+                  <path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg
+                >O formulário valida localmente, sem transmitir ou guardar
+                dados. A integração só pode ser ativada após aprovação de
+                privacidade.
+              </p>
+              <div
+                class="form-success"
+                data-form-success
+                role="status"
+                aria-live="polite"
+                hidden
+              ></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="#inicio">
+              <span class="brand-mark" aria-hidden="true">AP</span>
+              <span class="brand-copy"
+                ><span class="brand-name">Amanda Pacheco</span
+                ><span class="brand-role">Nutrição com norte</span></span
+              >
+            </a>
+            <p class="footer-summary">
+              Nutrição com ciência, contexto e humanidade — para construir
+              escolhas que continuem a fazer sentido fora da consulta.
+            </p>
+          </div>
+          <div class="footer-column">
+            <h3>Navegação</h3>
+            <ul class="footer-links">
+              <li><a class="footer-link" href="#abordagem">Abordagem</a></li>
+              <li><a class="footer-link" href="#metodo">Como funciona</a></li>
+              <li><a class="footer-link" href="#sobre">Sobre Amanda</a></li>
+              <li><a class="footer-link" href="#consultas">Consultas</a></li>
+              <li><a class="footer-link" href="#duvidas">Dúvidas</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contacto</h3>
+            <div class="footer-data">
+              <span>Portugal</span>
+              <span>Contacto direto não ativado neste protótipo</span>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3>Profissional</h3>
+            <div class="footer-data">
+              <span>Amanda Pacheco</span>
+              <span>Nutricionista</span>
+              <span>Dados profissionais completos não publicados</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span
+            >© <span id="current-year">2026</span> Amanda Pacheco. Todos os
+            direitos reservados.</span
+          >
+          <span id="privacidade"
+            >Protótipo local · sem recolha, transmissão ou armazenamento de
+            dados</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <dialog
+      class="drawer-dialog"
+      id="booking-dialog"
+      aria-labelledby="booking-title"
+    >
+      <div class="drawer-panel">
+        <div class="drawer-header">
+          <div>
+            <span class="drawer-eyebrow">Pedido de marcação</span>
+            <h2 class="drawer-title" id="booking-title">
+              Conte-me o que procura.
+            </h2>
+          </div>
+          <button
+            class="icon-button"
+            type="button"
+            data-dialog-close
+            aria-label="Fechar formulário"
+          >
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            >
+              <path d="m6 6 12 12M18 6 6 18" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="form-card">
+          <p class="form-intro">
+            Use dados fictícios para testar o fluxo. Esta demonstração não envia
+            pedidos pelo WhatsApp.
+          </p>
+          <form class="lead-form" id="modal-form" data-lead-form novalidate>
+            <input type="hidden" name="entry_point" value="modal" />
+            <div class="field-grid">
+              <div class="field">
+                <label for="modal-name">Nome *</label>
+                <input
+                  class="field-control"
+                  id="modal-name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  placeholder="Como prefere ser chamado(a)?"
+                  aria-describedby="modal-name-error"
+                  required
+                />
+                <p
+                  class="field-error"
+                  id="modal-name-error"
+                  data-error-for="name"
+                  aria-live="polite"
+                ></p>
+              </div>
+              <div class="field">
+                <label for="modal-phone">WhatsApp com indicativo *</label>
+                <input
+                  class="field-control"
+                  id="modal-phone"
+                  name="phone"
+                  type="tel"
+                  inputmode="tel"
+                  autocomplete="tel"
+                  placeholder="Ex.: +351 912 345 678"
+                  aria-describedby="modal-phone-error"
+                  required
+                />
+                <p
+                  class="field-error"
+                  id="modal-phone-error"
+                  data-error-for="phone"
+                  aria-live="polite"
+                ></p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="modal-goal">Objetivo principal *</label>
+              <select
+                class="field-control"
+                id="modal-goal"
+                name="goal"
+                aria-describedby="modal-goal-error"
+                required
+              >
+                <option value="">Escolha uma opção</option>
+                <option>Organizar a alimentação</option>
+                <option>Esclarecer dúvidas gerais</option>
+                <option>Rever tentativas anteriores</option>
+                <option>Melhorar a relação com as escolhas</option>
+                <option>Conhecer os serviços disponíveis</option>
+                <option>Outro motivo</option>
+              </select>
+              <p
+                class="field-error"
+                id="modal-goal-error"
+                data-error-for="goal"
+                aria-live="polite"
+              ></p>
+            </div>
+            <div class="field">
+              <label for="modal-difficulty">Maior dificuldade hoje *</label>
+              <select
+                class="field-control"
+                id="modal-difficulty"
+                name="difficulty"
+                aria-describedby="modal-difficulty-error"
+                required
+              >
+                <option value="">Escolha uma opção</option>
+                <option>Falta de tempo</option>
+                <option>Falta de rotina</option>
+                <option>Culpa ou relação difícil com a comida</option>
+                <option>Informação contraditória</option>
+                <option>Não sei por onde começar</option>
+                <option>Outra dificuldade</option>
+              </select>
+              <p
+                class="field-error"
+                id="modal-difficulty-error"
+                data-error-for="difficulty"
+                aria-live="polite"
+              ></p>
+            </div>
+            <div class="field">
+              <label for="modal-source">Como conheceu a Amanda?</label>
+              <select class="field-control" id="modal-source" name="source">
+                <option value="">Opcional</option>
+                <option>Instagram</option>
+                <option>Google</option>
+                <option>Indicação</option>
+                <option>Outro canal</option>
+              </select>
+              <p class="field-error" aria-hidden="true"></p>
+            </div>
+            <div>
+              <div class="consent-row">
+                <input
+                  id="modal-consent"
+                  name="consent"
+                  type="checkbox"
+                  aria-describedby="modal-consent-error"
+                  required
+                />
+                <label for="modal-consent"
+                  >Confirmo que compreendi que esta demonstração não transmite
+                  nem guarda os dados inseridos. *</label
+                >
+              </div>
+              <p
+                class="field-error"
+                id="modal-consent-error"
+                data-error-for="consent"
+                aria-live="polite"
+              ></p>
+            </div>
+            <button class="btn btn-primary btn-full" type="submit">
+              <span data-button-label>Preparar pedido de marcação</span
+              ><svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </button>
+            <p class="form-trust">
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <rect x="5" y="10" width="14" height="10" rx="2" />
+                <path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg
+              >Sem spam. Em demonstração, o pedido é validado sem transmitir ou
+              guardar dados.
+            </p>
+            <div
+              class="form-success"
+              data-form-success
+              role="status"
+              aria-live="polite"
+              hidden
+            ></div>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="menu-dialog" id="mobile-menu" aria-label="Menu principal">
+      <div class="menu-panel">
+        <div class="menu-header">
+          <span class="brand">
+            <span class="brand-mark" aria-hidden="true">AP</span>
+            <span class="brand-copy"
+              ><span class="brand-name">Amanda Pacheco</span
+              ><span class="brand-role">Nutrição com norte</span></span
+            >
+          </span>
+          <button
+            class="icon-button"
+            id="menu-close"
+            type="button"
+            aria-label="Fechar menu"
+          >
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            >
+              <path d="m6 6 12 12M18 6 6 18" />
+            </svg>
+          </button>
+        </div>
+        <nav class="mobile-nav" aria-label="Navegação móvel">
+          <a class="mobile-nav-link" href="#abordagem"
+            ><span>01</span>Abordagem</a
+          >
+          <a class="mobile-nav-link" href="#metodo"><span>02</span>Método</a>
+          <a class="mobile-nav-link" href="#sobre"><span>03</span>Sobre</a>
+          <a class="mobile-nav-link" href="#consultas"
+            ><span>04</span>Consultas</a
+          >
+          <a class="mobile-nav-link" href="#duvidas"><span>05</span>Dúvidas</a>
+        </nav>
+        <div class="menu-footer">
+          <button
+            class="btn btn-light btn-full"
+            type="button"
+            data-form="open"
+            data-entry-point="menu"
+          >
+            Marcar consulta<svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </button>
+          <p>Portugal · Local e contactos a confirmar antes da publicação.</p>
+        </div>
+      </div>
+    </dialog>
+
+    <div class="mobile-sticky" id="mobile-sticky">
+      <button
+        class="btn btn-primary btn-full"
+        type="button"
+        data-form="open"
+        data-entry-point="barra-movel"
+      >
+        Marcar a minha avaliação
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+        >
+          <path d="M5 12h14M13 6l6 6-6 6" />
+        </svg>
+      </button>
+    </div>
+
+    <script>
+      (() => {
+        "use strict";
+
+        const CONFIG = {
+          // Inserir apenas dígitos, incluindo o indicativo. Ex.: 351912345678.
+          whatsappNumber: "",
+          professionalName: "Amanda Pacheco",
+        };
+
+        const root = document.documentElement;
+        const body = document.body;
+        const header = document.getElementById("site-header");
+        const bookingDialog = document.getElementById("booking-dialog");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const menuToggle = document.getElementById("menu-toggle");
+        const menuClose = document.getElementById("menu-close");
+        const mobileSticky = document.getElementById("mobile-sticky");
+        const finalSection = document.getElementById("marcar");
+        const reduceMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        );
+
+        document.getElementById("current-year").textContent =
+          new Date().getFullYear();
+
+        const syncBodyLock = () => {
+          body.classList.toggle(
+            "modal-open",
+            bookingDialog.open || mobileMenu.open,
+          );
+        };
+
+        const setHeaderState = () => {
+          header.classList.toggle("is-scrolled", window.scrollY > 18);
+        };
+
+        setHeaderState();
+        window.addEventListener("scroll", setHeaderState, { passive: true });
+
+        const closeMenu = () => {
+          if (mobileMenu.open) mobileMenu.close();
+        };
+
+        const openMenu = () => {
+          if (!mobileMenu.open) {
+            mobileMenu.showModal();
+            menuToggle.setAttribute("aria-expanded", "true");
+            syncBodyLock();
+          }
+        };
+
+        menuToggle.addEventListener("click", openMenu);
+        menuClose.addEventListener("click", closeMenu);
+        mobileMenu.addEventListener("close", () => {
+          menuToggle.setAttribute("aria-expanded", "false");
+          syncBodyLock();
+        });
+        mobileMenu.addEventListener("cancel", () => {
+          menuToggle.setAttribute("aria-expanded", "false");
+        });
+        mobileMenu.addEventListener("toggle", () => {
+          menuToggle.setAttribute("aria-expanded", String(mobileMenu.open));
+          syncBodyLock();
+        });
+        mobileMenu.addEventListener("click", (event) => {
+          if (event.target === mobileMenu) closeMenu();
+        });
+        mobileMenu
+          .querySelectorAll("a[href^='#']")
+          .forEach((link) => link.addEventListener("click", closeMenu));
+
+        const resetFormFeedback = (form) => {
+          form
+            .querySelectorAll("[aria-invalid='true']")
+            .forEach((field) => field.removeAttribute("aria-invalid"));
+          form.querySelectorAll("[data-error-for]").forEach((error) => {
+            error.textContent = "";
+          });
+          const success = form.querySelector("[data-form-success]");
+          success.hidden = true;
+          success.textContent = "";
+        };
+
+        const openBooking = (entryPoint = "cta") => {
+          const menuWasOpen = mobileMenu.open;
+          closeMenu();
+          window.setTimeout(
+            () => {
+              const form = bookingDialog.querySelector("[data-lead-form]");
+              form.elements.entry_point.value = entryPoint;
+              resetFormFeedback(form);
+              if (!bookingDialog.open) bookingDialog.showModal();
+              syncBodyLock();
+              window.setTimeout(() => form.elements.name.focus(), 40);
+            },
+            menuWasOpen ? 180 : 0,
+          );
+        };
+
+        document.querySelectorAll("[data-form='open']").forEach((button) => {
+          button.addEventListener("click", () =>
+            openBooking(button.dataset.entryPoint || "cta"),
+          );
+        });
+
+        bookingDialog
+          .querySelector("[data-dialog-close]")
+          .addEventListener("click", () => bookingDialog.close());
+        bookingDialog.addEventListener("click", (event) => {
+          if (event.target === bookingDialog) bookingDialog.close();
+        });
+        bookingDialog.addEventListener("close", syncBodyLock);
+
+        const revealAll = () => {
+          document
+            .querySelectorAll("[data-reveal]")
+            .forEach((element) => element.classList.add("is-visible"));
+        };
+
+        if (reduceMotion.matches || !("IntersectionObserver" in window)) {
+          revealAll();
+          root.classList.add("is-loaded");
+        } else {
+          root.classList.add("js");
+          const revealObserver = new IntersectionObserver(
+            (entries, observer) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              });
+            },
+            { rootMargin: "0px 0px -10% 0px", threshold: 0.12 },
+          );
+
+          document
+            .querySelectorAll("[data-reveal]")
+            .forEach((element) => revealObserver.observe(element));
+          reduceMotion.addEventListener("change", (event) => {
+            if (event.matches) revealAll();
+          });
+          requestAnimationFrame(() => root.classList.add("is-loaded"));
+        }
+
+        if ("IntersectionObserver" in window && finalSection && mobileSticky) {
+          const stickyObserver = new IntersectionObserver(
+            ([entry]) => {
+              mobileSticky.classList.toggle("is-hidden", entry.isIntersecting);
+            },
+            { threshold: 0.08 },
+          );
+          stickyObserver.observe(finalSection);
+        }
+
+        const validators = {
+          name: (field) =>
+            field.value.trim().length >= 2 || "Como prefere ser chamado(a)?",
+          phone: (field) =>
+            field.value.replace(/\D/g, "").length >= 9 ||
+            "Indique um WhatsApp válido com indicativo.",
+          goal: (field) =>
+            Boolean(field.value) || "Escolha o objetivo principal.",
+          difficulty: (field) =>
+            Boolean(field.value) || "Escolha a dificuldade que mais pesa hoje.",
+          consent: (field) =>
+            field.checked || "Confirme que compreendeu o modo de demonstração.",
+        };
+
+        const validateField = (form, name) => {
+          const field = form.elements[name];
+          const error = form.querySelector(`[data-error-for="${name}"]`);
+          const result = validators[name](field);
+          const isValid = result === true;
+          field.setAttribute("aria-invalid", String(!isValid));
+          error.textContent = isValid ? "" : result;
+          return isValid;
+        };
+
+        const buildMessage = () =>
+          `Olá, ${CONFIG.professionalName}. Gostaria de saber como funciona o acompanhamento nutricional e marcar uma primeira conversa.`;
+
+        document.querySelectorAll("[data-lead-form]").forEach((form) => {
+          Object.keys(validators).forEach((name) => {
+            const field = form.elements[name];
+            const eventName =
+              field.type === "checkbox" || field.tagName === "SELECT"
+                ? "change"
+                : "input";
+            field.addEventListener(eventName, () => {
+              if (field.getAttribute("aria-invalid") === "true")
+                validateField(form, name);
+            });
+          });
+
+          form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const fields = Object.keys(validators);
+            const isValid = fields
+              .map((name) => validateField(form, name))
+              .every(Boolean);
+
+            if (!isValid) {
+              form.querySelector("[aria-invalid='true']")?.focus();
+              return;
+            }
+
+            const submitButton = form.querySelector("button[type='submit']");
+            const buttonLabel = submitButton.querySelector(
+              "[data-button-label]",
+            );
+            const originalLabel = buttonLabel.textContent;
+            submitButton.disabled = true;
+            buttonLabel.textContent = "A preparar...";
+
+            const message = buildMessage();
+            const success = form.querySelector("[data-form-success]");
+
+            window.setTimeout(() => {
+              if (CONFIG.whatsappNumber) {
+                success.textContent =
+                  "Tudo certo. O WhatsApp será aberto para concluir o envio.";
+                window.open(
+                  `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`,
+                  "_blank",
+                  "noopener,noreferrer",
+                );
+              } else {
+                success.textContent =
+                  "Pedido validado sem transmitir dados. Configure uma integração aprovada antes de publicar a página.";
+              }
+
+              success.hidden = false;
+              submitButton.disabled = false;
+              buttonLabel.textContent = originalLabel;
+            }, 420);
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

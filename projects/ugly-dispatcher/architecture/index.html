@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>📮 Despachador Feio — Mapa Visual</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo">📮</span>
+        <div>
+          <h1>Despachador Feio</h1>
+          <p class="tag">mapa visual para entender a arquitetura</p>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <span class="num" id="statTemplates">4</span>
+          <span class="lbl">templates</span>
+        </div>
+        <div class="stat">
+          <span class="num" id="statRecipients">8</span>
+          <span class="lbl">destinatários</span>
+        </div>
+        <div class="stat">
+          <span class="num" id="statCycle">4</span>
+          <span class="lbl">em ciclo</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Diagrama do fluxo -->
+    <section class="flow">
+      <h2><span class="step-tag">1</span> Como o disparo funciona</h2>
+      <div class="flow-grid">
+        <!-- Coluna esquerda: arquivo recipients.js -->
+        <div class="flow-card">
+          <header>
+            <span class="file-icon">📄</span>
+            <h3><code>recipients.js</code></h3>
+            <button class="peek" data-target="recipients">ver código</button>
+          </header>
+          <p>Lista de <b>8 destinatários</b> com nome e e-mail.</p>
+          <ul class="mini-list" id="recipientsList"></ul>
+        </div>
+
+        <!-- Coluna central: dispatcher.js -->
+        <div class="flow-card dispatcher">
+          <header>
+            <span class="file-icon">⚙️</span>
+            <h3><code>dispatcher.js</code></h3>
+            <button class="peek" data-target="dispatcher">ver código</button>
+          </header>
+          <p>O <b>cérebro</b>: lê a lista, sorteia um template em round-robin, chama o Resend.</p>
+
+          <div class="picker-card">
+            <div class="picker-head">
+              <span>Próximo template a usar</span>
+              <span class="badge" id="pickerBadge">T1</span>
+            </div>
+            <div class="picker-grid">
+              <button class="chip" data-tpl="template1">T1 · Pop-up 90s</button>
+              <button class="chip" data-tpl="template2">T2 · Newsletter 2005</button>
+              <button class="chip" data-tpl="template3">T3 · Cartão cursivo</button>
+              <button class="chip" data-tpl="template4">T4 · Newsletter™</button>
+            </div>
+          </div>
+
+          <div class="controls">
+            <button id="btnRun" class="primary">▶ Simular disparo</button>
+            <button id="btnStep" class="ghost">passo ▸</button>
+            <button id="btnReset" class="ghost">reiniciar</button>
+            <label class="speed">
+              <span>velocidade</span>
+              <input id="speedRange" type="range" min="200" max="2000" value="900" step="100" />
+            </label>
+          </div>
+        </div>
+
+        <!-- Coluna direita: Resend -->
+        <div class="flow-card api">
+          <header>
+            <span class="file-icon">📡</span>
+            <h3>Resend API</h3>
+          </header>
+          <p>Cada e-mail é entregue via <code>resend.emails.send(…)</code>.</p>
+          <pre class="terminal" id="terminal"></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Linha do tempo do round-robin -->
+    <section class="timeline">
+      <h2><span class="step-tag">2</span> Sequência round-robin para 8 destinatários</h2>
+      <p class="lead">
+        O <code>templateIndex</code> começa em 0 e cresce a cada envio.
+        O template escolhido é <code>templates[templateIndex % 4]</code>.
+      </p>
+      <ol class="timeline-list" id="timeline"></ol>
+      <p class="formula">
+        <code>templates[ templateIndex % 4 ]</code> &nbsp;→&nbsp;
+        cicla <b>T1 · T2 · T3 · T4 · T1 · T2 · T3 · T4</b>
+      </p>
+    </section>
+
+    <!-- Galeria dos 4 templates -->
+    <section class="gallery">
+      <h2><span class="step-tag">3</span> Os 4 templates (propositalmente feios)</h2>
+      <p class="lead">
+        Cada cartão exibe o HTML renderizado tal como o destinatário receberia.
+        Use as abas para alternar e o botão "abrir em tela cheia".
+      </p>
+
+      <div class="gallery-grid" id="galleryGrid"></div>
+
+      <template id="cardTpl">
+        <article class="email-card">
+          <header>
+            <div class="title">
+              <span class="dot"></span>
+              <h3 class="name"></h3>
+              <span class="badge tag"></span>
+            </div>
+            <div class="actions">
+              <button class="fullscreen">⛶ tela cheia</button>
+            </div>
+          </header>
+          <div class="meta">
+            <div><b>Para:</b> <span class="addr"></span></div>
+            <div><b>Assunto:</b> <span class="subject"></span></div>
+          </div>
+          <iframe class="preview-frame" sandbox="allow-same-origin" title="preview"></iframe>
+        </article>
+      </template>
+    </section>
+
+    <!-- Modal de tela cheia -->
+    <div class="modal" id="modal" hidden>
+      <div class="modal-box">
+        <header>
+          <strong id="modalTitle">template</strong>
+          <button id="modalClose">fechar ×</button>
+        </header>
+        <iframe id="modalFrame" sandbox="allow-same-origin"></iframe>
+      </div>
+    </div>
+
+    <!-- Modal de peek de código -->
+    <div class="modal" id="codeModal" hidden>
+      <div class="modal-box">
+        <header>
+          <strong id="codeTitle">código</strong>
+          <button id="codeClose">fechar ×</button>
+        </header>
+        <pre id="codeBody" class="codeblock"></pre>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        Projeto:
+        <a href="https://resend.com/" target="_blank" rel="noopener">Resend</a> ·
+        <code>node dispatcher.js</code> ·
+        builda visual com <code>cd architecture &amp;&amp; npm start</code>
+      </p>
+    </footer>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,4178 @@
+{
+  "label": "original",
+  "url": "https://luminal-creative-studio.aura.build/",
+  "capturedAt": "2026-08-03T11:16:43.635Z",
+  "console": {
+    "errors": [],
+    "warnings": [
+      {
+        "type": "warning",
+        "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.",
+        "viewport": 1440
+      },
+      {
+        "type": "warning",
+        "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.",
+        "viewport": 1440
+      },
+      {
+        "type": "warning",
+        "text": "cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation",
+        "viewport": 1440
+      },
+      {
+        "type": "warning",
+        "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.",
+        "viewport": 768
+      },
+      {
+        "type": "warning",
+        "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.",
+        "viewport": 768
+      },
+      {
+        "type": "warning",
+        "text": "cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation",
+        "viewport": 768
+      },
+      {
+        "type": "warning",
+        "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.",
+        "viewport": 390
+      },
+      {
+        "type": "warning",
+        "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.",
+        "viewport": 390
+      },
+      {
+        "type": "warning",
+        "text": "cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation",
+        "viewport": 390
+      }
+    ],
+    "pageErrors": [
+      {
+        "message": "Unexpected end of input",
+        "viewport": 1440
+      },
+      {
+        "message": "Unexpected end of input",
+        "viewport": 768
+      },
+      {
+        "message": "Unexpected end of input",
+        "viewport": 390
+      }
+    ]
+  },
+  "captures": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshot": "screenshots\\original-1440.png",
+      "signals": {
+        "href": "https://luminal-creative-studio.aura.build/",
+        "title": "Luminal Studio Creative Agency Landing Page Template",
+        "lang": "en",
+        "bodyTextChars": 12,
+        "scrollHeight": 900,
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "h1": [],
+        "headings": [],
+        "metaDescription": "A dark, animated creative agency landing page template for studios and digital product teams to showcase services, work, pricing, and testimonials with a bold, kinetic aesthetic.",
+        "counts": {
+          "links": 1,
+          "images": 1,
+          "video": 0,
+          "canvas": 0,
+          "sections": 0,
+          "forms": 0,
+          "buttons": 2,
+          "inputs": 0,
+          "interactive": 8,
+          "scripts": 2,
+          "stylesheets": 2
+        },
+        "frameworks": {
+          "react": false,
+          "next": false,
+          "vue": false,
+          "nuxt": false,
+          "svelte": false,
+          "astro": false,
+          "three": false,
+          "gsap": false,
+          "lenis": false
+        },
+        "scripts": [
+          "https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js",
+          "https://luminal-creative-studio.aura.build/assets/index-C8dVQJFw.js"
+        ],
+        "stylesheets": [
+          "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap",
+          "https://luminal-creative-studio.aura.build/assets/index-Dm4uwV3Y.css"
+        ],
+        "sections": [],
+        "cssVariables": [
+          [
+            "--tw-border-spacing-x",
+            "0"
+          ],
+          [
+            "--tw-border-spacing-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-skew-x",
+            "0"
+          ],
+          [
+            "--tw-skew-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-pan-x",
+            ""
+          ],
+          [
+            "--tw-pan-y",
+            ""
+          ],
+          [
+            "--tw-pinch-zoom",
+            ""
+          ],
+          [
+            "--tw-scroll-snap-strictness",
+            "proximity"
+          ],
+          [
+            "--tw-gradient-from-position",
+            ""
+          ],
+          [
+            "--tw-gradient-via-position",
+            ""
+          ],
+          [
+            "--tw-gradient-to-position",
+            ""
+          ],
+          [
+            "--tw-ordinal",
+            ""
+          ],
+          [
+            "--tw-slashed-zero",
+            ""
+          ],
+          [
+            "--tw-numeric-figure",
+            ""
+          ],
+          [
+            "--tw-numeric-spacing",
+            ""
+          ],
+          [
+            "--tw-numeric-fraction",
+            ""
+          ],
+          [
+            "--tw-ring-inset",
+            ""
+          ],
+          [
+            "--tw-ring-offset-width",
+            "0px"
+          ],
+          [
+            "--tw-ring-offset-color",
+            "#fff"
+          ],
+          [
+            "--tw-ring-color",
+            "rgb(59 130 246 / .5)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-blur",
+            ""
+          ],
+          [
+            "--tw-brightness",
+            ""
+          ],
+          [
+            "--tw-contrast",
+            ""
+          ],
+          [
+            "--tw-grayscale",
+            ""
+          ],
+          [
+            "--tw-hue-rotate",
+            ""
+          ],
+          [
+            "--tw-invert",
+            ""
+          ],
+          [
+            "--tw-saturate",
+            ""
+          ],
+          [
+            "--tw-sepia",
+            ""
+          ],
+          [
+            "--tw-drop-shadow",
+            ""
+          ],
+          [
+            "--tw-backdrop-blur",
+            ""
+          ],
+          [
+            "--tw-backdrop-brightness",
+            ""
+          ],
+          [
+            "--tw-backdrop-contrast",
+            ""
+          ],
+          [
+            "--tw-backdrop-grayscale",
+            ""
+          ],
+          [
+            "--tw-backdrop-hue-rotate",
+            ""
+          ],
+          [
+            "--tw-backdrop-invert",
+            ""
+          ],
+          [
+            "--tw-backdrop-opacity",
+            ""
+          ],
+          [
+            "--tw-backdrop-saturate",
+            ""
+          ],
+          [
+            "--tw-backdrop-sepia",
+            ""
+          ],
+          [
+            "--tw-contain-size",
+            ""
+          ],
+          [
+            "--tw-contain-layout",
+            ""
+          ],
+          [
+            "--tw-contain-paint",
+            ""
+          ],
+          [
+            "--tw-contain-style",
+            ""
+          ],
+          [
+            "--tw-border-spacing-x",
+            "0"
+          ],
+          [
+            "--tw-border-spacing-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-skew-x",
+            "0"
+          ],
+          [
+            "--tw-skew-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-pan-x",
+            ""
+          ],
+          [
+            "--tw-pan-y",
+            ""
+          ],
+          [
+            "--tw-pinch-zoom",
+            ""
+          ],
+          [
+            "--tw-scroll-snap-strictness",
+            "proximity"
+          ],
+          [
+            "--tw-gradient-from-position",
+            ""
+          ],
+          [
+            "--tw-gradient-via-position",
+            ""
+          ],
+          [
+            "--tw-gradient-to-position",
+            ""
+          ],
+          [
+            "--tw-ordinal",
+            ""
+          ],
+          [
+            "--tw-slashed-zero",
+            ""
+          ],
+          [
+            "--tw-numeric-figure",
+            ""
+          ],
+          [
+            "--tw-numeric-spacing",
+            ""
+          ],
+          [
+            "--tw-numeric-fraction",
+            ""
+          ],
+          [
+            "--tw-ring-inset",
+            ""
+          ],
+          [
+            "--tw-ring-offset-width",
+            "0px"
+          ],
+          [
+            "--tw-ring-offset-color",
+            "#fff"
+          ],
+          [
+            "--tw-ring-color",
+            "rgb(59 130 246 / .5)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-blur",
+            ""
+          ],
+          [
+            "--tw-brightness",
+            ""
+          ],
+          [
+            "--tw-contrast",
+            ""
+          ],
+          [
+            "--tw-grayscale",
+            ""
+          ],
+          [
+            "--tw-hue-rotate",
+            ""
+          ],
+          [
+            "--tw-invert",
+            ""
+          ],
+          [
+            "--tw-saturate",
+            ""
+          ],
+          [
+            "--tw-sepia",
+            ""
+          ],
+          [
+            "--tw-drop-shadow",
+            ""
+          ],
+          [
+            "--tw-backdrop-blur",
+            ""
+          ],
+          [
+            "--tw-backdrop-brightness",
+            ""
+          ],
+          [
+            "--tw-backdrop-contrast",
+            ""
+          ],
+          [
+            "--tw-backdrop-grayscale",
+            ""
+          ],
+          [
+            "--tw-backdrop-hue-rotate",
+            ""
+          ],
+          [
+            "--tw-backdrop-invert",
+            ""
+          ],
+          [
+            "--tw-backdrop-opacity",
+            ""
+          ],
+          [
+            "--tw-backdrop-saturate",
+            ""
+          ],
+          [
+            "--tw-backdrop-sepia",
+            ""
+          ],
+          [
+            "--tw-contain-size",
+            ""
+          ],
+          [
+            "--tw-contain-layout",
+            ""
+          ],
+          [
+            "--tw-contain-paint",
+            ""
+          ],
+          [
+            "--tw-contain-style",
+            ""
+          ],
+          [
+            "--tw-content",
+            "\"\""
+          ],
+          [
+            "--background",
+            "0 0% 100%"
+          ],
+          [
+            "--foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--card",
+            "0 0% 98%"
+          ],
+          [
+            "--card-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--popover",
+            "0 0% 98%"
+          ],
+          [
+            "--popover-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--primary",
+            "0 0% 9%"
+          ],
+          [
+            "--primary-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--secondary",
+            "0 0% 96%"
+          ],
+          [
+            "--secondary-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--muted",
+            "0 0% 96%"
+          ],
+          [
+            "--muted-foreground",
+            "0 0% 45%"
+          ],
+          [
+            "--accent",
+            "0 0% 96%"
+          ],
+          [
+            "--accent-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--destructive",
+            "0 84% 60%"
+          ],
+          [
+            "--destructive-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--border",
+            "0 0% 90%"
+          ],
+          [
+            "--input",
+            "0 0% 90%"
+          ],
+          [
+            "--ring",
+            "0 0% 20%"
+          ],
+          [
+            "--radius",
+            ".5rem"
+          ],
+          [
+            "--sidebar-background",
+            "0 0% 98%"
+          ],
+          [
+            "--sidebar-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--sidebar-primary",
+            "0 0% 20%"
+          ],
+          [
+            "--sidebar-primary-foreground",
+            "0 0% 100%"
+          ],
+          [
+            "--sidebar-accent",
+            "0 0% 96%"
+          ],
+          [
+            "--sidebar-accent-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--sidebar-border",
+            "0 0% 90%"
+          ],
+          [
+            "--sidebar-ring",
+            "0 0% 20%"
+          ],
+          [
+            "--syntax-bg",
+            "#1e1e1e"
+          ],
+          [
+            "--syntax-color",
+            "#d4d4d4"
+          ],
+          [
+            "--slider-track-bg",
+            "rgba(0, 0, 0, .05)"
+          ],
+          [
+            "--slider-active-bg",
+            "rgba(0, 0, 0, .1)"
+          ],
+          [
+            "--background",
+            "0 0% 9%"
+          ],
+          [
+            "--foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--card",
+            "0 0% 11%"
+          ],
+          [
+            "--card-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--popover",
+            "0 0% 11%"
+          ],
+          [
+            "--popover-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--primary",
+            "0 0% 98%"
+          ],
+          [
+            "--primary-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--secondary",
+            "0 0% 13%"
+          ],
+          [
+            "--secondary-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--muted",
+            "0 0% 13%"
+          ],
+          [
+            "--muted-foreground",
+            "0 0% 65%"
+          ],
+          [
+            "--accent",
+            "0 0% 13%"
+          ],
+          [
+            "--accent-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--destructive",
+            "0 63% 31%"
+          ],
+          [
+            "--destructive-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--border",
+            "0 0% 20%"
+          ],
+          [
+            "--input",
+            "0 0% 20%"
+          ],
+          [
+            "--ring",
+            "0 0% 80%"
+          ],
+          [
+            "--radius",
+            ".5rem"
+          ],
+          [
+            "--sidebar-background",
+            "0 0% 9%"
+          ],
+          [
+            "--sidebar-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--sidebar-primary",
+            "0 0% 80%"
+          ],
+          [
+            "--sidebar-primary-foreground",
+            "0 0% 100%"
+          ],
+          [
+            "--sidebar-accent",
+            "0 0% 15%"
+          ],
+          [
+            "--sidebar-accent-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--sidebar-border",
+            "0 0% 20%"
+          ],
+          [
+            "--sidebar-ring",
+            "0 0% 80%"
+          ],
+          [
+            "--syntax-bg",
+            "#1e1e1e"
+          ],
+          [
+            "--syntax-color",
+            "#d4d4d4"
+          ],
+          [
+            "--slider-track-bg",
+            "rgba(255, 255, 255, .05)"
+          ],
+          [
+            "--slider-active-bg",
+            "rgba(255, 255, 255, .15)"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-shadow",
+            "rgba(14,63,126,.04) 0px 0px 0px 1px,rgba(42,51,69,.04) 0px 1px 1px -.5px,rgba(42,51,70,.04) 0px 3px 3px -1.5px,rgba(42,51,70,.04) 0px 6px 6px -3px,rgba(14,63,126,.04) 0px 12px 12px -6px,rgba(14,63,126,.04) 0px 24px 24px -12px,inset 0 1px 0 rgba(255,255,255,.2)"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0px 0px 0px 1px var(--tw-shadow-color), 0px 1px 1px -.5px var(--tw-shadow-color), 0px 3px 3px -1.5px var(--tw-shadow-color), 0px 6px 6px -3px var(--tw-shadow-color), 0px 12px 12px -6px var(--tw-shadow-color), 0px 24px 24px -12px var(--tw-shadow-color), inset 0 1px 0 var(--tw-shadow-color)"
+          ],
+          [
+            "--tw-border-opacity",
+            "1"
+          ],
+          [
+            "--tw-gradient-from",
+            "#3b82f6 var(--tw-gradient-from-position)"
+          ],
+          [
+            "--tw-gradient-stops",
+            "var(--tw-gradient-from), var(--tw-gradient-to)"
+          ],
+          [
+            "--tw-gradient-to",
+            "#2563eb var(--tw-gradient-to-position)"
+          ],
+          [
+            "--tw-gradient-from",
+            "#2563eb var(--tw-gradient-from-position)"
+          ],
+          [
+            "--tw-gradient-stops",
+            "var(--tw-gradient-from), var(--tw-gradient-to)"
+          ],
+          [
+            "--tw-gradient-to",
+            "#1d4ed8 var(--tw-gradient-to-position)"
+          ],
+          [
+            "--tw-border-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-shadow",
+            "rgba(126,87,14,.04) 0px 0px 0px 1px,rgba(69,56,42,.04) 0px 1px 1px -.5px,rgba(70,56,42,.04) 0px 3px 3px -1.5px,rgba(70,56,42,.04) 0px 6px 6px -3px,rgba(126,87,14,.04) 0px 12px 12px -6px,rgba(126,87,14,.04) 0px 24px 24px -12px,inset 0 1px 0 rgba(255,255,255,.2)"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0px 0px 0px 1px var(--tw-shadow-color), 0px 1px 1px -.5px var(--tw-shadow-color), 0px 3px 3px -1.5px var(--tw-shadow-color), 0px 6px 6px -3px var(--tw-shadow-color), 0px 12px 12px -6px var(--tw-shadow-color), 0px 24px 24px -12px var(--tw-shadow-color), inset 0 1px 0 var(--tw-shadow-color)"
+          ],
+          [
+            "--tw-border-opacity",
+            "1"
+          ],
+          [
+            "--tw-gradient-from",
+            "#fbbf24 var(--tw-gradient-from-position)"
+          ],
+          [
+            "--tw-gradient-stops",
+            "var(--tw-gradient-from), var(--tw-gradient-to)"
+          ],
+          [
+            "--tw-gradient-to",
+            "#f59e0b var(--tw-gradient-to-position)"
+          ],
+          [
+            "--tw-gradient-from",
+            "#f59e0b var(--tw-gradient-from-position)"
+          ],
+          [
+            "--tw-gradient-stops",
+            "var(--tw-gradient-from), var(--tw-gradient-to)"
+          ],
+          [
+            "--tw-gradient-to",
+            "#d97706 var(--tw-gradient-to-position)"
+          ],
+          [
+            "--tw-border-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-shadow",
+            "0px 2px 3px -1px rgba(0,0,0,.1),0px 1px 0px 0px rgba(25,28,33,.02),0px 0px 0px 1px rgba(25,28,33,.08)"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0px 2px 3px -1px var(--tw-shadow-color), 0px 1px 0px 0px var(--tw-shadow-color), 0px 0px 0px 1px var(--tw-shadow-color)"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-border-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ]
+        ],
+        "rootVariables": [
+          [
+            "--tw-border-spacing-x",
+            "0"
+          ],
+          [
+            "--tw-border-spacing-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-skew-x",
+            "0"
+          ],
+          [
+            "--tw-skew-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-scroll-snap-strictness",
+            "proximity"
+          ],
+          [
+            "--tw-ring-offset-width",
+            "0px"
+          ],
+          [
+            "--tw-ring-offset-color",
+            "#fff"
+          ],
+          [
+            "--tw-ring-color",
+            "rgb(59 130 246 / .5)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-border-spacing-x",
+            "0"
+          ],
+          [
+            "--tw-border-spacing-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-skew-x",
+            "0"
+          ],
+          [
+            "--tw-skew-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-scroll-snap-strictness",
+            "proximity"
+          ],
+          [
+            "--tw-ring-offset-width",
+            "0px"
+          ],
+          [
+            "--tw-ring-offset-color",
+            "#fff"
+          ],
+          [
+            "--tw-ring-color",
+            "rgb(59 130 246 / .5)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--background",
+            "0 0% 100%"
+          ],
+          [
+            "--foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--card",
+            "0 0% 98%"
+          ],
+          [
+            "--card-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--popover",
+            "0 0% 98%"
+          ],
+          [
+            "--popover-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--primary",
+            "0 0% 9%"
+          ],
+          [
+            "--primary-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--secondary",
+            "0 0% 96%"
+          ],
+          [
+            "--secondary-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--muted",
+            "0 0% 96%"
+          ],
+          [
+            "--muted-foreground",
+            "0 0% 45%"
+          ],
+          [
+            "--accent",
+            "0 0% 96%"
+          ],
+          [
+            "--accent-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--destructive",
+            "0 84% 60%"
+          ],
+          [
+            "--destructive-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--border",
+            "0 0% 90%"
+          ],
+          [
+            "--input",
+            "0 0% 90%"
+          ],
+          [
+            "--ring",
+            "0 0% 20%"
+          ],
+          [
+            "--radius",
+            ".5rem"
+          ],
+          [
+            "--sidebar-background",
+            "0 0% 98%"
+          ],
+          [
+            "--sidebar-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--sidebar-primary",
+            "0 0% 20%"
+          ],
+          [
+            "--sidebar-primary-foreground",
+            "0 0% 100%"
+          ],
+          [
+            "--sidebar-accent",
+            "0 0% 96%"
+          ],
+          [
+            "--sidebar-accent-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--sidebar-border",
+            "0 0% 90%"
+          ],
+          [
+            "--sidebar-ring",
+            "0 0% 20%"
+          ],
+          [
+            "--syntax-bg",
+            "#1e1e1e"
+          ],
+          [
+            "--syntax-color",
+            "#d4d4d4"
+          ],
+          [
+            "--slider-track-bg",
+            "rgba(0, 0, 0, .05)"
+          ],
+          [
+            "--slider-active-bg",
+            "rgba(0, 0, 0, .1)"
+          ],
+          [
+            "--background",
+            "0 0% 100%"
+          ],
+          [
+            "--foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--card",
+            "0 0% 98%"
+          ],
+          [
+            "--card-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--popover",
+            "0 0% 98%"
+          ],
+          [
+            "--popover-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--primary",
+            "0 0% 9%"
+          ],
+          [
+            "--primary-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--secondary",
+            "0 0% 96%"
+          ],
+          [
+            "--secondary-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--muted",
+            "0 0% 96%"
+          ],
+          [
+            "--muted-foreground",
+            "0 0% 45%"
+          ],
+          [
+            "--accent",
+            "0 0% 96%"
+          ],
+          [
+            "--accent-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--destructive",
+            "0 84% 60%"
+          ],
+          [
+            "--destructive-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--border",
+            "0 0% 90%"
+          ],
+          [
+            "--input",
+            "0 0% 90%"
+          ],
+          [
+            "--ring",
+            "0 0% 20%"
+          ],
+          [
+            "--radius",
+            ".5rem"
+          ],
+          [
+            "--sidebar-background",
+            "0 0% 98%"
+          ],
+          [
+            "--sidebar-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--sidebar-primary",
+            "0 0% 20%"
+          ],
+          [
+            "--sidebar-primary-foreground",
+            "0 0% 100%"
+          ],
+          [
+            "--sidebar-accent",
+            "0 0% 96%"
+          ],
+          [
+            "--sidebar-accent-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--sidebar-border",
+            "0 0% 90%"
+          ],
+          [
+            "--sidebar-ring",
+            "0 0% 20%"
+          ],
+          [
+            "--syntax-bg",
+            "#1e1e1e"
+          ],
+          [
+            "--syntax-color",
+            "#d4d4d4"
+          ],
+          [
+            "--slider-track-bg",
+            "rgba(0, 0, 0, .05)"
+          ],
+          [
+            "--slider-active-bg",
+            "rgba(0, 0, 0, .1)"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ]
+        ],
+        "palette": {
+          "body": {
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(23, 23, 23)",
+            "borderColor": "rgb(230, 230, 230)",
+            "fontFamily": "Inter, sans-serif",
+            "backgroundImage": ""
+          },
+          "header": null,
+          "nav": null,
+          "main": null,
+          "footer": null,
+          "buttons": [
+            {
+              "text": "Preview",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "color": "rgb(23, 23, 23)",
+              "borderColor": "rgb(230, 230, 230)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "Code",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(115, 115, 115)",
+              "borderColor": "rgb(230, 230, 230)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            }
+          ]
+        },
+        "motion": {
+          "htmlScrollBehavior": "auto",
+          "scrollSnapRules": 5,
+          "smoothScrollRules": 0,
+          "stickyOrFixedCount": 1
+        },
+        "fonts": [
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter"
+        ],
+        "fontFaces": [],
+        "resources": {
+          "images": [
+            "https://luminal-creative-studio.aura.build/favicon.ico",
+            "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/preview-images/luminal-creative-studio.png",
+            "https://luminal-creative-studio.aura.build/logo-aura-gray.svg",
+            "https://luminal-creative-studio.aura.build/logo-aura-128-light.png"
+          ],
+          "fonts": [],
+          "media": []
+        },
+        "images": [
+          {
+            "src": "https://luminal-creative-studio.aura.build/logo-aura-gray.svg",
+            "srcset": "",
+            "alt": "Aura Logo",
+            "width": 412,
+            "height": 412
+          }
+        ],
+        "canvases": []
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "screenshot": "screenshots\\original-768.png",
+      "signals": {
+        "href": "https://luminal-creative-studio.aura.build/",
+        "title": "Luminal Studio Creative Agency Landing Page Template",
+        "lang": "en",
+        "bodyTextChars": 12,
+        "scrollHeight": 900,
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "h1": [],
+        "headings": [],
+        "metaDescription": "A dark, animated creative agency landing page template for studios and digital product teams to showcase services, work, pricing, and testimonials with a bold, kinetic aesthetic.",
+        "counts": {
+          "links": 1,
+          "images": 1,
+          "video": 0,
+          "canvas": 0,
+          "sections": 0,
+          "forms": 0,
+          "buttons": 2,
+          "inputs": 0,
+          "interactive": 8,
+          "scripts": 2,
+          "stylesheets": 2
+        },
+        "frameworks": {
+          "react": false,
+          "next": false,
+          "vue": false,
+          "nuxt": false,
+          "svelte": false,
+          "astro": false,
+          "three": false,
+          "gsap": false,
+          "lenis": false
+        },
+        "scripts": [
+          "https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js",
+          "https://luminal-creative-studio.aura.build/assets/index-C8dVQJFw.js"
+        ],
+        "stylesheets": [
+          "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap",
+          "https://luminal-creative-studio.aura.build/assets/index-Dm4uwV3Y.css"
+        ],
+        "sections": [],
+        "cssVariables": [
+          [
+            "--tw-border-spacing-x",
+            "0"
+          ],
+          [
+            "--tw-border-spacing-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-skew-x",
+            "0"
+          ],
+          [
+            "--tw-skew-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-pan-x",
+            ""
+          ],
+          [
+            "--tw-pan-y",
+            ""
+          ],
+          [
+            "--tw-pinch-zoom",
+            ""
+          ],
+          [
+            "--tw-scroll-snap-strictness",
+            "proximity"
+          ],
+          [
+            "--tw-gradient-from-position",
+            ""
+          ],
+          [
+            "--tw-gradient-via-position",
+            ""
+          ],
+          [
+            "--tw-gradient-to-position",
+            ""
+          ],
+          [
+            "--tw-ordinal",
+            ""
+          ],
+          [
+            "--tw-slashed-zero",
+            ""
+          ],
+          [
+            "--tw-numeric-figure",
+            ""
+          ],
+          [
+            "--tw-numeric-spacing",
+            ""
+          ],
+          [
+            "--tw-numeric-fraction",
+            ""
+          ],
+          [
+            "--tw-ring-inset",
+            ""
+          ],
+          [
+            "--tw-ring-offset-width",
+            "0px"
+          ],
+          [
+            "--tw-ring-offset-color",
+            "#fff"
+          ],
+          [
+            "--tw-ring-color",
+            "rgb(59 130 246 / .5)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-blur",
+            ""
+          ],
+          [
+            "--tw-brightness",
+            ""
+          ],
+          [
+            "--tw-contrast",
+            ""
+          ],
+          [
+            "--tw-grayscale",
+            ""
+          ],
+          [
+            "--tw-hue-rotate",
+            ""
+          ],
+          [
+            "--tw-invert",
+            ""
+          ],
+          [
+            "--tw-saturate",
+            ""
+          ],
+          [
+            "--tw-sepia",
+            ""
+          ],
+          [
+            "--tw-drop-shadow",
+            ""
+          ],
+          [
+            "--tw-backdrop-blur",
+            ""
+          ],
+          [
+            "--tw-backdrop-brightness",
+            ""
+          ],
+          [
+            "--tw-backdrop-contrast",
+            ""
+          ],
+          [
+            "--tw-backdrop-grayscale",
+            ""
+          ],
+          [
+            "--tw-backdrop-hue-rotate",
+            ""
+          ],
+          [
+            "--tw-backdrop-invert",
+            ""
+          ],
+          [
+            "--tw-backdrop-opacity",
+            ""
+          ],
+          [
+            "--tw-backdrop-saturate",
+            ""
+          ],
+          [
+            "--tw-backdrop-sepia",
+            ""
+          ],
+          [
+            "--tw-contain-size",
+            ""
+          ],
+          [
+            "--tw-contain-layout",
+            ""
+          ],
+          [
+            "--tw-contain-paint",
+            ""
+          ],
+          [
+            "--tw-contain-style",
+            ""
+          ],
+          [
+            "--tw-border-spacing-x",
+            "0"
+          ],
+          [
+            "--tw-border-spacing-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-skew-x",
+            "0"
+          ],
+          [
+            "--tw-skew-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-pan-x",
+            ""
+          ],
+          [
+            "--tw-pan-y",
+            ""
+          ],
+          [
+            "--tw-pinch-zoom",
+            ""
+          ],
+          [
+            "--tw-scroll-snap-strictness",
+            "proximity"
+          ],
+          [
+            "--tw-gradient-from-position",
+            ""
+          ],
+          [
+            "--tw-gradient-via-position",
+            ""
+          ],
+          [
+            "--tw-gradient-to-position",
+            ""
+          ],
+          [
+            "--tw-ordinal",
+            ""
+          ],
+          [
+            "--tw-slashed-zero",
+            ""
+          ],
+          [
+            "--tw-numeric-figure",
+            ""
+          ],
+          [
+            "--tw-numeric-spacing",
+            ""
+          ],
+          [
+            "--tw-numeric-fraction",
+            ""
+          ],
+          [
+            "--tw-ring-inset",
+            ""
+          ],
+          [
+            "--tw-ring-offset-width",
+            "0px"
+          ],
+          [
+            "--tw-ring-offset-color",
+            "#fff"
+          ],
+          [
+            "--tw-ring-color",
+            "rgb(59 130 246 / .5)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-blur",
+            ""
+          ],
+          [
+            "--tw-brightness",
+            ""
+          ],
+          [
+            "--tw-contrast",
+            ""
+          ],
+          [
+            "--tw-grayscale",
+            ""
+          ],
+          [
+            "--tw-hue-rotate",
+            ""
+          ],
+          [
+            "--tw-invert",
+            ""
+          ],
+          [
+            "--tw-saturate",
+            ""
+          ],
+          [
+            "--tw-sepia",
+            ""
+          ],
+          [
+            "--tw-drop-shadow",
+            ""
+          ],
+          [
+            "--tw-backdrop-blur",
+            ""
+          ],
+          [
+            "--tw-backdrop-brightness",
+            ""
+          ],
+          [
+            "--tw-backdrop-contrast",
+            ""
+          ],
+          [
+            "--tw-backdrop-grayscale",
+            ""
+          ],
+          [
+            "--tw-backdrop-hue-rotate",
+            ""
+          ],
+          [
+            "--tw-backdrop-invert",
+            ""
+          ],
+          [
+            "--tw-backdrop-opacity",
+            ""
+          ],
+          [
+            "--tw-backdrop-saturate",
+            ""
+          ],
+          [
+            "--tw-backdrop-sepia",
+            ""
+          ],
+          [
+            "--tw-contain-size",
+            ""
+          ],
+          [
+            "--tw-contain-layout",
+            ""
+          ],
+          [
+            "--tw-contain-paint",
+            ""
+          ],
+          [
+            "--tw-contain-style",
+            ""
+          ],
+          [
+            "--tw-content",
+            "\"\""
+          ],
+          [
+            "--background",
+            "0 0% 100%"
+          ],
+          [
+            "--foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--card",
+            "0 0% 98%"
+          ],
+          [
+            "--card-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--popover",
+            "0 0% 98%"
+          ],
+          [
+            "--popover-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--primary",
+            "0 0% 9%"
+          ],
+          [
+            "--primary-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--secondary",
+            "0 0% 96%"
+          ],
+          [
+            "--secondary-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--muted",
+            "0 0% 96%"
+          ],
+          [
+            "--muted-foreground",
+            "0 0% 45%"
+          ],
+          [
+            "--accent",
+            "0 0% 96%"
+          ],
+          [
+            "--accent-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--destructive",
+            "0 84% 60%"
+          ],
+          [
+            "--destructive-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--border",
+            "0 0% 90%"
+          ],
+          [
+            "--input",
+            "0 0% 90%"
+          ],
+          [
+            "--ring",
+            "0 0% 20%"
+          ],
+          [
+            "--radius",
+            ".5rem"
+          ],
+          [
+            "--sidebar-background",
+            "0 0% 98%"
+          ],
+          [
+            "--sidebar-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--sidebar-primary",
+            "0 0% 20%"
+          ],
+          [
+            "--sidebar-primary-foreground",
+            "0 0% 100%"
+          ],
+          [
+            "--sidebar-accent",
+            "0 0% 96%"
+          ],
+          [
+            "--sidebar-accent-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--sidebar-border",
+            "0 0% 90%"
+          ],
+          [
+            "--sidebar-ring",
+            "0 0% 20%"
+          ],
+          [
+            "--syntax-bg",
+            "#1e1e1e"
+          ],
+          [
+            "--syntax-color",
+            "#d4d4d4"
+          ],
+          [
+            "--slider-track-bg",
+            "rgba(0, 0, 0, .05)"
+          ],
+          [
+            "--slider-active-bg",
+            "rgba(0, 0, 0, .1)"
+          ],
+          [
+            "--background",
+            "0 0% 9%"
+          ],
+          [
+            "--foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--card",
+            "0 0% 11%"
+          ],
+          [
+            "--card-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--popover",
+            "0 0% 11%"
+          ],
+          [
+            "--popover-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--primary",
+            "0 0% 98%"
+          ],
+          [
+            "--primary-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--secondary",
+            "0 0% 13%"
+          ],
+          [
+            "--secondary-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--muted",
+            "0 0% 13%"
+          ],
+          [
+            "--muted-foreground",
+            "0 0% 65%"
+          ],
+          [
+            "--accent",
+            "0 0% 13%"
+          ],
+          [
+            "--accent-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--destructive",
+            "0 63% 31%"
+          ],
+          [
+            "--destructive-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--border",
+            "0 0% 20%"
+          ],
+          [
+            "--input",
+            "0 0% 20%"
+          ],
+          [
+            "--ring",
+            "0 0% 80%"
+          ],
+          [
+            "--radius",
+            ".5rem"
+          ],
+          [
+            "--sidebar-background",
+            "0 0% 9%"
+          ],
+          [
+            "--sidebar-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--sidebar-primary",
+            "0 0% 80%"
+          ],
+          [
+            "--sidebar-primary-foreground",
+            "0 0% 100%"
+          ],
+          [
+            "--sidebar-accent",
+            "0 0% 15%"
+          ],
+          [
+            "--sidebar-accent-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--sidebar-border",
+            "0 0% 20%"
+          ],
+          [
+            "--sidebar-ring",
+            "0 0% 80%"
+          ],
+          [
+            "--syntax-bg",
+            "#1e1e1e"
+          ],
+          [
+            "--syntax-color",
+            "#d4d4d4"
+          ],
+          [
+            "--slider-track-bg",
+            "rgba(255, 255, 255, .05)"
+          ],
+          [
+            "--slider-active-bg",
+            "rgba(255, 255, 255, .15)"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-shadow",
+            "rgba(14,63,126,.04) 0px 0px 0px 1px,rgba(42,51,69,.04) 0px 1px 1px -.5px,rgba(42,51,70,.04) 0px 3px 3px -1.5px,rgba(42,51,70,.04) 0px 6px 6px -3px,rgba(14,63,126,.04) 0px 12px 12px -6px,rgba(14,63,126,.04) 0px 24px 24px -12px,inset 0 1px 0 rgba(255,255,255,.2)"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0px 0px 0px 1px var(--tw-shadow-color), 0px 1px 1px -.5px var(--tw-shadow-color), 0px 3px 3px -1.5px var(--tw-shadow-color), 0px 6px 6px -3px var(--tw-shadow-color), 0px 12px 12px -6px var(--tw-shadow-color), 0px 24px 24px -12px var(--tw-shadow-color), inset 0 1px 0 var(--tw-shadow-color)"
+          ],
+          [
+            "--tw-border-opacity",
+            "1"
+          ],
+          [
+            "--tw-gradient-from",
+            "#3b82f6 var(--tw-gradient-from-position)"
+          ],
+          [
+            "--tw-gradient-stops",
+            "var(--tw-gradient-from), var(--tw-gradient-to)"
+          ],
+          [
+            "--tw-gradient-to",
+            "#2563eb var(--tw-gradient-to-position)"
+          ],
+          [
+            "--tw-gradient-from",
+            "#2563eb var(--tw-gradient-from-position)"
+          ],
+          [
+            "--tw-gradient-stops",
+            "var(--tw-gradient-from), var(--tw-gradient-to)"
+          ],
+          [
+            "--tw-gradient-to",
+            "#1d4ed8 var(--tw-gradient-to-position)"
+          ],
+          [
+            "--tw-border-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-shadow",
+            "rgba(126,87,14,.04) 0px 0px 0px 1px,rgba(69,56,42,.04) 0px 1px 1px -.5px,rgba(70,56,42,.04) 0px 3px 3px -1.5px,rgba(70,56,42,.04) 0px 6px 6px -3px,rgba(126,87,14,.04) 0px 12px 12px -6px,rgba(126,87,14,.04) 0px 24px 24px -12px,inset 0 1px 0 rgba(255,255,255,.2)"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0px 0px 0px 1px var(--tw-shadow-color), 0px 1px 1px -.5px var(--tw-shadow-color), 0px 3px 3px -1.5px var(--tw-shadow-color), 0px 6px 6px -3px var(--tw-shadow-color), 0px 12px 12px -6px var(--tw-shadow-color), 0px 24px 24px -12px var(--tw-shadow-color), inset 0 1px 0 var(--tw-shadow-color)"
+          ],
+          [
+            "--tw-border-opacity",
+            "1"
+          ],
+          [
+            "--tw-gradient-from",
+            "#fbbf24 var(--tw-gradient-from-position)"
+          ],
+          [
+            "--tw-gradient-stops",
+            "var(--tw-gradient-from), var(--tw-gradient-to)"
+          ],
+          [
+            "--tw-gradient-to",
+            "#f59e0b var(--tw-gradient-to-position)"
+          ],
+          [
+            "--tw-gradient-from",
+            "#f59e0b var(--tw-gradient-from-position)"
+          ],
+          [
+            "--tw-gradient-stops",
+            "var(--tw-gradient-from), var(--tw-gradient-to)"
+          ],
+          [
+            "--tw-gradient-to",
+            "#d97706 var(--tw-gradient-to-position)"
+          ],
+          [
+            "--tw-border-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-shadow",
+            "0px 2px 3px -1px rgba(0,0,0,.1),0px 1px 0px 0px rgba(25,28,33,.02),0px 0px 0px 1px rgba(25,28,33,.08)"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0px 2px 3px -1px var(--tw-shadow-color), 0px 1px 0px 0px var(--tw-shadow-color), 0px 0px 0px 1px var(--tw-shadow-color)"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-border-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ]
+        ],
+        "rootVariables": [
+          [
+            "--tw-border-spacing-x",
+            "0"
+          ],
+          [
+            "--tw-border-spacing-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-skew-x",
+            "0"
+          ],
+          [
+            "--tw-skew-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-scroll-snap-strictness",
+            "proximity"
+          ],
+          [
+            "--tw-ring-offset-width",
+            "0px"
+          ],
+          [
+            "--tw-ring-offset-color",
+            "#fff"
+          ],
+          [
+            "--tw-ring-color",
+            "rgb(59 130 246 / .5)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-border-spacing-x",
+            "0"
+          ],
+          [
+            "--tw-border-spacing-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-skew-x",
+            "0"
+          ],
+          [
+            "--tw-skew-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-scroll-snap-strictness",
+            "proximity"
+          ],
+          [
+            "--tw-ring-offset-width",
+            "0px"
+          ],
+          [
+            "--tw-ring-offset-color",
+            "#fff"
+          ],
+          [
+            "--tw-ring-color",
+            "rgb(59 130 246 / .5)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--background",
+            "0 0% 100%"
+          ],
+          [
+            "--foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--card",
+            "0 0% 98%"
+          ],
+          [
+            "--card-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--popover",
+            "0 0% 98%"
+          ],
+          [
+            "--popover-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--primary",
+            "0 0% 9%"
+          ],
+          [
+            "--primary-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--secondary",
+            "0 0% 96%"
+          ],
+          [
+            "--secondary-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--muted",
+            "0 0% 96%"
+          ],
+          [
+            "--muted-foreground",
+            "0 0% 45%"
+          ],
+          [
+            "--accent",
+            "0 0% 96%"
+          ],
+          [
+            "--accent-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--destructive",
+            "0 84% 60%"
+          ],
+          [
+            "--destructive-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--border",
+            "0 0% 90%"
+          ],
+          [
+            "--input",
+            "0 0% 90%"
+          ],
+          [
+            "--ring",
+            "0 0% 20%"
+          ],
+          [
+            "--radius",
+            ".5rem"
+          ],
+          [
+            "--sidebar-background",
+            "0 0% 98%"
+          ],
+          [
+            "--sidebar-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--sidebar-primary",
+            "0 0% 20%"
+          ],
+          [
+            "--sidebar-primary-foreground",
+            "0 0% 100%"
+          ],
+          [
+            "--sidebar-accent",
+            "0 0% 96%"
+          ],
+          [
+            "--sidebar-accent-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--sidebar-border",
+            "0 0% 90%"
+          ],
+          [
+            "--sidebar-ring",
+            "0 0% 20%"
+          ],
+          [
+            "--syntax-bg",
+            "#1e1e1e"
+          ],
+          [
+            "--syntax-color",
+            "#d4d4d4"
+          ],
+          [
+            "--slider-track-bg",
+            "rgba(0, 0, 0, .05)"
+          ],
+          [
+            "--slider-active-bg",
+            "rgba(0, 0, 0, .1)"
+          ],
+          [
+            "--background",
+            "0 0% 100%"
+          ],
+          [
+            "--foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--card",
+            "0 0% 98%"
+          ],
+          [
+            "--card-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--popover",
+            "0 0% 98%"
+          ],
+          [
+            "--popover-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--primary",
+            "0 0% 9%"
+          ],
+          [
+            "--primary-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--secondary",
+            "0 0% 96%"
+          ],
+          [
+            "--secondary-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--muted",
+            "0 0% 96%"
+          ],
+          [
+            "--muted-foreground",
+            "0 0% 45%"
+          ],
+          [
+            "--accent",
+            "0 0% 96%"
+          ],
+          [
+            "--accent-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--destructive",
+            "0 84% 60%"
+          ],
+          [
+            "--destructive-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--border",
+            "0 0% 90%"
+          ],
+          [
+            "--input",
+            "0 0% 90%"
+          ],
+          [
+            "--ring",
+            "0 0% 20%"
+          ],
+          [
+            "--radius",
+            ".5rem"
+          ],
+          [
+            "--sidebar-background",
+            "0 0% 98%"
+          ],
+          [
+            "--sidebar-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--sidebar-primary",
+            "0 0% 20%"
+          ],
+          [
+            "--sidebar-primary-foreground",
+            "0 0% 100%"
+          ],
+          [
+            "--sidebar-accent",
+            "0 0% 96%"
+          ],
+          [
+            "--sidebar-accent-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--sidebar-border",
+            "0 0% 90%"
+          ],
+          [
+            "--sidebar-ring",
+            "0 0% 20%"
+          ],
+          [
+            "--syntax-bg",
+            "#1e1e1e"
+          ],
+          [
+            "--syntax-color",
+            "#d4d4d4"
+          ],
+          [
+            "--slider-track-bg",
+            "rgba(0, 0, 0, .05)"
+          ],
+          [
+            "--slider-active-bg",
+            "rgba(0, 0, 0, .1)"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ]
+        ],
+        "palette": {
+          "body": {
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(23, 23, 23)",
+            "borderColor": "rgb(230, 230, 230)",
+            "fontFamily": "Inter, sans-serif",
+            "backgroundImage": ""
+          },
+          "header": null,
+          "nav": null,
+          "main": null,
+          "footer": null,
+          "buttons": [
+            {
+              "text": "Preview",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "color": "rgb(23, 23, 23)",
+              "borderColor": "rgb(230, 230, 230)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "Code",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(115, 115, 115)",
+              "borderColor": "rgb(230, 230, 230)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            }
+          ]
+        },
+        "motion": {
+          "htmlScrollBehavior": "auto",
+          "scrollSnapRules": 5,
+          "smoothScrollRules": 0,
+          "stickyOrFixedCount": 1
+        },
+        "fonts": [
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter"
+        ],
+        "fontFaces": [],
+        "resources": {
+          "images": [
+            "https://luminal-creative-studio.aura.build/favicon.ico",
+            "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/preview-images/luminal-creative-studio.png",
+            "https://luminal-creative-studio.aura.build/logo-aura-gray.svg",
+            "https://luminal-creative-studio.aura.build/logo-aura-128-light.png"
+          ],
+          "fonts": [],
+          "media": []
+        },
+        "images": [
+          {
+            "src": "https://luminal-creative-studio.aura.build/logo-aura-gray.svg",
+            "srcset": "",
+            "alt": "Aura Logo",
+            "width": 412,
+            "height": 412
+          }
+        ],
+        "canvases": []
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "screenshot": "screenshots\\original-390.png",
+      "signals": {
+        "href": "https://luminal-creative-studio.aura.build/",
+        "title": "Luminal Studio Creative Agency Landing Page Template",
+        "lang": "en",
+        "bodyTextChars": 12,
+        "scrollHeight": 900,
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "h1": [],
+        "headings": [],
+        "metaDescription": "A dark, animated creative agency landing page template for studios and digital product teams to showcase services, work, pricing, and testimonials with a bold, kinetic aesthetic.",
+        "counts": {
+          "links": 1,
+          "images": 1,
+          "video": 0,
+          "canvas": 0,
+          "sections": 0,
+          "forms": 0,
+          "buttons": 2,
+          "inputs": 0,
+          "interactive": 8,
+          "scripts": 2,
+          "stylesheets": 2
+        },
+        "frameworks": {
+          "react": false,
+          "next": false,
+          "vue": false,
+          "nuxt": false,
+          "svelte": false,
+          "astro": false,
+          "three": false,
+          "gsap": false,
+          "lenis": false
+        },
+        "scripts": [
+          "https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js",
+          "https://luminal-creative-studio.aura.build/assets/index-C8dVQJFw.js"
+        ],
+        "stylesheets": [
+          "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap",
+          "https://luminal-creative-studio.aura.build/assets/index-Dm4uwV3Y.css"
+        ],
+        "sections": [],
+        "cssVariables": [
+          [
+            "--tw-border-spacing-x",
+            "0"
+          ],
+          [
+            "--tw-border-spacing-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-skew-x",
+            "0"
+          ],
+          [
+            "--tw-skew-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-pan-x",
+            ""
+          ],
+          [
+            "--tw-pan-y",
+            ""
+          ],
+          [
+            "--tw-pinch-zoom",
+            ""
+          ],
+          [
+            "--tw-scroll-snap-strictness",
+            "proximity"
+          ],
+          [
+            "--tw-gradient-from-position",
+            ""
+          ],
+          [
+            "--tw-gradient-via-position",
+            ""
+          ],
+          [
+            "--tw-gradient-to-position",
+            ""
+          ],
+          [
+            "--tw-ordinal",
+            ""
+          ],
+          [
+            "--tw-slashed-zero",
+            ""
+          ],
+          [
+            "--tw-numeric-figure",
+            ""
+          ],
+          [
+            "--tw-numeric-spacing",
+            ""
+          ],
+          [
+            "--tw-numeric-fraction",
+            ""
+          ],
+          [
+            "--tw-ring-inset",
+            ""
+          ],
+          [
+            "--tw-ring-offset-width",
+            "0px"
+          ],
+          [
+            "--tw-ring-offset-color",
+            "#fff"
+          ],
+          [
+            "--tw-ring-color",
+            "rgb(59 130 246 / .5)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-blur",
+            ""
+          ],
+          [
+            "--tw-brightness",
+            ""
+          ],
+          [
+            "--tw-contrast",
+            ""
+          ],
+          [
+            "--tw-grayscale",
+            ""
+          ],
+          [
+            "--tw-hue-rotate",
+            ""
+          ],
+          [
+            "--tw-invert",
+            ""
+          ],
+          [
+            "--tw-saturate",
+            ""
+          ],
+          [
+            "--tw-sepia",
+            ""
+          ],
+          [
+            "--tw-drop-shadow",
+            ""
+          ],
+          [
+            "--tw-backdrop-blur",
+            ""
+          ],
+          [
+            "--tw-backdrop-brightness",
+            ""
+          ],
+          [
+            "--tw-backdrop-contrast",
+            ""
+          ],
+          [
+            "--tw-backdrop-grayscale",
+            ""
+          ],
+          [
+            "--tw-backdrop-hue-rotate",
+            ""
+          ],
+          [
+            "--tw-backdrop-invert",
+            ""
+          ],
+          [
+            "--tw-backdrop-opacity",
+            ""
+          ],
+          [
+            "--tw-backdrop-saturate",
+            ""
+          ],
+          [
+            "--tw-backdrop-sepia",
+            ""
+          ],
+          [
+            "--tw-contain-size",
+            ""
+          ],
+          [
+            "--tw-contain-layout",
+            ""
+          ],
+          [
+            "--tw-contain-paint",
+            ""
+          ],
+          [
+            "--tw-contain-style",
+            ""
+          ],
+          [
+            "--tw-border-spacing-x",
+            "0"
+          ],
+          [
+            "--tw-border-spacing-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-skew-x",
+            "0"
+          ],
+          [
+            "--tw-skew-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-pan-x",
+            ""
+          ],
+          [
+            "--tw-pan-y",
+            ""
+          ],
+          [
+            "--tw-pinch-zoom",
+            ""
+          ],
+          [
+            "--tw-scroll-snap-strictness",
+            "proximity"
+          ],
+          [
+            "--tw-gradient-from-position",
+            ""
+          ],
+          [
+            "--tw-gradient-via-position",
+            ""
+          ],
+          [
+            "--tw-gradient-to-position",
+            ""
+          ],
+          [
+            "--tw-ordinal",
+            ""
+          ],
+          [
+            "--tw-slashed-zero",
+            ""
+          ],
+          [
+            "--tw-numeric-figure",
+            ""
+          ],
+          [
+            "--tw-numeric-spacing",
+            ""
+          ],
+          [
+            "--tw-numeric-fraction",
+            ""
+          ],
+          [
+            "--tw-ring-inset",
+            ""
+          ],
+          [
+            "--tw-ring-offset-width",
+            "0px"
+          ],
+          [
+            "--tw-ring-offset-color",
+            "#fff"
+          ],
+          [
+            "--tw-ring-color",
+            "rgb(59 130 246 / .5)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-blur",
+            ""
+          ],
+          [
+            "--tw-brightness",
+            ""
+          ],
+          [
+            "--tw-contrast",
+            ""
+          ],
+          [
+            "--tw-grayscale",
+            ""
+          ],
+          [
+            "--tw-hue-rotate",
+            ""
+          ],
+          [
+            "--tw-invert",
+            ""
+          ],
+          [
+            "--tw-saturate",
+            ""
+          ],
+          [
+            "--tw-sepia",
+            ""
+          ],
+          [
+            "--tw-drop-shadow",
+            ""
+          ],
+          [
+            "--tw-backdrop-blur",
+            ""
+          ],
+          [
+            "--tw-backdrop-brightness",
+            ""
+          ],
+          [
+            "--tw-backdrop-contrast",
+            ""
+          ],
+          [
+            "--tw-backdrop-grayscale",
+            ""
+          ],
+          [
+            "--tw-backdrop-hue-rotate",
+            ""
+          ],
+          [
+            "--tw-backdrop-invert",
+            ""
+          ],
+          [
+            "--tw-backdrop-opacity",
+            ""
+          ],
+          [
+            "--tw-backdrop-saturate",
+            ""
+          ],
+          [
+            "--tw-backdrop-sepia",
+            ""
+          ],
+          [
+            "--tw-contain-size",
+            ""
+          ],
+          [
+            "--tw-contain-layout",
+            ""
+          ],
+          [
+            "--tw-contain-paint",
+            ""
+          ],
+          [
+            "--tw-contain-style",
+            ""
+          ],
+          [
+            "--tw-content",
+            "\"\""
+          ],
+          [
+            "--background",
+            "0 0% 100%"
+          ],
+          [
+            "--foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--card",
+            "0 0% 98%"
+          ],
+          [
+            "--card-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--popover",
+            "0 0% 98%"
+          ],
+          [
+            "--popover-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--primary",
+            "0 0% 9%"
+          ],
+          [
+            "--primary-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--secondary",
+            "0 0% 96%"
+          ],
+          [
+            "--secondary-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--muted",
+            "0 0% 96%"
+          ],
+          [
+            "--muted-foreground",
+            "0 0% 45%"
+          ],
+          [
+            "--accent",
+            "0 0% 96%"
+          ],
+          [
+            "--accent-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--destructive",
+            "0 84% 60%"
+          ],
+          [
+            "--destructive-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--border",
+            "0 0% 90%"
+          ],
+          [
+            "--input",
+            "0 0% 90%"
+          ],
+          [
+            "--ring",
+            "0 0% 20%"
+          ],
+          [
+            "--radius",
+            ".5rem"
+          ],
+          [
+            "--sidebar-background",
+            "0 0% 98%"
+          ],
+          [
+            "--sidebar-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--sidebar-primary",
+            "0 0% 20%"
+          ],
+          [
+            "--sidebar-primary-foreground",
+            "0 0% 100%"
+          ],
+          [
+            "--sidebar-accent",
+            "0 0% 96%"
+          ],
+          [
+            "--sidebar-accent-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--sidebar-border",
+            "0 0% 90%"
+          ],
+          [
+            "--sidebar-ring",
+            "0 0% 20%"
+          ],
+          [
+            "--syntax-bg",
+            "#1e1e1e"
+          ],
+          [
+            "--syntax-color",
+            "#d4d4d4"
+          ],
+          [
+            "--slider-track-bg",
+            "rgba(0, 0, 0, .05)"
+          ],
+          [
+            "--slider-active-bg",
+            "rgba(0, 0, 0, .1)"
+          ],
+          [
+            "--background",
+            "0 0% 9%"
+          ],
+          [
+            "--foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--card",
+            "0 0% 11%"
+          ],
+          [
+            "--card-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--popover",
+            "0 0% 11%"
+          ],
+          [
+            "--popover-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--primary",
+            "0 0% 98%"
+          ],
+          [
+            "--primary-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--secondary",
+            "0 0% 13%"
+          ],
+          [
+            "--secondary-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--muted",
+            "0 0% 13%"
+          ],
+          [
+            "--muted-foreground",
+            "0 0% 65%"
+          ],
+          [
+            "--accent",
+            "0 0% 13%"
+          ],
+          [
+            "--accent-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--destructive",
+            "0 63% 31%"
+          ],
+          [
+            "--destructive-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--border",
+            "0 0% 20%"
+          ],
+          [
+            "--input",
+            "0 0% 20%"
+          ],
+          [
+            "--ring",
+            "0 0% 80%"
+          ],
+          [
+            "--radius",
+            ".5rem"
+          ],
+          [
+            "--sidebar-background",
+            "0 0% 9%"
+          ],
+          [
+            "--sidebar-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--sidebar-primary",
+            "0 0% 80%"
+          ],
+          [
+            "--sidebar-primary-foreground",
+            "0 0% 100%"
+          ],
+          [
+            "--sidebar-accent",
+            "0 0% 15%"
+          ],
+          [
+            "--sidebar-accent-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--sidebar-border",
+            "0 0% 20%"
+          ],
+          [
+            "--sidebar-ring",
+            "0 0% 80%"
+          ],
+          [
+            "--syntax-bg",
+            "#1e1e1e"
+          ],
+          [
+            "--syntax-color",
+            "#d4d4d4"
+          ],
+          [
+            "--slider-track-bg",
+            "rgba(255, 255, 255, .05)"
+          ],
+          [
+            "--slider-active-bg",
+            "rgba(255, 255, 255, .15)"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-shadow",
+            "rgba(14,63,126,.04) 0px 0px 0px 1px,rgba(42,51,69,.04) 0px 1px 1px -.5px,rgba(42,51,70,.04) 0px 3px 3px -1.5px,rgba(42,51,70,.04) 0px 6px 6px -3px,rgba(14,63,126,.04) 0px 12px 12px -6px,rgba(14,63,126,.04) 0px 24px 24px -12px,inset 0 1px 0 rgba(255,255,255,.2)"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0px 0px 0px 1px var(--tw-shadow-color), 0px 1px 1px -.5px var(--tw-shadow-color), 0px 3px 3px -1.5px var(--tw-shadow-color), 0px 6px 6px -3px var(--tw-shadow-color), 0px 12px 12px -6px var(--tw-shadow-color), 0px 24px 24px -12px var(--tw-shadow-color), inset 0 1px 0 var(--tw-shadow-color)"
+          ],
+          [
+            "--tw-border-opacity",
+            "1"
+          ],
+          [
+            "--tw-gradient-from",
+            "#3b82f6 var(--tw-gradient-from-position)"
+          ],
+          [
+            "--tw-gradient-stops",
+            "var(--tw-gradient-from), var(--tw-gradient-to)"
+          ],
+          [
+            "--tw-gradient-to",
+            "#2563eb var(--tw-gradient-to-position)"
+          ],
+          [
+            "--tw-gradient-from",
+            "#2563eb var(--tw-gradient-from-position)"
+          ],
+          [
+            "--tw-gradient-stops",
+            "var(--tw-gradient-from), var(--tw-gradient-to)"
+          ],
+          [
+            "--tw-gradient-to",
+            "#1d4ed8 var(--tw-gradient-to-position)"
+          ],
+          [
+            "--tw-border-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-shadow",
+            "rgba(126,87,14,.04) 0px 0px 0px 1px,rgba(69,56,42,.04) 0px 1px 1px -.5px,rgba(70,56,42,.04) 0px 3px 3px -1.5px,rgba(70,56,42,.04) 0px 6px 6px -3px,rgba(126,87,14,.04) 0px 12px 12px -6px,rgba(126,87,14,.04) 0px 24px 24px -12px,inset 0 1px 0 rgba(255,255,255,.2)"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0px 0px 0px 1px var(--tw-shadow-color), 0px 1px 1px -.5px var(--tw-shadow-color), 0px 3px 3px -1.5px var(--tw-shadow-color), 0px 6px 6px -3px var(--tw-shadow-color), 0px 12px 12px -6px var(--tw-shadow-color), 0px 24px 24px -12px var(--tw-shadow-color), inset 0 1px 0 var(--tw-shadow-color)"
+          ],
+          [
+            "--tw-border-opacity",
+            "1"
+          ],
+          [
+            "--tw-gradient-from",
+            "#fbbf24 var(--tw-gradient-from-position)"
+          ],
+          [
+            "--tw-gradient-stops",
+            "var(--tw-gradient-from), var(--tw-gradient-to)"
+          ],
+          [
+            "--tw-gradient-to",
+            "#f59e0b var(--tw-gradient-to-position)"
+          ],
+          [
+            "--tw-gradient-from",
+            "#f59e0b var(--tw-gradient-from-position)"
+          ],
+          [
+            "--tw-gradient-stops",
+            "var(--tw-gradient-from), var(--tw-gradient-to)"
+          ],
+          [
+            "--tw-gradient-to",
+            "#d97706 var(--tw-gradient-to-position)"
+          ],
+          [
+            "--tw-border-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-shadow",
+            "0px 2px 3px -1px rgba(0,0,0,.1),0px 1px 0px 0px rgba(25,28,33,.02),0px 0px 0px 1px rgba(25,28,33,.08)"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0px 2px 3px -1px var(--tw-shadow-color), 0px 1px 0px 0px var(--tw-shadow-color), 0px 0px 0px 1px var(--tw-shadow-color)"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-border-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ]
+        ],
+        "rootVariables": [
+          [
+            "--tw-border-spacing-x",
+            "0"
+          ],
+          [
+            "--tw-border-spacing-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-skew-x",
+            "0"
+          ],
+          [
+            "--tw-skew-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-scroll-snap-strictness",
+            "proximity"
+          ],
+          [
+            "--tw-ring-offset-width",
+            "0px"
+          ],
+          [
+            "--tw-ring-offset-color",
+            "#fff"
+          ],
+          [
+            "--tw-ring-color",
+            "rgb(59 130 246 / .5)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-border-spacing-x",
+            "0"
+          ],
+          [
+            "--tw-border-spacing-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-skew-x",
+            "0"
+          ],
+          [
+            "--tw-skew-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-scroll-snap-strictness",
+            "proximity"
+          ],
+          [
+            "--tw-ring-offset-width",
+            "0px"
+          ],
+          [
+            "--tw-ring-offset-color",
+            "#fff"
+          ],
+          [
+            "--tw-ring-color",
+            "rgb(59 130 246 / .5)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--background",
+            "0 0% 100%"
+          ],
+          [
+            "--foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--card",
+            "0 0% 98%"
+          ],
+          [
+            "--card-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--popover",
+            "0 0% 98%"
+          ],
+          [
+            "--popover-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--primary",
+            "0 0% 9%"
+          ],
+          [
+            "--primary-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--secondary",
+            "0 0% 96%"
+          ],
+          [
+            "--secondary-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--muted",
+            "0 0% 96%"
+          ],
+          [
+            "--muted-foreground",
+            "0 0% 45%"
+          ],
+          [
+            "--accent",
+            "0 0% 96%"
+          ],
+          [
+            "--accent-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--destructive",
+            "0 84% 60%"
+          ],
+          [
+            "--destructive-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--border",
+            "0 0% 90%"
+          ],
+          [
+            "--input",
+            "0 0% 90%"
+          ],
+          [
+            "--ring",
+            "0 0% 20%"
+          ],
+          [
+            "--radius",
+            ".5rem"
+          ],
+          [
+            "--sidebar-background",
+            "0 0% 98%"
+          ],
+          [
+            "--sidebar-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--sidebar-primary",
+            "0 0% 20%"
+          ],
+          [
+            "--sidebar-primary-foreground",
+            "0 0% 100%"
+          ],
+          [
+            "--sidebar-accent",
+            "0 0% 96%"
+          ],
+          [
+            "--sidebar-accent-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--sidebar-border",
+            "0 0% 90%"
+          ],
+          [
+            "--sidebar-ring",
+            "0 0% 20%"
+          ],
+          [
+            "--syntax-bg",
+            "#1e1e1e"
+          ],
+          [
+            "--syntax-color",
+            "#d4d4d4"
+          ],
+          [
+            "--slider-track-bg",
+            "rgba(0, 0, 0, .05)"
+          ],
+          [
+            "--slider-active-bg",
+            "rgba(0, 0, 0, .1)"
+          ],
+          [
+            "--background",
+            "0 0% 100%"
+          ],
+          [
+            "--foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--card",
+            "0 0% 98%"
+          ],
+          [
+            "--card-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--popover",
+            "0 0% 98%"
+          ],
+          [
+            "--popover-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--primary",
+            "0 0% 9%"
+          ],
+          [
+            "--primary-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--secondary",
+            "0 0% 96%"
+          ],
+          [
+            "--secondary-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--muted",
+            "0 0% 96%"
+          ],
+          [
+            "--muted-foreground",
+            "0 0% 45%"
+          ],
+          [
+            "--accent",
+            "0 0% 96%"
+          ],
+          [
+            "--accent-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--destructive",
+            "0 84% 60%"
+          ],
+          [
+            "--destructive-foreground",
+            "0 0% 98%"
+          ],
+          [
+            "--border",
+            "0 0% 90%"
+          ],
+          [
+            "--input",
+            "0 0% 90%"
+          ],
+          [
+            "--ring",
+            "0 0% 20%"
+          ],
+          [
+            "--radius",
+            ".5rem"
+          ],
+          [
+            "--sidebar-background",
+            "0 0% 98%"
+          ],
+          [
+            "--sidebar-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--sidebar-primary",
+            "0 0% 20%"
+          ],
+          [
+            "--sidebar-primary-foreground",
+            "0 0% 100%"
+          ],
+          [
+            "--sidebar-accent",
+            "0 0% 96%"
+          ],
+          [
+            "--sidebar-accent-foreground",
+            "0 0% 9%"
+          ],
+          [
+            "--sidebar-border",
+            "0 0% 90%"
+          ],
+          [
+            "--sidebar-ring",
+            "0 0% 20%"
+          ],
+          [
+            "--syntax-bg",
+            "#1e1e1e"
+          ],
+          [
+            "--syntax-color",
+            "#d4d4d4"
+          ],
+          [
+            "--slider-track-bg",
+            "rgba(0, 0, 0, .05)"
+          ],
+          [
+            "--slider-active-bg",
+            "rgba(0, 0, 0, .1)"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ]
+        ],
+        "palette": {
+          "body": {
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(23, 23, 23)",
+            "borderColor": "rgb(230, 230, 230)",
+            "fontFamily": "Inter, sans-serif",
+            "backgroundImage": ""
+          },
+          "header": null,
+          "nav": null,
+          "main": null,
+          "footer": null,
+          "buttons": [
+            {
+              "text": "Preview",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "color": "rgb(23, 23, 23)",
+              "borderColor": "rgb(230, 230, 230)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "Code",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(115, 115, 115)",
+              "borderColor": "rgb(230, 230, 230)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            }
+          ]
+        },
+        "motion": {
+          "htmlScrollBehavior": "auto",
+          "scrollSnapRules": 5,
+          "smoothScrollRules": 0,
+          "stickyOrFixedCount": 1
+        },
+        "fonts": [
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter",
+          "Inter"
+        ],
+        "fontFaces": [],
+        "resources": {
+          "images": [
+            "https://luminal-creative-studio.aura.build/favicon.ico",
+            "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/preview-images/luminal-creative-studio.png",
+            "https://luminal-creative-studio.aura.build/logo-aura-gray.svg",
+            "https://luminal-creative-studio.aura.build/logo-aura-128-light.png"
+          ],
+          "fonts": [],
+          "media": []
+        },
+        "images": [
+          {
+            "src": "https://luminal-creative-studio.aura.build/logo-aura-gray.svg",
+            "srcset": "",
+            "alt": "Aura Logo",
+            "width": 412,
+            "height": 412
+          }
+        ],
+        "canvases": []
+      }
+    }
+  ]
+}

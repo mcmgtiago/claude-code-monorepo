@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "contacts": [],
+  "templates": [
+    {
+      "id": "modelo-1",
+      "label": "Apresentação",
+      "name": "",
+      "language": "pt_BR",
+      "description": "",
+      "enabled": false,
+      "useContactName": false,
+      "updatedAt": "2026-07-26T21:54:43.193Z"
+    },
+    {
+      "id": "modelo-2",
+      "label": "Diagnóstico",
+      "name": "",
+      "language": "pt_BR",
+      "description": "",
+      "enabled": false,
+      "useContactName": false,
+      "updatedAt": "2026-07-26T21:54:43.194Z"
+    },
+    {
+      "id": "modelo-3",
+      "label": "Proposta de valor",
+      "name": "",
+      "language": "pt_BR",
+      "description": "",
+      "enabled": false,
+      "useContactName": false,
+      "updatedAt": "2026-07-26T21:54:43.194Z"
+    },
+    {
+      "id": "modelo-4",
+      "label": "Convite",
+      "name": "",
+      "language": "pt_BR",
+      "description": "",
+      "enabled": false,
+      "useContactName": false,
+      "updatedAt": "2026-07-26T21:54:43.194Z"
+    },
+    {
+      "id": "modelo-5",
+      "label": "Retomada",
+      "name": "",
+      "language": "pt_BR",
+      "description": "",
+      "enabled": false,
+      "useContactName": false,
+      "updatedAt": "2026-07-26T21:54:43.194Z"
+    }
+  ],
+  "campaigns": []
+}

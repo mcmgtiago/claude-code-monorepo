@@ -1,0 +1,41 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="450" y1="0" x2="450" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#28365E"/>
+      <stop offset="1" stop-color="#5B73AE"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(635 86) rotate(90) scale(140 140)">
+      <stop stop-color="#FFF3D7"/>
+      <stop offset="1" stop-color="#FFF3D7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="620" rx="28" fill="url(#bg)"/>
+  <rect y="430" width="900" height="190" fill="#2A3963"/>
+  <rect y="404" width="900" height="26" fill="#2E96C9"/>
+  <rect y="430" width="900" height="10" fill="#7FD0F5"/>
+  <circle cx="635" cy="86" r="48" fill="#FFF3D7" fill-opacity="0.9"/>
+  <circle cx="635" cy="86" r="140" fill="url(#sun)"/>
+  <g opacity="0.95" fill="#221B2B">
+    <path d="M148 366C164 338 194 330 214 344C236 360 244 392 248 420H128C130 402 136 384 148 366Z"/>
+    <circle cx="188" cy="320" r="26"/>
+    <path d="M252 350C270 330 304 324 326 342C350 362 364 394 368 420H232C236 394 240 372 252 350Z"/>
+    <circle cx="300" cy="300" r="28"/>
+    <path d="M404 360C420 340 454 334 476 350C500 368 512 394 516 420H388C390 400 394 380 404 360Z"/>
+    <circle cx="448" cy="316" r="28"/>
+    <path d="M562 350C576 332 606 324 628 338C654 356 670 388 674 420H544C548 394 552 370 562 350Z"/>
+    <circle cx="604" cy="302" r="28"/>
+    <path d="M718 366C734 340 764 334 788 348C810 364 822 394 826 420H698C700 402 706 382 718 366Z"/>
+    <circle cx="758" cy="318" r="26"/>
+  </g>
+  <g stroke="#1F223D" stroke-width="4" stroke-linecap="round">
+    <path d="M164 372L146 228"/>
+    <path d="M292 350L278 214"/>
+    <path d="M430 368L438 226"/>
+    <path d="M604 350L642 236"/>
+  </g>
+  <g fill="#6A59B8" opacity="0.95">
+    <path d="M88 420C142 386 202 382 268 418L252 460C194 442 136 442 86 466L88 420Z"/>
+    <path d="M246 420C306 390 374 388 440 420L428 470C366 450 306 450 242 474L246 420Z"/>
+    <path d="M408 424C470 394 540 392 608 426L596 476C530 456 468 454 402 478L408 424Z"/>
+  </g>
+</svg>

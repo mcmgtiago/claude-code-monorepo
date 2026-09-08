@@ -1,0 +1,7 @@
+import type { NpcTables } from '../types';
+export const FIGHTNIGHT_NPC_TABLES: NpcTables = {
+  names: ['Diaz', 'Silva', 'Thompson', 'Morales', 'O\'Brien', 'Kim', 'Santos', 'Volkov', 'Aldo', 'Garcia', 'Rodriguez', 'Petrov', 'Tanaka', 'Brown', 'Anderson', 'Jackson', 'Lee', 'Martinez', 'Williams', 'Nakamura', 'Costa', 'Rivera', 'Chen', 'Okafor', 'Bautista', 'Singh', 'Murphy', 'Diallo', 'Cruz', 'Ivanov'],
+  roles: ['lutador ranqueado', 'lutador de cards preliminares', 'treinador assistente', 'sparring partner', 'comentarista', 'promotor', 'gerente de lutador', 'médico do evento', 'ring girl', 'repórter de MMA', 'recrutador do UFC', 'personal de força', 'árbitro', 'judge (juiz de luta)', 'fã obsessivo'],
+  traits: ['fome de cinturão', 'humilde', 'trash talker', 'disciplinado', 'impulsivo', 'técnico', 'brawler', 'covarde (reclama de tudo)', 'focado', 'emocionado', 'frio', 'provocador', 'respeitoso', 'vingativo', 'persistente'],
+  appearance: { build: ['corpo musculoso e definido', 'grande e pesado (peso-pesado)', 'magro e fibroso (peso-leve)', 'atarracado e forte', 'alto e longilíneo'], hair: ['careca (estilo lutador)', 'moicano de fight day', 'cabelo raspado nas laterais', 'cabelo curto prático', 'dreads ou tranças de luta'], clothing: ['shorts de luta e luvas', 'moletom de academia', 'terno em coletiva de imprensa', 'camiseta da equipe', 'roupa de corte de peso (plástico)'], detail: ['orelha de couve-flor (wrestling)', 'cicatriz de corte no supercílio', 'nariz torto (quebrou)', 'mãos calejadas e inchadas', 'tatuagens pelo corpo'] },
+};

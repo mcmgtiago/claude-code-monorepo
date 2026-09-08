@@ -1,0 +1,24 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="900" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBF3EE"/>
+      <stop offset="1" stop-color="#E6D8D0"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="620" rx="28" fill="url(#wall)"/>
+  <rect x="520" y="94" width="244" height="140" rx="6" fill="#ECE1D7" stroke="#D6B494" stroke-width="10"/>
+  <path d="M602 104H736V220H536L602 104Z" fill="#F6EFEA"/>
+  <rect x="0" y="438" width="900" height="182" fill="#E5D0BF"/>
+  <rect x="96" y="298" width="170" height="220" rx="80" fill="#CFB193"/>
+  <rect x="116" y="280" width="130" height="260" rx="64" fill="#E9D9CA"/>
+  <path d="M332 140C364 108 418 108 450 142C482 176 484 228 474 274C462 332 432 400 390 424C350 446 308 412 284 370C258 324 252 268 262 220C270 188 292 160 332 140Z" fill="#EBBA97"/>
+  <path d="M344 134C370 104 420 96 454 120C488 144 502 194 494 240C486 286 452 330 406 340C360 350 318 322 300 280C282 238 296 188 344 134Z" fill="#F0C7A7"/>
+  <path d="M336 134C354 112 390 102 420 112C458 124 490 162 496 198C500 224 486 244 462 252C430 262 392 250 362 232C334 216 310 188 312 164C312 152 320 144 336 134Z" fill="#79523F"/>
+  <path d="M468 198C446 180 436 152 444 128C452 106 474 88 500 88C522 88 546 102 560 124C578 150 578 188 560 212C544 232 520 238 496 232C486 228 478 214 468 198Z" fill="#8B624B"/>
+  <rect x="320" y="236" width="168" height="188" rx="16" fill="#F7EAE1"/>
+  <rect x="348" y="254" width="112" height="162" rx="18" fill="#E9D0BB"/>
+  <path d="M312 424C334 388 372 366 406 366C440 366 474 390 490 424" stroke="#B97B63" stroke-width="18" stroke-linecap="round"/>
+  <path d="M328 476C364 500 438 500 482 474" stroke="#B97B63" stroke-width="20" stroke-linecap="round"/>
+  <path d="M360 326C372 306 394 292 416 292C438 292 454 306 464 324" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
+  <path d="M348 248C358 224 382 206 406 206C430 206 452 220 466 244" stroke="#D98D72" stroke-width="16" stroke-linecap="round"/>
+</svg>

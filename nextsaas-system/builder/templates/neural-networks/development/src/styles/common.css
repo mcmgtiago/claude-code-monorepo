@@ -1,0 +1,284 @@
+/* =========== GLOBAL STYLES ========== */
+
+body {
+  @apply font-inter-tight antialiased;
+}
+
+[data-opai-animate] {
+  opacity: 0;
+}
+
+/* Hidden until SplitText + text-reveal.js runs (avoids FOUC); lines fade in in the tween */
+[data-text-reveal] {
+  opacity: 0;
+}
+
+[data-text-reveal] .text-reveal-line {
+  opacity: 0;
+}
+
+/* ========== CONTAINER ========== */
+
+@utility main-container {
+  @apply lp:px-0 mx-auto max-w-[1290px] px-5;
+}
+
+@utility main-container-v2 {
+  @apply lp:px-0 mx-auto max-w-[1440px] px-5;
+}
+
+@utility footer-link {
+  @apply relative overflow-hidden before:absolute before:bottom-0 before:left-0 before:h-px before:w-full before:origin-right before:scale-x-0 before:bg-white before:transition-transform before:duration-500 before:content-[''] hover:before:origin-left hover:before:scale-x-100;
+}
+
+/*  =========================== Blog title underline hover effect =========================== */
+
+/*  =========================== Blog title underline hover effect black =========================== */
+.underline-hover-effect-black .blog-title-black h3 {
+  @apply inline w-full cursor-pointer pb-px transition-all duration-500 ease-[cubic-bezier(0.645,0.045,0.355,1.000)];
+  background-image: linear-gradient(transparent calc(100% - 1px), black 1px);
+  @apply bg-size-[0%_100%] bg-no-repeat;
+}
+
+.underline-hover-effect-black:hover .blog-title-black h3 {
+  @apply bg-size-[100%_100%];
+}
+
+/*  =========================== Lock Box Fade Animation =========================== */
+
+.lock-fade-animation-delay-1 {
+  animation: lockFadeInOut 5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.lock-fade-animation-delay-2 {
+  animation: lockFadeInOut 5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.lock-fade-animation-delay-3 {
+  animation: lockFadeOpacity 5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes lockFadeInOut {
+  0% {
+    opacity: 0.8;
+    transform: scale(0.92);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(0.92);
+  }
+}
+
+/* =========================== MODAL =========================== */
+
+.modal-open {
+  @apply grid;
+}
+
+.modal-close {
+  @apply hidden;
+}
+
+/* Dialog element styling */
+dialog.modal-overlay {
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
+dialog.modal-overlay::backdrop {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+dialog.modal-overlay.modal-close {
+  display: none;
+}
+
+/* button animation  */
+.button-icon {
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-text {
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* hero img animate  */
+
+@utility hero-img-animate {
+  animation: hero-img-animate 4s infinite;
+}
+
+@keyframes hero-img-animate {
+  0%,
+  100% {
+    transform: translateY(-2%);
+  }
+  50% {
+    transform: translateY(2%);
+  }
+}
+
+/*  =========================== Service Details Markdown =========================== */
+
+.service-details-markdown {
+  h2 {
+    @apply font-sora text-sora-heading-4 md:text-sora-heading-3 lg:text-sora-heading-2 text-background-13/90 font-normal;
+  }
+  p {
+    @apply font-inter-tight text-tagline-2 text-background-13/60 mt-3 font-normal;
+  }
+
+  img {
+    @apply mt-[70px] size-full rounded-3xl object-cover;
+  }
+
+  h3 {
+    @apply font-sora text-sora-heading-4 text-background-13/90 mt-[70px] font-normal;
+  }
+
+  h3 + ul {
+    @apply mt-4 space-y-3;
+    li {
+      @apply font-inter-tight text-tagline-2 text-background-13/60 before:bg-background-13/90 flex items-center gap-x-2 font-normal before:inline-block before:size-1.5 before:shrink-0 before:rounded-full before:content-[''];
+
+      span {
+        @apply text-background-13/90 hidden md:inline;
+      }
+    }
+  }
+
+  h4 {
+    @apply font-sora text-sora-heading-5 text-background-13/90 mt-6 font-normal;
+  }
+
+  h4 + p {
+    @apply mt-1 max-w-[856px];
+  }
+}
+
+/*  =========================== Case Study Markdown =========================== */
+.case-study-markdown {
+  p {
+    @apply font-inter-tight text-tagline-2 mt-6 font-normal text-white first:mt-0;
+  }
+  h3 {
+    @apply font-sora text-sora-heading-4 mt-10 font-normal text-white md:mt-[70px];
+  }
+
+  h3 + p {
+    @apply mt-2 text-white/60;
+  }
+
+  h3 + ul {
+    @apply mt-4 space-y-2;
+
+    li {
+      @apply font-inter-tight text-tagline-2 flex items-center gap-x-2 font-normal text-white/90 before:inline-block before:size-1.5 before:shrink-0 before:rounded-full before:bg-white/90 before:content-[''];
+    }
+  }
+
+  h4 {
+    @apply font-inter-tight text-tagline-2 mt-6 font-normal text-white/90;
+    span {
+      @apply mr-2 inline-block;
+    }
+  }
+
+  h4 + ul {
+    @apply mt-2 space-y-2 pl-3;
+    li {
+      @apply font-inter-tight text-tagline-3 flex items-center gap-x-2 font-normal text-white/60 before:inline-block before:size-1.5 before:shrink-0 before:rounded-full before:bg-white/90 before:content-[''];
+    }
+  }
+}
+
+/*  =========================== Blog Details Markdown =========================== */
+.blog-details-markdown {
+  h2 {
+    @apply font-sora text-sora-heading-5 text-background-13/90 mt-10 font-normal first:mt-0 md:mt-[70px];
+  }
+
+  h2 + p {
+    @apply mt-1!;
+  }
+  p {
+    @apply font-inter-tight text-tagline-2 text-background-13/60 font-normal;
+  }
+
+  img {
+    @apply mt-[70px] h-[380px] w-full rounded-3xl object-cover md:h-[500px] lg:h-[630px];
+  }
+
+  h2 + p + ul {
+    @apply mt-4 mb-4 space-y-2;
+
+    li {
+      @apply font-inter-tight text-tagline-3 text-background-13/60 before:bg-background-13/90 flex items-center gap-x-2 font-normal before:inline-block before:size-1.5 before:shrink-0 before:rounded-full before:content-[''];
+
+      span {
+        @apply text-background-13/90 hidden md:inline;
+      }
+    }
+  }
+
+  h2 + p + p {
+    @apply mt-4;
+  }
+}
+
+/*  =========================== Team Details Markdown =========================== */
+.team-details-markdown {
+  p {
+    @apply font-inter-tight text-tagline-2 text-background-13/60 mt-2 font-normal first:mt-0;
+  }
+
+  p + h2 {
+    @apply mt-8;
+  }
+  h2 {
+    @apply font-sora text-sora-heading-5 text-background-13 mt-10 font-normal md:mt-[72px];
+  }
+
+  h3 {
+    @apply font-sora text-sora-heading-6 text-background-13 mt-8 font-normal;
+  }
+
+  ul {
+    @apply mt-3 space-y-2;
+
+    li {
+      @apply font-inter-tight text-tagline-2 text-background-13/60 before:bg-background-13/90 flex items-center gap-x-2 font-normal before:inline-block before:size-1.5 before:shrink-0 before:rounded-full before:content-[''];
+    }
+  }
+}
+
+/* Navbar CTA — button v2 (matches Nexsas header) */
+@utility btn-md-v2 {
+  @apply text-tagline-1 min-w-[90px] px-5 py-2.5;
+  .btn-v2-icon {
+    @apply mt-px;
+  }
+}
+
+@utility btn-primary-v2 {
+  @apply bg-opai-green text-background-13;
+  .btn-v2-icon {
+    @apply fill-background-13;
+  }
+}
+
+@utility btn-secondary-v2 {
+  @apply bg-background-13 text-white shadow-[0_1px_2px_0_rgba(16,24,40,0.26)];
+  .btn-v2-icon {
+    @apply fill-white;
+  }
+}

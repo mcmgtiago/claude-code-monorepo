@@ -1,0 +1,26 @@
+<div
+  class="flex h-[300px] flex-col items-start justify-between rounded-3xl bg-white p-8 lg:h-[370px] xl:p-14"
+  aria-label="{=$title}"
+>
+  <span
+    class="bg-background-3 flex size-17 items-center justify-center rounded-3xl p-4"
+    aria-hidden="true"
+  >
+    <span class="{=$icon} text-4xl text-white"></span>
+  </span>
+
+  <div class="space-y-1">
+    <h3
+      class="font-sora text-sora-heading-5 xl:text-sora-heading-4 text-background-13/80 tracking-[-1.28px]"
+      itemprop="name"
+    >
+      {=$title}
+    </h3>
+    <p
+      class="font-inter-tight text-background-13/50 text-tagline-2 max-w-[250px] font-normal"
+      itemprop="description"
+    >
+      {=$description}
+    </p>
+  </div>
+</div>

@@ -1,0 +1,136 @@
+<!-- login hero section  -->
+<section class="lp:pb-39! pt-28 pb-20 md:pt-39 md:pb-28">
+  <div class="main-container">
+    <div class="space-y-19">
+      <div class="space-y-3 text-center">
+        <h2
+          data-text-reveal
+          class="text-sora-heading-4 md:text-sora-heading-3 xl:text-sora-heading-2 text-background-13 font-sora font-normal"
+        >
+          Let’s get started
+        </h2>
+        <p
+          data-text-reveal
+          data-delay="0.2"
+          class="text-tagline-2 text-background-13/60 font-inter-tight mx-auto max-w-[300px] font-normal"
+        >
+          Let’s explore how Nexsas can support your goals with AI-driven solutions.
+        </p>
+      </div>
+
+      <!-- form and img  -->
+
+      <div
+        data-opai-animate
+        data-delay="0.3"
+        class="mx-auto flex w-full max-w-[1050px] flex-col items-center gap-x-8 gap-y-8 overflow-hidden rounded-xl bg-white p-4 md:rounded-3xl md:p-8 lg:flex-row lg:gap-y-0"
+      >
+        <!-- form  -->
+        <div
+          data-opai-animate
+          data-delay="0.3"
+          data-instant
+          data-direction="left"
+          data-offset="100"
+          class="bg-background-9 w-full rounded-lg p-4 backdrop-blur-[30px] md:rounded-2xl md:p-6 lg:max-w-[397px]"
+        >
+          <form action="#" class="w-full">
+            <!-- email -->
+            <fieldset class="space-y-2">
+              <label
+                for="email"
+                class="text-tagline-2 text-background-13/90 font-inter-tight block font-normal"
+                >Your email</label
+              >
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+                class="border-stroke-3/18 text-tagline-3 placeholder:text-tagline-3 bg-background-7 text-background-13/90 placeholder:text-background-13/60 focus-visible:border-stroke-3/60 block h-12 w-full rounded-lg border px-3 py-[14px] font-normal focus:outline-none"
+              />
+            </fieldset>
+            <!-- password -->
+            <fieldset class="mt-6 space-y-2">
+              <label
+                for="password"
+                class="text-tagline-2 text-background-13/90 font-inter-tight block font-normal"
+                >Password</label
+              >
+              <input
+                type="password"
+                name="password"
+                id="password"
+                required
+                placeholder="At least 8 character"
+                class="border-stroke-3/18 text-tagline-3 focus-visible:border-stroke-3/60 placeholder:text-tagline-3 bg-background-7 text-background-13/90 placeholder:text-background-13/60 block h-12 w-full rounded-lg border px-3 py-[14px] font-normal focus:outline-none"
+              />
+            </fieldset>
+
+            <!-- submit button -->
+            <div class="mt-8">
+              <Component
+                src="src/components/shared/button/submit-button-v3.htm"
+                button-text="Login"
+              />
+            </div>
+
+            <fieldset class="mt-6 flex items-center justify-between gap-x-5">
+              <label class="flex cursor-pointer items-center gap-1.5">
+                <input
+                  type="checkbox"
+                  name="terms"
+                  required=""
+                  class="peer sr-only"
+                  aria-label="Remember me"
+                />
+                <span
+                  class="border-stroke-3/18 peer-checked:border-stroke-3/60 after:bg-background-13/90 relative size-5 cursor-pointer rounded-full border after:absolute after:top-1/2 after:left-1/2 after:size-3 after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-full after:opacity-0 peer-checked:after:opacity-100"
+                ></span>
+                <span
+                  class="text-tagline-3 text-background-13/60 peer-checked:text-background-13/90 font-inter-tight font-medium select-none"
+                >
+                  Remember me
+                </span>
+              </label>
+              <div>
+                <a
+                  href="#"
+                  class="text-tagline-3 text-background-13/60 font-inter-tight block flex-1 font-normal underline underline-offset-2"
+                  >Forgot password?</a
+                >
+              </div>
+            </fieldset>
+
+            <p class="mt-6 text-center">
+              <span class="text-tagline-3 text-background-13/60 font-inter-tight font-normal"
+                >Don't have an account?</span
+              >
+              <a
+                href="./signup.html"
+                class="text-tagline-3 text-background-13/90 font-inter-tight font-medium underline underline-offset-2"
+                >Sign up</a
+              >
+            </p>
+          </form>
+          <div>
+            <Component src="src/components/shared/auth-buttons.htm" />
+          </div>
+        </div>
+
+        <!-- img  -->
+        <figure
+          data-opai-animate
+          data-delay="0.4"
+          data-instant
+          data-direction="right"
+          data-offset="100"
+          class="h-[400px] w-full overflow-hidden rounded-2xl md:h-[599px] lg:max-w-[557px]"
+        >
+          <img src="./images/opai-img-471.jpg" alt="login-hero" class="size-full object-cover" />
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>

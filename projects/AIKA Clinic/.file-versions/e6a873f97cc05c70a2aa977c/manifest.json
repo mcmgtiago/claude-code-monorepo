@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "fileName": "aika-clinic-landing.html",
+  "entries": [
+    {
+      "id": "817e31c5-9551-4042-8eab-7ba57f65fa46",
+      "fileName": "aika-clinic-landing.html",
+      "version": 1,
+      "label": "Version 1",
+      "createdAt": 1785616975906,
+      "source": "ai",
+      "prompt": "[form answers — discovery]\n- Qual entrega você quer?: Prototype\n- Para quais telas devo otimizar?: Site responsivo [value: responsive]\n- Qual número ou link deve receber os leads?: Deixar o CTA preparado para inserir o WhatsApp depois\n- Como devo usar o material da pasta e os dois anexos?: Analisar tudo e selecionar os melhores elementos [value: full_fusion]",
+      "size": 31662,
+      "mime": "text/html; charset=utf-8",
+      "kind": "html",
+      "contentPath": "0001-817e31c5-9551-4042-8eab-7ba57f65fa46.html",
+      "promptSource": "message"
+    },
+    {
+      "id": "7f30fd7b-a59c-4be3-b2b5-ac4872d1f44c",
+      "fileName": "aika-clinic-landing.html",
+      "version": 2,
+      "label": "Version 2",
+      "createdAt": 1785617831269,
+      "source": "ai",
+      "prompt": "@impeccable-design-polish\nAlvo atual: Arquivo · aika-clinic-landing.html.\nSkill selecionada: impeccable-design-polish. Use-a como o fluxo de trabalho principal neste turno.\nÍndice de recursos globais: skills(178), plugins(0), MCP(0 ativados / 0 modelos), conectores(0 conectados), arquivos de design(15).\nSkills pesquisáveis: animation-vocabulary, apple-design, audit-typography, banner-design, brand, design, design-system, design-taste-frontend, emil-design-eng, find-animation-opportunities, huashu-design, impeccable, improve-animations, media-library-free-stock, openai-image, pick-ui-library, redesign-existing-projects, review-animations, slides, suggest-improvements, ui-styling, ui-ux-pro-max, 8-bit-orbit-video-template, ad-creative, after-hours-editorial-template, agent-browser, ai-music-album, algorithmic-art, apple-hig, article-magazine, artifacts-builder, brainstorming, brand-extract, brand-guidelines, brandkit, industrial-brutalist-ui, canvas-design, card-twitter, card-xiaohongshu, chat-motion-overlay, color-expert, competitive-ads-extractor, copywriting, creative-director, d3-visualization, data-report, deck-guizang-editorial, deck-open-slide-canvas, deck-swiss-international, design-brief, design-consultation, design-md, design-review, digits-fintech-swiss-template, doc, doc-kami-parchment, docx, domain-name-brainstormer, ecommerce-image-workflow, editorial-burgundy-principles-template, +118 mais.\nArquivos de design de referência: aika-clinic-landing.html, brand-spec.md, image-1.png, image.png, assets/case-botopremium.png, assets/case-illuminare.png, assets/pico-laila.mp4, assets/pico-royal-face.mp4, assets/pico-maykon.mp4, assets/pico-botoclinic.mp4, assets/case-fatima.jpeg, assets/case-vanity.jpg, assets/pico-kamila.mp4, assets/pico-rubia.mp4, assets/aika-logo.png.\nWorkflow rule: define the aesthetic goal and constraints first, then search and match resources; when user choice is needed, generate a structured question-form with editable custom answers and continue after confirmation.\nRefine este design até deixá-lo pronto para publicação: verifique hierarquia, tipografia, espaçamento, comportamento responsivo, estados de botões, estados vazios/de carregamento/de erro e acessibilidade; corrija diretamente os problemas mais importantes.\n\nuse as habilidades que voce tem pois hoje nao esta com cara de site premium e etc nao esqueça das duas referencias em imagem que lhe enviei",
+      "size": 40116,
+      "mime": "text/html; charset=utf-8",
+      "kind": "html",
+      "contentPath": "0002-7f30fd7b-a59c-4be3-b2b5-ac4872d1f44c.html",
+      "promptSource": "message"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "kind": "html",
+  "title": "aika-clinic-landing.html",
+  "entry": "aika-clinic-landing.html",
+  "renderer": "html",
+  "status": "complete",
+  "exports": [
+    "html",
+    "pdf",
+    "zip"
+  ],
+  "createdAt": "2026-08-01T20:42:19.180Z",
+  "updatedAt": "2026-08-01T20:42:19.180Z",
+  "metadata": {
+    "inferred": true,
+    "reconciled": true
+  }
+}

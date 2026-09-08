@@ -1,0 +1,105 @@
+{
+  "$schema": "https://schemas.brenda-ariel.brand/tokens/v1",
+  "brand": "Brenda Ariel",
+  "profession": "Design de Interiores",
+  "concept": "Maximalismo Orgânico de Alto Padrão",
+  "version": "1.0.0",
+  "date": "2026-07-30",
+  "logo": {
+    "system": "Monograma BA + Nome Completo",
+    "wordmark": {
+      "family": "Playfair Display",
+      "fallbacks": ["DM Serif Display", "Didot", "Bodoni Moda"],
+      "weights": [400, 700],
+      "tracking": -20
+    },
+    "tagline": {
+      "family": "Inter",
+      "fallbacks": ["Montserrat"],
+      "weight": 500,
+      "tracking": 200,
+      "transform": "uppercase",
+      "text": "DESIGN DE INTERIORES"
+    },
+    "monogram": "BA",
+    "minSize": {
+      "full": { "digital": "180px", "print": "35mm" },
+      "wordmark": { "digital": "120px", "print": "28mm" },
+      "monogram": { "digital": "32px", "print": "10mm" }
+    }
+  },
+  "concepts": [
+    {
+      "id": "A",
+      "name": "Botanical Luxury",
+      "universe": "Estufa tropical sofisticada, jardins de Burle Marx",
+      "element": "Folha exuberante brotando da junção B-A",
+      "palette": {
+        "primary": { "name": "Verde Folha Profunda", "hex": "#2F4A3A", "rgb": "47,74,58", "hsl": "142deg,21%,24%" },
+        "primaryAlt": { "name": "Verde Musgo", "hex": "#5C7053", "rgb": "92,112,83", "hsl": "100deg,14%,38%" },
+        "accent": { "name": "Dourado Vintage", "hex": "#B08A4A", "rgb": "176,138,74", "hsl": "35deg,39%,49%" },
+        "support": { "name": "Rosé Empoeirado", "hex": "#D9B5A0", "rgb": "217,181,160", "hsl": "22deg,41%,74%" },
+        "bg": { "name": "Off-white Quente", "hex": "#F5EFE6", "rgb": "245,239,230", "hsl": "33deg,39%,93%" },
+        "text": { "name": "Carvão Vegetal", "hex": "#1F2420", "rgb": "31,36,32", "hsl": "142deg,7%,13%" }
+      }
+    },
+    {
+      "id": "B",
+      "name": "Marble & Wabi-Sabi",
+      "universe": "Mármore travertino, argila, cerâmica artesanal",
+      "element": "Veia mineral cruzando o monograma",
+      "palette": {
+        "primary": { "name": "Terracota Profunda", "hex": "#8C4A2E", "rgb": "140,74,46", "hsl": "18deg,49%,36%" },
+        "primaryAlt": { "name": "Argila Queimada", "hex": "#B86F4A", "rgb": "184,111,74", "hsl": "20deg,43%,51%" },
+        "accent": { "name": "Bronze Escovado", "hex": "#7A5A3D", "rgb": "122,90,61", "hsl": "28deg,33%,36%" },
+        "support": { "name": "Areia Suave", "hex": "#E5D5C0", "rgb": "229,213,192", "hsl": "30deg,43%,83%" },
+        "bg": { "name": "Linho Cru", "hex": "#EFE7D9", "rgb": "239,231,217", "hsl": "34deg,41%,89%" },
+        "text": { "name": "Café Tinto", "hex": "#2E1F15", "rgb": "46,31,21", "hsl": "18deg,38%,13%" }
+      }
+    },
+    {
+      "id": "C",
+      "name": "Fluid Shapes",
+      "universe": "Blobs e curvas líquidas, maximalismo gráfico contemporâneo",
+      "element": "Curva líquida atravessando B e A",
+      "palette": {
+        "primary": { "name": "Azul Pigmento", "hex": "#1E3A5F", "rgb": "30,58,95", "hsl": "211deg,52%,25%" },
+        "primaryAlt": { "name": "Violeta Orquídea", "hex": "#6B4E8C", "rgb": "107,78,140", "hsl": "263deg,28%,43%" },
+        "accent1": { "name": "Coral Quente", "hex": "#E26A52", "rgb": "226,106,82", "hsl": "10deg,72%,60%" },
+        "accent2": { "name": "Mostarda Profunda", "hex": "#C9A14A", "rgb": "201,161,74", "hsl": "41deg,53%,54%" },
+        "support": { "name": "Rosa Pó", "hex": "#F2D7CE", "rgb": "242,215,206", "hsl": "15deg,56%,88%" },
+        "bg": { "name": "Off-white Frio", "hex": "#F4F2EE", "rgb": "244,242,238", "hsl": "33deg,19%,95%" },
+        "text": { "name": "Carvão Azulado", "hex": "#1A1F2B", "rgb": "26,31,43", "hsl": "222deg,25%,14%" }
+      }
+    },
+    {
+      "id": "D",
+      "name": "Maximalismo Tropical Denso",
+      "universe": "Mata fechada, folhagens sobrepostas",
+      "element": "Ramo com folhas emoldurando o monograma",
+      "palette": {
+        "primary": { "name": "Verde Esmeralda Escuro", "hex": "#1B3D2F", "rgb": "27,61,47", "hsl": "152deg,39%,17%" },
+        "primaryAlt": { "name": "Verde Samambaia", "hex": "#3E6B4A", "rgb": "62,107,74", "hsl": "138deg,26%,33%" },
+        "accent1": { "name": "Vermelho Helicônia", "hex": "#C8392F", "rgb": "200,57,47", "hsl": "3deg,61%,48%" },
+        "accent2": { "name": "Amarelo Bananeira", "hex": "#E8B53C", "rgb": "232,181,60", "hsl": "42deg,79%,57%" },
+        "support": { "name": "Verde Jade Claro", "hex": "#A8C4A2", "rgb": "168,196,162", "hsl": "105deg,22%,70%" },
+        "bg": { "name": "Off-white Cálido", "hex": "#F2EFE6", "rgb": "242,239,230", "hsl": "42deg,28%,93%" },
+        "text": { "name": "Musgo Profundo", "hex": "#0F1F16", "rgb": "15,31,22", "hsl": "147deg,35%,9%" }
+      }
+    },
+    {
+      "id": "DARK",
+      "name": "Atelier Noturno",
+      "universe": "Modo noturno universal — dark mode",
+      "element": "Compatível com todos os conceitos",
+      "palette": {
+        "bg": { "name": "Carvão Quente", "hex": "#1B1814", "rgb": "27,24,20", "hsl": "30deg,15%,9%" },
+        "surface": { "name": "Carvão Claro", "hex": "#2A2620", "rgb": "42,38,32", "hsl": "30deg,14%,15%" },
+        "accent1": { "name": "Dourado Quente", "hex": "#C8A464", "rgb": "200,164,100", "hsl": "38deg,47%,59%" },
+        "accent2": { "name": "Verde Luminoso", "hex": "#7BA383", "rgb": "123,163,131", "hsl": "130deg,17%,56%" },
+        "border": { "name": "Linho Escurecido", "hex": "#3E382F", "rgb": "62,56,47", "hsl": "33deg,13%,21%" },
+        "text": { "name": "Linho Claro", "hex": "#EDE5D5", "rgb": "237,229,213", "hsl": "35deg,38%,88%" }
+      }
+    }
+  ]
+}

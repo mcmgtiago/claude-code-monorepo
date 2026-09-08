@@ -1,0 +1,186 @@
+/* ═══════════════════════════════════════════════════════════
+   Kit: New Genre Studio — Typography
+   Fontes: Serrif Condensed (heading), Saans Variable (body), Fragment Mono (mono)
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── @font-face: Proprietary (Framer-hosted) ── */
+/* NOTA: Serrif Condensed Regular e Saans Variable são fontes proprietárias.
+   As URLs abaixo apontam para o CDN do Framer.
+   Alternativas Google Fonts sugeridas:
+   - Heading: "DM Serif Display" ou "Playfair Display" (condensed serif)
+   - Body: "Inter" ou "DM Sans" (geometric sans)
+*/
+
+@font-face {
+  font-family: "Serrif Condensed Regular";
+  src: url("https://framerusercontent.com/assets/OtJp94PYSpTDGKBXXdZXMkV27E.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Saans Variable";
+  src: url("https://framerusercontent.com/assets/n02NY1r6t0j8yHjzBcssUDrV4.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Saans Medium";
+  src: url("https://framerusercontent.com/assets/ql7WEctRB3a8uNodtQppYLb62I.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 570;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Saans Regular";
+  src: url("https://framerusercontent.com/assets/OxeBY6UTBDrdVkYpbWOTAOONI.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 380;
+  font-display: swap;
+}
+
+/* Fragment Mono (Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono&display=swap');
+
+/* ── Escala Tipográfica ── */
+
+.kit-h1 {
+  font-family: var(--kit-font-heading);
+  font-size: var(--kit-fs-h1); /* clamp(40px, 5vw, 72px) */
+  font-weight: var(--kit-fw-regular);
+  line-height: var(--kit-lh-heading); /* 1.05 */
+  letter-spacing: var(--kit-ls-heading); /* -0.02em */
+  color: var(--kit-white);
+  margin: 0;
+}
+
+.kit-h2 {
+  font-family: var(--kit-font-body);
+  font-size: var(--kit-fs-h2); /* clamp(24px, 2.5vw, 32px) */
+  font-weight: var(--kit-fw-regular);
+  line-height: var(--kit-lh-tight); /* 1.1 */
+  letter-spacing: var(--kit-ls-heading); /* -0.02em */
+  color: var(--kit-primary);
+  margin: 0;
+}
+
+.kit-h3 {
+  font-family: var(--kit-font-body);
+  font-size: var(--kit-fs-h3); /* clamp(20px, 2vw, 32px) */
+  font-weight: var(--kit-fw-regular);
+  line-height: var(--kit-lh-tight);
+  letter-spacing: -0.01em;
+  color: var(--kit-primary);
+  margin: 0;
+}
+
+.kit-h4 {
+  font-family: var(--kit-font-body);
+  font-size: 20px;
+  font-weight: var(--kit-fw-medium);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--kit-primary);
+  margin: 0;
+}
+
+.kit-h5 {
+  font-family: var(--kit-font-body-medium);
+  font-size: 18px;
+  font-weight: var(--kit-fw-semibold);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--kit-primary);
+  margin: 0;
+}
+
+.kit-h6 {
+  font-family: var(--kit-font-body-medium);
+  font-size: 16px;
+  font-weight: var(--kit-fw-semibold);
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: var(--kit-secondary);
+  margin: 0;
+}
+
+.kit-body {
+  font-family: var(--kit-font-body);
+  font-size: var(--kit-fs-body); /* 16px */
+  font-weight: var(--kit-fw-regular);
+  line-height: var(--kit-lh-body); /* 1.5 */
+  letter-spacing: var(--kit-ls-body); /* -0.01em */
+  color: var(--kit-secondary);
+}
+
+.kit-body-lg {
+  font-family: var(--kit-font-body);
+  font-size: var(--kit-fs-body-lg); /* 18px */
+  font-weight: var(--kit-fw-regular);
+  line-height: var(--kit-lh-body);
+  letter-spacing: var(--kit-ls-body);
+  color: var(--kit-secondary);
+}
+
+.kit-caption {
+  font-family: var(--kit-font-body);
+  font-size: var(--kit-fs-caption); /* 14px */
+  font-weight: var(--kit-fw-medium);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: var(--kit-muted);
+}
+
+.kit-label {
+  font-family: var(--kit-font-body-medium);
+  font-size: var(--kit-fs-label); /* 12px */
+  font-weight: var(--kit-fw-semibold);
+  line-height: 1.5;
+  letter-spacing: var(--kit-ls-label); /* 0.04em */
+  text-transform: uppercase;
+  color: var(--kit-muted);
+}
+
+.kit-mono {
+  font-family: var(--kit-font-mono);
+  font-size: var(--kit-fs-caption);
+  font-weight: var(--kit-fw-regular);
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+/* ── Links ── */
+.kit-link {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--kit-transition-color);
+}
+
+.kit-link:hover {
+  color: var(--kit-muted);
+}
+
+.kit-link--underline {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ── Responsive adjustments ── */
+@media (max-width: 767px) {
+  .kit-h1 {
+    font-size: 36px;
+    line-height: 1.1;
+  }
+  .kit-h2 {
+    font-size: 24px;
+  }
+  .kit-h3 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .kit-h1 {
+    font-size: 52px;
+  }
+}

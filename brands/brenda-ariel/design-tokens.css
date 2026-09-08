@@ -1,0 +1,104 @@
+/* =========================================================
+   Brenda Ariel · Design de Interiores
+   Design Tokens — Maximalismo Orgânico de Alto Padrão
+   ========================================================= */
+
+:root {
+  /* ---------- Tipografia ---------- */
+  --ba-font-wordmark: 'Playfair Display', 'DM Serif Display', Didot, 'Bodoni Moda', serif;
+  --ba-font-tagline: 'Inter', 'Montserrat', system-ui, sans-serif;
+
+  /* ---------- Concept A · Botanical Luxury ---------- */
+  --ba-botanical-primary: #2F4A3A;
+  --ba-botanical-primary-alt: #5C7053;
+  --ba-botanical-accent: #B08A4A;
+  --ba-botanical-support: #D9B5A0;
+  --ba-botanical-bg: #F5EFE6;
+  --ba-botanical-text: #1F2420;
+
+  /* ---------- Concept B · Marble & Wabi-Sabi ---------- */
+  --ba-wabi-primary: #8C4A2E;
+  --ba-wabi-primary-alt: #B86F4A;
+  --ba-wabi-accent: #7A5A3D;
+  --ba-wabi-support: #E5D5C0;
+  --ba-wabi-bg: #EFE7D9;
+  --ba-wabi-text: #2E1F15;
+
+  /* ---------- Concept C · Fluid Shapes ---------- */
+  --ba-fluid-primary: #1E3A5F;
+  --ba-fluid-primary-alt: #6B4E8C;
+  --ba-fluid-accent-1: #E26A52;
+  --ba-fluid-accent-2: #C9A14A;
+  --ba-fluid-support: #F2D7CE;
+  --ba-fluid-bg: #F4F2EE;
+  --ba-fluid-text: #1A1F2B;
+
+  /* ---------- Concept D · Maximalismo Tropical Denso ---------- */
+  --ba-tropical-primary: #1B3D2F;
+  --ba-tropical-primary-alt: #3E6B4A;
+  --ba-tropical-accent-1: #C8392F;
+  --ba-tropical-accent-2: #E8B53C;
+  --ba-tropical-support: #A8C4A2;
+  --ba-tropical-bg: #F2EFE6;
+  --ba-tropical-text: #0F1F16;
+
+  /* ---------- Reforço · Dark Mode Atelier Noturno ---------- */
+  --ba-dark-bg: #1B1814;
+  --ba-dark-surface: #2A2620;
+  --ba-dark-accent-1: #C8A464;
+  --ba-dark-accent-2: #7BA383;
+  --ba-dark-border: #3E382F;
+  --ba-dark-text: #EDE5D5;
+}
+
+/* =========================================================
+   Helpers de aplicação por paleta
+   ========================================================= */
+
+.theme-botanical {
+  --color-primary: var(--ba-botanical-primary);
+  --color-primary-alt: var(--ba-botanical-primary-alt);
+  --color-accent: var(--ba-botanical-accent);
+  --color-support: var(--ba-botanical-support);
+  --color-bg: var(--ba-botanical-bg);
+  --color-text: var(--ba-botanical-text);
+}
+
+.theme-wabi {
+  --color-primary: var(--ba-wabi-primary);
+  --color-primary-alt: var(--ba-wabi-primary-alt);
+  --color-accent: var(--ba-wabi-accent);
+  --color-support: var(--ba-wabi-support);
+  --color-bg: var(--ba-wabi-bg);
+  --color-text: var(--ba-wabi-text);
+}
+
+.theme-fluid {
+  --color-primary: var(--ba-fluid-primary);
+  --color-primary-alt: var(--ba-fluid-primary-alt);
+  --color-accent: var(--ba-fluid-accent-1);
+  --color-accent-2: var(--ba-fluid-accent-2);
+  --color-support: var(--ba-fluid-support);
+  --color-bg: var(--ba-fluid-bg);
+  --color-text: var(--ba-fluid-text);
+}
+
+.theme-tropical {
+  --color-primary: var(--ba-tropical-primary);
+  --color-primary-alt: var(--ba-tropical-primary-alt);
+  --color-accent: var(--ba-tropical-accent-1);
+  --color-accent-2: var(--ba-tropical-accent-2);
+  --color-support: var(--ba-tropical-support);
+  --color-bg: var(--ba-tropical-bg);
+  --color-text: var(--ba-tropical-text);
+}
+
+.theme-dark {
+  --color-primary: var(--ba-dark-text);
+  --color-accent: var(--ba-dark-accent-1);
+  --color-accent-2: var(--ba-dark-accent-2);
+  --color-bg: var(--ba-dark-bg);
+  --color-surface: var(--ba-dark-surface);
+  --color-border: var(--ba-dark-border);
+  --color-text: var(--ba-dark-text);
+}

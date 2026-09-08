@@ -1,0 +1,3 @@
+legal_name,trade_name,cnpj,website,email,phone,cnae_primary,cnae_secondary,city,state,description,source,employee_count,decision_maker,decision_maker_role,linkedin_url,instagram_url
+Example Financial Platform,,,https://example.com,hello@example.com,,6619-3/99,6203-1/00,Sao Paulo,SP,"Payment infrastructure and account operations platform",CNPJ sample,42,,,,
+Example Revenue Software,,,https://example.org,contact@example.org,,6203-1/00,6202-3/00,Florianopolis,SC,"B2B SaaS for revenue operations and workflow automation",CNPJ sample,28,,,,

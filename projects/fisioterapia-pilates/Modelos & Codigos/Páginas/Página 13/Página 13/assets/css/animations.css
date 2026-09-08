@@ -1,0 +1,195 @@
+/* ═══════════════════════════════════════════════════════════
+   Kit: New Genre Studio — Animations CSS
+   @keyframes e classes de animação
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Keyframes ── */
+
+@keyframes kit-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes kit-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes kit-fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes kit-slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes kit-slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes kit-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes kit-word-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes kit-marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ── Animation Classes ── */
+
+.kit-anim-fade-in {
+  animation: kit-fade-in 0.6s var(--kit-ease-smooth) forwards;
+}
+
+.kit-anim-fade-in-up {
+  animation: kit-fade-in-up 0.8s var(--kit-ease-smooth) forwards;
+}
+
+.kit-anim-fade-in-down {
+  animation: kit-fade-in-down 0.6s var(--kit-ease-smooth) forwards;
+}
+
+.kit-anim-slide-in-left {
+  animation: kit-slide-in-left 0.8s var(--kit-ease-smooth) forwards;
+}
+
+.kit-anim-slide-in-right {
+  animation: kit-slide-in-right 0.8s var(--kit-ease-smooth) forwards;
+}
+
+.kit-anim-scale-in {
+  animation: kit-scale-in 0.6s var(--kit-ease-smooth) forwards;
+}
+
+.kit-anim-word-reveal {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.kit-anim-word-reveal > span {
+  display: inline-block;
+  animation: kit-word-reveal 0.6s var(--kit-ease-smooth) forwards;
+  opacity: 0;
+}
+
+/* ── Stagger delays ── */
+.kit-anim-delay-1 { animation-delay: 0.1s; }
+.kit-anim-delay-2 { animation-delay: 0.2s; }
+.kit-anim-delay-3 { animation-delay: 0.3s; }
+.kit-anim-delay-4 { animation-delay: 0.4s; }
+.kit-anim-delay-5 { animation-delay: 0.5s; }
+.kit-anim-delay-6 { animation-delay: 0.6s; }
+.kit-anim-delay-7 { animation-delay: 0.7s; }
+.kit-anim-delay-8 { animation-delay: 0.8s; }
+
+/* ── Marquee continuous scroll ── */
+.kit-anim-marquee {
+  display: flex;
+  animation: kit-marquee-scroll 30s linear infinite;
+}
+
+/* ── Scroll-triggered visibility (paused by default) ── */
+/* Removed static opacity: 0 to allow GSAP to work */
+
+[data-anim].kit-visible {
+  opacity: 1;
+}
+
+[data-anim="fade-in"].kit-visible {
+  animation: kit-fade-in 0.6s var(--kit-ease-smooth) forwards;
+}
+
+[data-anim="fade-in-up"].kit-visible {
+  animation: kit-fade-in-up 0.8s var(--kit-ease-smooth) forwards;
+}
+
+[data-anim="fade-in-down"].kit-visible {
+  animation: kit-fade-in-down 0.6s var(--kit-ease-smooth) forwards;
+}
+
+[data-anim="slide-in-left"].kit-visible {
+  animation: kit-slide-in-left 0.8s var(--kit-ease-smooth) forwards;
+}
+
+[data-anim="slide-in-right"].kit-visible {
+  animation: kit-slide-in-right 0.8s var(--kit-ease-smooth) forwards;
+}
+
+[data-anim="scale-in"].kit-visible {
+  animation: kit-scale-in 0.6s var(--kit-ease-smooth) forwards;
+}
+
+/* ── Transition utilities ── */
+.kit-hover-lift {
+  transition: transform 0.3s var(--kit-ease-smooth);
+}
+
+.kit-hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+.kit-hover-scale {
+  transition: transform 0.3s var(--kit-ease-smooth);
+}
+
+.kit-hover-scale:hover {
+  transform: scale(1.02);
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+

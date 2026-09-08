@@ -1,0 +1,71 @@
+{
+  "slug": "blindagem-24h",
+  "label": "Blindagem 24h Emergência",
+  "company": {
+    "name": "Blindagem 24h Controle de Pragas",
+    "cnpj": "00.000.000/0001-00",
+    "cnae": "8122-2/00",
+    "phone": "51999999999",
+    "phoneFormatted": "(51) 99999-9999",
+    "email": "contato@blindagem24h.com.br",
+    "whatsappMessage": "Olá! Vim pelo site e gostaria de um orçamento grátis para dedetização em {cidade}.",
+    "instagram": "@blindagem24h",
+    "facebook": "/blindagem24h",
+    "yearsExperience": 15,
+    "googleRating": 4.9,
+    "propertiesServed": 2000,
+    "shortDescription": "Empresa especializada em dedetização premium, controle de pragas urbanas e atendimento rápido em São Leopoldo.",
+    "logo": "/tenants/blindagem-24h/logo.svg"
+  },
+  "theme": {
+    "primary": "#22C55E",
+    "danger": "#EF4444",
+    "warning": "#FACC15",
+    "bg": "#080F0C",
+    "text": "#F8FAFC",
+    "muted": "#94A3B8",
+    "surface": "#111827",
+    "radius": "0.8rem"
+  },
+  "media": {
+    "setId": "emergencia-24h",
+    "hero": {
+      "type": "video",
+      "src": "https://videos.pexels.com/video-files/6195711/6195711-uhd_2560_1440_25fps.mp4",
+      "poster": "https://images.pexels.com/photos/6195125/pexels-photo-6195125.jpeg?auto=compress&cs=tinysrgb&w=1800",
+      "alt": "Profissional equipado realizando controle técnico em ambiente urbano",
+      "photographer": "Pexels",
+      "href": "https://www.pexels.com/"
+    },
+    "gallery": [],
+    "og": {
+      "src": "https://images.pexels.com/photos/6195125/pexels-photo-6195125.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop",
+      "alt": "Dedetização premium urbana",
+      "photographer": "Pexels",
+      "href": "https://www.pexels.com/"
+    }
+  },
+  "coverage": {
+    "defaultCity": "São Leopoldo",
+    "defaultState": "RS",
+    "neighborhoods": [
+      "Centro",
+      "Scharlau",
+      "Feitoria",
+      "Campina",
+      "Rio Branco",
+      "Santos Dumont",
+      "Vicentina",
+      "Cristo Rei"
+    ],
+    "regions": [
+      "Centro",
+      "Zona Norte",
+      "Zona Sul",
+      "Região Metropolitana",
+      "Bairros próximos"
+    ]
+  },
+  "copyRef": "default",
+  "createdAt": "2026-07-29"
+}

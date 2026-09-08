@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CanalPro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <main class="hero">
+    <div class="hero__video-wrapper fixed top-0 left-0 w-full h-full z-0 origin-center" aria-hidden="true">
+      <video
+        id="hero-video"
+        class="hero__video w-full h-full"
+        muted
+        playsinline
+        crossorigin="anonymous"
+        preload="auto"
+      ></video>
+      <div class="hero__overlay"></div>
+    </div>
+
+    <section class="hero__content">
+      <div class="hero__message">
+        <h1>ESCALAMOS<br>CANAIS PARA R$2M+<br><strong>O PR&Oacute;XIMO &Eacute; O SEU</strong></h1>
+      </div>
+
+      <p class="hero__side-text">Para profissionais prontos para<br>dominar seu nicho.</p>
+    </section>
+
+    <section class="projects-section" aria-labelledby="projects-title">
+      <div class="projects-section__inner">
+        <h2 id="projects-title">Solu&ccedil;&otilde;es que entregamos</h2>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <span class="project-card__dot" aria-hidden="true"></span>
+            <h3>Estrat&eacute;gia de Crescimento</h3>
+            <p>Criamos um plano claro para posicionar sua oferta, organizar canais de aquisi&ccedil;&atilde;o e transformar aten&ccedil;&atilde;o em demanda real.</p>
+          </article>
+
+          <article class="project-card">
+            <span class="project-card__dot" aria-hidden="true"></span>
+            <h3>Conte&uacute;do que Converte</h3>
+            <p>Desenhamos narrativas, criativos e campanhas para fazer o p&uacute;blico entender valor r&aacute;pido e avan&ccedil;ar com confian&ccedil;a at&eacute; a compra.</p>
+          </article>
+
+          <article class="project-card">
+            <span class="project-card__dot" aria-hidden="true"></span>
+            <h3>Opera&ccedil;&atilde;o Comercial</h3>
+            <p>Implementamos processos simples de venda, follow-up e m&eacute;tricas para sua equipe acompanhar oportunidades sem perder velocidade.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="hero__loading">Loading... <span id="hero-progress">0</span>%</div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "source": "RECON/original-recon.json",
+  "url": "https://luminal-creative-studio.aura.build/",
+  "allExternal": false,
+  "scriptCount": 1,
+  "mapCount": 1,
+  "results": [
+    {
+      "scriptUrl": "https://luminal-creative-studio.aura.build/assets/index-C8dVQJFw.js",
+      "status": "ok",
+      "mapUrl": "https://luminal-creative-studio.aura.build/assets/index-C8dVQJFw.js.map",
+      "mapFile": "C:\\Users\\Administrator\\AppData\\Roaming\\Open Design\\namespaces\\release-stable-win\\data\\projects\\0647772f-3577-4629-bc95-f0fdeeadf852\\RECON\\sourcemaps\\index-C8dVQJFw.js.map-7cfb8b83b1.map",
+      "error": ""
+    }
+  ]
+}

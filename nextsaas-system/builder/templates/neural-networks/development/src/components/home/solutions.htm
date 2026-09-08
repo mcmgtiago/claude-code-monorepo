@@ -1,0 +1,135 @@
+<!-- solutions section -->
+<section class="py-[80px] md:py-[120px] xl:py-[156px]" aria-labelledby="solutions-heading">
+  <div class="main-container">
+    <div class="space-y-14">
+      <!-- content  -->
+      <div class="space-y-3">
+        <h2
+          data-text-reveal
+          class="font-sora text-sora-heading-4 md:text-sora-heading-3 lg:text-sora-heading-2 text-background-13/90 mx-auto max-w-[703px] text-center font-normal"
+        >
+          Smart solutions, tailored for you
+        </h2>
+        <p
+          data-text-reveal
+          data-delay="0.2"
+          class="font-inter-tight text-tagline-1 text-background-13/60 mx-auto max-w-[390px] text-center font-normal"
+          itemprop="description"
+        >
+          Empowering industries with AI-driven innovation to solve real-world challenges.
+        </p>
+      </div>
+
+      <!-- card  -->
+
+      <div
+        class="grid grid-cols-12 items-center justify-center gap-4 *:col-span-12 md:*:col-span-6 lg:gap-2 lg:*:col-start-auto md:[&>*:last-child]:col-span-12 lg:[&>*:nth-child(5n+1)]:col-span-4 lg:[&>*:nth-child(5n+2)]:col-span-4 lg:[&>*:nth-child(5n+3)]:col-span-4 lg:[&>*:nth-child(5n+4)]:col-span-6 lg:[&>*:nth-child(5n+5)]:col-span-6"
+        role="list"
+        aria-label="AI solutions"
+      >
+        <!-- card one  -->
+        <div data-opai-animate data-delay="0.1">
+          <a href="./service-details.html">
+            <Component
+              src="src/components/shared/card/services-card.htm"
+              title="Deep Learning"
+              description="Train multi-layer Neural Networks for complex pattern recognition and prediction."
+              icon="ns-shape-1"
+            />
+          </a>
+        </div>
+
+        <!-- card two  -->
+        <div
+          data-opai-animate
+          data-delay="0.2"
+          class="col-span-12 md:col-span-6 lg:col-span-4"
+          role="listitem"
+          itemscope
+          itemtype="https://schema.org/Service"
+        >
+          <a href="./service-details.html">
+            <Component
+              src="src/components/shared/card/services-card.htm"
+              title="Computer Vision"
+              description="Image and video analysis powered by convolutions Neural Networks (CNNs)."
+              icon="ns-shape-2"
+            />
+          </a>
+        </div>
+
+        <!-- card three  -->
+        <div
+          data-opai-animate
+          data-delay="0.3"
+          class="col-span-12 md:col-span-6 lg:col-span-4"
+          role="listitem"
+          itemscope
+          itemtype="https://schema.org/Service"
+        >
+          <a href="./service-details.html">
+            <Component
+              src="src/components/shared/card/services-card.htm"
+              title="NLP & Transformers"
+              description="Language understanding and generation with transformer architectures."
+              icon="ns-shape-3"
+            />
+          </a>
+        </div>
+
+        <!-- card four  -->
+        <div
+          data-opai-animate
+          data-delay="0.4"
+          class="col-span-12 md:col-span-6"
+          role="listitem"
+          itemscope
+          itemtype="https://schema.org/Service"
+        >
+          <a href="./service-details.html">
+            <Component
+              src="src/components/shared/card/services-card.htm"
+              title="Neural Architecture"
+              description="Custom network design, hyperparameter tuning, and automated ML (NAS)."
+              icon="ns-shape-4"
+            />
+          </a>
+        </div>
+
+        <!-- card five  -->
+        <div
+          data-opai-animate
+          data-delay="0.5"
+          class="col-span-12 col-start-auto md:col-span-6 md:col-start-4 lg:col-start-auto"
+          role="listitem"
+          itemscope
+          itemtype="https://schema.org/Service"
+        >
+          <a href="./service-details.html">
+            <Component
+              src="src/components/shared/card/services-card.htm"
+              title="Model Deployment"
+              description="Production inference APIs and edge deployment for trained Neural Networks."
+              icon="ns-shape-5"
+            />
+          </a>
+        </div>
+      </div>
+
+      <!-- btn -->
+      <div
+        data-opai-animate
+        data-delay="0.8"
+        class="text-center"
+        role="region"
+        aria-label="Call to action"
+      >
+        <Component
+          src="src/components/shared/button/link-primary.htm"
+          button-text="Discover our services"
+          href="./services.html"
+        />
+      </div>
+    </div>
+  </div>
+</section>

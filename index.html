@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Marina Costa — Psicóloga Clínica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mint: {
+                            50: '#F1F8F1',
+                            100: '#E8F5E9',
+                            200: '#C8E6C9',
+                            300: '#A5D6A7',
+                            400: '#81C784',
+                            500: '#66BB6A',
+                            600: '#4CAF50',
+                            700: '#388E3C',
+                            800: '#2E7D32',
+                            900: '#1B5E20',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        sans: ['DM Sans', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .tags-scroll::-webkit-scrollbar {
+            display: none;
+        }
+        .tags-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-900 bg-white antialiased">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-mint-100">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2">
+                <svg class="w-8 h-8 text-mint-800" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 20c0-4 4-8 4-8s4 4 4 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="16" cy="11" r="2" fill="currentColor"/>
+                </svg>
+                <span class="font-serif text-xl font-semibold">Dra. Marina Costa</span>
+            </a>
+            <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+                <li><a href="#inicio" class="hover:text-mint-800 transition-colors">Início</a></li>
+                <li><a href="#servicos" class="hover:text-mint-800 transition-colors">Serviços</a></li>
+                <li><a href="#sobre" class="hover:text-mint-800 transition-colors">Sobre</a></li>
+                <li><a href="#depoimentos" class="hover:text-mint-800 transition-colors">Depoimentos</a></li>
+                <li><a href="#contato" class="hover:text-mint-800 transition-colors">Contato</a></li>
+            </ul>
+            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-2 bg-mint-800 text-white text-sm font-medium px-5 py-2.5 rounded-lg hover:bg-mint-900 transition-colors focus:outline-none focus:ring-2 focus:ring-mint-800 focus:ring-offset-2">
+                Agendar Sessão
+            </a>
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 hover:text-mint-800" aria-label="Abrir menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-mint-100 px-6 py-4">
+            <ul class="flex flex-col gap-4 text-sm font-medium text-gray-600">
+                <li><a href="#inicio" class="hover:text-mint-800">Início</a></li>
+                <li><a href="#servicos" class="hover:text-mint-800">Serviços</a></li>
+                <li><a href="#sobre" class="hover:text-mint-800">Sobre</a></li>
+                <li><a href="#depoimentos" class="hover:text-mint-800">Depoimentos</a></li>
+                <li><a href="#contato" class="hover:text-mint-800">Contato</a></li>
+            </ul>
+            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="mt-4 block text-center bg-mint-800 text-white text-sm font-medium px-5 py-2.5 rounded-lg">
+                Agendar Sessão
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="inicio" class="pt-28 md:pt-36 pb-20 bg-mint-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <p class="text-xs font-semibold tracking-[0.2em] text-mint-800 uppercase mb-4">Cuidar de si é um ato de coragem</p>
+                    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
+                        Você <span class="font-bold">não precisa</span> enfrentar isso <span class="font-bold">sozinha</span>
+                    </h1>
+                    <p class="text-gray-600 text-lg mb-8 max-w-lg">
+                        Relaxe. Nada disso é sua culpa. Não pare, o que você teme não vai acontecer. Aqui é um espaço seguro para você se reconectar.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-10">
+                        <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-mint-800 text-white font-medium px-6 py-3 rounded-lg hover:bg-mint-900 transition-colors focus:outline-none focus:ring-2 focus:ring-mint-800 focus:ring-offset-2">
+                            Agendar Sessão
+                        </a>
+                        <a href="#servicos" class="inline-flex items-center gap-2 border-2 border-mint-800 text-mint-800 font-medium px-6 py-3 rounded-lg hover:bg-mint-800 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-mint-800 focus:ring-offset-2">
+                            Conheça os Serviços
+                        </a>
+                    </div>
+                    <!-- Social proof -->
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="flex -space-x-2">
+                            <img src="https://i.pravatar.cc/40?img=1" alt="Paciente" class="w-9 h-9 rounded-full border-2 border-white">
+                            <img src="https://i.pravatar.cc/40?img=5" alt="Paciente" class="w-9 h-9 rounded-full border-2 border-white">
+                            <img src="https://i.pravatar.cc/40?img=9" alt="Paciente" class="w-9 h-9 rounded-full border-2 border-white">
+                        </div>
+                        <div class="text-sm">
+                            <span class="font-semibold">4.9</span>
+                            <span class="text-yellow-500">★★★★★</span>
+                            <span class="text-gray-500">— Avaliação de 200+ pacientes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in relative">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl shadow-mint-200/50">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=750&fit=crop&crop=top" alt="Dra. Marina Costa — Psicóloga Clínica" class="w-full h-[500px] md:h-[600px] object-cover">
+                    </div>
+                </div>
+            </div>
+            <!-- Tags -->
+            <div class="mt-10 fade-in">
+                <div class="tags-scroll flex gap-3 overflow-x-auto pb-2">
+                    <span class="flex-shrink-0 inline-flex items-center gap-1.5 bg-mint-800 text-white text-sm font-medium px-4 py-2 rounded-full">
+                        Ansiedade <span class="w-1.5 h-1.5 bg-white/60 rounded-full"></span>
+                    </span>
+                    <span class="flex-shrink-0 inline-flex items-center gap-1.5 bg-mint-800 text-white text-sm font-medium px-4 py-2 rounded-full">
+                        Burnout <span class="w-1.5 h-1.5 bg-white/60 rounded-full"></span>
+                    </span>
+                    <span class="flex-shrink-0 inline-flex items-center gap-1.5 bg-mint-800 text-white text-sm font-medium px-4 py-2 rounded-full">
+                        Autoestima <span class="w-1.5 h-1.5 bg-white/60 rounded-full"></span>
+                    </span>
+                    <span class="flex-shrink-0 inline-flex items-center gap-1.5 bg-mint-800 text-white text-sm font-medium px-4 py-2 rounded-full">
+                        Depressão <span class="w-1.5 h-1.5 bg-white/60 rounded-full"></span>
+                    </span>
+                    <span class="flex-shrink-0 inline-flex items-center gap-1.5 bg-mint-800 text-white text-sm font-medium px-4 py-2 rounded-full">
+                        Luto <span class="w-1.5 h-1.5 bg-white/60 rounded-full"></span>
+                    </span>
+                    <span class="flex-shrink-0 inline-flex items-center gap-1.5 bg-mint-800 text-white text-sm font-medium px-4 py-2 rounded-full">
+                        TDAH <span class="w-1.5 h-1.5 bg-white/60 rounded-full"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre a Profissional -->
+    <section id="sobre" class="py-24 md:py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="fade-in relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="rounded-xl overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=300&h=400&fit=crop" alt="Ambiente do consultório" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="rounded-xl overflow-hidden mt-8">
+                            <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=300&h=400&fit=crop" alt="Dra. Marina em atendimento" class="w-full h-64 object-cover">
+                        </div>
+                    </div>
+                    <!-- Badge -->
+                    <div class="absolute bottom-4 left-4 bg-mint-800 text-white px-4 py-3 rounded-xl shadow-lg">
+                        <p class="text-2xl font-bold">8+</p>
+                        <p class="text-xs opacity-90">anos de experiência</p>
+                    </div>
+                    <!-- Video placeholder -->
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                        <button aria-label="Reproduzir vídeo de apresentação" class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform focus:outline-none focus:ring-2 focus:ring-mint-800">
+                            <svg class="w-6 h-6 text-mint-800 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <h2 class="font-serif text-3xl md:text-4xl mb-6">
+                        Conheça a <br>Dra. Marina Costa
+                    </h2>
+                    <div class="bg-mint-50 border border-mint-200 rounded-xl p-5 mb-6 flex items-center justify-between">
+                        <div>
+                            <p class="font-semibold text-mint-900">Psicóloga Clínica — CRP 06/123456</p>
+                            <p class="text-sm text-gray-600">Especialista em TCC • Mestre em Psicologia da Saúde</p>
+                        </div>
+                        <div class="w-10 h-10 bg-mint-800 rounded-full flex items-center justify-center flex-shrink-0">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Acredito que cada pessoa carrega dentro de si a capacidade de se transformar. Meu papel é oferecer um espaço seguro, sem julgamentos, onde você possa explorar seus pensamentos e encontrar novas formas de lidar com o que sente.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Com formação em Terapia Cognitivo-Comportamental e mais de 8 anos de prática clínica, trabalho com adultos que enfrentam ansiedade, burnout e desafios emocionais do dia a dia. Atendo online e presencialmente em São Paulo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Citação Destaque -->
+    <section class="py-20 md:py-28 bg-mint-50 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1200&h=400&fit=crop" alt="" class="w-full h-full object-cover" aria-hidden="true">
+        </div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10 fade-in">
+            <svg class="w-12 h-12 text-mint-300 mx-auto mb-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+            <blockquote class="font-serif text-2xl md:text-3xl lg:text-4xl italic text-gray-800 leading-relaxed">
+                "No fim das contas, uma pessoa precisa de mais coragem para viver do que para desistir. Para quem está sofrendo, pedir ajuda não é fraqueza — é força."
+            </blockquote>
+            <div class="mt-8 w-16 h-0.5 bg-mint-800 mx-auto"></div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-24 md:py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12 items-start">
+                <!-- Lista de serviços -->
+                <div class="fade-in">
+                    <ul class="space-y-8">
+                        <li class="group">
+                            <a href="#" class="flex items-center justify-between pb-4 border-b border-gray-200 hover:border-mint-800 transition-colors">
+                                <div>
+                                    <h3 class="font-serif text-xl font-semibold mb-1">Psicoterapia Individual</h3>
+                                    <p class="text-sm text-gray-500">Sessões personalizadas com foco em TCC</p>
+                                </div>
+                                <svg class="w-5 h-5 text-mint-800 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#" class="flex items-center justify-between pb-4 border-b border-gray-200 hover:border-mint-800 transition-colors">
+                                <div>
+                                    <h3 class="font-serif text-xl font-semibold mb-1">Terapia de Casal</h3>
+                                    <p class="text-sm text-gray-500">Fortalecimento de vínculos e comunicação</p>
+                                </div>
+                                <svg class="w-5 h-5 text-mint-800 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#" class="flex items-center justify-between pb-4 border-b border-gray-200 hover:border-mint-800 transition-colors">
+                                <div>
+                                    <h3 class="font-serif text-xl font-semibold mb-1">Orientação Parental</h3>
+                                    <p class="text-sm text-gray-500">Apoio baseado em evidências para famílias</p>
+                                </div>
+                                <svg class="w-5 h-5 text-mint-800 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Imagem central -->
+                <div class="fade-in">
+                    <div class="rounded-2xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=400&h=500&fit=crop" alt="Sessão de terapia em ambiente acolhedor" class="w-full h-80 md:h-[400px] object-cover">
+                    </div>
+                </div>
+                <!-- Texto + CTA -->
+                <div class="fade-in">
+                    <h2 class="font-serif text-3xl md:text-4xl mb-4">
+                        Cuidado personalizado para cada fase da vida
+                    </h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Cada pessoa é única, e o tratamento também deve ser. Utilizo técnicas baseadas em evidências, adaptadas ao seu momento, para que você recupere o equilíbrio e a confiança em si.
+                    </p>
+                    <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border-2 border-mint-800 text-mint-800 font-medium px-6 py-3 rounded-lg hover:bg-mint-800 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-mint-800 focus:ring-offset-2">
+                        Agendar Sessão
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="py-24 md:py-32 bg-mint-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-serif text-3xl md:text-4xl mb-4">O que dizem sobre o processo terapêutico</h2>
+                <p class="text-gray-500">Relatos reais de quem já passou por aqui</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Depoimento 1 -->
+                <div class="fade-in bg-white rounded-2xl p-8 flex gap-5 items-start shadow-sm">
+                    <img src="https://i.pravatar.cc/80?img=23" alt="Foto de Camila R." class="w-16 h-16 rounded-full object-cover flex-shrink-0 grayscale">
+                    <div>
+                        <p class="text-gray-700 italic mb-4">
+                            "Nos dias realmente difíceis, quando sinto que não vou aguentar, lembro que já passei por isso antes. A terapia me deu essa clareza."
+                        </p>
+                        <p class="font-semibold text-sm text-mint-800">Camila R.</p>
+                    </div>
+                </div>
+                <!-- Depoimento 2 -->
+                <div class="fade-in bg-white rounded-2xl p-8 flex gap-5 items-start shadow-sm">
+                    <img src="https://i.pravatar.cc/80?img=32" alt="Foto de Lucas M." class="w-16 h-16 rounded-full object-cover flex-shrink-0">
+                    <div>
+                        <p class="text-gray-700 italic mb-4">
+                            "Se até agora você conseguiu sobreviver a tudo que passou, eu tenho orgulho de você. A Dra. Marina me ajudou a enxergar isso."
+                        </p>
+                        <p class="font-semibold text-sm text-mint-800">Lucas M.</p>
+                    </div>
+                </div>
+                <!-- Depoimento 3 -->
+                <div class="fade-in bg-white rounded-2xl p-8 flex gap-5 items-start shadow-sm">
+                    <img src="https://i.pravatar.cc/80?img=44" alt="Foto de Beatriz S." class="w-16 h-16 rounded-full object-cover flex-shrink-0">
+                    <div>
+                        <p class="text-gray-700 italic mb-4">
+                            "Não se preocupe, cada problema na sua vida tem um propósito. Aprendi a ver as coisas de outro ângulo."
+                        </p>
+                        <p class="font-semibold text-sm text-mint-800">Beatriz S.</p>
+                    </div>
+                </div>
+                <!-- Depoimento 4 -->
+                <div class="fade-in bg-white rounded-2xl p-8 flex gap-5 items-start shadow-sm">
+                    <img src="https://i.pravatar.cc/80?img=12" alt="Foto de André P." class="w-16 h-16 rounded-full object-cover flex-shrink-0 grayscale">
+                    <div>
+                        <p class="text-gray-700 italic mb-4">
+                            "Não comece o dia com arrependimentos de ontem. A terapia me ensinou a focar no presente e construir um amanhã melhor."
+                        </p>
+                        <p class="font-semibold text-sm text-mint-800">André P.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section id="contato" class="py-16 md:py-20 bg-mint-800">
+        <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <h2 class="font-serif text-2xl md:text-3xl text-white">
+                Conte o que você está sentindo. Não guarde para si.
+            </h2>
+            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 inline-flex items-center gap-2 bg-white text-mint-800 font-semibold px-7 py-3.5 rounded-lg hover:bg-mint-50 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-mint-800">
+                Fale Comigo
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-mint-50 border-t border-mint-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <!-- Logo + descrição -->
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <svg class="w-7 h-7 text-mint-800" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 20c0-4 4-8 4-8s4 4 4 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="16" cy="11" r="2" fill="currentColor"/>
+                        </svg>
+                        <span class="font-serif text-lg font-semibold">Dra. Marina Costa</span>
+                    </div>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        Psicóloga clínica com atendimento humanizado, online e presencial. Seu espaço seguro para recomeçar.
+                    </p>
+                </div>
+                <!-- Serviços -->
+                <div>
+                    <h4 class="font-semibold text-sm uppercase tracking-wider text-gray-900 mb-4">Serviços</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-mint-800 transition-colors">Psicoterapia Individual</a></li>
+                        <li><a href="#" class="hover:text-mint-800 transition-colors">Terapia de Casal</a></li>
+                        <li><a href="#" class="hover:text-mint-800 transition-colors">Orientação Parental</a></li>
+                        <li><a href="#" class="hover:text-mint-800 transition-colors">Atendimento Online</a></li>
+                    </ul>
+                </div>
+                <!-- Institucional -->
+                <div>
+                    <h4 class="font-semibold text-sm uppercase tracking-wider text-gray-900 mb-4">Institucional</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-mint-800 transition-colors">Sobre</a></li>
+                        <li><a href="#" class="hover:text-mint-800 transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-mint-800 transition-colors">Política de Privacidade</a></li>
+                        <li><a href="#" class="hover:text-mint-800 transition-colors">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                <!-- Redes -->
+                <div>
+                    <h4 class="font-semibold text-sm uppercase tracking-wider text-gray-900 mb-4">Redes Sociais</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-mint-800 transition-colors">Instagram</a></li>
+                        <li><a href="#" class="hover:text-mint-800 transition-colors">LinkedIn</a></li>
+                        <li><a href="#" class="hover:text-mint-800 transition-colors">WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Bottom -->
+            <div class="pt-8 border-t border-mint-200 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+                <p>© 2024 Dra. Marina Costa — CRP 06/123456. Todos os direitos reservados.</p>
+                <p>Este site não substitui consulta profissional. Em caso de emergência, ligue 188 (CVV).</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Fade-in on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

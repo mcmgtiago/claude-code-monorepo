@@ -1,0 +1,17 @@
+{
+  "name": "whatsapp-dispatcher",
+  "version": "1.0.0",
+  "description": "Despachador de WhatsApp feio que alterna entre 4 templates para uma lista de telefones",
+  "type": "module",
+  "main": "dispatcher.js",
+  "scripts": {
+    "start": "node dispatcher.js",
+    "dispatch": "node dispatcher.js",
+    "dry-run": "node dry-run.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.26.0"
+  }
+}

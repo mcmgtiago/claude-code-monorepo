@@ -1,0 +1,55 @@
+{
+  "$schema": "https://open-design.ai/schemas/plugin.v1.json",
+  "specVersion": "1.0.0",
+  "name": "media-library-free-stock",
+  "title": "Free Stock Media Library",
+  "title_i18n": {
+    "pt-BR": "Biblioteca Gratuita de Imagens e Vídeos",
+    "en": "Free Stock Media Library"
+  },
+  "version": "0.1.1",
+  "publishedAt": "2026-07-29T00:00:00Z",
+  "description": "Search and download free stock images and videos from Pexels and Pixabay for Open Design projects.",
+  "description_i18n": {
+    "pt-BR": "Busca e baixa imagens e vídeos gratuitos do Pexels e Pixabay para projetos do Open Design.",
+    "en": "Search and download free stock images and videos from Pexels and Pixabay for Open Design projects."
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Claude Code Local Plugin",
+    "url": "https://claude.ai/code"
+  },
+  "homepage": "local://opendesign-media-library-plugin",
+  "tags": [
+    "media-library",
+    "stock-media",
+    "pexels",
+    "pixabay",
+    "images",
+    "videos",
+    "pt-BR",
+    "local"
+  ],
+  "compat": {
+    "agentSkills": [
+      {
+        "path": "./SKILL.md"
+      }
+    ]
+  },
+  "od": {
+    "kind": "atom",
+    "scenario": "asset-sourcing",
+    "mode": "media-library",
+    "surface": "mixed",
+    "preview": {
+      "type": "image",
+      "poster": "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    },
+    "capabilities": [
+      "prompt:inject",
+      "fs:read",
+      "fs:write"
+    ]
+  }
+}

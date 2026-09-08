@@ -1,0 +1,149 @@
+/* ══ Fontes ══ */
+/* Google Fonts carregadas via <link> no HTML para evitar bloqueio de render */
+
+/* Inter Display via Framer CDN */
+@font-face {
+  font-family: 'Inter Display';
+  src: url('https://framerusercontent.com/assets/QXl4EFJYVqiLETBqbPiq9anSzEY.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter Display';
+  src: url('https://framerusercontent.com/assets/6VnLB78U9DLIXGm74MvJYRn2YEE.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter Display';
+  src: url('https://framerusercontent.com/assets/PyL0aGBgERWGjjCfQIWkYXYhq0.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ══ Escala Tipográfica ══ */
+.kit-h1 {
+  font-family: var(--kit-font-heading);
+  font-size: var(--kit-fs-h1);
+  line-height: var(--kit-lh-h1);
+  letter-spacing: var(--kit-ls-h1);
+  font-weight: var(--kit-fw-normal);
+  color: var(--kit-primary);
+}
+
+.kit-h1-alt {
+  font-family: var(--kit-font-heading);
+  font-size: var(--kit-fs-h1-alt);
+  line-height: var(--kit-lh-h1-alt);
+  letter-spacing: var(--kit-ls-h1-alt);
+  font-weight: var(--kit-fw-normal);
+  color: var(--kit-primary-75);
+}
+
+.kit-h2 {
+  font-family: var(--kit-font-heading);
+  font-size: var(--kit-fs-h2);
+  line-height: var(--kit-lh-h2);
+  letter-spacing: var(--kit-ls-h2);
+  font-weight: var(--kit-fw-normal);
+  color: var(--kit-primary);
+}
+
+.kit-h3 {
+  font-family: var(--kit-font-heading);
+  font-size: var(--kit-fs-h3);
+  line-height: var(--kit-lh-h3);
+  letter-spacing: var(--kit-ls-h3);
+  font-weight: var(--kit-fw-normal);
+  color: var(--kit-primary);
+}
+
+.kit-h4 {
+  font-family: var(--kit-font-heading);
+  font-size: var(--kit-fs-h4);
+  line-height: var(--kit-lh-h4);
+  letter-spacing: var(--kit-ls-h4);
+  font-weight: var(--kit-fw-normal);
+  color: var(--kit-primary);
+}
+
+.kit-h5 {
+  font-family: var(--kit-font-heading);
+  font-size: var(--kit-fs-h5);
+  line-height: var(--kit-lh-h5);
+  letter-spacing: var(--kit-ls-h5);
+  font-weight: var(--kit-fw-medium);
+  color: var(--kit-primary);
+}
+
+.kit-h6 {
+  font-family: var(--kit-font-heading);
+  font-size: var(--kit-fs-h6);
+  line-height: var(--kit-lh-h6);
+  font-weight: var(--kit-fw-medium);
+  color: var(--kit-primary);
+}
+
+.kit-body {
+  font-family: var(--kit-font-body);
+  font-size: var(--kit-fs-body);
+  line-height: var(--kit-lh-body);
+  font-weight: var(--kit-fw-normal);
+  color: var(--kit-primary-75);
+}
+
+.kit-body-sm {
+  font-family: var(--kit-font-body);
+  font-size: var(--kit-fs-body-sm);
+  line-height: var(--kit-lh-body-sm);
+  font-weight: var(--kit-fw-normal);
+  color: var(--kit-primary-75);
+}
+
+.kit-caption {
+  font-family: var(--kit-font-body);
+  font-size: var(--kit-fs-caption);
+  line-height: var(--kit-lh-caption);
+  font-weight: var(--kit-fw-normal);
+  color: var(--kit-primary-50);
+}
+
+.kit-label {
+  font-family: var(--kit-font-mono);
+  font-size: var(--kit-fs-label);
+  line-height: var(--kit-lh-label);
+  font-weight: var(--kit-fw-normal);
+  text-transform: none;
+}
+
+.kit-mono {
+  font-family: var(--kit-font-mono);
+}
+
+/* ══ Responsivo ══ */
+@media (max-width: 1024px) {
+  .kit-h1 { font-size: 64px; line-height: 72px; letter-spacing: -2.56px; }
+  .kit-h1-alt { font-size: 48px; line-height: 56px; letter-spacing: -1.92px; }
+  .kit-h2 { font-size: 44px; line-height: 52px; letter-spacing: -1.76px; }
+  .kit-h3 { font-size: 28px; line-height: 36px; letter-spacing: -0.84px; }
+  .kit-h4 { font-size: 26px; line-height: 36px; letter-spacing: -0.78px; }
+}
+
+@media (max-width: 768px) {
+  .kit-h1 { font-size: 44px; line-height: 52px; letter-spacing: -1.76px; }
+  .kit-h1-alt { font-size: 36px; line-height: 44px; letter-spacing: -1.44px; }
+  .kit-h2 { font-size: 36px; line-height: 44px; letter-spacing: -1.44px; }
+  .kit-h3 { font-size: 24px; line-height: 32px; letter-spacing: -0.72px; }
+  .kit-h4 { font-size: 22px; line-height: 30px; letter-spacing: -0.66px; }
+}
+
+@media (max-width: 480px) {
+  .kit-h1 { font-size: 36px; line-height: 44px; letter-spacing: -1.44px; }
+  .kit-h1-alt { font-size: 30px; line-height: 38px; letter-spacing: -1.2px; }
+  .kit-h2 { font-size: 28px; line-height: 36px; letter-spacing: -1.12px; }
+}

@@ -1,0 +1,100 @@
+/* ═══════════════════════════════════════════════════════════
+   KIT: canadadsgn-infoproduto — VARIÁVEIS CSS
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Cores ── */
+  --kit-primary: #DF1863;
+  --kit-primary-light: #FC72A7;
+  --kit-primary-hover: #F04D8B;
+  --kit-primary-glow: rgba(223, 24, 99, 0.22);
+  --kit-primary-subtle: rgba(223, 24, 99, 0.20);
+
+  --kit-bg-dark: #0C0C0C;
+  --kit-bg-dark-alt: #1B1B1B;
+  --kit-bg-surface: #141414;
+  --kit-bg-card: #1A1A1A;
+  --kit-bg-overlay: rgba(12, 12, 12, 0.52);
+
+  --kit-text-primary: #FFFFFF;
+  --kit-text-secondary: #8A8A8A;
+  --kit-text-muted: #C2C2C2;
+  --kit-text-accent: #BEE0C3;
+
+  --kit-border-subtle: rgba(211, 234, 255, 0.25);
+  --kit-border-glow: rgba(211, 234, 255, 0.25);
+
+  /* ── Gradientes ── */
+  --kit-gradient-heading: linear-gradient(101deg, #FFF 13.41%, #8A8A8A 73.53%);
+  --kit-gradient-accent-text: linear-gradient(90deg, #DF1863 0%, #DF1863 100%);
+  --kit-gradient-btn: radial-gradient(38.67% 91.17% at 50% 8.83%, #FC72A7 0%, #DF1863 100%);
+  --kit-gradient-btn-shine: linear-gradient(10deg, #D1D2EA 12.81%, transparent 66.66%);
+  --kit-gradient-icon: linear-gradient(150deg, #F04D8B 0%, #DF1863 100%);
+  --kit-gradient-hero-overlay: linear-gradient(190deg, #1B1B1B52 30%, #0C0C0C52 100%);
+  --kit-gradient-white: linear-gradient(150deg, #FFFFFF 0%, #C2C2C2 100%);
+  --kit-gradient-caption-glow: linear-gradient(90deg, #BEE0C3, #FFFFFF, #BEE0C3);
+
+  /* ── Tipografia ── */
+  --kit-font-heading: 'Sora', 'MADEOuterSans', sans-serif;
+  --kit-font-body: 'Outfit', 'MADEOuterSans', sans-serif;
+
+  --kit-fs-h1: clamp(2rem, 5vw, 3.5rem);
+  --kit-fs-h2: clamp(1.75rem, 4vw, 2.75rem);
+  --kit-fs-h3: clamp(1.25rem, 3vw, 1.75rem);
+  --kit-fs-h4: clamp(1.1rem, 2vw, 1.35rem);
+  --kit-fs-body: clamp(0.95rem, 1.5vw, 1.125rem);
+  --kit-fs-body-lg: clamp(1.05rem, 1.8vw, 1.25rem);
+  --kit-fs-caption: clamp(0.75rem, 1.2vw, 0.875rem);
+  --kit-fs-label: clamp(0.7rem, 1vw, 0.8rem);
+
+  --kit-fw-light: 300;
+  --kit-fw-regular: 400;
+  --kit-fw-semibold: 600;
+  --kit-fw-bold: 700;
+  --kit-fw-extrabold: 800;
+
+  --kit-lh-heading: 1.2;
+  --kit-lh-body: 1.6;
+
+  --kit-ls-heading: -0.02em;
+  --kit-ls-body: 0;
+  --kit-ls-label: 0.05em;
+
+  /* ── Espaçamento ── */
+  --kit-section-py: clamp(60px, 8vw, 120px);
+  --kit-section-px: clamp(20px, 5vw, 80px);
+  --kit-block-gap: clamp(40px, 6vw, 80px);
+  --kit-card-padding: clamp(20px, 3vw, 40px);
+  --kit-container-max: 1200px;
+
+  --kit-gap-sm: 8px;
+  --kit-gap-md: 16px;
+  --kit-gap-lg: 24px;
+  --kit-gap-xl: 40px;
+
+  /* ── Bordas ── */
+  --kit-radius-sm: 4px;
+  --kit-radius-md: 8px;
+  --kit-radius-lg: 12px;
+  --kit-radius-xl: 20px;
+  --kit-radius-pill: 999px;
+
+  /* ── Sombras ── */
+  --kit-shadow-btn: 0 -27px 80px 0 rgba(223,24,99,0.22),
+                    0 -9.855px 29.201px 0 rgba(223,24,99,0.15),
+                    0 -4.785px 14.177px 0 rgba(223,24,99,0.12),
+                    0 -2.346px 6.95px 0 rgba(223,24,99,0.1),
+                    0 -0.927px 2.748px 0 rgba(223,24,99,0.07);
+  --kit-shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
+  --kit-shadow-glow: 0 0 20px rgba(223, 24, 99, 0.3);
+  --kit-shadow-text: 1px 0 6px rgba(0, 0, 0, 0.3);
+
+  /* ── Destaque de texto ── */
+  --kit-realce-fundo: rgba(223, 24, 99, 0.20);
+  --kit-espaco-horizontal: 10px;
+  --kit-espaco-vertical: 2px;
+  --kit-espessura-bordas: 1px;
+  --kit-cor-bordas: #DF1863;
+  --kit-tamanho-marcadores: 9px;
+  --kit-cor-marcadores: #DF1863;
+}

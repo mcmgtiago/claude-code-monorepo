@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#122033">
+    <meta name="description" content="Painel local para e-mails individuais de prospecção B2B.">
+    <title>Correio | Prospecção B2B</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Fira+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Navegação principal">
+        <div class="brand-lockup">
+          <span class="brand-mark" aria-hidden="true">C</span>
+          <span>
+            <strong>Correio</strong>
+            <small>prospecção local</small>
+          </span>
+        </div>
+
+        <nav class="main-nav" aria-label="Seções do painel">
+          <button class="nav-link is-active" type="button" data-view-target="send">
+            <span class="nav-index">01</span>
+            <span>Envio</span>
+          </button>
+          <button class="nav-link" type="button" data-view-target="contacts">
+            <span class="nav-index">02</span>
+            <span>Contatos</span>
+          </button>
+          <button class="nav-link" type="button" data-view-target="templates">
+            <span class="nav-index">03</span>
+            <span>Modelos</span>
+          </button>
+          <button class="nav-link" type="button" data-view-target="history">
+            <span class="nav-index">04</span>
+            <span>Histórico</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-footer">
+          <p class="eyebrow">Estado do envio</p>
+          <div class="delivery-state" id="sidebar-delivery-state" aria-live="polite">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Verificando configuração</span>
+          </div>
+          <p class="sidebar-note">Envios individuais. Nenhum disparo em massa é realizado por este painel.</p>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow" id="page-eyebrow">Fluxo 01</p>
+            <h1 id="page-title">Preparar envio</h1>
+          </div>
+          <button class="button button-secondary" id="open-settings" type="button">Configuração</button>
+        </header>
+
+        <div class="flash" id="flash-message" aria-live="polite" hidden></div>
+
+        <section class="view is-active" id="view-send" data-view="send">
+          <div class="view-intro">
+            <div>
+              <p class="eyebrow">Envio individual</p>
+              <h2>Uma mensagem, revisada antes de sair.</h2>
+            </div>
+            <p>Escolha o contato, selecione um dos cinco modelos e confira o e-mail antes do envio.</p>
+          </div>
+
+          <div class="send-layout">
+            <div class="workbench">
+              <section class="panel recipient-panel" aria-labelledby="recipient-heading">
+                <div class="panel-heading">
+                  <div>
+                    <p class="step-label">Passo 1</p>
+                    <h3 id="recipient-heading">Destinatário</h3>
+                  </div>
+                  <button class="text-button" id="open-contact-from-send" type="button">Adicionar e-mail</button>
+                </div>
+                <label class="field-label" for="recipient-select">Contato cadastrado</label>
+                <select class="input" id="recipient-select" aria-describedby="recipient-help">
+                  <option value="">Escolha um contato</option>
+                </select>
+                <p class="field-help" id="recipient-help">Apenas contatos ativos podem receber uma mensagem.</p>
+              </section>
+
+              <section class="panel" aria-labelledby="models-heading">
+                <div class="panel-heading">
+                  <div>
+                    <p class="step-label">Passo 2</p>
+                    <h3 id="models-heading">Modelo de e-mail</h3>
+                  </div>
+                  <span class="count-chip" id="template-count">5 modelos</span>
+                </div>
+                <div class="template-options" id="template-options" role="radiogroup" aria-label="Escolha um modelo"></div>
+              </section>
+
+              <section class="panel editor-panel" aria-labelledby="editor-heading">
+                <div class="panel-heading">
+                  <div>
+                    <p class="step-label">Passo 3</p>
+                    <h3 id="editor-heading">Ajustar mensagem</h3>
+                  </div>
+                  <span class="dirty-state" id="template-dirty-state">Salvo</span>
+                </div>
+                <label class="field-label" for="subject-input">Assunto</label>
+                <input class="input" id="subject-input" maxlength="180" autocomplete="off">
+                <label class="field-label" for="preview-input">Texto de prévia</label>
+                <input class="input" id="preview-input" maxlength="200" autocomplete="off">
+                <label class="field-label" for="body-input">Mensagem</label>
+                <textarea class="input message-input" id="body-input" maxlength="10000" spellcheck="true"></textarea>
+                <p class="field-help">Use <code>{{remetente}}</code> para inserir automaticamente o nome configurado. Substitua todos os trechos entre colchetes antes de enviar.</p>
+                <div class="editor-actions">
+                  <button class="button button-secondary" id="reset-template" type="button">Restaurar modelo</button>
+                  <button class="button button-primary" id="save-template" type="button">Salvar alterações</button>
+                </div>
+              </section>
+            </div>
+
+            <aside class="preview-column" aria-labelledby="preview-heading">
+              <div class="preview-heading">
+                <div>
+                  <p class="eyebrow">Prévia</p>
+                  <h2 id="preview-heading">Como será recebido</h2>
+                </div>
+                <span class="preview-stamp">Texto simples</span>
+              </div>
+
+              <article class="email-preview">
+                <div class="email-meta-row">
+                  <span>De</span>
+                  <strong id="preview-from">Configure o remetente</strong>
+                </div>
+                <div class="email-meta-row">
+                  <span>Para</span>
+                  <strong id="preview-to">Escolha um contato</strong>
+                </div>
+                <div class="email-subject" id="preview-subject">Escolha um modelo</div>
+                <div class="email-preheader" id="preview-preheader"></div>
+                <div class="email-body" id="preview-body"></div>
+              </article>
+
+              <section class="send-card" aria-labelledby="send-heading">
+                <div>
+                  <p class="eyebrow">Confirmação</p>
+                  <h3 id="send-heading">Pronto para enviar?</h3>
+                </div>
+                <label class="check-row" for="compliance-check">
+                  <input id="compliance-check" type="checkbox">
+                  <span>Confirmo que este contato profissional pode receber esta mensagem e tem uma forma clara de pedir remoção.</span>
+                </label>
+                <button class="button button-send" id="send-email" type="button" disabled>Enviar este e-mail</button>
+                <p class="send-guard" id="send-guard" aria-live="polite">Carregando configuração de envio.</p>
+              </section>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view" id="view-contacts" data-view="contacts" hidden>
+          <div class="view-intro">
+            <div>
+              <p class="eyebrow">Base local</p>
+              <h2>Contatos profissionais</h2>
+            </div>
+            <p>Cadastre um endereço por vez ou importe uma planilha CSV com uma coluna de e-mail.</p>
+          </div>
+
+          <div class="contacts-tools">
+            <form class="panel compact-form" id="quick-contact-form">
+              <p class="step-label">Adicionar manualmente</p>
+              <label class="field-label" for="quick-email">E-mail profissional</label>
+              <div class="inline-form">
+                <input class="input" id="quick-email" name="email" type="email" placeholder="contato@empresa.com" required>
+                <button class="button button-primary" type="submit">Adicionar</button>
+              </div>
+            </form>
+
+            <form class="panel compact-form" id="csv-import-form">
+              <p class="step-label">Importar CSV</p>
+              <label class="field-label" for="csv-file">Planilha de contatos</label>
+              <div class="inline-form">
+                <input class="file-input" id="csv-file" name="csv" type="file" accept=".csv,text/csv" required>
+                <button class="button button-secondary" type="submit">Importar</button>
+              </div>
+              <p class="field-help">Cabeçalho aceito: <code>email</code> ou <code>e-mail</code>. Duplicados são ignorados.</p>
+            </form>
+          </div>
+
+          <section class="panel table-panel" aria-labelledby="contacts-table-heading">
+            <div class="panel-heading">
+              <div>
+                <p class="step-label">Lista local</p>
+                <h3 id="contacts-table-heading">Contatos cadastrados</h3>
+              </div>
+              <span class="count-chip" id="contact-count">0 contatos</span>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Cadastro</th>
+                    <th scope="col"><span class="visually-hidden">Ações</span></th>
+                  </tr>
+                </thead>
+                <tbody id="contacts-table-body"></tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <section class="view" id="view-templates" data-view="templates" hidden>
+          <div class="view-intro">
+            <div>
+              <p class="eyebrow">Biblioteca</p>
+              <h2>Cinco abordagens, uma mensagem por vez.</h2>
+            </div>
+            <p>Todos os modelos podem ser alterados. Use este espaço para escolher a abordagem antes de ir para o envio.</p>
+          </div>
+          <div class="template-library" id="template-library"></div>
+        </section>
+
+        <section class="view" id="view-history" data-view="history" hidden>
+          <div class="view-intro">
+            <div>
+              <p class="eyebrow">Rastreio local</p>
+              <h2>Histórico de tentativas</h2>
+            </div>
+            <p>O registro mostra quando um envio foi aceito pelo Resend ou quando uma tentativa falhou.</p>
+          </div>
+          <section class="panel table-panel" aria-labelledby="history-table-heading">
+            <div class="panel-heading">
+              <div>
+                <p class="step-label">Últimos 150 registros</p>
+                <h3 id="history-table-heading">Atividade de envio</h3>
+              </div>
+              <span class="count-chip" id="history-count">0 registros</span>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Data</th>
+                    <th scope="col">Destinatário</th>
+                    <th scope="col">Modelo</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody id="history-table-body"></tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <dialog class="dialog" id="contact-dialog" aria-labelledby="contact-dialog-title">
+      <form class="dialog-card" id="contact-form">
+        <div class="dialog-heading">
+          <div>
+            <p class="eyebrow">Novo contato</p>
+            <h2 id="contact-dialog-title">Adicionar e-mail</h2>
+          </div>
+          <button class="icon-close" type="button" data-close-dialog="contact-dialog" aria-label="Fechar">×</button>
+        </div>
+        <label class="field-label" for="contact-email">E-mail profissional</label>
+        <input class="input" id="contact-email" name="email" type="email" placeholder="contato@empresa.com" required autofocus>
+        <p class="field-help">Cadastre apenas contatos profissionais relevantes para a sua oferta.</p>
+        <div class="dialog-actions">
+          <button class="button button-secondary" type="button" data-close-dialog="contact-dialog">Cancelar</button>
+          <button class="button button-primary" type="submit">Adicionar contato</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog class="dialog" id="settings-dialog" aria-labelledby="settings-dialog-title">
+      <form class="dialog-card" id="settings-form">
+        <div class="dialog-heading">
+          <div>
+            <p class="eyebrow">Configuração</p>
+            <h2 id="settings-dialog-title">Remetente e entrega</h2>
+          </div>
+          <button class="icon-close" type="button" data-close-dialog="settings-dialog" aria-label="Fechar">×</button>
+        </div>
+        <div class="form-grid">
+          <div>
+            <label class="field-label" for="sender-name">Nome do remetente</label>
+            <input class="input" id="sender-name" name="senderName" maxlength="100" placeholder="Seu nome" required>
+          </div>
+          <div>
+            <label class="field-label" for="company-name">Empresa</label>
+            <input class="input" id="company-name" name="companyName" maxlength="100" placeholder="Sua empresa">
+          </div>
+          <div>
+            <label class="field-label" for="sender-email">E-mail remetente</label>
+            <input class="input" id="sender-email" name="senderEmail" type="email" placeholder="voce@seudominio.com" required>
+          </div>
+          <div>
+            <label class="field-label" for="reply-to">E-mail para respostas</label>
+            <input class="input" id="reply-to" name="replyTo" type="email" placeholder="respostas@seudominio.com">
+          </div>
+        </div>
+        <div class="config-note">
+          <strong>Chave privada</strong>
+          <p>Adicione <code>RESEND_API_KEY</code> ao arquivo <code>.env</code> e reinicie o servidor. A chave não fica salva no navegador.</p>
+        </div>
+        <div class="dialog-actions">
+          <button class="button button-secondary" type="button" data-close-dialog="settings-dialog">Cancelar</button>
+          <button class="button button-primary" type="submit">Salvar configuração</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>

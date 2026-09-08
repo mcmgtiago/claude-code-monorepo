@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healyn — Your Mind Deserves the Same Care as Your Body</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-bg: #e8e4df;
+            --color-hero-start: #c8ddd6;
+            --color-hero-mid: #a3cdc2;
+            --color-text-dark: #1a3a32;
+            --color-text-body: #2d4a42;
+            --color-btn-bg: #263d36;
+            --color-btn-text: #ffffff;
+            --color-accent: #3d6b5e;
+            --font-display: 'DM Serif Display', serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--color-bg);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 1180px;
+            border-radius: 16px;
+            overflow: hidden;
+            background: var(--color-bg);
+            box-shadow: 0 4px 40px rgba(0,0,0,0.08);
+        }
+
+        /* ─── Navigation ─── */
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background: var(--color-bg);
+        }
+
+        .nav-logo {
+            font-family: var(--font-display);
+            font-size: 28px;
+            color: var(--color-text-dark);
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-text-body);
+            font-size: 15px;
+            font-weight: 400;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-text-dark);
+        }
+
+        .nav-cta {
+            background: var(--color-btn-bg);
+            color: var(--color-btn-text);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-family: var(--font-body);
+        }
+
+        .nav-cta:hover {
+            background: #1a2e28;
+        }
+
+        /* ─── Hero Section ─── */
+        .hero {
+            position: relative;
+            min-height: 580px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Base gradient background */
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                160deg,
+                #c5ddd6 0%,
+                #a8cfc4 35%,
+                #93c5b8 55%,
+                #b0d3ca 80%,
+                #c2dbd4 100%
+            );
+        }
+
+        /* ─── Photo with motion blur ─── */
+        .hero-photo {
+            position: absolute;
+            top: 0;
+            right: -5%;
+            width: 62%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .hero-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%;
+        }
+
+        /* Left fade from background into photo */
+        .hero-photo .fade-left {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to right,
+                rgba(168, 207, 196, 1) 0%,
+                rgba(168, 207, 196, 0.85) 10%,
+                rgba(168, 207, 196, 0.5) 22%,
+                rgba(168, 207, 196, 0.15) 38%,
+                transparent 55%
+            );
+            z-index: 2;
+        }
+
+        /* Motion blur: horizontal streaks via SVG filter */
+        .hero-photo .motion-blur-layer {
+            position: absolute;
+            inset: 0;
+            z-index: 3;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .motion-blur-layer .streak {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(
+                to right,
+                rgba(180, 210, 200, 0.6) 0%,
+                rgba(190, 218, 210, 0.4) 20%,
+                rgba(200, 222, 215, 0.2) 50%,
+                rgba(210, 228, 220, 0.35) 70%,
+                rgba(185, 213, 204, 0.5) 100%
+            );
+            opacity: 0.7;
+        }
+
+        /* Generate multiple streak positions */
+        .streak:nth-child(1) { top: 5%; height: 3px; opacity: 0.5; }
+        .streak:nth-child(2) { top: 9%; height: 2px; opacity: 0.6; }
+        .streak:nth-child(3) { top: 14%; height: 4px; opacity: 0.4; }
+        .streak:nth-child(4) { top: 18%; height: 2px; opacity: 0.7; }
+        .streak:nth-child(5) { top: 22%; height: 3px; opacity: 0.5; }
+        .streak:nth-child(6) { top: 26%; height: 5px; opacity: 0.35; }
+        .streak:nth-child(7) { top: 30%; height: 2px; opacity: 0.6; }
+        .streak:nth-child(8) { top: 34%; height: 4px; opacity: 0.45; }
+        .streak:nth-child(9) { top: 37%; height: 2px; opacity: 0.55; }
+        .streak:nth-child(10) { top: 41%; height: 6px; opacity: 0.3; }
+        .streak:nth-child(11) { top: 45%; height: 2px; opacity: 0.65; }
+        .streak:nth-child(12) { top: 48%; height: 3px; opacity: 0.5; }
+        .streak:nth-child(13) { top: 52%; height: 4px; opacity: 0.4; }
+        .streak:nth-child(14) { top: 55%; height: 2px; opacity: 0.7; }
+        .streak:nth-child(15) { top: 59%; height: 5px; opacity: 0.35; }
+        .streak:nth-child(16) { top: 62%; height: 2px; opacity: 0.6; }
+        .streak:nth-child(17) { top: 66%; height: 3px; opacity: 0.45; }
+        .streak:nth-child(18) { top: 70%; height: 4px; opacity: 0.5; }
+        .streak:nth-child(19) { top: 73%; height: 2px; opacity: 0.55; }
+        .streak:nth-child(20) { top: 77%; height: 6px; opacity: 0.3; }
+        .streak:nth-child(21) { top: 80%; height: 2px; opacity: 0.6; }
+        .streak:nth-child(22) { top: 84%; height: 3px; opacity: 0.45; }
+        .streak:nth-child(23) { top: 87%; height: 4px; opacity: 0.4; }
+        .streak:nth-child(24) { top: 91%; height: 2px; opacity: 0.65; }
+        .streak:nth-child(25) { top: 95%; height: 3px; opacity: 0.5; }
+
+        /* ─── Hero Content ─── */
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            padding: 70px 56px;
+            max-width: 540px;
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: 44px;
+            line-height: 1.22;
+            color: var(--color-text-dark);
+            margin-bottom: 24px;
+            letter-spacing: -0.3px;
+            font-weight: 400;
+        }
+
+        .hero-subtitle {
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--color-text-body);
+            margin-bottom: 36px;
+            max-width: 420px;
+            font-weight: 400;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background: var(--color-btn-bg);
+            color: var(--color-btn-text);
+            padding: 16px 30px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 500;
+            text-decoration: none;
+            font-family: var(--font-body);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(38, 61, 54, 0.3);
+        }
+
+        /* ─── Features ─── */
+        .hero-features {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 14px 44px;
+            margin-top: 52px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--color-text-body);
+            font-weight: 400;
+        }
+
+        .feature-icon {
+            font-size: 14px;
+            color: var(--color-accent);
+            line-height: 1;
+        }
+
+        /* Asterisk / snowflake icon like the original */
+        .feature-icon::before {
+            content: '✳';
+            font-size: 13px;
+        }
+
+        /* ─── Responsive ─── */
+        @media (max-width: 900px) {
+            .hero-content {
+                padding: 50px 32px;
+            }
+
+            .hero-title {
+                font-size: 36px;
+            }
+
+            .hero-photo {
+                width: 50%;
+                opacity: 0.5;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+
+            .nav {
+                padding: 16px 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                min-height: 500px;
+            }
+
+            .hero-content {
+                padding: 36px 24px;
+                max-width: 100%;
+            }
+
+            .hero-title {
+                font-size: 30px;
+            }
+
+            .hero-subtitle {
+                font-size: 15px;
+            }
+
+            .hero-photo {
+                width: 45%;
+                opacity: 0.35;
+            }
+
+            .hero-features {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav-logo">Healyn</div>
+            <ul class="nav-links">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Therapists</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button class="nav-cta">Start Your Journey</button>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <!-- Background gradient -->
+            <div class="hero-bg"></div>
+
+            <!-- Photo with motion blur effect -->
+            <div class="hero-photo">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=900&q=80&auto=format&fit=crop"
+                     alt="Woman with eyes closed, feeling peaceful"
+                     loading="eager">
+                <div class="fade-left"></div>
+                <div class="motion-blur-layer">
+                    <div class="streak"></div>
+                    <div class="streak"></div>
+                    <div class="streak"></div>
+                    <div class="streak"></div>
+                    <div class="streak"></div>
+                    <div class="streak"></div>
+                    <div class="streak"></div>
+                    <div class="streak"></div>
+                    <div class="streak"></div>
+                    <div class="streak"></div>
+                    <div class="streak"></div>
+                    <div class="streak"></div>
+                    <div class="streak"></div>
+                    <div class="streak"></div>
+                    <div class="streak"></div>
+                    <div class="streak"></div>
+                    <div class="streak"></div>
+                    <div class="streak"></div>
+                    <div class="streak"></div>
+                    <div class="streak"></div>
+                    <div class="streak"></div>
+                    <div class="streak"></div>
+                    <div class="streak"></div>
+                    <div class="streak"></div>
+                    <div class="streak"></div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="hero-content">
+                <h1 class="hero-title">Your Mind Deserves the<br>Same Care as Your Body.</h1>
+                <p class="hero-subtitle">Connect with licensed therapists who listen, guide, and walk with you, every step of your healing journey.</p>
+                <a href="#" class="hero-btn">Find My Therapist</a>
+
+                <!-- Feature badges -->
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <span class="feature-icon"></span>
+                        Personalized Plans
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon"></span>
+                        Video & Chat Sessions
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon"></span>
+                        Teen & Youth Support
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon"></span>
+                        Insurance Accepted
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

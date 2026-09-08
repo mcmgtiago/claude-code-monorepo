@@ -1,0 +1,638 @@
+{
+  "label": "original",
+  "url": "https://luminal-creative-studio.aura.build/",
+  "capturedAt": "2026-08-03T11:17:48.421Z",
+  "initial": {
+    "url": "https://luminal-creative-studio.aura.build/",
+    "title": "Luminal Studio Creative Agency Landing Page Template",
+    "activeElement": "body",
+    "scrollY": 0,
+    "bodyTextChars": 0,
+    "bodyTextStart": "",
+    "counts": {
+      "dialogs": 0,
+      "popovers": 0,
+      "canvases": 0,
+      "videos": 0,
+      "buttons": 0,
+      "forms": 0
+    },
+    "htmlHash": "294021190",
+    "htmlLength": 24950
+  },
+  "discovered": {
+    "interactive": [
+      {
+        "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > ol:nth-of-type(1)",
+        "tag": "ol",
+        "type": "",
+        "role": "",
+        "href": "",
+        "text": "",
+        "ariaLabel": "",
+        "safeClick": false,
+        "rect": {
+          "x": 704,
+          "y": 32,
+          "width": 32,
+          "height": 32
+        }
+      }
+    ],
+    "canvases": []
+  },
+  "actions": [
+    {
+      "type": "scroll",
+      "target": "middle",
+      "ratio": 0.5,
+      "before": {
+        "url": "https://luminal-creative-studio.aura.build/",
+        "title": "Luminal Studio Creative Agency Landing Page Template",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 12,
+        "bodyTextStart": "Made in Aura",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 0,
+          "buttons": 2,
+          "forms": 0
+        },
+        "htmlHash": "749862674",
+        "htmlLength": 189814
+      },
+      "after": {
+        "url": "https://luminal-creative-studio.aura.build/",
+        "title": "Luminal Studio Creative Agency Landing Page Template",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 12,
+        "bodyTextStart": "Made in Aura",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 0,
+          "buttons": 2,
+          "forms": 0
+        },
+        "htmlHash": "749862674",
+        "htmlLength": 189814
+      },
+      "changed": false,
+      "screenshot": "screenshots\\01-scroll-middle-b04a45f075.png"
+    },
+    {
+      "type": "scroll",
+      "target": "bottom",
+      "ratio": 1,
+      "before": {
+        "url": "https://luminal-creative-studio.aura.build/",
+        "title": "Luminal Studio Creative Agency Landing Page Template",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 12,
+        "bodyTextStart": "Made in Aura",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 0,
+          "buttons": 2,
+          "forms": 0
+        },
+        "htmlHash": "749862674",
+        "htmlLength": 189814
+      },
+      "after": {
+        "url": "https://luminal-creative-studio.aura.build/",
+        "title": "Luminal Studio Creative Agency Landing Page Template",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 12,
+        "bodyTextStart": "Made in Aura",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 0,
+          "buttons": 2,
+          "forms": 0
+        },
+        "htmlHash": "749862674",
+        "htmlLength": 189814
+      },
+      "changed": false,
+      "screenshot": "screenshots\\02-scroll-bottom-7297e0cbea.png"
+    },
+    {
+      "type": "hover",
+      "target": "html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > ol:nth-of-type(1)",
+      "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > ol:nth-of-type(1)",
+      "meta": {
+        "selector": "html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > ol:nth-of-type(1)",
+        "tag": "ol",
+        "type": "",
+        "role": "",
+        "href": "",
+        "text": "",
+        "ariaLabel": "",
+        "safeClick": false,
+        "rect": {
+          "x": 704,
+          "y": 32,
+          "width": 32,
+          "height": 32
+        }
+      },
+      "before": {
+        "url": "https://luminal-creative-studio.aura.build/",
+        "title": "Luminal Studio Creative Agency Landing Page Template",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 12,
+        "bodyTextStart": "Made in Aura",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 0,
+          "buttons": 2,
+          "forms": 0
+        },
+        "htmlHash": "749862674",
+        "htmlLength": 189814
+      },
+      "after": {
+        "url": "https://luminal-creative-studio.aura.build/",
+        "title": "Luminal Studio Creative Agency Landing Page Template",
+        "activeElement": "body",
+        "scrollY": 0,
+        "bodyTextChars": 12,
+        "bodyTextStart": "Made in Aura",
+        "counts": {
+          "dialogs": 0,
+          "popovers": 0,
+          "canvases": 0,
+          "videos": 0,
+          "buttons": 2,
+          "forms": 0
+        },
+        "htmlHash": "749862674",
+        "htmlLength": 189814
+      },
+      "changed": false,
+      "screenshot": "",
+      "error": "locator.hover: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('html > body:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > ol:nth-of-type(1)').first()\u001b[22m\n\u001b[2m    - locator resolved to <ol tabindex=\"-1\" class=\"fixed top-8 left-1/2 -translate-x-1/2 z-[100] flex max-h-screen flex-col-reverse p-4 max-w-[420px]\"></ol>\u001b[22m\n\u001b[2m  - attempting hover action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <iframe title=\"HTML Preview\" class=\"w-full h-screen border-0\" sandbox=\"allow-scripts allow-forms allow-popups allow-modals allow-same-origin\" srcdoc=\"<html lang=\"en\"><head>↵<script id=\"aura-supabase-token-firewall\">(function () {↵  if (window.__AURA_SUPABASE_FIREWALL__) return;↵  window.__AURA_SUPABASE_FIREWALL__ = true;↵↵  var SUPABASE_HOST = \"hoirqrkdgbmvpwutwuwj.supabase.co\";↵  var BLOCKED_KEY_PATTERNS = [↵    /^sb-[a-z0-9-]+-auth-token$/i,↵    /^supabase\\.auth\\.token$/i↵  ];↵↵  function isBlockedS…></iframe> from <div class=\"min-h-screen bg-background relative\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <iframe title=\"HTML Preview\" class=\"w-full h-screen border-0\" sandbox=\"allow-scripts allow-forms allow-popups allow-modals allow-same-origin\" srcdoc=\"<html lang=\"en\"><head>↵<script id=\"aura-supabase-token-firewall\">(function () {↵  if (window.__AURA_SUPABASE_FIREWALL__) return;↵  window.__AURA_SUPABASE_FIREWALL__ = true;↵↵  var SUPABASE_HOST = \"hoirqrkdgbmvpwutwuwj.supabase.co\";↵  var BLOCKED_KEY_PATTERNS = [↵    /^sb-[a-z0-9-]+-auth-token$/i,↵    /^supabase\\.auth\\.token$/i↵  ];↵↵  function isBlockedS…></iframe> from <div class=\"min-h-screen bg-background relative\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible and stable\u001b[22m\n\u001b[2m      - element is visible and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <iframe title=\"HTML Preview\" class=\"w-full h-screen border-0\" sandbox=\"allow-scripts allow-forms allow-popups allow-modals allow-same-origin\" srcdoc=\"<html lang=\"en\"><head>↵<script id=\"aura-supabase-token-firewall\">(function () {↵  if (window.__AURA_SUPABASE_FIREWALL__) return;↵  window.__AURA_SUPABASE_FIREWALL__ = true;↵↵  var SUPABASE_HOST = \"hoirqrkdgbmvpwutwuwj.supabase.co\";↵  var BLOCKED_KEY_PATTERNS = [↵    /^sb-[a-z0-9-]+-auth-token$/i,↵    /^supabase\\.auth\\.token$/i↵  ];↵↵  function isBlockedS…></iframe> from <div class=\"min-h-screen bg-background relative\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying hover action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n"
+    }
+  ],
+  "network": [
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&slug=ilike.luminal-creative-studio",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_slug",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&custom_domain=ilike.luminal-creative-studio.aura.build",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_domain",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&custom_domain=ilike.luminal-creative-studio.aura.build",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_domain",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&custom_domain=ilike.aura.build",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_domain",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&custom_domain=ilike.aura.build",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_domain",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&slug=ilike.luminal-creative-studio",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_slug",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&custom_domain=ilike.luminal-creative-studio.aura.build",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_domain",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&custom_domain=ilike.luminal-creative-studio.aura.build",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_domain",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&custom_domain=ilike.aura.build",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_domain",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&custom_domain=ilike.aura.build",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_domain",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_code?select=*&slug=ilike.luminal-creative-studio",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_code?select=slug%2Ccreated_at&user_id=eq.5bd6211c-bd4c-467c-b442-4312cac4712c&order=created_at.desc",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/public_author_profiles?select=id%2Cfull_name%2Cavatar_url%2Cbio%2Cslug%2Ccreated_at%2Cviews%2Cis_featured%2Cwebsite%2Clocation%2Cis_pro&id=in.%285bd6211c-bd4c-467c-b442-4312cac4712c%29",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/preview-images/luminal-creative-studio.png",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/increment_shared_code_views",
+      "status": 204,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_share_project_context",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_code?select=code%2Cprivate%2Cuser_id%2Cshare_source_code&slug=ilike.monolith-architecture",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://storage.googleapis.com/unicornstudio-production/embeds/7WRlj4TRuUxuldc6GVDM?v=1785755842945",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/projects?select=transition_type%2Ctransition_duration_ms%2Ctransition_easing%2Ctransition_distance_px&id=eq.890a2ea5-fc07-4e0a-93f0-907e208eaf48",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_project_chats_for_share",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_code?select=code%2Cprivate%2Cuser_id%2Cshare_source_code&slug=ilike.finex-internet",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&slug=ilike.luminal-creative-studio",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_slug",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&custom_domain=ilike.luminal-creative-studio.aura.build",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_domain",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&custom_domain=ilike.luminal-creative-studio.aura.build",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_domain",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&custom_domain=ilike.aura.build",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_domain",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&custom_domain=ilike.aura.build",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_domain",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_code?select=*&slug=ilike.luminal-creative-studio",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_code?select=slug%2Ccreated_at&user_id=eq.5bd6211c-bd4c-467c-b442-4312cac4712c&order=created_at.desc",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/public_author_profiles?select=id%2Cfull_name%2Cavatar_url%2Cbio%2Cslug%2Ccreated_at%2Cviews%2Cis_featured%2Cwebsite%2Clocation%2Cis_pro&id=in.%285bd6211c-bd4c-467c-b442-4312cac4712c%29",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/preview-images/luminal-creative-studio.png",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_share_project_context",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/increment_shared_code_views",
+      "status": 204,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_code?select=code%2Cprivate%2Cuser_id%2Cshare_source_code&slug=ilike.monolith-architecture",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://storage.googleapis.com/unicornstudio-production/embeds/7WRlj4TRuUxuldc6GVDM?v=1785755853871",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/projects?select=transition_type%2Ctransition_duration_ms%2Ctransition_easing%2Ctransition_distance_px&id=eq.890a2ea5-fc07-4e0a-93f0-907e208eaf48",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_project_chats_for_share",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_code?select=code%2Cprivate%2Cuser_id%2Cshare_source_code&slug=ilike.finex-internet",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&slug=ilike.luminal-creative-studio",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_slug",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&custom_domain=ilike.luminal-creative-studio.aura.build",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_domain",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&custom_domain=ilike.luminal-creative-studio.aura.build",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_domain",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&custom_domain=ilike.aura.build",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_domain",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&custom_domain=ilike.aura.build",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_domain",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_code?select=*&slug=ilike.luminal-creative-studio",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_code?select=slug%2Ccreated_at&user_id=eq.5bd6211c-bd4c-467c-b442-4312cac4712c&order=created_at.desc",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/public_author_profiles?select=id%2Cfull_name%2Cavatar_url%2Cbio%2Cslug%2Ccreated_at%2Cviews%2Cis_featured%2Cwebsite%2Clocation%2Cis_pro&id=in.%285bd6211c-bd4c-467c-b442-4312cac4712c%29",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/preview-images/luminal-creative-studio.png",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_share_project_context",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/increment_shared_code_views",
+      "status": 204,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_code?select=code%2Cprivate%2Cuser_id%2Cshare_source_code&slug=ilike.monolith-architecture",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://storage.googleapis.com/unicornstudio-production/embeds/7WRlj4TRuUxuldc6GVDM?v=1785755864505",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/projects?select=transition_type%2Ctransition_duration_ms%2Ctransition_easing%2Ctransition_distance_px&id=eq.890a2ea5-fc07-4e0a-93f0-907e208eaf48",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_project_chats_for_share",
+      "status": 200,
+      "method": "POST",
+      "resourceType": "fetch"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_code?select=code%2Cprivate%2Cuser_id%2Cshare_source_code&slug=ilike.finex-internet",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "fetch"
+    }
+  ],
+  "consoleErrors": [],
+  "findings": [
+    "1 visible interactive candidates discovered",
+    "0 visible canvas targets discovered",
+    "0/3 actions changed DOM, URL, scroll, or visible overlay counts"
+  ]
+}

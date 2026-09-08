@@ -1,0 +1,22 @@
+{
+  "name": "praxis-system",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "PRÁXIS — AI Communication System for Sensitive Medical Practices",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "express": "^4.21.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "better-sqlite3": "^11.7.0",
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^10.0.0"
+  },
+  "allowScripts": {
+    "better-sqlite3@11.10.0": true
+  }
+}

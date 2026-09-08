@@ -1,0 +1,514 @@
+      <!-- =========================
+Services section
+===========================-->
+<section class="py-18 md:py-20 lg:py-24 xl:py-39">
+  <div class="main-container">
+    <div class="space-y-8">
+      <!-- tab item  -->
+      <div
+  data-ns-animate
+  data-delay="0.1"
+  data-tab-items-container
+  role="tablist"
+  aria-label="Financial services tabs"
+  class="md:bg-background-3 relative grid w-full items-center justify-center gap-3 p-1 max-sm:!grid-cols-12 md:flex-nowrap md:gap-1 md:rounded-full"
+  style="grid-template-columns: repeat(15, 1fr)"
+>
+  <button
+    id="tab-payments"
+    data-tab-content="payments"
+    data-selected
+    role="tab"
+    aria-controls="tab-panel-payments"
+    aria-selected="true"
+    aria-label="Payments service tab"
+    tabindex="0"
+    class="font-inter-tight text-tagline-1 text-secondary/60 bg-background-4 col-span-6 cursor-pointer rounded-2xl px-6 py-[14px] font-medium sm:col-span-3 md:rounded-[80px] md:bg-white"
+  >
+    <span class="relative z-20">Payments</span>
+  </button>
+  <button
+    id="tab-analytics"
+    data-tab-content="analytics"
+    role="tab"
+    aria-controls="tab-panel-analytics"
+    aria-selected="false"
+    aria-label="Analytics service tab"
+    tabindex="-1"
+    class="font-inter-tight text-tagline-1 text-secondary/60 bg-background-4 col-span-6 cursor-pointer rounded-2xl px-6 py-[14px] font-medium transition-colors duration-300 ease-in-out sm:col-span-3 md:rounded-[80px] md:bg-white"
+  >
+    <span class="relative z-20">Analytics</span>
+  </button>
+  <button
+    id="tab-invoices"
+    data-tab-content="invoices"
+    role="tab"
+    aria-controls="tab-panel-invoices"
+    aria-selected="false"
+    aria-label="Invoices service tab"
+    tabindex="-1"
+    class="font-inter-tight text-tagline-1 text-secondary/60 bg-background-4 col-span-6 cursor-pointer rounded-2xl px-6 py-[14px] font-medium transition-colors duration-300 ease-in-out sm:col-span-3 md:rounded-[80px] md:bg-white"
+  >
+    <span class="relative z-20"> Invoices</span>
+  </button>
+  <button
+    id="tab-security"
+    data-tab-content="security"
+    role="tab"
+    aria-controls="tab-panel-security"
+    aria-selected="false"
+    aria-label="Security service tab"
+    tabindex="-1"
+    class="font-inter-tight text-tagline-1 text-secondary/60 bg-background-4 col-span-6 cursor-pointer rounded-2xl px-6 py-[14px] font-medium transition-colors duration-300 ease-in-out sm:col-span-3 md:rounded-[80px] md:bg-white"
+  >
+    <span class="relative z-20"> Security</span>
+  </button>
+  <button
+    id="tab-automation"
+    data-tab-content="automation"
+    role="tab"
+    aria-controls="tab-panel-automation"
+    aria-selected="false"
+    aria-label="Automation service tab"
+    tabindex="-1"
+    class="font-inter-tight text-tagline-1 text-secondary/60 bg-background-4 col-span-12 cursor-pointer rounded-2xl px-6 py-[14px] font-medium transition-colors duration-300 ease-in-out sm:col-span-3 md:rounded-[80px] md:bg-white"
+  >
+    <span class="relative z-20"> Automation</span>
+  </button>
+
+  <!-- active tab indicator -->
+  <div
+    data-active-tab-indicator
+    class="bg-secondary absolute left-0 z-10 rounded-2xl transition-all duration-500 ease-out md:rounded-[80px]"
+  ></div>
+</div>
+
+
+      <!-- tab content  -->
+      <div
+  data-tab-contents-container
+  data-ns-animate
+  data-delay="0.2"
+  role="tabpanel"
+  aria-live="polite"
+  aria-atomic="true"
+>
+  <!-- Payments Content -->
+  <div
+    data-tab-content="payments"
+    id="tab-panel-payments"
+    role="tabpanel"
+    aria-labelledby="tab-payments"
+    aria-hidden="false"
+    class="pointer-events-none flex h-auto flex-col items-center justify-center md:flex-row xl:h-[624px]"
+  >
+    <figure
+      class="h-[380px] w-full max-w-[450px] overflow-hidden rounded-t-[28px] md:rounded-t-none md:rounded-l-[28px] lg:h-[480px] lg:max-w-[500px] xl:h-auto xl:max-w-[645px]"
+      
+    >
+      <img
+        src="./images/ns-img-561.png"
+        alt="Financial management platform showing payment processing dashboard with real-time transaction tracking"
+        class="size-full object-cover"
+        loading="lazy"
+      />
+    </figure>
+
+    <div
+      class="bg-background-2 flex h-[380px] max-w-[450px] items-center justify-center rounded-b-[28px] pr-4 pl-4 md:w-auto md:rounded-r-[28px] md:rounded-b-none md:pr-14 md:pl-[42px] lg:h-[480px] lg:rounded-br-[28px] xl:h-[624px] xl:max-w-[645px]"
+    >
+      <div class="space-y-12 xl:space-y-39">
+        <div class="max-w-[547px] space-y-2 text-center md:text-left">
+          <h3 id="heading-payments" class="text-heading-4 text-secondary font-normal">
+            Effortless payment management
+          </h3>
+          <p class="line-clamp-4 lg:line-clamp-none">
+            Our comprehensive payment management system provides instant notifications for every
+            transaction, detailed payment history with advanced filtering options, and seamless
+            integration with multiple payment gateways. Monitor incoming and outgoing payments, set
+            up recurring payment schedules, and gain complete visibility into your cash flow with
+            intuitive dashboards and customizable reports.
+          </p>
+        </div>
+
+        <div class="pointer-events-auto">
+          <!-- button v3 -->
+<div
+  class="btn-v3-secondary btn-v3-lg mx-auto sm:mx-0 w-fit cursor-pointer rounded-2xl px-1 py-1"
+  aria-label="{=$aria-label}"
+  data-button-v3
+>
+  <a href="./services.html" class="block">
+    <div class="flex items-center gap-x-4">
+      <!-- icon   -->
+      <span
+        class="relative z-20 flex shrink-0 items-center justify-center overflow-hidden rounded-[13px] p-2.5 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]"
+        data-button-v3-icon
+        aria-hidden="true"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6">
+          <path d="M11 5H13V7H11V5Z" />
+          <path d="M5 5H7V7H5V5Z" />
+          <path d="M14 8H16V10H14V8Z" />
+          <path d="M8 8H10V10H8V8Z" />
+          <path d="M17 11H19V13H17V11Z" />
+          <path d="M11 11H13V13H11V11Z" />
+          <path d="M14 14H16V16H14V14Z" />
+          <path d="M8 14H10V16H8V14Z" />
+          <path d="M11 17H13V19H11V17Z" />
+          <path d="M5 17H7V19H5V17Z" />
+        </svg>
+      </span>
+      <!-- content  -->
+      <span
+        class="shrink-0 pr-4 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] first-letter:uppercase"
+        data-button-v3-text
+        aria-hidden="true"
+      >
+        Learn more
+      </span>
+    </div>
+  </a>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Analytics Content -->
+  <div
+    data-tab-content="analytics"
+    id="tab-panel-analytics"
+    role="tabpanel"
+    aria-labelledby="tab-analytics"
+    aria-hidden="true"
+    class="pointer-events-none hidden h-auto flex-col items-center justify-center md:flex-row xl:h-[624px]"
+  >
+    <figure
+      class="h-[380px] w-full max-w-[450px] overflow-hidden rounded-t-[28px] md:rounded-t-none md:rounded-l-[28px] lg:h-[480px] lg:max-w-[500px] xl:h-auto xl:max-w-[645px]"
+      
+    >
+      <img
+        src="./images/ns-img-577.png"
+        alt="Financial analytics dashboard displaying real-time performance metrics, trends, and data-driven insights for business decision making"
+        class="size-full object-cover"
+        loading="lazy"
+      />
+    </figure>
+
+    <div
+      class="bg-background-2 flex h-[380px] max-w-[450px] items-center justify-center rounded-b-[28px] pr-4 pl-4 md:w-auto md:rounded-r-[28px] md:rounded-b-none md:pr-14 md:pl-[42px] lg:h-[480px] lg:rounded-br-[28px] xl:h-[624px] xl:max-w-[645px]"
+    >
+      <div class="space-y-12 xl:space-y-39">
+        <div class="max-w-[547px] space-y-2 text-center md:text-left">
+          <h3 id="heading-analytics" class="text-heading-4 text-secondary font-normal">
+            Actionable financial insights
+          </h3>
+          <p class="line-clamp-4 lg:line-clamp-none">
+            Monitor performance, track trends, and make smarter decisions with real-time analytics
+            and clear reporting. Our advanced analytics engine transforms raw financial data into
+            actionable insights through interactive dashboards, customizable KPI tracking, and
+            predictive trend analysis. Visualize revenue patterns, identify growth opportunities,
+            and understand spending behaviors with comprehensive charts and graphs.
+          </p>
+        </div>
+        <div class="pointer-events-auto">
+          <!-- button v3 -->
+<div
+  class="btn-v3-secondary btn-v3-lg mx-auto sm:mx-0 w-fit cursor-pointer rounded-2xl px-1 py-1"
+  aria-label="{=$aria-label}"
+  data-button-v3
+>
+  <a href="./services.html" class="block">
+    <div class="flex items-center gap-x-4">
+      <!-- icon   -->
+      <span
+        class="relative z-20 flex shrink-0 items-center justify-center overflow-hidden rounded-[13px] p-2.5 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]"
+        data-button-v3-icon
+        aria-hidden="true"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6">
+          <path d="M11 5H13V7H11V5Z" />
+          <path d="M5 5H7V7H5V5Z" />
+          <path d="M14 8H16V10H14V8Z" />
+          <path d="M8 8H10V10H8V8Z" />
+          <path d="M17 11H19V13H17V11Z" />
+          <path d="M11 11H13V13H11V11Z" />
+          <path d="M14 14H16V16H14V14Z" />
+          <path d="M8 14H10V16H8V14Z" />
+          <path d="M11 17H13V19H11V17Z" />
+          <path d="M5 17H7V19H5V17Z" />
+        </svg>
+      </span>
+      <!-- content  -->
+      <span
+        class="shrink-0 pr-4 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] first-letter:uppercase"
+        data-button-v3-text
+        aria-hidden="true"
+      >
+        Learn more
+      </span>
+    </div>
+  </a>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Invoices Content -->
+  <div
+    data-tab-content="invoices"
+    id="tab-panel-invoices"
+    role="tabpanel"
+    aria-labelledby="tab-invoices"
+    aria-hidden="true"
+    class="pointer-events-none hidden h-auto flex-col items-center justify-center md:flex-row xl:h-[624px]"
+  >
+    <figure
+      class="h-[380px] w-full max-w-[450px] overflow-hidden rounded-t-[28px] md:rounded-t-none md:rounded-l-[28px] lg:h-[480px] lg:max-w-[500px] xl:h-auto xl:max-w-[645px]"
+      
+    >
+      <img
+        src="./images/ns-img-576.png"
+        alt="Invoice management system interface showing automated invoice creation, sending, and payment tracking features"
+        class="size-full object-cover"
+        loading="lazy"
+      />
+    </figure>
+
+    <div
+      class="bg-background-2 flex h-[380px] max-w-[450px] items-center justify-center rounded-b-[28px] pr-4 pl-4 md:w-auto md:rounded-r-[28px] md:rounded-b-none md:pr-14 md:pl-[42px] lg:h-[480px] lg:rounded-br-[28px] xl:h-[624px] xl:max-w-[645px]"
+    >
+      <div class="space-y-12 xl:space-y-39">
+        <div class="max-w-[547px] space-y-2 text-center md:text-left">
+          <h3 id="heading-invoices" class="text-heading-4 text-secondary font-normal">
+            Simple, smart invoicing
+          </h3>
+          <p class="line-clamp-4 lg:line-clamp-none">
+            Create, send, and manage invoices effortlessly while keeping every transaction organized
+            and on time. Streamline your billing process with professional invoice templates that
+            can be customized with your branding, automated invoice generation based on recurring
+            services, and intelligent payment reminders to reduce late payments. Track invoice
+            status in real-time, from draft to sent, viewed, and paid, with automatic updates and
+            notifications.
+          </p>
+        </div>
+        <div class="pointer-events-auto">
+          <!-- button v3 -->
+<div
+  class="btn-v3-secondary btn-v3-lg mx-auto sm:mx-0 w-fit cursor-pointer rounded-2xl px-1 py-1"
+  aria-label="{=$aria-label}"
+  data-button-v3
+>
+  <a href="./services.html" class="block">
+    <div class="flex items-center gap-x-4">
+      <!-- icon   -->
+      <span
+        class="relative z-20 flex shrink-0 items-center justify-center overflow-hidden rounded-[13px] p-2.5 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]"
+        data-button-v3-icon
+        aria-hidden="true"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6">
+          <path d="M11 5H13V7H11V5Z" />
+          <path d="M5 5H7V7H5V5Z" />
+          <path d="M14 8H16V10H14V8Z" />
+          <path d="M8 8H10V10H8V8Z" />
+          <path d="M17 11H19V13H17V11Z" />
+          <path d="M11 11H13V13H11V11Z" />
+          <path d="M14 14H16V16H14V14Z" />
+          <path d="M8 14H10V16H8V14Z" />
+          <path d="M11 17H13V19H11V17Z" />
+          <path d="M5 17H7V19H5V17Z" />
+        </svg>
+      </span>
+      <!-- content  -->
+      <span
+        class="shrink-0 pr-4 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] first-letter:uppercase"
+        data-button-v3-text
+        aria-hidden="true"
+      >
+        Learn more
+      </span>
+    </div>
+  </a>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Security Content -->
+  <div
+    data-tab-content="security"
+    id="tab-panel-security"
+    role="tabpanel"
+    aria-labelledby="tab-security"
+    aria-hidden="true"
+    class="pointer-events-none hidden h-auto flex-col items-center justify-center md:flex-row xl:h-[624px]"
+  >
+    <figure
+      class="h-[380px] w-full max-w-[450px] overflow-hidden rounded-t-[28px] md:rounded-t-none md:rounded-l-[28px] lg:h-[480px] lg:max-w-[500px] xl:h-auto xl:max-w-[645px]"
+      
+    >
+      <img
+        src="./images/ns-img-578.png"
+        alt="Enterprise-grade security features including encryption, compliance protocols, and data protection controls for financial transactions"
+        class="size-full object-cover"
+        loading="lazy"
+      />
+    </figure>
+
+    <div
+      class="bg-background-2 flex h-[380px] max-w-[450px] items-center justify-center rounded-b-[28px] pr-4 pl-4 md:w-auto md:rounded-r-[28px] md:rounded-b-none md:pr-14 md:pl-[42px] lg:h-[480px] lg:rounded-br-[28px] xl:h-[624px] xl:max-w-[645px]"
+    >
+      <div class="space-y-12 xl:space-y-39">
+        <div class="max-w-[547px] space-y-2 text-center md:text-left">
+          <h3 id="heading-security" class="text-heading-4 text-secondary font-normal">
+            Built-in payment protection
+          </h3>
+          <p class="line-clamp-4 lg:line-clamp-none">
+            Keep every transaction secure with advanced encryption, compliance, and full data
+            control. Our enterprise-grade security infrastructure employs bank-level encryption
+            protocols, multi-factor authentication, and continuous monitoring to protect your
+            financial data. We maintain strict compliance with industry standards including PCI DSS,
+            GDPR, and SOC 2, ensuring your sensitive information meets the highest security
+            benchmarks.
+          </p>
+        </div>
+
+        <div class="pointer-events-auto">
+          <!-- button v3 -->
+<div
+  class="btn-v3-secondary btn-v3-lg mx-auto sm:mx-0 w-fit cursor-pointer rounded-2xl px-1 py-1"
+  aria-label="{=$aria-label}"
+  data-button-v3
+>
+  <a href="./services.html" class="block">
+    <div class="flex items-center gap-x-4">
+      <!-- icon   -->
+      <span
+        class="relative z-20 flex shrink-0 items-center justify-center overflow-hidden rounded-[13px] p-2.5 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]"
+        data-button-v3-icon
+        aria-hidden="true"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6">
+          <path d="M11 5H13V7H11V5Z" />
+          <path d="M5 5H7V7H5V5Z" />
+          <path d="M14 8H16V10H14V8Z" />
+          <path d="M8 8H10V10H8V8Z" />
+          <path d="M17 11H19V13H17V11Z" />
+          <path d="M11 11H13V13H11V11Z" />
+          <path d="M14 14H16V16H14V14Z" />
+          <path d="M8 14H10V16H8V14Z" />
+          <path d="M11 17H13V19H11V17Z" />
+          <path d="M5 17H7V19H5V17Z" />
+        </svg>
+      </span>
+      <!-- content  -->
+      <span
+        class="shrink-0 pr-4 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] first-letter:uppercase"
+        data-button-v3-text
+        aria-hidden="true"
+      >
+        Learn more
+      </span>
+    </div>
+  </a>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Automation Content -->
+  <div
+    data-tab-content="automation"
+    id="tab-panel-automation"
+    role="tabpanel"
+    aria-labelledby="tab-automation"
+    aria-hidden="true"
+    class="pointer-events-none hidden h-auto flex-col items-center justify-center md:flex-row xl:h-[624px]"
+  >
+    <figure
+      class="h-[380px] w-full max-w-[450px] overflow-hidden rounded-t-[28px] md:rounded-t-none md:rounded-l-[28px] lg:h-[480px] lg:max-w-[500px] xl:h-auto xl:max-w-[645px]"
+      
+    >
+      <img
+        src="./images/ns-img-575.png"
+        alt="Intelligent payment automation system with workflow management tools for streamlining financial operations and reducing manual tasks"
+        class="size-full object-cover"
+        loading="lazy"
+      />
+    </figure>
+
+    <div
+      class="bg-background-2 flex h-[380px] max-w-[450px] items-center justify-center rounded-b-[28px] pr-4 pl-4 md:w-auto md:rounded-r-[28px] md:rounded-b-none md:pr-14 md:pl-[42px] lg:h-[480px] lg:rounded-br-[28px] xl:h-[624px] xl:max-w-[645px]"
+    >
+      <div class="space-y-12 xl:space-y-39">
+        <div class="max-w-[547px] space-y-2 text-center md:text-left">
+          <h3 id="heading-automation" class="text-heading-4 text-secondary font-normal">
+            Payments that run themselves
+          </h3>
+          <p class="line-clamp-4 lg:line-clamp-none">
+            Automate workflows, reduce manual tasks, and streamline operations with intelligent
+            payment automation. Transform your financial processes with smart automation rules that
+            handle repetitive tasks automatically, from scheduled payments and recurring billing to
+            invoice generation and payment reconciliation. Create custom workflows that trigger
+            actions based on specific conditions, reducing human error and ensuring consistency.
+          </p>
+        </div>
+        <div class="pointer-events-auto">
+          <!-- button v3 -->
+<div
+  class="btn-v3-secondary btn-v3-lg mx-auto sm:mx-0 w-fit cursor-pointer rounded-2xl px-1 py-1"
+  aria-label="{=$aria-label}"
+  data-button-v3
+>
+  <a href="./services.html" class="block">
+    <div class="flex items-center gap-x-4">
+      <!-- icon   -->
+      <span
+        class="relative z-20 flex shrink-0 items-center justify-center overflow-hidden rounded-[13px] p-2.5 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]"
+        data-button-v3-icon
+        aria-hidden="true"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6">
+          <path d="M11 5H13V7H11V5Z" />
+          <path d="M5 5H7V7H5V5Z" />
+          <path d="M14 8H16V10H14V8Z" />
+          <path d="M8 8H10V10H8V8Z" />
+          <path d="M17 11H19V13H17V11Z" />
+          <path d="M11 11H13V13H11V11Z" />
+          <path d="M14 14H16V16H14V14Z" />
+          <path d="M8 14H10V16H8V14Z" />
+          <path d="M11 17H13V19H11V17Z" />
+          <path d="M5 17H7V19H5V17Z" />
+        </svg>
+      </span>
+      <!-- content  -->
+      <span
+        class="shrink-0 pr-4 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] first-letter:uppercase"
+        data-button-v3-text
+        aria-hidden="true"
+      >
+        Learn more
+      </span>
+    </div>
+  </a>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+

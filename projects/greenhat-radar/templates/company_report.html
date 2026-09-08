@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Relatório individual de qualificação GREENHAT Radar.">
+  <title>{{ company.trade_name or company.legal_name }} | GREENHAT Radar</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+</head>
+<body class="report-body">
+  <a class="skip-link" href="#report-content">Pular para conteúdo</a>
+
+  <header class="report-topbar">
+    <div class="report-topbar__brand" aria-label="GREENHAT Radar">
+      <strong>GREENHAT</strong>
+      <span>RADAR / RELATÓRIO</span>
+    </div>
+    <a class="report-topbar__back" href="{{ url_for('index') }}">Voltar para fila</a>
+  </header>
+
+  <main id="report-content" class="report-shell">
+    <section class="report-hero" aria-labelledby="report-title">
+      <div>
+        <p class="eyebrow">RELATÓRIO INDIVIDUAL</p>
+        <h1 id="report-title">{{ company.trade_name or company.legal_name }}</h1>
+        <p>{{ company.city or 'Local não informado' }}{% if company.state %}, {{ company.state }}{% endif %} · {{ company.segment }}</p>
+      </div>
+      <div class="report-score" aria-label="Fit {{ company.fit_score }} de 100">
+        <span>Fit atual</span>
+        <strong>{{ company.fit_score }}</strong>
+      </div>
+    </section>
+
+    <dl class="report-summary">
+      <div>
+        <dt>Pipeline</dt>
+        <dd>{{ company.pipeline_status|replace('_', ' ') }}</dd>
+      </div>
+      <div>
+        <dt>CNPJ</dt>
+        <dd>{{ company.cnpj or 'Não informado' }}</dd>
+      </div>
+      <div>
+        <dt>CNAE</dt>
+        <dd>{{ company.cnae_primary or 'Não informado' }}</dd>
+      </div>
+      <div>
+        <dt>Fonte</dt>
+        <dd>{{ company.source or 'Não informada' }}</dd>
+      </div>
+      <div>
+        <dt>Categoria observada</dt>
+        <dd>{{ company.business_category or 'Não identificado' }}</dd>
+      </div>
+      <div>
+        <dt>Aderência ao foco</dt>
+        <dd>{% if company.effective_focus == 'aderente' %}Aderente{% elif company.effective_focus == 'fora_do_foco' %}Fora do foco{% else %}Revisar{% endif %}</dd>
+      </div>
+    </dl>
+
+    <section class="report-grid" aria-label="Evidências de qualificação">
+      <article class="report-panel">
+        <h2>Classificação</h2>
+        <p><strong>{{ company.segment }}</strong></p>
+        <p>Categoria observada: <strong>{{ company.business_category or 'Não identificado' }}</strong>.</p>
+        {% if company.segment == 'Outro' %}
+          <p>{{ company.classification_detail or 'Sem sinais públicos suficientes para identificar a atividade da empresa.' }}</p>
+        {% else %}
+          <p>Classificação baseada em CNAE, descrição e sinais do site público.</p>
+        {% endif %}
+      </article>
+
+      <article class="report-panel">
+        <h2>Sinais que formam o fit</h2>
+        {% if company.score_reasons %}
+          <ul class="report-signal-list">
+            {% for reason in company.score_reasons %}
+              <li>{{ reason }}</li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p>Sem sinais suficientes. Revisão humana necessária.</p>
+        {% endif %}
+      </article>
+
+      <article class="report-panel report-panel--wide">
+        <h2>Site público</h2>
+        {% if company.website_status == 'available' %}
+          <p class="report-status">Site analisado com sucesso.</p>
+        {% elif company.website_status == 'unavailable' %}
+          <p class="report-status report-status--unavailable">O RADAR não conseguiu abrir o site na última análise.</p>
+        {% else %}
+          <p class="report-status">Site ainda não analisado.</p>
+        {% endif %}
+        {% if company.website %}
+          <p><a href="{{ company.website }}" target="_blank" rel="noreferrer">{{ company.website }}</a></p>
+        {% endif %}
+        {% if company.website_title %}
+          <p><strong>{{ company.website_title }}</strong></p>
+        {% endif %}
+        {% if company.website_description %}
+          <p>{{ company.website_description }}</p>
+        {% elif company.website_excerpt %}
+          <p>{{ company.website_excerpt[:1200] }}</p>
+        {% endif %}
+      </article>
+
+      <article class="report-panel">
+        <h2>Perfis públicos disponíveis</h2>
+        {% if profile_links %}
+          <div class="report-profile-links">
+            {% for label, url in profile_links %}
+              <a href="{{ url }}" target="_blank" rel="noreferrer">{{ label }}</a>
+            {% endfor %}
+          </div>
+        {% else %}
+          <p>Nenhum perfil público foi encontrado nos links do site. O RADAR não busca redes fora dele.</p>
+        {% endif %}
+      </article>
+
+      <article class="report-panel">
+        <h2>Leitura opcional com Claude</h2>
+        {% if company.ai_fit_summary %}
+          <p class="report-analysis">{{ company.ai_fit_summary }}</p>
+          {% if company.ai_fit_model %}<p class="company-detail-line">Modelo: {{ company.ai_fit_model }}</p>{% endif %}
+        {% else %}
+          <p>Nenhuma leitura criada. Use “Interpretar fit com Claude” na ficha da empresa depois de analisar o site.</p>
+        {% endif %}
+      </article>
+
+      <article class="report-panel report-panel--wide">
+        <h2>Rascunhos e revisão humana</h2>
+        {% if drafts %}
+          <ul class="report-draft-list">
+            {% for draft in drafts %}
+              <li><strong>{{ draft.channel }} · {{ draft.language }}</strong><br>{{ draft.status|replace('_', ' ') }}</li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p>Nenhum rascunho criado. O RADAR não envia mensagens automaticamente.</p>
+        {% endif %}
+      </article>
+    </section>
+  </main>
+</body>
+</html>

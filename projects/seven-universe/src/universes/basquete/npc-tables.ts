@@ -1,0 +1,7 @@
+import type { NpcTables } from '../types';
+export const BASQUETE_NPC_TABLES: NpcTables = {
+  names: ['Tyrese', 'Malik', 'DeAndre', 'Jalen', 'Cade', 'Trae', 'Zion', 'Ja', 'Shai', 'Anthony', 'Darius', 'Immanuel', 'Bam', 'Jaylen', 'Devin', 'Donovan', 'RJ', 'Paolo', 'Chet', 'Scoot', 'Amen', 'Ausar', 'Brandon', 'Marcus', 'Terrence', 'Xavier', 'Keon', 'Dwight', 'Andre', 'Coby'],
+  roles: ['rookie do banco', 'titular veterano', 'jogador da G-League', 'recruta de high school', 'astro universitário', 'olheiro (scout)', 'assistente técnico', 'preparador físico', 'fisioterapeuta', 'repórter de quadra', 'árbitro', 'agente esportivo', 'diretor de basquete', 'lenda aposentada comentarista', 'fã fanático de courtside'],
+  traits: ['faminto por minutos', 'humilde trabalhador', 'trash talker', 'competitivo', 'preguiçoso talentoso', 'líder', 'egoísta', 'defensor leal', 'clutch', 'inconsistente', 'profissional', 'showman', 'veterano sábio', 'novato ansioso', 'businessman'],
+  appearance: { build: ['altíssimo e magro (ala)', 'gigante forte (pivô)', 'baixo e explosivo (armador)', 'atlético e definido', 'longilíneo com envergadura enorme'], hair: ['dreads longas', 'corte fade com desenho', 'careca', 'afro volumoso', 'tranças estilosas'], clothing: ['uniforme de jogo e tênis exclusivos', 'moletom de treino da franquia', 'terno de grife (pré-jogo tunnel fit)', 'roupa streetwear cara', 'jaqueta de aquecimento'], detail: ['tatuagens cobrindo os braços', 'correntes de diamante', 'joelheira e tornozeleira', 'protetor bucal pendurado', 'tênis de assinatura própria'] },
+};

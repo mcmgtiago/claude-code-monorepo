@@ -1,0 +1,107 @@
+<!-- ecosystem -->
+<section
+  class="py-[80px] md:py-[120px] xl:py-[156px]"
+  aria-labelledby="ecosystem-heading"
+  itemscope
+  itemtype="https://schema.org/SoftwareApplication"
+>
+  <div class="main-container">
+    <div class="space-y-14">
+      <!-- text  -->
+      <div class="space-y-3 text-center">
+        <h2
+          data-text-reveal
+          class="text-sora-heading-3 lg:text-sora-heading-2 text-background-13/90 font-sora font-normal"
+        >
+          Nexsas works with your ecosystem
+        </h2>
+        <p
+          data-text-reveal
+          data-delay="0.2"
+          class="font-inter-tight text-tagline-2 text-background-13/50 font-normal"
+          itemprop="description"
+        >
+          Nexsas works with your ecosystem
+        </p>
+      </div>
+
+      <!-- cards  -->
+      <div
+        class="grid grid-cols-12 items-center justify-center gap-4 md:gap-2"
+        role="list"
+        aria-label="Platform integrations"
+      >
+        <!-- card one   -->
+
+        <Component
+          src="src/components/shared/card/ecosystem-card.htm"
+          icon="./images/icons/slack.svg"
+          alt="Nexsas"
+          title="Slack"
+          description="Send voice-generated alerts directly to team chats."
+          role="listitem"
+          delay="0.3"
+        />
+
+        <!-- card two   -->
+        <Component
+          src="src/components/shared/card/ecosystem-card.htm"
+          icon="./images/icons/discord.svg"
+          alt="Nexsas"
+          title="Discord"
+          description="Send voice-generated alerts directly to team chats."
+          role="listitem"
+          delay="0.4"
+        />
+        <!-- card three   -->
+        <Component
+          src="src/components/shared/card/ecosystem-card.htm"
+          icon="./images/icons/telegram.svg"
+          alt="Nexsas"
+          title="Telegram"
+          description="Send voice-generated alerts directly to team chats."
+          role="listitem"
+          delay="0.5"
+        />
+        <!-- card four   -->
+        <Component
+          src="src/components/shared/card/ecosystem-card.htm"
+          icon="./images/icons/messenger-dark.svg"
+          alt="Nexsas"
+          title="Messenger"
+          description="Send voice-generated alerts directly to team chats."
+          role="listitem"
+          delay="0.6"
+        />
+        <!-- card five   -->
+        <Component
+          src="src/components/shared/card/ecosystem-card.htm"
+          icon="./images/icons/duolingo.svg"
+          alt="Nexsas"
+          title="Duolingo"
+          description="Send voice-generated alerts directly to team chats."
+          role="listitem"
+          delay="0.7"
+        />
+        <!-- card six   -->
+        <Component
+          src="src/components/shared/card/ecosystem-card.htm"
+          icon="./images/icons/skype.svg"
+          alt="Nexsas"
+          title="Skype"
+          description="Send voice-generated alerts directly to team chats."
+          role="listitem"
+          delay="0.8"
+        />
+      </div>
+    </div>
+
+    <div data-opai-animate data-delay="0.9" class="mt-19 text-center">
+      <Component
+        src="src/components/shared/button/link-primary.htm"
+        button-text="See all integrations"
+        href="./integration.html"
+      />
+    </div>
+  </div>
+</section>

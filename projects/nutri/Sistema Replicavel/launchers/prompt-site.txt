@@ -1,0 +1,18 @@
+COMO USAR: envie este prompt ao agente após substituir todos os campos entre colchetes. `WORKSPACE_ROOT` e `PROJECT_ROOT` devem ser caminhos absolutos. Este fluxo pode alterar o projeto e os arquivos de `_project/`.
+
+Use `${SYSTEM_ROOT}/07-PROMPT-ORQUESTRADOR.md` como instrução principal.
+
+CONFIGURAÇÃO
+WORKSPACE_ROOT = "[PENDENTE: raiz absoluta do workspace]"
+SYSTEM_ROOT = "${WORKSPACE_ROOT}/Sistema Replicavel"
+PROJECT_ROOT = "[PENDENTE: diretório do site]"
+PROJECT_TYPE = "[SITE_SOLO | SITE_CLINICA | GENERIC_SITE]"
+REGULATED_PROFILE = "[HEALTH | FITNESS | GENERAL]"
+STACK_PROFILE = "[STATIC | REACT | EXISTING]"
+EXECUTION_MODE = "[GATED | AUTO]"
+RELEASE_TARGET = "[PROTOTYPE | PRODUCTION]"
+AUDIT_ACTION = "NOT_APPLICABLE"
+PRIMARY_GOAL = "[PENDENTE]"
+PRIMARY_CTA = "[PENDENTE: ação e destino]"
+
+Determine o sitemap a partir de intenções reais, equipe, serviços e SEO. Para fitness, use `SITE_SOLO` ou `SITE_CLINICA` com `REGULATED_PROFILE=FITNESS`. Não gere 12 páginas por padrão nem páginas sem conteúdo substancial. Crie os artefatos, preserve componentes globais e implemente title, description, canonical e OG específicos por rota. Termine com QA de todas as páginas e handoff.

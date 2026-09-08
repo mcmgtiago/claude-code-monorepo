@@ -1,0 +1,20 @@
+COMO USAR: envie este prompt ao agente após substituir todos os campos entre colchetes. `WORKSPACE_ROOT` e `PROJECT_ROOT` devem ser caminhos absolutos. Este fluxo pode alterar o projeto e os arquivos de `_project/`.
+
+Use `${SYSTEM_ROOT}/07-PROMPT-ORQUESTRADOR.md` como instrução principal.
+
+CONFIGURAÇÃO
+WORKSPACE_ROOT = "[PENDENTE: raiz absoluta do workspace]"
+SYSTEM_ROOT = "${WORKSPACE_ROOT}/Sistema Replicavel"
+PROJECT_ROOT = "[PENDENTE: diretório da landing page]"
+CLIENT_MATERIALS_ROOT = "[PENDENTE: diretório dos materiais originais do cliente]"
+LOCAL_CODE_AUTHORIZATION = "[CONFIRMED | PENDING | DENIED]"
+PROJECT_TYPE = "[LP_FISIOTERAPIA | LP_PILATES | LP_REABILITACAO | LP_PROGRAMA | LP_PRODUTO | PERFORMANCE_MOVIMENTO | GENERIC_LP]"
+REGULATED_PROFILE = "[FISIOTERAPIA | EDUCACAO_FISICA | MULTIPROFISSIONAL | GENERAL]"
+STACK_PROFILE = "[STATIC | REACT | EXISTING]"
+EXECUTION_MODE = "[GATED | AUTO]"
+RELEASE_TARGET = "[PROTOTYPE | PRODUCTION]"
+AUDIT_ACTION = "NOT_APPLICABLE"
+PRIMARY_GOAL = "[PENDENTE]"
+PRIMARY_CTA = "[PENDENTE: exemplo Agendar avaliação -> https://...]"
+
+Organize materiais sem alterar originais; leia tudo e extraia identidade/cores com fonte; conclua arquitetura e copy integral. Consulte o catálogo e depois inspecione o código real de `Páginas`, `HERO`, `Blocos` e `Efeitos`. Selecione obrigatoriamente 1 base de página, 3 heroes distintos, 1 bloco e 1 efeito elegível. Após brief, copy, direção única, `hero_type` e plano, implemente somente `_project/hero-variants/v1`, `v2` e `v3`. Use mesma copy/CTA/tokens nas três. Pare em `AWAITING_HERO_APPROVAL`; nenhum modo escolhe variante ou implementa restante, QA final e handoff antes da escolha humana registrada.

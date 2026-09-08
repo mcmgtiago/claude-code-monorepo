@@ -1,0 +1,25 @@
+{
+  "generated": "2026-07-26T19:11:53.5891711-03:00",
+  "sections": [
+    {
+      "id": "mockups",
+      "label": "Mockups",
+      "groups": [
+        {
+          "slug": "email-outreach",
+          "files": [
+            {
+              "label": "Painel de prospecção",
+              "path": "mockups/email-outreach/index.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "design-systems",
+      "label": "Design Systems",
+      "groups": []
+    }
+  ]
+}

@@ -1,0 +1,641 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum LeadStatus {
+  NEW
+  QUALIFIED
+  PROPOSAL
+  NEGOTIATION
+  WON
+  LOST
+}
+
+enum TaskStatus {
+  TODO
+  IN_PROGRESS
+  DONE
+}
+
+enum TaskPriority {
+  HIGH
+  MEDIUM
+  LOW
+}
+
+enum TaskReminderTrigger {
+  DAY_BEFORE
+  HOUR_BEFORE
+}
+
+enum MeetingLocationType {
+  GOOGLE_MEET
+  ZOOM
+  MICROSOFT_TEAMS
+  CUSTOM_LINK
+}
+
+enum MeetingNoticeUnit {
+  HOURS
+  DAYS
+}
+
+enum UserAccessRole {
+  SUPERUSER
+  ADMIN
+  MANAGER
+  MEMBER
+}
+
+enum UserStatus {
+  ACTIVE
+  INVITED
+  SUSPENDED
+}
+
+enum TeamInviteStatus {
+  PENDING
+  ACCEPTED
+  REVOKED
+  EXPIRED
+}
+
+enum TrashEntityType {
+  LEAD
+  CONTACT
+  COMPANY
+  TASK
+  MEETING_EVENT
+  SCHEDULING_PAGE
+}
+
+model Lead {
+  id          String     @id @default(cuid())
+  workspaceId  String?
+  workspace    Workspace? @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  name        String
+  summary     String?
+  email       String?
+  phone       String?
+  company     String?
+  companyId   String?
+  contactId   String?
+  companyRecord Company? @relation("CompanyLeads", fields: [companyId], references: [id])
+  contactRecord Contact? @relation("ContactLeads", fields: [contactId], references: [id])
+  source      String?
+  status      LeadStatus @default(NEW)
+  sortOrder   Float      @default(0)
+  value       Float      @default(0)
+  score       Int        @default(0)
+  dueDate     DateTime?
+  attachmentsCount Int   @default(0)
+  attachmentsJson String?
+  assignedUsersJson String?
+  lastContact DateTime?
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  notes       Note[]
+  tasks       Task[]
+  reminders   LeadReminder[]
+  attachmentFiles LeadAttachmentFile[]
+
+  @@index([workspaceId, status, sortOrder])
+}
+
+model Contact {
+  id          String   @id @default(cuid())
+  workspaceId  String?
+  workspace    Workspace? @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  fullName    String
+  email       String?
+  phone       String?
+  title       String?
+  stage       String?
+  linkedinUrl String?
+  location    String?
+  timeZone    String?
+  customFieldsJson String?
+  companyId   String?
+  company     Company? @relation(fields: [companyId], references: [id])
+  leads       Lead[]   @relation("ContactLeads")
+  tasks       Task[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([workspaceId, createdAt])
+}
+
+model Company {
+  id          String    @id @default(cuid())
+  workspaceId  String?
+  workspace    Workspace? @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  name        String
+  website     String?
+  logoUrl     String?
+  industry    String?
+  type        String?
+  phone       String?
+  location    String?
+  description String?
+  stage       String?
+  employeeCount Int?
+  foundedYear Int?
+  revenueLabel String?
+  marketCapLabel String?
+  linkedinUrl String?
+  facebookUrl String?
+  xUrl        String?
+  listsJson   String?
+  keywordsJson String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  contacts    Contact[]
+  leads       Lead[]    @relation("CompanyLeads")
+  tasks       Task[]
+
+  @@index([workspaceId, name])
+}
+
+model User {
+  id                 String               @id @default(cuid())
+  fullName           String
+  email              String               @unique
+  profileImageUrl    String?
+  googleId           String?              @unique
+  passwordHash       String?
+  sessionVersion     Int                  @default(1)
+  onboardingCompleted Boolean             @default(false)
+  onboardingCompletedAt DateTime?
+  legacyRole         String?              @map("role")
+  jobRole            String?
+  accessRole         UserAccessRole       @default(MEMBER)
+  status             UserStatus           @default(ACTIVE)
+  lastActiveAt       DateTime?
+  primaryUseCase     String?
+  teamSize           String?
+  workspaceName      String?
+  companyWebsite     String?
+  hasExistingData    Boolean?
+  importTarget       String?
+  setupPipelineNow   Boolean?
+  pipelineStagesJson String?
+  inviteTeamNow      Boolean?
+  inviteEmailsJson   String?
+  peoplePrivateFieldsJson String?
+  peopleDisplayedFieldsJson String?
+  workspaceId        String?
+  workspace          Workspace?           @relation("WorkspaceMembers", fields: [workspaceId], references: [id], onDelete: SetNull)
+  workspaceMemberships WorkspaceMembership[]
+  createdWorkspaces  Workspace[]          @relation("WorkspaceCreator")
+  sentTeamInvites    TeamInvite[]         @relation("SentTeamInvites")
+  notifications      AppNotification[]
+  reminderDeliveries LeadReminderDelivery[]
+  taskReminderDeliveries TaskReminderDelivery[]
+  googleCalendarConnection GoogleCalendarConnection?
+  mailboxSettings    UserMailbox?
+  mailboxThreads     EmailThread[]
+  mailboxMessages    EmailMessage[]
+  profileImageAsset  UserProfileImage?
+  passwordResetTokens PasswordResetToken[]
+  emailChangeTokens  EmailChangeToken[]
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime             @updatedAt
+
+  @@index([workspaceId, accessRole, status])
+}
+
+model Workspace {
+  id               String             @id @default(cuid())
+  name             String
+  slug             String             @unique
+  website          String?
+  createdById      String?
+  createdBy        User?              @relation("WorkspaceCreator", fields: [createdById], references: [id], onDelete: SetNull)
+  members          User[]             @relation("WorkspaceMembers")
+  memberships      WorkspaceMembership[]
+  leads            Lead[]
+  contacts         Contact[]
+  companies        Company[]
+  tasks            Task[]
+  teamInvites      TeamInvite[]
+  meetingEvents    MeetingEvent[]
+  schedulingPages  SchedulingPage[]
+  meetingPreference MeetingPreference?
+  settings         WorkspaceSetting?
+  emailThreads     EmailThread[]
+  emailMessages    EmailMessage[]
+  trashEntries     TrashEntry[]
+  createdAt        DateTime           @default(now())
+  updatedAt        DateTime           @updatedAt
+}
+
+model WorkspaceMembership {
+  id          String         @id @default(cuid())
+  userId      String
+  user        User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  workspaceId String
+  workspace   Workspace      @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  accessRole  UserAccessRole @default(MEMBER)
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+
+  @@unique([userId, workspaceId])
+  @@index([workspaceId, accessRole])
+}
+
+model UserMailbox {
+  id                  String   @id @default(cuid())
+  userId               String   @unique
+  user                 User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  smtpHost             String?
+  smtpPort             Int?
+  smtpUser             String?
+  smtpPass             String?
+  smtpFrom             String?
+  imapHost             String?
+  imapPort             Int?
+  imapUser             String?
+  imapPass             String?
+  imapSecure           Boolean  @default(true)
+  openTrackingEnabled  Boolean  @default(true)
+  clickTrackingEnabled Boolean  @default(true)
+  signatureHtml        String?
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+}
+
+model UserProfileImage {
+  id         String   @id @default(cuid())
+  userId      String   @unique
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  fileName    String
+  mimeType    String
+  width       Int
+  height      Int
+  sizeBytes   Int
+  data        Bytes
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model LeadAttachmentFile {
+  id         String   @id
+  leadId     String
+  lead       Lead     @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  fileName   String
+  mimeType   String
+  sizeBytes  Int
+  data       Bytes
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model TeamInvite {
+  id          String           @id @default(cuid())
+  workspaceId  String?
+  workspace    Workspace?      @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  email       String
+  fullName    String?
+  accessRole  UserAccessRole   @default(MEMBER)
+  status      TeamInviteStatus @default(PENDING)
+  tokenHash   String           @unique
+  invitedById String
+  invitedBy   User             @relation("SentTeamInvites", fields: [invitedById], references: [id], onDelete: Cascade)
+  expiresAt   DateTime
+  acceptedAt  DateTime?
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+
+  @@unique([workspaceId, email])
+  @@index([workspaceId, status])
+}
+
+model PasswordResetToken {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tokenHash  String   @unique
+  expiresAt  DateTime
+  usedAt     DateTime?
+  createdAt  DateTime @default(now())
+}
+
+model EmailChangeToken {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  newEmail   String
+  tokenHash  String   @unique
+  expiresAt  DateTime
+  usedAt     DateTime?
+  createdAt  DateTime @default(now())
+
+  @@index([userId, createdAt])
+}
+
+model MeetingEvent {
+  id             String              @id @default(cuid())
+  workspaceId      String?
+  workspace        Workspace?         @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  title          String
+  startsAt       DateTime
+  endsAt         DateTime
+  locationType   MeetingLocationType @default(GOOGLE_MEET)
+  locationLabel  String?
+  meetingUrl     String?
+  recordMeeting  Boolean             @default(true)
+  insightEnabled Boolean             @default(true)
+  hostName       String              @default("Workspace Owner")
+  hostEmail      String              @default("owner@workspace.local")
+  externalCalendarProvider String?
+  externalCalendarId String?
+  externalEventId String?
+  createdAt      DateTime            @default(now())
+  updatedAt      DateTime            @default(now()) @updatedAt
+
+  @@index([workspaceId, startsAt])
+}
+
+model SchedulingPage {
+  id              String   @id @default(cuid())
+  workspaceId      String?
+  workspace        Workspace? @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  title           String
+  slug            String   @unique
+  durationMinutes Int
+  hostType        String   @default("Single host")
+  active          Boolean  @default(true)
+  hostName        String   @default("Workspace Owner")
+  hostEmail       String   @default("owner@workspace.local")
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @default(now()) @updatedAt
+
+  @@index([workspaceId, active])
+}
+
+model MeetingPreference {
+  id                    String              @id @default(cuid())
+  workspaceId           String?             @unique
+  workspace             Workspace?          @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  profileName           String              @default("Workspace Owner")
+  profileEmail          String              @default("owner@workspace.local")
+  personalMeetingSlug   String              @unique @default("workspace-owner")
+  timezoneLabel         String              @default("India Standard Time (GMT +5:30)")
+  googleMeetConnected   Boolean             @default(false)
+  zoomConnected         Boolean             @default(false)
+  microsoftTeamsConnected Boolean           @default(false)
+  customLink            String?
+  defaultLocationType   MeetingLocationType @default(GOOGLE_MEET)
+  weeklyAvailability    String              @default("[]")
+  bufferBeforeEnabled   Boolean             @default(false)
+  bufferBeforeMinutes   Int                 @default(15)
+  bufferAfterEnabled    Boolean             @default(false)
+  bufferAfterMinutes    Int                 @default(15)
+  minNoticeValue        Int                 @default(1)
+  minNoticeUnit         MeetingNoticeUnit   @default(HOURS)
+  createdAt             DateTime            @default(now())
+  updatedAt             DateTime            @default(now()) @updatedAt
+}
+
+model GoogleCalendarConnection {
+  id             String   @id @default(cuid())
+  userId         String   @unique
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  googleEmail    String
+  accessToken    String?
+  refreshToken   String
+  scope          String?
+  tokenType      String?
+  calendarId     String   @default("primary")
+  accessTokenExpiresAt DateTime?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model Task {
+  id               String       @id @default(cuid())
+  workspaceId       String?
+  workspace         Workspace?  @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  title            String
+  description      String?
+  taskType         String       @default("Call Contact")
+  priority         TaskPriority @default(MEDIUM)
+  ownerName        String       @default("Workspace Owner")
+  ownerEmail       String       @default("owner@workspace.local")
+  associateName    String?
+  associateEmail   String?
+  associateCompany String?
+  dueDate          DateTime?
+  status           TaskStatus   @default(TODO)
+  leadId           String?
+  lead             Lead?        @relation(fields: [leadId], references: [id])
+  contactId        String?
+  contact          Contact?     @relation(fields: [contactId], references: [id])
+  companyId        String?
+  company          Company?     @relation(fields: [companyId], references: [id])
+  reminderDeliveries TaskReminderDelivery[]
+  createdAt        DateTime     @default(now())
+  updatedAt        DateTime     @default(now()) @updatedAt
+
+  @@index([workspaceId, status, dueDate])
+}
+
+model Note {
+  id        String   @id @default(cuid())
+  body      String
+  leadId    String
+  lead      Lead     @relation(fields: [leadId], references: [id])
+  createdAt DateTime @default(now())
+}
+
+model LeadReminder {
+  id          String   @id @default(cuid())
+  leadId      String
+  lead        Lead     @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  title       String
+  remindAt    DateTime
+  completedAt DateTime?
+  deliveries  LeadReminderDelivery[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([completedAt, remindAt])
+}
+
+model LeadReminderDelivery {
+  id          String       @id @default(cuid())
+  reminderId   String
+  reminder     LeadReminder @relation(fields: [reminderId], references: [id], onDelete: Cascade)
+  userId       String
+  user         User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  notifiedAt   DateTime?
+  emailedAt    DateTime?
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+
+  @@unique([reminderId, userId])
+  @@index([userId, notifiedAt, emailedAt])
+}
+
+model TaskReminderDelivery {
+  id          String              @id @default(cuid())
+  taskId       String
+  task         Task                @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  userId       String
+  user         User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  trigger      TaskReminderTrigger
+  notifiedAt   DateTime?
+  emailedAt    DateTime?
+  createdAt    DateTime            @default(now())
+  updatedAt    DateTime            @updatedAt
+
+  @@unique([taskId, userId, trigger])
+  @@index([userId, trigger, notifiedAt, emailedAt])
+}
+
+model AppNotification {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  kind      String
+  title     String
+  body      String
+  link      String?
+  readAt    DateTime?
+  emailedAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model EmailThread {
+  id            String         @id @default(cuid())
+  workspaceId    String?
+  workspace      Workspace?    @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  mailboxUserId  String?
+  mailboxUser    User?         @relation(fields: [mailboxUserId], references: [id], onDelete: SetNull)
+  subject       String
+  fromName      String?
+  fromEmail     String
+  toEmail       String?
+  ccEmail       String?
+  bccEmail      String?
+  snippet       String?
+  starredAt     DateTime?
+  trashedAt     DateTime?
+  lastMessageAt DateTime
+  createdAt     DateTime       @default(now())
+  messages      EmailMessage[]
+
+  @@index([workspaceId, mailboxUserId, lastMessageAt])
+}
+
+model EmailMessage {
+  id         String      @id @default(cuid())
+  threadId   String
+  thread     EmailThread @relation(fields: [threadId], references: [id])
+  workspaceId String?
+  workspace   Workspace?  @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  mailboxUserId String?
+  mailboxUser User?      @relation(fields: [mailboxUserId], references: [id], onDelete: SetNull)
+  direction  String
+  subject    String
+  fromEmail  String
+  toEmail    String?
+  ccEmail    String?
+  bccEmail   String?
+  body       String
+  bodyHtml   String?
+  readAt     DateTime?
+  attachmentsJson String?
+  trackingToken String?    @unique
+  openedAt   DateTime?
+  clickedAt  DateTime?
+  clickCount Int          @default(0)
+  bouncedAt  DateTime?
+  sentAt     DateTime
+  providerId String?     @unique
+  createdAt  DateTime    @default(now())
+
+  @@index([workspaceId, mailboxUserId, sentAt])
+}
+
+model WorkspaceSetting {
+  id                  String   @id @default(cuid())
+  workspaceId         String?  @unique
+  workspace           Workspace? @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  smtpHost            String?
+  smtpPort            Int?
+  smtpUser            String?
+  smtpPass            String?
+  smtpFrom            String?
+  imapHost            String?
+  imapPort            Int?
+  imapUser            String?
+  imapPass            String?
+  imapSecure          Boolean  @default(true)
+  countryCode         String?
+  timezone            String?
+  currencyCode        String?
+  locale              String?
+  dateFormat          String?
+  timeFormat          String?
+  weekStartsOn        String?
+  slackWebhookUrl     String?
+  slackConnectedAt    DateTime?
+  reminderInAppEnabled Boolean  @default(true)
+  reminderEmailEnabled Boolean  @default(true)
+  openTrackingEnabled Boolean  @default(true)
+  clickTrackingEnabled Boolean @default(true)
+  peopleFieldsJson    String?
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+}
+
+model PlatformSetting {
+  id                  String   @id @default("platform")
+  appName             String?
+  appDescription      String?
+  appLogoData         Bytes?
+  appLogoMimeType     String?
+  appUrl              String?
+  supportEmail        String?
+  smtpHost            String?
+  smtpPort            Int?
+  smtpUser            String?
+  smtpPass            String?
+  smtpFrom            String?
+  imapHost            String?
+  imapPort            Int?
+  imapUser            String?
+  imapPass            String?
+  imapSecure          Boolean  @default(true)
+  googleClientId      String?
+  googleClientSecret  String?
+  openAiApiKey        String?
+  openAiModel         String?
+  openTrackingEnabled Boolean  @default(true)
+  clickTrackingEnabled Boolean @default(true)
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+}
+
+model TrashEntry {
+  id          String          @id @default(cuid())
+  workspaceId  String?
+  workspace    Workspace?      @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  entityType  TrashEntityType
+  entityId    String
+  title       String
+  description String?
+  payload     Json
+  deletedAt   DateTime        @default(now())
+
+  @@index([deletedAt])
+  @@index([entityType, deletedAt])
+  @@index([workspaceId, deletedAt])
+}

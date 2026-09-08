@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RP · Chat</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <aside id="sidebar">
+    <header>
+      <h1>RP</h1>
+      <button id="newSessionBtn" title="Nova sessão">＋</button>
+    </header>
+    <ul id="sessionList"></ul>
+  </aside>
+
+  <main id="main">
+    <header id="chatHeader">
+      <h2 id="chatTitle">Sem sessão</h2>
+      <div class="headerActions">
+        <button id="renameBtn" title="Renomear">✎</button>
+        <button id="deleteBtn" title="Apagar">🗑</button>
+      </div>
+    </header>
+
+    <div id="messages"></div>
+
+    <div id="composer">
+      <textarea id="input" rows="3" placeholder="Sua fala..." disabled></textarea>
+      <button id="sendBtn" disabled>Enviar</button>
+    </div>
+  </main>
+
+  <!-- Modal: nova sessão -->
+  <div id="modal" class="hidden">
+    <div class="modalContent">
+      <h3>Nova sessão</h3>
+      <p>Defina o papel que o AI deve assumir. As próximas mensagens serão suas falas.</p>
+      <textarea id="systemPromptInput" rows="8" placeholder="Ex: Você é Helena, 28 anos, advogada..."></textarea>
+      <div class="modalActions">
+        <button id="cancelBtn">Cancelar</button>
+        <button id="createBtn">Criar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "correio-prospeccao-local",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Painel local para preparar e enviar e-mails individuais de prospecção B2B.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

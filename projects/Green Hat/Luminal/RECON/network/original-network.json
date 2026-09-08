@@ -1,0 +1,2168 @@
+{
+  "label": "original",
+  "url": "https://luminal-creative-studio.aura.build/",
+  "capturedAt": "2026-08-03T11:17:17.055Z",
+  "requestCount": 89,
+  "responseCount": 87,
+  "fixtureCount": 13,
+  "requests": [
+    {
+      "url": "https://luminal-creative-studio.aura.build/",
+      "method": "GET",
+      "resourceType": "document",
+      "headers": {
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\""
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap",
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/index-C8dVQJFw.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/index-Dm4uwV3Y.css",
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/PublicSharedSiteResolver-CrDhRqqr.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/supabaseTokenFirewall-Q0EZZ_Mc.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/tabs-D9blgwa9.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/avatar-BKlmRaIn.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/checkbox-CdZ9lExn.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/index-CcsPrT2h.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/select-B6IWYAfZ.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/index-BdQq_4o_.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/ScreenCapture-DTM8b04K.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/refresh-cw-BBmY8TYF.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/target-CmEVE5H-.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/cmsLoopUtils-CG1SB9y3.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/copy-CNcm8fU-.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/iframeLinkUtils-B-m_rra5.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/RemixPopover-Dz7bbeaH.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/index-DZLughph.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/iconBase-CyZyPswn.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/htmlToReactConversion-CJ-FLOnn.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/TemplateArtifactsService-CHK0JM0x.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/shuffle-CZnb2r7L.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/PublishedReactArtifactPreview-CmQ6WNjB.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/reactCmsRuntime-DJx9dyyb.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/prism-BPPosO0p.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/lock-gKmYf0re.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/save-DLvSyqpd.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/cloud-upload-C7Gh_ohP.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/camera-BWUg6wrd.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/CustomPreviewContainer-CVzJhY-M.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/SandpackContainer-HYKRprJO.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/previewFrameSizes-DbqEjwpB.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/undo-2-Bd5XbZuO.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/bookmark-CNZFhaIz.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/reactProjectPages-oL-ViPrD.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/reactPreviewFiles-dS6aP0GR.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/sandpackUtils-Dlcl8Rou.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/reactProjectRepair-BVJ6kKDn.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/reactSourceValidation-DlN06oSY.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/reactLocalPreviewSupport-CrKYDiAb.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/reactPublishing-CEl5XMen.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&slug=ilike.luminal-creative-studio",
+      "method": "GET",
+      "resourceType": "fetch",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-client-info": "supabase-js-web/2.56.0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "accept": "application/json",
+        "accept-profile": "public",
+        "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_slug",
+      "method": "POST",
+      "resourceType": "fetch",
+      "headers": {
+        "content-profile": "public",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-client-info": "supabase-js-web/2.56.0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c"
+      },
+      "postData": "{\"p_slug\":\"luminal-creative-studio\"}"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&custom_domain=ilike.luminal-creative-studio.aura.build",
+      "method": "GET",
+      "resourceType": "fetch",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-client-info": "supabase-js-web/2.56.0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "accept": "application/json",
+        "accept-profile": "public",
+        "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_domain",
+      "method": "POST",
+      "resourceType": "fetch",
+      "headers": {
+        "content-profile": "public",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-client-info": "supabase-js-web/2.56.0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c"
+      },
+      "postData": "{\"p_domain\":\"luminal-creative-studio.aura.build\"}"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&custom_domain=ilike.luminal-creative-studio.aura.build",
+      "method": "GET",
+      "resourceType": "fetch",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-client-info": "supabase-js-web/2.56.0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "accept": "application/json",
+        "accept-profile": "public",
+        "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_domain",
+      "method": "POST",
+      "resourceType": "fetch",
+      "headers": {
+        "content-profile": "public",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-client-info": "supabase-js-web/2.56.0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c"
+      },
+      "postData": "{\"p_domain\":\"luminal-creative-studio.aura.build\"}"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&custom_domain=ilike.aura.build",
+      "method": "GET",
+      "resourceType": "fetch",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-client-info": "supabase-js-web/2.56.0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "accept": "application/json",
+        "accept-profile": "public",
+        "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_domain",
+      "method": "POST",
+      "resourceType": "fetch",
+      "headers": {
+        "content-profile": "public",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-client-info": "supabase-js-web/2.56.0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c"
+      },
+      "postData": "{\"p_domain\":\"aura.build\"}"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&custom_domain=ilike.aura.build",
+      "method": "GET",
+      "resourceType": "fetch",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-client-info": "supabase-js-web/2.56.0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "accept": "application/json",
+        "accept-profile": "public",
+        "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_domain",
+      "method": "POST",
+      "resourceType": "fetch",
+      "headers": {
+        "content-profile": "public",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-client-info": "supabase-js-web/2.56.0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c"
+      },
+      "postData": "{\"p_domain\":\"aura.build\"}"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_code?select=*&slug=ilike.luminal-creative-studio",
+      "method": "GET",
+      "resourceType": "fetch",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-client-info": "supabase-js-web/2.56.0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "accept": "application/json",
+        "accept-profile": "public",
+        "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_code?select=slug%2Ccreated_at&user_id=eq.5bd6211c-bd4c-467c-b442-4312cac4712c&order=created_at.desc",
+      "method": "GET",
+      "resourceType": "fetch",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-client-info": "supabase-js-web/2.56.0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "accept-profile": "public",
+        "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/public_author_profiles?select=id%2Cfull_name%2Cavatar_url%2Cbio%2Cslug%2Ccreated_at%2Cviews%2Cis_featured%2Cwebsite%2Clocation%2Cis_pro&id=in.%285bd6211c-bd4c-467c-b442-4312cac4712c%29",
+      "method": "GET",
+      "resourceType": "fetch",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-client-info": "supabase-js-web/2.56.0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "accept-profile": "public",
+        "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+      "method": "GET",
+      "resourceType": "font",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://fonts.googleapis.com/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/preview-images/luminal-creative-studio.png",
+      "method": "GET",
+      "resourceType": "fetch",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/logo-aura-gray.svg",
+      "method": "GET",
+      "resourceType": "image",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/preview-images/luminal-creative-studio.png",
+      "method": "GET",
+      "resourceType": "image",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://cdn.tailwindcss.com/",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap",
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap",
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/96a71491-ccb5-4cb6-a369-be4b7a348c85_1600w.webp",
+      "method": "GET",
+      "resourceType": "image",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/f7438fab-4b42-40cb-a36a-fd1c3446a888_800w.webp",
+      "method": "GET",
+      "resourceType": "image",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/74117bff-45d0-4c3e-ae97-12067641be39_800w.webp",
+      "method": "GET",
+      "resourceType": "image",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/3dbd59c3-a7a5-4515-985e-788ba17917e2_800w.webp",
+      "method": "GET",
+      "resourceType": "image",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/92f770e8-08ad-4fb2-8858-2d9b385124a7_800w.webp",
+      "method": "GET",
+      "resourceType": "image",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/93dbb379-52e9-4ded-bc8a-c0f05aef82c0_320w.webp",
+      "method": "GET",
+      "resourceType": "image",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/e6ac2623-ccad-4751-8c7d-782f07a9263d_320w.webp",
+      "method": "GET",
+      "resourceType": "image",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/30fed759-ea9f-42e9-8249-9ea7f44c811c_320w.webp",
+      "method": "GET",
+      "resourceType": "image",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/logo-aura-128-light.png",
+      "method": "GET",
+      "resourceType": "other",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/increment_shared_code_views",
+      "method": "POST",
+      "resourceType": "fetch",
+      "headers": {
+        "content-profile": "public",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-client-info": "supabase-js-web/2.56.0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c"
+      },
+      "postData": "{\"code_id\":19542}"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_share_project_context",
+      "method": "POST",
+      "resourceType": "fetch",
+      "headers": {
+        "content-profile": "public",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-client-info": "supabase-js-web/2.56.0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "content-type": "application/json",
+        "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c"
+      },
+      "postData": "{\"p_shared_slug\":\"luminal-creative-studio\"}"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_code?select=code%2Cprivate%2Cuser_id%2Cshare_source_code&slug=ilike.monolith-architecture",
+      "method": "GET",
+      "resourceType": "fetch",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0",
+        "x-client-info": "supabase-js-web/2.56.0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "accept": "application/json",
+        "accept-profile": "public",
+        "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvaXJxcmtkZ2JtdnB3dXR3dXdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM2Nzc2NTAsImV4cCI6MjA1OTI1MzY1MH0._UsCSHsTELn7m54tOhX3ySm67WEhcyHAPbuxEQZsl3c"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://cdn.tailwindcss.com/3.4.17",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "referer": "https://luminal-creative-studio.aura.build/"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+      "method": "GET",
+      "resourceType": "font",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "referer": "https://fonts.googleapis.com/"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm2BL9A.woff2",
+      "method": "GET",
+      "resourceType": "font",
+      "headers": {
+        "origin": "https://luminal-creative-studio.aura.build",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://fonts.googleapis.com/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/logo-aura-128-light.png",
+      "method": "GET",
+      "resourceType": "other",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/05d6b211-9e83-488c-8f3f-42a77b8e9532_1600w.png",
+      "method": "GET",
+      "resourceType": "image",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/ea262fd9-14f0-4917-be69-86fd3b302ccd_1600w.webp",
+      "method": "GET",
+      "resourceType": "image",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/5daa544b-07e8-4fcd-98c6-1fb55bef2131_1600w.png",
+      "method": "GET",
+      "resourceType": "image",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/26beb5d6-9395-4655-bd45-0375a5af0ffb_1600w.png",
+      "method": "GET",
+      "resourceType": "image",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/0ecb27cd-9dd3-4e8a-8f50-529e27caa666_1600w.png",
+      "method": "GET",
+      "resourceType": "image",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/09dc0e81-3730-4910-9053-26ecec7a3816_800w.webp",
+      "method": "GET",
+      "resourceType": "image",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    },
+    {
+      "url": "https://storage.googleapis.com/unicornstudio-production/embeds/7WRlj4TRuUxuldc6GVDM?v=1785755836076",
+      "method": "GET",
+      "resourceType": "fetch",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://luminal-creative-studio.aura.build/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Google Chrome\";v=\"151\", \"Chromium\";v=\"151\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": ""
+    }
+  ],
+  "responses": [
+    {
+      "url": "https://luminal-creative-studio.aura.build/",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "document",
+      "contentType": "text/html; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=utf-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/index-Dm4uwV3Y.css",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=utf-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/index-C8dVQJFw.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/index-CcsPrT2h.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/select-B6IWYAfZ.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/supabaseTokenFirewall-Q0EZZ_Mc.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/tabs-D9blgwa9.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/ScreenCapture-DTM8b04K.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/target-CmEVE5H-.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/avatar-BKlmRaIn.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/checkbox-CdZ9lExn.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/iframeLinkUtils-B-m_rra5.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/refresh-cw-BBmY8TYF.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/index-BdQq_4o_.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/RemixPopover-Dz7bbeaH.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/iconBase-CyZyPswn.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/PublicSharedSiteResolver-CrDhRqqr.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/copy-CNcm8fU-.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/cmsLoopUtils-CG1SB9y3.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/save-DLvSyqpd.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/PublishedReactArtifactPreview-CmQ6WNjB.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/htmlToReactConversion-CJ-FLOnn.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/index-DZLughph.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/lock-gKmYf0re.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/TemplateArtifactsService-CHK0JM0x.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/reactCmsRuntime-DJx9dyyb.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/camera-BWUg6wrd.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/prism-BPPosO0p.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/CustomPreviewContainer-CVzJhY-M.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/cloud-upload-C7Gh_ohP.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/shuffle-CZnb2r7L.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/undo-2-Bd5XbZuO.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/reactLocalPreviewSupport-CrKYDiAb.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/previewFrameSizes-DbqEjwpB.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/reactPreviewFiles-dS6aP0GR.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/reactProjectPages-oL-ViPrD.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/sandpackUtils-Dlcl8Rou.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/reactSourceValidation-DlN06oSY.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/bookmark-CNZFhaIz.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/reactPublishing-CEl5XMen.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/reactProjectRepair-BVJ6kKDn.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/SandpackContainer-HYKRprJO.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&slug=ilike.luminal-creative-studio",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "fetch",
+      "contentType": "application/json; charset=utf-8",
+      "fixture": "fixtures\\rest-v1-shared_react_projects-f95df3de90.json",
+      "error": "",
+      "bytes": 2
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_slug",
+      "status": 200,
+      "ok": true,
+      "method": "POST",
+      "resourceType": "fetch",
+      "contentType": "application/json; charset=utf-8",
+      "fixture": "fixtures\\rest-v1-rpc-get_public_shared_react_project_by_slug-a22bd59e74.json",
+      "error": "",
+      "bytes": 2
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&custom_domain=ilike.luminal-creative-studio.aura.build",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "fetch",
+      "contentType": "application/json; charset=utf-8",
+      "fixture": "fixtures\\rest-v1-shared_react_projects-aa116aa0eb.json",
+      "error": "",
+      "bytes": 2
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_domain",
+      "status": 200,
+      "ok": true,
+      "method": "POST",
+      "resourceType": "fetch",
+      "contentType": "application/json; charset=utf-8",
+      "fixture": "fixtures\\rest-v1-rpc-get_public_shared_react_project_by_domain-b34a165ab8.json",
+      "error": "",
+      "bytes": 2
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&custom_domain=ilike.luminal-creative-studio.aura.build",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "fetch",
+      "contentType": "application/json; charset=utf-8",
+      "fixture": "fixtures\\rest-v1-shared_react_projects-aa116aa0eb.json",
+      "error": "",
+      "bytes": 2
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_domain",
+      "status": 200,
+      "ok": true,
+      "method": "POST",
+      "resourceType": "fetch",
+      "contentType": "application/json; charset=utf-8",
+      "fixture": "fixtures\\rest-v1-rpc-get_public_shared_react_project_by_domain-b34a165ab8.json",
+      "error": "",
+      "bytes": 2
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&custom_domain=ilike.aura.build",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "fetch",
+      "contentType": "application/json; charset=utf-8",
+      "fixture": "fixtures\\rest-v1-shared_react_projects-f66e105d58.json",
+      "error": "",
+      "bytes": 2
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_domain",
+      "status": 200,
+      "ok": true,
+      "method": "POST",
+      "resourceType": "fetch",
+      "contentType": "application/json; charset=utf-8",
+      "fixture": "fixtures\\rest-v1-rpc-get_public_shared_react_project_by_domain-b34a165ab8.json",
+      "error": "",
+      "bytes": 2
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_react_projects?select=*&custom_domain=ilike.aura.build",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "fetch",
+      "contentType": "application/json; charset=utf-8",
+      "fixture": "fixtures\\rest-v1-shared_react_projects-f66e105d58.json",
+      "error": "",
+      "bytes": 2
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/get_public_shared_react_project_by_domain",
+      "status": 200,
+      "ok": true,
+      "method": "POST",
+      "resourceType": "fetch",
+      "contentType": "application/json; charset=utf-8",
+      "fixture": "fixtures\\rest-v1-rpc-get_public_shared_react_project_by_domain-b34a165ab8.json",
+      "error": "",
+      "bytes": 2
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_code?select=*&slug=ilike.luminal-creative-studio",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "fetch",
+      "contentType": "application/json; charset=utf-8",
+      "fixture": "fixtures\\rest-v1-shared_code-8462c4bc79.json",
+      "error": "",
+      "bytes": 151023
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/shared_code?select=slug%2Ccreated_at&user_id=eq.5bd6211c-bd4c-467c-b442-4312cac4712c&order=created_at.desc",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "fetch",
+      "contentType": "application/json; charset=utf-8",
+      "fixture": "fixtures\\rest-v1-shared_code-a681abc275.json",
+      "error": "",
+      "bytes": 26830
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/public_author_profiles?select=id%2Cfull_name%2Cavatar_url%2Cbio%2Cslug%2Ccreated_at%2Cviews%2Cis_featured%2Cwebsite%2Clocation%2Cis_pro&id=in.%285bd6211c-bd4c-467c-b442-4312cac4712c%29",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "fetch",
+      "contentType": "application/json; charset=utf-8",
+      "fixture": "fixtures\\rest-v1-public_author_profiles-d23854c23d.json",
+      "error": "",
+      "bytes": 737
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/preview-images/luminal-creative-studio.png",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "fetch",
+      "contentType": "image/png",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/preview-images/luminal-creative-studio.png",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=utf-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/96a71491-ccb5-4cb6-a369-be4b7a348c85_1600w.webp",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/webp",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://cdn.tailwindcss.com/",
+      "status": 302,
+      "ok": false,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=utf-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/f7438fab-4b42-40cb-a36a-fd1c3446a888_800w.webp",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/webp",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=utf-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/logo-aura-gray.svg",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/svg+xml",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/74117bff-45d0-4c3e-ae97-12067641be39_800w.webp",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/webp",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://cdn.tailwindcss.com/3.4.17",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "text/javascript",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/3dbd59c3-a7a5-4515-985e-788ba17917e2_800w.webp",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/webp",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/92f770e8-08ad-4fb2-8858-2d9b385124a7_800w.webp",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/webp",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/logo-aura-128-light.png",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "other",
+      "contentType": "image/png",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/e6ac2623-ccad-4751-8c7d-782f07a9263d_320w.webp",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/webp",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/30fed759-ea9f-42e9-8249-9ea7f44c811c_320w.webp",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/webp",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/93dbb379-52e9-4ded-bc8a-c0f05aef82c0_320w.webp",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/webp",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm2BL9A.woff2",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "font",
+      "contentType": "font/woff2",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/5daa544b-07e8-4fcd-98c6-1fb55bef2131_1600w.png",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/logo-aura-128-light.png",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "other",
+      "contentType": "image/png",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=utf-8",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/ea262fd9-14f0-4917-be69-86fd3b302ccd_1600w.webp",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/webp",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/0ecb27cd-9dd3-4e8a-8f50-529e27caa666_1600w.png",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/09dc0e81-3730-4910-9053-26ecec7a3816_800w.webp",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/webp",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/05d6b211-9e83-488c-8f3f-42a77b8e9532_1600w.png",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/26beb5d6-9395-4655-bd45-0375a5af0ffb_1600w.png",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/png",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/rest/v1/rpc/increment_shared_code_views",
+      "status": 204,
+      "ok": true,
+      "method": "POST",
+      "resourceType": "fetch",
+      "contentType": "",
+      "fixture": "",
+      "error": ""
+    },
+    {
+      "url": "https://storage.googleapis.com/unicornstudio-production/embeds/7WRlj4TRuUxuldc6GVDM?v=1785755836076",
+      "status": 200,
+      "ok": true,
+      "method": "GET",
+      "resourceType": "fetch",
+      "contentType": "text/javascript",
+      "fixture": "",
+      "error": "response.body: Target page, context or browser has been closed"
+    }
+  ]
+}

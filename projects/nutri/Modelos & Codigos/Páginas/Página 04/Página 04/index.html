@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<base href="./"><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]noclsop/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?noclsop=1"}else{document.location.href=href.replace("#","?noclsop=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&noclsop=1"}else{document.location.href=href.replace("#","&noclsop=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.v="1.2.3",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",t=>{this.persisted=t.persisted}),window.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(t){if(document.hidden){t._triggerListener();return}this.triggerEvents.forEach(e=>window.addEventListener(e,t.userEventHandler,{passive:!0})),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(t){t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))})}_waitForPendingClicks(){return new Promise(t=>{this._isClickPending?this._pendingClickFinished=t:t()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(t,e,r){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(r,event.target.getAttribute(e)),event.target.removeAttribute(e))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(e=>{if(e.hasAttribute("src")){let r=new URL(e.src).origin;r!==location.origin&&t.push({src:r,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this._batchInjectResourceHints(t,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(this),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _transformScript(t){return new Promise((await this._littleBreath(),navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)?e=>{let r=document.createElement("script");[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),r.setAttribute(e,t.nodeValue))}),t.text&&(r.text=t.text),r.hasAttribute("src")?(r.addEventListener("load",e),r.addEventListener("error",e)):(r.text=t.text,e());try{t.parentNode.replaceChild(r,t)}catch(i){e()}}:async e=>{function r(){t.setAttribute("data-rocket-status","failed"),e()}try{let i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");t.text,i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",function r(){t.setAttribute("data-rocket-status","executed"),e()}),t.addEventListener("error",r),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}catch(s){r()}})}async _loadScriptsFromList(t){let e=t.shift();return e&&e.isConnected?(await this._transformScript(e),this._loadScriptsFromList(t)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(t,e){var r=document.createDocumentFragment();t.forEach(t=>{let i=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(i){let n=document.createElement("link");n.href=i,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),r.appendChild(n),this.trash.push(n)}}),document.head.appendChild(r)}_delayEventListeners(t){let e={};function r(t,r){!function t(r){!e[r]&&(e[r]={originalFunctions:{add:r.addEventListener,remove:r.removeEventListener},eventsToRewrite:[]},r.addEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.add.apply(r,arguments)},r.removeEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.remove.apply(r,arguments)});function i(t){return e[r].eventsToRewrite.indexOf(t)>=0?"rocket-"+t:t}}(t),e[t].eventsToRewrite.push(r)}function i(t,e){let r=t[e];Object.defineProperty(t,e,{get:()=>r||function(){},set(i){t["rocket"+e]=r=i}})}r(document,"DOMContentLoaded"),r(window,"DOMContentLoaded"),r(window,"load"),r(window,"pageshow"),r(document,"readystatechange"),i(document,"onreadystatechange"),i(window,"onload"),i(window,"onpageshow")}_delayJQueryReady(t){let e;function r(r){if(r&&r.fn&&!t.allJQueries.includes(r)){r.fn.ready=r.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(r):document.addEventListener("rocket-DOMContentLoaded",()=>e.bind(document)(r)),r([])};let i=r.fn.on;r.fn.on=r.fn.init.prototype.on=function(){if(this[0]===window){function t(t){return t.split(" ").map(t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=t(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(e=>{let r=arguments[0][e];delete arguments[0][e],arguments[0][t(e)]=r})}return i.apply(this,arguments),this},t.allJQueries.push(r)}e=r}r(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){r(t)}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this._littleBreath();let t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){let t=new Map;document.write=document.writeln=function(e){let r=document.currentScript;r||console.error("WPRocket unable to document.write this: "+e);let i=document.createRange(),n=r.parentElement,s=t.get(r);void 0===s&&(s=r.nextSibling,t.set(r,s));let a=document.createDocumentFragment();i.setStart(a,0),a.appendChild(i.createContextualFragment(e)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}_emptyTrash(){this.trash.forEach(t=>t.remove())}static run(){let t=new RocketLazyLoadScripts;t._addUserInteractionListener(t)}}RocketLazyLoadScripts.run();</script>
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" /><title>Reuniões que Vendem &#8211; Venda &#8211; Especialista em Vendas</title><link rel="preload" href="assets/fonts/eece88dbf693af86.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/eece88dbf693af86.woff2" as="font" type="font/woff2" crossorigin><style id="perfmatters-used-css">html{line-height:1.15;-webkit-text-size-adjust:100%;}*,:after,:before{box-sizing:border-box;}body{background-color:#fff;color:#333;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-size:1rem;font-weight:400;line-height:1.5;margin:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}h1,h2,h3,h4,h5,h6{color:inherit;font-family:inherit;font-weight:500;line-height:1.2;margin-block-end:1rem;margin-block-start:.5rem;}h2{font-size:2rem;}h3{font-size:1.75rem;}p{margin-block-end:.9rem;margin-block-start:0;}a{background-color:transparent;color:#c36;text-decoration:none;}a:active,a:hover{color:#336;}a:not([href]):not([tabindex]),a:not([href]):not([tabindex]):focus,a:not([href]):not([tabindex]):hover{color:inherit;text-decoration:none;}a:not([href]):not([tabindex]):focus{outline:0;}b,strong{font-weight:bolder;}img{border-style:none;height:auto;max-width:100%;}details{display:block;}summary{display:list-item;}[hidden],template{display:none;}@media print{*,:after,:before{background:transparent !important;box-shadow:none !important;color:#000 !important;text-shadow:none !important;}a,a:visited{text-decoration:underline;}a[href]:after{content:" (" attr(href) ")";}a[href^="#"]:after,a[href^="javascript:"]:after{content:"";}img,tr{-moz-column-break-inside:avoid;break-inside:avoid;}h2,h3,p{orphans:3;widows:3;}h2,h3{-moz-column-break-after:avoid;break-after:avoid;}}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;width:auto;}[type=button],[type=submit],button{background-color:transparent;border:1px solid #c36;border-radius:3px;color:#c36;display:inline-block;font-size:1rem;font-weight:400;padding:.5rem 1rem;text-align:center;transition:all .3s;-webkit-user-select:none;-moz-user-select:none;user-select:none;white-space:nowrap;}[type=button]:focus:not(:focus-visible),[type=submit]:focus:not(:focus-visible),button:focus:not(:focus-visible){outline:none;}[type=button]:focus,[type=button]:hover,[type=submit]:focus,[type=submit]:hover,button:focus,button:hover{background-color:#c36;color:#fff;text-decoration:none;}[type=button]:not(:disabled),[type=submit]:not(:disabled),button:not(:disabled){cursor:pointer;}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0;}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto;}[type=search]{-webkit-appearance:textfield;outline-offset:-2px;}[type=search]::-webkit-search-decoration{-webkit-appearance:none;}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit;}:root{--direction-multiplier:1;}body.rtl,html[dir=rtl]{--direction-multiplier:-1;}.elementor *,.elementor :after,.elementor :before{box-sizing:border-box;}.elementor a{box-shadow:none;text-decoration:none;}.elementor img{border:none;border-radius:0;box-shadow:none;height:auto;max-width:100%;}.elementor .elementor-widget:not(.elementor-widget-text-editor):not(.elementor-widget-theme-post-content) figure{margin:0;}.elementor embed,.elementor iframe,.elementor object,.elementor video{border:none;line-height:1;margin:0;max-width:100%;width:100%;}.elementor-element{--flex-direction:initial;--flex-wrap:initial;--justify-content:initial;--align-items:initial;--align-content:initial;--gap:initial;--flex-basis:initial;--flex-grow:initial;--flex-shrink:initial;--order:initial;--align-self:initial;align-self:var(--align-self);flex-basis:var(--flex-basis);flex-grow:var(--flex-grow);flex-shrink:var(--flex-shrink);order:var(--order);}.elementor-element:where(.e-con-full,.elementor-widget){align-content:var(--align-content);align-items:var(--align-items);flex-direction:var(--flex-direction);flex-wrap:var(--flex-wrap);gap:var(--row-gap) var(--column-gap);justify-content:var(--justify-content);}.elementor-align-center{text-align:center;}.elementor-align-center .elementor-button,.elementor-align-left .elementor-button,.elementor-align-right .elementor-button{width:auto;}:root{--page-title-display:block;}@keyframes eicon-spin{0%{transform:rotate(0deg);}to{transform:rotate(359deg);}}.elementor-widget{position:relative;}.elementor-widget:not(:last-child){margin-block-end:var(--kit-widget-spacing,20px);}.elementor-widget:not(:last-child).elementor-absolute,.elementor-widget:not(:last-child).elementor-widget__width-auto,.elementor-widget:not(:last-child).elementor-widget__width-initial{margin-block-end:0;}@media (min-width:1367px){#elementor-device-mode:after{content:"desktop";}}@media (min-width:2400px){#elementor-device-mode:after{content:"widescreen";}}@media (max-width:1366px){#elementor-device-mode:after{content:"laptop";}}@media (max-width:-1){#elementor-device-mode:after{content:"tablet_extra";}}@media (max-width:1024px){#elementor-device-mode:after{content:"tablet";}}@media (max-width:-1){#elementor-device-mode:after{content:"mobile_extra";}}@media (max-width:767px){#elementor-device-mode:after{content:"mobile";}}@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth;}}.e-con{--border-radius:0;--border-top-width:0px;--border-right-width:0px;--border-bottom-width:0px;--border-left-width:0px;--border-style:initial;--border-color:initial;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--content-width:min(100%,var(--container-max-width,1140px));--width:100%;--min-height:initial;--height:auto;--text-align:initial;--margin-top:0px;--margin-right:0px;--margin-bottom:0px;--margin-left:0px;--padding-top:var(--container-default-padding-top,10px);--padding-right:var(--container-default-padding-right,10px);--padding-bottom:var(--container-default-padding-bottom,10px);--padding-left:var(--container-default-padding-left,10px);--position:relative;--z-index:revert;--overflow:visible;--gap:var(--widgets-spacing,20px);--row-gap:var(--widgets-spacing-row,20px);--column-gap:var(--widgets-spacing-column,20px);--overlay-mix-blend-mode:initial;--overlay-opacity:1;--overlay-transition:.3s;--e-con-grid-template-columns:repeat(3,1fr);--e-con-grid-template-rows:repeat(2,1fr);border-radius:var(--border-radius);height:var(--height);min-height:var(--min-height);min-width:0;overflow:var(--overflow);position:var(--position);width:var(--width);z-index:var(--z-index);--flex-wrap-mobile:wrap;}.e-con:where(:not(.e-div-block-base)){transition:background var(--background-transition,.3s),border var(--border-transition,.3s),box-shadow var(--border-transition,.3s),transform var(--e-con-transform-transition-duration,.4s);}.e-con{--margin-block-start:var(--margin-top);--margin-block-end:var(--margin-bottom);--margin-inline-start:var(--margin-left);--margin-inline-end:var(--margin-right);--padding-inline-start:var(--padding-left);--padding-inline-end:var(--padding-right);--padding-block-start:var(--padding-top);--padding-block-end:var(--padding-bottom);--border-block-start-width:var(--border-top-width);--border-block-end-width:var(--border-bottom-width);--border-inline-start-width:var(--border-left-width);--border-inline-end-width:var(--border-right-width);}.e-con{margin-block-end:var(--margin-block-end);margin-block-start:var(--margin-block-start);margin-inline-end:var(--margin-inline-end);margin-inline-start:var(--margin-inline-start);padding-inline-end:var(--padding-inline-end);padding-inline-start:var(--padding-inline-start);}.e-con.e-flex{--flex-direction:column;--flex-basis:auto;--flex-grow:0;--flex-shrink:1;flex:var(--flex-grow) var(--flex-shrink) var(--flex-basis);}.e-con-full,.e-con>.e-con-inner{padding-block-end:var(--padding-block-end);padding-block-start:var(--padding-block-start);text-align:var(--text-align);}.e-con-full.e-flex,.e-con.e-flex>.e-con-inner{flex-direction:var(--flex-direction);}.e-con,.e-con>.e-con-inner{display:var(--display);}.e-con-boxed.e-flex{align-content:normal;align-items:normal;flex-direction:column;flex-wrap:nowrap;justify-content:normal;}.e-con-boxed{gap:initial;text-align:initial;}.e-con.e-flex>.e-con-inner{align-content:var(--align-content);align-items:var(--align-items);align-self:auto;flex-basis:auto;flex-grow:1;flex-shrink:1;flex-wrap:var(--flex-wrap);justify-content:var(--justify-content);}.e-con>.e-con-inner{gap:var(--row-gap) var(--column-gap);height:100%;margin:0 auto;max-width:var(--content-width);padding-inline-end:0;padding-inline-start:0;width:100%;}:is(.elementor-section-wrap,[data-elementor-id])>.e-con{--margin-left:auto;--margin-right:auto;max-width:min(100%,var(--width));}:is([data-widget_type="e-component.default"],[data-widget_type="e-component.default"]>.elementor-section-wrap)>.e-con{--margin-right:0px;--margin-left:0px;}.e-con .elementor-widget.elementor-widget{margin-block-end:0;}.e-con:before,.e-con>.elementor-background-slideshow:before,.e-con>.elementor-motion-effects-container>.elementor-motion-effects-layer:before,:is(.e-con,.e-con>.e-con-inner)>.elementor-background-video-container:before{border-block-end-width:var(--border-block-end-width);border-block-start-width:var(--border-block-start-width);border-color:var(--border-color);border-inline-end-width:var(--border-inline-end-width);border-inline-start-width:var(--border-inline-start-width);border-radius:var(--border-radius);border-style:var(--border-style);content:var(--background-overlay);display:block;height:max(100% + var(--border-top-width) + var(--border-bottom-width),100%);left:calc(0px - var(--border-left-width));mix-blend-mode:var(--overlay-mix-blend-mode);opacity:var(--overlay-opacity);position:absolute;top:calc(0px - var(--border-top-width));transition:var(--overlay-transition,.3s);width:max(100% + var(--border-left-width) + var(--border-right-width),100%);}.e-con:before{transition:background var(--overlay-transition,.3s),border-radius var(--border-transition,.3s),opacity var(--overlay-transition,.3s);}.e-con>.elementor-background-slideshow,:is(.e-con,.e-con>.e-con-inner)>.elementor-background-video-container{border-block-end-width:var(--border-block-end-width);border-block-start-width:var(--border-block-start-width);border-color:var(--border-color);border-inline-end-width:var(--border-inline-end-width);border-inline-start-width:var(--border-inline-start-width);border-radius:var(--border-radius);border-style:var(--border-style);height:max(100% + var(--border-top-width) + var(--border-bottom-width),100%);left:calc(0px - var(--border-left-width));top:calc(0px - var(--border-top-width));width:max(100% + var(--border-left-width) + var(--border-right-width),100%);}@media (max-width:767px){:is(.e-con,.e-con>.e-con-inner)>.elementor-background-video-container.elementor-hidden-mobile{display:none;}}:is(.e-con,.e-con>.e-con-inner)>.elementor-background-video-container:before{z-index:1;}:is(.e-con,.e-con>.e-con-inner)>.elementor-background-slideshow:before{z-index:2;}.e-con .elementor-widget{min-width:0;}.e-con>.e-con-inner>.elementor-widget>.elementor-widget-container,.e-con>.elementor-widget>.elementor-widget-container{height:100%;}.e-con.e-con>.e-con-inner>.elementor-widget,.elementor.elementor .e-con>.elementor-widget{max-width:100%;}.e-con .elementor-widget:not(:last-child){--kit-widget-spacing:0px;}@media (max-width:767px){.e-con.e-flex{--width:100%;--flex-wrap:var(--flex-wrap-mobile);}}.elementor-element:where(:not(.e-con)):where(:not(.e-div-block-base)) .elementor-widget-container,.elementor-element:where(:not(.e-con)):where(:not(.e-div-block-base)):not(:has(.elementor-widget-container)){transition:background .3s,border .3s,border-radius .3s,box-shadow .3s,transform var(--e-transform-transition-duration,.4s);}.elementor-heading-title{line-height:1;margin:0;padding:0;}.elementor-button{background-color:#69727d;border-radius:3px;color:#fff;display:inline-block;fill:#fff;font-size:15px;line-height:1;padding:12px 24px;text-align:center;transition:all .3s;}.elementor-button:focus,.elementor-button:hover,.elementor-button:visited{color:#fff;}.elementor-button-content-wrapper{display:flex;flex-direction:row;gap:5px;justify-content:center;}.elementor-button-text{display:inline-block;}.elementor-button span{text-decoration:inherit;}.elementor-icon{color:#69727d;display:inline-block;font-size:50px;line-height:1;text-align:center;transition:all .3s;}.elementor-icon:hover{color:#69727d;}.elementor-icon i,.elementor-icon svg{display:block;height:1em;position:relative;width:1em;}.elementor-icon i:before,.elementor-icon svg:before{left:50%;position:absolute;transform:translateX(-50%);}.animated{animation-duration:1.25s;}.animated.animated-slow{animation-duration:2s;}.animated.animated-fast{animation-duration:.75s;}.animated.infinite{animation-iteration-count:infinite;}.animated.reverse{animation-direction:reverse;animation-fill-mode:forwards;}@media (prefers-reduced-motion:reduce){.animated{animation:none !important;}html *{transition-delay:0s !important;transition-duration:0s !important;}}@media (max-width:767px){.elementor .elementor-hidden-mobile,.elementor .elementor-hidden-phone{display:none;}}@media (min-width:768px) and (max-width:1024px){.elementor .elementor-hidden-tablet{display:none;}}@media (min-width:1025px) and (max-width:1366px){.elementor .elementor-hidden-laptop{display:none;}}@media (min-width:1367px) and (max-width:2399px){.elementor .elementor-hidden-desktop{display:none;}}@media (min-width:2400px){.elementor .elementor-hidden-widescreen{display:none;}}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg);}to{-webkit-transform:rotate(1turn);transform:rotate(1turn);}}@keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg);}to{-webkit-transform:rotate(1turn);transform:rotate(1turn);}}@font-face{font-family:"Font Awesome 5 Brands";font-style:normal;font-weight:400;font-display:swap;src:url("assets/fonts/4f8643d290555616.eot");src:url("assets/fonts/24dd5084746216a3.eot") format("embedded-opentype"),url("assets/fonts/123fb458754a8fee.woff2") format("woff2"),url("assets/fonts/da96503f0268dc91.woff") format("woff"),url("assets/fonts/4f6d96024c498ddd.ttf") format("truetype"),url("assets/images/a7e8141368d0c8ab.svg") format("svg");}@font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:400;font-display:swap;src:url("assets/fonts/3fb33b47fc180ab1.eot");src:url("assets/fonts/e54eee0b84c4b74c.eot") format("embedded-opentype"),url("assets/fonts/8d26f7bc0ae288fc.woff2") format("woff2"),url("assets/fonts/89cb1601900e29c2.woff") format("woff"),url("assets/fonts/aa0c2ce3c0c5da31.ttf") format("truetype"),url("assets/images/4d9d77a44178a4f4.svg") format("svg");}@font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:900;font-display:swap;src:url("assets/fonts/6e1138dbd3347e34.eot");src:url("assets/fonts/53360b275bdf3293.eot") format("embedded-opentype"),url("assets/fonts/ef641b6645df5032.woff2") format("woff2"),url("assets/fonts/03becd76f9ac2bf4.woff") format("woff"),url("assets/fonts/7b5490a8291b2764.ttf") format("truetype"),url("assets/images/beb4101ad9d73a21.svg") format("svg");}.elementor-widget-image{text-align:center;}.elementor-widget-image a{display:inline-block;}.elementor-widget-image a img[src$=".svg"]{width:48px;}.elementor-widget-image img{display:inline-block;vertical-align:middle;}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit;}.elementor-widget-image-box .elementor-image-box-content{width:100%;}@media (min-width:768px){.elementor-widget-image-box.elementor-position-top .elementor-image-box-img{margin:auto;}.elementor-widget-image-box.elementor-vertical-align-middle .elementor-image-box-wrapper{align-items:center;}}@media (max-width:767px){.elementor-widget-image-box .elementor-image-box-img{margin-inline:auto !important;margin-bottom:15px;}}.elementor-widget-image-box .elementor-image-box-img{display:inline-block;}.elementor-widget-image-box .elementor-image-box-img img{display:block;line-height:0;}.elementor-widget-image-box .elementor-image-box-title a{color:inherit;}.elementor-widget-image-box .elementor-image-box-wrapper{text-align:center;}.elementor-widget-image-box .elementor-image-box-description{margin:0;}.elementor-widget-icon-box .elementor-icon-box-wrapper{display:flex;flex-direction:column;text-align:center;}.elementor-widget-icon-box .elementor-icon-box-icon{display:inline-block;flex:0 0 auto;line-height:0;}.elementor-widget-icon-box .elementor-icon-box-content{flex-grow:1;width:100%;}.elementor-widget-icon-box .elementor-icon-box-title a{color:inherit;}.elementor-widget-icon-box.elementor-position-inline-end .elementor-icon-box-wrapper{flex-direction:row-reverse;text-align:end;}.elementor-widget-icon-box.elementor-position-inline-start .elementor-icon-box-wrapper{flex-direction:row;text-align:start;}@media (max-width:767px){.elementor-widget-icon-box.elementor-mobile-position-inline-start .elementor-icon-box-wrapper{flex-direction:row;text-align:start;}}.elementor-widget-n-accordion{--n-accordion-title-font-size:20px;--n-accordion-title-flex-grow:initial;--n-accordion-title-justify-content:initial;--n-accordion-title-icon-order:-1;--n-accordion-border-width:1px;--n-accordion-border-color:#d5d8dc;--n-accordion-border-style:solid;--n-accordion-item-title-flex-grow:initial;--n-accordion-item-title-space-between:0px;--n-accordion-item-title-distance-from-content:0px;--n-accordion-padding:10px;--n-accordion-border-radius:0px;--n-accordion-icon-size:15px;--n-accordion-title-normal-color:#1f2124;--n-accordion-title-hover-color:#1f2124;--n-accordion-title-active-color:#1f2124;--n-accordion-icon-normal-color:var(--n-accordion-title-normal-color);--n-accordion-icon-hover-color:var(--n-accordion-title-hover-color);--n-accordion-icon-active-color:var(--n-accordion-title-active-color);--n-accordion-icon-gap:0 10px;width:100%;}.elementor-widget-n-accordion .e-n-accordion details>summary::-webkit-details-marker{display:none;}.elementor-widget-n-accordion .e-n-accordion-item{display:flex;flex-direction:column;position:relative;}.elementor-widget-n-accordion .e-n-accordion-item:not(:last-child){margin-block-end:var(--n-accordion-item-title-space-between);}:where(.elementor-widget-n-accordion .e-n-accordion-item>.e-con){border:var(--n-accordion-border-width) var(--n-accordion-border-style) var(--n-accordion-border-color);}.elementor-widget-n-accordion .e-n-accordion-item-title{align-items:center;border-color:var(--n-accordion-border-color);border-radius:var(--n-accordion-border-radius);border-style:var(--n-accordion-border-style);border-width:var(--n-accordion-border-width);color:var(--n-accordion-title-normal-color);cursor:pointer;display:flex;flex-direction:row;flex-grow:var(--n-menu-title-flex-grow);gap:var(--n-accordion-icon-gap);justify-content:var(--n-accordion-title-justify-content);list-style:none;padding:var(--n-accordion-padding);}.elementor-widget-n-accordion .e-n-accordion-item-title-header{display:flex;}.elementor-widget-n-accordion .e-n-accordion-item-title-header h1,.elementor-widget-n-accordion .e-n-accordion-item-title-header h2,.elementor-widget-n-accordion .e-n-accordion-item-title-header h3,.elementor-widget-n-accordion .e-n-accordion-item-title-header h4,.elementor-widget-n-accordion .e-n-accordion-item-title-header h5,.elementor-widget-n-accordion .e-n-accordion-item-title-header h6,.elementor-widget-n-accordion .e-n-accordion-item-title-header p{margin-block-end:0;margin-block-start:0;}.elementor-widget-n-accordion .e-n-accordion-item-title-text{align-items:center;font-size:var(--n-accordion-title-font-size);}.elementor-widget-n-accordion .e-n-accordion-item-title-icon{align-items:center;display:flex;flex-direction:row;order:var(--n-accordion-title-icon-order);position:relative;width:-moz-fit-content;width:fit-content;}.elementor-widget-n-accordion .e-n-accordion-item-title-icon span{height:var(--n-accordion-icon-size);width:auto;}.elementor-widget-n-accordion .e-n-accordion-item-title-icon span>svg{fill:var(--n-accordion-icon-normal-color);height:var(--n-accordion-icon-size);}.elementor-widget-n-accordion .e-n-accordion-item-title>span{cursor:pointer;}.elementor-widget-n-accordion .e-n-accordion-item[open]>.e-n-accordion-item-title{color:var(--n-accordion-title-active-color);margin-block-end:var(--n-accordion-item-title-distance-from-content);}.elementor-widget-n-accordion .e-n-accordion-item[open]>.e-n-accordion-item-title .e-n-accordion-item-title-icon .e-opened{display:flex;}.elementor-widget-n-accordion .e-n-accordion-item[open]>.e-n-accordion-item-title .e-n-accordion-item-title-icon .e-closed{display:none;}.elementor-widget-n-accordion .e-n-accordion-item[open]>.e-n-accordion-item-title .e-n-accordion-item-title-icon span>svg{fill:var(--n-accordion-icon-active-color);}.elementor-widget-n-accordion .e-n-accordion-item:not([open]) .e-con{display:none;}.elementor-widget-n-accordion .e-n-accordion-item:not([open]):hover>.e-n-accordion-item-title{color:var(--n-accordion-title-hover-color);}.elementor-widget-n-accordion .e-n-accordion-item:not([open]):hover>.e-n-accordion-item-title .e-n-accordion-item-title-icon span>svg{fill:var(--n-accordion-icon-hover-color);}.elementor-widget-n-accordion .e-n-accordion-item .e-n-accordion-item-title-icon .e-opened{display:none;}.elementor-widget-n-accordion .e-n-accordion-item .e-n-accordion-item-title-icon .e-closed{display:flex;}.elementor-widget-n-accordion .e-n-accordion-item .e-n-accordion-item-title-icon span>svg{fill:var(--n-accordion-icon-normal-color);}.elementor-widget-n-accordion .e-n-accordion-item>span{cursor:pointer;}.elementor-widget-divider{--divider-border-style:none;--divider-border-width:1px;--divider-color:#0c0d0e;--divider-icon-size:20px;--divider-element-spacing:10px;--divider-pattern-height:24px;--divider-pattern-size:20px;--divider-pattern-url:none;--divider-pattern-repeat:repeat-x;}.elementor-widget-divider .elementor-divider{display:flex;}.elementor-widget-divider .elementor-icon{font-size:var(--divider-icon-size);}.elementor-widget-divider .elementor-divider-separator{direction:ltr;display:flex;margin:0;}.elementor-widget-divider:not(.elementor-widget-divider--view-line_text):not(.elementor-widget-divider--view-line_icon) .elementor-divider-separator{border-block-start:var(--divider-border-width) var(--divider-border-style) var(--divider-color);}.e-con-inner>.elementor-widget-divider,.e-con>.elementor-widget-divider{width:var(--container-widget-width,100%);--flex-grow:var(--container-widget-flex-grow);}</style>
+<meta name='robots' content='max-image-preview:large' />
+<style id='wp-img-auto-sizes-contain-inline-css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link href="assets/css/9016a48610d0f3cf.css" rel="stylesheet" id="fluentform-elementor-widget-css" media="all" >
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:root { --wp--style--global--content-size: 800px;--wp--style--global--wide-size: 1200px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: 24px; }:root :where(.is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.is-layout-flow) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.is-layout-constrained) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-flex){gap: 24px;}:root :where(.is-layout-grid){gap: 24px;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<link href="assets/css/34f9211cfdf524ee.css" rel="stylesheet" id="hello-elementor-css" media="all" >
+<link href="assets/css/9db961450b2ca2c5.css" rel="stylesheet" id="hello-elementor-theme-style-css" media="all" >
+<link href="assets/css/037ce4c7ff62d92c.css" rel="stylesheet" id="hello-elementor-header-footer-css" media="all" >
+<link href="assets/css/5fccb1b10849e257.css" rel="stylesheet" id="elementor-frontend-css" media="all" >
+<link rel='stylesheet' id='elementor-post-6-css' href='assets/css/45bc01c366f43752.css' media='all' />
+<link href="assets/css/9b704f3544d8ce8b.css" rel="stylesheet" id="font-awesome-5-all-css" media="all" >
+<link href="assets/css/92a979e4da3e3d91.css" rel="stylesheet" id="font-awesome-4-shim-css" media="all" >
+<link href="assets/css/485c60bc23cdc679.css" rel="stylesheet" id="widget-image-css" media="all" >
+<link href="assets/css/a91cb5903327233a.css" rel="stylesheet" id="widget-heading-css" media="all" >
+<link href="assets/css/4338209f0781aec8.css" rel="stylesheet" id="widget-image-box-css" media="all" >
+<link href="assets/css/c9e8bd9492ed09af.css" rel="stylesheet" id="widget-icon-box-css" media="all" >
+<link href="assets/css/da27cef6296049d0.css" rel="stylesheet" id="widget-nested-accordion-css" media="all" >
+<link href="assets/css/495be88242cb6418.css" rel="stylesheet" id="widget-divider-css" media="all" >
+<link rel='stylesheet' id='elementor-post-12563-css' href='assets/css/d4aa2a5f235cb0b7.css' media='all' />
+<style id='rocket-lazyload-inline-css'>
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(assets/images/7f00f4c5ed24af9e.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}.wp-embed-responsive .wp-has-aspect-ratio .rll-youtube-player{position:absolute;padding-bottom:0;width:100%;height:100%;top:0;bottom:0;left:0;right:0}
+/*# sourceURL=rocket-lazyload-inline-css */
+</style>
+<link data-minify="1" rel='stylesheet' id='elementor-gf-local-poppins-css' href='assets/css/e5016a2d1ed656e2.css' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-gf-local-roboto-css' href='assets/css/6b01198b9dc0ddaa.css' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-gf-local-inter-css' href='assets/css/df25685aee39783f.css' media='all' />
+<script type="rocketlazyloadscript" data-rocket-src="assets/js/8453a233127d0d2d.js" id="font-awesome-4-shim-js"></script>
+<script type="rocketlazyloadscript" data-rocket-src="assets/js/f64b2daf8dc65a4b.js" id="jquery-core-js"></script>
+<script type="rocketlazyloadscript" data-rocket-src="assets/js/93a79547361b8bcf.js" id="jquery-migrate-js"></script>
+<!-- Head & Footer Code: Site-wide HEAD section start (page) -->
+<script type="rocketlazyloadscript">!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+<link rel="preload" href="assets/js/9fb1cbd995fb2e3c.js" as="script">
+<link rel="preload" href="assets/js/3b1ef61dd28bac40.js" as="script">
+<link rel="preload" href="assets/other/69d18530f496c934.m3u8" as="fetch">
+
+<!-- Head & Footer Code: Site-wide HEAD section end (page) -->
+<meta name="generator" content="Elementor 3.35.5; features: e_font_icon_svg, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto">
+<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<style id="custom-product-seal">
+				.elementor-12563 .elementor-element.elementor-element-fe4f460:not(.elementor-motion-effects-element-type-background),
+				.elementor-12563 .elementor-element.elementor-element-fe4f460 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+					background-size: cover !important;
+					background-position: center center !important;
+				}
+				.elementor-12563 .elementor-element.elementor-element-e0503b0 {
+					min-height: auto !important;
+					padding-top: 20px !important;
+					padding-bottom: 20px !important;
+				}
+				.elementor-element-80ebcbd .bonus-grid {
+					display: grid;
+					grid-template-columns: repeat(3, minmax(0, 1fr));
+					gap: 16px;
+					width: 100%;
+				}
+				.elementor-element-80ebcbd .bonus-card {
+					background: #f5eee4;
+					border: 1px solid #e4d8ca;
+					border-radius: 14px;
+					padding: 22px 18px;
+					text-align: left;
+				}
+				.elementor-element-80ebcbd .bonus-tag {
+					display: inline-block;
+					font-size: 12px;
+					font-weight: 700;
+					letter-spacing: .06em;
+					color: #260101;
+					background: #f04e23;
+					padding: 6px 10px;
+					border-radius: 999px;
+					margin-bottom: 12px;
+				}
+				.elementor-element-80ebcbd .bonus-title {
+					font-size: 22px;
+					line-height: 1.2;
+					margin: 0 0 8px;
+					color: #260101;
+				}
+				.elementor-element-80ebcbd .bonus-text {
+					font-size: 16px;
+					line-height: 1.45;
+					margin: 0;
+					color: #3b2a1f;
+				}
+				.elementor-12563 .elementor-element.elementor-element-d5f537b > .e-con {
+					display: contents !important;
+				}
+				.elementor-12563 .elementor-element.elementor-element-d5f537b {
+					display: grid !important;
+					grid-template-columns: repeat(4, minmax(0, 1fr));
+					gap: 14px;
+					align-items: start;
+				}
+				.elementor-12563 .elementor-element.elementor-element-d5f537b .elementor-widget-image {
+					margin: 0 !important;
+				}
+				.elementor-12563 .elementor-element.elementor-element-d5f537b .elementor-widget-image img {
+					width: 100% !important;
+					height: auto;
+					border-radius: 10px;
+				}
+				@media (max-width: 767px) {
+					.elementor-element-80ebcbd .bonus-grid {
+						grid-template-columns: 1fr;
+					}
+					.elementor-12563 .elementor-element.elementor-element-d5f537b {
+						display: flex !important;
+						flex-wrap: nowrap;
+						gap: 12px;
+						overflow-x: auto;
+						scroll-snap-type: x mandatory;
+						padding: 0 6px 8px;
+						-webkit-overflow-scrolling: touch;
+						scrollbar-width: none;
+						-ms-overflow-style: none;
+					}
+					.elementor-12563 .elementor-element.elementor-element-d5f537b .elementor-widget-image {
+						flex: 0 0 82%;
+						scroll-snap-align: start;
+					}
+					.elementor-12563 .elementor-element.elementor-element-d5f537b::-webkit-scrollbar {
+						display: none;
+						width: 0;
+						height: 0;
+					}
+				}
+				.produto-selo {
+					display: inline-block;
+					padding: 12px 22px;
+					border: 2px solid #ffffff;
+					border-radius: 999px;
+					background: rgba(255, 255, 255, 0.12);
+					color: #ffffff;
+					font-size: 16px;
+					font-weight: 700;
+					letter-spacing: 0.08em;
+					text-transform: uppercase;
+				}
+				.oferta-selo {
+					display: inline-block;
+					padding: 10px 20px;
+					border: 2px solid #260101;
+					border-radius: 999px;
+					background: #f5eee4;
+					color: #260101;
+					font-size: 15px;
+					font-weight: 700;
+					letter-spacing: 0.06em;
+					text-transform: uppercase;
+				}
+				.elementor-12563 .elementor-element.elementor-element-00df87f > .elementor-widget-container {
+					margin-top: 10px !important;
+				}
+				.elementor-12563 .elementor-element.elementor-element-53db2de,
+				.elementor-12563 .elementor-element.elementor-element-88f4634 {
+					justify-content: center !important;
+				}
+				.elementor-12563 .elementor-element.elementor-element-ed69f7f > .e-con-inner {
+					justify-content: center !important;
+					margin-left: auto !important;
+					margin-right: auto !important;
+					width: fit-content;
+					max-width: 100%;
+				}
+				.elementor-12563 .elementor-element.elementor-element-53db2de > .e-con-inner {
+					justify-content: center !important;
+					margin-left: auto !important;
+					margin-right: auto !important;
+					width: fit-content;
+					max-width: 100%;
+				}
+				.elementor-12563 .elementor-element.elementor-element-btnaftere17 .elementor-button {
+					background-color: #F04E23;
+					font-family: "Inter", Sans-serif;
+					font-size: 1em;
+					font-weight: 600;
+					fill: #3E1E05;
+					color: #3E1E05;
+					border-radius: 10px;
+					padding: 15px 55px;
+				}
+				.elementor-12563 .elementor-element.elementor-element-btnaftere17 .elementor-button:hover,
+				.elementor-12563 .elementor-element.elementor-element-btnaftere17 .elementor-button:focus {
+					color: #F5EEE4;
+				}
+				.elementor-12563 .elementor-element.elementor-element-btnaftere17 .elementor-button:hover svg,
+				.elementor-12563 .elementor-element.elementor-element-btnaftere17 .elementor-button:focus svg {
+					fill: #F5EEE4;
+				}
+				.elementor-12563 .elementor-button {
+					color: #ffffff !important;
+					fill: #ffffff !important;
+					background: linear-gradient(180deg, #ff6a32 0%, #f04e23 100%) !important;
+					border: 1px solid #ff8a60 !important;
+					box-shadow: 0 10px 22px rgba(240, 78, 35, 0.35);
+					transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+				}
+				.elementor-12563 .elementor-button:hover,
+				.elementor-12563 .elementor-button:focus {
+					color: #ffffff !important;
+					fill: #ffffff !important;
+					filter: brightness(1.05);
+					transform: translateY(-1px);
+					box-shadow: 0 14px 26px rgba(240, 78, 35, 0.45);
+				}
+				.elementor-12563 .elementor-element.elementor-element-14cd3ce {
+					text-align: left !important;
+				}
+				.elementor-12563 .elementor-element.elementor-element-14cd3ce .elementor-button-wrapper {
+					justify-content: flex-start !important;
+				}
+				.elementor-12563 .elementor-element.elementor-element-btnaftere17 > .elementor-widget-container {
+					margin-bottom: 12px !important;
+				}
+				@media (max-width: 767px) {
+					.elementor-12563 .elementor-element.elementor-element-fe4f460:not(.elementor-motion-effects-element-type-background),
+					.elementor-12563 .elementor-element.elementor-element-fe4f460 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+						background-image: none !important;
+					}
+					.elementor-12563 .elementor-element.elementor-element-fe4f460 {
+						min-height: auto !important;
+						padding-bottom: 8px !important;
+						margin-bottom: 0 !important;
+					}
+					.elementor-12563 .elementor-element.elementor-element-d0951f3 {
+						padding-bottom: 0 !important;
+						margin-bottom: 0 !important;
+					}
+					.elementor-12563 .elementor-element.elementor-element-14cd3ce {
+						text-align: center !important;
+					}
+					.elementor-12563 .elementor-element.elementor-element-14cd3ce .elementor-button-wrapper {
+						justify-content: center !important;
+					}
+					.elementor-12563 .elementor-element.elementor-element-5a29ca0 {
+						margin-top: 0 !important;
+					}
+				}
+				.elementor-12563 .elementor-element.elementor-element-d3048a8 {
+					min-height: auto !important;
+					padding-bottom: 42px !important;
+				}
+			</style>
+				</head>
+<body class="wp-singular page-template page-template-elementor_canvas page page-id-12563 wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-canvas elementor-kit-6 elementor-page elementor-page-12563">
+<div data-elementor-type="wp-page" data-elementor-id="12563" class="elementor elementor-12563" data-elementor-post-type="page">
+				<div class="elementor-element elementor-element-fe4f460 e-flex e-con-boxed e-con e-parent" data-id="fe4f460" data-element_type="container" data-e-type="container" id="S01" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-d0951f3 e-con-full e-flex e-con e-child" data-id="d0951f3" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-077d297 elementor-widget elementor-widget-text-editor" data-id="077d297" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+															<div class="produto-selo">NOME DO PRODUTO</div>															</div>
+				</div>
+				<div class="elementor-element elementor-element-60649fd elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="60649fd" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Domine a<span class="dest2"> arte de negociar</span> e saiba exatamente como se comportar em reuniões para fechar mais vendas.</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e3aaebc elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="e3aaebc" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">O passo a passo para conduzir reuniões de vendas com confiança, contornar objeções e multiplicar seus resultados, mesmo que você seja iniciante.</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-14cd3ce elementor-align-center elementor-widget__width-initial elementor-widget elementor-widget-button" data-id="14cd3ce" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="#Oferta">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">GARANTIR MINHA VAGA</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-5a29ca0 e-flex e-con-boxed e-con e-parent" data-id="5a29ca0" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-00df87f blur elementor-widget elementor-widget-image" data-id="00df87f" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="90" height="90" src="assets/images/a0a3720d706a4d6a.png" class="attachment-large size-large wp-image-12800" alt=""  />															</div>
+				</div>
+				<div class="elementor-element elementor-element-59171c0 elementor-widget__width-initial blur elementor-widget elementor-widget-heading" data-id="59171c0" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Atenção: você está prestes a descobrir como dominar qualquer reunião de negócios e aumentar sua taxa de conversão.</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-4898a42 elementor-widget__width-initial blur elementor-widget elementor-widget-heading" data-id="4898a42" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">O que você vai receber nesse treinamento?</h2>				</div>
+				</div>
+		<div class="elementor-element elementor-element-ed69f7f e-flex e-con-boxed e-con e-child" data-id="ed69f7f" data-element_type="container" data-e-type="container">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-53db2de e-flex e-con-boxed e-con e-child" data-id="53db2de" data-element_type="container" data-e-type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-372e9d1 elementor-widget__width-initial blur elementor-widget elementor-widget-image" data-id="372e9d1" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img fetchpriority="high" decoding="async" src="assets/images/mockup1.jpeg" class="attachment-full size-full wp-image-12801" alt="" />															</div>
+				</div>
+				<div class="elementor-element elementor-element-a2df478 elementor-widget__width-initial blur elementor-widget elementor-widget-heading" data-id="a2df478" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Um<span class="dest3"> arsenal de scripts e posturas</span> para cada etapa da sua reunião. Tudo pronto para você adaptar e aplicar no seu negócio – independente do seu nicho.</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-8f67b63 elementor-widget__width-initial blur elementor-widget elementor-widget-heading" data-id="8f67b63" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Um <span class="dest4">mapa completo</span> para você organizar sua apresentação, quebrar o gelo, conduzir a negociação e realizar o fechamento com tranquilidade e confiança.</h2>				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-88f4634 e-con-full e-flex e-con e-child" data-id="88f4634" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-ce535d9 elementor-widget__width-initial blur elementor-widget elementor-widget-heading" data-id="ce535d9" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Treinamento completo com as <span class="dest4">5 etapas da negociação,</span> desde como gerar conexão inicial, qualificar o cliente, apresentar a oferta e quebrar objeções para fechar a venda.</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-e688d74 elementor-widget__width-initial blur elementor-widget elementor-widget-image" data-id="e688d74" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" src="assets/images/mockup1.jpeg" class="attachment-full size-full wp-image-12802" alt="" />															</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-85f566e e-con-full blur e-flex e-con e-child" data-id="85f566e" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-e0503b0 e-flex e-con-boxed e-con e-child" data-id="e0503b0" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-dca43f7 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="dca43f7" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default"><b>Para quem é o Reuniões que Vendem?</b></h2>				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-babb6e0 e-con-full e-flex e-con e-child" data-id="babb6e0" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-3ce799a e-con-full e-flex e-con e-child" data-id="3ce799a" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+								<div class="elementor-element elementor-element-ffbf06f elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="ffbf06f" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																					<img decoding="async" width="54" height="54" src="assets/images/4d7d790df3bb76e4.png" class="attachment-large size-large wp-image-12805" alt="" />																					</div>
+				</div><div class="elementor-element elementor-element-66d6b34 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="66d6b34" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Para <span style="font-weight: 600">Vendedores e Consultores</span> que querem melhorar a taxa de conversão de suas reuniões e fechar mais negócios.</h2>				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-6db415e e-con-full e-flex e-con e-child" data-id="6db415e" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+								<div class="elementor-element elementor-element-d35a8e3 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="d35a8e3" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																					<img loading="lazy" decoding="async" width="54" height="54" src="assets/images/031448b01d181b5f.png" class="attachment-large size-large wp-image-12806" alt="" />																					</div>
+				</div><div class="elementor-element elementor-element-ea1756e elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="ea1756e" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Para <span style="font-weight: 600">Prestadores de Serviço </span>que desejam vender seus serviços com alto valor agregado e não depender apenas de indicações (advogados, arquitetos, gestores, médicos, entre outros)</h2>				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-96caf75 e-con-full e-flex e-con e-child" data-id="96caf75" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+								<div class="elementor-element elementor-element-d52c295 elementor-widget__width-initial elementor-widget elementor-widget-image" data-id="d52c295" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																					<img loading="lazy" decoding="async" width="54" height="54" src="assets/images/2fa03af359b57e40.png" class="attachment-large size-large wp-image-12807" alt="" />																					</div>
+				</div><div class="elementor-element elementor-element-b38ccde elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="b38ccde" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Para <span style="font-weight: 600">Empreendedores</span> que querem estruturar um processo de vendas previsível e parar de perder oportunidades por não saberem como conduzir uma negociação.</h2>				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-d3048a8 e-flex e-con-boxed e-con e-parent" data-id="d3048a8" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-db77a7d elementor-widget__width-initial blur elementor-widget elementor-widget-heading" data-id="db77a7d" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Resultados de quem já aplicou a metodologia de vendas em reuniões:</h2>				</div>
+				</div>
+		<div class="elementor-element elementor-element-d5f537b e-con-full e-flex e-con e-child" data-id="d5f537b" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-02b32e1 e-con-full e-flex e-con e-child" data-id="02b32e1" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-da13f01 blur elementor-widget elementor-widget-image" data-id="da13f01" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="286" height="454" src="assets/images/depoimento.jpg?v=20260302-2" class="attachment-large size-large wp-image-12816" alt=""  />															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-e334ee7 e-con-full e-flex e-con e-child" data-id="e334ee7" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-6078b0b blur elementor-widget elementor-widget-image" data-id="6078b0b" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="279" height="402" src="assets/images/depoimento.jpg?v=20260302-2" class="attachment-large size-large wp-image-12817" alt=""  />															</div>
+				</div>
+				<div class="elementor-element elementor-element-76cbb9e blur elementor-widget elementor-widget-image" data-id="76cbb9e" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="279" height="327" src="assets/images/depoimento.jpg?v=20260302-2" class="attachment-large size-large wp-image-12818" alt=""  />															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-44c7e6a e-con-full e-flex e-con e-child" data-id="44c7e6a" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-7e436e9 blur elementor-widget elementor-widget-image" data-id="7e436e9" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="279" height="352" src="assets/images/depoimento.jpg?v=20260302-2" class="attachment-large size-large wp-image-12819" alt=""  />															</div>
+				</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-e17e051 elementor-widget__width-initial scroll-bottom e1 elementor-widget elementor-widget-heading" data-id="e17e051" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">O <span style="font-weight: 600">Reuniões que Vendem</span> funciona mesmo que você não tenha experiência prévia em vendas</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-btnaftere17 elementor-align-center elementor-widget__width-initial elementor-widget elementor-widget-button" data-id="btnaftere17" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="#Oferta">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">QUERO GARANTIR MINHA VAGA</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-316d4df e-flex e-con-boxed e-con e-parent" data-id="316d4df" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-2142e9a elementor-widget__width-initial blur elementor-widget elementor-widget-heading" data-id="2142e9a" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Essas são as 5 etapas que vão te fazer dominar qualquer reunião de vendas: </h2>				</div>
+				</div>
+		<div class="elementor-element elementor-element-48290eb e-con-full e-flex e-con e-child" data-id="48290eb" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-5269627 elementor-widget__width-initial scroll-bottom elementor-position-top elementor-widget elementor-widget-image-box" data-id="5269627" data-element_type="widget" data-e-type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img decoding="async" width="58" height="58" src="assets/images/171198d87012ce18.png" class="attachment-full size-full wp-image-12831" alt=""  /></figure><div class="elementor-image-box-content"><p class="elementor-image-box-description"><span style="font-weight: 600">Preparação e Rapport:</span> Antes da reunião começar você precisa pesquisar o cliente, quebrar o gelo e criar uma conexão verdadeira para gerar confiança.</p></div></div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-093ee22 elementor-widget__width-initial scroll-bottom elementor-position-top elementor-widget elementor-widget-image-box" data-id="093ee22" data-element_type="widget" data-e-type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img decoding="async" width="58" height="58" src="assets/images/ea91a352c3f54ddb.png" class="attachment-full size-full wp-image-12832" alt=""  /></figure><div class="elementor-image-box-content"><p class="elementor-image-box-description"><span style="font-weight: 600">Qualificação:</span> Você vai aprender a fazer as perguntas certas para descobrir as reais dores do cliente e entender se o seu produto é a solução ideal para ele.</p></div></div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-a5f9bdf elementor-widget__width-initial scroll-bottom elementor-position-top elementor-widget elementor-widget-image-box" data-id="a5f9bdf" data-element_type="widget" data-e-type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img decoding="async" width="58" height="58" src="assets/images/1f29b23193d0793c.png" class="attachment-full size-full wp-image-12833" alt=""  /></figure><div class="elementor-image-box-content"><p class="elementor-image-box-description"><span style="font-weight: 600">Apresentação da Solução:</span> Descubra como apresentar o seu produto ou serviço de forma irresistível, focando nos benefícios e gerando alto valor percebido.</p></div></div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-78fe49a elementor-widget__width-initial scroll-bottom elementor-position-top elementor-widget elementor-widget-image-box" data-id="78fe49a" data-element_type="widget" data-e-type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img decoding="async" width="58" height="58" src="assets/images/97abe0a86a7756cf.png" class="attachment-full size-full wp-image-12834" alt=""  /></figure><div class="elementor-image-box-content"><p class="elementor-image-box-description"><span style="font-weight: 600">Contorno de Objeções:</span> Seja preço, tempo ou confiança, você vai descobrir como antecipar e quebrar qualquer objeção com segurança e naturalidade.</p></div></div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-26ee71f elementor-widget__width-initial scroll-bottom elementor-position-top elementor-widget elementor-widget-image-box" data-id="26ee71f" data-element_type="widget" data-e-type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img decoding="async" width="58" height="58" src="assets/images/db05f7cf56fed293.png" class="attachment-full size-full wp-image-12835" alt=""  /></figure><div class="elementor-image-box-content"><p class="elementor-image-box-description"><span style="font-weight: 600">Fechamento:</span> Você vai aprender exatamente como conduzir o cliente para a decisão de compra e fechar o negócio sem parecer insistente ou desesperado.
+</p></div></div>				</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-f85b59e e-con-full e-flex e-con e-parent" data-id="f85b59e" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				<div class="elementor-element elementor-element-90819e6 elementor-widget__width-initial blur elementor-widget elementor-widget-heading" data-id="90819e6" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Além do treinamento você recebe:</h2>				</div>
+				</div>
+		<div class="elementor-element elementor-element-80ebcbd e-flex e-con-boxed e-con e-child" data-id="80ebcbd" data-element_type="container" data-e-type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-317c084 scroll-bottom elementor-widget elementor-widget-text-editor" data-id="317c084" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+															<div class="bonus-grid">
+																<div class="bonus-card">
+																	<span class="bonus-tag">BONUS 1</span>
+																	<h3 class="bonus-title">Scripts Prontos de Reuniao</h3>
+																	<p class="bonus-text">Modelos praticos para abrir, conduzir e fechar reunioes sem travar.</p>
+																</div>
+																<div class="bonus-card">
+																	<span class="bonus-tag">BONUS 2</span>
+																	<h3 class="bonus-title">Checklist de Fechamento</h3>
+																	<p class="bonus-text">Uma lista objetiva para garantir que nenhum passo importante fique de fora.</p>
+																</div>
+																<div class="bonus-card">
+																	<span class="bonus-tag">BONUS 3</span>
+																	<h3 class="bonus-title">Guia de Contorno de Objecoes</h3>
+																	<p class="bonus-text">Respostas estrategicas para preco, prazo e indecisao em negociacoes.</p>
+																</div>
+															</div>															</div>
+				</div>
+					</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-ccb2e07 e-flex e-con-boxed e-con e-parent" data-id="ccb2e07" data-element_type="container" data-e-type="container" id="Oferta" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-8b2f3ba e-con-full blur e-flex e-con e-child" data-id="8b2f3ba" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-d01b852 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="d01b852" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Qual é o investimento?</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-7e8b0fc elementor-position-inline-start elementor-mobile-position-inline-start elementor-view-default elementor-widget elementor-widget-icon-box" data-id="7e8b0fc" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<span  class="elementor-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39" fill="none"><g clip-path="url(#clip0_1825_4545)"><path d="M38.9149 19.4575C38.9149 8.7114 30.2035 0 19.4575 0C8.7114 0 0 8.7114 0 19.4575C0 30.2035 8.7114 38.9149 19.4575 38.9149C30.2035 38.9149 38.9149 30.2035 38.9149 19.4575Z" fill="#F04E23"></path><path d="M27.7195 14.5547L16.9712 25.2563L12.0835 20.3919" stroke="#EFEBE1" stroke-width="2.91862" stroke-linecap="round" stroke-linejoin="round"></path></g><defs><clipPath id="clip0_1825_4545"><rect width="38.9149" height="38.9149" fill="white"></rect></clipPath></defs></svg>				</span>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h3 class="elementor-icon-box-title">
+						<span  >
+							Reuniões que Vendem						</span>
+					</h3>
+				
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-bfe2bff elementor-position-inline-start elementor-mobile-position-inline-start elementor-view-default elementor-widget elementor-widget-icon-box" data-id="bfe2bff" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<span  class="elementor-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39" fill="none"><g clip-path="url(#clip0_1825_4545)"><path d="M38.9149 19.4575C38.9149 8.7114 30.2035 0 19.4575 0C8.7114 0 0 8.7114 0 19.4575C0 30.2035 8.7114 38.9149 19.4575 38.9149C30.2035 38.9149 38.9149 30.2035 38.9149 19.4575Z" fill="#F04E23"></path><path d="M27.7195 14.5547L16.9712 25.2563L12.0835 20.3919" stroke="#EFEBE1" stroke-width="2.91862" stroke-linecap="round" stroke-linejoin="round"></path></g><defs><clipPath id="clip0_1825_4545"><rect width="38.9149" height="38.9149" fill="white"></rect></clipPath></defs></svg>				</span>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h3 class="elementor-icon-box-title">
+						<span  >
+							Simulador de Reuniões						</span>
+					</h3>
+				
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-3705eec elementor-position-inline-start elementor-mobile-position-inline-start elementor-view-default elementor-widget elementor-widget-icon-box" data-id="3705eec" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<span  class="elementor-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39" fill="none"><g clip-path="url(#clip0_1825_4545)"><path d="M38.9149 19.4575C38.9149 8.7114 30.2035 0 19.4575 0C8.7114 0 0 8.7114 0 19.4575C0 30.2035 8.7114 38.9149 19.4575 38.9149C30.2035 38.9149 38.9149 30.2035 38.9149 19.4575Z" fill="#F04E23"></path><path d="M27.7195 14.5547L16.9712 25.2563L12.0835 20.3919" stroke="#EFEBE1" stroke-width="2.91862" stroke-linecap="round" stroke-linejoin="round"></path></g><defs><clipPath id="clip0_1825_4545"><rect width="38.9149" height="38.9149" fill="white"></rect></clipPath></defs></svg>				</span>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h3 class="elementor-icon-box-title">
+						<span  >
+							Script de Vendas						</span>
+					</h3>
+				
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-1d72880 elementor-position-inline-start elementor-mobile-position-inline-start elementor-view-default elementor-widget elementor-widget-icon-box" data-id="1d72880" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<span  class="elementor-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39" fill="none"><g clip-path="url(#clip0_1825_4545)"><path d="M38.9149 19.4575C38.9149 8.7114 30.2035 0 19.4575 0C8.7114 0 0 8.7114 0 19.4575C0 30.2035 8.7114 38.9149 19.4575 38.9149C30.2035 38.9149 38.9149 30.2035 38.9149 19.4575Z" fill="#F04E23"></path><path d="M27.7195 14.5547L16.9712 25.2563L12.0835 20.3919" stroke="#EFEBE1" stroke-width="2.91862" stroke-linecap="round" stroke-linejoin="round"></path></g><defs><clipPath id="clip0_1825_4545"><rect width="38.9149" height="38.9149" fill="white"></rect></clipPath></defs></svg>				</span>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h3 class="elementor-icon-box-title">
+						<span  >
+							Modelos de Propostas						</span>
+					</h3>
+				
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-e929496 elementor-position-inline-start elementor-mobile-position-inline-start elementor-view-default elementor-widget elementor-widget-icon-box" data-id="e929496" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<span  class="elementor-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39" fill="none"><g clip-path="url(#clip0_1825_4545)"><path d="M38.9149 19.4575C38.9149 8.7114 30.2035 0 19.4575 0C8.7114 0 0 8.7114 0 19.4575C0 30.2035 8.7114 38.9149 19.4575 38.9149C30.2035 38.9149 38.9149 30.2035 38.9149 19.4575Z" fill="#F04E23"></path><path d="M27.7195 14.5547L16.9712 25.2563L12.0835 20.3919" stroke="#EFEBE1" stroke-width="2.91862" stroke-linecap="round" stroke-linejoin="round"></path></g><defs><clipPath id="clip0_1825_4545"><rect width="38.9149" height="38.9149" fill="white"></rect></clipPath></defs></svg>				</span>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h3 class="elementor-icon-box-title">
+						<span  >
+							Acesso por um ano						</span>
+					</h3>
+				
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-0e397ec elementor-position-inline-start elementor-mobile-position-inline-start elementor-view-default elementor-widget elementor-widget-icon-box" data-id="0e397ec" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<span  class="elementor-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39" fill="none"><g clip-path="url(#clip0_1825_4545)"><path d="M38.9149 19.4575C38.9149 8.7114 30.2035 0 19.4575 0C8.7114 0 0 8.7114 0 19.4575C0 30.2035 8.7114 38.9149 19.4575 38.9149C30.2035 38.9149 38.9149 30.2035 38.9149 19.4575Z" fill="#F04E23"></path><path d="M27.7195 14.5547L16.9712 25.2563L12.0835 20.3919" stroke="#EFEBE1" stroke-width="2.91862" stroke-linecap="round" stroke-linejoin="round"></path></g><defs><clipPath id="clip0_1825_4545"><rect width="38.9149" height="38.9149" fill="white"></rect></clipPath></defs></svg>				</span>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h3 class="elementor-icon-box-title">
+						<span  >
+							Garantia de 7 dias						</span>
+					</h3>
+				
+				
+			</div>
+			
+		</div>
+						</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-b07f21f e-con-full blur e-flex e-con e-child" data-id="b07f21f" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				<div class="elementor-element elementor-element-65af3d4 elementor-widget elementor-widget-text-editor" data-id="65af3d4" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+															<div class="oferta-selo">Nome do produto</div>															</div>
+				</div>
+		<div class="elementor-element elementor-element-a68fece e-con-full e-flex e-con e-child" data-id="a68fece" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-49369f1 elementor-widget elementor-widget-heading" data-id="49369f1" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Por apenas 12x de</h2>				</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-5d866d6 elementor-widget elementor-widget-image-box" data-id="5d866d6" data-element_type="widget" data-e-type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image-box-wrapper"><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">R$29,64</h3><p class="elementor-image-box-description">ou R$297 à vista</p></div></div>				</div>
+				</div>
+		<div class="elementor-element elementor-element-1f36fc1 e-con-full e-flex e-con e-child" data-id="1f36fc1" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-7c3fac7 elementor-align-center elementor-widget-mobile__width-initial elementor-widget elementor-widget-button" data-id="7c3fac7" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="{{CHECKOUT_LINK}}">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Garantir Agora</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-aaf9b17 e-flex e-con-boxed e-con e-parent" data-id="aaf9b17" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-4b77fd4 e-con-full e-flex e-con e-child" data-id="4b77fd4" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2a7ccf8 elementor-widget-tablet__width-initial elementor-widget elementor-widget-image" data-id="2a7ccf8" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="393" height="393" src="assets/images/b1d2c9c150edf2d7.svg" class="attachment-large size-large wp-image-12752" alt=""  />															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-59c3146 e-con-full e-flex e-con e-child" data-id="59c3146" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-bbd1cd7 elementor-widget__width-inherit elementor-vertical-align-middle scroll-bottom elementor-widget-mobile__width-initial elementor-widget elementor-widget-image-box" data-id="bbd1cd7" data-element_type="widget" data-e-type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image-box-wrapper"><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Experimente sem preocupações!</h3><p class="elementor-image-box-description">Você tem 7 dias de garantia incondicional. Se você assistir as aulas<br> e entender que esse método de vendas não é para você, eu devolvo 100% do seu investimento.</p></div></div>				</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-5d4f791 e-flex e-con-boxed e-con e-parent" data-id="5d4f791" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-efc9afe elementor-widget__width-initial scroll-left elementor-widget elementor-widget-image-box" data-id="efc9afe" data-element_type="widget" data-e-type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image-box-wrapper"><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Prazer, Especialista em Vendas</h3><p class="elementor-image-box-description">Sou especialista em vendas e mentora de profissionais que querem transformar reuniões em contratos fechados.
+
+Criei a metodologia Reuniões que Vendem para fechar negócios de alto valor sem precisar parecer um vendedor chato ou insistente. E o melhor: não funciona só pra mim.
+<br><br>
+Essa é a mesma técnica que eu aplico e ensino para centenas de alunos que hoje dominam a arte da negociação e aumentaram suas taxas de conversão em mais de 300%.
+<br><br>
+Agora você vai aprender na prática a dominar suas reuniões e vender muito mais.</p></div></div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-f3b8abc scroll-right elementor-widget-mobile__width-initial elementor-widget elementor-widget-image" data-id="f3b8abc" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="580" height="794" src="assets/images/expert.png" class="attachment-full size-full wp-image-13052" alt=""  />															</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-367ad46 e-flex e-con-boxed e-con e-parent" data-id="367ad46" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-6dc8b63 scroll-bottom elementor-widget elementor-widget-heading" data-id="6dc8b63" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Dúvidas Frequentes</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-8470533 elementor-widget__width-initial elementor-widget-tablet__width-inherit scroll-bottom elementor-widget-mobile__width-initial elementor-widget elementor-widget-n-accordion" data-id="8470533" data-element_type="widget" data-e-type="widget" data-settings="{&quot;default_state&quot;:&quot;all_collapsed&quot;,&quot;max_items_expended&quot;:&quot;one&quot;,&quot;n_accordion_animation_duration&quot;:{&quot;unit&quot;:&quot;ms&quot;,&quot;size&quot;:400,&quot;sizes&quot;:[]}}" data-widget_type="nested-accordion.default">
+				<div class="elementor-widget-container">
+							<div class="e-n-accordion" aria-label="Accordion. Open links with Enter or Space, close with Escape, and navigate with Arrow Keys">
+						<details id="e-n-accordion-item-1380" class="e-n-accordion-item" >
+				<summary class="e-n-accordion-item-title" data-accordion-index="1" tabindex="0" aria-expanded="false" aria-controls="e-n-accordion-item-1380" >
+					<span class='e-n-accordion-item-title-header'><div class="e-n-accordion-item-title-text"> 01/ Como saber se o Reuniões que Vendem é pra mim? </div></span>
+							<span class='e-n-accordion-item-title-icon'>
+			<span class='e-opened' ><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="17" fill="#F04E23"></circle><path d="M21.2426 12.7573L12.7574 21.2426M12.7574 12.7573L21.2426 21.2426" stroke="#260101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+			<span class='e-closed'><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="17" fill="#F04E23"></circle><path d="M17 11V23M11 17H23" stroke="#260101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+		</span>
+
+						</summary>
+				<div role="region" aria-labelledby="e-n-accordion-item-1380" class="elementor-element elementor-element-f5d9ad2 e-con-full e-flex e-con e-child" data-id="f5d9ad2" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-f5ae64f elementor-widget elementor-widget-text-editor" data-id="f5ae64f" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p><span style="font-weight: 400;">O treinamento é para vendedores, consultores, prestadores de serviço e qualquer pessoa que precise fazer reuniões para fechar negócios e queira aumentar sua taxa de conversão.</span></p>								</div>
+				</div>
+				</div>
+					</details>
+						<details id="e-n-accordion-item-1381" class="e-n-accordion-item" >
+				<summary class="e-n-accordion-item-title" data-accordion-index="2" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-1381" >
+					<span class='e-n-accordion-item-title-header'><div class="e-n-accordion-item-title-text"> 02/ Por quanto tempo terei acesso ao conteúdo? </div></span>
+							<span class='e-n-accordion-item-title-icon'>
+			<span class='e-opened' ><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="17" fill="#F04E23"></circle><path d="M21.2426 12.7573L12.7574 21.2426M12.7574 12.7573L21.2426 21.2426" stroke="#260101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+			<span class='e-closed'><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="17" fill="#F04E23"></circle><path d="M17 11V23M11 17H23" stroke="#260101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+		</span>
+
+						</summary>
+				<div role="region" aria-labelledby="e-n-accordion-item-1381" class="elementor-element elementor-element-fb0ed7f e-con-full e-flex e-con e-child" data-id="fb0ed7f" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-b290744 elementor-widget elementor-widget-text-editor" data-id="b290744" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p><span style="font-weight: 400;">Você terá acesso ao curso por <b>12 meses</b>, com direito a todas as atualizações que forem feitas dentro desse período..</span></p>								</div>
+				</div>
+				</div>
+					</details>
+						<details id="e-n-accordion-item-1382" class="e-n-accordion-item" >
+				<summary class="e-n-accordion-item-title" data-accordion-index="3" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-1382" >
+					<span class='e-n-accordion-item-title-header'><div class="e-n-accordion-item-title-text"> 03/ Eu preciso ter muitos seguidores? </div></span>
+							<span class='e-n-accordion-item-title-icon'>
+			<span class='e-opened' ><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="17" fill="#F04E23"></circle><path d="M21.2426 12.7573L12.7574 21.2426M12.7574 12.7573L21.2426 21.2426" stroke="#260101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+			<span class='e-closed'><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="17" fill="#F04E23"></circle><path d="M17 11V23M11 17H23" stroke="#260101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+		</span>
+
+						</summary>
+				<div role="region" aria-labelledby="e-n-accordion-item-1382" class="elementor-element elementor-element-c33290c e-con-full e-flex e-con e-child" data-id="c33290c" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-eff5b3b elementor-widget elementor-widget-text-editor" data-id="eff5b3b" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p><span style="font-weight: 400;">Não! O método do Reuniões que Vendem funciona para quem está começando agora. O foco aqui é te dar segurança para conduzir qualquer reunião de vendas.</span></p>								</div>
+				</div>
+				</div>
+					</details>
+						<details id="e-n-accordion-item-1383" class="e-n-accordion-item" >
+				<summary class="e-n-accordion-item-title" data-accordion-index="4" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-1383" >
+					<span class='e-n-accordion-item-title-header'><div class="e-n-accordion-item-title-text"> 04/ Preciso ter experiência? </div></span>
+							<span class='e-n-accordion-item-title-icon'>
+			<span class='e-opened' ><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="17" fill="#F04E23"></circle><path d="M21.2426 12.7573L12.7574 21.2426M12.7574 12.7573L21.2426 21.2426" stroke="#260101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+			<span class='e-closed'><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="17" fill="#F04E23"></circle><path d="M17 11V23M11 17H23" stroke="#260101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+		</span>
+
+						</summary>
+				<div role="region" aria-labelledby="e-n-accordion-item-1383" class="elementor-element elementor-element-a474014 e-con-full e-flex e-con e-child" data-id="a474014" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-4a0844c elementor-widget elementor-widget-text-editor" data-id="4a0844c" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p><span style="font-weight: 400;">Também não. O curso é feito para pessoas de todos os níveis.</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">Se você já faz reuniões, mesmo que de forma desorganizada, já consegue aplicar o que ensino.</span></p>								</div>
+				</div>
+				</div>
+					</details>
+						<details id="e-n-accordion-item-1384" class="e-n-accordion-item" >
+				<summary class="e-n-accordion-item-title" data-accordion-index="5" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-1384" >
+					<span class='e-n-accordion-item-title-header'><div class="e-n-accordion-item-title-text"> 05/ E se eu ainda não tiver um infoproduto? </div></span>
+							<span class='e-n-accordion-item-title-icon'>
+			<span class='e-opened' ><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="17" fill="#F04E23"></circle><path d="M21.2426 12.7573L12.7574 21.2426M12.7574 12.7573L21.2426 21.2426" stroke="#260101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+			<span class='e-closed'><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="17" fill="#F04E23"></circle><path d="M17 11V23M11 17H23" stroke="#260101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+		</span>
+
+						</summary>
+				<div role="region" aria-labelledby="e-n-accordion-item-1384" class="elementor-element elementor-element-abe8894 e-flex e-con-boxed e-con e-child" data-id="abe8894" data-element_type="container" data-e-type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-4b09bac elementor-widget elementor-widget-text-editor" data-id="4b09bac" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p><span style="font-weight: 400;">Esse curso é feito para quem </span><b>já tem algo pra vender</b><span style="font-weight: 400;">: serviço, consultoria, produto físico ou digital… Se você ainda não tem o que vender, o ideal é primeiro estruturar sua oferta antes de começar.</span></p>
+<p> </p>								</div>
+				</div>
+					</div>
+				</div>
+					</details>
+						<details id="e-n-accordion-item-1385" class="e-n-accordion-item" >
+				<summary class="e-n-accordion-item-title" data-accordion-index="6" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-1385" >
+					<span class='e-n-accordion-item-title-header'><div class="e-n-accordion-item-title-text"> 07/ E se eu não gostar do curso? </div></span>
+							<span class='e-n-accordion-item-title-icon'>
+			<span class='e-opened' ><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="17" fill="#F04E23"></circle><path d="M21.2426 12.7573L12.7574 21.2426M12.7574 12.7573L21.2426 21.2426" stroke="#260101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+			<span class='e-closed'><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="17" fill="#F04E23"></circle><path d="M17 11V23M11 17H23" stroke="#260101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+		</span>
+
+						</summary>
+				<div role="region" aria-labelledby="e-n-accordion-item-1385" class="elementor-element elementor-element-ebf240f e-flex e-con-boxed e-con e-child" data-id="ebf240f" data-element_type="container" data-e-type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-4ba643c elementor-widget elementor-widget-text-editor" data-id="4ba643c" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p><span style="font-weight: 400;">Você tem </span><b>7 dias de garantia incondicional</b><span style="font-weight: 400;">. Se por qualquer motivo sentir que o curso não é pra você, é só pedir o reembolso dentro desse prazo.</span></p>								</div>
+				</div>
+					</div>
+				</div>
+					</details>
+					</div>
+					<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"01\/ Como saber se o Reuni\u00f5es que Vendem \u00e9 pra mim?","acceptedAnswer":{"@type":"Answer","text":"O treinamento \u00e9 para vendedores, consultores, prestadores de servi\u00e7o e qualquer pessoa que precise fazer reuni\u00f5es para fechar neg\u00f3cios e queira aumentar sua taxa de convers\u00e3o."}},{"@type":"Question","name":"02\/ Por quanto tempo terei acesso ao conte\u00fado?","acceptedAnswer":{"@type":"Answer","text":"Voc\u00ea ter\u00e1 acesso ao curso por 12 meses, com direito a todas as atualiza\u00e7\u00f5es que forem feitas dentro desse per\u00edodo.."}},{"@type":"Question","name":"03\/ Eu preciso ter muitos seguidores?","acceptedAnswer":{"@type":"Answer","text":"N\u00e3o! O m\u00e9todo do Reuni\u00f5es que Vendem funciona para quem est\u00e1 come\u00e7ando agora. O foco aqui \u00e9 te dar seguran\u00e7a para conduzir qualquer reuni\u00e3o de vendas."}},{"@type":"Question","name":"04\/ Preciso ter experi\u00eancia?","acceptedAnswer":{"@type":"Answer","text":"Tamb\u00e9m n\u00e3o. O curso \u00e9 feito para pessoas de todos os n\u00edveis.Se voc\u00ea j\u00e1 faz reuni\u00f5es, mesmo que de forma desorganizada, j\u00e1 consegue aplicar o que ensino."}},{"@type":"Question","name":"05\/ E se eu ainda n\u00e3o tiver um infoproduto?","acceptedAnswer":{"@type":"Answer","text":"Esse curso \u00e9 feito para quem j\u00e1 tem algo pra vender: servi\u00e7o, consultoria, produto f\u00edsico ou digital\u2026 Se voc\u00ea ainda n\u00e3o tem o que vender, o ideal \u00e9 primeiro estruturar sua oferta antes de come\u00e7ar.\n\u00a0"}},{"@type":"Question","name":"07\/ E se eu n\u00e3o gostar do curso?","acceptedAnswer":{"@type":"Answer","text":"Voc\u00ea tem 7 dias de garantia incondicional. Se por qualquer motivo sentir que o curso n\u00e3o \u00e9 pra voc\u00ea, \u00e9 s\u00f3 pedir o reembolso dentro desse prazo."}}]}</script>
+							</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-54a62f6 e-flex e-con-boxed e-con e-parent" data-id="54a62f6" data-element_type="container" data-e-type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-3d68e8d elementor-widget elementor-widget-html" data-id="3d68e8d" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+					<script data-minify="1" src="assets/js/502cee4835ae3c72.js"></script>
+<script data-minify="1" src="assets/js/cc88f50cc0903ebb.js"></script>
+
+<script type="rocketlazyloadscript">
+    const elementos = document.querySelectorAll(".scroll-left, .scroll-right, .scroll-top, .scroll-bottom, .blur, .lista .elementor-icon-list-item");
+    const posicaoScroll = window.innerHeight * 0.5;
+    
+    function fadeScroll(){
+        elementos.forEach(elemento =>{
+            const elementoTop = elemento.getBoundingClientRect().top- posicaoScroll;
+            
+            if(elementoTop < 320){
+                elemento.classList.add("ativo");
+            }
+            else {
+                elemento.classList.remove("ativo");
+            }
+        });
+    }
+    
+    window.addEventListener("scroll", fadeScroll);
+</script>
+
+<!--Movimento de âncora suave-->
+<script type="rocketlazyloadscript">
+    jQuery(document).ready(function($) {
+    $('a[href*="#"]').on('click', function(e) {
+        e.preventDefault();
+        var target = $(this.hash);
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, 1000); // 1000 é a duração da animação em milissegundos
+        }
+    });
+});
+</script>
+
+
+				</div>
+				</div>
+					</div>
+				</div>
+				</div>
+		<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/hello-elementor/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+			<script type="rocketlazyloadscript">
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+			<script type="rocketlazyloadscript" id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+</script>
+<script id="rocket-preload-links-js-extra">
+var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"about:blank","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+</script>
+<script type="rocketlazyloadscript" id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="assets/js/664100eb75fe9f0a.js" id="hello-theme-frontend-js"></script>
+<script type="rocketlazyloadscript" data-rocket-src="assets/js/1699732f22dca538.js" id="elementor-webpack-runtime-js"></script>
+<script type="rocketlazyloadscript" data-rocket-src="assets/js/3e936f24425f2f3d.js" id="elementor-frontend-modules-js"></script>
+<script type="rocketlazyloadscript" data-rocket-src="assets/js/a1bdb795c9a8ddca.js" id="jquery-ui-core-js"></script>
+<script type="rocketlazyloadscript" id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartilhar no Facebook","shareOnTwitter":"Compartilhar no Twitter","pinIt":"Fixar","download":"Baixar","downloadImage":"Baixar imagem","fullscreen":"Tela cheia","zoom":"Zoom","share":"Compartilhar","playVideo":"Reproduzir v\u00eddeo","previous":"Anterior","next":"Pr\u00f3ximo","close":"Fechar","a11yCarouselPrevSlideMessage":"Slide anterior","a11yCarouselNextSlideMessage":"Pr\u00f3ximo slide","a11yCarouselFirstSlideMessage":"Este \u00e9 o primeiro slide","a11yCarouselLastSlideMessage":"Este \u00e9 o \u00faltimo slide","a11yCarouselPaginationBulletMessage":"Ir para o slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Dispositivos m\u00f3veis no modo retrato","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Dispositivos m\u00f3veis no modo paisagem","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet no modo retrato","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet no modo paisagem","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Notebook","value":1366,"default_value":1366,"direction":"max","is_enabled":true},"widescreen":{"label":"Tela ampla (widescreen)","value":2400,"default_value":2400,"direction":"min","is_enabled":true}},"hasCustomBreakpoints":true},"version":"3.35.5","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"theme_builder_v2":true,"hello-theme-header-footer":true,"nested-elements":true,"home_screen":true,"global_classes_should_enforce_capabilities":true,"e_variables":true,"cloud-library":true,"e_opt_in_v4_page":true,"e_components":true,"e_interactions":true,"e_editor_one":true,"import-export-customization":true,"e_pro_variables":true},"urls":{"assets":"/assets/","ajaxurl":"/","uploadUrl":"/assets/"},"nonces":{"floatingButtonsClickTracking":"facb54c302"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet","viewport_laptop","viewport_widescreen"],"body_background_background":"classic","global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"title","hello_header_menu_layout":"horizontal","hello_footer_logo_type":"logo"},"post":{"id":12563,"title":"Conte%C3%BAdo%20para%20Lan%C3%A7amento%20%E2%80%93%20Venda%20%E2%80%93%20Jennifer%20Setti","excerpt":"","featuredImage":false}};
+//# sourceURL=elementor-frontend-js-before
+</script>
+<script type="rocketlazyloadscript" data-rocket-src="assets/js/f31c386af3eec0a1.js" id="elementor-frontend-js"></script>
+<script id="perfmatters-lazy-load-js-before">
+window.lazyLoadOptions={elements_selector:"img[data-src],.perfmatters-lazy,.perfmatters-lazy-css-bg",thresholds:"0px 0px",class_loading:"pmloading",class_loaded:"pmloaded",callback_loaded:function(element){if(element.tagName==="IFRAME"){if(element.classList.contains("pmloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener("LazyLoad::Initialized",function(e){var lazyLoadInstance=e.detail.instance;});function perfmattersLazyLoadYouTube(e){var t=document.createElement("iframe"),r="ID?";r+=0===e.dataset.query.length?"":e.dataset.query+"&",r+="autoplay=1",t.setAttribute("src",r.replace("ID",e.dataset.src)),t.setAttribute("frameborder","0"),t.setAttribute("allowfullscreen","1"),t.setAttribute("allow","accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),e.replaceChild(t,e.firstChild)}
+//# sourceURL=perfmatters-lazy-load-js-before
+</script>
+<script async src="assets/js/23e3564a5b92d8f0.js" id="perfmatters-lazy-load-js"></script>
+<script type="rocketlazyloadscript" data-rocket-src="assets/js/e7fd42cae3c5250a.js" id="elementor-pro-webpack-runtime-js"></script>
+<script type="rocketlazyloadscript" data-rocket-src="assets/js/e9e8a799d4a96e24.js" id="wp-hooks-js"></script>
+<script type="rocketlazyloadscript" data-rocket-src="assets/js/655cfb73976b8609.js" id="wp-i18n-js"></script>
+<script type="rocketlazyloadscript" id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script type="rocketlazyloadscript" id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"about:blank","nonce":"d71a90bcdc","urls":{"assets":"about:blank","rest":"about:blank"},"settings":{"lazy_load_background_images":true},"popup":{"hasPopUps":true},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"pt_BR","app_id":""},"lottie":{"defaultAnimationUrl":"about:blank"}};
+//# sourceURL=elementor-pro-frontend-js-before
+</script>
+<script type="rocketlazyloadscript" data-rocket-src="assets/js/618875dfcc5842a2.js" id="elementor-pro-frontend-js"></script>
+<script type="rocketlazyloadscript" data-rocket-src="assets/js/82634d67135c1fa7.js" id="pro-elements-handlers-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"{{CTA_LINK}}"}}
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL={{CTA_LINK}}
+</script>
+<script type="rocketlazyloadscript" data-minify="1"
+  data-rocket-src="assets/js/c863fadbeea27b67.js"
+  data-utmify-prevent-subids
+  async
+  defer></script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script type="rocketlazyloadscript" data-no-minify="1" async data-rocket-src="assets/js/e7910dd9451fb6a2.js"></script><script>function lazyLoadThumb(e){var t='<img alt="" width="480" height="360">',a='<button class="play" aria-label="play Youtube video"></button>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script>	<script>class RocketElementorAnimation{constructor(){this.deviceMode=document.createElement("span"),this.deviceMode.id="elementor-device-mode-wpr",this.deviceMode.setAttribute("class","elementor-screen-only"),document.body.appendChild(this.deviceMode)}_detectAnimations(){let t=getComputedStyle(this.deviceMode,":after").content.replace(/"/g,"");this.animationSettingKeys=this._listAnimationSettingsKeys(t),document.querySelectorAll(".elementor-invisible[data-settings]").forEach(t=>{const e=t.getBoundingClientRect();if(e.bottom>=0&&e.top<=window.innerHeight)try{this._animateElement(t)}catch(t){}})}_animateElement(t){const e=JSON.parse(t.dataset.settings),i=e._animation_delay||e.animation_delay||0,n=e[this.animationSettingKeys.find(t=>e[t])];if("none"===n)return void t.classList.remove("elementor-invisible");t.classList.remove(n),this.currentAnimation&&t.classList.remove(this.currentAnimation),this.currentAnimation=n;let s=setTimeout(()=>{t.classList.remove("elementor-invisible"),t.classList.add("animated",n),this._removeAnimationSettings(t,e)},i);window.addEventListener("rocket-startLoading",function(){clearTimeout(s)})}_listAnimationSettingsKeys(t="mobile"){const e=[""];switch(t){case"mobile":e.unshift("_mobile");case"tablet":e.unshift("_tablet");case"desktop":e.unshift("_desktop")}const i=[];return["animation","_animation"].forEach(t=>{e.forEach(e=>{i.push(t+e)})}),i}_removeAnimationSettings(t,e){this._listAnimationSettingsKeys().forEach(t=>delete e[t]),t.dataset.settings=JSON.stringify(e)}static run(){const t=new RocketElementorAnimation;requestAnimationFrame(t._detectAnimations.bind(t))}}document.addEventListener("DOMContentLoaded",RocketElementorAnimation.run);</script></body>
+</html>
+
+

@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "builder",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["http-server", "D:/Claude Code/nextsaas-system/builder", "-p", "3456", "--cors", "-c-1"],
+      "port": 3456
+    }
+  ]
+}

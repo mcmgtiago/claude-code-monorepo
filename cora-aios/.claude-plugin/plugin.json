@@ -1,0 +1,12 @@
+{
+  "name": "cora-aios",
+  "version": "1.0.0",
+  "description": "CORA (Psicologia) — AI Operating System para Psicólogos. 8 skills para documentação clínica, triagem, avaliação de risco e gestão de consultório. Start with /clinic-setup.",
+  "author": {
+    "name": "GREENHAT Consultoria Digital",
+    "email": "contato@greenhat.io",
+    "url": "https://greenhat.io"
+  },
+  "license": "MIT",
+  "keywords": ["cora", "psicologia", "therapy", "clinic", "documentation", "patient-intake", "risk-assessment", "content"]
+}

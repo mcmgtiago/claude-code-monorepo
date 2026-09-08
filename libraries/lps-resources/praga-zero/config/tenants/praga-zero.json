@@ -1,0 +1,39 @@
+{
+  "slug": "praga-zero",
+  "label": "Praga Zero Premium",
+  "company": {
+    "name": "Praga Zero Dedetização",
+    "cnpj": "00.000.000/0001-00",
+    "cnae": "8122-2/00",
+    "phone": "51999999999",
+    "phoneFormatted": "(51) 99999-9999",
+    "email": "contato@pragazero.com.br",
+    "whatsappMessage": "Olá! Vim pelo site e gostaria de um orçamento grátis para dedetização em {cidade}.",
+    "instagram": "@pragazero",
+    "facebook": "/pragazero",
+    "yearsExperience": 15,
+    "googleRating": 4.9,
+    "propertiesServed": 2000,
+    "shortDescription": "Empresa especializada em dedetização e controle de pragas urbanas com produtos ANVISA e atendimento 24h.",
+    "logo": "/tenants/praga-zero/logo.svg"
+  },
+  "theme": {
+    "primary": "#25D366",
+    "danger": "#DC2626",
+    "warning": "#FCD34D",
+    "bg": "#FFFFFF",
+    "text": "#1F2937",
+    "muted": "#6B7280",
+    "surface": "#F9FAFB",
+    "radius": "0.9rem"
+  },
+  "media": { "setId": "premium-urbano", "hero": { "type": "video", "src": "https://videos.pexels.com/video-files/6195711/6195711-uhd_2560_1440_25fps.mp4", "poster": "https://images.pexels.com/photos/6195125/pexels-photo-6195125.jpeg?auto=compress&cs=tinysrgb&w=1800", "alt": "Profissional equipado realizando controle técnico em ambiente urbano", "photographer": "Pexels", "href": "https://www.pexels.com/" }, "gallery": [], "og": { "src": "https://images.pexels.com/photos/6195125/pexels-photo-6195125.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop", "alt": "Dedetização premium urbana", "photographer": "Pexels", "href": "https://www.pexels.com/" } },
+  "coverage": {
+    "defaultCity": "Porto Alegre",
+    "defaultState": "RS",
+    "neighborhoods": ["Centro", "Jardim Europa", "Vila Nova", "São José", "Boa Vista", "Petrópolis", "Moinhos", "Bela Vista"],
+    "regions": ["Centro", "Zona Norte", "Zona Sul", "Zona Leste", "Zona Oeste"]
+  },
+  "copyRef": "default",
+  "createdAt": "2026-07-29"
+}

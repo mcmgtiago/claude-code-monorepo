@@ -1,0 +1,22 @@
+<div
+  class="flex h-[313px] flex-col items-start justify-between rounded-3xl px-6 py-12 lg:px-8 lg:py-14 {=$class}"
+>
+  <p class="font-inter-tight text-tagline-2 font-normal {=$quoteClass}">
+    {=$content}
+  </p>
+
+  <div class="flex items-center justify-center gap-x-3">
+    <figure class="size-12 overflow-hidden rounded-full">
+      <img
+        src="{=$image}"
+        alt="{=$alt}"
+        class="size-full object-cover"
+      />
+    </figure>
+
+    <div>
+      <h3 class="font-manrope text-manrope-heading-6 font-medium {=$nameClass}">{=$name}</h3>
+      <p class="font-inter-tight text-tagline-3 font-normal {=$positionClass}">{=$position}</p>
+    </div>
+  </div>
+</div>

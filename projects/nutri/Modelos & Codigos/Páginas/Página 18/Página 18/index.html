@@ -1,0 +1,453 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LP Pronta</title>
+  <meta name="description" content="Landing page com hero em scrollytelling usando sequencia de imagens no canvas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <section class="scrolly" id="topo" aria-label="Apresentação principal">
+      <div class="scrolly-stage">
+        <canvas class="scrolly-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="canvas-scrim" aria-hidden="true"></div>
+        <div class="canvas-dissolve" id="canvas-dissolve" aria-hidden="true"></div>
+
+        <div class="content-layer">
+          <div class="hero-copy" id="hero-copy">
+            <h1>Aprenda a criar automações no Instagram para vender mais todos os dias.</h1>
+            <p>
+              Descubra como montar fluxos de automação que atraem leads, respondem
+              no momento certo e transformam conversas em vendas sem depender de
+              respostas manuais o tempo todo.
+            </p>
+            <a class="primary-button" href="#bloco-2">Quero vender mais no Instagram</a>
+          </div>
+
+          <div class="feature-card" id="bloco-2">
+            <h2>Responder tudo na mão faz você perder vendas no direct.</h2>
+            <p>
+              Sem velocidade e processo, conversas esfriam e oportunidades passam
+              sem virar venda.
+            </p>
+
+            <div class="feature-grid">
+              <article>
+                <strong>Respostas atrasadas</strong>
+                <p>Quando você demora para responder, o interesse esfria e a conversa perde força.</p>
+              </article>
+              <article>
+                <strong>Conversas soltas</strong>
+                <p>Sem um fluxo claro, cada lead segue um caminho diferente e poucas conversas chegam na oferta.</p>
+              </article>
+              <article>
+                <strong>Dependência total do manual</strong>
+                <p>Você fica preso ao celular, repete as mesmas respostas e não consegue escalar as vendas.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits-section" id="bloco-3" aria-label="Benefícios do produto">
+      <div class="benefits-shell">
+        <div class="section-heading">
+          <h2>O que você ganha quando domina automações para vender pelo Instagram.</h2>
+          <p>
+            O cursó foi pensado para quem quer sair do improvisó e criar um sistema
+            comercial mais inteligente dentro do direct, dos stories e dos links.
+          </p>
+        </div>
+
+        <div class="benefits-grid">
+          <article class="benefit-card">
+            <div class="benefit-visual benefit-visual--hourglass" aria-hidden="true">
+              <span></span>
+            </div>
+            <strong>Implementacao rapida</strong>
+            <p>Aprenda a colocar automações no ar sem depender de uma operacao tecnica complexa.</p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-visual benefit-visual--diamond" aria-hidden="true">
+              <span></span>
+            </div>
+            <strong>Mais conversão</strong>
+            <p>Conduza a conversa no direct com mensagens certas para aumentar respostas e vendas.</p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-visual benefit-visual--stack" aria-hidden="true">
+              <span></span>
+            </div>
+            <strong>Escala operacional</strong>
+            <p>Atenda mais pessoas ao mesmo tempo sem perder velocidade nem organizacao comercial.</p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-visual benefit-visual--orbit" aria-hidden="true">
+              <span></span>
+            </div>
+            <strong>Processó previsivel</strong>
+            <p>Tenha um funil mais claro para captar, nutrir e converter oportunidades todos os dias.</p>
+          </article>
+        </div>
+
+        <div class="section-cta">
+          <a class="primary-button" href="#bloco-7">Quero automatizar meu Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-section" id="bloco-4" aria-label="Depoimentos">
+      <div class="testimonials-shell">
+        <div class="section-heading section-heading--narrow">
+          <h2>O que nossos alunos falam depois de aplicar as automações no Instagram.</h2>
+          <p>
+            Resultados percebidos em clareza comercial, velocidade no atendimento
+            e aumento de oportunidades geradas a partir do direct.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <p>
+              "Eu respondia tudo manualmente e perdia muita venda por demora. Com
+              as automações, o direct ficou organizado e comecei a fechar muito
+              mais conversas que antes esfriavam."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">AR</div>
+              <div>
+                <strong>Ana Ribeiro</strong>
+                <span>Mentora de Beleza</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card testimonial-card--featured">
+            <p>
+              "O cursó me mostrou como captar leads pelos stories e levar cada
+              pessoa para o fluxo certo. Hoje eu tenho muito mais controle do que
+              acontece entre o primeiro contato e a venda."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">MS</div>
+              <div>
+                <strong>Marcos Silva</strong>
+                <span>Infoprodutor</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <p>
+              "Eu não sabia nem por onde começar com automação. Depois das aulas,
+              consegui montar uma estrutura simples que responde, qualifica e me
+              ajuda a vender sem ficar presa no celular o dia inteiro."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">CL</div>
+              <div>
+                <strong>Carla Lima</strong>
+                <span>Social Media</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="testimonials-indicator" aria-hidden="true">
+          <span class="testimonials-indicator__dot is-active"></span>
+          <span class="testimonials-indicator__dot"></span>
+          <span class="testimonials-indicator__dot"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="method-section" id="bloco-5" aria-label="Como funciona o método">
+      <div class="method-shell">
+        <div class="section-heading section-heading--narrow">
+          <h2>Como funciona o método para automatizar o Instagram e vender mais.</h2>
+          <p>
+            Você aprende a estruturar desde a base da mensagem ate os fluxos que
+            fazem a pessoa avancar da curiosidade para a compra.
+          </p>
+        </div>
+
+        <div class="method-diagram">
+          <article class="method-card method-card--top-left">
+            <strong>Etapa 1</strong>
+            <h3>Posicionamento e oferta</h3>
+            <ul>
+              <li>Clareza sobre o que vender</li>
+              <li>Mensagem certa para o público</li>
+              <li>Base comercial para automatizar</li>
+            </ul>
+          </article>
+
+          <article class="method-card method-card--bottom-left">
+            <strong>Etapa 2</strong>
+            <h3>Criacao dos fluxos</h3>
+            <ul>
+              <li>Automações para direct e respostas</li>
+              <li>Captacao por stories e palavras-chave</li>
+              <li>Sequencias para qualificar o lead</li>
+            </ul>
+          </article>
+
+          <div class="method-core" aria-hidden="true">
+            <div class="method-core-ring"></div>
+            <div class="method-core-ring method-core-ring--alt"></div>
+            <div class="method-core-glow"></div>
+          </div>
+
+          <article class="method-card method-card--top-right">
+            <strong>Etapa 3</strong>
+            <h3>Ativacao e acompanhamento</h3>
+            <ul>
+              <li>Publicacao e testes dos fluxos</li>
+              <li>Ajustes para aumentar resposta</li>
+              <li>Analise simples do desempenho</li>
+            </ul>
+          </article>
+
+          <article class="method-card method-card--bottom-right">
+            <strong>Etapa 4</strong>
+            <h3>Otimizacao e escala</h3>
+            <ul>
+              <li>Melhoria continua das conversas</li>
+              <li>Expansao para novas campanhas</li>
+              <li>Sistema replicavel no longo prazo</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="section-cta">
+          <a class="primary-button" href="#bloco-7">Quero aprender o método completo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="deliverables-section" id="bloco-6" aria-label="Entregaveis">
+      <div class="deliverables-shell">
+        <div class="section-heading">
+          <h2>O que você recebe ao entrar no curso.</h2>
+          <p>
+            Tudo o que você precisa para aprender, implementar e otimizar
+            automações que ajudam a vender mais usando o Instagram.
+          </p>
+        </div>
+
+        <div class="deliverables-grid">
+          <article class="deliverable-card deliverable-card--wide">
+            <div class="deliverable-copy">
+              <strong>Entregavel 1</strong>
+              <h3>Cursó completo passó a passo</h3>
+              <p>
+                Aulas organizadas para você entender a estratégia e montar suas
+                automações do zero, mesmo sem experiencia tecnica.
+              </p>
+            </div>
+            <div class="deliverable-visual deliverable-visual--pyramid" aria-hidden="true">
+              <span></span>
+            </div>
+          </article>
+
+          <article class="deliverable-card deliverable-card--feature">
+            <div class="deliverable-copy">
+              <strong>Entregavel 2</strong>
+              <h3>Templates de mensagens e fluxos</h3>
+              <p>
+                Modelos prontos para acelerar a criacao de respostas, captacao de
+                leads e sequencias de conversão no direct.
+              </p>
+            </div>
+            <div class="deliverable-visual deliverable-visual--tower" aria-hidden="true">
+              <span></span>
+            </div>
+          </article>
+
+          <article class="deliverable-card">
+            <div class="deliverable-copy">
+              <strong>Entregavel 3</strong>
+              <h3>Mapas de estrutura comercial</h3>
+              <p>
+                Guias para entender como organizar a jornada do lead desde o
+                primeiro contato ate a oferta final.
+              </p>
+            </div>
+            <div class="deliverable-visual deliverable-visual--nodes" aria-hidden="true">
+              <span></span>
+            </div>
+          </article>
+
+          <article class="deliverable-card">
+            <div class="deliverable-copy">
+              <strong>Entregavel 4</strong>
+              <h3>Materiais de apoio e checklists</h3>
+              <p>
+                Recursos complementares para fácilitar a implementacao e evitar
+                erros comuns na hora de automatizar.
+              </p>
+            </div>
+            <div class="deliverable-visual deliverable-visual--stacked" aria-hidden="true">
+              <span></span>
+            </div>
+          </article>
+
+          <article class="deliverable-card deliverable-card--wide-bottom">
+            <div class="deliverable-copy">
+              <strong>Entregavel 5</strong>
+              <h3>Plano de otimizacao e escala</h3>
+              <p>
+                Orientações para melhorar suas automações, aumentar conversão e
+                expandir a estrutura para novas campanhas e ofertas.
+              </p>
+            </div>
+            <div class="deliverable-visual deliverable-visual--orbit" aria-hidden="true">
+              <span></span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="offer-section" id="bloco-7" aria-label="Oferta principal">
+      <div class="offer-shell">
+        <div class="section-heading section-heading--narrow">
+          <h2>Entre agora no cursó e comece a vender com automações no Instagram.</h2>
+          <p>
+            Um caminho direto para quem quer parar de depender de respostas manuais
+            e construir um sistema de vendas mais inteligente no direct.
+          </p>
+        </div>
+
+        <div class="offer-card">
+          <span class="offer-badge">Oferta Principal</span>
+          <div class="offer-plan">Cursó Instagram Automatizado</div>
+          <p class="offer-description">
+            Ideal para quem quer aprender a captar leads, responder com velocidade
+            e transformar conversas no Instagram em vendas com mais constância.
+          </p>
+
+          <ul class="offer-list">
+            <li>Acessó completo ao curso</li>
+            <li>Templates de mensagens e automações</li>
+            <li>Roteiro pratico de implementacao</li>
+            <li>Mapas e checklists de acompanhamento</li>
+            <li>Bonus para acelerar a conversão</li>
+          </ul>
+
+          <div class="offer-price">
+            <strong>R$ 49</strong>
+            <span>/ acessó imediato</span>
+          </div>
+
+          <a class="offer-button" href="#topo">Quero garantir meu acesso</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="guarantee-section" id="garantia" aria-label="Garantia">
+      <div class="guarantee-shell">
+        <div class="guarantee-card">
+          <div class="guarantee-seal" aria-hidden="true">
+            <span class="guarantee-seal__number">7</span>
+            <span class="guarantee-seal__label">dias</span>
+          </div>
+
+          <div class="guarantee-copy">
+            <h2>7 dias de garantia</h2>
+            <p>
+              Entre com seguranca para assistir ao conteúdo, aplicar o método e
+              avaliar com calma. Se dentro de 7 dias você entender que o curso
+              não faz sentido para o seu momento, é só solicitar o reembolso.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq" aria-label="Perguntas frequentes">
+      <div class="faq-shell">
+        <div class="section-heading section-heading--narrow">
+          <span class="eyebrow">FAQ</span>
+          <h2>Perguntas frequentes</h2>
+        </div>
+
+        <div class="faq-list">
+          <article class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-resposta-1">
+              <span>Precisó saber programar para aplicar as automações?</span>
+            </button>
+            <div class="faq-answer" id="faq-resposta-1" hidden>
+              <p>
+                Não. O cursó foi pensado para ensinar de forma prática, com foco na
+                implementacao comercial, mesmo para quem esta começando agora.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-resposta-2">
+              <span>Esse cursó serve para pequenos perfis ou só para contas grandes?</span>
+            </button>
+            <div class="faq-answer" id="faq-resposta-2" hidden>
+              <p>
+                Serve para os dois casos. A estratégia ajuda tanto quem quer organizar
+                as primeiras vendas quanto quem já recebe volume e precisa escalar.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-resposta-3">
+              <span>Como funciona a garantia na prática?</span>
+            </button>
+            <div class="faq-answer" id="faq-resposta-3" hidden>
+              <p>
+                Dentro do prazo informado na oferta, você pode assistir ao conteúdo,
+                testar a estrutura é sólicitar reembolsó casó o cursó não sejá para
+                você.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false" aria-controls="faq-resposta-4">
+              <span>Em quanto tempo consigo colocar algo para funcionar?</span>
+            </button>
+            <div class="faq-answer" id="faq-resposta-4" hidden>
+              <p>
+                Issó depende da sua velocidade de execução, mas a proposta e fazer
+                você sair do cursó com clareza suficiente para implementar rápido.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+        <footer class="site-footer" aria-label="Rodape">
+      <div class="footer-shell">
+        <div class="footer-meta">
+          <p>&copy; 2026 Nome do Projeto. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+

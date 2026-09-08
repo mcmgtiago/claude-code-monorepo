@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("fonts.gstatic.com/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7-6ab57b19c6.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Syne";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("fonts.gstatic.com/8vIH7w4qzmVxm2BL9A-c0b6673b7b.woff2") format("woff2");
+}

@@ -1,0 +1,118 @@
+/* ═══════════════════════════════════════════════════════════
+   KIT: canadadsgn-infoproduto — TIPOGRAFIA
+   Fonte original: MADEOuterSans (proprietária)
+   Fallback: Sora (headings) + Outfit (body)
+   ═══════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Sora:wght@300;400;600;700;800&display=swap');
+
+/* ── Reset tipográfico ── */
+body {
+  font-family: var(--kit-font-body);
+  font-size: var(--kit-fs-body);
+  font-weight: var(--kit-fw-regular);
+  line-height: var(--kit-lh-body);
+  letter-spacing: var(--kit-ls-body);
+  color: var(--kit-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Escala de headings ── */
+.kit-h1, h1 {
+  font-family: var(--kit-font-heading);
+  font-size: var(--kit-fs-h1);
+  font-weight: var(--kit-fw-bold);
+  line-height: var(--kit-lh-heading);
+  letter-spacing: var(--kit-ls-heading);
+  color: var(--kit-text-primary);
+}
+
+.kit-h2, h2 {
+  font-family: var(--kit-font-heading);
+  font-size: var(--kit-fs-h2);
+  font-weight: var(--kit-fw-bold);
+  line-height: var(--kit-lh-heading);
+  letter-spacing: var(--kit-ls-heading);
+  color: var(--kit-text-primary);
+}
+
+.kit-h3, h3 {
+  font-family: var(--kit-font-heading);
+  font-size: var(--kit-fs-h3);
+  font-weight: var(--kit-fw-semibold);
+  line-height: var(--kit-lh-heading);
+  letter-spacing: var(--kit-ls-heading);
+  color: var(--kit-text-primary);
+}
+
+.kit-h4, h4 {
+  font-family: var(--kit-font-heading);
+  font-size: var(--kit-fs-h4);
+  font-weight: var(--kit-fw-semibold);
+  line-height: 1.3;
+  color: var(--kit-text-primary);
+}
+
+.kit-body {
+  font-family: var(--kit-font-body);
+  font-size: var(--kit-fs-body);
+  font-weight: var(--kit-fw-regular);
+  line-height: var(--kit-lh-body);
+  color: var(--kit-text-muted);
+}
+
+.kit-body-lg {
+  font-family: var(--kit-font-body);
+  font-size: var(--kit-fs-body-lg);
+  font-weight: var(--kit-fw-regular);
+  line-height: var(--kit-lh-body);
+  color: var(--kit-text-muted);
+}
+
+.kit-caption {
+  font-family: var(--kit-font-body);
+  font-size: var(--kit-fs-caption);
+  font-weight: var(--kit-fw-light);
+  line-height: 1.4;
+  color: var(--kit-text-secondary);
+}
+
+.kit-label {
+  font-family: var(--kit-font-heading);
+  font-size: var(--kit-fs-label);
+  font-weight: var(--kit-fw-semibold);
+  line-height: 1;
+  letter-spacing: var(--kit-ls-label);
+  text-transform: uppercase;
+  color: var(--kit-text-secondary);
+}
+
+/* ── Heading gradiente (texto "sliced") ── */
+.kit-heading-gradient {
+  color: transparent !important;
+  background: var(--kit-gradient-heading) !important;
+  background-clip: text;
+  -webkit-background-clip: text !important;
+}
+
+/* ── Texto com destaque ── */
+.kit-text-strong {
+  font-weight: var(--kit-fw-bold);
+  color: var(--kit-text-primary);
+}
+
+p {
+  color: var(--kit-text-muted);
+  line-height: var(--kit-lh-body);
+}
+
+a {
+  color: var(--kit-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--kit-primary-light);
+}

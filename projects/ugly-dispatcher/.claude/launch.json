@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "architecture-map",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["architecture/server.js"],
+      "port": 5177
+    }
+  ]
+}

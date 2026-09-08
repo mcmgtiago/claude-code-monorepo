@@ -1,0 +1,264 @@
+# Clone Audit
+
+- Project: C:\Users\Administrator\AppData\Roaming\Open Design\namespaces\release-stable-win\data\projects\0647772f-3577-4629-bc95-f0fdeeadf852
+- Scanned files: 18
+- Findings: 238
+
+## Interpretação de escopo
+- O scanner incluiu `.od-skills/`, `package-lock.json`, assets de reconhecimento e `index-original.html`; ocorrências nesses arquivos são evidência ou dependências de desenvolvimento, não código entregue pelo clone.
+- Resíduos `Luminal` em `index.html` são intencionais porque o pedido foi clonar a marca original, não rebatizar.
+- Ocorrências `todo` em `index.html` fazem parte de palavras como `methodology`, não marcadores pendentes.
+- Dependências externas efetivas do arquivo entregue: Iconify e Unicorn Studio. Ambas estão registradas em `NOTES.md`.
+- Gate estrito de fidelidade: aprovado, sem falhas de fonte, imagem ou cor.
+
+## 保真度硬伤（字体 / 图片 / 颜色）
+- 未发现
+
+## 追踪脚本 / 统计像素
+- .od-skills\web-clone-ff0eeb8cda\SKILL.md:155 · Google Tag Manager · `googletagmanager`
+
+## 原站品牌残留
+- index-original.html:9 · brand residue: Luminal · `Luminal`
+- index-original.html:85 · brand residue: Luminal · `Luminal`
+- index-original.html:294 · brand residue: Luminal · `LUMINAL`
+- index-original.html:565 · brand residue: Luminal · `Luminal`
+- index-original.html:574 · brand residue: Luminal · `Luminal`
+- index-original.html:667 · brand residue: Luminal · `Luminal`
+- index-original.html:972 · brand residue: Luminal · `Luminal`
+- index-original.html:1942 · brand residue: Luminal · `Luminal`
+- index-original.html:2050 · brand residue: Luminal · `LUMINAL`
+- index-original.html:2280 · brand residue: Luminal · `Luminal`
+- index-original.html:2363 · brand residue: Luminal · `Luminal`
+- index-original.html:3317 · brand residue: Luminal · `Luminal`
+- index.html:6 · brand residue: Luminal · `luminal`
+- index.html:7 · brand residue: Luminal · `Luminal`
+- index.html:8 · brand residue: Luminal · `luminal`
+- index.html:76 · brand residue: Luminal · `Luminal`
+- index.html:284 · brand residue: Luminal · `LUMINAL`
+- index.html:555 · brand residue: Luminal · `Luminal`
+- index.html:564 · brand residue: Luminal · `Luminal`
+- index.html:654 · brand residue: Luminal · `Luminal`
+- index.html:958 · brand residue: Luminal · `Luminal`
+- index.html:1928 · brand residue: Luminal · `Luminal`
+- index.html:2029 · brand residue: Luminal · `LUMINAL`
+- index.html:2252 · brand residue: Luminal · `Luminal`
+- index.html:2334 · brand residue: Luminal · `Luminal`
+- index.html:3276 · brand residue: Luminal · `Luminal`
+
+## 日文残留
+- 未发现
+
+## TODO / 占位内容
+- .od-skills\web-clone-ff0eeb8cda\references\deliverables.md:137 · TODO / placeholder content · `TODO`
+- .od-skills\web-clone-ff0eeb8cda\references\design-dna.md:41 · TODO / placeholder content · `TODO`
+- .od-skills\web-clone-ff0eeb8cda\SKILL.md:265 · TODO / placeholder content · `TODO`
+- .od-skills\web-clone-ff0eeb8cda\SKILL.md:280 · TODO / placeholder content · `TODO`
+- index.html:1846 · TODO / placeholder content · `todo`
+- index.html:2052 · TODO / placeholder content · `todo`
+- index.html:3276 · TODO / placeholder content · `Todo`
+
+## 外部依赖 / 外链风险
+- .od-skills\web-clone-ff0eeb8cda\references\design-dna.md:7 · external URL · `https://github.com/zanwei/design-dna`
+- .od-skills\web-clone-ff0eeb8cda\references\effect-extraction.md:6 · external URL · `https://github.com/lixiaolin94/skills`
+- .od-skills\web-clone-ff0eeb8cda\references\marbles-case.md:3 · external URL · `https://chiuhans111.github.io/marbles/`
+- .od-skills\web-clone-ff0eeb8cda\references\static-mirror.md:38 · external URL · `https://use.typekit.net/`
+- .od-skills\web-clone-ff0eeb8cda\references\static-mirror.md:49 · external URL · `https://use.typekit.net/`
+- .od-skills\web-clone-ff0eeb8cda\references\static-mirror.md:51 · external URL · `https://use\.typekit\.net/`
+- .od-skills\web-clone-ff0eeb8cda\SKILL.md:64 · external URL · `https://raw.githubusercontent.com/`
+- .od-skills\web-clone-ff0eeb8cda\SKILL.md:171 · external URL · `http://127.0.0.1:`
+- .od-skills\web-clone-ff0eeb8cda\SKILL.md:176 · external URL · `http://127.0.0.1:`
+- .od-skills\web-clone-ff0eeb8cda\SKILL.md:183 · external URL · `http://127.0.0.1:`
+- assets\css\luminal-creative-studio.aura.build\index-Dm4uwV3Y-f52e9bdf66.css:1 · external URL · `https://grainy-gradients.vercel.app/noise.svg`
+- assets\fonts\fonts.css:1 · external URL · `https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap`
+- assets\fonts\fonts.css:8 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2`
+- assets\fonts\fonts.css:17 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2`
+- assets\fonts\fonts.css:26 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2`
+- assets\fonts\fonts.css:35 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2`
+- assets\fonts\fonts.css:44 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2`
+- assets\fonts\fonts.css:53 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2`
+- assets\fonts\fonts.css:71 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2`
+- assets\fonts\fonts.css:80 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2`
+- assets\fonts\fonts.css:89 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2`
+- assets\fonts\fonts.css:98 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2`
+- assets\fonts\fonts.css:107 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2`
+- assets\fonts\fonts.css:116 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2`
+- assets\fonts\fonts.css:134 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2`
+- assets\fonts\fonts.css:143 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2`
+- assets\fonts\fonts.css:152 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2`
+- assets\fonts\fonts.css:161 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2`
+- assets\fonts\fonts.css:170 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2`
+- assets\fonts\fonts.css:179 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2`
+- assets\fonts\fonts.css:197 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2`
+- assets\fonts\fonts.css:206 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2`
+- assets\fonts\fonts.css:215 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2`
+- assets\fonts\fonts.css:224 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2`
+- assets\fonts\fonts.css:233 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2`
+- assets\fonts\fonts.css:242 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2`
+- assets\fonts\fonts.css:260 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2`
+- assets\fonts\fonts.css:269 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2`
+- assets\fonts\fonts.css:278 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2`
+- assets\fonts\fonts.css:287 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2`
+- assets\fonts\fonts.css:296 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2`
+- assets\fonts\fonts.css:305 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2`
+- assets\fonts\fonts.css:319 · external URL · `https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap`
+- assets\fonts\fonts.css:326 · external URL · `https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm2NL9Hz_.woff2`
+- assets\fonts\fonts.css:335 · external URL · `https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm25L9Hz_.woff2`
+- assets\fonts\fonts.css:353 · external URL · `https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm2NL9Hz_.woff2`
+- assets\fonts\fonts.css:362 · external URL · `https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm25L9Hz_.woff2`
+- assets\fonts\fonts.css:380 · external URL · `https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm2NL9Hz_.woff2`
+- assets\fonts\fonts.css:389 · external URL · `https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm25L9Hz_.woff2`
+- assets\fonts\fonts.css:407 · external URL · `https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm2NL9Hz_.woff2`
+- assets\fonts\fonts.css:416 · external URL · `https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm25L9Hz_.woff2`
+- assets\fonts\fonts.css:434 · external URL · `https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm2NL9Hz_.woff2`
+- assets\fonts\fonts.css:443 · external URL · `https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm25L9Hz_.woff2`
+- assets\fonts\fonts.css:457 · external URL · `https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap`
+- assets\fonts\fonts.css:464 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2`
+- assets\fonts\fonts.css:473 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2`
+- assets\fonts\fonts.css:482 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2`
+- assets\fonts\fonts.css:491 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2`
+- assets\fonts\fonts.css:500 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2`
+- assets\fonts\fonts.css:509 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2`
+- assets\fonts\fonts.css:527 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2`
+- assets\fonts\fonts.css:536 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2`
+- assets\fonts\fonts.css:545 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2`
+- assets\fonts\fonts.css:554 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2`
+- assets\fonts\fonts.css:563 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2`
+- assets\fonts\fonts.css:572 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2`
+- assets\fonts\fonts.css:590 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2`
+- assets\fonts\fonts.css:599 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2`
+- assets\fonts\fonts.css:608 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2`
+- assets\fonts\fonts.css:617 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2`
+- assets\fonts\fonts.css:626 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2`
+- assets\fonts\fonts.css:635 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2`
+- assets\fonts\fonts.css:653 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2`
+- assets\fonts\fonts.css:662 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2`
+- assets\fonts\fonts.css:671 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2`
+- assets\fonts\fonts.css:680 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2`
+- assets\fonts\fonts.css:689 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2`
+- assets\fonts\fonts.css:698 · external URL · `https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2`
+- index-original.html:10 · external URL · `https://cdn.tailwindcss.com`
+- index-original.html:12 · external URL · `https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap`
+- index-original.html:15 · external URL · `https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js`
+- index-original.html:67 · external URL · `https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&amp;display=swap`
+- index-original.html:181 · external URL · `https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js`
+- index-original.html:643 · external URL · `https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/05d6b211-9e83-488c-8f3f-42a77b8e9532_1600w.png`
+- index-original.html:1909 · external URL · `https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/ea262fd9-14f0-4917-be69-86fd3b302ccd_1600w.webp`
+- index-original.html:1993 · external URL · `https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/5daa544b-07e8-4fcd-98c6-1fb55bef2131_1600w.png`
+- index-original.html:2018 · external URL · `https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/26beb5d6-9395-4655-bd45-0375a5af0ffb_1600w.png`
+- index-original.html:2043 · external URL · `https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/0ecb27cd-9dd3-4e8a-8f50-529e27caa666_1600w.png`
+- index-original.html:2331 · external URL · `https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/09dc0e81-3730-4910-9053-26ecec7a3816_800w.webp`
+- index-original.html:2422 · external URL · `https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/96a71491-ccb5-4cb6-a369-be4b7a348c85_1600w.webp`
+- index-original.html:2453 · external URL · `https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/f7438fab-4b42-40cb-a36a-fd1c3446a888_800w.webp`
+- index-original.html:2484 · external URL · `https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/74117bff-45d0-4c3e-ae97-12067641be39_800w.webp`
+- index-original.html:2515 · external URL · `https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/3dbd59c3-a7a5-4515-985e-788ba17917e2_800w.webp`
+- index-original.html:2547 · external URL · `https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/92f770e8-08ad-4fb2-8858-2d9b385124a7_800w.webp`
+- index-original.html:2668 · external URL · `https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/93dbb379-52e9-4ded-bc8a-c0f05aef82c0_320w.webp`
+- index-original.html:2711 · external URL · `https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/e6ac2623-ccad-4751-8c7d-782f07a9263d_320w.webp`
+- index-original.html:2754 · external URL · `https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/30fed759-ea9f-42e9-8249-9ea7f44c811c_320w.webp`
+- index-original.html:2811 · external URL · `https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/09dc0e81-3730-4910-9053-26ecec7a3816_800w.webp`
+- index.html:10 · external URL · `https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js`
+- index.html:172 · external URL · `https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js`
+- luminal-tailwind.css:1 · external URL · `https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0`
+- package-lock.json:17 · external URL · `https://registry.npmjs.org/@alloc/quick-lru/-/quick-lru-5.2.0.tgz`
+- package-lock.json:25 · external URL · `https://github.com/sponsors/sindresorhus`
+- package-lock.json:30 · external URL · `https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.13.tgz`
+- package-lock.json:41 · external URL · `https://registry.npmjs.org/@jridgewell/resolve-uri/-/resolve-uri-3.1.2.tgz`
+- package-lock.json:51 · external URL · `https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.5.tgz`
+- package-lock.json:58 · external URL · `https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.31.tgz`
+- package-lock.json:69 · external URL · `https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz`
+- package-lock.json:83 · external URL · `https://registry.npmjs.org/@nodelib/fs.stat/-/fs.stat-2.0.5.tgz`
+- package-lock.json:93 · external URL · `https://registry.npmjs.org/@nodelib/fs.walk/-/fs.walk-1.2.8.tgz`
+- package-lock.json:107 · external URL · `https://registry.npmjs.org/any-promise/-/any-promise-1.3.0.tgz`
+- package-lock.json:114 · external URL · `https://registry.npmjs.org/anymatch/-/anymatch-3.1.3.tgz`
+- package-lock.json:128 · external URL · `https://registry.npmjs.org/arg/-/arg-5.0.2.tgz`
+- package-lock.json:135 · external URL · `https://registry.npmjs.org/binary-extensions/-/binary-extensions-2.3.0.tgz`
+- package-lock.json:143 · external URL · `https://github.com/sponsors/sindresorhus`
+- package-lock.json:148 · external URL · `https://registry.npmjs.org/braces/-/braces-3.0.3.tgz`
+- package-lock.json:161 · external URL · `https://registry.npmjs.org/camelcase-css/-/camelcase-css-2.0.1.tgz`
+- package-lock.json:171 · external URL · `https://registry.npmjs.org/chokidar/-/chokidar-3.6.0.tgz`
+- package-lock.json:188 · external URL · `https://paulmillr.com/funding/`
+- package-lock.json:196 · external URL · `https://registry.npmjs.org/glob-parent/-/glob-parent-5.1.2.tgz`
+- package-lock.json:209 · external URL · `https://registry.npmjs.org/commander/-/commander-4.1.1.tgz`
+- package-lock.json:219 · external URL · `https://registry.npmjs.org/cssesc/-/cssesc-3.0.0.tgz`
+- package-lock.json:232 · external URL · `https://registry.npmjs.org/didyoumean/-/didyoumean-1.2.2.tgz`
+- package-lock.json:239 · external URL · `https://registry.npmjs.org/dlv/-/dlv-1.1.3.tgz`
+- package-lock.json:246 · external URL · `https://registry.npmjs.org/es-errors/-/es-errors-1.3.0.tgz`
+- package-lock.json:256 · external URL · `https://registry.npmjs.org/fast-glob/-/fast-glob-3.3.3.tgz`
+- package-lock.json:273 · external URL · `https://registry.npmjs.org/glob-parent/-/glob-parent-5.1.2.tgz`
+- package-lock.json:286 · external URL · `https://registry.npmjs.org/fastq/-/fastq-1.20.1.tgz`
+- package-lock.json:296 · external URL · `https://registry.npmjs.org/fill-range/-/fill-range-7.1.1.tgz`
+- package-lock.json:309 · external URL · `https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz`
+- package-lock.json:324 · external URL · `https://registry.npmjs.org/function-bind/-/function-bind-1.1.2.tgz`
+- package-lock.json:329 · external URL · `https://github.com/sponsors/ljharb`
+- package-lock.json:334 · external URL · `https://registry.npmjs.org/glob-parent/-/glob-parent-6.0.2.tgz`
+- package-lock.json:347 · external URL · `https://registry.npmjs.org/hasown/-/hasown-2.0.4.tgz`
+- package-lock.json:360 · external URL · `https://registry.npmjs.org/is-binary-path/-/is-binary-path-2.1.0.tgz`
+- package-lock.json:373 · external URL · `https://registry.npmjs.org/is-core-module/-/is-core-module-2.16.2.tgz`
+- package-lock.json:384 · external URL · `https://github.com/sponsors/ljharb`
+- package-lock.json:389 · external URL · `https://registry.npmjs.org/is-extglob/-/is-extglob-2.1.1.tgz`
+- package-lock.json:399 · external URL · `https://registry.npmjs.org/is-glob/-/is-glob-4.0.3.tgz`
+- package-lock.json:412 · external URL · `https://registry.npmjs.org/is-number/-/is-number-7.0.0.tgz`
+- package-lock.json:422 · external URL · `https://registry.npmjs.org/jiti/-/jiti-1.21.7.tgz`
+- package-lock.json:432 · external URL · `https://registry.npmjs.org/lilconfig/-/lilconfig-3.1.3.tgz`
+- package-lock.json:440 · external URL · `https://github.com/sponsors/antonk52`
+- package-lock.json:445 · external URL · `https://registry.npmjs.org/lines-and-columns/-/lines-and-columns-1.2.4.tgz`
+- package-lock.json:452 · external URL · `https://registry.npmjs.org/merge2/-/merge2-1.4.1.tgz`
+- package-lock.json:462 · external URL · `https://registry.npmjs.org/micromatch/-/micromatch-4.0.8.tgz`
+- package-lock.json:476 · external URL · `https://registry.npmjs.org/mz/-/mz-2.7.0.tgz`
+- package-lock.json:488 · external URL · `https://registry.npmjs.org/nanoid/-/nanoid-3.3.17.tgz`
+- package-lock.json:494 · external URL · `https://github.com/sponsors/ai`
+- package-lock.json:507 · external URL · `https://registry.npmjs.org/normalize-path/-/normalize-path-3.0.0.tgz`
+- package-lock.json:517 · external URL · `https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz`
+- package-lock.json:527 · external URL · `https://registry.npmjs.org/object-hash/-/object-hash-3.0.0.tgz`
+- package-lock.json:537 · external URL · `https://registry.npmjs.org/path-parse/-/path-parse-1.0.7.tgz`
+- package-lock.json:544 · external URL · `https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz`
+- package-lock.json:551 · external URL · `https://registry.npmjs.org/picomatch/-/picomatch-2.3.2.tgz`
+- package-lock.json:559 · external URL · `https://github.com/sponsors/jonschlinkert`
+- package-lock.json:564 · external URL · `https://registry.npmjs.org/pify/-/pify-2.3.0.tgz`
+- package-lock.json:574 · external URL · `https://registry.npmjs.org/pirates/-/pirates-4.0.7.tgz`
+- package-lock.json:584 · external URL · `https://registry.npmjs.org/playwright/-/playwright-1.55.0.tgz`
+- package-lock.json:603 · external URL · `https://registry.npmjs.org/playwright-core/-/playwright-core-1.55.0.tgz`
+- package-lock.json:616 · external URL · `https://registry.npmjs.org/postcss/-/postcss-8.5.25.tgz`
+- package-lock.json:622 · external URL · `https://opencollective.com/postcss/`
+- package-lock.json:626 · external URL · `https://tidelift.com/funding/github/npm/postcss`
+- package-lock.json:630 · external URL · `https://github.com/sponsors/ai`
+- package-lock.json:645 · external URL · `https://registry.npmjs.org/postcss-import/-/postcss-import-15.1.0.tgz`
+- package-lock.json:663 · external URL · `https://registry.npmjs.org/postcss-js/-/postcss-js-4.1.0.tgz`
+- package-lock.json:669 · external URL · `https://opencollective.com/postcss/`
+- package-lock.json:673 · external URL · `https://github.com/sponsors/ai`
+- package-lock.json:689 · external URL · `https://registry.npmjs.org/postcss-load-config/-/postcss-load-config-6.0.1.tgz`
+- package-lock.json:695 · external URL · `https://opencollective.com/postcss/`
+- package-lock.json:699 · external URL · `https://github.com/sponsors/ai`
+- package-lock.json:732 · external URL · `https://registry.npmjs.org/postcss-nested/-/postcss-nested-6.2.0.tgz`
+- package-lock.json:738 · external URL · `https://opencollective.com/postcss/`
+- package-lock.json:742 · external URL · `https://github.com/sponsors/ai`
+- package-lock.json:758 · external URL · `https://registry.npmjs.org/postcss-selector-parser/-/postcss-selector-parser-6.1.4.tgz`
+- package-lock.json:772 · external URL · `https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz`
+- package-lock.json:779 · external URL · `https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz`
+- package-lock.json:785 · external URL · `https://github.com/sponsors/feross`
+- package-lock.json:789 · external URL · `https://www.patreon.com/feross`
+- package-lock.json:793 · external URL · `https://feross.org/support`
+- package-lock.json:800 · external URL · `https://registry.npmjs.org/read-cache/-/read-cache-1.0.0.tgz`
+- package-lock.json:810 · external URL · `https://registry.npmjs.org/readdirp/-/readdirp-3.6.0.tgz`
+- package-lock.json:823 · external URL · `https://registry.npmjs.org/resolve/-/resolve-1.22.12.tgz`
+- package-lock.json:840 · external URL · `https://github.com/sponsors/ljharb`
+- package-lock.json:845 · external URL · `https://registry.npmjs.org/reusify/-/reusify-1.1.0.tgz`
+- package-lock.json:856 · external URL · `https://registry.npmjs.org/run-parallel/-/run-parallel-1.2.0.tgz`
+- package-lock.json:862 · external URL · `https://github.com/sponsors/feross`
+- package-lock.json:866 · external URL · `https://www.patreon.com/feross`
+- package-lock.json:870 · external URL · `https://feross.org/support`
+- package-lock.json:880 · external URL · `https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.1.tgz`
+- package-lock.json:890 · external URL · `https://registry.npmjs.org/sucrase/-/sucrase-3.35.1.tgz`
+- package-lock.json:913 · external URL · `https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz`
+- package-lock.json:921 · external URL · `https://github.com/sponsors/ljharb`
+- package-lock.json:926 · external URL · `https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.4.19.tgz`
+- package-lock.json:964 · external URL · `https://registry.npmjs.org/thenify/-/thenify-3.3.1.tgz`
+- package-lock.json:974 · external URL · `https://registry.npmjs.org/thenify-all/-/thenify-all-1.6.0.tgz`
+- package-lock.json:987 · external URL · `https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.17.tgz`
+- package-lock.json:999 · external URL · `https://github.com/sponsors/SuperchupuDev`
+- package-lock.json:1004 · external URL · `https://registry.npmjs.org/fdir/-/fdir-6.5.0.tgz`
+- package-lock.json:1022 · external URL · `https://registry.npmjs.org/picomatch/-/picomatch-4.0.5.tgz`
+- 还有 4 条未展开
+
+## 结论
+- 需要处理上面的残留项后再声明可部署。

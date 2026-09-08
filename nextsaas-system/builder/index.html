@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NextSaaS Builder — Catálogo de Seções</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0f1115;
+      --bg-card: #1a1d23;
+      --bg-hover: #22262d;
+      --border: #2a2e36;
+      --text: #e4e4e7;
+      --text-muted: #71717a;
+      --primary: #864ffe;
+      --primary-light: #a585ff;
+      --success: #22c55e;
+      --warning: #f59e0b;
+      --radius: 12px;
+      --font: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ========== LAYOUT ========== */
+    .app {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      grid-template-rows: auto 1fr;
+      height: 100vh;
+    }
+
+    /* ========== TOPBAR ========== */
+    .topbar {
+      grid-column: 1 / -1;
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg-card);
+    }
+
+    .topbar h1 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--primary-light);
+    }
+
+    .topbar .stats {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ========== FILTROS ========== */
+    .filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .filter-btn {
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.15s;
+      font-family: var(--font);
+    }
+
+    .filter-btn:hover {
+      border-color: var(--primary);
+      color: var(--text);
+    }
+
+    .filter-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: white;
+    }
+
+    /* ========== CATALOG GRID ========== */
+    .catalog {
+      overflow-y: auto;
+      padding: 24px;
+    }
+
+    .section-group {
+      margin-bottom: 32px;
+    }
+
+    .section-group h2 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+      padding-left: 4px;
+    }
+
+    .section-group h2 .count {
+      color: var(--primary-light);
+      font-weight: 400;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+
+    /* ========== SECTION CARD ========== */
+    .section-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      cursor: pointer;
+      transition: all 0.15s;
+      position: relative;
+    }
+
+    .section-card:hover {
+      border-color: var(--primary);
+      background: var(--bg-hover);
+      transform: translateY(-2px);
+    }
+
+    .section-card.selected {
+      border-color: var(--success);
+      background: rgba(34, 197, 94, 0.05);
+    }
+
+    .section-card .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .section-card .card-name {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .section-card .card-template {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: var(--bg);
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+
+    .section-card .card-meta {
+      display: flex;
+      gap: 8px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .section-card .card-meta .badge {
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: var(--bg);
+    }
+
+    .section-card .card-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .section-card .btn-sm {
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 11px;
+      cursor: pointer;
+      font-family: var(--font);
+      transition: all 0.15s;
+    }
+
+    .section-card .btn-sm:hover {
+      border-color: var(--primary);
+      color: var(--text);
+    }
+
+    .section-card .btn-sm.btn-add {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: white;
+    }
+
+    .section-card .btn-sm.btn-add:hover {
+      background: var(--primary-light);
+    }
+
+    .section-card .btn-sm.btn-remove {
+      background: #dc2626;
+      border-color: #dc2626;
+      color: white;
+    }
+
+    /* ========== SIDEBAR (WIREFRAME) ========== */
+    .sidebar {
+      border-left: 1px solid var(--border);
+      background: var(--bg-card);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .sidebar-header {
+      padding: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sidebar-header h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .sidebar-header .subtitle {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .wireframe-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px;
+    }
+
+    .wireframe-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 8px;
+      cursor: grab;
+    }
+
+    .wireframe-item .wf-number {
+      font-size: 11px;
+      color: var(--primary-light);
+      font-weight: 600;
+      min-width: 20px;
+    }
+
+    .wireframe-item .wf-name {
+      font-size: 13px;
+      flex: 1;
+    }
+
+    .wireframe-item .wf-template {
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+
+    .wireframe-item .wf-remove {
+      cursor: pointer;
+      color: var(--text-muted);
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    .wireframe-item .wf-remove:hover {
+      color: #dc2626;
+    }
+
+    .sidebar-footer {
+      padding: 12px 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .btn-export {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      background: var(--primary);
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: var(--font);
+      transition: all 0.15s;
+    }
+
+    .btn-export:hover {
+      background: var(--primary-light);
+    }
+
+    .btn-export:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    /* ========== PREVIEW MODAL ========== */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-content {
+      width: 100%;
+      max-width: 1400px;
+      height: 90vh;
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal-header {
+      padding: 12px 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-header .modal-title {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .modal-header .modal-close {
+      cursor: pointer;
+      color: var(--text-muted);
+      font-size: 24px;
+      background: none;
+      border: none;
+      font-family: var(--font);
+    }
+
+    .modal-header .modal-close:hover {
+      color: var(--text);
+    }
+
+    .modal-body {
+      flex: 1;
+      position: relative;
+    }
+
+    .modal-body iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ========== AI CHAT BAR ========== */
+    .ai-bar {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 700px;
+      z-index: 900;
+      display: flex;
+      gap: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 8px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+
+    .ai-bar input {
+      flex: 1;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 16px;
+      color: var(--text);
+      font-size: 14px;
+      font-family: var(--font);
+      outline: none;
+    }
+
+    .ai-bar input:focus {
+      border-color: var(--primary);
+    }
+
+    .ai-bar input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .ai-bar button {
+      padding: 12px 20px;
+      border-radius: 12px;
+      border: none;
+      background: var(--primary);
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: var(--font);
+      white-space: nowrap;
+      transition: all 0.15s;
+    }
+
+    .ai-bar button:hover {
+      background: var(--primary-light);
+    }
+
+    .ai-bar button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .ai-bar .ai-status {
+      position: absolute;
+      top: -32px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 12px;
+      color: var(--primary-light);
+      background: var(--bg-card);
+      padding: 4px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    /* ========== EMPTY STATE ========== */
+    .empty-state {
+      text-align: center;
+      padding: 40px;
+      color: var(--text-muted);
+    }
+
+    .empty-state .emoji {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    /* ========== LOADING ========== */
+    .loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div style="display:flex;align-items:center;gap:16px;">
+        <h1>⚡ NextSaaS Builder</h1>
+        <div class="filters" id="filters"></div>
+      </div>
+      <div class="stats" id="stats">Carregando...</div>
+    </div>
+
+    <!-- CATALOG -->
+    <div class="catalog" id="catalog">
+      <div class="loading">Carregando seções...</div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h3>🧩 Wireframe</h3>
+        <div class="subtitle">Seções selecionadas (na ordem)</div>
+      </div>
+      <div class="wireframe-list" id="wireframe-list">
+        <div class="empty-state">
+          <div class="emoji">📋</div>
+          <p>Nenhuma seção selecionada.<br>Clique em "Adicionar" nas seções.</p>
+        </div>
+      </div>
+      <div class="sidebar-footer">
+        <button class="btn-export" id="btn-export" disabled>Exportar HTML</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI CHAT BAR -->
+  <div class="ai-bar" id="ai-bar">
+    <input type="text" id="ai-input" placeholder="Ex: Site para escritório contábil Martins & Associados, serviços BPO fiscal e folha de pagamento, cor azul navy" />
+    <button id="ai-generate" onclick="generateWithAI()">🤖 Gerar Site</button>
+  </div>
+
+  <!-- PREVIEW MODAL -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title" id="modal-title">Preview</span>
+        <button class="modal-close" id="modal-close">×</button>
+      </div>
+      <div class="modal-body">
+        <iframe id="modal-iframe"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Configuração
+    const TEMPLATES_BASE = './templates';
+    const MANIFEST_URL = './sections-manifest.json';
+
+    // Estado
+    let allSections = [];
+    let selectedSections = [];
+    let activeFilter = 'all';
+    let nicheFilter = 'all';
+
+    // Labels bonitas por tipo
+    const TYPE_LABELS = {
+      'hero': '🎯 Hero',
+      'header': '🧭 Header / Nav',
+      'features': '✨ Features',
+      'services': '🛠️ Services',
+      'pricing': '💰 Pricing',
+      'testimonials': '💬 Testimonials',
+      'faq': '❓ FAQ',
+      'cta': '📢 CTA',
+      'blog': '📝 Blog',
+      'footer': '🏁 Footer',
+      'social-proof': '🏆 Social Proof / Logos',
+      'stats': '📊 Stats / Counters',
+      'about': '🏢 About / Why Us',
+      'contact': '📞 Contact',
+      'process': '📋 Process / Steps',
+      'team': '👥 Team',
+      'case-studies': '📈 Case Studies',
+      'other': '🔹 Outros',
+    };
+
+    const NICHE_LABELS = {
+      'all': 'Todos',
+      'fintech': 'Fintech',
+      'banking': 'Banking',
+      'investimentos': 'Investimentos',
+      'saas': 'SaaS',
+      'contadores': 'Contadores',
+      'crypto': 'Crypto',
+    };
+
+    // Inicializar
+    async function init() {
+      try {
+        const res = await fetch(MANIFEST_URL);
+        const manifest = await res.json();
+        allSections = manifest.sections;
+
+        document.getElementById('stats').textContent =
+          `${manifest.totalSections} seções • ${manifest.totalTemplates} templates`;
+
+        renderFilters(manifest.sectionsByType);
+        renderCatalog();
+      } catch (err) {
+        document.getElementById('catalog').innerHTML =
+          `<div class="empty-state"><div class="emoji">❌</div><p>Erro ao carregar manifest: ${err.message}<br>Sirva via live-server ou http-server.</p></div>`;
+      }
+    }
+
+    // Renderizar filtros
+    function renderFilters(sectionsByType) {
+      const container = document.getElementById('filters');
+
+      // Filtros por tipo
+      const types = ['all', ...Object.keys(sectionsByType).sort((a, b) =>
+        sectionsByType[b] - sectionsByType[a]
+      )];
+
+      let html = '';
+      for (const type of types) {
+        const label = type === 'all' ? 'Todos' : (TYPE_LABELS[type] || type);
+        const count = type === 'all' ? allSections.length : (sectionsByType[type] || 0);
+        html += `<button class="filter-btn ${type === activeFilter ? 'active' : ''}" data-filter="${type}">${label} <small>(${count})</small></button>`;
+      }
+
+      // Separador
+      html += `<span style="color:var(--border);margin:0 8px;">|</span>`;
+
+      // Filtros por nicho
+      for (const [key, label] of Object.entries(NICHE_LABELS)) {
+        html += `<button class="filter-btn ${key === nicheFilter ? 'active' : ''}" data-niche="${key}">${label}</button>`;
+      }
+
+      container.innerHTML = html;
+
+      // Event listeners
+      container.querySelectorAll('[data-filter]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeFilter = btn.dataset.filter;
+          container.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          renderCatalog();
+        });
+      });
+
+      container.querySelectorAll('[data-niche]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          nicheFilter = btn.dataset.niche;
+          container.querySelectorAll('[data-niche]').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          renderCatalog();
+        });
+      });
+    }
+
+    // Filtrar seções
+    function getFilteredSections() {
+      return allSections.filter(s => {
+        if (s.type === 'utility') return false;
+        const typeMatch = activeFilter === 'all' || s.type === activeFilter;
+        const nicheMatch = nicheFilter === 'all' || (s.nichos && s.nichos.includes(nicheFilter));
+        return typeMatch && nicheMatch;
+      });
+    }
+
+    // Renderizar catálogo
+    function renderCatalog() {
+      const container = document.getElementById('catalog');
+      const filtered = getFilteredSections();
+
+      if (filtered.length === 0) {
+        container.innerHTML = '<div class="empty-state"><div class="emoji">🔍</div><p>Nenhuma seção encontrada com estes filtros.</p></div>';
+        return;
+      }
+
+      // Agrupar por tipo
+      const grouped = {};
+      for (const section of filtered) {
+        if (!grouped[section.type]) grouped[section.type] = [];
+        grouped[section.type].push(section);
+      }
+
+      // Ordem de prioridade
+      const typeOrder = ['hero', 'header', 'features', 'services', 'pricing', 'testimonials', 'social-proof', 'stats', 'process', 'about', 'faq', 'cta', 'blog', 'team', 'contact', 'case-studies', 'footer', 'other'];
+
+      let html = '';
+      for (const type of typeOrder) {
+        if (!grouped[type]) continue;
+        const label = TYPE_LABELS[type] || type;
+        const count = grouped[type].length;
+
+        html += `<div class="section-group"><h2>${label} <span class="count">(${count} variantes)</span></h2><div class="grid">`;
+
+        for (const section of grouped[type]) {
+          const isSelected = selectedSections.some(s => s.id === section.id);
+          html += renderCard(section, isSelected);
+        }
+
+        html += '</div></div>';
+      }
+
+      container.innerHTML = html;
+      attachCardListeners();
+    }
+
+    // Renderizar card de seção
+    function renderCard(section, isSelected) {
+      return `
+        <div class="section-card ${isSelected ? 'selected' : ''}" data-id="${section.id}">
+          <div class="card-header">
+            <span class="card-name">${section.name || section.type}</span>
+            <span class="card-template">${section.template}</span>
+          </div>
+          <div class="card-meta">
+            <span class="badge">${section.lineCount} linhas</span>
+            ${section.ariaLabel ? `<span class="badge">${section.ariaLabel.substring(0, 30)}</span>` : ''}
+            ${section.nichos ? section.nichos.map(n => `<span class="badge">${n}</span>`).join('') : ''}
+          </div>
+          <div class="card-actions">
+            <button class="btn-sm" data-action="preview" data-id="${section.id}">👁️ Preview</button>
+            ${isSelected
+              ? `<button class="btn-sm btn-remove" data-action="remove" data-id="${section.id}">✕ Remover</button>`
+              : `<button class="btn-sm btn-add" data-action="add" data-id="${section.id}">+ Adicionar</button>`
+            }
+          </div>
+        </div>
+      `;
+    }
+
+    // Listeners dos cards
+    function attachCardListeners() {
+      document.querySelectorAll('[data-action="preview"]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const section = allSections.find(s => s.id === btn.dataset.id);
+          if (section) openPreview(section);
+        });
+      });
+
+      document.querySelectorAll('[data-action="add"]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const section = allSections.find(s => s.id === btn.dataset.id);
+          if (section) addToWireframe(section);
+        });
+      });
+
+      document.querySelectorAll('[data-action="remove"]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          removeFromWireframe(btn.dataset.id);
+        });
+      });
+    }
+
+    // Adicionar ao wireframe
+    function addToWireframe(section) {
+      if (selectedSections.some(s => s.id === section.id)) return;
+      selectedSections.push(section);
+      renderWireframe();
+      renderCatalog();
+    }
+
+    // Remover do wireframe
+    function removeFromWireframe(sectionId) {
+      selectedSections = selectedSections.filter(s => s.id !== sectionId);
+      renderWireframe();
+      renderCatalog();
+    }
+
+    // Renderizar wireframe (sidebar)
+    function renderWireframe() {
+      const container = document.getElementById('wireframe-list');
+      const exportBtn = document.getElementById('btn-export');
+
+      if (selectedSections.length === 0) {
+        container.innerHTML = '<div class="empty-state"><div class="emoji">📋</div><p>Nenhuma seção selecionada.<br>Clique em "Adicionar" nas seções.</p></div>';
+        exportBtn.disabled = true;
+        return;
+      }
+
+      exportBtn.disabled = false;
+
+      let html = '';
+      selectedSections.forEach((section, i) => {
+        html += `
+          <div class="wireframe-item" data-id="${section.id}">
+            <span class="wf-number">${i + 1}</span>
+            <span class="wf-name">${section.name || section.type}</span>
+            <span class="wf-template">${section.template}</span>
+            <span class="wf-remove" data-action="wf-remove" data-id="${section.id}">×</span>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+
+      // Listeners de remove
+      container.querySelectorAll('[data-action="wf-remove"]').forEach(btn => {
+        btn.addEventListener('click', () => removeFromWireframe(btn.dataset.id));
+      });
+    }
+
+    // Abrir preview (modal com seção ISOLADA renderizada)
+    async function openPreview(section) {
+      const modal = document.getElementById('modal');
+      const iframe = document.getElementById('modal-iframe');
+      const title = document.getElementById('modal-title');
+
+      title.textContent = `${section.name} — ${section.template}`;
+      modal.classList.add('active');
+
+      // Buscar fragmento HTML da seção
+      try {
+        const res = await fetch(`./sections/${section.fragmentFile}`);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const fragment = await res.text();
+
+        // Base URL aponta pro diretório do template (resolve ./images/, ./assets/, ./vendor/)
+        const baseUrl = `${window.location.origin}/templates/${section.template}/`;
+
+        // Renderizar seção isolada com CSS/JS do template
+        iframe.srcdoc = `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="${baseUrl}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/main.css">
+  <style>
+    body { margin: 0; overflow-x: hidden; background: #fcfcfd; }
+    /* Remove position fixed do header pra não ficar preso no topo */
+    .header-one, [class*="header"] { position: relative !important; top: auto !important; }
+    /* FORÇAR elementos animáveis a ficarem visíveis no preview */
+    [data-ns-animate], [data-opai-animate], [data-delay], [data-direction],
+    .tp-fade-anim, [data-text-reveal] {
+      opacity: 1 !important;
+      transform: none !important;
+      visibility: visible !important;
+      transition: none !important;
+    }
+  </style>
+</head>
+<body>
+  ${fragment}
+
+  <script src="vendor/swiper.min.js"><\/script>
+  <script src="vendor/gsap.min.js"><\/script>
+  <script src="vendor/scroll-trigger.min.js"><\/script>
+  <script src="vendor/lenis.min.js"><\/script>
+  <script src="vendor/number-counter.js"><\/script>
+  <script src="vendor/vanilla-infinite-marquee.min.js"><\/script>
+  <script src="vendor/split-text.min.js"><\/script>
+  <script src="vendor/springer.min.js"><\/script>
+  <script src="assets/main.js"><\/script>
+  <script>
+    // Após o main.js rodar, força TODOS os elementos animáveis a ficarem visíveis
+    // (o main.js esconde e revela via scroll observer, que não dispara no preview isolado)
+    function forceVisible() {
+      const selectors = '[data-ns-animate], [data-opai-animate], [data-delay], [data-direction], .tp-fade-anim, [data-text-reveal], [style*="opacity: 0"], [style*="opacity:0"]';
+      document.querySelectorAll(selectors).forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+        el.style.visibility = 'visible';
+      });
+    }
+    // Roda várias vezes pra pegar animações que aplicam estilo com delay
+    window.addEventListener('load', () => {
+      forceVisible();
+      setTimeout(forceVisible, 300);
+      setTimeout(forceVisible, 800);
+      setTimeout(forceVisible, 1500);
+    });
+  <\/script>
+</body>
+</html>`;
+      } catch (err) {
+        iframe.srcdoc = `<html><body style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;color:#666;">
+          <div style="text-align:center;">
+            <p style="font-size:48px;">⚠️</p>
+            <p>Erro ao carregar preview</p>
+            <p style="font-size:12px;color:#999;">${err.message}</p>
+            <p style="font-size:12px;color:#999;">Arquivo: sections/${section.fragmentFile}</p>
+          </div>
+        </body></html>`;
+      }
+    }
+
+    // Fechar modal
+    document.getElementById('modal-close').addEventListener('click', () => {
+      document.getElementById('modal').classList.remove('active');
+      document.getElementById('modal-iframe').srcdoc = '';
+    });
+
+    document.getElementById('modal').addEventListener('click', (e) => {
+      if (e.target === e.currentTarget) {
+        document.getElementById('modal').classList.remove('active');
+        document.getElementById('modal-iframe').srcdoc = '';
+      }
+    });
+
+    // Exportar HTML
+    document.getElementById('btn-export').addEventListener('click', () => {
+      if (selectedSections.length === 0) return;
+      exportHTML();
+    });
+
+    async function exportHTML() {
+      // Pega o primeiro template selecionado pra usar como base CSS
+      const baseTemplate = selectedSections[0].template;
+
+      let html = `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Montado — NextSaaS Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="${TEMPLATES_BASE}/${baseTemplate}/assets/main.css">
+</head>
+<body>
+`;
+
+      // Buscar fragmentos HTML de cada seção selecionada
+      for (const section of selectedSections) {
+        const fragmentPath = `./sections/${section.fragmentFile}`;
+        try {
+          const res = await fetch(fragmentPath);
+          if (res.ok) {
+            const fragment = await res.text();
+            html += `\n<!-- ===== ${section.name} (de ${section.template}) ===== -->\n`;
+            html += fragment;
+            html += '\n';
+          } else {
+            html += `\n<!-- ERRO: não conseguiu carregar ${section.fragmentFile} -->\n`;
+          }
+        } catch (e) {
+          html += `\n<!-- ERRO: ${e.message} -->\n`;
+        }
+      }
+
+      html += `
+  <script src="${TEMPLATES_BASE}/${baseTemplate}/vendor/swiper.min.js"><\/script>
+  <script src="${TEMPLATES_BASE}/${baseTemplate}/vendor/gsap.min.js"><\/script>
+  <script src="${TEMPLATES_BASE}/${baseTemplate}/vendor/scroll-trigger.min.js"><\/script>
+  <script src="${TEMPLATES_BASE}/${baseTemplate}/vendor/lenis.min.js"><\/script>
+  <script src="${TEMPLATES_BASE}/${baseTemplate}/vendor/number-counter.js"><\/script>
+  <script src="${TEMPLATES_BASE}/${baseTemplate}/vendor/vanilla-infinite-marquee.min.js"><\/script>
+  <script src="${TEMPLATES_BASE}/${baseTemplate}/assets/main.js"><\/script>
+</body>
+</html>`;
+
+      // Download
+      const blob = new Blob([html], { type: 'text/html' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'site-montado.html';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    // Tecla Escape fecha modal
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.getElementById('modal').classList.remove('active');
+        document.getElementById('modal-iframe').srcdoc = '';
+      }
+    });
+
+    // ========== AI GENERATION ==========
+    async function generateWithAI() {
+      const input = document.getElementById('ai-input');
+      const btn = document.getElementById('ai-generate');
+      const bar = document.getElementById('ai-bar');
+      const prompt = input.value.trim();
+
+      if (!prompt) {
+        input.focus();
+        return;
+      }
+
+      // Mostrar status
+      btn.disabled = true;
+      btn.textContent = '⏳ Gerando...';
+
+      // Criar status bubble
+      let status = bar.querySelector('.ai-status');
+      if (!status) {
+        status = document.createElement('div');
+        status.className = 'ai-status';
+        bar.appendChild(status);
+      }
+      status.textContent = '🤖 Opus 4.8 selecionando seções e preenchendo copy...';
+
+      try {
+        const res = await fetch('/api/generate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ prompt }),
+        });
+
+        const data = await res.json();
+
+        if (!res.ok || data.error) {
+          throw new Error(data.error || `HTTP ${res.status}`);
+        }
+
+        // Sucesso! Mostrar resultado
+        status.textContent = `✅ Site "${data.site.siteName}" gerado com ${data.site.sections.length} seções!`;
+
+        // Adicionar seções ao wireframe
+        selectedSections = [];
+        for (const s of data.site.sections) {
+          const found = allSections.find(sec => sec.id === s.sectionId);
+          if (found) {
+            found._aiCopy = s.copy; // Guardar copy da IA junto
+            selectedSections.push(found);
+          }
+        }
+        renderWireframe();
+        renderCatalog();
+
+        // Abrir preview do site gerado (HTML completo no modal)
+        const modal = document.getElementById('modal');
+        const iframe = document.getElementById('modal-iframe');
+        const title = document.getElementById('modal-title');
+
+        title.textContent = `🎉 ${data.site.siteName} — Site Gerado pela IA`;
+        iframe.srcdoc = data.html;
+        modal.classList.add('active');
+
+        // Limpar input
+        input.value = '';
+
+        // Auto-download
+        setTimeout(() => {
+          const slug = (data.site.siteName || 'site').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+          status.textContent = `✅ Salvo em sites/${slug}/index.html — Clique "Exportar" para baixar`;
+        }, 2000);
+
+      } catch (err) {
+        status.textContent = `❌ Erro: ${err.message}`;
+        console.error('Erro na geração:', err);
+      } finally {
+        btn.disabled = false;
+        btn.textContent = '🤖 Gerar Site';
+      }
+    }
+
+    // Enter no input dispara geração
+    document.getElementById('ai-input').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') generateWithAI();
+    });
+
+    // Init
+    init();
+  </script>
+</body>
+</html>

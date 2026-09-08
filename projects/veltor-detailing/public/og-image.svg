@@ -1,0 +1,13 @@
+<svg viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#090B0D"/>
+  <!-- Subtle radial glow -->
+  <ellipse cx="600" cy="315" rx="400" ry="200" fill="#13171A"/>
+  <!-- Logo -->
+  <path d="M548 270L600 370L652 270" stroke="#B88A52" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M568 270C568 270 584 270 598 270C612 270 620 278 620 286C620 294 612 302 598 302C592 302 584 302 584 302" stroke="#B88A52" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Brand name -->
+  <text x="600" y="420" text-anchor="middle" font-family="system-ui, sans-serif" font-size="42" font-weight="700" letter-spacing="8" fill="#F6F6F4">VELTOR</text>
+  <text x="600" y="455" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" letter-spacing="6" fill="#9DA3A6">DETAILING STUDIO</text>
+  <!-- Tagline -->
+  <text x="600" y="510" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="#9DA3A6">Estética Automotiva Premium em Goiânia</text>
+</svg>

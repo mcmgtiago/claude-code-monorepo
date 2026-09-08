@@ -1,0 +1,222 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Automotive detailing studio hero background">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0d10"/>
+      <stop offset="55%" stop-color="#10141a"/>
+      <stop offset="100%" stop-color="#05070a"/>
+    </linearGradient>
+
+    <radialGradient id="spotGrad" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#b88a52" stop-opacity="0.22"/>
+      <stop offset="45%" stop-color="#b88a52" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1f23" stop-opacity="0.0"/>
+      <stop offset="60%" stop-color="#0a0c0e" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="1"/>
+    </linearGradient>
+
+    <linearGradient id="carBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f2429"/>
+      <stop offset="55%" stop-color="#0c0f12"/>
+      <stop offset="100%" stop-color="#04060a"/>
+    </linearGradient>
+
+    <linearGradient id="carHighlight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b88a52" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#b88a52" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="windowGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a242b"/>
+      <stop offset="100%" stop-color="#06090c"/>
+    </linearGradient>
+
+    <radialGradient id="rimGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2a2f35"/>
+      <stop offset="70%" stop-color="#0d1014"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+
+    <linearGradient id="reflectionGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b88a52" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="softBlur" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+
+    <filter id="bigBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+  </defs>
+
+  <!-- Studio wall background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Ambient spots -->
+  <rect width="1920" height="1080" fill="url(#spotGrad)"/>
+
+  <!-- Ceiling studio lights (soft glow rectangles) -->
+  <g opacity="0.6" filter="url(#bigBlur)">
+    <rect x="350" y="60" width="180" height="14" rx="6" fill="#fff5e0" opacity="0.55"/>
+    <rect x="850" y="60" width="180" height="14" rx="6" fill="#fff5e0" opacity="0.55"/>
+    <rect x="1350" y="60" width="180" height="14" rx="6" fill="#fff5e0" opacity="0.55"/>
+  </g>
+
+  <!-- Subtle vertical panel lines (studio bays) -->
+  <g stroke="#1a1f23" stroke-width="1" opacity="0.55">
+    <line x1="480" y1="80" x2="480" y2="780"/>
+    <line x1="960" y1="80" x2="960" y2="780"/>
+    <line x1="1440" y1="80" x2="1440" y2="780"/>
+  </g>
+
+  <!-- Floor -->
+  <rect x="0" y="720" width="1920" height="360" fill="url(#floorGrad)"/>
+
+  <!-- Floor reflection band -->
+  <ellipse cx="960" cy="780" rx="780" ry="40" fill="url(#reflectionGrad)"/>
+
+  <!-- Car silhouette (sports coupe, side 3/4) -->
+  <g transform="translate(960, 620)">
+    <!-- Soft shadow under car -->
+    <ellipse cx="0" cy="170" rx="560" ry="22" fill="#000" opacity="0.7" filter="url(#softBlur)"/>
+
+    <!-- Lower body / sill -->
+    <path
+      d="M -460 90
+         C -460 60 -440 40 -400 35
+         L -380 5
+         C -350 -35 -270 -60 -180 -68
+         L -120 -85
+         C -60 -110 80 -120 200 -110
+         L 290 -95
+         C 360 -75 430 -40 460 0
+         L 480 25
+         C 500 35 510 55 505 75
+         L 490 95
+         C 470 110 430 115 380 115
+         L -380 115
+         C -430 115 -460 110 -460 90 Z"
+      fill="url(#carBody)"
+    />
+
+    <!-- Top roof sweep -->
+    <path
+      d="M -260 -50
+         C -200 -100 -80 -125 60 -125
+         C 200 -125 320 -90 380 -45
+         L 350 -25
+         C 290 -65 180 -90 60 -90
+         C -60 -90 -160 -70 -220 -30 Z"
+      fill="#13171a"
+    />
+
+    <!-- Greenhouse / windows -->
+    <path
+      d="M -240 -45
+         C -180 -90 -70 -110 60 -110
+         C 190 -110 295 -80 355 -40
+         L 320 -20
+         C 270 -55 175 -75 60 -75
+         C -55 -75 -150 -55 -210 -20 Z"
+      fill="url(#windowGrad)"
+    />
+
+    <!-- Window pillar / A-pillar -->
+    <path d="M -240 -45 L -210 -20 L -200 -45 Z" fill="#0a0c0e"/>
+    <path d="M 355 -40 L 320 -20 L 330 -45 Z" fill="#0a0c0e"/>
+    <path d="M -40 -110 L -25 -75 L 30 -75 L 20 -110 Z" fill="#0a0c0e" opacity="0.85"/>
+
+    <!-- Body shoulder highlight -->
+    <path
+      d="M -460 60
+         C -460 35 -440 20 -400 15
+         L -380 -10
+         C -350 -50 -270 -75 -180 -82
+         L -120 -98
+         C -60 -120 80 -128 200 -118
+         L 290 -105
+         C 360 -85 430 -52 460 -15
+         L 480 10
+         L 470 18
+         C 440 -10 370 -40 290 -60
+         L 200 -73
+         C 80 -83 -60 -75 -120 -55
+         L -180 -40
+         C -270 -33 -350 -8 -380 28
+         L -400 50
+         C -440 55 -460 70 -460 90 Z"
+      fill="url(#carHighlight)"
+      opacity="0.9"
+    />
+
+    <!-- Headlight glow -->
+    <ellipse cx="495" cy="40" rx="40" ry="14" fill="#ffe5b8" opacity="0.85" filter="url(#softBlur)"/>
+    <ellipse cx="495" cy="40" rx="14" ry="6" fill="#fff5d8"/>
+
+    <!-- Taillight glow -->
+    <ellipse cx="-490" cy="50" rx="36" ry="12" fill="#ff6a55" opacity="0.7" filter="url(#softBlur)"/>
+    <ellipse cx="-490" cy="50" rx="12" ry="5" fill="#ff8a78"/>
+
+    <!-- Door cut line -->
+    <path d="M -40 -75 L -50 100" stroke="#05070a" stroke-width="1.5" opacity="0.7"/>
+    <path d="M 130 -85 L 120 100" stroke="#05070a" stroke-width="1.5" opacity="0.7"/>
+    <path d="M -240 -30 L -250 100" stroke="#05070a" stroke-width="1.5" opacity="0.55"/>
+
+    <!-- Wheel arches -->
+    <ellipse cx="-300" cy="110" rx="105" ry="32" fill="#000"/>
+    <ellipse cx="260" cy="110" rx="105" ry="32" fill="#000"/>
+
+    <!-- Front wheel -->
+    <g transform="translate(260, 110)">
+      <circle r="78" fill="url(#rimGrad)" stroke="#000" stroke-width="2"/>
+      <circle r="62" fill="none" stroke="#1a1f23" stroke-width="2"/>
+      <circle r="42" fill="#0a0c0e" stroke="#1a1f23" stroke-width="1.5"/>
+      <!-- spokes -->
+      <g stroke="#1a1f23" stroke-width="3" stroke-linecap="round">
+        <line x1="0" y1="-58" x2="0" y2="-30"/>
+        <line x1="50" y1="-29" x2="26" y2="-15"/>
+        <line x1="50" y1="29" x2="26" y2="15"/>
+        <line x1="0" y1="58" x2="0" y2="30"/>
+        <line x1="-50" y1="29" x2="-26" y2="15"/>
+        <line x1="-50" y1="-29" x2="-26" y2="-15"/>
+      </g>
+      <circle r="10" fill="#b88a52"/>
+    </g>
+
+    <!-- Rear wheel -->
+    <g transform="translate(-300, 110)">
+      <circle r="78" fill="url(#rimGrad)" stroke="#000" stroke-width="2"/>
+      <circle r="62" fill="none" stroke="#1a1f23" stroke-width="2"/>
+      <circle r="42" fill="#0a0c0e" stroke="#1a1f23" stroke-width="1.5"/>
+      <g stroke="#1a1f23" stroke-width="3" stroke-linecap="round">
+        <line x1="0" y1="-58" x2="0" y2="-30"/>
+        <line x1="50" y1="-29" x2="26" y2="-15"/>
+        <line x1="50" y1="29" x2="26" y2="15"/>
+        <line x1="0" y1="58" x2="0" y2="30"/>
+        <line x1="-50" y1="29" x2="-26" y2="15"/>
+        <line x1="-50" y1="-29" x2="-26" y2="-15"/>
+      </g>
+      <circle r="10" fill="#b88a52"/>
+    </g>
+
+    <!-- Subtle bronze pinstripe along shoulder -->
+    <path
+      d="M -460 30
+         C -460 8 -440 -5 -400 -10
+         L -380 -30
+         C -350 -65 -270 -88 -180 -95"
+      fill="none"
+      stroke="#b88a52"
+      stroke-width="1.5"
+      opacity="0.55"
+    />
+  </g>
+
+  <!-- Atmospheric haze near floor -->
+  <rect x="0" y="700" width="1920" height="120" fill="url(#spotGrad)" opacity="0.4"/>
+</svg>

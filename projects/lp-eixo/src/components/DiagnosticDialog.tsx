@@ -1,0 +1,18 @@
+import { useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
+import { CheckCircle2, X } from "lucide-react";
+import { ease, track } from "../lib/utils";
+
+const choices = [
+  ["Estratégia", "Liderança", "Cultura", "Performance", "Mudança"],
+  ["Agora", "Próximos 90 dias", "Próximo semestre", "Ainda estamos mapeando"],
+];
+
+export function DiagnosticDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
+  const [step, setStep] = useState(0); const [answers, setAnswers] = useState<string[]>([]); const panelRef = useRef<HTMLDivElement>(null);
+  useEffect(() => { if (!open) return; document.body.style.overflow = "hidden"; const panel = panelRef.current; panel?.querySelector<HTMLElement>("button, input")?.focus(); const keydown = (event: KeyboardEvent) => { if (event.key === "Escape") onClose(); if (event.key !== "Tab" || !panel) return; const focusable = Array.from(panel.querySelectorAll<HTMLElement>("button:not([disabled]),input")); const first = focusable[0], last = focusable[focusable.length - 1]; if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); } else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); } }; document.addEventListener("keydown", keydown); return () => { document.body.style.overflow = ""; document.removeEventListener("keydown", keydown); }; }, [onClose, open]);
+  const choose = (value: string) => { const next = [...answers]; next[step] = value; setAnswers(next); setStep(step + 1); };
+  const finish = (event: React.FormEvent<HTMLFormElement>) => { event.preventDefault(); setStep(3); track("diagnostic_completed", { tension: answers[0], horizon: answers[1] }); };
+  const close = () => { setStep(0); setAnswers([]); onClose(); };
+  return <AnimatePresence>{open && <motion.div className="dialog-backdrop" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onMouseDown={(e) => { if (e.target === e.currentTarget) close(); }}><motion.div ref={panelRef} role="dialog" aria-modal="true" aria-labelledby="dialog-title" className="dialog-panel" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 20 }} transition={{ ease, duration: .4 }}><button className="dialog-close" aria-label="Fechar diagnóstico" onClick={close}><X size={20}/></button>{step < 3 && <><p className="dialog-step">ETAPA 0{step + 1} / 03</p><div className="dialog-progress"><i style={{ width: `${((step + 1) / 3) * 100}%` }}/></div></>}{step === 0 && <><h2 id="dialog-title">Onde sua empresa sente mais tensão hoje?</h2><div className="dialog-choices">{choices[0].map((item) => <button key={item} onClick={() => choose(item)}>{item}</button>)}</div></>}{step === 1 && <><h2 id="dialog-title">Qual é o horizonte de decisão?</h2><div className="dialog-choices">{choices[1].map((item) => <button key={item} onClick={() => choose(item)}>{item}</button>)}</div></>}{step === 2 && <form onSubmit={finish}><h2 id="dialog-title">Como podemos falar com você?</h2><label>Nome<input name="name" required minLength={2}/></label><label>Empresa<input name="company" required minLength={2}/></label><label>E-mail corporativo<input name="email" type="email" required/></label><button className="button button--dark" type="submit">Receber leitura inicial</button></form>}{step === 3 && <div className="dialog-success"><CheckCircle2 size={36}/><h2 id="dialog-title">Bom ponto de partida.</h2><p>Obrigada. Agora podemos ter uma conversa mais objetiva sobre o seu cenário.</p><button className="button button--dark" onClick={close}>Concluir</button></div>}</motion.div></motion.div>}</AnimatePresence>;
+}

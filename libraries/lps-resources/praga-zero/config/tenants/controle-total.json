@@ -1,0 +1,71 @@
+{
+  "slug": "controle-total",
+  "label": "Controle Total Residencial",
+  "company": {
+    "name": "Controle Total Dedetização",
+    "cnpj": "00.000.000/0001-00",
+    "cnae": "8122-2/00",
+    "phone": "51999999999",
+    "phoneFormatted": "(51) 99999-9999",
+    "email": "contato@controletotal.com.br",
+    "whatsappMessage": "Olá! Vim pelo site e gostaria de um orçamento grátis para dedetização em {cidade}.",
+    "instagram": "@controletotaldedetiza",
+    "facebook": "/controletotaldedetiza",
+    "yearsExperience": 15,
+    "googleRating": 4.9,
+    "propertiesServed": 2000,
+    "shortDescription": "Empresa especializada em dedetização premium, controle de pragas urbanas e atendimento rápido em Canoas.",
+    "logo": "/tenants/controle-total/logo.svg"
+  },
+  "theme": {
+    "primary": "#16A34A",
+    "danger": "#B91C1C",
+    "warning": "#F59E0B",
+    "bg": "#FFFFFF",
+    "text": "#13231A",
+    "muted": "#647067",
+    "surface": "#F4F8F5",
+    "radius": "1rem"
+  },
+  "media": {
+    "setId": "residencial-familiar",
+    "hero": {
+      "type": "video",
+      "src": "https://videos.pexels.com/video-files/6195711/6195711-uhd_2560_1440_25fps.mp4",
+      "poster": "https://images.pexels.com/photos/6195125/pexels-photo-6195125.jpeg?auto=compress&cs=tinysrgb&w=1800",
+      "alt": "Profissional equipado realizando controle técnico em ambiente urbano",
+      "photographer": "Pexels",
+      "href": "https://www.pexels.com/"
+    },
+    "gallery": [],
+    "og": {
+      "src": "https://images.pexels.com/photos/6195125/pexels-photo-6195125.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop",
+      "alt": "Dedetização premium urbana",
+      "photographer": "Pexels",
+      "href": "https://www.pexels.com/"
+    }
+  },
+  "coverage": {
+    "defaultCity": "Canoas",
+    "defaultState": "RS",
+    "neighborhoods": [
+      "Centro",
+      "Marechal Rondon",
+      "Niterói",
+      "Igara",
+      "Mathias Velho",
+      "Estância Velha",
+      "São José",
+      "Harmonia"
+    ],
+    "regions": [
+      "Centro",
+      "Zona Norte",
+      "Zona Sul",
+      "Região Metropolitana",
+      "Bairros próximos"
+    ]
+  },
+  "copyRef": "default",
+  "createdAt": "2026-07-29"
+}

@@ -1,0 +1,18 @@
+COMO USAR: envie este prompt ao agente após substituir todos os campos entre colchetes. `WORKSPACE_ROOT` e `PROJECT_ROOT` devem ser caminhos absolutos. Este fluxo pode alterar o projeto e os arquivos de `_project/`.
+
+Use `${SYSTEM_ROOT}/07-PROMPT-ORQUESTRADOR.md` como instrução principal.
+
+CONFIGURAÇÃO
+WORKSPACE_ROOT = "[PENDENTE: raiz absoluta do workspace]"
+SYSTEM_ROOT = "${WORKSPACE_ROOT}/Sistema Replicavel"
+PROJECT_ROOT = "[PENDENTE: diretório da landing page]"
+PROJECT_TYPE = "[LP_SERVICO | LP_PROGRAMA | LP_PRODUTO | FITNESS_PERFORMANCE | GENERIC_LP]"
+REGULATED_PROFILE = "[HEALTH | FITNESS | GENERAL]"
+STACK_PROFILE = "[STATIC | REACT | EXISTING]"
+EXECUTION_MODE = "[GATED | AUTO]"
+RELEASE_TARGET = "[PROTOTYPE | PRODUCTION]"
+AUDIT_ACTION = "NOT_APPLICABLE"
+PRIMARY_GOAL = "[PENDENTE]"
+PRIMARY_CTA = "[PENDENTE: exemplo Agendar avaliação -> https://...]"
+
+Crie ou atualize os artefatos em `PROJECT_ROOT/_project/` e conduza todas as fases. Não use os prompts master legados como especificação. Não implemente antes de brief, arquitetura, direção visual e plano de componentes. Use o acervo somente após consultar o catálogo. Termine com QA e handoff.

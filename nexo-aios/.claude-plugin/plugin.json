@@ -1,0 +1,12 @@
+{
+  "name": "nexo-aios",
+  "version": "1.0.0",
+  "description": "NEXO (Contabilidade) — AI Operating System para Contadores. 8 skills para gestão de clientes, controle de obrigações, análise fiscal e compliance. Start with /office-setup.",
+  "author": {
+    "name": "GREENHAT Consultoria Digital",
+    "email": "contato@greenhat.io",
+    "url": "https://greenhat.io"
+  },
+  "license": "MIT",
+  "keywords": ["nexo", "contabilidade", "accounting", "tax", "compliance", "fiscal", "obligation", "billing"]
+}

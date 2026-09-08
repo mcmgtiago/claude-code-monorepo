@@ -1,0 +1,55 @@
+{
+  "name": "VeloHUB — CRM com IA + WhatsApp",
+  "short_name": "VeloHUB",
+  "description": "Gerencie clientes, agenda e WhatsApp em um só lugar",
+  "start_url": "/app/dashboard",
+  "display": "standalone",
+  "background_color": "#081410",
+  "theme_color": "#081410",
+  "orientation": "portrait-primary",
+  "categories": ["business", "productivity"],
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Conversas",
+      "short_name": "WhatsApp",
+      "url": "/app/conversas",
+      "description": "Ver conversas do WhatsApp"
+    },
+    {
+      "name": "Agenda",
+      "short_name": "Agenda",
+      "url": "/app/agenda",
+      "description": "Ver agenda do dia"
+    },
+    {
+      "name": "Novo Orçamento",
+      "short_name": "Orçamento",
+      "url": "/app/orcamentos?new=1",
+      "description": "Criar novo orçamento"
+    }
+  ],
+  "screenshots": [],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

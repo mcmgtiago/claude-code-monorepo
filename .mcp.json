@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "pipedream": {
+      "url": "https://mcp.pipedream.net/v2",
+      "headers": {
+        "Authorization": "Bearer YlgQ7NRGuiz41ompWqahCreeWjWU9M2ORSbmegUNmEkoECqh8kbvyMDY"
+      }
+    }
+  }
+}

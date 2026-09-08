@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "fileName": "index.html",
+  "entries": [
+    {
+      "id": "479d2b67-85f1-41f0-9c32-a4c39734919b",
+      "fileName": "index.html",
+      "version": 1,
+      "label": "Version 1",
+      "createdAt": 1785757036794,
+      "source": "ai",
+      "prompt": "Website URL to clone: https://luminal-creative-studio.aura.build/",
+      "size": 144990,
+      "mime": "text/html; charset=utf-8",
+      "kind": "html",
+      "contentPath": "0001-479d2b67-85f1-41f0-9c32-a4c39734919b.html",
+      "promptSource": "message"
+    }
+  ]
+}

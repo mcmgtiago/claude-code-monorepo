@@ -1,0 +1,385 @@
+schema_version: "1.0"
+status: prototype_blocked_for_publish
+
+project:
+  name: "Landing Page Amanda Pacheco"
+  slug: "amanda-pacheco"
+  root: "C:/Users/Administrator/Desktop/Nutri/Amanda Pacheco"
+  type: "LP_SERVICO"
+  regulated_profile: "HEALTH"
+  stack_profile: "STATIC"
+  execution_mode: "AUTO"
+  owner: "[PENDENTE: responsável]"
+  target_date: null
+
+objective:
+  business_goal: "Gerar pedidos qualificados para uma primeira conversa sobre acompanhamento nutricional."
+  primary_conversion: "Pedido de marcação/contacto"
+  primary_cta:
+    label: "Marcar a minha avaliação"
+    destination: "Dialog de contacto e formulário final"
+    integration: "[PENDENTE: integração aprovada]"
+  secondary_conversion: "Conhecer o acompanhamento"
+  traffic_sources: ["[PENDENTE: origem]"]
+  traffic_temperature: "hypothesis_cold_to_warm"
+  success_metric: "[PENDENTE: métrica]"
+  baseline: null
+
+evidence:
+  facts:
+    - id: E-001
+      value: "Nome público: Amanda Pacheco"
+    - id: E-002
+      value: "Profissão: nutricionista"
+    - id: E-003
+      value: "País: Portugal"
+    - id: E-004
+      value: "Usar imagens fictícias/ilustrativas"
+  assets:
+    - id: A-001
+      value: "Retrato stock Unsplash para protótipo"
+      status: license_pending
+    - id: A-002
+      value: "Imagem de rotina alimentar Unsplash para protótipo"
+      status: license_pending
+  claims_pending:
+    - "Áreas de acompanhamento"
+    - "Modalidade online e presencial"
+    - "Formação e especializações"
+    - "Formatos, duração, suporte e preços"
+  hypotheses:
+    - "Público com histórico de dietas rígidas e rotina exigente"
+    - "Posicionamento clínico, comportamental e sem extremos"
+  unknowns:
+    - "Cédula profissional"
+    - "Biografia"
+    - "Contactos"
+    - "Cidade, morada e horários"
+    - "Depoimentos autorizados"
+    - "Política de privacidade"
+  forbidden:
+    - "Métricas não comprovadas"
+    - "Antes e depois"
+    - "Resultado corporal garantido"
+    - "Urgência ou escassez artificial"
+
+brand:
+  public_name: "Amanda Pacheco"
+  profession: "Nutricionista"
+  specialty: "[PENDENTE: especialidade real]"
+  professional_registration: "[PENDENTE: cédula]"
+  positioning: "Nutrição com ciência, contexto e autonomia, sem extremos"
+  voice:
+    attributes: ["especialista", "próxima", "serena", "clara"]
+    use: ["para si", "marcar consulta", "vida real", "autonomia"]
+    avoid:
+      ["transformação garantida", "detox", "alimento proibido", "perca X kg"]
+  existing_tokens: {}
+  assets_root: null
+
+audience:
+  primary: "Hipótese: adultos em Portugal que procuram uma estratégia alimentar sustentável"
+  secondary: "[PENDENTE: validar segmentos]"
+  excluded: "Pessoas à procura de promessa rápida, diagnóstico pela página ou resultado garantido"
+  context: "Rotina exigente, tentativas anteriores e excesso de informação"
+  awareness_stage: "problem_aware"
+  recognized_problem: "Dificuldade em manter uma alimentação coerente"
+  underlying_problem: "Estratégias genéricas que ignoram contexto e preferências"
+  desired_outcome: "Clareza, autonomia e rotina alimentar possível"
+  prior_attempts: ["dietas rígidas", "recomeços", "regras contraditórias"]
+  objections:
+    ["restrição", "tempo", "consulta online", "cozinhar", "duração", "preço"]
+  vocabulary: ["rotina", "sem culpa", "sem extremos", "escolhas possíveis"]
+  accessibility_needs:
+    ["WCAG 2.2 AA", "teclado", "reduced motion", "touch 44px"]
+
+offer:
+  name: "Acompanhamento nutricional Amanda Pacheco"
+  category: "consulta_acompanhamento"
+  description: "Serviço individual; configuração comercial ainda pendente."
+  mechanism: "Quatro etapas descritivas: escutar, traduzir, integrar e sustentar"
+  deliverables:
+    [
+      "[PENDENTE: validar avaliação]",
+      "[PENDENTE: validar estratégia]",
+      "[PENDENTE: validar materiais e suporte]",
+    ]
+  process: ["escutar", "traduzir", "integrar", "sustentar"]
+  duration: "[PENDENTE: duração]"
+  modality: "[PENDENTE: modalidade]"
+  support: "[PENDENTE: canal e limites]"
+  price:
+    display: true
+    amount: "[PENDENTE: valor]"
+    installments: null
+    recurrence: null
+  guarantee_or_cancellation: "[PENDENTE: política real]"
+  limitations:
+    - "Não substitui avaliação individual"
+    - "Não garante resultado"
+    - "Formulário não é anamnese"
+  for_whom: ["Pessoas que procuram orientação individual e sustentável"]
+  not_for_whom: ["Quem procura resultado garantido ou prescrição sem consulta"]
+
+message:
+  core_promise: "Comer bem sem viver em guerra com a comida."
+  supporting_message: "Ciência, rotina e prazer traduzidos em escolhas possíveis de manter."
+  differentiators:
+    ["olhar individual", "explicação clara", "sem terrorismo alimentar"]
+  proof_hierarchy:
+    [
+      "processo demonstrável",
+      "[PENDENTE: credencial]",
+      "[PENDENTE: provas autorizadas]",
+    ]
+  objection_responses:
+    [
+      "sem corte automático",
+      "adaptação à rotina",
+      "ferramentas conforme contexto",
+    ]
+  trust_microcopy:
+    [
+      "Sem compromisso automático",
+      "Sem spam",
+      "Dados usados apenas para responder",
+    ]
+
+architecture:
+  model: "LP_SERVICO"
+  rationale: "Uma oferta, uma audiência provisória e uma ação principal."
+  pages:
+    - path: "/"
+      purpose: "Posicionar e gerar pedido de marcação"
+      primary_keyword: "nutricionista em Portugal"
+      primary_cta: "Marcar a minha avaliação"
+      sections:
+        - header
+        - hero
+        - faixa_de_confianca
+        - identificacao
+        - reenquadramento
+        - areas
+        - processo
+        - sobre
+        - prova_condicional
+        - formatos
+        - faq
+        - localizacao
+        - cta_formulario
+        - footer
+  mobile_order_notes:
+    - "Copy antes do retrato no hero"
+    - "Processo sticky torna-se sequência linear"
+    - "CTA fixo oculta-se junto do formulário final"
+  navigation:
+    type: "minimal_anchor"
+    items: ["Abordagem", "Método", "Sobre", "Consultas", "Dúvidas"]
+  footer_requirements: ["contactos", "cédula", "RGPD", "localização", "links"]
+
+visual:
+  route: "clinica_editorial"
+  secondary_influence: "wellness_humano_15_percent"
+  fingerprint:
+    authority: "humana_cientifica"
+    temperature: "quente_controlada"
+    energy: 2
+    density: "editorial_espacada"
+    expression: "fotografica_grafica"
+  concept: "Clínica Editorial Atlântica — orientação cartográfica como metáfora de clareza e autonomia"
+  tokens:
+    color:
+      bg: "#f4f0e8"
+      surface: "#fefcf8"
+      surface_alt: "#e9ede4"
+      text: "#1f2622"
+      text_muted: "#5b665f"
+      primary: "#20382f"
+      accent: "#ad654e"
+      border: "rgba(32,56,47,0.16)"
+      focus: "#d08a71"
+    typography:
+      display: "Newsreader"
+      interface: "Manrope"
+    spacing:
+      section: "92-154px"
+      base: "4/8px"
+    radius:
+      control: "14px/999px"
+      card: "20-28px"
+      photo: "asymmetric_arch"
+    shadow:
+      card: "soft_green_tinted"
+  grid:
+    max_width: "1160px"
+    columns: 12
+    gutter: "16-32px"
+  photography:
+    direction: "Luz natural, contexto real, sem jaleco ou clichês de balança"
+    required_shots:
+      ["retrato vertical", "retrato ambiente", "processo", "consultório"]
+  icon_family: "SVG monoline 1.8px"
+  motion_level: "M2_SIGNATURE"
+  motion_signature: "Uma pilha sticky no processo; restantes reveals discretos"
+
+references:
+  primary_page: "P22 — apenas tom institucional e humano"
+  hero: "H06 — apenas relação entre copy, retrato e benefícios"
+  block: "B07 — apenas sequência de processo em quatro etapas"
+  effect: "Ambient Glow — versão estática e moderada"
+  visual_images:
+    - "9bdcdc243486563.69829c5ff022c.webp"
+    - "427acb243555505.6983d6b08e213.webp"
+  decisions:
+    - source: "P22"
+      role: "arquitetura e tom"
+      reuse_level: "PRINCIPLE"
+      extracted: ["autoridade humana", "navegação contida"]
+      rejected: ["vídeo", "copy e assets originais"]
+      provenance: "licença não documentada"
+      dependencies: []
+      fallback: "not_applicable"
+      validation: ["reimplementado do zero"]
+    - source: "H06"
+      role: "composição do hero"
+      reuse_level: "PRINCIPLE"
+      extracted: ["split assimétrico", "retrato editorial"]
+      rejected: ["cursor customizado", "scroll lock", "assets"]
+      provenance: "licença não documentada"
+      dependencies: []
+      fallback: "imagem estática"
+      validation: ["conteúdo visível sem JS"]
+    - source: "B07"
+      role: "processo"
+      reuse_level: "REBUILD"
+      extracted: ["quatro etapas", "progressão visual"]
+      rejected: ["GSAP", "SplitText", "pin longo"]
+      provenance: "brief de referência; licença não documentada"
+      dependencies: []
+      fallback: "lista linear"
+      validation: ["reduced motion", "mobile linear"]
+    - source: "Ambient Glow"
+      role: "atmosfera do CTA final"
+      reuse_level: "REBUILD"
+      extracted: ["luz ambiente estática"]
+      rejected: ["animação contínua", "blur excessivo"]
+      provenance: "acervo interno sem licença documentada"
+      dependencies: []
+      fallback: "cor sólida"
+      validation: ["contraste", "mobile"]
+
+technical:
+  framework: "HTML + CSS + JavaScript"
+  language: "pt-PT"
+  package_manager: null
+  build_command: null
+  test_command: "static validation and browser QA"
+  lint_command: "npx html-validate index.html"
+  deploy_target: "[PENDENTE: hospedagem]"
+  subpath_support: true
+  paths_relative: true
+  motion_stack: "CSS + IntersectionObserver"
+  dependencies:
+    - "Tailwind Play CDN — protótipo apenas"
+    - "Google Fonts — rever self-host/RGPD"
+    - "Unsplash images — protótipo apenas"
+  integrations:
+    form: "client-side validation only"
+    whatsapp: "disabled_until_number_and_privacy_approval"
+    scheduling: null
+    checkout: null
+    analytics: null
+    consent: "Confirmação do modo de demonstração; texto legal pendente"
+  progressive_enhancement:
+    no_js: "Conteúdo, navegação por âncoras e formulário visíveis; dialog exige JS para abrir"
+    reduced_motion: "Sem sticky, reveals ou transições extensas"
+    media_fallback: "Texto e layout mantêm sentido sem imagens remotas"
+  performance_budget:
+    lcp_seconds: 2.5
+    cls: 0.1
+    inp_ms: 200
+    initial_js_gzip_kb: 150
+    initial_page_weight_kb: 1500
+    max_font_families: 2
+    signature_effects: 1
+
+seo:
+  index: false
+  canonical_base: null
+  title_pattern: "Nutricionista em Portugal | Amanda Pacheco"
+  description_pattern: "Acompanhamento nutricional de Amanda Pacheco, em Portugal, para cuidar da saúde e da alimentação com ciência, autonomia e sem dietas extremas."
+  og_image: "prototype_unsplash_image"
+  sitemap: false
+  robots: "noindex, nofollow until content and integrations are approved"
+  structured_data: []
+  local_business_data_source: "[PENDENTE: NAP real]"
+
+privacy:
+  data_collected:
+    ["nome", "telefone", "objetivo", "dificuldade", "origem", "consentimento"]
+  sensitive_data_collected: "potentially_goal_and_difficulty"
+  storage: "none_in_prototype"
+  recipients: []
+  retention: "none_in_prototype"
+  privacy_policy_url: null
+  consent_required: true
+  cookie_categories: []
+
+compliance:
+  health_review_required: true
+  reviewer: "[PENDENTE: responsável técnico/jurídico em Portugal]"
+  claims_reviewed: []
+  testimonial_permissions: []
+  image_permissions: []
+  disclaimer: "Protótipo bloqueado para publicação enquanto houver conteúdo pendente."
+
+qa:
+  required_viewports: [320, 375, 768, 1024, 1440]
+  browsers: ["Chromium", "Firefox", "Safari/WebKit"]
+  keyboard: required
+  zoom_200: required
+  reduced_motion: required
+  no_js: conditional
+  automated_tools: ["html-validate", "browser smoke test", "axe if available"]
+  blockers_open:
+    [
+      "content_data",
+      "form_integration",
+      "privacy",
+      "production_assets",
+      "production_css",
+    ]
+  status: blocked
+  last_run: "2026-07-26"
+  automated_result: "12 Playwright checks defined; full suite and targeted additions passed"
+  lighthouse_lab:
+    performance: 97
+    accessibility: 100
+    best_practices: 100
+    seo: 63
+    fcp_seconds: 1.5
+    lcp_seconds: 2.5
+    tbt_ms: 20
+    cls: 0
+  limitations:
+    - "Firefox and Safari/WebKit not tested in this environment"
+    - "200% browser zoom approximated with a 720px layout viewport"
+    - "No field Core Web Vitals or INP data"
+
+decision_log:
+  - date: "2026-07-26"
+    decision: "Usar direção Clínica Editorial Atlântica e reimplementar padrões sem copiar código do acervo."
+    rationale: "Equilibra autoridade, acolhimento e especificidade portuguesa com baixo custo técnico."
+    owner: "OpenCode"
+  - date: "2026-07-26"
+    decision: "Não inventar depoimentos, métricas, cédula ou contactos."
+    rationale: "Evidência antes de persuasão e perfil regulado de saúde."
+    owner: "OpenCode"
+  - date: "2026-07-26"
+    decision: "Não transmitir nem registar os dados do formulário no protótipo."
+    rationale: "Integração, RGPD, destinatários e retenção ainda não foram aprovados."
+    owner: "OpenCode"
+  - date: "2026-07-26"
+    decision: "Remover placeholders e structured data não validado da interface."
+    rationale: "Dados ausentes permanecem apenas nos artefactos de projeto; a interface não pode fabricar credenciais, oferta, prova ou NAP."
+    owner: "OpenCode"

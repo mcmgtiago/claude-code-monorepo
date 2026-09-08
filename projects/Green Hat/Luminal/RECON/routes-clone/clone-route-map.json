@@ -1,0 +1,178 @@
+{
+  "label": "clone",
+  "url": "http://127.0.0.1:8123",
+  "capturedAt": "2026-08-03T11:25:27.394Z",
+  "maxPages": 25,
+  "maxDepth": 2,
+  "allowSubdomains": false,
+  "routes": [
+    {
+      "url": "http://127.0.0.1:8123",
+      "from": "",
+      "depth": 0,
+      "status": 200,
+      "title": "Luminal Studio - Experiências digitais",
+      "lang": "pt-BR",
+      "metaDescription": "",
+      "h1": [
+        "LUMINAL"
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "LUMINAL"
+        },
+        {
+          "tag": "h2",
+          "text": "Luminal Studio"
+        },
+        {
+          "tag": "h2",
+          "text": "Luminal Studio é uma agência de design criativo focada em ajudar marcas a se comunicar com clareza."
+        },
+        {
+          "tag": "h2",
+          "text": "Luminal Studio"
+        },
+        {
+          "tag": "h3",
+          "text": "Marca"
+        },
+        {
+          "tag": "h3",
+          "text": "Design web"
+        },
+        {
+          "tag": "h3",
+          "text": "Produto"
+        },
+        {
+          "tag": "h3",
+          "text": "Estratégia"
+        },
+        {
+          "tag": "h2",
+          "text": "11 anos em movimento"
+        },
+        {
+          "tag": "h2",
+          "text": "Luminal Studio"
+        },
+        {
+          "tag": "h3",
+          "text": "Design de experiências cinéticas"
+        },
+        {
+          "tag": "h3",
+          "text": "Sistemas de marca escaláveis"
+        },
+        {
+          "tag": "h3",
+          "text": "Criação orientada por performance"
+        },
+        {
+          "tag": "h2",
+          "text": "Do caos à clareza"
+        },
+        {
+          "tag": "h3",
+          "text": "Descoberta e estratégia"
+        },
+        {
+          "tag": "h3",
+          "text": "Design e prototipagem"
+        },
+        {
+          "tag": "h3",
+          "text": "Desenvolvimento"
+        },
+        {
+          "tag": "h3",
+          "text": "Lançamento e escala"
+        },
+        {
+          "tag": "h2",
+          "text": "Por que Luminal?"
+        },
+        {
+          "tag": "h2",
+          "text": "Desenhado com intenção"
+        },
+        {
+          "tag": "h2",
+          "text": "Luminal Studio é uma equipe criativa focada em excelência digital."
+        },
+        {
+          "tag": "h3",
+          "text": "Marcus Thorne"
+        },
+        {
+          "tag": "h3",
+          "text": "Ava Lin"
+        },
+        {
+          "tag": "h3",
+          "text": "Noah Reed"
+        },
+        {
+          "tag": "h3",
+          "text": "Elena Rossi"
+        },
+        {
+          "tag": "h3",
+          "text": "Elias Vance"
+        },
+        {
+          "tag": "h2",
+          "text": "O que nossos clientes dizem"
+        },
+        {
+          "tag": "h2",
+          "text": "Desenhado com intenção"
+        },
+        {
+          "tag": "h2",
+          "text": "Planos transparentes por design."
+        },
+        {
+          "tag": "h3",
+          "text": "Núcleo inicial"
+        },
+        {
+          "tag": "h3",
+          "text": "Operação premium"
+        },
+        {
+          "tag": "h3",
+          "text": "Escala para agências"
+        },
+        {
+          "tag": "h2",
+          "text": "Vamos construir juntos."
+        },
+        {
+          "tag": "h2",
+          "text": "Conecte-se"
+        }
+      ],
+      "counts": {
+        "links": 17,
+        "images": 8,
+        "canvas": 1,
+        "forms": 1,
+        "buttons": 9
+      },
+      "linkCount": 17,
+      "screenshot": "screenshots\\127.0.0.1-0fdc99f9.png",
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)"
+      ]
+    }
+  ],
+  "skipped": []
+}

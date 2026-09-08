@@ -1,0 +1,183 @@
+/* ============================================
+   Kit Visual: ferandrade-com-br
+   Arquivo: components.css
+   Componentes reutilizáveis
+   ============================================ */
+
+/* === Layout Base === */
+
+.kit-section {
+  position: relative;
+  width: 100%;
+  padding: var(--kit-section-py) var(--kit-section-px);
+  overflow: hidden;
+}
+
+.kit-container {
+  max-width: var(--kit-container-max);
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* === Backgrounds de Seção === */
+
+.kit-bg-dark {
+  background-color: var(--kit-bg-primary);
+}
+
+.kit-bg-deep {
+  background-color: var(--kit-bg-deep);
+}
+
+.kit-bg-navy {
+  background: var(--kit-gradient-bg-section);
+}
+
+/* === Card Glass === */
+
+.kit-card-glass {
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: var(--kit-radius-lg);
+  padding: var(--kit-card-padding);
+  border: var(--kit-border-width) solid var(--kit-border-subtle);
+  transition: var(--kit-transition-card);
+}
+
+.kit-card-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--kit-gradient-card-glass);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* === Botão Shiny CTA === */
+
+/* Registra --gradient-angle como propriedade animável (Houdini CSS Properties) */
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+/* Shiny CTA Button - borda conic-gradient com rotação real */
+.kit-btn-shiny {
+  --gradient-angle: 0deg;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--kit-gap-xs);
+  font-family: var(--kit-font-heading);
+  font-size: var(--kit-fs-body);
+  font-weight: var(--kit-fw-bold);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 0.875rem 2rem;
+  border-radius: var(--kit-radius-full);
+  border: 2.5px solid transparent;
+  background:
+    linear-gradient(#0a1628, #0f1e38) padding-box,
+    conic-gradient(
+      from var(--gradient-angle),
+      #0A74FF 0%,
+      #38bdf8 20%,
+      #ffffff 35%,
+      #38bdf8 50%,
+      #0050CC 65%,
+      #38bdf8 80%,
+      #0A74FF 100%
+    ) border-box;
+  box-shadow: 0 0 20px rgba(10, 116, 255, 0.4), 0 4px 16px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  animation: kit-rotate-glow 3s linear infinite;
+}
+
+.kit-btn-shiny::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from calc(var(--gradient-angle) + 180deg),
+    transparent 25%,
+    rgba(10, 116, 255, 0.55) 50%,
+    rgba(56, 189, 248, 0.35) 62%,
+    transparent 75%
+  );
+  z-index: -1;
+  filter: blur(12px);
+  animation: kit-rotate-glow 3s linear infinite;
+}
+
+.kit-btn-shiny::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from calc(var(--gradient-angle) + 45deg),
+    transparent 5%,
+    rgba(10, 116, 255, 0.45) 50%,
+    transparent 85%
+  );
+  z-index: -1;
+  filter: blur(18px);
+  animation: kit-rotate-glow 3s linear infinite;
+}
+
+/* === Separadores === */
+
+.kit-separator {
+  position: relative;
+  width: 100%;
+  height: 1px;
+}
+
+.kit-separator::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  background: var(--kit-gradient-glow-line);
+  box-shadow: var(--kit-shadow-glow-sm);
+  border-radius: 50%;
+  opacity: 0.85;
+  transition: opacity 0.8s ease, transform 1s ease;
+  pointer-events: none;
+}
+
+.kit-separator:hover::after {
+  box-shadow: var(--kit-shadow-glow-md);
+  animation: kit-line-glow 3.5s ease-in-out infinite;
+}
+
+/* === FAQ Toggle === */
+
+.kit-faq-item {
+  border-bottom: var(--kit-border-width) solid var(--kit-border-subtle);
+  padding: var(--kit-gap-md) 0;
+}
+
+/* === Responsivo === */
+
+@media (max-width: 1024px) {
+  .kit-section {
+    padding: clamp(2.5rem, 6vw, 4rem) var(--kit-section-px);
+  }
+}
+
+@media (max-width: 768px) {
+  .kit-card-glass {
+    padding: 1rem;
+  }
+}

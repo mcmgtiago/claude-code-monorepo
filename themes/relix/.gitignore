@@ -1,0 +1,12 @@
+node_modules
+.next
+.next-dev
+.DS_Store
+.env
+.env.local
+*.tsbuildinfo
+dev.db
+prisma/dev.db
+prisma/dev.db-journal
+public/uploads/
+storage/

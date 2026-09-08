@@ -1,0 +1,32 @@
+{
+  "label": "original",
+  "url": "https://luminal-creative-studio.aura.build",
+  "capturedAt": "2026-08-03T11:17:14.701Z",
+  "maxPages": 25,
+  "maxDepth": 2,
+  "allowSubdomains": false,
+  "routes": [
+    {
+      "url": "https://luminal-creative-studio.aura.build",
+      "from": "",
+      "depth": 0,
+      "status": 200,
+      "title": "Luminal Studio Creative Agency Landing Page Template",
+      "lang": "en",
+      "metaDescription": "A dark, animated creative agency landing page template for studios and digital product teams to showcase services, work, pricing, and testimonials with a bold, kinetic aesthetic.",
+      "h1": [],
+      "headings": [],
+      "counts": {
+        "links": 1,
+        "images": 1,
+        "canvas": 0,
+        "forms": 0,
+        "buttons": 2
+      },
+      "linkCount": 1,
+      "screenshot": "screenshots\\luminal-creative-studio.aura.build-b9b7b50e.png",
+      "consoleErrors": []
+    }
+  ],
+  "skipped": []
+}

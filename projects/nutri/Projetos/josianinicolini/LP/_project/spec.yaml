@@ -1,0 +1,1433 @@
+schema_version: "2.0"
+status: blocked
+
+project:
+  name: "LP Josiani Nicolini - Saude Intestinal"
+  slug: "josiani-nicolini-saude-intestinal"
+  root: "C:/Users/Administrator/Desktop/Nutri/Projetos/josianinicolini/LP"
+  type: LP_SERVICO
+  regulated_profile: HEALTH
+  stack_profile: STATIC
+  execution_mode: AUTO
+  release_target: PRODUCTION
+  audit_action: NOT_APPLICABLE
+  owner: null
+  target_date: null
+
+objective:
+  business_goal: "Converter visitantes interessados em nutricao integrativa e saude intestinal em contatos de agendamento pelo WhatsApp."
+  primary_conversion: "Clique no CTA e inicio de conversa de agendamento no WhatsApp."
+  primary_cta:
+    label: "Agendar pelo WhatsApp"
+    destination: "https://api.whatsapp.com/send?phone=5551999612970"
+    integration: whatsapp
+  secondary_conversion: "none (E-book Receitas Saudaveis: excluded)"
+  traffic_sources: [instagram_organic, meta_ads, google, referrals]
+  traffic_temperature: mixed
+  success_metric: "Conversas de agendamento iniciadas pelo WhatsApp."
+  baseline: null
+
+evidence:
+  facts:
+    - id: E-001
+      statement: "O usuario forneceu o nome publico 'Dra. Josiani Nicolini'; o uso do titulo na interface ainda exige validacao."
+      source: "Mensagem do usuario em 2026-07-26"
+      status: confirmed_input_claim_pending_title
+      allowed_uses: [brief, internal_strategy]
+    - id: E-002
+      statement: "O posicionamento fornecido e nutricao integrativa com enfase em intestino."
+      source: "Mensagem do usuario em 2026-07-26"
+      status: confirmed
+      allowed_uses: [brief, strategy]
+    - id: E-003
+      statement: "O destino do WhatsApp corresponde ao numero +55 51 99961-2970 e abriu uma pagina valida do WhatsApp."
+      source: "Usuario e validacao publica em 2026-07-26"
+      status: confirmed
+      allowed_uses: [ui, conversion]
+    - id: E-004
+      statement: "O Instagram informado e https://www.instagram.com/josianinicolini/."
+      source: "Mensagem do usuario em 2026-07-26"
+      status: confirmed_by_client
+      allowed_uses: [ui, footer]
+    - id: E-005
+      statement: "Existe um checkout Kiwify intitulado E-book Receitas Saudaveis."
+      source: "https://pay.kiwify.com.br/7Z6ymC6, consultado em 2026-07-26"
+      status: confirmed
+      allowed_uses: [internal_strategy]
+    - id: E-006
+      statement: "Snapshot informado: 1.830 posts, 10,2 mil seguidores e 879 seguindo."
+      source: "Mensagem do usuario em 2026-07-26"
+      status: volatile
+      allowed_uses: [internal_only]
+    - id: E-009
+      statement: "O prototipo da pasta-pai e estatico, usa Tailwind CDN, contem placeholders e simula sucesso sem enviar o lead."
+      source: "C:/Users/Administrator/Desktop/Nutri/Projetos/josianinicolini/index.html"
+      status: confirmed
+      allowed_uses: [preflight, risk_reference]
+    - id: E-010
+      statement: "O arquivo social trata recorrentemente de intestino, habitos, suplementacao, emagrecimento e vitalidade."
+      source: "Inventario visual do material do cliente em 2026-07-26"
+      status: confirmed_as_editorial_theme
+      allowed_uses: [audience_research, vocabulary]
+    - id: E-013
+      statement: "O atendimento ocorre online e presencialmente em Santa Cruz do Sul - RS."
+      source: "Mensagem do usuario em 2026-07-26"
+      status: confirmed_by_client
+      allowed_uses: [ui, offer, logistics]
+    - id: E-014
+      statement: "Endereco publicavel: Rua Borges de Medeiros, 534, Sala 207, Centro, Santa Cruz do Sul - RS."
+      source: "Mensagem do usuario em 2026-07-26"
+      status: confirmed_by_client
+      allowed_uses: [ui, contact]
+    - id: E-015
+      statement: "E-mail de contato: josi.n.nutri@hotmail.com."
+      source: "Mensagem do usuario em 2026-07-26"
+      status: confirmed_by_client
+      allowed_uses: [ui, contact]
+    - id: E-016
+      statement: "A oferta principal e consulta com acompanhamento."
+      source: "Decisao do usuario em 2026-07-26"
+      status: confirmed
+      allowed_uses: [strategy, ui]
+    - id: E-017
+      statement: "O publico prioritario e formado por mulheres com queixas intestinais."
+      source: "Decisao do usuario em 2026-07-26"
+      status: confirmed
+      allowed_uses: [strategy, ui]
+    - id: E-018
+      statement: "A conversao sera WhatsApp direto sem formulario, e o e-book nao aparecera nesta LP."
+      source: "Decisao do usuario em 2026-07-26"
+      status: confirmed
+      allowed_uses: [architecture, conversion, ui]
+    - id: E-023
+      statement: "A implementacao final local realiza Margem Viva em index.html e assets/css/styles.css, preserva o JavaScript existente e contem o retrato unico, dois SVGs botanicos inline originais e os quatro arquivos tipograficos previstos."
+      source: "Inspecao e QA final do PROJECT_ROOT em 2026-07-26"
+      status: implemented_qa_executed_release_blocked
+      allowed_uses: [implementation_state, qa, release]
+    - id: E-024
+      statement: "O reveal mantem opacity 1, usa somente translateY de ate 12px por 420ms e reinicializa no pageshow quando a pagina e restaurada do BFCache."
+      source: "assets/css/styles.css e assets/js/main.js, inspecionados em 2026-07-26"
+      status: confirmed_and_retested
+      allowed_uses: [motion, lifecycle, qa]
+    - id: E-025
+      statement: "O QA final de Margem Viva foi executado em http://127.0.0.1:4173/ com Edge Chromium 150 headless, Playwright Core 1.55.0, axe-core 4.10.3, Lighthouse 12.8.2, html-validate 9.7.1, csstree-validator e Node --check; nao ha P0 nem achado visual/tecnico local P1/P2 atual."
+      source: "_project/qa-report.md, 2026-07-26"
+      status: confirmed_current_final_qa_release_blocked_externally
+      allowed_uses: [qa, g4, release, implementation_state]
+    - id: E-026
+      statement: "Margem Viva realiza P13 como PATTERN, H06, B07 e Grid Fade como REBUILD e R19/R12 como PRINCIPLE, sem incorporar codigo, asset, fonte, identidade, link, pacote ou dependencia do acervo; a publish allowlist permanece inalterada."
+      source: "Inspecao final de implementacao, reuso e allowlist em 2026-07-26"
+      status: confirmed_no_archive_code_asset_or_dependency
+      allowed_uses: [visual, architecture, references, implementation_state, handoff]
+  assets:
+    - id: A-001
+      path: "C:/Users/Administrator/Desktop/Nutri/Projetos/josianinicolini/DESIGN.md"
+      owner: client_project
+      license: internal_brand_contract
+      status: READY
+      allowed_uses: [brand_planning]
+    - id: A-002
+      path: "C:/Users/Administrator/Desktop/Nutri/Projetos/josianinicolini/pp.jpg"
+      production_path: "assets/images/josiani-portrait.jpg"
+      occurrences: 1
+      owner: client
+      license: "Commercial use of Josiani's own portraits authorized by the user on 2026-07-26."
+      status: READY
+      allowed_uses: [ui, hero]
+    - id: A-003
+      path: "C:/Users/Administrator/Desktop/Nutri/Projetos/josianinicolini/529630409_18517564207014177_5381712522927729690_n.webp"
+      owner: null
+      license: null
+      status: NEEDS_EDIT_LICENSE_PENDING
+      allowed_uses: [internal_evaluation]
+    - id: A-004
+      path: "C:/Users/Administrator/Desktop/Nutri/Projetos/josianinicolini/620495930_18550642084014177_3333270858594296902_n.jpg"
+      owner: null
+      license: null
+      status: LICENSE_PENDING
+      allowed_uses: [internal_evaluation]
+    - id: A-005
+      path: "C:/Users/Administrator/Desktop/Nutri/Projetos/josianinicolini/extracted"
+      owner: mixed_or_unknown
+      license: null
+      status: INVENTORIED_RESTRICTED
+      allowed_uses: [internal_evidence_review]
+    - id: A-006
+      path: "C:/Users/Administrator/Desktop/Nutri/Projetos/josianinicolini/index.html"
+      owner: client_project
+      license: internal_reference_only
+      status: DO_NOT_USE_AS_PRODUCTION
+      allowed_uses: [risk_reference]
+    - id: A-007
+      path: "assets/fonts/cormorant-garamond-600-latin.woff2"
+      owner: upstream_font_project
+      provenance: "Official Google Fonts Cormorant Garamond v21 binary, downloaded from the recorded upstream URL and self-hosted locally."
+      version: "Google Fonts Cormorant Garamond v21; weight 600; Latin"
+      upstream_url: "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_iE9KnTOig.woff2"
+      bytes: 23396
+      sha256: "ae062b6d5ae308e7edf61b28b07b9984bbb6e961b1f34d9b2c2f4389c33f21ea"
+      license: "SIL Open Font License 1.1; local license asset A-009"
+      status: READY
+      allowed_uses: [ui, typography, publish]
+    - id: A-008
+      path: "assets/fonts/manrope-400-600-latin.woff2"
+      owner: upstream_font_project
+      provenance: "Official Google Fonts Manrope v20 binary, downloaded from the recorded upstream URL and self-hosted locally."
+      version: "Google Fonts Manrope v20; weights 400-600; Latin"
+      upstream_url: "https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2"
+      bytes: 24836
+      sha256: "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+      license: "SIL Open Font License 1.1; local license asset A-010"
+      status: READY
+      allowed_uses: [ui, typography, publish]
+    - id: A-009
+      path: "assets/fonts/OFL-Cormorant-Garamond.txt"
+      owner: upstream_font_project
+      provenance: "Local SIL OFL 1.1 license file stored with the Cormorant Garamond binary."
+      version: "SIL Open Font License 1.1"
+      bytes: 4387
+      sha256: "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956"
+      license: "SIL Open Font License 1.1"
+      status: READY
+      allowed_uses: [license_record, publish]
+    - id: A-010
+      path: "assets/fonts/OFL-Manrope.txt"
+      owner: upstream_font_project
+      provenance: "Local SIL OFL 1.1 license file stored with the Manrope binary."
+      version: "SIL Open Font License 1.1"
+      bytes: 4384
+      sha256: "e01b637272e0cbdfb240184dd98ea5cc671556d9894dae2668d92ab2c906787c"
+      license: "SIL Open Font License 1.1"
+      status: READY
+      allowed_uses: [license_record, publish]
+  claims:
+    - id: C-001
+      text: "Restauro tua vitalidade, saude e autoestima tratando a verdadeira raiz de tudo."
+      evidence_ids: [E-001, E-002]
+      reviewer: null
+      status: CLAIM_PENDING
+      allowed_routes: []
+    - id: C-002
+      text: "Terapeuta Ortobiomolecular"
+      evidence_ids: [E-001]
+      reviewer: null
+      status: CLAIM_PENDING_CREDENTIAL
+      allowed_routes: []
+    - id: C-003
+      text: "Uso profissional do titulo Dra."
+      evidence_ids: [E-001]
+      reviewer: null
+      status: CLAIM_PENDING_CREDENTIAL
+      allowed_routes: []
+    - id: C-004
+      text: "Nutricao Funcional Integrativa como profissao ou especialidade formal."
+      evidence_ids: [E-002, E-010]
+      reviewer: null
+      status: CLAIM_PENDING_SCOPE
+      allowed_routes: []
+    - id: C-005
+      text: "CRN 7884"
+      evidence_ids: []
+      reviewer: null
+      status: CLAIM_PENDING_OFFICIAL_VERIFICATION
+      allowed_routes: []
+    - id: C-006
+      text: "Conclusao de pos-graduacao em adequacao nutricional e manutencao da homeostase."
+      evidence_ids: []
+      reviewer: null
+      status: CLAIM_PENDING_CERTIFICATE
+      allowed_routes: []
+    - id: C-007
+      text: "Resultados corporais ou clinicos em prazo fixo, incluindo perdas de peso/gordura e sintomas zerados."
+      evidence_ids: []
+      reviewer: null
+      status: FORBIDDEN
+      allowed_routes: []
+    - id: C-008
+      text: "Intestino como causa ou resolucao de ansiedade, exaustao ou sintomas mentais."
+      evidence_ids: []
+      reviewer: null
+      status: FORBIDDEN_FOR_THIS_LP
+      allowed_routes: []
+    - id: C-009
+      text: "Remissao de endometriose/autoimune ou resolucao de dores."
+      evidence_ids: []
+      reviewer: null
+      status: FORBIDDEN
+      allowed_routes: []
+    - id: C-010
+      text: "Claims sobre desparasitacao, sindrome fungica, leaky gut, toxinas ou Mounjaro."
+      evidence_ids: [E-010]
+      reviewer: null
+      status: OUT_OF_SCOPE_CLAIM_PENDING
+      allowed_routes: []
+    - id: C-011
+      text: "Atuacao com avaliacao de exames de sangue e planos de tratamento."
+      evidence_ids: [E-016]
+      reviewer: "Josiani Nicolini (designated; final review pending)"
+      status: CLAIM_PENDING_SCOPE_REPHRASED_CONSERVATIVELY
+      allowed_routes: []
+  hypotheses:
+    - id: H-001
+      description: "O publico prioritario e composto por mulheres adultas com queixas intestinais."
+      impact: "Define a promessa, o hero e a qualificacao."
+      owner: project
+      status: validated
+    - id: H-002
+      description: "O trafego sera misto, vindo de Instagram, Meta, Google e indicacoes."
+      impact: "Exige clareza para publico frio sem perder a objetividade para publico morno."
+      owner: project
+      status: validated_mixed_traffic
+    - id: H-003
+      description: "A conversao usara CTA direto para o WhatsApp, sem formulario e sem mensagem clinica pre-preenchida."
+      impact: "Reduz friccao, privacidade e risco tecnico."
+      owner: project
+      status: validated
+  unknowns:
+    - id: U-001
+      description: "Profissao, CRN completo/regiao e forma publicavel."
+      impact: "Bloqueia autoridade, footer, schema e publicacao."
+      owner: client
+      status: open
+    - id: U-002
+      description: "Fundamento para uso de Dra. e comprovacao/escopo de Terapeuta Ortobiomolecular."
+      impact: "Bloqueia claims profissionais."
+      owner: client_and_health_reviewer
+      status: resolved_by_omission
+    - id: U-003
+      description: "Oferta, entregaveis, processo, duracao, frequencia, suporte e limites."
+      impact: "Bloqueia estrategia, arquitetura e copy."
+      owner: client
+      status: accepted_omission
+    - id: U-004
+      description: "Modalidade, cidade, endereco e area atendida."
+      impact: "Bloqueia logistica e SEO local."
+      owner: client
+      status: resolved
+    - id: U-005
+      description: "Publico e problema prioritario."
+      impact: "Bloqueia promessa segura e hierarquia."
+      owner: client
+      status: resolved
+    - id: U-006
+      description: "Fonte/temperatura do trafego, metrica de sucesso e baseline."
+      impact: "Afeta densidade e mensuracao."
+      owner: client
+      status: partial_baseline_unknown
+    - id: U-007
+      description: "Autenticidade, autoria, cessao e direito de uso dos retratos."
+      impact: "Bloqueia selecao fotografica."
+      owner: client
+      status: resolved_for_client_portraits
+    - id: U-008
+      description: "Nome do revisor tecnico e aprovador dos claims de saude."
+      impact: "Bloqueia G1 e release HEALTH."
+      owner: client
+      status: reviewer_designated_final_review_pending
+    - id: U-009
+      description: "Controlador, politica, retencao e operacao de tratamento ligada ao WhatsApp."
+      impact: "Bloqueia conformidade e handoff."
+      owner: client
+      status: open
+    - id: U-010
+      description: "Dominio, hospedagem e canonical final."
+      impact: "Bloqueia SEO e validacao de deploy."
+      owner: client
+      status: open
+    - id: U-011
+      description: "Papel do e-book nesta LP."
+      impact: "Pode dividir a conversao primaria."
+      owner: client
+      status: resolved_ebook_excluded
+    - id: U-012
+      description: "Preco, convenios, cancelamento e disponibilidade, caso sejam exibidos."
+      impact: "Bloqueia secoes comerciais se incluidas."
+      owner: client
+      status: accepted_omission_no_price_invented
+    - id: U-013
+      description: "O telefone de contato terminado em 2978 conflita com o WhatsApp validado terminado em 2970."
+      impact: "O numero 2978 sera omitido para evitar contato incorreto."
+      owner: client
+      status: open_nonblocking_by_omission
+    - id: U-014
+      description: "A revisao final da copy de saude por Josiani ainda nao ocorreu."
+      impact: "Bloqueia publicacao, mas nao a implementacao local."
+      owner: client_health_reviewer
+      status: open
+  forbidden:
+    - id: F-001
+      description: "Relatorios antropometricos, nomes, medidas, sintomas e demais dados de pacientes presentes no acervo."
+      impact: "Risco grave de privacidade e compliance."
+      owner: project
+      status: excluded_from_project_and_publish_root
+    - id: F-002
+      description: "Antes/depois e comparacoes corporais do acervo."
+      impact: "Promessa implicita, consentimento e risco etico."
+      owner: project
+      status: excluded_from_project_and_publish_root
+    - id: F-003
+      description: "Fotos de menores, familiares e terceiros sem finalidade e autorizacao documentadas."
+      impact: "Direitos de imagem e falta de relevancia estrategica."
+      owner: project
+      status: excluded_from_project_and_publish_root
+    - id: F-004
+      description: "Metricas, depoimentos, prazos, precos, credenciais e resultados inventados."
+      impact: "Engano e bloqueio P0."
+      owner: project
+      status: prohibited
+
+brand:
+  public_name: "Josiani Nicolini"
+  profession: null
+  specialty: null
+  professional_registration: null
+  positioning: "Nutricao integrativa com enfase em saude intestinal."
+  voice:
+    attributes: [clara, firme, proxima, investigativa, sem_culpa]
+    use:
+      - "Explicar o processo sem jargao desnecessario."
+      - "Falar com voce sem infantilizar."
+      - "Enfatizar investigacao, estrategia e acompanhamento."
+    avoid:
+      - "Promessa garantida ou prazo corporal."
+      - "Terrorismo alimentar, culpa, medo ou urgencia falsa."
+      - "Causa unica para sintomas complexos."
+  existing_tokens:
+    source: "josiani-design-system"
+    direction: "editorial botanico-clinico"
+    color_bg: "oklch(97% 0.012 88)"
+    color_surface: "oklch(99% 0.006 88)"
+    color_fg: "oklch(29% 0.045 125)"
+    color_muted: "oklch(51% 0.026 105)"
+    color_border: "oklch(86% 0.022 91)"
+    color_accent: "oklch(68% 0.115 82)"
+    font_display: "Cormorant Garamond"
+    font_body: "Manrope"
+  assets_root: "C:/Users/Administrator/Desktop/Nutri/Projetos/josianinicolini"
+
+audience:
+  primary: "Mulheres adultas com queixas intestinais que buscam consulta e acompanhamento individual."
+  secondary: null
+  excluded: "Pessoas buscando diagnostico pela pagina, promessa de emagrecimento rapido ou orientacao de emergencia."
+  context: "Publico misto: parte ja acompanha Josiani; parte chega por Instagram organico, anuncios Meta, Google ou indicacoes."
+  awareness_stage: "problem-aware to service-aware"
+  recognized_problem: "Desconfortos intestinais e dificuldade de encontrar uma orientacao que considere rotina e contexto individual."
+  underlying_problem: null
+  desired_outcome: "Compreender como o atendimento funciona e ter um proximo passo direto para iniciar o agendamento."
+  prior_attempts: []
+  objections: []
+  vocabulary:
+    - "queixas intestinais"
+    - "consulta"
+    - "acompanhamento individual"
+    - "contexto"
+    - "rotina"
+    - "orientacao individualizada"
+  accessibility_needs: ["Baseline operacional WCAG 2.2 AA"]
+
+offer:
+  name: "Consulta e acompanhamento individual"
+  category: "atendimento individual de saude"
+  description: "Consulta e acompanhamento individual para mulheres adultas com queixas intestinais, online ou presencial em Santa Cruz do Sul - RS."
+  mechanism: "Escuta do contexto, consideracao de informacoes e exames ja disponiveis dentro do escopo do atendimento, orientacao individualizada e acompanhamento."
+  deliverables:
+    - "Consulta individual para apresentar queixas, rotina e contexto."
+    - "Consideracao das informacoes e dos exames ja disponiveis dentro do escopo do atendimento."
+    - "Orientacao individualizada a partir do contexto apresentado."
+    - "Continuidade do acompanhamento conversada conforme a necessidade apresentada no atendimento."
+  process:
+    - "Iniciar o contato de agendamento pelo WhatsApp e informar a modalidade preferida."
+    - "Participar da consulta e apresentar queixas, rotina e informacoes consideradas relevantes."
+    - "Alinhar as orientacoes e a continuidade conforme a necessidade apresentada no atendimento."
+  duration: null
+  modality: "online e presencial em Santa Cruz do Sul - RS"
+  support: null
+  price:
+    display: false
+    amount: null
+    installments: null
+    recurrence: null
+  guarantee_or_cancellation: null
+  limitations:
+    - "A landing page nao diagnostica nem promete resultados."
+    - "A pagina nao atribui queixas a uma causa unica."
+    - "A pagina nao oferece orientacao de urgencia ou emergencia."
+  for_whom:
+    - "Mulheres adultas com queixas intestinais."
+    - "Quem busca consulta e acompanhamento individual."
+    - "Quem prefere atendimento online ou presencial em Santa Cruz do Sul - RS."
+  not_for_whom:
+    - "Quem busca diagnostico ou explicacao de causa pela pagina."
+    - "Quem busca promessa de emagrecimento rapido ou resultado garantido."
+    - "Quem precisa de orientacao de urgencia ou emergencia."
+
+message:
+  core_promise: "Apresentar um atendimento individual, explicar como ele comeca e oferecer um proximo passo direto para o agendamento."
+  supporting_message: "O atendimento considera o contexto, a rotina e as informacoes e exames ja disponiveis dentro do escopo da consulta, com orientacao individualizada e continuidade alinhada conforme a necessidade apresentada."
+  differentiators:
+    - "Escuta do contexto antes da orientacao."
+    - "Consideracao conjunta das informacoes disponiveis, sem atribuir as queixas a uma causa unica."
+    - "Orientacao individualizada e continuidade conversada no atendimento."
+  proof_hierarchy:
+    - "Processo demonstravel da consulta e do acompanhamento."
+    - "Modalidades online e presencial confirmadas."
+    - "Endereco e canal de contato confirmados."
+  objection_responses:
+    - "O atendimento pode ser online ou presencial em Santa Cruz do Sul - RS."
+    - "O agendamento comeca por um link direto ao WhatsApp, sem formulario ou mensagem predefinida."
+    - "Informacoes e exames ja disponiveis podem ser considerados dentro do escopo do atendimento."
+    - "A pagina nao diagnostica, nao define causas e nao promete resultados."
+  trust_microcopy:
+    - "Contato direto, sem formulario e sem mensagem predefinida."
+    - "Voce escolhe o que escrever ao abrir o WhatsApp."
+    - "Esta pagina apresenta o atendimento e nao substitui atendimento apropriado."
+
+architecture:
+  model: "LP_SERVICO A"
+  rationale: "Uma oferta de consulta e acompanhamento individual, um publico prioritario e uma unica conversao por WhatsApp; a ordem macro aprovada permanece e P13 informa somente macroarquitetura e variacao de ritmo, sem introduzir prova, credencial, detalhe comercial, markup ou dependencia."
+  pages:
+    - path: "/"
+      purpose: "Apresentar o atendimento e levar ao agendamento pelo WhatsApp."
+      primary_keyword: null
+      primary_cta: "Agendar pelo WhatsApp"
+      sections:
+        - id: "jn-skip-link"
+          purpose: "Permitir acesso rapido ao conteudo principal por teclado."
+          question: "Como chegar diretamente ao conteudo principal?"
+          evidence_ids: []
+          cta: null
+          mobile_order: 1
+        - id: "jn-site-header"
+          purpose: "Identificar Josiani, oferecer navegacao curta por ancoras reais no desktop e uma acao imediata."
+          question: "Quem conduz o atendimento, como percorrer a pagina e como iniciar o contato?"
+          evidence_ids: [E-002, E-003, E-018]
+          cta: "Agendar pelo WhatsApp"
+          mobile_order: 2
+        - id: "jn-hero"
+          purpose: "Apresentar oferta, publico, modalidade, abordagem e proximo passo."
+          question: "Este atendimento e para mim e o que devo fazer agora?"
+          evidence_ids: [E-003, E-013, E-016, E-017, E-018]
+          cta: "Agendar pelo WhatsApp"
+          mobile_order: 3
+        - id: "jn-logistics-strip"
+          purpose: "Antecipar formato e localizacao sem simular prova de autoridade."
+          question: "Qual e o formato do atendimento e onde ele acontece?"
+          evidence_ids: [E-013, E-016]
+          cta: null
+          mobile_order: 4
+        - id: "jn-identification"
+          purpose: "Reconhecer as duvidas da visitante sem culpa, medo ou diagnostico."
+          question: "A pagina compreende minha situacao sem presumir uma causa?"
+          evidence_ids: [E-017]
+          cta: null
+          mobile_order: 5
+        - id: "jn-approach"
+          purpose: "Explicar a abordagem por contexto e os tres pilares do atendimento."
+          question: "Como o atendimento considera minhas queixas sem respostas automaticas?"
+          evidence_ids: [E-016]
+          cta: null
+          mobile_order: 6
+        - id: "jn-process"
+          purpose: "Explicar o inicio do atendimento em tres etapas reais."
+          question: "Como o atendimento comeca?"
+          evidence_ids: [E-003, E-013, E-016, E-018]
+          cta: null
+          mobile_order: 7
+        - id: "jn-fit-deliverables"
+          purpose: "Concretizar o que faz parte do atendimento e qualificar o publico sob o H3 'Para quem é'."
+          question: "O que encontro no atendimento e para quem ele foi pensado?"
+          evidence_ids: [E-013, E-016, E-017]
+          cta: null
+          mobile_order: 8
+        - id: "jn-about"
+          purpose: "Apresentar a postura de Josiani em uma secao tipografica, sem segunda imagem nem credenciais ainda nao validadas."
+          question: "Quem conduz o atendimento e qual postura orienta o processo?"
+          evidence_ids: [E-002, E-016]
+          cta: null
+          mobile_order: 9
+        - id: "jn-modalities"
+          purpose: "Informar modalidades, endereco presencial e e-mail."
+          question: "Posso ser atendida online e onde acontece o presencial?"
+          evidence_ids: [E-013, E-014, E-015]
+          cta: null
+          mobile_order: 10
+        - id: "jn-faq"
+          purpose: "Responder seis duvidas confirmadas com disclosure nativo."
+          question: "O que preciso saber antes de iniciar o agendamento?"
+          evidence_ids: [E-003, E-013, E-014, E-016, E-017, E-018]
+          cta: null
+          mobile_order: 11
+        - id: "jn-final-cta"
+          purpose: "Recapitular oferta, publico e modalidades antes da acao final."
+          question: "Qual e o proximo passo se o atendimento fizer sentido para mim?"
+          evidence_ids: [E-003, E-013, E-016, E-017, E-018]
+          cta: "Agendar pelo WhatsApp"
+          mobile_order: 12
+        - id: "jn-site-footer"
+          purpose: "Encerrar com identificacao, contato, privacidade factual e limites do conteudo."
+          question: "Como encontro o atendimento e o que acontece ao seguir para o WhatsApp?"
+          evidence_ids: [E-003, E-014, E-015, E-018]
+          cta: null
+          mobile_order: 13
+  mobile_order_notes:
+    - "A ordem do DOM e a ordem de leitura mobile seguem os 13 componentes do blueprint, sem reordenacao de conteudo por CSS."
+    - "No hero: assinatura no header, eyebrow, H1, body, CTA, microcopy e retrato; a proposta e o CTA precedem a imagem."
+    - "Todas as listas, pilares, etapas, entregas, modalidades e itens de FAQ fluem em uma coluna em 320px e 375px; nenhum carrossel."
+    - "O processo preserva 01, 02 e 03 em ordem e nao recebe CTA; as tres ocorrencias permanecem no header, hero e fechamento."
+    - "Nao usar CTA sticky, 100vh, pinning ou duas colunas comprimidas em baixa altura ou landscape."
+    - "A nav desktop pode ser ocultada no mobile sem hamburger, drawer ou JavaScript; skip link, assinatura, CTA e leitura sequencial preservam toda funcao essencial."
+    - "Ornamentos botanicos sao removidos antes de reduzir texto, padding necessario ou alvos de 44px; nenhuma largura pode criar scroll horizontal."
+    - "O H1 factual longo usa conscientemente 4-6 linhas em mobile, sem cair abaixo de 40px; foram observadas 5 linhas em 320px e 375px."
+  navigation:
+    type: "anchor"
+    landmark_label: "Navegação principal"
+    desktop: visible
+    mobile: "may_be_hidden_without_menu_js"
+    requires_javascript: false
+    items:
+      - label: "Abordagem"
+        href: "#abordagem"
+      - label: "Como funciona"
+        href: "#processo"
+      - label: "Atendimento"
+        href: "#atendimento"
+      - label: "Dúvidas"
+        href: "#faq"
+  footer_requirements:
+    - "Nome Josiani Nicolini."
+    - "Endereco presencial confirmado."
+    - "E-mail de contato confirmado."
+    - "Transparencia sobre redirecionamento ao WhatsApp e ausencia de formulario, analytics e pixels."
+    - "Limites: sem diagnostico, promessa de resultado ou substituicao de atendimento apropriado."
+    - "Sem profissao, CRN, telefone divergente ou link para politica inexistente."
+
+visual:
+  route: "Margem Viva"
+  secondary_influence: null
+  fingerprint:
+    authority: "Humana-clinica"
+    temperature: "Quente controlada"
+    energy: "3 de 5"
+    density: "Editorial com ritmo variavel"
+    expression: "Fotografica-editorial com botanica linear original"
+  concept: "Uma publicacao clinica cuja margem ganha vida: campos tipograficos, rails finos, arcos amplos e linework botanico original conduzem o olhar pelas bordas, enquanto o centro preserva leitura, evidencia e conversao; o retrato aproxima sem funcionar como prova clinica."
+  composition:
+    rhythm: "Variavel: faixa operacional compacta, identificacao como pausa, splits assimetricos e processo como bloco de maior densidade; nao repetir o mesmo grid entre abordagem, processo e modalidades."
+    desktop:
+      - "Header editorial com assinatura, nav de quatro ancoras reais e CTA canonico."
+      - "Hero assimetrico com copy em campo proprio antes do retrato dominante, alto e recortado; legenda operacional e linework fora do rosto."
+      - "Faixa logistica oliva estatica; identificacao tipografica; abordagem em split com pilares empilhados."
+      - "Processo assinatura: campo oliva, Grid Fade e rails estaticos, titulo grande a esquerda e exatamente tres cards marfim discretamente deslocados a direita."
+      - "Atendimento/adequacao em split; Sobre com grande gesto tipografico; modalidades em dois paineis; FAQ nativo numerado; CTA final em duas zonas."
+    mobile:
+      - "Mobile-first desde 320px, uma coluna, DOM preservado, CTA antes do retrato, body 16px ou maior e alvos de 44px."
+      - "Nav pode ser ocultada sem menu JS; ornamentos e rails sao removiveis; nenhum overflow horizontal ou dependencia de hover."
+      - "Baixa altura permanece em fluxo normal, sem 100vh, pinning ou sticky obrigatorio."
+      - "H1 factual em 40-48px e 4-6 linhas; 5 linhas observadas em 320px e 375px, com primeira dobra ajustada sem reduzir abaixo de 40px."
+    continuous_motion: "none; marquee rejected because it adds no information and creates unnecessary continuous movement"
+    color_distribution: "70-90% neutral ivory/surfaces; olive as structure; gold at no more than 5% and two visible accents per viewport"
+  tokens:
+    color:
+      bg: "oklch(97% 0.012 88)"
+      surface: "oklch(99% 0.006 88)"
+      fg: "oklch(29% 0.045 125)"
+      muted: "oklch(51% 0.026 105)"
+      muted_srgb_fallback: "#60645b"
+      border: "oklch(86% 0.022 91)"
+      accent: "oklch(68% 0.115 82)"
+      success: "oklch(48% 0.095 145)"
+      danger: "oklch(52% 0.14 28)"
+      surface_alt: "oklch(94% 0.018 102)"
+      primary: "var(--fg)"
+      on_primary: "var(--bg)"
+      on_accent: "var(--fg)"
+      focus: "var(--fg)"
+      warning: "var(--accent)"
+    typography:
+      font_display: '"Cormorant Garamond", Georgia, serif'
+      font_body: '"Manrope", "Segoe UI", sans-serif'
+      font_mono: '"IBM Plex Mono", Consolas, monospace'
+      h1_desktop: "52-56px"
+      h1_mobile: "40-48px; 4-6 lines for the long factual heading; 5 observed at 320px and 375px"
+      h2: "32-40px"
+      h3: "22-26px"
+      body: "16-18px / 1.6; max-width 65ch"
+      labels: "12-13px; signature label 12px; weight 600; uppercase; tracking 0.08em; accessible name preserved"
+      display_weight: 600
+      body_weights: [400, 600]
+      visible_families: 2
+    spacing:
+      scale: ["4px", "8px", "12px", "16px", "24px", "32px", "48px", "64px", "96px", "128px"]
+      section_mobile: "48-96px, variable by section role"
+      section_desktop: "64-128px, variable by section role"
+      control_height_preferred: "52px"
+      touch_target_minimum: "44px"
+    radius:
+      sm: "12px"
+      md: "20px"
+      lg: "32px"
+    shadow:
+      soft: "0 18px 50px oklch(29% 0.045 125 / 0.1)"
+  grid:
+    max_width: "1200px"
+    columns:
+      "320-767px": 4
+      "768-1023px": 8
+      ">=1024px": 12
+    gutter:
+      "320-767px": "16px"
+      "768-1023px": "24px"
+      ">=1024px": "24-32px"
+    side_margin:
+      "320-767px": "16-20px"
+      "768-1023px": "32px"
+      ">=1024px": "40-48px"
+    text_span: "5-7 columns maximum"
+  photography:
+    direction: "Um unico retrato autoral, quente e natural; preservar pele, luz, profundidade, postura e identidade, sem duotone, desfoque artificial, recorte de silhueta, retoque que altere a pessoa ou conteudo sobre o rosto."
+    required_shots:
+      - asset_id: A-002
+        source: "C:/Users/Administrator/Desktop/Nutri/Projetos/josianinicolini/pp.jpg"
+        production_path: "assets/images/josiani-portrait.jpg"
+        use: "Uma unica ocorrencia no hero."
+        alt: "Retrato de Josiani Nicolini."
+        desktop_crop: "Arco assimetrico proximo de 4:5, preservando rosto, cabelo e gesto corporal."
+        mobile_crop: "Arco proximo de 1:1 e recorte pouco agressivo depois do CTA."
+        fallback: "Recorte retangular com radius-lg quando a mascara nao for suportada; oferta e CTA independem da imagem."
+        restrictions: "Sem texto incorporado ou sobre o rosto, stock, pacientes, terceiros, antes/depois, segunda ocorrencia ou imagens de R19/R12."
+  icon_family: "none; botanical linework is ornament, not iconography"
+  ornaments:
+    type: "original_linear_botanical_linework"
+    locations: [hero_edges, final_cta_edges]
+    inline_svg_count: 2
+    semantics: "decorative; aria-hidden=true; focusable=false; pointer-events=none"
+    restrictions: "Never a logo, symbol, seal, icon, proof or content-bearing element; never behind text or face; no copied leaf or asset."
+    fallback: "Remove entirely before reducing content, spacing or touch targets; no functional impact."
+  motion_level: M1_SUBTLE
+  motion_signature: "Reveal com opacity fixa em 1 e somente translateY de ate 12px ate 0 em 420ms com curva suave; hover de ate 2px em 180ms; conteudo sempre visivel, lifecycle restaurado em pageshow para BFCache e movimento nao essencial removido em prefers-reduced-motion."
+
+references:
+  selection_ceiling: "1 primary_page + 1 hero + 1 block + 1 effect + 2 visual_images; ceiling fully allocated"
+  code_or_asset_copied: false
+  primary_page:
+    id: P13
+    source: "Modelos & Codigos/Páginas/Página 13/Página 13/index.html"
+    catalog_status: BASE
+    reuse_level: PATTERN
+  hero:
+    id: H06
+    source: "Modelos & Codigos/HERO/hero06/hero6"
+    catalog_status: ADAPT
+    reuse_level: REBUILD
+  block:
+    id: B07
+    source: "Modelos & Codigos/Blocos/blocos premium.txt:1682-1950"
+    catalog_status: REBUILD
+    reuse_level: REBUILD
+  effect:
+    id: Grid_Fade_Background
+    source: "Modelos & Codigos/Efeitos/efeitos.txt:1470-1622"
+    catalog_status: BASE
+    reuse_level: REBUILD
+  visual_images: [R19, R12]
+  decisions:
+    - source: "P13 - Modelos & Codigos/Páginas/Página 13/Página 13/index.html"
+      role: "primary_page_macroarchitecture"
+      catalog_status: BASE
+      reuse_level: PATTERN
+      extracted:
+        - "Macroarquitetura de landing page."
+        - "Variacao de ritmo entre secoes, sem mudar a ordem macro aprovada do projeto."
+      rejected:
+        - "Markup, CSS, JavaScript, fontes proprietarias, claims, metricas, links e dependencias."
+        - "Copy, identidade, componentes, animacoes e proporcoes literais."
+      provenance: "UNKNOWN; item local do acervo sem procedencia documentada."
+      license: UNKNOWN
+      dependencies: []
+      fallback: "Usar a ordem macro vigente e os componentes proprios definidos pelo brief e pela matriz LP_SERVICO A."
+      performance_cost: "none; no code, asset, font or runtime imported"
+      validation:
+        - "Nenhum markup, seletor, script, fonte, texto, link ou dependencia de P13 no publish root."
+        - "Copy factual, ordem macro e tres CTAs permanecem inalterados."
+    - source: "H06 - Modelos & Codigos/HERO/hero06/hero6"
+      role: "hero_composition"
+      catalog_status: ADAPT
+      reuse_level: REBUILD
+      extracted:
+        - "Retrato dominante."
+        - "Assimetria."
+        - "Campo proprio de copy."
+      rejected:
+        - "Imagens, codigo, Google Fonts, cursor removido, scroll lock, 100svh, RAF/reveal interativo e CTA href=#."
+        - "Copy, identidade, beneficios e comportamento de produto."
+      provenance: "UNKNOWN; item local do acervo sem procedencia documentada."
+      license: UNKNOWN
+      dependencies: []
+      fallback: "Split original do projeto; mascara sem suporte cai para retrato retangular com radius-lg, sempre depois do CTA no DOM."
+      performance_cost: "low CSS-only composition; existing local portrait remains the LCP candidate"
+      validation:
+        - "Uma unica ocorrencia do retrato A-002; nenhum asset, fonte, codigo, cursor customizado, RAF, lock, 100svh ou link vazio de H06."
+        - "Nenhum conteudo cobre o rosto e a pessoa nao e alterada."
+    - source: "B07 - Modelos & Codigos/Blocos/blocos premium.txt:1682-1950"
+      role: "signature_process_block"
+      catalog_status: REBUILD
+      reuse_level: REBUILD
+      extracted:
+        - "Titulo grande a esquerda."
+        - "Cards/etapas a direita."
+        - "Rails finos."
+      rejected:
+        - "GSAP, ScrollTrigger, SplitText, scrub, offsets, rotacoes, quatro etapas e estilo azul."
+        - "Copy, seletores, tokens, dimensoes e comportamento literal."
+      provenance: "UNKNOWN; prompt/spec local do acervo sem procedencia documentada."
+      license: UNKNOWN
+      dependencies: []
+      fallback: "Titulo seguido por lista linear das tres etapas reais; rails e deslocamentos podem desaparecer sem perda."
+      performance_cost: "low; semantic HTML and static scoped CSS only"
+      validation:
+        - "Exatamente tres etapas reais em ordem 01-03; nenhum plugin, CDN, scrub, rotacao, quarta etapa ou azul residual."
+        - "Conteudo completo em fluxo linear sem JavaScript e reduced motion."
+    - source: "Grid Fade Background - Modelos & Codigos/Efeitos/efeitos.txt:1470-1622"
+      role: "process_static_background"
+      catalog_status: BASE
+      reuse_level: REBUILD
+      extracted:
+        - "Grade fina estatica com fade, escopada exclusivamente ao processo."
+      rejected:
+        - "Tokens globais, dimensoes rigidas, snippet literal e elipse original."
+        - "Qualquer JavaScript, dependencia, secao adicional ou efeito fora do processo."
+      provenance: "UNKNOWN; snippet local do acervo sem procedencia documentada."
+      license: UNKNOWN
+      dependencies: []
+      fallback: "Campo oliva solido se mascara ou grade nao forem suportadas."
+      performance_cost: "low; static scoped CSS with no runtime"
+      validation:
+        - "Nenhum :root, classe literal, altura fixa, elipse, JS ou dependencia do snippet."
+        - "Texto e cards permanecem legiveis quando o fundo nao renderiza e em forced colors."
+    - source: "R19 - Ref Design/9bdcdc243486563.69829c5ff022c.webp"
+      role: "visual_principle"
+      catalog_status: REFERENCE
+      reuse_level: PRINCIPLE
+      source_group: RD-243486563
+      extracted:
+        - "Equilibrio clinico."
+        - "Hero split."
+        - "Faixa operacional."
+        - "Fluxo de leitura."
+      rejected:
+        - "Identidade, foto, badges, metricas, depoimentos e ticker animado."
+        - "Pixels, texto, moldura, proporcao exata, midia e codigo."
+      provenance: "UNKNOWN; REFERENCE do grupo RD-243486563, sem procedencia documentada."
+      license: UNKNOWN
+      dependencies: []
+      fallback: "Composicao original no sistema visual Josiani e na arquitetura aprovada."
+      performance_cost: "none; visual principle only"
+      validation:
+        - "Nenhum pixel, texto, retrato, badge, metrica, depoimento, ticker, identidade, asset, componente ou codigo de R19 no publish root."
+    - source: "R12 - Ref Design/653033239714361.692f9652a53e7.webp"
+      role: "visual_principle"
+      catalog_status: REFERENCE
+      reuse_level: PRINCIPLE
+      source_group: RD-239714361
+      extracted:
+        - "Materialidade marfim, oliva e dourada."
+        - "Botanica concentrada nas bordas."
+        - "Fotografia integrada e areas editoriais."
+      rejected:
+        - "Assets, folhas copiadas, multiplas fotos, credenciais, depoimentos e claims."
+        - "Identidade, composicao literal, texto, midia e codigo."
+      provenance: "UNKNOWN; REFERENCE do grupo RD-239714361, sem procedencia documentada."
+      license: UNKNOWN
+      dependencies: []
+      fallback: "Materialidade dos tokens oficiais e linework botanico original, removivel sem perda funcional."
+      performance_cost: "none; visual principle only"
+      validation:
+        - "Nenhum pixel, asset, folha, foto, credencial, depoimento, claim, identidade, componente ou codigo de R12 no publish root."
+        - "Ornamentos de Margem Viva sao originais, decorativos, aria-hidden e nunca logo/simbolo."
+
+technical:
+  framework: "HTML5 semantico, CSS nativo e JavaScript ES module sem imports"
+  language: "HTML5, CSS and JavaScript (ES modules)"
+  package_manager: null
+  build_command: null
+  test_command: null
+  lint_command: null
+  deploy_target: null
+  publish_root: "PROJECT_ROOT"
+  structure:
+    document: "index.html"
+    stylesheet: "assets/css/styles.css"
+    script: "assets/js/main.js"
+    portrait: "assets/images/josiani-portrait.jpg"
+    font_display: "assets/fonts/cormorant-garamond-600-latin.woff2"
+    font_body: "assets/fonts/manrope-400-600-latin.woff2"
+    font_display_license: "assets/fonts/OFL-Cormorant-Garamond.txt"
+    font_body_license: "assets/fonts/OFL-Manrope.txt"
+    internal_artifacts: "_project/**"
+    fonts_directory: "assets/fonts"
+  publish_allowlist:
+    - "index.html"
+    - "assets/css/styles.css"
+    - "assets/js/main.js"
+    - "assets/images/josiani-portrait.jpg"
+    - "assets/fonts/cormorant-garamond-600-latin.woff2"
+    - "assets/fonts/manrope-400-600-latin.woff2"
+    - "assets/fonts/OFL-Cormorant-Garamond.txt"
+    - "assets/fonts/OFL-Manrope.txt"
+  deploy_exclude:
+    - "_project/**"
+    - ".env*"
+    - "**/*.log"
+    - "logs/**"
+    - "**/*.bak"
+    - "**/*.backup"
+    - "**/*~"
+    - "evidence/**"
+    - "**/evidence/**"
+    - "_evidence/**"
+    - "**/*.map"
+    - "**/tmp/**"
+    - "**/dumps/**"
+    - "**/reports/**"
+  subpath_support: true
+  paths_relative: true
+  motion_stack: "CSS + IntersectionObserver"
+  dependencies:
+    - name: "Cormorant Garamond local WOFF2"
+      version: "Google Fonts Cormorant Garamond v21; weight 600; Latin"
+      direct: true
+      source: "assets/fonts/cormorant-garamond-600-latin.woff2"
+      provenance: "Official upstream URL: https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_iE9KnTOig.woff2"
+      bytes: 23396
+      license: "SIL Open Font License 1.1 in assets/fonts/OFL-Cormorant-Garamond.txt; license SHA-256 60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956"
+      integrity: "SHA-256 ae062b6d5ae308e7edf61b28b07b9984bbb6e961b1f34d9b2c2f4389c33f21ea"
+      purpose: "Load the display family locally with font-display swap."
+      decision: "Self-hosted direct local dependency; binary and license are included in the publish allowlist."
+      risk: "No third-party runtime request; a missing local file falls back to Georgia, serif."
+      fallback: "Georgia, serif"
+    - name: "Manrope local WOFF2"
+      version: "Google Fonts Manrope v20; weights 400-600; Latin"
+      direct: true
+      source: "assets/fonts/manrope-400-600-latin.woff2"
+      provenance: "Official upstream URL: https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2"
+      bytes: 24836
+      license: "SIL Open Font License 1.1 in assets/fonts/OFL-Manrope.txt; license SHA-256 e01b637272e0cbdfb240184dd98ea5cc671556d9894dae2668d92ab2c906787c"
+      integrity: "SHA-256 a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+      purpose: "Load the body and interface family locally with font-display swap."
+      decision: "Self-hosted direct local dependency; binary and license are included in the publish allowlist."
+      risk: "No third-party runtime request; a missing local file falls back to Segoe UI, Arial, sans-serif."
+      fallback: '"Segoe UI", Arial, sans-serif'
+  integrations:
+    form:
+      provider: null
+      processing_operation_ids: []
+    whatsapp:
+      provider: WhatsApp
+      processing_operation_ids: [OP-001]
+    scheduling:
+      provider: null
+      processing_operation_ids: []
+    checkout:
+      provider: null
+      processing_operation_ids: []
+    analytics:
+      provider: null
+      processing_operation_ids: []
+    consent:
+      provider: null
+      processing_operation_ids: []
+  progressive_enhancement:
+    no_js: "Todo conteudo, links, quatro ancoras desktop quando exibidas, CTA e FAQ permanecem visiveis e funcionais; mobile nao depende de menu JavaScript e o script apenas aprimora o reveal M1."
+    reduced_motion: "Nao inicializar o observer e remover deslocamentos, reveals e transicoes nao essenciais; foco e disclosures permanecem imediatos."
+    bfcache: "pagehide desconecta o observer e limpa estados; pageshow com event.persisted reinicializa o reveal de forma idempotente."
+    media_fallback: "Retrato local com dimensoes reservadas, alt e fallback retangular para a mascara; Grid Fade cai para oliva solido e linework pode desaparecer; oferta e conversao independem da imagem/decoracao e continuam legiveis com as fontes fallback."
+  performance_budget:
+    lcp_seconds: 2.5
+    cls: 0.1
+    inp_ms: 200
+    initial_js_gzip_kb: 150
+    initial_page_weight_kb: 1500
+    max_font_families: 2
+    signature_effects: 1
+
+seo:
+  default_index: false
+  default_meta_robots: "noindex, nofollow"
+  canonical_base: null
+  title_pattern: "Consulta para queixas intestinais | Josiani Nicolini"
+  description_pattern: "Consulta e acompanhamento individual para mulheres com queixas intestinais, online ou presencial em Santa Cruz do Sul/RS, com Josiani Nicolini."
+  og_image: null
+  sitemap: null
+  robots_txt:
+    policy: "not_generated; do not Disallow the route because crawlers must read the noindex directive"
+    sitemap_urls: []
+  structured_data: []
+  local_business_data_source: null
+  routes:
+    - path: "/"
+      robots_txt_allowed: true
+      meta_robots: "noindex, nofollow"
+      x_robots_tag: null
+      canonical: null
+      title: "Consulta para queixas intestinais | Josiani Nicolini"
+      description: "Consulta e acompanhamento individual para mulheres com queixas intestinais, online ou presencial em Santa Cruz do Sul/RS, com Josiani Nicolini."
+      og_image: null
+      schema: []
+      sitemap_included: false
+
+privacy:
+  controller: null
+  operators: []
+  purposes: []
+  data_collected: []
+  sensitive_data_collected: false
+  storage: null
+  recipients: []
+  processing_locations: []
+  retention: null
+  disposal: null
+  privacy_policy_url: null
+  consent_required: null
+  consent_version: null
+  withdrawal_channel: null
+  minors_in_scope: false
+  cookie_categories: []
+  processing_operations:
+    - id: OP-001
+      purpose: "Receber contato de agendamento iniciado voluntariamente pelo visitante no WhatsApp."
+      data_categories: ["Dados de contato e conteudo que o proprio usuario decidir enviar no WhatsApp."]
+      sensitive: "Nao solicitado pela LP; nenhum dado de saude entra na URL ou mensagem pre-preenchida."
+      controller: null
+      operators: ["WhatsApp/Meta"]
+      recipients: ["Josiani Nicolini", "WhatsApp/Meta"]
+      processing_locations: null
+      retention: null
+      disposal: null
+      legal_basis_decision: null
+      rights_channel: null
+      consent_version: null
+      technical_controls:
+        - "Sem formulario no site."
+        - "Sem mensagem pre-preenchida."
+        - "Sem analytics ou pixels nesta versao."
+
+compliance:
+  health_review:
+    required: true
+    decided_by: "OpenCode operational preflight"
+    rationale: "A pagina promove um servico de saude e o material contem credenciais e claims clinicos que precisam de revisao antes da producao."
+    decision_date: "2026-07-26"
+    reviewer: "Josiani Nicolini (designated by the user; final review pending)"
+  claims_reviewed: []
+  testimonial_permissions: []
+  image_permissions:
+    - asset_ids: [A-002]
+      scope: "Commercial use in this landing page"
+      approved_by: "User/client representative"
+      date: "2026-07-26"
+      limitations: "Only the A-002 production derivative, in one hero occurrence; no image in About. Patients, minors and third parties remain excluded."
+  disclaimer: null
+
+qa:
+  report_path: "_project/qa-report.md"
+  report_date: "2026-07-26"
+  responsible: "OpenCode"
+  implementation_under_test:
+    visual_route: "Margem Viva"
+    scope: "Final local implementation in index.html and assets/css/styles.css; existing JavaScript preserved."
+    snapshot: "2026-07-26 final local QA"
+    assurance: "Current QA covers the implemented Margem Viva route."
+    release_status: BLOCKED
+  redesign_retest:
+    current_status: COMPLETED_CURRENT
+    completed_at: "2026-07-26"
+    tested_scope: [visual_direction, anchor_navigation, responsive_reflow, portrait_occurrence_and_crop, process_block, static_grid_fade, decorative_linework, no_js, reduced_motion, accessibility, performance]
+    future_change_policy: "Any future implementation change to HTML, CSS or JavaScript invalidates affected results and requires a new retest before release."
+  environment:
+    url: "http://127.0.0.1:4173/"
+    access: local_preview_only
+    deployed: false
+    operating_system: Windows
+    server: "Python http.server on port 4173"
+  required_viewports: [320, 375, 768, 1024, 1440]
+  tested_viewports: ["320", "375", "768", "1024", "1440", "667x375"]
+  browsers:
+    - name: "Microsoft Edge"
+      engine: Chromium
+      version: "150"
+      mode: headless
+      operating_system: Windows
+      status: tested
+    - name: Firefox
+      status: not_tested
+      blocker_id: QA-P2-002
+    - name: "Safari on iOS"
+      status: not_tested
+      blocker_id: QA-P2-002
+    - name: "Chrome on Android"
+      status: not_tested
+      blocker_id: QA-P2-002
+  assistive_technology:
+    - name: "Screen reader on a representative browser"
+      status: not_tested
+      blocker_id: QA-P2-002
+    - name: "Real mobile device"
+      status: not_tested
+      blocker_id: QA-P2-002
+  keyboard: required
+  zoom_200: required
+  reduced_motion: required
+  no_js: required
+  automated_tools:
+    - name: "Playwright Core"
+      version: "1.55.0"
+      result: PASS
+    - name: axe-core
+      version: "4.10.3"
+      result: PASS
+    - name: Lighthouse
+      version: "12.8.2"
+      result: PASS_WITH_INTENTIONAL_NOINDEX_SEO_SCORE
+    - name: html-validate
+      version: "9.7.1"
+      result: PASS
+    - name: csstree-validator
+      invocation: "via npx"
+      result: PASS
+    - name: "Node --check"
+      targets: ["assets/js/main.js", "_project/qa-browser.cjs"]
+      result: PASS
+  accessibility_conformance_claim: false
+  wcag_matrix_path: null
+  field_metrics_source: null
+  prelaunch_required_status: partial_blocked
+  deploy_validation_status: not_tested
+  field_monitoring_plan: "After release and sufficient traffic, record p75 mobile and desktop field data from an appropriate source; keep real INP as FIELD_MONITORING and do not infer it from Lighthouse TBT."
+  results:
+    validators:
+      html_errors: 0
+      css_errors: 0
+      javascript_syntax_errors: 0
+      qa_script_syntax_errors: 0
+      status: PASS
+    browser_runtime:
+      console_errors: 0
+      page_errors: 0
+      failed_responses: 0
+      status: PASS
+    document:
+      h1_count: 1
+      details_count: 6
+      form_count: 0
+      canonical_count: 0
+      schema_count: 0
+      duplicate_id_count: 0
+      status: PASS
+    conversion:
+      whatsapp_cta_count: 3
+      label: "Agendar pelo WhatsApp"
+      destination: "https://api.whatsapp.com/send?phone=5551999612970"
+      allowed_query_parameters: [phone]
+      text_parameter_present: false
+      personal_or_health_data_present: false
+      tracking_parameters_present: false
+      status: PASS
+    content_safety:
+      placeholders: 0
+      prohibited_content: 0
+      alternate_phone_2978_occurrences: 0
+      ebook_occurrences: 0
+      price_occurrences: 0
+      status: PASS
+    image:
+      path: "assets/images/josiani-portrait.jpg"
+      width_px: 1064
+      height_px: 1064
+      bytes: 105254
+      occurrences: 1
+      alt_present: true
+      loading: eager
+      status: PASS
+    local_assets:
+      image_local: true
+      fonts_local: true
+      font_license_files_present: 2
+      original_inline_decorative_svg_count: 2
+      publish_allowlist_changed: false
+      status: PASS
+    browser_storage:
+      cookies: 0
+      local_storage_entries: 0
+      session_storage_entries: 0
+      status: PASS
+    responsive:
+      horizontal_overflow_viewports: []
+      tested_viewports: ["320", "375", "768", "1024", "1440", "667x375"]
+      intermediate_grids_768_visual_review: PASS
+      h1_mobile_css_px: "40-48"
+      h1_mobile_observed_lines:
+        "320": 5
+        "375": 5
+      h1_mobile_decision: "4-6 lines accepted for the long factual H1; do not reduce below 40px."
+      minimum_target_css_px: 44
+      targets_checked: [whatsapp_cta, summary, mailto]
+      status: PASS
+    keyboard_and_focus:
+      skip_link: PASS
+      visible_focus: PASS
+      faq_enter: PASS
+      faq_space: PASS
+      status: PASS
+    lifecycle:
+      bfcache_navigation_type: back_forward
+      reveal_restored: true
+      reveal_opacity: 1
+      reveal_transform: none
+      status: PASS
+    progressive_enhancement:
+      no_js_content_cta_faq: PASS
+      reduced_motion_opacity: 1
+      reduced_motion_transform: none
+      forced_colors_visibility: PASS
+      text_spacing_without_clipping: PASS
+      zoom_equivalent_200:
+        css_width_px: 512
+        device_pixel_ratio: 2
+        horizontal_overflow: false
+      status: PASS
+    accessibility_automation:
+      axe_violations: 0
+      axe_incomplete_groups: 1
+      axe_incomplete_nodes: 21
+      incomplete_reason: "Color contrast background inference was blocked by pseudo-elements, inline SVG/image content or layered backgrounds; all 21 nodes were reviewed manually."
+      manual_contrast:
+        - foreground: "#60645b"
+          background: "#edf0e8"
+          ratio: "5.25:1"
+          result: PASS_AA
+        - foreground: "#60645b"
+          background: "#faf8f2"
+          ratio: "5.70:1"
+          result: PASS_AA
+        - foreground: "#60645b"
+          background: "#fffdfa"
+          ratio: "5.96:1"
+          result: PASS_AA
+        - foreground: "#34402e"
+          background: "#faf8f2"
+          ratio: "10.31:1"
+          result: PASS_AA
+        - foreground: "#34402e"
+          background: "#fffdfa"
+          ratio: "10.78:1"
+          result: PASS_AA
+        - foreground: "#faf8f2"
+          background: "#34402e"
+          ratio: "10.31:1"
+          result: PASS_AA
+        - foreground: "#d7dccf"
+          background: "#34402e"
+          ratio: "7.83:1"
+          result: PASS_AA
+        - foreground: "#c7cec0"
+          background: "#283124"
+          ratio: "8.37:1"
+          result: PASS_AA
+      oklch_muted_on_surface_alt:
+        approximate_ratio: "4.81:1"
+        result: PASS_AA
+      decorative_escuta:
+        aria_hidden: true
+        content_role: decorative
+      status: PASS
+    visual_review:
+      mode: read_only_final
+      current_p0_p1_p2_findings: 0
+      portrait_crop_safe: true
+      collage_detected: false
+      overflow_detected: false
+      overlap_detected: false
+      status: PASS
+  performance_lab_results:
+    - profile: mobile
+      tool: "Lighthouse 12.8.2"
+      runs: 3
+      cache: cold
+      simulation: enabled
+      performance_scores: [99, 99, 99]
+      accessibility_scores: [100, 100, 100]
+      best_practices_scores: [100, 100, 100]
+      seo_scores: [63, 63, 63]
+      lcp_seconds: [2.110, 2.105, 2.107]
+      median_lcp_seconds: 2.107
+      cls: [0, 0, 0]
+      tbt_ms: [0, 0, 0]
+      transfer_size_kib: 198.3
+      budget_result: PASS
+    - profile: desktop
+      tool: "Lighthouse 12.8.2"
+      runs: 3
+      cache: cold
+      simulation: enabled
+      performance_scores: [100, 100, 100]
+      accessibility_scores: [100, 100, 100]
+      best_practices_scores: [100, 100, 100]
+      seo_scores: [63, 63, 63]
+      lcp_seconds: [0.486, 0.487, 0.487]
+      median_lcp_seconds: 0.487
+      cls: [0, 0, 0]
+      tbt_ms: [0, 0, 0]
+      transfer_size_kib: 198.3
+      budget_result: PASS
+  artifact_sizes:
+    html:
+      bytes: 18550
+      gzip_bytes: 4763
+    css:
+      bytes: 28649
+      gzip_bytes: 5686
+    javascript:
+      bytes: 1283
+      gzip_bytes: 515
+    image:
+      bytes: 105254
+    cormorant_woff2:
+      bytes: 23396
+    manrope_woff2:
+      bytes: 24836
+    lighthouse_transfer_kib: 198.3
+  seo_lab_note: "Lighthouse SEO 63 is caused by intentional noindex before release and is not a local defect. Final canonical and indexation require the release domain and deploy validation."
+  inp_status: FIELD_MONITORING
+  fixed_findings:
+    - QA-FIX-001
+    - QA-FIX-002
+    - QA-FIX-003
+    - QA-FIX-004
+    - QA-FIX-005
+    - QA-FIX-006
+    - QA-FIX-007
+    - QA-FIX-008
+    - QA-FIX-009
+    - QA-FIX-010
+    - QA-FIX-011
+    - QA-FIX-012
+    - QA-FIX-013
+    - QA-FIX-014
+    - QA-FIX-015
+    - QA-FIX-016
+  budget_exceptions: []
+  p0_open: []
+  blockers_open: [QA-P1-001, QA-P1-002, QA-P1-003, QA-P2-001, QA-P2-002]
+  waivers: []
+  status: BLOCKED
+
+approvals:
+  g1:
+    status: approved_operational
+    decision: "Estrategia aprovada para implementacao local: WhatsApp como unica conversao, e-book excluido, publico e oferta definidos, mensagem conservadora e arquitetura LP_SERVICO A. Nao constitui revisao final de claims de saude."
+    approver: "OpenCode"
+    date: "2026-07-26"
+  g2:
+    status: approved_operational_revision
+    revision: "G2-MARGEM-VIVA-2026-07-26"
+    decision: "Apos rejeicao da execucao visual anterior pelo usuario, Margem Viva supersede Margem de Escuta como rota unica: tokens oficiais, energia 3/5, ritmo variavel, um retrato A-002, linework botanico original e selecao fechada P13/H06/B07/Grid Fade/R19/R12 nos niveis registrados. Em modo AUTO, a execucao prosseguiu sem gate de confirmacao adicional."
+    approver: "OpenCode"
+    date: "2026-07-26"
+  g3:
+    status: approved_operational_revision
+    revision: "G3-MARGEM-VIVA-2026-07-26"
+    decision: "Blueprint Margem Viva aprovado operacionalmente em AUTO e realizado: nav por quatro ancoras no desktop, mobile sem menu JS, hero H06 reconstruido, processo B07 e Grid Fade reconstruidos sem dependencias, fallbacks lineares, M1 em CSS/IntersectionObserver e apenas WhatsApp OP-001 ativo."
+    approver: "OpenCode"
+    date: "2026-07-26"
+  g4:
+    status: BLOCKED
+    decision: "O QA final local comprova a implementacao Margem Viva atual sem P0 e sem achado visual/tecnico local P1/P2. Gate G4 permanece bloqueado pelos P1 externos QA-P1-001, QA-P1-002 e QA-P1-003 e pelos P2 QA-P2-001 e QA-P2-002; nenhum waiver."
+    approver: "OpenCode"
+    date: "2026-07-26"
+
+release:
+  publishable: false
+  reason: "BLOCKED: Margem Viva esta implementada e seu QA final local esta concluido, mas permanecem os P1 externos de revisao HEALTH (QA-P1-001/U-014), identificacao profissional (QA-P1-002/U-001) e privacidade (QA-P1-003/U-009/OP-001), alem dos P2 de deploy e cobertura adicional; publishable=false."
+  blockers:
+    - "QA-P1-001 / U-014: revisao final HEALTH por Josiani Nicolini ainda nao registrada."
+    - "QA-P1-002 / U-001: identificacao profissional, CRN completo/regiao e forma publicavel ainda nao confirmados; a UI omitiu corretamente esses dados."
+    - "QA-P1-003 / U-009 / OP-001: controlador, decisao de base pelo responsavel, locais, retencao, descarte e canal de direitos ainda nao definidos."
+    - "QA-P2-001 / U-010: dominio, hospedagem, canonical, headers, exclusoes e DEPLOY_VALIDATION permanecem abertos."
+    - "QA-P2-002: Firefox, Safari/iOS, Chrome Android, dispositivo real e leitor de tela nao foram testados."
+  deployed_url: null
+  preview_access: local_only_no_deploy
+
+decision_log:
+  - date: "2026-07-26"
+    decision: "Criar a nova LP em uma subpasta separada, sem sobrescrever o prototipo legado."
+    rationale: "O diretorio LP nao existia e a implementacao da pasta-pai contem placeholders e conversao simulada."
+    owner: "OpenCode operational preflight"
+  - date: "2026-07-26"
+    decision: "Tratar atendimento como oferta primaria e excluir o e-book desta LP."
+    rationale: "A decisao do usuario preserva uma unica conversao e remove checkout e CTA concorrentes."
+    owner: "OpenCode operational preflight"
+  - date: "2026-07-26"
+    decision: "Excluir do projeto publicavel pacientes, relatorios, antes/depois, menores e claims de resultado do acervo."
+    rationale: "Os arquivos apresentam dados sensiveis, direitos nao comprovados e riscos de compliance HEALTH."
+    owner: "OpenCode operational preflight"
+  - date: "2026-07-26"
+    decision: "Alterar EXECUTION_MODE de GATED para AUTO e concluir todas as fases sem aprovacoes intermediarias."
+    rationale: "Solicitacao explicita do usuario; alteracoes adicionais serao pedidas apos a entrega."
+    owner: "User"
+  - date: "2026-07-26"
+    decision: "Nao inventar preco; remover a secao de investimento ate existir valor real."
+    rationale: "Preco inventado violaria a politica de evidencia e criaria informacao comercial enganosa."
+    owner: "OpenCode"
+  - date: "2026-07-26"
+    decision: "Publicar somente o WhatsApp terminado em 2970 e omitir o telefone terminado em 2978."
+    rationale: "Os numeros fornecidos divergem e o destino 2970 foi validado publicamente."
+    owner: "OpenCode"
+  - date: "2026-07-26"
+    decision: "Aprovar operacionalmente G1 com arquitetura LP_SERVICO A e mensagem conservadora para implementacao local."
+    rationale: "Oferta, publico, conversao e limites editoriais estao definidos sem depender de preco, credenciais ou prova social nao confirmados."
+    owner: "OpenCode"
+  - date: "2026-07-26"
+    decision: "Registro historico: aprovar operacionalmente G2 com a rota unica Margem de Escuta."
+    rationale: "A rota aplicava o sistema marfim/oliva/dourado, usava somente o retrato autorizado e limitava as referencias visuais anteriores a principios abstratos; decisao agora superseded."
+    owner: "OpenCode"
+    status: superseded_by_margem_viva_g2_revision
+  - date: "2026-07-26"
+    decision: "Registro historico: aprovar operacionalmente G3 para implementacao estatica local da rota anterior."
+    rationale: "O blueprint define componentes, ordem mobile, fallbacks, publish root, allowlist, motion unico e integracoes sem selecionar codigo do acervo."
+    owner: "OpenCode"
+    status: superseded_by_margem_viva_g3_revision
+  - date: "2026-07-26"
+    decision: "Registro historico: aceitar temporariamente o endpoint externo de fontes apenas para implementacao local, com fallback e bloqueio de release."
+    rationale: "Naquele checkpoint ainda nao havia binarios locais verificaveis; esta decisao foi substituida pela auto-hospedagem registrada abaixo."
+    owner: "OpenCode"
+    status: superseded_by_local_self_hosting
+  - date: "2026-07-26"
+    decision: "Registro historico: promover o contrato a implementation_ready sem tornar a entrega publicavel."
+    rationale: "Naquele checkpoint G1, G2 e G3 estavam decididos, mas a implementacao ainda nao havia sido confirmada; o estado foi substituido por qa_in_progress."
+    owner: "OpenCode"
+    status: superseded_by_qa_in_progress
+  - date: "2026-07-26"
+    decision: "Auto-hospedar Cormorant Garamond v21 e Manrope v20, incluindo os dois WOFF2 e as duas licencas SIL OFL 1.1 na estrutura e na publish allowlist."
+    rationale: "Os quatro arquivos locais foram verificados por tamanho e SHA-256; a pagina nao depende mais de stylesheet, host ou requisicao tipografica externa em runtime."
+    owner: "OpenCode"
+    status: active
+  - date: "2026-07-26"
+    decision: "Confirmar a implementacao local final e promover o contrato para qa_in_progress sem declarar PASS."
+    rationale: "index.html, CSS, JavaScript, retrato e fontes existem; os bloqueios U-001, U-009, U-010 e U-014 permanecem e o QA/deploy ainda nao foram concluidos."
+    owner: "OpenCode"
+    status: superseded_by_blocked_qa_completion
+  - date: "2026-07-26"
+    decision: "Encerrar o QA tecnico local e registrar o Gate G4 como BLOCKED, com publishable=false e nenhum waiver."
+    rationale: "Validadores, fluxo no Edge Chromium 150 headless, acessibilidade automatizada/manual, responsividade, progressive enhancement e Lighthouse passaram localmente, mas QA-P1-001, QA-P1-002 e QA-P1-003 sao P1 externos reais. QA-P2-001 e QA-P2-002 tambem permanecem abertos, e todos os testes de deploy estao NOT_TESTED."
+    owner: "OpenCode"
+    status: superseded_by_margem_viva_final_qa
+  - date: "2026-07-26"
+    decision: "Revisar operacionalmente G2 e G3 para Margem Viva e continuar o redesign sem gate de confirmacao adicional."
+    rationale: "O usuario rejeitou a execucao visual anterior e determinou a continuidade. Em AUTO, a nova rota elevou energia para 3/5, preservou copy/ordem/tres CTAs/release, fechou o teto P13/H06/B07/Grid Fade/R19/R12 e manteve dependencias do acervo em zero."
+    owner: "OpenCode em AUTO, conforme instrucao explicita do usuario"
+    status: implemented_and_verified
+  - date: "2026-07-26"
+    decision: "Confirmar Margem Viva como implementacao final atual e concluir seu QA local, mantendo Gate G4 BLOCKED e publishable=false."
+    rationale: "HTML/CSS realizam a direcao aprovada, o JavaScript existente foi preservado, o QA final local nao encontrou P0/P1/P2 visual ou tecnico atual e os unicos achados abertos sao os tres P1 externos e os dois P2 de deploy/cobertura."
+    owner: "OpenCode"
+    status: active

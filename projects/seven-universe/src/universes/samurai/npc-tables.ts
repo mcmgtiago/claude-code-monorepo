@@ -1,0 +1,7 @@
+import type { NpcTables } from '../types';
+export const SAMURAI_NPC_TABLES: NpcTables = {
+  names: ['Kenshin', 'Hattori', 'Musashi', 'Takeda', 'Oda', 'Hanzo', 'Goemon', 'Saito', 'Okita', 'Ryoma', 'Tomoe', 'Kaoru', 'Yuki', 'Hina', 'Masako', 'Jubei', 'Kojiro', 'Benkei', 'Ittosai', 'Sanosuke', 'Genji', 'Kagemaru', 'Sasuke', 'Ayanojo', 'Toshiro', 'Nobu', 'Kenji', 'Ren', 'Sora', 'Daigo'],
+  roles: ['samurai errante (ronin)', 'ninja das sombras', 'mestre de dojo', 'senhor da guerra (daimyo)', 'monge guerreiro', 'gueixa influente', 'mercador de armas', 'camponês oprimido', 'guarda de castelo', 'kunoichi espiã', 'ferreiro de katanas', 'ladrão de estrada', 'sacerdote xintoísta', 'lutador de arena', 'mensageiro do xogunato'],
+  traits: ['honrado (bushido)', 'frio', 'vingativo', 'leal ao senhor', 'ambicioso', 'covarde', 'disciplinado', 'traiçoeiro', 'sereno', 'sedento por duelo', 'protetor', 'cruel', 'sábio', 'impulsivo', 'melancólico'],
+  appearance: { build: ['esguio e disciplinado', 'robusto de guerreiro', 'baixo e ágil', 'alto e imponente', 'compleição de artes marciais'], hair: ['topete samurai (chonmage)', 'cabelo longo preso', 'cabeça raspada de monge', 'coque elaborado', 'cabelo solto de ronin'], clothing: ['armadura de samurai (ō-yoroi)', 'traje escuro de shinobi', 'quimono simples de camponês', 'kimono de seda de nobre', 'hakama de treino'], detail: ['carrega uma katana e wakizashi', 'cicatriz de duelo no rosto', 'brasão de clã (mon) na veste', 'porte de quem serve um senhor', 'olhar sereno mas mortal'] },
+};

@@ -1,0 +1,12 @@
+{
+  "name": "pulse-aios",
+  "version": "1.0.0",
+  "description": "PULSE (RH / People Ops) — AI Operating System para RH. 8 skills para análise de vaga, avaliação de candidatos, onboarding, performance review e compensation. Start with /company-setup.",
+  "author": {
+    "name": "GREENHAT Consultoria Digital",
+    "email": "contato@greenhat.io",
+    "url": "https://greenhat.io"
+  },
+  "license": "MIT",
+  "keywords": ["pulse", "rh", "people-ops", "recruiting", "onboarding", "performance", "compensation", "culture"]
+}

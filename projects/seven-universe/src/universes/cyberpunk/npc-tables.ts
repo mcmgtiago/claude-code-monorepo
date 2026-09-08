@@ -1,0 +1,7 @@
+import type { NpcTables } from '../types';
+export const CYBERPUNK_NPC_TABLES: NpcTables = {
+  names: ['Nix', 'Panam', 'Judy', 'River', 'Kerry', 'Mitch', 'Saul', 'Dakota', 'Padre', 'El Capitan', 'Regina', 'Muamar', 'Fingers', 'Doc Ryder', 'Ozob', 'Brick', 'Meredith', 'Jackie', 'Evelyn', 'T-Bug', 'Takemura', 'Dex', 'Placide', 'Sandayu', 'Sandra', 'Bryce', 'Barry', 'Stout', 'Pepe', 'Dum Dum'],
+  roles: ['mercenário freelance', 'netrunner de aluguel', 'ripperdoc clandestino', 'fixer de bairro', 'gangbanger', 'corporativo menor', 'joytoy', 'taxista voador', 'vendedor ambulante de chrome', 'policial de patrulha', 'scav (caçador de órgãos)', 'braindance editor', 'nômade Aldecaldo', 'bartender do Afterlife', 'técnico de manutenção'],
+  traits: ['paranoico', 'ambicioso', 'desconfiado', 'leal', 'ganancioso', 'viciado em adrenalina', 'frio', 'desesperado', 'calculista', 'impulsivo', 'protetor', 'niilista', 'oportunista', 'idealista', 'cínico'],
+  appearance: { build: ['corpo chromeado pesado', 'magro e ágil', 'musculoso natural', 'compleição cyborgueizada', 'esguio de corredor'], hair: ['mohawk neon', 'cabelo raspado com implantes', 'dreads com LEDs', 'careca com tatuagem neural', 'cabelo sintético colorido'], clothing: ['jaqueta de couro com patches', 'roupa corpo preta', 'trapos de Pacifica', 'terno executivo', 'armadura leve de merc'], detail: ['olhos cibernéticos brilhando', 'braço cromado visível', 'cicatriz de implante no pescoço', 'tatuagem de gangue', 'cheira a sintetizados e ozônio'] },
+};

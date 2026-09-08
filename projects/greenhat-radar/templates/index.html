@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GREENHAT Radar: pesquisa, qualificação e revisão humana de oportunidades B2B.">
+  <title>GREENHAT Radar</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Pular para conteúdo</a>
+
+  <header class="topbar">
+    <div class="brand-lockup" aria-label="GREENHAT Radar">
+      <span class="brand-name">GREENHAT</span>
+      <span class="brand-product">RADAR</span>
+    </div>
+    <nav class="topbar__tabs" aria-label="Modo de operação">
+      <a href="/" class="topbar__tab{% if not mode or mode != 'local' %} topbar__tab--active{% endif %}">SaaS/Fintech</a>
+      <a href="/local" class="topbar__tab{% if mode == 'local' %} topbar__tab--active{% endif %}">Locais</a>
+    </nav>
+    <p class="topbar__context">{% if mode == 'local' %}Negócios locais — Portão-RS e região{% else %}Lead intelligence for SaaS &amp; Fintech — Brasil{% endif %}</p>
+    <span class="local-badge">Local workspace</span>
+  </header>
+
+  <main id="main-content" class="app-shell">
+    <section class="intro" aria-labelledby="page-title">
+      <div class="intro__heading">
+        {% if mode == 'local' %}
+        <p class="eyebrow">RADAR / NEGÓCIOS LOCAIS — PORTÃO-RS E REGIÃO</p>
+        <h1 id="page-title">Encontre negócios que precisam de presença digital.</h1>
+        <p class="intro__copy">Importe lista de empresas locais, identifique oportunidades (sem site, sem Google, sem Instagram) e gere rascunhos personalizados para oferecer seus serviços.</p>
+        {% else %}
+        <p class="eyebrow">RADAR / PROSPECÇÃO COM REVISÃO HUMANA</p>
+        <h1 id="page-title">Decida onde sua próxima conversa merece acontecer.</h1>
+        <p class="intro__copy">Importe empresas por CNPJ, valide sinais públicos, gere um score explicável e revise qualquer rascunho do Claude antes de usar em e-mail, LinkedIn ou Instagram.</p>
+        {% endif %}
+      </div>
+      <div class="intro__support">
+        {% if mode == 'local' %}
+        <p class="score-guide"><strong>Oportunidade organiza a fila.</strong> Alta: sem site + presença digital ativa. Média: site ruim. Baixa: já tem presença OK.</p>
+        <p class="safety-note">O RADAR não envia mensagens automaticamente. Todo contato passa por sua revisão antes.</p>
+        {% else %}
+        <p class="score-guide"><strong>Fit organiza a fila.</strong> Alta: 70–100. Revisar: 50–69. Pesquisar: abaixo de 50.</p>
+        <p class="safety-note">O RADAR não envia mensagens, não acessa contas de redes sociais e não faz scraping de LinkedIn, Instagram ou Maps.</p>
+        {% endif %}
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="Resumo da base">
+      <article class="metric-card">
+        <span>Total</span>
+        <strong id="metric-total">0</strong>
+      </article>
+      <article class="metric-card metric-card--accent">
+        <span>Prioridade alta</span>
+        <strong id="metric-priority">0</strong>
+      </article>
+      <article class="metric-card">
+        <span>Prontas para revisar</span>
+        <strong id="metric-ready">0</strong>
+      </article>
+      <article class="metric-card">
+        <span>Em andamento</span>
+        <strong id="metric-active">0</strong>
+      </article>
+    </section>
+
+    <section class="workspace" aria-labelledby="lead-list-title">
+      <div class="workspace__header">
+        <div>
+          <p class="eyebrow">FILA DE TRABALHO</p>
+          <div class="workspace__title-row">
+            <h2 id="lead-list-title">Oportunidades</h2>
+            <p id="lead-result-summary" class="result-summary" aria-live="polite"></p>
+          </div>
+        </div>
+        <div class="filters" role="search" aria-label="Filtrar oportunidades">
+          <label class="visually-hidden" for="search-input">Buscar empresas</label>
+          <input id="search-input" type="search" placeholder="Empresa, cidade, CNAE ou produto">
+          <label class="visually-hidden" for="segment-filter">Filtrar segmento</label>
+          <select id="segment-filter">
+            <option value="">Todos os segmentos</option>
+          </select>
+          {% if mode == 'local' %}
+          <label class="visually-hidden" for="focus-filter">Filtrar cidade</label>
+          <select id="focus-filter">
+            <option value="">Todas as cidades</option>
+            <option value="Portão">Portão</option>
+            <option value="Estância Velha">Estância Velha</option>
+            <option value="Novo Hamburgo">Novo Hamburgo</option>
+            <option value="São Leopoldo">São Leopoldo</option>
+            <option value="Campo Bom">Campo Bom</option>
+            <option value="Sapiranga">Sapiranga</option>
+            <option value="Ivoti">Ivoti</option>
+            <option value="Dois Irmãos">Dois Irmãos</option>
+            <option value="Montenegro">Montenegro</option>
+          </select>
+          <select id="state-filter" hidden><option value=""></option></select>
+          {% else %}
+          <label class="visually-hidden" for="focus-filter">Filtrar aderência ao foco</label>
+          <select id="focus-filter">
+            <option value="">Toda a base</option>
+            <option value="aderente">Aderentes ao foco</option>
+            <option value="revisar">Revisar manualmente</option>
+            <option value="fora_do_foco">Fora do foco</option>
+          </select>
+          <label class="visually-hidden" for="state-filter">Filtrar estado</label>
+          <select id="state-filter">
+            <option value="">Todos os estados</option>
+            <option value="SP">SP</option>
+            <option value="MG">MG</option>
+            <option value="SC">SC</option>
+            <option value="PR">PR</option>
+            <option value="RS">RS</option>
+            <option value="RJ">RJ</option>
+            <option value="DF">DF</option>
+            <option value="PE">PE</option>
+            <option value="GO">GO</option>
+            <option value="CE">CE</option>
+            <option value="BA">BA</option>
+            <option value="ES">ES</option>
+            <option value="AM">AM</option>
+            <option value="PA">PA</option>
+          </select>
+          {% endif %}
+          <label class="visually-hidden" for="status-filter">Filtrar status</label>
+          <select id="status-filter">
+            <option value="">Todos os status</option>
+            <option value="new">Nova</option>
+            <option value="researching">Pesquisando</option>
+            <option value="ready_for_review">Pronta para revisar</option>
+            <option value="contacted">Contatada</option>
+            <option value="call_scheduled">Ligação agendada</option>
+            <option value="proposal_sent">Proposta enviada</option>
+            <option value="negotiation">Negociação</option>
+            <option value="follow_up">Follow-up</option>
+            <option value="won">Ganha</option>
+            <option value="lost">Perdida</option>
+          </select>
+          <label class="visually-hidden" for="sort-filter">Ordenar oportunidades</label>
+          <select id="sort-filter">
+            <option value="fit">Maior fit primeiro</option>
+            <option value="review">Prontas para revisar</option>
+            <option value="recent">Atualizadas recentemente</option>
+            <option value="name">Empresa de A a Z</option>
+          </select>
+          <button id="clear-filters" class="filter-clear" type="button" hidden>Limpar filtros</button>
+        </div>
+      </div>
+      <p class="score-legend">Score é uma ordem de pesquisa comercial, não uma decisão automática. Revise os sinais antes de entrar em contato.</p>
+
+      <div class="workspace__body">
+        <div id="lead-list-wrap" class="lead-list-wrap" aria-busy="false">
+          <div id="lead-empty" class="empty-state">
+            <div class="empty-state__content">
+              <strong>Base vazia.</strong>
+              <span>Importe um CSV ou cadastre uma empresa para começar.</span>
+              <button class="button button--primary" type="button" data-action="focus-import">Importar lista</button>
+            </div>
+          </div>
+          <table id="lead-table" aria-describedby="lead-result-summary" hidden>
+            <caption class="table-scroll-hint">Deslize horizontalmente para ver foco, fit e pipeline.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Empresa</th>
+                <th scope="col">Segmento</th>
+                <th scope="col">{% if mode == 'local' %}Site{% else %}Foco{% endif %}</th>
+                <th scope="col">Fit</th>
+                <th scope="col">Cidade</th>
+                <th scope="col">Pipeline</th>
+                <th scope="col"><span class="visually-hidden">Ações</span></th>
+              </tr>
+            </thead>
+            <tbody id="lead-table-body"></tbody>
+          </table>
+        </div>
+
+        <aside id="detail-panel" class="detail-panel" tabindex="-1" aria-labelledby="detail-title">
+          <div class="detail-panel__empty">
+            <p class="eyebrow">DETALHE</p>
+            <h2 id="detail-title">Selecione uma empresa</h2>
+            <p>Veja o score, analise o site público e gere um rascunho que fica pendente de aprovação.</p>
+          </div>
+        </aside>
+      </div>
+        <div class="batch-review">
+          <div>
+            <strong>Análise de sites (até 5 paralelo)</strong>
+          <span>Analisa sites públicos, classifica segmento e extrai sinais. Roda em segundo plano.</span>
+          </div>
+        <div class="batch-review__actions">
+          <label for="batch-limit">Quantidade</label>
+          <input id="batch-limit" type="number" min="1" value="50" placeholder="Ex.: 800" inputmode="numeric">
+          <button id="start-review-job" class="button button--secondary" type="button" data-action="start-review-job">Analisar sites</button>
+          <button id="cancel-review-job" class="button button--quiet" type="button" data-action="cancel-review-job" hidden>Parar análise</button>
+        </div>
+      </div>
+      <p id="batch-review-result" class="helper-text" aria-live="polite"></p>
+
+        <div class="batch-review">
+          <div>
+            <strong>Enriquecer com Claude</strong>
+          <span>Extrai tech stack, líderes, ângulo de venda e reclassifica segmento real via Opus 4.8. Apenas empresas com site já analisado.</span>
+          </div>
+        <div class="batch-review__actions">
+          <label for="enrich-limit">Quantidade</label>
+          <input id="enrich-limit" type="number" min="1" value="50" placeholder="Ex.: 200" inputmode="numeric">
+          <button id="start-enrich-batch" class="button button--primary" type="button" data-action="start-enrich-batch">Enriquecer com Claude</button>
+        </div>
+      </div>
+      <p id="enrich-batch-result" class="helper-text" aria-live="polite"></p>
+
+        <div class="batch-review" style="border-top: 1px solid var(--line); padding-top: 14px;">
+          <div>
+            <strong>Exportar</strong>
+          <span>Exporta leads qualificados como CSV para uso em CRM ou envio manual.</span>
+          </div>
+        <div class="batch-review__actions">
+          <button id="export-button" class="button button--secondary" type="button" data-action="export">Exportar CSV</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="import-panel" class="setup-grid" aria-label="Entrada de empresas">
+      <article class="panel panel--import">
+        <div class="panel__header">
+          <div>
+            <p class="eyebrow">IMPORTAR BASE</p>
+            <h2>Lista de empresas</h2>
+          </div>
+          <a href="/sample-leads.csv">Baixar modelo CSV</a>
+        </div>
+        <form id="import-form" class="import-form">
+          <div class="form-field">
+            <label for="csv-file">Arquivos CSV</label>
+            <input id="csv-file" name="file" type="file" accept=".csv,text/csv" multiple required>
+          </div>
+          <div class="form-field">
+            <label for="import-source">Fonte da lista</label>
+            <input id="import-source" name="source" type="text" value="Filtro CNAE" maxlength="200">
+          </div>
+          <button class="button button--primary" type="submit">Importar e qualificar</button>
+        </form>
+        <p id="csv-selection" class="helper-text" aria-live="polite">Selecione um ou mais CSVs. O RADAR consolida duplicatas por CNPJ, site, empresa ou e-mail.</p>
+        <p class="helper-text">Até 20 arquivos, 30 MB por arquivo, 100 MB e 100.000 linhas por lote. Campos aceitos: razão social, fantasia, CNPJ, site, CNAE, cidade, estado, descrição, porte e decisor. Dados de sócios são ignorados.</p>
+        <div id="import-result" class="form-feedback" aria-live="polite"></div>
+      </article>
+
+      <details class="panel manual-entry">
+        <summary>
+          <span>
+            <span class="eyebrow">OU</span>
+            <strong>Adicionar empresa manualmente</strong>
+          </span>
+          <span aria-hidden="true">+</span>
+        </summary>
+        <form id="manual-company-form" class="manual-form">
+          <label for="manual-legal-name">Razão social ou empresa</label>
+          <input id="manual-legal-name" name="legal_name" type="text" required maxlength="500">
+          <label for="manual-website">Site</label>
+          <input id="manual-website" name="website" type="url" placeholder="https://empresa.com">
+          <label for="manual-cnpj">CNPJ</label>
+          <input id="manual-cnpj" name="cnpj" type="text" inputmode="numeric" placeholder="00.000.000/0001-00">
+          <label for="manual-cnae">CNAE principal</label>
+          <input id="manual-cnae" name="cnae_primary" type="text" placeholder="6619-3/99">
+          <label for="manual-description">Descrição ou sinal encontrado</label>
+          <textarea id="manual-description" name="description" rows="3" placeholder="Ex.: plataforma de pagamentos para empresas."></textarea>
+          <button class="button button--secondary" type="submit">Adicionar empresa</button>
+        </form>
+      </details>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <script>window.RADAR_MODE = "{{ mode or 'saas' }}";</script>
+  <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+</body>
+</html>

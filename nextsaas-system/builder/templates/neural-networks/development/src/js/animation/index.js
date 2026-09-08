@@ -1,0 +1,10 @@
+import './avatar';
+import './counter';
+import './elements-move-up-on-scroll';
+import './gsap-scroll-trigger-register';
+import './header';
+import './mobile-menu';
+import './reveal-animation';
+import './sidebar';
+import './smooth-scrolling';
+import './text-reveal';

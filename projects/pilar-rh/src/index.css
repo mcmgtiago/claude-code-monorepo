@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Newsreader", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --color-navy: #10283f;
+  --color-navy-deep: #0b1c2d;
+  --color-navy-soft: #29445d;
+  --color-wine: #8b3e4d;
+  --color-wine-deep: #6f2f3b;
+  --color-wine-soft: #b87985;
+  --color-sand: #d1b98c;
+  --color-sand-soft: #e8dcc5;
+  --color-ivory: #f5f1e9;
+  --color-paper: #fbfaf7;
+  --color-paper-muted: #ece8df;
+  --color-sage: #728578;
+  --color-sage-soft: #dce4de;
+  --color-ink: #20272c;
+  --color-ink-soft: #5e686f;
+  --color-muted: #788188;
+  --color-line: rgba(16, 40, 63, 0.14);
+  --color-line-light: rgba(255, 255, 255, 0.16);
+  --color-success: #4f785d;
+  --color-warning: #b56a4f;
+  --color-error: #a64545;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background-color: var(--color-paper);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  video[data-decorative-video="true"] {
+    display: none;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+a {
+  color: var(--color-wine);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-wine-deep);
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: var(--color-navy);
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 100;
+  font-size: 0.875rem;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-wine);
+  outline-offset: 2px;
+}

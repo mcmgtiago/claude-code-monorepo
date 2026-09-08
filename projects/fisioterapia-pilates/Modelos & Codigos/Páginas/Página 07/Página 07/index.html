@@ -1,0 +1,513 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>Nome do Produto | Headline Principal</title>
+    <meta name="description" content="Descubra o metodo que vai revolucionar seus resultados e transformar sua carreira." />
+
+    <!-- Tailwind CSS local -->
+    <script src="assets/tailwind.js"></script>
+
+    <!-- Google Fonts Inter local -->
+    <link rel="stylesheet" href="assets/fonts/inter.css">
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                dark: '#120E17',
+                card: '#1E1726',
+                purple: '#9C12F1',
+                pink: '#FF348D',
+                text: '#D9D1E6',
+                border: '#423359',
+                green: '#00E56A'
+              }
+            },
+            backgroundImage: {
+              'gradient-blur': 'linear-gradient(180deg, rgba(18,14,23,0) 0%, #120E17 100%)',
+            },
+            screens: {
+              'xs': '400px',
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      /* =============================================
+         BASE
+      ============================================= */
+      html { scroll-behavior: smooth; }
+
+      body {
+        background-color: #120E17;
+        color: white;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      * { -webkit-tap-highlight-color: transparent; }
+
+      /* =============================================
+         SCROLLBAR
+      ============================================= */
+      ::-webkit-scrollbar { width: 5px; }
+      ::-webkit-scrollbar-track { background: #0d0a13; }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #9C12F1, #FF348D);
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover { background: #FF348D; }
+
+      /* =============================================
+         SELECTION
+      ============================================= */
+      ::selection { background: rgba(255, 52, 141, 0.35); color: #fff; }
+
+      /* =============================================
+         ROOT — entrada suave da página
+      ============================================= */
+      #root {
+        min-height: 100vh;
+        position: relative;
+        z-index: 2;
+        animation: pageEntry 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+
+      @keyframes pageEntry {
+        from { opacity: 0; transform: translateY(12px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      /* =============================================
+         NOISE TEXTURE OVERLAY (profundidade sutil)
+      ============================================= */
+      body::after {
+        content: '';
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 1;
+        opacity: 0.022;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+        background-size: 180px;
+      }
+
+      /* =============================================
+         BARRA DE PROGRESSO DE SCROLL
+      ============================================= */
+      #scroll-progress {
+        position: fixed;
+        top: 0; left: 0;
+        height: 2px;
+        width: 0%;
+        background: linear-gradient(90deg, #9C12F1 0%, #FF348D 100%);
+        z-index: 9999;
+        box-shadow: 0 0 8px rgba(255, 52, 141, 0.9), 0 0 18px rgba(255, 52, 141, 0.4);
+        pointer-events: none;
+        will-change: width;
+        transition: width 0.06s linear;
+      }
+
+      /* =============================================
+         CURSOR GLOW (desktop)
+      ============================================= */
+      .cursor-glow {
+        position: fixed;
+        width: 440px;
+        height: 440px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(156, 18, 241, 0.07) 0%,
+          rgba(255, 52, 141, 0.04) 45%,
+          transparent 70%
+        );
+        pointer-events: none;
+        z-index: 0;
+        transform: translate(-50%, -50%);
+        will-change: left, top;
+        transition: left 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                    top  0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      /* =============================================
+         CANVAS DE PARTÍCULAS (hero bg)
+      ============================================= */
+      #hero-canvas {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      /* =============================================
+         SECTION REVEAL — scroll suave
+      ============================================= */
+      .section-reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity  0.85s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: opacity, transform;
+      }
+
+      .section-reveal.in-view {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* =============================================
+         BOTÕES — shimmer + ripple
+      ============================================= */
+      button {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+      }
+
+      /* Shimmer sweep */
+      button::before {
+        content: '';
+        position: absolute;
+        top: 0; left: -100%;
+        width: 50%; height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.22) 50%,
+          transparent 100%
+        );
+        animation: btn-shimmer 4.5s 0.8s infinite;
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      @keyframes btn-shimmer {
+        0%,  30% { left: -100%; opacity: 1; }
+        50%       { left:  150%; opacity: 1; }
+        51%, 100% { left:  150%; opacity: 0; }
+      }
+
+      /* Ripple ao clicar */
+      @keyframes ripple-anim {
+        from { transform: scale(0); opacity: 0.55; }
+        to   { transform: scale(3.5); opacity: 0; }
+      }
+
+      .btn-ripple {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.28);
+        animation: ripple-anim 0.65s ease-out forwards;
+        pointer-events: none;
+        z-index: 2;
+      }
+
+      /* =============================================
+         GRADIENT TEXT SHIMMER nos títulos
+      ============================================= */
+      h1 span[class*="text-brand-pink"],
+      h2 span[class*="text-brand-pink"] {
+        background: linear-gradient(
+          100deg,
+          #FF348D  0%,
+          #FF90BF 38%,
+          #FF348D 55%,
+          #C0005E 80%,
+          #FF348D 100%
+        );
+        background-size: 250% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: text-shimmer 5.5s linear infinite;
+      }
+
+      @keyframes text-shimmer {
+        0%   { background-position: -250% center; }
+        100% { background-position:  250% center; }
+      }
+
+      /* =============================================
+         IMAGENS — transition suave
+      ============================================= */
+      img[src*="authority-photo"],
+      img[src*="creator-card"] {
+        transition:
+          transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+          filter    0.45s ease;
+      }
+
+      img[src*="authority-photo"]:hover,
+      img[src*="creator-card"]:hover {
+        transform: scale(1.03) translateY(-5px);
+        filter: brightness(1.08) contrast(1.03);
+      }
+
+      /* =============================================
+         FOOTER — separador luminoso
+      ============================================= */
+      footer { position: relative; }
+
+      footer::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 8%; right: 8%;
+        height: 1px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          rgba(255, 52, 141, 0.5),
+          rgba(156, 18, 241, 0.4),
+          transparent
+        );
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="assets/app.js"></script>
+
+    <!-- ═══════════════════════════════════════════
+         DESIGN ENHANCEMENTS
+    ═══════════════════════════════════════════ -->
+    <script>
+    (function () {
+      'use strict';
+
+      // Aguarda o React montar
+      function ready(fn) {
+        if (document.readyState !== 'loading') {
+          setTimeout(fn, 250);
+        } else {
+          document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(fn, 250);
+          });
+        }
+      }
+
+      ready(function () {
+        setupScrollProgress();
+        setupCursorGlow();
+        setupParticleCanvas();
+        setupSectionReveal();
+        setupButtonRipple();
+        setupCardTilt();
+      });
+
+      /* ──────────────────────────────────────────
+         1. BARRA DE PROGRESSO DE SCROLL
+      ────────────────────────────────────────── */
+      function setupScrollProgress() {
+        var bar = document.createElement('div');
+        bar.id = 'scroll-progress';
+        document.body.insertBefore(bar, document.body.firstChild);
+
+        function update() {
+          var st = window.scrollY;
+          var dh = document.documentElement.scrollHeight - window.innerHeight;
+          bar.style.width = (dh > 0 ? (st / dh) * 100 : 0).toFixed(2) + '%';
+        }
+        window.addEventListener('scroll', update, { passive: true });
+        update();
+      }
+
+      /* ──────────────────────────────────────────
+         2. CURSOR GLOW (apenas desktop)
+      ────────────────────────────────────────── */
+      function setupCursorGlow() {
+        if (!window.matchMedia('(pointer: fine)').matches) return;
+
+        var glow = document.createElement('div');
+        glow.className = 'cursor-glow';
+        document.body.appendChild(glow);
+
+        document.addEventListener('mousemove', function (e) {
+          glow.style.left = e.clientX + 'px';
+          glow.style.top  = e.clientY + 'px';
+        }, { passive: true });
+      }
+
+      /* ──────────────────────────────────────────
+         3. CANVAS DE PARTÍCULAS (fundo do hero)
+      ────────────────────────────────────────── */
+      function setupParticleCanvas() {
+        var canvas = document.createElement('canvas');
+        canvas.id = 'hero-canvas';
+        var root = document.getElementById('root');
+        document.body.insertBefore(canvas, root);
+
+        var ctx = canvas.getContext('2d');
+        var W, H, pts = [];
+
+        function resize() {
+          W = canvas.width  = window.innerWidth;
+          H = canvas.height = window.innerHeight;
+        }
+
+        function populate() {
+          pts = [];
+          var n = Math.min(60, Math.floor(W / 24));
+          for (var i = 0; i < n; i++) {
+            pts.push({
+              x:  Math.random() * W,
+              y:  Math.random() * H,
+              r:  Math.random() * 1.5 + 0.3,
+              dx: (Math.random() - 0.5) * 0.28,
+              dy: (Math.random() - 0.5) * 0.28,
+              a:  Math.random() * 0.24 + 0.04,
+              c:  Math.random() > 0.55 ? '156,18,241' : '255,52,141'
+            });
+          }
+        }
+
+        resize(); populate();
+        window.addEventListener('resize', function () { resize(); populate(); }, { passive: true });
+
+        var scrollRatio = 0;
+        window.addEventListener('scroll', function () {
+          scrollRatio = Math.min(1, window.scrollY / (window.innerHeight * 0.85));
+          canvas.style.opacity = String(Math.max(0, 1 - scrollRatio));
+        }, { passive: true });
+
+        (function draw() {
+          requestAnimationFrame(draw);
+          if (scrollRatio >= 1) { ctx.clearRect(0, 0, W, H); return; }
+
+          ctx.clearRect(0, 0, W, H);
+          for (var i = 0; i < pts.length; i++) {
+            var p = pts[i];
+            p.x += p.dx;
+            p.y += p.dy;
+            if (p.x < 0)   p.x = W;
+            else if (p.x > W) p.x = 0;
+            if (p.y < 0)   p.y = H;
+            else if (p.y > H) p.y = 0;
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, 6.2832);
+            ctx.fillStyle = 'rgba(' + p.c + ',' + p.a + ')';
+            ctx.fill();
+          }
+
+          // Conexões entre partículas próximas
+          for (var a = 0; a < pts.length; a++) {
+            for (var b = a + 1; b < pts.length; b++) {
+              var dx = pts[a].x - pts[b].x;
+              var dy = pts[a].y - pts[b].y;
+              var dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < 110) {
+                ctx.beginPath();
+                ctx.moveTo(pts[a].x, pts[a].y);
+                ctx.lineTo(pts[b].x, pts[b].y);
+                ctx.strokeStyle = 'rgba(156,18,241,' + (0.06 * (1 - dist / 110)) + ')';
+                ctx.lineWidth = 0.5;
+                ctx.stroke();
+              }
+            }
+          }
+        }());
+      }
+
+      /* ──────────────────────────────────────────
+         4. SECTION REVEAL AO ROLAR
+      ────────────────────────────────────────── */
+      function setupSectionReveal() {
+        var sections = document.querySelectorAll('section');
+        if (!sections.length) return;
+
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.06, rootMargin: '0px 0px -20px 0px' });
+
+        sections.forEach(function (sec, idx) {
+          if (idx === 0) return; // hero já visível
+          sec.classList.add('section-reveal');
+          observer.observe(sec);
+        });
+      }
+
+      /* ──────────────────────────────────────────
+         5. EFEITO RIPPLE NOS BOTÕES
+      ────────────────────────────────────────── */
+      function setupButtonRipple() {
+        document.addEventListener('click', function (e) {
+          var btn = e.target.closest('button');
+          if (!btn) return;
+
+          var rect = btn.getBoundingClientRect();
+          var size = Math.max(rect.width, rect.height);
+          var ripple = document.createElement('span');
+          ripple.className = 'btn-ripple';
+          ripple.style.cssText =
+            'width:'  + size + 'px;' +
+            'height:' + size + 'px;' +
+            'left:'   + (e.clientX - rect.left - size / 2) + 'px;' +
+            'top:'    + (e.clientY - rect.top  - size / 2) + 'px;';
+
+          btn.appendChild(ripple);
+          setTimeout(function () { ripple.parentNode && ripple.remove(); }, 700);
+        });
+      }
+
+      /* ──────────────────────────────────────────
+         7. TILT 3D NOS CARDS (hover suave)
+      ────────────────────────────────────────── */
+      function setupCardTilt() {
+        if (!window.matchMedia('(pointer: fine)').matches) return;
+
+        // Aguarda mais um pouco para os cards renderizarem
+        setTimeout(function () {
+          var cards = document.querySelectorAll(
+            '[class*="rounded-"][class*="border"][class*="bg-brand-card"],' +
+            '[class*="rounded-"][class*="border"][class*="bg-[#1E1726"]'
+          );
+
+          cards.forEach(function (card) {
+            card.style.transition = 'transform 0.25s ease, box-shadow 0.25s ease';
+            card.style.willChange = 'transform';
+
+            card.addEventListener('mousemove', function (e) {
+              var rect = card.getBoundingClientRect();
+              var cx   = rect.left + rect.width  / 2;
+              var cy   = rect.top  + rect.height / 2;
+              var rx   = ((e.clientY - cy) / (rect.height / 2)) * 4;
+              var ry   = ((e.clientX - cx) / (rect.width  / 2)) * -4;
+              card.style.transform =
+                'perspective(800px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) scale(1.012)';
+              card.style.boxShadow =
+                '0 20px 40px rgba(0,0,0,0.35), 0 0 20px rgba(156,18,241,0.1)';
+            });
+
+            card.addEventListener('mouseleave', function () {
+              card.style.transform = 'perspective(800px) rotateX(0) rotateY(0) scale(1)';
+              card.style.boxShadow = '';
+            });
+          });
+        }, 800);
+      }
+
+    }());
+    </script>
+  </body>
+</html>

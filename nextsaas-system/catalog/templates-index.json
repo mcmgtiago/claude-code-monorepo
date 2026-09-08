@@ -1,0 +1,389 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "generatedAt": "2025-08-26T12:00:00Z",
+    "totalTemplates": 47,
+    "systemName": "NextSaaS System"
+  },
+  "templates": [
+    {
+      "slug": "ai-saas-software",
+      "name": "AI SaaS Software",
+      "nicho": "SaaS de IA genérica",
+      "quality": 8,
+      "estilo": "moderno dark",
+      "densidadeSecoes": "média",
+      "paginas": 15,
+      "paleta": ["#864ffe", "#1a1a1c", "#fcfcfc"],
+      "fonteDisplay": "Inter Tight",
+      "fonteCorpo": "Inter",
+      "secoes": [
+        "header",
+        "hero",
+        "features",
+        "pricing",
+        "testimonials",
+        "cta",
+        "footer"
+      ],
+      "limitacoes": "Copy genérico, sem dark mode toggle",
+      "usoPara": "SaaS genérico B2B, precisa rebranding"
+    },
+    {
+      "slug": "ai-marketing-agency",
+      "name": "AI Marketing Agency",
+      "nicho": "Agência de marketing com IA",
+      "quality": 9,
+      "estilo": "gradient glassmorphism",
+      "densidadeSecoes": "alta",
+      "paginas": 12,
+      "paleta": ["#8D59FF", "#227EFF", "#f8f9fa"],
+      "fonteDisplay": "Sora, Inter Tight",
+      "fonteCorpo": "Inter Tight",
+      "secoes": [
+        "header-pill",
+        "hero",
+        "clients",
+        "services",
+        "why-choose-us",
+        "tech-stack",
+        "case-study",
+        "testimonials",
+        "partnership",
+        "blog",
+        "cta",
+        "footer"
+      ],
+      "limitacoes": "Paleta neon, identidade 'Opai' precisa rebranding",
+      "usoPara": "Agências, consultoria, companies que querem parecer tech"
+    },
+    {
+      "slug": "digital-agency",
+      "name": "Digital Agency",
+      "nicho": "Agência digital / Web design",
+      "quality": 8,
+      "estilo": "clean minimal",
+      "densidadeSecoes": "média",
+      "paginas": 12,
+      "paleta": ["#864ffe", "#1a1a1c", "#fcfcfc"],
+      "fonteDisplay": "Inter Tight",
+      "fonteCorpo": "Inter",
+      "secoes": [
+        "hero",
+        "portfolio",
+        "services",
+        "team",
+        "testimonials",
+        "blog",
+        "cta",
+        "footer"
+      ],
+      "limitacoes": "Portfolio mock, copy muito agência",
+      "usoPara": "Agências de design, web dev studios"
+    },
+    {
+      "slug": "crypto-marketing",
+      "name": "Crypto Marketing",
+      "nicho": "Marketing / Crypto SaaS",
+      "quality": 7,
+      "estilo": "gradient purple",
+      "densidadeSecoes": "alta",
+      "paginas": 47,
+      "paleta": ["#864ffe", "#1a1a1c", "#fcfcfc"],
+      "fonteDisplay": "Inter Tight",
+      "fonteCorpo": "Inter",
+      "secoes": [
+        "hero",
+        "about-tabbar",
+        "how-it-works",
+        "services",
+        "stats",
+        "timeline",
+        "testimonials",
+        "blog",
+        "cta",
+        "footer"
+      ],
+      "limitacoes": "Sem charts/ticker, placeholders não limpos",
+      "usoPara": "Crypto projects, marketing tools — precisa de gráficos reais"
+    },
+    {
+      "slug": "payment-solution",
+      "name": "Payment Solution",
+      "nicho": "Solução de pagamentos",
+      "quality": 8,
+      "estilo": "premium glassmorphic",
+      "densidadeSecoes": "alta",
+      "paginas": 56,
+      "paleta": ["#864ffe", "#1a1a1c", "#fcfcfc"],
+      "fonteDisplay": "Inter Tight",
+      "fonteCorpo": "Inter",
+      "secoes": [
+        "header-pill",
+        "hero-card-mockup",
+        "trust-ratings",
+        "features-grid",
+        "why-choose-us",
+        "pricing",
+        "finance-intro",
+        "integration-marquee",
+        "blog",
+        "cta",
+        "footer"
+      ],
+      "limitacoes": "Lorem ipsum remanescente, bundle JS monolítico",
+      "usoPara": "Fintech, payment gateways, stripe-like"
+    },
+    {
+      "slug": "pos-system",
+      "name": "POS System",
+      "nicho": "Varejo / Point of Sale",
+      "quality": 9,
+      "estilo": "professional dark",
+      "densidadeSecoes": "média",
+      "paginas": 40,
+      "paleta": ["#864ffe", "#1a1a1c", "#fcfcfc"],
+      "fonteDisplay": "Inter Tight",
+      "fonteCorpo": "Inter",
+      "secoes": [
+        "hero-qr",
+        "stats",
+        "features-grid",
+        "why-choose-us",
+        "testimonials",
+        "cta-email",
+        "trust-badges",
+        "footer"
+      ],
+      "limitacoes": "Nenhuma observada",
+      "usoPara": "POS, e-commerce, varejo — pronto para uso"
+    },
+    {
+      "slug": "insurance",
+      "name": "Insurance",
+      "nicho": "Seguros",
+      "quality": 9,
+      "estilo": "professional",
+      "densidadeSecoes": "média",
+      "paginas": 48,
+      "paleta": ["#864ffe", "#1a1a1c", "#fcfcfc"],
+      "fonteDisplay": "Inter Tight",
+      "fonteCorpo": "Inter",
+      "secoes": [
+        "hero",
+        "services-cards",
+        "why-us",
+        "features",
+        "testimonials",
+        "faq",
+        "contact-form",
+        "footer"
+      ],
+      "limitacoes": "Nenhuma significativa",
+      "usoPara": "Seguradoras, insurtech — alta qualidade"
+    },
+    {
+      "slug": "investment-management",
+      "name": "Investment Management",
+      "nicho": "Gestão de investimentos",
+      "quality": 8,
+      "estilo": "professional dark",
+      "densidadeSecoes": "média",
+      "paginas": 40,
+      "paleta": ["#864ffe", "#1a1a1c", "#fcfcfc"],
+      "fonteDisplay": "Inter Tight",
+      "fonteCorpo": "Inter",
+      "secoes": [
+        "hero",
+        "stats",
+        "services",
+        "features",
+        "testimonials",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "limitacoes": "Copy genérico para fintech",
+      "usoPara": "Gestoras, robo-advisors, wealth tech"
+    },
+    {
+      "slug": "ai-solutions",
+      "name": "AI Solutions",
+      "nicho": "Soluções de IA",
+      "quality": 8,
+      "estilo": "moderno gradient",
+      "densidadeSecoes": "alta",
+      "paginas": 12,
+      "paleta": ["#864ffe", "#1a1a1c", "#fcfcfc"],
+      "fonteDisplay": "Inter Tight",
+      "fonteCorpo": "Inter",
+      "secoes": [
+        "hero",
+        "features",
+        "how-it-works",
+        "use-cases",
+        "testimonials",
+        "pricing",
+        "cta",
+        "footer"
+      ],
+      "limitacoes": "Copy AI genérico",
+      "usoPara": "AI tools, ML platforms, automation SaaS"
+    },
+    {
+      "slug": "cloud-software",
+      "name": "Cloud Software",
+      "nicho": "Software na nuvem",
+      "quality": 9,
+      "estilo": "enterprise modern",
+      "densidadeSecoes": "alta",
+      "paginas": 40,
+      "paleta": ["#a585ff", "#1a1a1c", "#fcfcfc"],
+      "fonteDisplay": "Inter Tight",
+      "fonteCorpo": "Inter",
+      "secoes": [
+        "hero",
+        "partners",
+        "features",
+        "metrics",
+        "benefits",
+        "pricing",
+        "reviews",
+        "cta",
+        "footer"
+      ],
+      "limitacoes": "Nenhuma significativa",
+      "usoPara": "Cloud platforms, SaaS enterprise — alta qualidade"
+    },
+    {
+      "slug": "web-hosting",
+      "name": "Web Hosting",
+      "nicho": "Hospedagem web",
+      "quality": 8,
+      "estilo": "clean tech",
+      "densidadeSecoes": "média",
+      "paginas": 30,
+      "paleta": ["#864ffe", "#1a1a1c", "#fcfcfc"],
+      "fonteDisplay": "Inter Tight",
+      "fonteCorpo": "Inter",
+      "secoes": [
+        "hero",
+        "features",
+        "pricing",
+        "specs-comparison",
+        "testimonials",
+        "faq",
+        "cta",
+        "footer"
+      ],
+      "limitacoes": "Copy pode ser mais específico",
+      "usoPara": "Hosts, VPS, infraestrutura"
+    }
+  ],
+  "sectionTypes": [
+    {
+      "type": "hero",
+      "variantes": ["gradient", "video", "parallax", "illustration", "animation"],
+      "exemplosTemplates": ["ai-saas-software", "payment-solution", "cloud-software"]
+    },
+    {
+      "type": "features",
+      "variantes": ["grid", "tabs", "cards", "accordion", "before-after"],
+      "exemplosTemplates": ["payment-solution", "cloud-software", "insurance"]
+    },
+    {
+      "type": "pricing",
+      "variantes": ["toggle", "grid-3col", "grid-4col", "comparison-table"],
+      "exemplosTemplates": ["payment-solution", "cloud-software", "ai-solutions"]
+    },
+    {
+      "type": "testimonials",
+      "variantes": ["carousel", "grid", "flip-cards", "marquee"],
+      "exemplosTemplates": ["investment-management", "insurance", "pos-system"]
+    },
+    {
+      "type": "faq",
+      "variantes": ["accordion", "2-column", "categorized"],
+      "exemplosTemplates": ["insurance", "web-hosting", "investment-management"]
+    },
+    {
+      "type": "cta",
+      "variantes": ["newsletter", "trial", "demo", "contact"],
+      "exemplosTemplates": ["ai-solutions", "cloud-software", "payment-solution"]
+    },
+    {
+      "type": "footer",
+      "variantes": ["multi-column", "minimal", "mega-footer"],
+      "exemplosTemplates": ["payment-solution", "cloud-software", "insurance"]
+    },
+    {
+      "type": "navigation",
+      "variantes": ["pill-floating", "sticky", "mega-menu", "hamburger"],
+      "exemplosTemplates": ["ai-marketing-agency", "payment-solution", "cloud-software"]
+    }
+  ],
+  "nichos": {
+    "ai": [
+      "ai-saas-software",
+      "ai-chatbot",
+      "ai-software",
+      "ai-solutions",
+      "ai-gadgets",
+      "ai-voice-generator",
+      "ai-resume-builder",
+      "ai-kw-generator",
+      "ai-application",
+      "ai-marketing-agency",
+      "ai-agency"
+    ],
+    "fintech": [
+      "payment-solution",
+      "pos-system",
+      "online-banking",
+      "investment-management",
+      "personal-finance",
+      "wealth-management",
+      "forex-trading",
+      "financial-application",
+      "financial-management-platform",
+      "decrentralized-finance",
+      "mortgage-services"
+    ],
+    "marketing": [
+      "digital-agency",
+      "email-marketing",
+      "social-media-management",
+      "digital-marketing",
+      "lead-capture"
+    ],
+    "enterprise": [
+      "cloud-software",
+      "security-software",
+      "cyber-security",
+      "nuvexa-crm",
+      "automation-saas",
+      "app-development",
+      "mobile-management-software",
+      "data-visualization",
+      "analytics-and-reporting",
+      "messaging-platform",
+      "property-management-software",
+      "risk-management-software",
+      "time-tracking"
+    ],
+    "design": [
+      "creative-portfolio",
+      "app-builder"
+    ],
+    "seguros": [
+      "insurance"
+    ],
+    "tech": [
+      "web-hosting",
+      "neural-networks"
+    ],
+    "crypto": [
+      "crypto-marketing"
+    ]
+  }
+}

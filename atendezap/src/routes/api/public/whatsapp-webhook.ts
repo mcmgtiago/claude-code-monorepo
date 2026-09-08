@@ -1,0 +1,390 @@
+import { createFileRoute } from "@tanstack/react-router";
+
+export const Route = createFileRoute("/api/public/whatsapp-webhook")({
+  server: {
+    handlers: {
+      // GET: verificação do webhook pelo Meta Business Manager
+      GET: async ({ request }) => {
+        const url = new URL(request.url);
+        const mode = url.searchParams.get("hub.mode");
+        const token = url.searchParams.get("hub.verify_token");
+        const challenge = url.searchParams.get("hub.challenge");
+
+        const { verifyWebhook } = await import("@/lib/meta-whatsapp.server");
+        const { valid, challenge: ch } = verifyWebhook(mode, token, challenge);
+        if (valid && ch) {
+          return new Response(ch, { status: 200 });
+        }
+        return new Response("Forbidden", { status: 403 });
+      },
+
+      POST: async ({ request }) => {
+        try {
+          const payload: any = await request.json().catch(() => ({}));
+
+          // Ignorar notificações que não são de mensagens
+          if (payload?.object !== "whatsapp_business_account") {
+            return new Response("ok", { status: 200 });
+          }
+
+          const { parseMetaWebhookPayload, metaSendText } = await import("@/lib/meta-whatsapp.server");
+          const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+          const { lovableAiChat } = await import("@/lib/lovable-ai.server");
+          const { buildSystemPrompt, parseAiOutput } = await import("@/lib/ai-prompt");
+
+          const incoming = parseMetaWebhookPayload(payload);
+          if (!incoming.length) return new Response("ok", { status: 200 });
+
+          for (const msg of incoming) {
+            await processIncomingMessage(msg, supabaseAdmin, lovableAiChat, buildSystemPrompt, parseAiOutput, metaSendText);
+          }
+
+          return new Response("ok", { status: 200 });
+        } catch (e: any) {
+          console.error("[webhook]", e?.message, e?.stack);
+          return new Response("error", { status: 200 });
+        }
+      },
+    },
+  },
+});
+
+async function processIncomingMessage(
+  msg: { from: string; messageId: string; text: string; pushName: string | undefined; phoneNumberId: string },
+  supabaseAdmin: any,
+  lovableAiChat: any,
+  buildSystemPrompt: any,
+  parseAiOutput: any,
+  metaSendText: any,
+) {
+  const { from: number, messageId: whatsappMessageId, text, pushName, phoneNumberId } = msg;
+
+  // Encontra a empresa pelo phone_number_id registrado na instância
+  const { data: inst } = await supabaseAdmin
+    .from("whatsapp_instances")
+    .select("company_id, user_id, instance_name, webhook_token")
+    .eq("instance_name", `meta_ph_${phoneNumberId}`)
+    .maybeSingle();
+
+  // Fallback: busca instâncias conectadas com status=connected
+  const companyRow = inst ?? (await findCompanyByStatus(supabaseAdmin));
+  if (!companyRow) return;
+
+  const companyId = companyRow.company_id as string;
+  const userId = companyRow.user_id as string;
+
+  // Deduplicação por messageId
+  if (whatsappMessageId) {
+    const { data: duplicate } = await supabaseAdmin
+      .from("mensagens")
+      .select("id")
+      .eq("company_id", companyId)
+      .eq("whatsapp_message_id", whatsappMessageId)
+      .maybeSingle();
+    if (duplicate) return;
+  }
+
+  const insertedAt = new Date().toISOString();
+  const { data: inserted } = await supabaseAdmin
+    .from("mensagens")
+    .insert({
+      company_id: companyId,
+      user_id: userId,
+      numero: number,
+      contato_nome: pushName ?? null,
+      direcao: "entrada",
+      autor: "contato",
+      texto: text,
+      whatsapp_message_id: whatsappMessageId,
+      created_at: insertedAt,
+    })
+    .select("id, created_at")
+    .maybeSingle();
+  const myCreatedAt = inserted?.created_at || insertedAt;
+
+  const { data: cfg } = await supabaseAdmin
+    .from("agent_config")
+    .select("*")
+    .eq("company_id", companyId)
+    .maybeSingle();
+
+  const palavraPausar = (cfg?.palavra_pausar || "/pausar").toLowerCase().trim();
+  const palavraDespausar = (cfg?.palavra_despausar || "/despausar").toLowerCase().trim();
+  const lower = text.toLowerCase().trim();
+
+  const [{ data: stagesRows }, { data: produtosRows }] = await Promise.all([
+    supabaseAdmin.from("crm_stage").select("id, nome, tipo, ordem").eq("company_id", companyId).order("ordem", { ascending: true }),
+    supabaseAdmin.from("produto").select("nome, preco, descricao, ativo, ordem").eq("company_id", companyId).eq("ativo", true).order("ordem", { ascending: true }),
+  ]);
+  const stages = (stagesRows ?? []) as Array<{ id: string; nome: string; tipo: "normal" | "ganho" | "perda" }>;
+  const produtos = (produtosRows ?? []).map((p: any) => ({ nome: p.nome, preco: p.preco, descricao: p.descricao }));
+
+  if (isOptOutMessage(lower)) {
+    await supabaseAdmin.from("contact_pause").upsert(
+      { company_id: companyId, user_id: userId, numero: number, pausado: true },
+      { onConflict: "company_id,numero" },
+    );
+    await upsertCard(supabaseAdmin, companyId, userId, number, pushName, text, stages);
+    return;
+  }
+
+  if (lower === palavraPausar) {
+    await supabaseAdmin.from("contact_pause").upsert(
+      { company_id: companyId, user_id: userId, numero: number, pausado: true },
+      { onConflict: "company_id,numero" },
+    );
+    return;
+  }
+  if (lower === palavraDespausar) {
+    await supabaseAdmin.from("contact_pause").upsert(
+      { company_id: companyId, user_id: userId, numero: number, pausado: false },
+      { onConflict: "company_id,numero" },
+    );
+    return;
+  }
+
+  const { data: pauseRow } = await supabaseAdmin
+    .from("contact_pause")
+    .select("pausado")
+    .eq("company_id", companyId)
+    .eq("numero", number)
+    .maybeSingle();
+  if (pauseRow?.pausado) {
+    await upsertCard(supabaseAdmin, companyId, userId, number, pushName, text, stages);
+    return;
+  }
+
+  const bufferSec = Math.max(0, Math.min(20, Number(cfg?.segundos_buffer ?? 8)));
+  if (bufferSec > 0) await new Promise((r) => setTimeout(r, bufferSec * 1000));
+
+  const { data: newer } = await supabaseAdmin
+    .from("mensagens")
+    .select("id, created_at")
+    .eq("company_id", companyId)
+    .eq("numero", number)
+    .eq("direcao", "entrada")
+    .gt("created_at", myCreatedAt)
+    .limit(1);
+  if (newer && newer.length > 0) {
+    await upsertCard(supabaseAdmin, companyId, userId, number, pushName, text, stages);
+    return;
+  }
+
+  const { data: humanRecent } = await supabaseAdmin
+    .from("mensagens")
+    .select("id")
+    .eq("company_id", companyId)
+    .eq("numero", number)
+    .eq("direcao", "saida")
+    .eq("autor", "humano")
+    .gte("created_at", new Date(Date.now() - 90_000).toISOString())
+    .limit(1);
+  if (humanRecent?.length) {
+    await upsertCard(supabaseAdmin, companyId, userId, number, pushName, text, stages);
+    return;
+  }
+
+  const { data: histDesc } = await supabaseAdmin
+    .from("mensagens")
+    .select("autor,direcao,texto,created_at")
+    .eq("company_id", companyId)
+    .eq("numero", number)
+    .order("created_at", { ascending: false })
+    .limit(25);
+  const historico = (histDesc ?? []).slice().reverse();
+
+  const { data: cardRow } = await supabaseAdmin
+    .from("crm_cards")
+    .select("status, nome, stage_id")
+    .eq("company_id", companyId)
+    .eq("numero", number)
+    .maybeSingle();
+  const estagioAtual = cardRow?.status || stages[0]?.nome || "Conversas";
+  const resumoContato = `${cardRow?.nome || pushName || "Contato"} (${number}), ${historico.length} mensagens trocadas`;
+
+  const { data: googleIntegration } = await supabaseAdmin
+    .from("google_integration")
+    .select("conectado")
+    .eq("company_id", companyId)
+    .maybeSingle();
+
+  const responderEmPartes = cfg?.responder_em_partes ?? true;
+  const system = buildSystemPrompt(cfg ?? {}, {
+    responderEmPartes,
+    estagioAtual,
+    resumoContato,
+    produtos,
+    stages: stages.map((s: any) => ({ nome: s.nome, tipo: s.tipo })),
+    googleConectado: !!googleIntegration?.conectado,
+  });
+
+  const messages: Array<{ role: "system" | "user" | "assistant"; content: string }> = [
+    { role: "system", content: system },
+    ...historico.map((m: any) => ({
+      role: (m.direcao === "entrada" ? "user" : "assistant") as "user" | "assistant",
+      content: m.texto,
+    })),
+  ];
+  if (!messages.length || messages[messages.length - 1].role !== "user") {
+    messages.push({ role: "user", content: text });
+  }
+
+  const { isWithinLimit, getCompanyPlan } = await import("@/lib/plan-limits.server");
+  const { allowsProvider } = await import("@/lib/plan-features");
+  const withinMsgs = await isWithinLimit(companyId, "mensagens");
+  if (!withinMsgs) {
+    await upsertCard(supabaseAdmin, companyId, userId, number, pushName, text, stages);
+    console.warn("[plan] limite de mensagens atingido", companyId);
+    return;
+  }
+  const throttleReason = await getAiThrottleReason(supabaseAdmin, companyId, number);
+  if (throttleReason) {
+    await upsertCard(supabaseAdmin, companyId, userId, number, pushName, text, stages);
+    console.warn("[whatsapp.safety]", throttleReason, companyId, number);
+    return;
+  }
+
+  const plan = await getCompanyPlan(companyId);
+  let providerChoice = ((cfg as any)?.ai_provider || "gemini") as string;
+  let modelChoice = ((cfg as any)?.ai_model || "google/gemini-2.5-flash") as string;
+  if (!allowsProvider(plan.slug, providerChoice)) {
+    providerChoice = "gemini";
+    modelChoice = "google/gemini-2.5-flash";
+  }
+
+  let rawReply = "";
+  try {
+    rawReply = await lovableAiChat(messages, {
+      provider: providerChoice,
+      model: modelChoice,
+      openaiKey: (cfg as any)?.openai_api_key || "",
+      anthropicKey: (cfg as any)?.anthropic_api_key || "",
+    });
+  } catch (e: any) {
+    console.error("[ai]", e?.message);
+  }
+
+  const { parts, stage, agendar } = parseAiOutput(rawReply, stages.map((s: any) => ({ nome: s.nome, tipo: s.tipo })));
+  const finalParts = sanitizeAiParts(responderEmPartes ? parts : [parts.join(" ")]);
+
+  if (agendar && googleIntegration?.conectado) {
+    try {
+      const { createCalendarEventForCompany } = await import("@/lib/google.server");
+      await createCalendarEventForCompany(supabaseAdmin, companyId, {
+        titulo: agendar.titulo,
+        inicio: agendar.inicio,
+        fim: agendar.fim,
+        descricao: `Agendado via WhatsApp — ${pushName || number}`,
+      });
+    } catch (e: any) {
+      console.error("[agendar]", e?.message);
+    }
+  }
+
+  for (let i = 0; i < finalParts.length; i++) {
+    const part = finalParts[i];
+    if (!part) continue;
+    try {
+      // Sem "typing..." na API oficial — envia direto
+      await metaSendText(number, part);
+      await supabaseAdmin.from("mensagens").insert({
+        company_id: companyId,
+        user_id: userId,
+        numero: number,
+        contato_nome: pushName ?? null,
+        direcao: "saida",
+        autor: "ia",
+        texto: part,
+      });
+      if (i < finalParts.length - 1) {
+        await new Promise((r) => setTimeout(r, 700 + Math.floor(Math.random() * 800)));
+      }
+    } catch (e: any) {
+      console.error("[send]", e?.message);
+    }
+  }
+
+  await upsertCard(supabaseAdmin, companyId, userId, number, pushName, finalParts[finalParts.length - 1] || text, stages, stage);
+}
+
+async function findCompanyByStatus(admin: any) {
+  const { data } = await admin
+    .from("whatsapp_instances")
+    .select("company_id, user_id, instance_name, webhook_token")
+    .eq("status", "connected")
+    .limit(1)
+    .maybeSingle();
+  return data;
+}
+
+const OPT_OUT_WORDS = ["parar", "pare", "cancelar", "sair", "remover", "descadastrar", "stop", "unsubscribe"];
+
+function isOptOutMessage(text: string) {
+  const normalized = text.normalize("NFD").replace(/[̀-ͯ]/g, "").trim().toLowerCase();
+  return OPT_OUT_WORDS.some((word) => normalized === word || normalized.includes(` ${word} `));
+}
+
+function sanitizeAiParts(parts: string[]) {
+  return parts
+    .map((part) => part.replace(/\s+/g, " ").trim())
+    .filter(Boolean)
+    .map((part) => (part.length > 700 ? `${part.slice(0, 697).trim()}...` : part))
+    .slice(0, 2);
+}
+
+async function getAiThrottleReason(admin: any, companyId: string, numero: string): Promise<string | null> {
+  const now = Date.now();
+  const [contactRecent, companyRecent] = await Promise.all([
+    admin.from("mensagens").select("id", { count: "exact", head: true })
+      .eq("company_id", companyId).eq("numero", numero).eq("direcao", "saida").eq("autor", "ia")
+      .gte("created_at", new Date(now - 10 * 60_000).toISOString()),
+    admin.from("mensagens").select("id", { count: "exact", head: true })
+      .eq("company_id", companyId).eq("direcao", "saida").eq("autor", "ia")
+      .gte("created_at", new Date(now - 60_000).toISOString()),
+  ]);
+  if ((contactRecent.count ?? 0) >= 6) return "contact-rate-limit";
+  if ((companyRecent.count ?? 0) >= 20) return "company-rate-limit";
+  return null;
+}
+
+async function upsertCard(
+  admin: any,
+  companyId: string,
+  userId: string,
+  numero: string,
+  nome: string | undefined,
+  ultimaMensagem: string,
+  stages: Array<{ id: string; nome: string; tipo: "normal" | "ganho" | "perda" }>,
+  proposedStageName?: string | null,
+) {
+  const { data: existing } = await admin
+    .from("crm_cards")
+    .select("status, nome, stage_id")
+    .eq("company_id", companyId)
+    .eq("numero", numero)
+    .maybeSingle();
+
+  const stageByName = new Map(stages.map((s) => [s.nome.toLowerCase(), s]));
+  const stageById = new Map(stages.map((s) => [s.id, s]));
+  const currentStage = existing?.stage_id ? stageById.get(existing.stage_id) : undefined;
+  const currentTipo = currentStage?.tipo ?? (existing?.status ? stageByName.get(String(existing.status).toLowerCase())?.tipo : undefined);
+  const isLocked = currentTipo === "ganho" || currentTipo === "perda";
+  const proposed = proposedStageName ? stageByName.get(proposedStageName.toLowerCase()) : undefined;
+  let finalStage = currentStage;
+  if (proposed && !isLocked) finalStage = proposed;
+  if (!finalStage) finalStage = stages[0];
+
+  const payload: any = {
+    company_id: companyId,
+    user_id: userId,
+    numero,
+    nome: existing?.nome || nome || null,
+    ultima_mensagem: ultimaMensagem.slice(0, 240),
+    ultima_em: new Date().toISOString(),
+  };
+  if (finalStage) { payload.stage_id = finalStage.id; payload.status = finalStage.nome; }
+  else if (existing?.status) { payload.status = existing.status; }
+  else { payload.status = "Conversas"; }
+
+  await admin.from("crm_cards").upsert(payload, { onConflict: "company_id,numero" });
+}

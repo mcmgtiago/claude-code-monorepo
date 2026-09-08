@@ -1,0 +1,191 @@
+/* ═══════════════════════════════════════════════════════════
+   Kit: New Genre Studio — Effects CSS
+   backdrop-filter, clip-path, gradientes decorativos, pseudo-elementos
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Backdrop Blur ── */
+.kit-blur-sm {
+  backdrop-filter: var(--kit-blur-sm); /* blur(4px) */
+  -webkit-backdrop-filter: var(--kit-blur-sm);
+}
+
+.kit-blur-md {
+  backdrop-filter: var(--kit-blur-md); /* blur(5px) */
+  -webkit-backdrop-filter: var(--kit-blur-md);
+}
+
+.kit-blur-lg {
+  backdrop-filter: var(--kit-blur-lg); /* blur(10px) */
+  -webkit-backdrop-filter: var(--kit-blur-lg);
+}
+
+/* ── Gradient Overlays ── */
+.kit-overlay-gradient-bottom {
+  position: relative;
+}
+
+.kit-overlay-gradient-bottom::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.6) 100%);
+  pointer-events: none;
+}
+
+.kit-overlay-gradient-top {
+  position: relative;
+}
+
+.kit-overlay-gradient-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(180deg, var(--kit-surface) 6.92%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Fade Edges (marquee / carousel) ── */
+.kit-fade-edges {
+  position: relative;
+}
+
+.kit-fade-edges::before,
+.kit-fade-edges::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.kit-fade-edges::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--kit-white) 0%, transparent 100%);
+}
+
+.kit-fade-edges::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--kit-white) 0%, transparent 100%);
+}
+
+.kit-fade-edges--dark::before {
+  background: linear-gradient(90deg, var(--kit-primary) 0%, transparent 100%);
+}
+
+.kit-fade-edges--dark::after {
+  background: linear-gradient(270deg, var(--kit-primary) 0%, transparent 100%);
+}
+
+.kit-fade-edges--surface::before {
+  background: linear-gradient(90deg, var(--kit-surface) 0%, transparent 100%);
+}
+
+.kit-fade-edges--surface::after {
+  background: linear-gradient(270deg, var(--kit-surface) 0%, transparent 100%);
+}
+
+/* ── Glass Effect ── */
+.kit-glass {
+  background: var(--kit-white-10);
+  backdrop-filter: var(--kit-blur-lg);
+  -webkit-backdrop-filter: var(--kit-blur-lg);
+  border: 1px solid var(--kit-white-10);
+}
+
+.kit-glass--dark {
+  background: var(--kit-overlay-dark);
+  backdrop-filter: var(--kit-blur-lg);
+  -webkit-backdrop-filter: var(--kit-blur-lg);
+  border: 1px solid var(--kit-white-10);
+}
+
+/* ── Image Effects ── */
+.kit-img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.kit-img-rounded {
+  border-radius: var(--kit-radius-lg);
+  overflow: hidden;
+}
+
+/* ── Decorative Blur Blob ── */
+.kit-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: var(--kit-blur-xl); /* blur(50px) */
+  pointer-events: none;
+  z-index: 0;
+}
+
+.kit-blob--orange {
+  background: var(--kit-accent-orange);
+  opacity: 0.3;
+}
+
+.kit-blob--blue {
+  background: var(--kit-blue-muted);
+  opacity: 0.3;
+}
+
+/* ── Swiper/Carousel Pagination Dots ── */
+.kit-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--kit-radius-pill);
+  background: var(--kit-overlay-dark);
+  backdrop-filter: var(--kit-blur-md);
+  -webkit-backdrop-filter: var(--kit-blur-md);
+}
+
+.kit-dots__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--kit-white-20);
+  border: none;
+  cursor: pointer;
+  transition: var(--kit-transition-all);
+}
+
+.kit-dots__dot--active {
+  background: var(--kit-white);
+  width: 24px;
+  border-radius: var(--kit-radius-pill);
+}
+
+/* ── Carousel Nav Arrows ── */
+.kit-carousel-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--kit-overlay-dark);
+  backdrop-filter: var(--kit-blur-sm);
+  -webkit-backdrop-filter: var(--kit-blur-sm);
+  border: none;
+  color: var(--kit-white);
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.kit-carousel-arrow:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,136 @@
+/* ═══════════════════════════════════════════════════════════
+   Kit: New Genre Studio — Variables CSS
+   Fonte: https://newgenre.studio
+   Framework detectado: Framer (Webflow-like)
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Cores Primárias ── */
+  --kit-primary: #0a0d14;
+  --kit-primary-light: #192029;
+  --kit-primary-medium: #353941;
+  --kit-secondary: #3b424a; /* Mais escuro para melhor leitura no claro */
+  --kit-muted: #626a75; /* Melhor contraste */
+  --kit-border: #cbcfd7;
+
+  /* ── Superfícies ── */
+  --kit-surface: #f4efeb;
+  --kit-surface-cool: #f9fafb;
+  --kit-surface-gray: #f3f4f6;
+  --kit-surface-border: #e5e7eb;
+  --kit-white: #ffffff;
+  --kit-white-90: #ffffffe6;
+  --kit-white-20: #fff3;
+  --kit-white-10: #ffffff1a;
+
+  /* ── Accent: Green ── */
+  --kit-accent-green: #489a2f; /* Ajustado para leitura */
+  --kit-accent-green-light: #78c85b;
+  --kit-accent-green-dark: #316223;
+  --kit-accent-green-bg: #eaf3e2;
+  --kit-accent-green-deep: #163012;
+
+  /* ── Accent: Orange/Red ── */
+  --kit-accent-orange: #d15a31; /* Ajustado para leitura no fundo claro */
+  --kit-accent-orange-light: #ed9454;
+  --kit-accent-orange-dark: #903c27;
+  --kit-accent-orange-deep: #461b0c;
+  --kit-accent-yellow-bg: #fef6cd;
+
+  /* ── Warm Browns ── */
+  --kit-warm-brown: #573c32;
+  --kit-warm-brown-medium: #6d4f43;
+  --kit-warm-brown-light: #ede8e3;
+  --kit-warm-brown-tan: #bba696;
+  --kit-warm-brown-muted: #a38575;
+  --kit-warm-brown-deep: #35221d;
+  --kit-warm-brown-darkest: #1e1310;
+
+  /* ── Blues ── */
+  --kit-blue: #3e5682;
+  --kit-blue-dark: #2d426d;
+  --kit-blue-light: #5a769f;
+  --kit-blue-muted: #87a1c4;
+  --kit-blue-bg: #dde6f2;
+  --kit-blue-deep: #182644;
+
+  /* ── Overlays ── */
+  --kit-overlay-dark: #303945d4;
+  --kit-overlay-subtle: #44546b24;
+  --kit-overlay-ghost: #99a1af0f;
+
+  /* ── Selection ── */
+  --kit-selection-bg: #0c1018;
+  --kit-selection-text: #ffffff;
+
+  /* ── Footer ── */
+  --kit-footer-bg: #0a0d14;
+
+  /* ── Gradientes ── */
+  --kit-gradient-hero: linear-gradient(180deg, #280e01 0%, #182644 20%, #2d426d 42%, #3e5682 62%, #5a769f 80%, #87a1c4 100%);
+  --kit-gradient-hero-fade: linear-gradient(180deg, #87a1c4 0%, #a8bdd4 12%, #c1d3e6 28%, #e0e9d8 45%, #fef9e1 65%, #f7f3f0 85%, #f4efeb 100%);
+  --kit-gradient-approach: linear-gradient(180deg, #0a0d14 0%, #182644 20%, #2d426d 42%, #3e5682 62%, #5a769f 80%, #87a1c4 100%);
+
+  /* ── Tipografia ── */
+  --kit-font-heading: "Serrif Condensed Regular", "Georgia", serif;
+  --kit-font-body: "Saans Variable", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --kit-font-body-medium: "Saans Medium", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --kit-font-mono: "Fragment Mono", "Fira Code", monospace;
+  --kit-fs-h1: clamp(40px, 5vw, 72px);
+  --kit-fs-h2: clamp(24px, 2.5vw, 32px);
+  --kit-fs-h3: clamp(20px, 2vw, 32px);
+  --kit-fs-body: 16px;
+  --kit-fs-body-lg: 18px;
+  --kit-fs-caption: 14px;
+  --kit-fs-label: 12px;
+  --kit-fw-regular: 400;
+  --kit-fw-medium: 500;
+  --kit-fw-semibold: 570;
+  --kit-lh-heading: 1.05;
+  --kit-lh-body: 1.5;
+  --kit-lh-tight: 1.1;
+  --kit-ls-heading: -0.02em;
+  --kit-ls-body: -0.01em;
+  --kit-ls-label: 0.04em;
+
+  /* ── Espaçamento ajustado (mais próximos) ── */
+  --kit-section-py: clamp(60px, 8vw, 100px);
+  --kit-section-px: clamp(20px, 4.4vw, 64px);
+  --kit-container-max: 1312px;
+  --kit-gap-lg: 48px;
+  --kit-gap-md: 32px;
+  --kit-gap-sm: 24px;
+  --kit-gap-xs: 16px;
+  --kit-gap-xxs: 8px;
+
+  /* ── Bordas ── */
+  --kit-radius-xs: 4px;
+  --kit-radius-sm: 8px;
+  --kit-radius-md: 12px;
+  --kit-radius-lg: 16px;
+  --kit-radius-xl: 24px;
+  --kit-radius-pill: 50px;
+  --kit-radius-full: 9999px;
+
+  /* ── Sombras ── */
+  --kit-shadow-card: rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 0px 0px, rgba(255, 255, 255, 0.15) 0px 0px 0px 1px;
+
+  /* ── Transições ── */
+  --kit-ease-smooth: cubic-bezier(0.12, 0.23, 0.5, 1);
+  --kit-ease-snap: cubic-bezier(0.44, 0, 0.56, 1);
+  --kit-transition-color: color 0.3s var(--kit-ease-smooth);
+  --kit-transition-opacity: opacity 0.4s ease-out;
+  --kit-transition-all: all 0.3s var(--kit-ease-smooth);
+
+  /* ── Efeitos ── */
+  --kit-blur-sm: blur(4px);
+  --kit-blur-md: blur(5px);
+  --kit-blur-lg: blur(10px);
+  --kit-blur-xl: blur(50px);
+}
+
+/* ── Selection ── */
+::selection {
+  background-color: var(--kit-selection-bg);
+  color: var(--kit-selection-text);
+}

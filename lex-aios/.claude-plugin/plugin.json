@@ -1,0 +1,12 @@
+{
+  "name": "lex-aios",
+  "version": "1.0.0",
+  "description": "LEX (Advocacia) — AI Operating System para Advogados. 8 skills para estratégia de caso, geração de peças, prazos processuais e pesquisa jurídica. Start with /firm-setup.",
+  "author": {
+    "name": "GREENHAT Consultoria Digital",
+    "email": "contato@greenhat.io",
+    "url": "https://greenhat.io"
+  },
+  "license": "MIT",
+  "keywords": ["lex", "advocacia", "legal", "law", "case-strategy", "deadlines", "precedent", "documents"]
+}

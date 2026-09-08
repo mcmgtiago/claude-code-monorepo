@@ -1,0 +1,101 @@
+export const GAME_TOOLS = [
+  {
+    name: 'roll_check',
+    description: 'Rola d20 + modificador contra DC. Combate, kidō, shunpo, sentir reiatsu, persuasão. CALIBRE DC pelo nível.',
+    input_schema: {
+      type: 'object',
+      properties: {
+        attribute: { type: 'string', enum: ['reiatsu', 'zanjutsu', 'hakuda', 'hoho', 'kido', 'percepcao', 'vontade', 'presenca'] },
+        dc: { type: 'integer', description: 'trivial 5, fácil 10, médio 15, difícil 20, heroico 25, lendário 30.' },
+        reason: { type: 'string' },
+        advantage: { type: 'string', enum: ['normal', 'vantagem', 'desvantagem'] },
+      },
+      required: ['attribute', 'dc', 'reason'],
+    },
+  },
+  {
+    name: 'apply_changes',
+    description: 'Registra mudanças. HP, reiryoku, XP, local, tempo, reputação, relacionamentos. SEMPRE registre NPCs novos em relationships.',
+    input_schema: {
+      type: 'object',
+      properties: {
+        hp_delta: { type: 'integer' },
+        reiryoku_delta: { type: 'integer' },
+        stress_delta: { type: 'integer' },
+        xp_gain: { type: 'integer' },
+        morality_delta: { type: 'integer' },
+        location: { type: 'string' },
+        region: { type: 'string' },
+        time_of_day: { type: 'string' },
+        day_delta: { type: 'integer' },
+        rank: { type: 'string' },
+        learn_techniques: { type: 'array', items: { type: 'object', properties: { id: { type: 'string' }, name: { type: 'string' }, attribute: { type: 'string' }, description: { type: 'string' }, reiryoku_cost: { type: 'integer' } }, required: ['id', 'name', 'attribute', 'description'] } },
+        add_items: { type: 'array', items: { type: 'object', properties: { name: { type: 'string' }, description: { type: 'string' }, quantity: { type: 'integer' }, rarity: { type: 'string' } }, required: ['name', 'description'] } },
+        reputation_changes: { type: 'array', items: { type: 'object', properties: { faction: { type: 'string' }, delta: { type: 'integer' } }, required: ['faction', 'delta'] } },
+        relationships: { type: 'array', items: { type: 'object', properties: { id: { type: 'string' }, name: { type: 'string' }, faction: { type: 'string' }, affinity_delta: { type: 'integer' }, notes: { type: 'string' }, romantic: { type: 'boolean' }, milestone: { type: 'string' } } } },
+        set_flags: { type: 'object', additionalProperties: { type: 'string' } },
+        scene_npc: { type: ['string', 'null'] },
+      },
+    },
+  },
+  {
+    name: 'manage_combat',
+    description: 'Combate: start, damage, heal, advance_round, end.',
+    input_schema: { type: 'object', properties: { action: { type: 'string', enum: ['start', 'damage', 'heal', 'advance_round', 'end'] }, enemies: { type: 'array', items: { type: 'object', properties: { name: { type: 'string' }, description: { type: 'string' }, level: { type: 'integer' }, hp: { type: 'integer' } }, required: ['name', 'level'] } }, enemy_id: { type: 'string' }, amount: { type: 'integer' } }, required: ['action'] },
+  },
+  {
+    name: 'manage_quest',
+    description: 'Missões: start, complete, fail.',
+    input_schema: { type: 'object', properties: { action: { type: 'string', enum: ['start', 'complete', 'fail'] }, quest_id: { type: 'string' }, title: { type: 'string' }, description: { type: 'string' }, giver: { type: 'string' } }, required: ['action'] },
+  },
+  {
+    name: 'offer_crossroad',
+    description: 'Encruzilhada com 2-4 opções. ENCERRE após oferecer.',
+    input_schema: { type: 'object', properties: { prompt: { type: 'string' }, options: { type: 'array', items: { type: 'string' }, minItems: 2, maxItems: 4 } }, required: ['prompt', 'options'] },
+  },
+  {
+    name: 'create_character',
+    description: 'Cria ficha do personagem Bleach.',
+    input_schema: {
+      type: 'object',
+      properties: {
+        name: { type: 'string' }, age: { type: 'integer' },
+        race: { type: 'string', enum: ['shinigami', 'hollow', 'quincy', 'humano', 'visored', 'humano_puro'] },
+        tier: { type: 'string', enum: ['novato', 'veterano', 'elite', 'capitao'] },
+        background: { type: 'string' }, appearance: { type: 'string' }, personality: { type: 'string' },
+        power_stage: { type: 'string' },
+        zanpakuto_name: { type: 'string' }, zanpakuto_element: { type: 'string' }, zanpakuto_spirit: { type: 'string' },
+        zanpakuto_release: { type: 'string' }, zanpakuto_shikai: { type: 'string' },
+        hollow_mask: { type: 'string' }, resurreccion_name: { type: 'string' },
+        soul_item: { type: 'string' }, signature_ability: { type: 'string' },
+        attributes: { type: 'object', properties: { reiatsu: { type: 'integer' }, zanjutsu: { type: 'integer' }, hakuda: { type: 'integer' }, hoho: { type: 'integer' }, kido: { type: 'integer' }, percepcao: { type: 'integer' }, vontade: { type: 'integer' }, presenca: { type: 'integer' } } },
+      },
+      required: ['name', 'race', 'tier'],
+    },
+  },
+  {
+    name: 'reveal_zanpakuto',
+    description: 'Revela nome/shikai da zanpakutō (shinigami). Marco épico após comunhão com o espírito.',
+    input_schema: { type: 'object', properties: { name: { type: 'string' }, release_command: { type: 'string' }, shikai_ability: { type: 'string' }, spirit_personality: { type: 'string' } }, required: ['name'] },
+  },
+  {
+    name: 'advance_power_stage',
+    description: 'Avança estágio de poder (Shikai→Bankai, Adjuchas→Vasto Lorde, etc). Marco conquistado, raro.',
+    input_schema: { type: 'object', properties: { new_stage: { type: 'string' }, reason: { type: 'string' }, bankai_name: { type: 'string' }, bankai_ability: { type: 'string' } }, required: ['new_stage', 'reason'] },
+  },
+  {
+    name: 'transform_character',
+    description: 'Transforma a raça do personagem (humano→shinigami, shinigami→visored, etc). ADITIVO: preserva poderes anteriores (Ichigo-style). Evento raro e épico.',
+    input_schema: { type: 'object', properties: { to_race: { type: 'string', enum: ['shinigami', 'hollow', 'quincy', 'humano', 'visored'] }, power_stage: { type: 'string' }, reason: { type: 'string' } }, required: ['to_race', 'reason'] },
+  },
+  {
+    name: 'learn_skill',
+    description: 'Ensina técnica/habilidade. Árvores: zanjutsu, kido, hoho, hakuda, hollow, quincy, social. Use após treino, batalha, evolução.',
+    input_schema: { type: 'object', properties: { skill_name: { type: 'string' }, tree: { type: 'string', enum: ['zanjutsu', 'kido', 'hoho', 'hakuda', 'hollow', 'quincy', 'social'] }, reason: { type: 'string' } }, required: ['skill_name', 'tree', 'reason'] },
+  },
+  {
+    name: 'record_kill',
+    description: 'Registra morte causada pelo personagem.',
+    input_schema: { type: 'object', properties: { victim: { type: 'string' }, context: { type: 'string' }, morality_impact: { type: 'integer' } }, required: ['victim'] },
+  },
+] as const;

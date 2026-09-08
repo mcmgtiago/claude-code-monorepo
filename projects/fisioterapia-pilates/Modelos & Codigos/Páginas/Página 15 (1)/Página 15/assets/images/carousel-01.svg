@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 640" width="360" height="640">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050c18"/>
+      <stop offset="100%" stop-color="#0d1f3a"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#2563eb" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="360" height="640" fill="url(#bg1)"/>
+  <rect width="360" height="640" fill="url(#glow1)"/>
+  <!-- grid -->
+  <line x1="0" y1="160" x2="360" y2="160" stroke="#1a2a4a" stroke-width="0.8"/>
+  <line x1="0" y1="320" x2="360" y2="320" stroke="#1a2a4a" stroke-width="0.8"/>
+  <line x1="0" y1="480" x2="360" y2="480" stroke="#1a2a4a" stroke-width="0.8"/>
+  <line x1="120" y1="0" x2="120" y2="640" stroke="#1a2a4a" stroke-width="0.8"/>
+  <line x1="240" y1="0" x2="240" y2="640" stroke="#1a2a4a" stroke-width="0.8"/>
+  <!-- phone body -->
+  <rect x="110" y="130" width="140" height="280" rx="20" ry="20" fill="#0f172a" stroke="#2563eb" stroke-width="1.5"/>
+  <!-- notch -->
+  <rect x="155" y="133" width="50" height="10" rx="5" fill="#1e293b"/>
+  <!-- screen -->
+  <rect x="120" y="152" width="120" height="218" rx="4" ry="4" fill="#0d1a2e"/>
+  <!-- face/person silhouette -->
+  <circle cx="180" cy="210" r="32" fill="#1e3a6e"/>
+  <path d="M140 270 Q180 248 220 270 L220 310 Q180 318 140 310 Z" fill="#1e3a6e"/>
+  <!-- REC badge -->
+  <rect x="126" y="158" width="48" height="18" rx="4" fill="#dc2626"/>
+  <circle cx="136" cy="167" r="4" fill="white"/>
+  <text x="144" y="171" font-family="Arial,sans-serif" font-size="9" fill="white" font-weight="bold">REC</text>
+  <!-- focus corners -->
+  <path d="M152 180 L152 172 L144 172" stroke="#2563eb" stroke-width="2" fill="none"/>
+  <path d="M208 180 L208 172 L216 172" stroke="#2563eb" stroke-width="2" fill="none"/>
+  <path d="M152 240 L152 248 L144 248" stroke="#2563eb" stroke-width="2" fill="none"/>
+  <path d="M208 240 L208 248 L216 248" stroke="#2563eb" stroke-width="2" fill="none"/>
+  <!-- play button overlay -->
+  <circle cx="180" cy="290" r="22" fill="#2563eb" opacity="0.9"/>
+  <polygon points="173,281 173,299 191,290" fill="white"/>
+  <!-- home bar -->
+  <rect x="155" y="400" width="50" height="4" rx="2" fill="#1e3a6e"/>
+  <!-- label -->
+  <text x="180" y="460" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa" text-anchor="middle" font-weight="600">Se gravando com o celular</text>
+  <text x="180" y="480" font-family="Arial,sans-serif" font-size="11" fill="#334155" text-anchor="middle">Edição Ninja</text>
+</svg>

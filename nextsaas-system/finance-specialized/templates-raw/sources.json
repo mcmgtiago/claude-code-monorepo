@@ -1,0 +1,109 @@
+{
+  "specializedTemplates": [
+    {
+      "slug": "advitex",
+      "name": "Advitex Finance & Business Consulting",
+      "path": "C:/Users/Administrator/Downloads/finance/advitex-finance-and-business-consulting-html-tem-2026-08-22-04-44-59-utc/advitex-package/advitex/",
+      "type": "html-static",
+      "nicho": "Consultoria Financeira / Business",
+      "duplicateOf": "envato_2NF7XZW"
+    },
+    {
+      "slug": "consora",
+      "name": "Consora Business Finance Consulting",
+      "path": "C:/Users/Administrator/Downloads/finance/consora-business-finance-consulting-html-temple-2026-07-07-08-41-08-utc/consora/",
+      "type": "html-static",
+      "nicho": "Business Finance Consulting",
+      "variantes": ["index.html", "index-2.html", "index-3.html", "index-4.html", "index-5.html"],
+      "nota": "5 variantes de homepage — excelente para A/B"
+    },
+    {
+      "slug": "finwice",
+      "name": "FinWice Fintech Platform",
+      "path": "C:/Users/Administrator/Downloads/finance/envato_9WPW4Q8/finwice-package/FinWice/",
+      "type": "html-static",
+      "nicho": "Fintech Platform"
+    },
+    {
+      "slug": "finazze",
+      "name": "Finazze Flask Finance Dashboard",
+      "path": "C:/Users/Administrator/Downloads/finance/envato_M6BMUNJ/Finazze-Flask_v1.0/Finazze/",
+      "type": "flask-python",
+      "nicho": "Finance Dashboard / Web Application",
+      "nota": "Backend Flask (Python) — diferente dos outros que são só HTML"
+    }
+  ],
+  "nextsaasFintech": [
+    {
+      "slug": "payment-solution",
+      "path": "C:/Users/Administrator/Downloads/ui88/Organizado/A - Dashboards & SaaS/NextSaaS - Mega Bundle (47 templates)/main/templates/payment-solution/",
+      "quality": 8,
+      "foco": "Payment gateways, processamento, PCI"
+    },
+    {
+      "slug": "pos-system",
+      "path": "C:/Users/Administrator/Downloads/ui88/Organizado/A - Dashboards & SaaS/NextSaaS - Mega Bundle (47 templates)/main/templates/pos-system/",
+      "quality": 9,
+      "foco": "Varejo, transações, inventário"
+    },
+    {
+      "slug": "online-banking",
+      "path": "C:/Users/Administrator/Downloads/ui88/Organizado/A - Dashboards & SaaS/NextSaaS - Mega Bundle (47 templates)/main/templates/online-banking/",
+      "quality": 8,
+      "foco": "Digital banking, neobanks"
+    },
+    {
+      "slug": "investment-management",
+      "path": "C:/Users/Administrator/Downloads/ui88/Organizado/A - Dashboards & SaaS/NextSaaS - Mega Bundle (47 templates)/main/templates/investment-management/",
+      "quality": 8,
+      "foco": "Gestão de investimentos, wealth tech"
+    },
+    {
+      "slug": "personal-finance",
+      "path": "C:/Users/Administrator/Downloads/ui88/Organizado/A - Dashboards & SaaS/NextSaaS - Mega Bundle (47 templates)/main/templates/personal-finance/",
+      "quality": 7,
+      "foco": "Finanças pessoais, budgeting"
+    },
+    {
+      "slug": "wealth-management",
+      "path": "C:/Users/Administrator/Downloads/ui88/Organizado/A - Dashboards & SaaS/NextSaaS - Mega Bundle (47 templates)/main/templates/wealth-management/",
+      "quality": 8,
+      "foco": "Wealth management, robo-advisors"
+    },
+    {
+      "slug": "forex-trading",
+      "path": "C:/Users/Administrator/Downloads/ui88/Organizado/A - Dashboards & SaaS/NextSaaS - Mega Bundle (47 templates)/main/templates/forex-trading/",
+      "quality": 8,
+      "foco": "Trading platforms, forex, crypto"
+    },
+    {
+      "slug": "financial-application",
+      "path": "C:/Users/Administrator/Downloads/ui88/Organizado/A - Dashboards & SaaS/NextSaaS - Mega Bundle (47 templates)/main/templates/financial-application/",
+      "quality": 6,
+      "foco": "Fintech genérica"
+    },
+    {
+      "slug": "financial-management-platform",
+      "path": "C:/Users/Administrator/Downloads/ui88/Organizado/A - Dashboards & SaaS/NextSaaS - Mega Bundle (47 templates)/main/templates/financial-management-platform/",
+      "quality": 7,
+      "foco": "Corporate finance, gestão financeira"
+    },
+    {
+      "slug": "decrentralized-finance",
+      "path": "C:/Users/Administrator/Downloads/ui88/Organizado/A - Dashboards & SaaS/NextSaaS - Mega Bundle (47 templates)/main/templates/decrentralized-finance/",
+      "quality": 8,
+      "foco": "DeFi, crypto, blockchain"
+    },
+    {
+      "slug": "mortgage-services",
+      "path": "C:/Users/Administrator/Downloads/ui88/Organizado/A - Dashboards & SaaS/NextSaaS - Mega Bundle (47 templates)/main/templates/mortgage-services/",
+      "quality": 7,
+      "foco": "Empréstimos, mortgage, lending"
+    }
+  ],
+  "duplicatas": {
+    "nota": "A pasta envato_2NF7XZW é duplicata da pasta advitex-finance. Usar apenas a pasta principal.",
+    "principal": "advitex-finance-and-business-consulting-html-tem-2026-08-22-04-44-59-utc",
+    "duplicata": "envato_2NF7XZW"
+  }
+}

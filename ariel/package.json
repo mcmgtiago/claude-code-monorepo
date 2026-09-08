@@ -1,0 +1,26 @@
+{
+  "name": "ariel-accounting",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ARIEL Accounting MVP - Plataforma de agentes IA para escritorios contabeis",
+  "workspaces": [
+    "workers",
+    "app",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:workers": "npm run dev --workspace=workers",
+    "dev:app": "npm run dev --workspace=app",
+    "build": "npm run build --workspaces --if-present",
+    "db:push": "cd packages/db && npm run push",
+    "db:seed": "cd packages/db && npm run seed"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.30.0",
+    "@supabase/supabase-js": "^2.45.0",
+    "zod": "^3.23.8"
+  }
+}

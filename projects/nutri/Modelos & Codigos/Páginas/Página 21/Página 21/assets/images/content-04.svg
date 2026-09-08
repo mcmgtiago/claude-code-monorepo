@@ -1,0 +1,24 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="620" rx="28" fill="#EED6CF"/>
+  <rect x="0" y="430" width="900" height="190" fill="#E3C3BA"/>
+  <rect x="538" y="122" width="250" height="220" rx="18" fill="#FFFFFF" fill-opacity="0.35"/>
+  <rect x="548" y="132" width="230" height="200" rx="14" fill="#F7EAE4"/>
+  <rect x="82" y="84" width="158" height="324" rx="24" fill="#C5D6D1"/>
+  <g transform="translate(262 84)">
+    <path d="M304 148C330 118 380 114 412 142C450 176 460 246 444 310C426 382 376 444 316 446C256 448 204 388 190 318C176 248 214 186 256 156C270 146 286 142 304 148Z" fill="#E8B38F"/>
+    <path d="M296 136C324 114 372 110 406 134C444 162 458 214 448 260C438 304 408 346 366 360C324 374 274 358 244 324C210 286 208 222 236 180C250 160 272 146 296 136Z" fill="#F0C7A9"/>
+    <path d="M282 118C306 98 344 92 378 102C410 112 440 136 446 164C452 186 438 208 414 218C386 228 352 220 322 208C290 196 254 174 250 148C248 136 260 130 282 118Z" fill="#694635"/>
+    <path d="M432 194C408 178 394 150 398 122C404 92 430 70 462 70C494 70 526 94 536 126C546 156 534 188 510 206C492 220 466 222 446 214C440 210 436 202 432 194Z" fill="#78533E"/>
+    <rect x="190" y="220" width="160" height="212" rx="18" fill="#255D89"/>
+    <rect x="206" y="236" width="128" height="182" rx="10" fill="#F3E8DF"/>
+    <path d="M206 376C258 360 302 360 334 388" stroke="#255D89" stroke-width="8" stroke-linecap="round"/>
+    <path d="M348 280C378 272 400 274 426 292" stroke="#255D89" stroke-width="12" stroke-linecap="round"/>
+    <path d="M282 438C304 414 328 396 360 388" stroke="#E1B38C" stroke-width="18" stroke-linecap="round"/>
+    <path d="M236 450C222 392 216 340 216 286" stroke="#E1B38C" stroke-width="18" stroke-linecap="round"/>
+  </g>
+  <g fill="#315B43">
+    <path d="M104 384C118 320 160 268 220 236C220 292 198 360 150 398L104 384Z"/>
+    <path d="M146 402C170 334 224 292 286 274C280 342 246 400 188 422L146 402Z"/>
+    <path d="M90 426C132 370 184 348 238 346C214 396 166 442 106 452L90 426Z"/>
+  </g>
+</svg>

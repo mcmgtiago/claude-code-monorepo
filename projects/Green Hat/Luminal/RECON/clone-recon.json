@@ -1,0 +1,5731 @@
+{
+  "label": "clone",
+  "url": "http://127.0.0.1:8123/",
+  "capturedAt": "2026-08-03T11:36:39.872Z",
+  "console": {
+    "errors": [],
+    "warnings": [],
+    "pageErrors": []
+  },
+  "captures": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "screenshot": "screenshots\\clone-1440.png",
+      "signals": {
+        "href": "http://127.0.0.1:8123/",
+        "title": "Luminal Studio - Experiências digitais",
+        "lang": "pt-BR",
+        "bodyTextChars": 5746,
+        "scrollHeight": 9367,
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "h1": [
+          "LUMINAL"
+        ],
+        "headings": [
+          {
+            "tag": "h1",
+            "text": "LUMINAL"
+          },
+          {
+            "tag": "h2",
+            "text": "Luminal Studio"
+          },
+          {
+            "tag": "h2",
+            "text": "Luminal Studio é uma agência de design criativo focada em ajudar marcas a se comunicar com clareza."
+          },
+          {
+            "tag": "h2",
+            "text": "Luminal Studio"
+          },
+          {
+            "tag": "h3",
+            "text": "Marca"
+          },
+          {
+            "tag": "h3",
+            "text": "Design web"
+          },
+          {
+            "tag": "h3",
+            "text": "Produto"
+          },
+          {
+            "tag": "h3",
+            "text": "Estratégia"
+          },
+          {
+            "tag": "h2",
+            "text": "11 anos em movimento"
+          },
+          {
+            "tag": "h2",
+            "text": "Luminal Studio"
+          },
+          {
+            "tag": "h3",
+            "text": "Design de experiências cinéticas"
+          },
+          {
+            "tag": "h3",
+            "text": "Sistemas de marca escaláveis"
+          },
+          {
+            "tag": "h3",
+            "text": "Criação orientada por performance"
+          },
+          {
+            "tag": "h2",
+            "text": "Do caos à clareza"
+          },
+          {
+            "tag": "h3",
+            "text": "Descoberta e estratégia"
+          },
+          {
+            "tag": "h3",
+            "text": "Design e prototipagem"
+          },
+          {
+            "tag": "h3",
+            "text": "Desenvolvimento"
+          },
+          {
+            "tag": "h3",
+            "text": "Lançamento e escala"
+          },
+          {
+            "tag": "h2",
+            "text": "Por que Luminal?"
+          },
+          {
+            "tag": "h2",
+            "text": "Desenhado com intenção"
+          },
+          {
+            "tag": "h2",
+            "text": "Luminal Studio é uma equipe criativa focada em excelência digital."
+          },
+          {
+            "tag": "h3",
+            "text": "Marcus Thorne"
+          },
+          {
+            "tag": "h3",
+            "text": "Ava Lin"
+          },
+          {
+            "tag": "h3",
+            "text": "Noah Reed"
+          },
+          {
+            "tag": "h3",
+            "text": "Elena Rossi"
+          },
+          {
+            "tag": "h3",
+            "text": "Elias Vance"
+          },
+          {
+            "tag": "h2",
+            "text": "O que nossos clientes dizem"
+          },
+          {
+            "tag": "h2",
+            "text": "Desenhado com intenção"
+          },
+          {
+            "tag": "h2",
+            "text": "Planos transparentes por design."
+          },
+          {
+            "tag": "h3",
+            "text": "Núcleo inicial"
+          },
+          {
+            "tag": "h3",
+            "text": "Operação premium"
+          },
+          {
+            "tag": "h3",
+            "text": "Escala para agências"
+          },
+          {
+            "tag": "h2",
+            "text": "Vamos construir juntos."
+          },
+          {
+            "tag": "h2",
+            "text": "Conecte-se"
+          }
+        ],
+        "metaDescription": "",
+        "counts": {
+          "links": 17,
+          "images": 8,
+          "video": 0,
+          "canvas": 1,
+          "sections": 20,
+          "forms": 1,
+          "buttons": 2,
+          "inputs": 1,
+          "interactive": 32,
+          "scripts": 2,
+          "stylesheets": 2
+        },
+        "frameworks": {
+          "react": false,
+          "next": false,
+          "vue": false,
+          "nuxt": false,
+          "svelte": false,
+          "astro": false,
+          "three": false,
+          "gsap": false,
+          "lenis": false
+        },
+        "scripts": [
+          "https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js",
+          "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js"
+        ],
+        "stylesheets": [
+          "http://127.0.0.1:8123/luminal-tailwind.css",
+          "http://127.0.0.1:8123/assets/fonts/local.css"
+        ],
+        "sections": [
+          {
+            "tag": "header",
+            "id": "",
+            "className": "fixed top-0 left-0 w-full z-50 bg-neutral-950/80 backdrop-blur-md border-b border-white/10 h-16 transition-all duration-300",
+            "text": "Luminal Projetos Serviços Sobre Planos Contato Iniciar projeto Projetos Serviços Sobre Contato",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 64
+            },
+            "style": {
+              "display": "block",
+              "position": "fixed",
+              "backgroundColor": "rgba(10, 10, 10, 0.8)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "nav",
+            "id": "",
+            "className": "hidden md:flex items-center gap-10",
+            "text": "Projetos Serviços Sobre Planos Contato",
+            "rect": {
+              "x": 454,
+              "y": 24,
+              "width": 456,
+              "height": 15
+            },
+            "style": {
+              "display": "flex",
+              "position": "static",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "z-20 overflow-hidden bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "+ + + Camadas Comando Módulos Energia Vértice Pulso Global Camadas Comando Módulos Energia Vértice Pulso Global",
+            "rect": {
+              "x": 0,
+              "y": 964,
+              "width": 1440,
+              "height": 109
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "about",
+            "className": "z-20 bg-neutral-950 w-full border-t border-white/10 relative",
+            "text": "/// Sobre Luminal Studio Luminal Studio é uma agência de design criativo focada em ajudar marcas a se comunicar com clareza. Acreditamos que bom design não é apenas aparência: é como funciona, como se sente e como resolve problemas reais de",
+            "rect": {
+              "x": 0,
+              "y": 1073,
+              "width": 1440,
+              "height": 833
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "z-20 bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "/// Capacidades Luminal Studio Acreditamos que bom design não é apenas aparência: é como funciona. Sobre nós Produtos digitais @keyframes cube-reveal-left { 0%, 100% { opacity: 0; transform: translate(-15px, 0) scale(0.98); filter: blur(4px",
+            "rect": {
+              "x": 0,
+              "y": 1906,
+              "width": 1440,
+              "height": 1040
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "overflow-hidden bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "+ + + 11 anos em movimento",
+            "rect": {
+              "x": 0,
+              "y": 2946,
+              "width": 1440,
+              "height": 513
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "z-20 bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "/// PROJETOS EM DESTAQUE Luminal Studio Acreditamos que bom design não é apenas aparência: é como funciona. Ver todas as especialidades 01 — INTERATIVO Design de experiências cinéticas Criamos interfaces que não ficam paradas: elas reagem. ",
+            "rect": {
+              "x": 0,
+              "y": 3459,
+              "width": 1440,
+              "height": 819
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "z-20 bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "/// NOSSO PROCESSO Do caos à clareza Nossa metodologia transforma desafios complexos em soluções digitais elegantes e escaláveis por meio de quatro etapas rigorosas. Iniciar projeto 01 Descoberta e estratégia Mergulhamos nos objetivos do ne",
+            "rect": {
+              "x": 0,
+              "y": 4278,
+              "width": 1440,
+              "height": 602
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "z-20 overflow-hidden bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "/// Valores Por que Luminal? Não fazemos apenas design; construímos resultados. Nosso trabalho nasce da precisão. Nossos valores Confiança de líderes + + Desenhado com intenção",
+            "rect": {
+              "x": 0,
+              "y": 4880,
+              "width": 1440,
+              "height": 513
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "z-20 selection:bg-red-500/30 bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "/// Equipe Luminal Studio é uma equipe criativa focada em excelência digital. Acreditamos que bom design não é só aparência: é funcionamento e solução de problemas. 05 Especialistas Sobre nós 01 // Design Marcus Thorne Arquiteto líder de si",
+            "rect": {
+              "x": 0,
+              "y": 5393,
+              "width": 1440,
+              "height": 993
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "className": "team-card active flex-[3] overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group lg:border-b-0 lg:border-r h-full b",
+            "text": "01 // Design Marcus Thorne Arquiteto líder de sistemas e especialista em interfaces.",
+            "rect": {
+              "x": 0,
+              "y": 5786,
+              "width": 616,
+              "height": 600
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "className": "team-card relative flex-1 h-full overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group border-b lg:border-b-0 lg:b",
+            "text": "02 // Motion Ava Lin Diretora de motion focada em experiências fluidas.",
+            "rect": {
+              "x": 616,
+              "y": 5786,
+              "width": 206,
+              "height": 600
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "className": "team-card relative flex-1 h-full overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group border-b lg:border-b-0 lg:b",
+            "text": "03 // Fullstack Noah Reed Conectando design e produção.",
+            "rect": {
+              "x": 823,
+              "y": 5786,
+              "width": 206,
+              "height": 600
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "className": "team-card relative flex-1 h-full overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group border-b lg:border-b-0 lg:b",
+            "text": "04 // Data Elena Rossi Especialista em narrativas interativas de dados.",
+            "rect": {
+              "x": 1029,
+              "y": 5786,
+              "width": 206,
+              "height": 600
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "className": "team-card relative flex-1 h-full overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group border-b lg:border-b-0 last",
+            "text": "05 // Web3 Elias Vance Engenheiro de protocolos e auditor de contratos inteligentes.",
+            "rect": {
+              "x": 1235,
+              "y": 5786,
+              "width": 205,
+              "height": 600
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "z-20 overflow-hidden bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "/// DEPOIMENTOS O que nossos clientes dizem Relatos reais de fundadores e equipes parceiras sobre como elevamos produtos, refinamos visões e entregamos resultados relevantes. 98% Taxa de retenção Ref: 001 // Apex \"A atenção aos detalhes e a",
+            "rect": {
+              "x": 0,
+              "y": 6386,
+              "width": 1440,
+              "height": 501
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "z-20 overflow-hidden bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "+ + + Desenhado com intenção",
+            "rect": {
+              "x": 0,
+              "y": 6887,
+              "width": 1440,
+              "height": 513
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "pricing",
+            "className": "z-20 bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "/// Planos Planos transparentes por design. Entregamos resultados tangíveis. Nossos pacotes são ecossistemas completos para marcas em crescimento. \"Bom design custa; design ruim custa uma fortuna.\" Ver planos Moeda USD / EUR Disponibilidade",
+            "rect": {
+              "x": 0,
+              "y": 7400,
+              "width": 1440,
+              "height": 950
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "contact",
+            "className": "overflow-hidden flex bg-center md:py-48 w-full z-20 border-white/10 border-t pt-32 pb-32 relative items-center justify-center",
+            "text": "Vamos construir juntos. Transforme sua visão em realidade digital. Crie conosco experiências que definem o futuro. Iniciar projeto",
+            "rect": {
+              "x": 0,
+              "y": 8350,
+              "width": 1440,
+              "height": 651
+            },
+            "style": {
+              "display": "flex",
+              "position": "relative",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "footer",
+            "id": "",
+            "className": "relative z-20 w-full border-t border-white/10 bg-neutral-950",
+            "text": "/// Conecte-se Pronto para começar seu próximo projeto? Vamos criar algo extraordinário juntos. Fale conosco Mapa do site Início Projetos Agência Redes Instagram Twitter LinkedIn Novidades Seu e-mail Assinar © 2024 Luminal Studio. Todos os ",
+            "rect": {
+              "x": 0,
+              "y": 9001,
+              "width": 1440,
+              "height": 366
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          }
+        ],
+        "cssVariables": [
+          [
+            "--tw-border-spacing-x",
+            "0"
+          ],
+          [
+            "--tw-border-spacing-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-skew-x",
+            "0"
+          ],
+          [
+            "--tw-skew-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-pan-x",
+            ""
+          ],
+          [
+            "--tw-pan-y",
+            ""
+          ],
+          [
+            "--tw-pinch-zoom",
+            ""
+          ],
+          [
+            "--tw-scroll-snap-strictness",
+            "proximity"
+          ],
+          [
+            "--tw-gradient-from-position",
+            ""
+          ],
+          [
+            "--tw-gradient-via-position",
+            ""
+          ],
+          [
+            "--tw-gradient-to-position",
+            ""
+          ],
+          [
+            "--tw-ordinal",
+            ""
+          ],
+          [
+            "--tw-slashed-zero",
+            ""
+          ],
+          [
+            "--tw-numeric-figure",
+            ""
+          ],
+          [
+            "--tw-numeric-spacing",
+            ""
+          ],
+          [
+            "--tw-numeric-fraction",
+            ""
+          ],
+          [
+            "--tw-ring-inset",
+            ""
+          ],
+          [
+            "--tw-ring-offset-width",
+            "0px"
+          ],
+          [
+            "--tw-ring-offset-color",
+            "#fff"
+          ],
+          [
+            "--tw-ring-color",
+            "rgba(59,130,246,.5)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-blur",
+            ""
+          ],
+          [
+            "--tw-brightness",
+            ""
+          ],
+          [
+            "--tw-contrast",
+            ""
+          ],
+          [
+            "--tw-grayscale",
+            ""
+          ],
+          [
+            "--tw-hue-rotate",
+            ""
+          ],
+          [
+            "--tw-invert",
+            ""
+          ],
+          [
+            "--tw-saturate",
+            ""
+          ],
+          [
+            "--tw-sepia",
+            ""
+          ],
+          [
+            "--tw-drop-shadow",
+            ""
+          ],
+          [
+            "--tw-backdrop-blur",
+            ""
+          ],
+          [
+            "--tw-backdrop-brightness",
+            ""
+          ],
+          [
+            "--tw-backdrop-contrast",
+            ""
+          ],
+          [
+            "--tw-backdrop-grayscale",
+            ""
+          ],
+          [
+            "--tw-backdrop-hue-rotate",
+            ""
+          ],
+          [
+            "--tw-backdrop-invert",
+            ""
+          ],
+          [
+            "--tw-backdrop-opacity",
+            ""
+          ],
+          [
+            "--tw-backdrop-saturate",
+            ""
+          ],
+          [
+            "--tw-backdrop-sepia",
+            ""
+          ],
+          [
+            "--tw-contain-size",
+            ""
+          ],
+          [
+            "--tw-contain-layout",
+            ""
+          ],
+          [
+            "--tw-contain-paint",
+            ""
+          ],
+          [
+            "--tw-contain-style",
+            ""
+          ],
+          [
+            "--tw-border-spacing-x",
+            "0"
+          ],
+          [
+            "--tw-border-spacing-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-skew-x",
+            "0"
+          ],
+          [
+            "--tw-skew-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-pan-x",
+            ""
+          ],
+          [
+            "--tw-pan-y",
+            ""
+          ],
+          [
+            "--tw-pinch-zoom",
+            ""
+          ],
+          [
+            "--tw-scroll-snap-strictness",
+            "proximity"
+          ],
+          [
+            "--tw-gradient-from-position",
+            ""
+          ],
+          [
+            "--tw-gradient-via-position",
+            ""
+          ],
+          [
+            "--tw-gradient-to-position",
+            ""
+          ],
+          [
+            "--tw-ordinal",
+            ""
+          ],
+          [
+            "--tw-slashed-zero",
+            ""
+          ],
+          [
+            "--tw-numeric-figure",
+            ""
+          ],
+          [
+            "--tw-numeric-spacing",
+            ""
+          ],
+          [
+            "--tw-numeric-fraction",
+            ""
+          ],
+          [
+            "--tw-ring-inset",
+            ""
+          ],
+          [
+            "--tw-ring-offset-width",
+            "0px"
+          ],
+          [
+            "--tw-ring-offset-color",
+            "#fff"
+          ],
+          [
+            "--tw-ring-color",
+            "rgba(59,130,246,.5)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-blur",
+            ""
+          ],
+          [
+            "--tw-brightness",
+            ""
+          ],
+          [
+            "--tw-contrast",
+            ""
+          ],
+          [
+            "--tw-grayscale",
+            ""
+          ],
+          [
+            "--tw-hue-rotate",
+            ""
+          ],
+          [
+            "--tw-invert",
+            ""
+          ],
+          [
+            "--tw-saturate",
+            ""
+          ],
+          [
+            "--tw-sepia",
+            ""
+          ],
+          [
+            "--tw-drop-shadow",
+            ""
+          ],
+          [
+            "--tw-backdrop-blur",
+            ""
+          ],
+          [
+            "--tw-backdrop-brightness",
+            ""
+          ],
+          [
+            "--tw-backdrop-contrast",
+            ""
+          ],
+          [
+            "--tw-backdrop-grayscale",
+            ""
+          ],
+          [
+            "--tw-backdrop-hue-rotate",
+            ""
+          ],
+          [
+            "--tw-backdrop-invert",
+            ""
+          ],
+          [
+            "--tw-backdrop-opacity",
+            ""
+          ],
+          [
+            "--tw-backdrop-saturate",
+            ""
+          ],
+          [
+            "--tw-backdrop-sepia",
+            ""
+          ],
+          [
+            "--tw-contain-size",
+            ""
+          ],
+          [
+            "--tw-contain-layout",
+            ""
+          ],
+          [
+            "--tw-contain-paint",
+            ""
+          ],
+          [
+            "--tw-contain-style",
+            ""
+          ],
+          [
+            "--tw-content",
+            "\"\""
+          ],
+          [
+            "--tw-translate-x",
+            "-50%"
+          ],
+          [
+            "--tw-translate-y",
+            "-50%"
+          ],
+          [
+            "--tw-translate-x",
+            "0.25rem"
+          ],
+          [
+            "--tw-translate-x",
+            "0.75rem"
+          ],
+          [
+            "--tw-translate-y",
+            "1rem"
+          ],
+          [
+            "--tw-rotate",
+            "-12deg"
+          ],
+          [
+            "--tw-scale-x",
+            "1.05"
+          ],
+          [
+            "--tw-scale-y",
+            "1.05"
+          ],
+          [
+            "--tw-space-y-reverse",
+            "0"
+          ],
+          [
+            "--tw-space-y-reverse",
+            "0"
+          ],
+          [
+            "--tw-space-y-reverse",
+            "0"
+          ],
+          [
+            "--tw-divide-x-reverse",
+            "0"
+          ],
+          [
+            "--tw-divide-y-reverse",
+            "0"
+          ],
+          [
+            "--tw-border-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-gradient-from",
+            "#0a0a0a var(--tw-gradient-from-position)"
+          ],
+          [
+            "--tw-gradient-to",
+            "hsla(0,0%,4%,0) var(--tw-gradient-to-position)"
+          ],
+          [
+            "--tw-gradient-stops",
+            "var(--tw-gradient-from),var(--tw-gradient-to)"
+          ],
+          [
+            "--tw-gradient-from",
+            "hsla(0,0%,100%,.03) var(--tw-gradient-from-position)"
+          ],
+          [
+            "--tw-gradient-to",
+            "hsla(0,0%,100%,0) var(--tw-gradient-to-position)"
+          ],
+          [
+            "--tw-gradient-stops",
+            "var(--tw-gradient-from),var(--tw-gradient-to)"
+          ],
+          [
+            "--tw-gradient-to",
+            "rgba(239,68,68,0) var(--tw-gradient-to-position)"
+          ],
+          [
+            "--tw-gradient-stops",
+            "var(--tw-gradient-from),#ef4444 var(--tw-gradient-via-position),var(--tw-gradient-to)"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-shadow",
+            "0 25px 50px -12px rgba(0,0,0,.25)"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 25px 50px -12px var(--tw-shadow-color)"
+          ],
+          [
+            "--tw-shadow",
+            "0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1)"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)"
+          ],
+          [
+            "--tw-shadow",
+            "0 1px 2px 0 rgba(0,0,0,.05)"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 1px 2px 0 var(--tw-shadow-color)"
+          ],
+          [
+            "--tw-shadow-color",
+            "rgba(239,68,68,.05)"
+          ],
+          [
+            "--tw-shadow",
+            "var(--tw-shadow-colored)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)"
+          ],
+          [
+            "--tw-ring-shadow",
+            "var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)"
+          ],
+          [
+            "--tw-ring-shadow",
+            "var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color)"
+          ],
+          [
+            "--tw-ring-color",
+            "hsla(0,0%,100%,.1)"
+          ],
+          [
+            "--tw-blur",
+            "blur(8px)"
+          ],
+          [
+            "--tw-blur",
+            "blur(64px)"
+          ],
+          [
+            "--tw-blur",
+            "blur(0.5px)"
+          ],
+          [
+            "--tw-blur",
+            "blur(120px)"
+          ],
+          [
+            "--tw-blur",
+            "blur(50px)"
+          ],
+          [
+            "--tw-blur",
+            "blur(60px)"
+          ],
+          [
+            "--tw-blur",
+            "blur(90px)"
+          ],
+          [
+            "--tw-brightness",
+            "brightness(1.25)"
+          ],
+          [
+            "--tw-drop-shadow",
+            "drop-shadow(0 25px 25px rgba(0,0,0,.15))"
+          ],
+          [
+            "--tw-drop-shadow",
+            "drop-shadow(0 60px 120px rgba(0,0,0,.9))"
+          ],
+          [
+            "--tw-drop-shadow",
+            "drop-shadow(0 4px 3px rgba(0,0,0,.07)) drop-shadow(0 2px 2px rgba(0,0,0,.06))"
+          ],
+          [
+            "--tw-grayscale",
+            "grayscale(100%)"
+          ],
+          [
+            "--tw-hue-rotate",
+            "hue-rotate(180deg)"
+          ],
+          [
+            "--tw-saturate",
+            "saturate(2)"
+          ],
+          [
+            "--tw-backdrop-blur",
+            "blur(8px)"
+          ],
+          [
+            "--tw-backdrop-blur",
+            "blur(12px)"
+          ],
+          [
+            "--tw-backdrop-blur",
+            "blur(4px)"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-scale-x",
+            "0.99"
+          ],
+          [
+            "--tw-scale-y",
+            "0.99"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 40px -10px rgba(239,68,68,.15)"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 40px -10px var(--tw-shadow-color)"
+          ],
+          [
+            "--tw-border-opacity",
+            "1"
+          ],
+          [
+            "--tw-scale-x",
+            "0.98"
+          ],
+          [
+            "--tw-scale-y",
+            "0.98"
+          ],
+          [
+            "--tw-translate-x",
+            "0.25rem"
+          ],
+          [
+            "--tw-translate-x",
+            "0.5rem"
+          ],
+          [
+            "--tw-translate-y",
+            "0px"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-brightness",
+            "brightness(1.1)"
+          ],
+          [
+            "--tw-scale-x",
+            "1.1"
+          ],
+          [
+            "--tw-scale-y",
+            "1.1"
+          ],
+          [
+            "--tw-grayscale",
+            "grayscale(0)"
+          ]
+        ],
+        "rootVariables": [
+          [
+            "--tw-border-spacing-x",
+            "0"
+          ],
+          [
+            "--tw-border-spacing-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-skew-x",
+            "0"
+          ],
+          [
+            "--tw-skew-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-scroll-snap-strictness",
+            "proximity"
+          ],
+          [
+            "--tw-ring-offset-width",
+            "0px"
+          ],
+          [
+            "--tw-ring-offset-color",
+            "#fff"
+          ],
+          [
+            "--tw-ring-color",
+            "rgba(59,130,246,.5)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-border-spacing-x",
+            "0"
+          ],
+          [
+            "--tw-border-spacing-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-skew-x",
+            "0"
+          ],
+          [
+            "--tw-skew-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-scroll-snap-strictness",
+            "proximity"
+          ],
+          [
+            "--tw-ring-offset-width",
+            "0px"
+          ],
+          [
+            "--tw-ring-offset-color",
+            "#fff"
+          ],
+          [
+            "--tw-ring-color",
+            "rgba(59,130,246,.5)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-color",
+            "rgba(59,130,246,.5)"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ]
+        ],
+        "palette": {
+          "body": {
+            "backgroundColor": "rgb(10, 10, 10)",
+            "color": "rgb(229, 229, 229)",
+            "borderColor": "rgb(229, 231, 235)",
+            "fontFamily": "Inter, sans-serif",
+            "backgroundImage": ""
+          },
+          "header": {
+            "backgroundColor": "rgba(10, 10, 10, 0.8)",
+            "color": "rgb(229, 229, 229)",
+            "borderColor": "rgba(255, 255, 255, 0.1)",
+            "fontFamily": "Inter, sans-serif",
+            "backgroundImage": ""
+          },
+          "nav": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "color": "rgb(229, 229, 229)",
+            "borderColor": "rgb(229, 231, 235)",
+            "fontFamily": "Inter, sans-serif",
+            "backgroundImage": ""
+          },
+          "main": null,
+          "footer": {
+            "backgroundColor": "rgb(10, 10, 10)",
+            "color": "rgb(229, 229, 229)",
+            "borderColor": "rgba(255, 255, 255, 0.1)",
+            "fontFamily": "Inter, sans-serif",
+            "backgroundImage": ""
+          },
+          "buttons": [
+            {
+              "text": "",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(255, 255, 255)",
+              "borderColor": "rgb(229, 231, 235)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "Ver projetos",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgb(229, 231, 235)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "Iniciar projeto",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgb(229, 231, 235)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "01 // Design Marcus Thorne Arquiteto líd",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgba(255, 255, 255, 0.1)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "02 // Motion Ava Lin Diretora de motion ",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgba(255, 255, 255, 0.1)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "03 // Fullstack Noah Reed Conectando des",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgba(255, 255, 255, 0.1)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "04 // Data Elena Rossi Especialista em n",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgba(255, 255, 255, 0.1)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "05 // Web3 Elias Vance Engenheiro de pro",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgba(255, 255, 255, 0.1)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "Ver planos",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgb(229, 231, 235)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "Arquivo-03 // Corporativo Escala para ag",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgba(255, 255, 255, 0.1)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "Fale conosco",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgb(229, 231, 235)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "Iniciar projeto",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgb(229, 231, 235)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            }
+          ]
+        },
+        "motion": {
+          "htmlScrollBehavior": "auto",
+          "scrollSnapRules": 2,
+          "smoothScrollRules": 0,
+          "stickyOrFixedCount": 3
+        },
+        "fonts": [
+          "Inter",
+          "Syne"
+        ],
+        "fontFaces": [
+          {
+            "family": "Inter",
+            "weight": "300 700",
+            "style": "normal",
+            "srcUrls": [
+              "fonts.gstatic.com/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7-6ab57b19c6.woff2"
+            ],
+            "cssText": "@font-face { font-family: Inter; font-style: normal; font-weight: 300 700; font-display: swap; src: url(\"fonts.gstatic.com/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7-6ab57b19c6.woff2\") format(\"woff2\"); }",
+            "sheetHref": "http://127.0.0.1:8123/assets/fonts/local.css"
+          },
+          {
+            "family": "Syne",
+            "weight": "400 800",
+            "style": "normal",
+            "srcUrls": [
+              "fonts.gstatic.com/8vIH7w4qzmVxm2BL9A-c0b6673b7b.woff2"
+            ],
+            "cssText": "@font-face { font-family: Syne; font-style: normal; font-weight: 400 800; font-display: swap; src: url(\"fonts.gstatic.com/8vIH7w4qzmVxm2BL9A-c0b6673b7b.woff2\") format(\"woff2\"); }",
+            "sheetHref": "http://127.0.0.1:8123/assets/fonts/local.css"
+          }
+        ],
+        "resources": {
+          "images": [
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/96a71491-ccb5-4cb6-a369-be4b7a348c85_1600w-bb1691f8d6.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/f7438fab-4b42-40cb-a36a-fd1c3446a888_800w-79247a441e.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/74117bff-45d0-4c3e-ae97-12067641be39_800w-704b56827f.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/3dbd59c3-a7a5-4515-985e-788ba17917e2_800w-4fbf7f002e.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/92f770e8-08ad-4fb2-8858-2d9b385124a7_800w-2105644573.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/93dbb379-52e9-4ded-bc8a-c0f05aef82c0_320w-3d7d74f2ed.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/e6ac2623-ccad-4751-8c7d-782f07a9263d_320w-cbe7b0b7f1.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/30fed759-ea9f-42e9-8249-9ea7f44c811c_320w-0ba889d085.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/05d6b211-9e83-488c-8f3f-42a77b8e9532_1600w-02f7336b71.png",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/ea262fd9-14f0-4917-be69-86fd3b302ccd_1600w-213803d0fd.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/5daa544b-07e8-4fcd-98c6-1fb55bef2131_1600w-cc17a234dc.png",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/26beb5d6-9395-4655-bd45-0375a5af0ffb_1600w-c0fb334601.png",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/0ecb27cd-9dd3-4e8a-8f50-529e27caa666_1600w-9924d919c6.png",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/09dc0e81-3730-4910-9053-26ecec7a3816_800w-329aada512.webp",
+            "http://127.0.0.1:8123/assets/images/luminal-creative-studio.aura.build/favicon-ebea3aeb03.ico",
+            "https://assets.unicorn.studio/media/glyphs/circles.png",
+            "https://assets.unicorn.studio/images/7b9RUDblFTeXAfGKWnhAYTv9FVO2/sourasith_httpss.mj.runybic1hpRC-k_A_glowing_blurring_cosmic__1c9c5892-99aa-4a73-ba0e-61372d715421_3.png"
+          ],
+          "fonts": [
+            "http://127.0.0.1:8123/assets/fonts/fonts.gstatic.com/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7-6ab57b19c6.woff2",
+            "http://127.0.0.1:8123/assets/fonts/fonts.gstatic.com/8vIH7w4qzmVxm2BL9A-c0b6673b7b.woff2"
+          ],
+          "media": []
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/96a71491-ccb5-4cb6-a369-be4b7a348c85_1600w-bb1691f8d6.webp",
+            "srcset": "",
+            "alt": "Retrato de Marcus Thorne",
+            "width": 1600,
+            "height": 1600
+          },
+          {
+            "src": "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/f7438fab-4b42-40cb-a36a-fd1c3446a888_800w-79247a441e.webp",
+            "srcset": "",
+            "alt": "Retrato de Ava Lin",
+            "width": 800,
+            "height": 447
+          },
+          {
+            "src": "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/74117bff-45d0-4c3e-ae97-12067641be39_800w-704b56827f.webp",
+            "srcset": "",
+            "alt": "Retrato de Noah Reed",
+            "width": 800,
+            "height": 800
+          },
+          {
+            "src": "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/3dbd59c3-a7a5-4515-985e-788ba17917e2_800w-4fbf7f002e.webp",
+            "srcset": "",
+            "alt": "Retrato de Elena Rossi",
+            "width": 800,
+            "height": 1062
+          },
+          {
+            "src": "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/92f770e8-08ad-4fb2-8858-2d9b385124a7_800w-2105644573.webp",
+            "srcset": "",
+            "alt": "Retrato de Elias Vance",
+            "width": 800,
+            "height": 448
+          },
+          {
+            "src": "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/93dbb379-52e9-4ded-bc8a-c0f05aef82c0_320w-3d7d74f2ed.webp",
+            "srcset": "",
+            "alt": "Retrato de Alex Morgan",
+            "width": 320,
+            "height": 241
+          },
+          {
+            "src": "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/e6ac2623-ccad-4751-8c7d-782f07a9263d_320w-cbe7b0b7f1.webp",
+            "srcset": "",
+            "alt": "Retrato de Sarah Chen",
+            "width": 320,
+            "height": 320
+          },
+          {
+            "src": "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/30fed759-ea9f-42e9-8249-9ea7f44c811c_320w-0ba889d085.webp",
+            "srcset": "",
+            "alt": "Retrato de Marcus Thorne",
+            "width": 320,
+            "height": 571
+          }
+        ],
+        "canvases": [
+          {
+            "width": 2160,
+            "height": 1350,
+            "cssWidth": 1440,
+            "cssHeight": 900
+          }
+        ]
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "screenshot": "screenshots\\clone-768.png",
+      "signals": {
+        "href": "http://127.0.0.1:8123/",
+        "title": "Luminal Studio - Experiências digitais",
+        "lang": "pt-BR",
+        "bodyTextChars": 5746,
+        "scrollHeight": 10439,
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "h1": [
+          "LUMINAL"
+        ],
+        "headings": [
+          {
+            "tag": "h1",
+            "text": "LUMINAL"
+          },
+          {
+            "tag": "h2",
+            "text": "Luminal Studio"
+          },
+          {
+            "tag": "h2",
+            "text": "Luminal Studio é uma agência de design criativo focada em ajudar marcas a se comunicar com clareza."
+          },
+          {
+            "tag": "h2",
+            "text": "Luminal Studio"
+          },
+          {
+            "tag": "h3",
+            "text": "Marca"
+          },
+          {
+            "tag": "h3",
+            "text": "Design web"
+          },
+          {
+            "tag": "h3",
+            "text": "Produto"
+          },
+          {
+            "tag": "h3",
+            "text": "Estratégia"
+          },
+          {
+            "tag": "h2",
+            "text": "11 anos em movimento"
+          },
+          {
+            "tag": "h2",
+            "text": "Luminal Studio"
+          },
+          {
+            "tag": "h3",
+            "text": "Design de experiências cinéticas"
+          },
+          {
+            "tag": "h3",
+            "text": "Sistemas de marca escaláveis"
+          },
+          {
+            "tag": "h3",
+            "text": "Criação orientada por performance"
+          },
+          {
+            "tag": "h2",
+            "text": "Do caos à clareza"
+          },
+          {
+            "tag": "h3",
+            "text": "Descoberta e estratégia"
+          },
+          {
+            "tag": "h3",
+            "text": "Design e prototipagem"
+          },
+          {
+            "tag": "h3",
+            "text": "Desenvolvimento"
+          },
+          {
+            "tag": "h3",
+            "text": "Lançamento e escala"
+          },
+          {
+            "tag": "h2",
+            "text": "Por que Luminal?"
+          },
+          {
+            "tag": "h2",
+            "text": "Desenhado com intenção"
+          },
+          {
+            "tag": "h2",
+            "text": "Luminal Studio é uma equipe criativa focada em excelência digital."
+          },
+          {
+            "tag": "h3",
+            "text": "Marcus Thorne"
+          },
+          {
+            "tag": "h3",
+            "text": "Ava Lin"
+          },
+          {
+            "tag": "h3",
+            "text": "Noah Reed"
+          },
+          {
+            "tag": "h3",
+            "text": "Elena Rossi"
+          },
+          {
+            "tag": "h3",
+            "text": "Elias Vance"
+          },
+          {
+            "tag": "h2",
+            "text": "O que nossos clientes dizem"
+          },
+          {
+            "tag": "h2",
+            "text": "Desenhado com intenção"
+          },
+          {
+            "tag": "h2",
+            "text": "Planos transparentes por design."
+          },
+          {
+            "tag": "h3",
+            "text": "Núcleo inicial"
+          },
+          {
+            "tag": "h3",
+            "text": "Operação premium"
+          },
+          {
+            "tag": "h3",
+            "text": "Escala para agências"
+          },
+          {
+            "tag": "h2",
+            "text": "Vamos construir juntos."
+          },
+          {
+            "tag": "h2",
+            "text": "Conecte-se"
+          }
+        ],
+        "metaDescription": "",
+        "counts": {
+          "links": 17,
+          "images": 8,
+          "video": 0,
+          "canvas": 1,
+          "sections": 20,
+          "forms": 1,
+          "buttons": 2,
+          "inputs": 1,
+          "interactive": 32,
+          "scripts": 2,
+          "stylesheets": 2
+        },
+        "frameworks": {
+          "react": false,
+          "next": false,
+          "vue": false,
+          "nuxt": false,
+          "svelte": false,
+          "astro": false,
+          "three": false,
+          "gsap": false,
+          "lenis": false
+        },
+        "scripts": [
+          "https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js",
+          "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js"
+        ],
+        "stylesheets": [
+          "http://127.0.0.1:8123/luminal-tailwind.css",
+          "http://127.0.0.1:8123/assets/fonts/local.css"
+        ],
+        "sections": [
+          {
+            "tag": "header",
+            "id": "",
+            "className": "fixed top-0 left-0 w-full z-50 bg-neutral-950/80 backdrop-blur-md border-b border-white/10 h-16 transition-all duration-300",
+            "text": "Luminal Projetos Serviços Sobre Planos Contato Iniciar projeto Projetos Serviços Sobre Contato",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 768,
+              "height": 64
+            },
+            "style": {
+              "display": "block",
+              "position": "fixed",
+              "backgroundColor": "rgba(10, 10, 10, 0.8)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "nav",
+            "id": "",
+            "className": "hidden md:flex items-center gap-10",
+            "text": "Projetos Serviços Sobre Planos Contato",
+            "rect": {
+              "x": 118,
+              "y": 24,
+              "width": 456,
+              "height": 15
+            },
+            "style": {
+              "display": "flex",
+              "position": "static",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "z-20 overflow-hidden bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "+ + + Camadas Comando Módulos Energia Vértice Pulso Global Camadas Comando Módulos Energia Vértice Pulso Global",
+            "rect": {
+              "x": 0,
+              "y": 964,
+              "width": 768,
+              "height": 109
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "about",
+            "className": "z-20 bg-neutral-950 w-full border-t border-white/10 relative",
+            "text": "/// Sobre Luminal Studio Luminal Studio é uma agência de design criativo focada em ajudar marcas a se comunicar com clareza. Acreditamos que bom design não é apenas aparência: é como funciona, como se sente e como resolve problemas reais de",
+            "rect": {
+              "x": 0,
+              "y": 1073,
+              "width": 768,
+              "height": 1361
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "z-20 bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "/// Capacidades Luminal Studio Acreditamos que bom design não é apenas aparência: é como funciona. Sobre nós Produtos digitais @keyframes cube-reveal-left { 0%, 100% { opacity: 0; transform: translate(-15px, 0) scale(0.98); filter: blur(4px",
+            "rect": {
+              "x": 0,
+              "y": 2434,
+              "width": 768,
+              "height": 802
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "overflow-hidden bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "+ + + 11 anos em movimento",
+            "rect": {
+              "x": 0,
+              "y": 3237,
+              "width": 768,
+              "height": 401
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "z-20 bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "/// PROJETOS EM DESTAQUE Luminal Studio Acreditamos que bom design não é apenas aparência: é como funciona. Ver todas as especialidades 01 — INTERATIVO Design de experiências cinéticas Criamos interfaces que não ficam paradas: elas reagem. ",
+            "rect": {
+              "x": 0,
+              "y": 3638,
+              "width": 768,
+              "height": 1382
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "z-20 bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "/// NOSSO PROCESSO Do caos à clareza Nossa metodologia transforma desafios complexos em soluções digitais elegantes e escaláveis por meio de quatro etapas rigorosas. Iniciar projeto 01 Descoberta e estratégia Mergulhamos nos objetivos do ne",
+            "rect": {
+              "x": 0,
+              "y": 5020,
+              "width": 768,
+              "height": 693
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "z-20 overflow-hidden bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "/// Valores Por que Luminal? Não fazemos apenas design; construímos resultados. Nosso trabalho nasce da precisão. Nossos valores Confiança de líderes + + Desenhado com intenção",
+            "rect": {
+              "x": 0,
+              "y": 5713,
+              "width": 768,
+              "height": 401
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "z-20 selection:bg-red-500/30 bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "/// Equipe Luminal Studio é uma equipe criativa focada em excelência digital. Acreditamos que bom design não é só aparência: é funcionamento e solução de problemas. 05 Especialistas Sobre nós 01 // Design Marcus Thorne Arquiteto líder de si",
+            "rect": {
+              "x": 0,
+              "y": 6114,
+              "width": 768,
+              "height": 1108
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "className": "team-card active flex-[3] overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group lg:border-b-0 lg:border-r h-full b",
+            "text": "01 // Design Marcus Thorne Arquiteto líder de sistemas e especialista em interfaces.",
+            "rect": {
+              "x": 0,
+              "y": 6621,
+              "width": 768,
+              "height": 256
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "className": "team-card relative flex-1 h-full overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group border-b lg:border-b-0 lg:b",
+            "text": "02 // Motion Ava Lin Diretora de motion focada em experiências fluidas.",
+            "rect": {
+              "x": 0,
+              "y": 6878,
+              "width": 768,
+              "height": 86
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "className": "team-card relative flex-1 h-full overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group border-b lg:border-b-0 lg:b",
+            "text": "03 // Fullstack Noah Reed Conectando design e produção.",
+            "rect": {
+              "x": 0,
+              "y": 6964,
+              "width": 768,
+              "height": 86
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "className": "team-card relative flex-1 h-full overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group border-b lg:border-b-0 lg:b",
+            "text": "04 // Data Elena Rossi Especialista em narrativas interativas de dados.",
+            "rect": {
+              "x": 0,
+              "y": 7050,
+              "width": 768,
+              "height": 86
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "className": "team-card relative flex-1 h-full overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group border-b lg:border-b-0 last",
+            "text": "05 // Web3 Elias Vance Engenheiro de protocolos e auditor de contratos inteligentes.",
+            "rect": {
+              "x": 0,
+              "y": 7136,
+              "width": 768,
+              "height": 85
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "z-20 overflow-hidden bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "/// DEPOIMENTOS O que nossos clientes dizem Relatos reais de fundadores e equipes parceiras sobre como elevamos produtos, refinamos visões e entregamos resultados relevantes. 98% Taxa de retenção Ref: 001 // Apex \"A atenção aos detalhes e a",
+            "rect": {
+              "x": 0,
+              "y": 7221,
+              "width": 768,
+              "height": 622
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "z-20 overflow-hidden bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "+ + + Desenhado com intenção",
+            "rect": {
+              "x": 0,
+              "y": 7843,
+              "width": 768,
+              "height": 401
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "pricing",
+            "className": "z-20 bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "/// Planos Planos transparentes por design. Entregamos resultados tangíveis. Nossos pacotes são ecossistemas completos para marcas em crescimento. \"Bom design custa; design ruim custa uma fortuna.\" Ver planos Moeda USD / EUR Disponibilidade",
+            "rect": {
+              "x": 0,
+              "y": 8244,
+              "width": 768,
+              "height": 1123
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "contact",
+            "className": "overflow-hidden flex bg-center md:py-48 w-full z-20 border-white/10 border-t pt-32 pb-32 relative items-center justify-center",
+            "text": "Vamos construir juntos. Transforme sua visão em realidade digital. Crie conosco experiências que definem o futuro. Iniciar projeto",
+            "rect": {
+              "x": 0,
+              "y": 9367,
+              "width": 768,
+              "height": 615
+            },
+            "style": {
+              "display": "flex",
+              "position": "relative",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "footer",
+            "id": "",
+            "className": "relative z-20 w-full border-t border-white/10 bg-neutral-950",
+            "text": "/// Conecte-se Pronto para começar seu próximo projeto? Vamos criar algo extraordinário juntos. Fale conosco Mapa do site Início Projetos Agência Redes Instagram Twitter LinkedIn Novidades Seu e-mail Assinar © 2024 Luminal Studio. Todos os ",
+            "rect": {
+              "x": 0,
+              "y": 9982,
+              "width": 768,
+              "height": 457
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          }
+        ],
+        "cssVariables": [
+          [
+            "--tw-border-spacing-x",
+            "0"
+          ],
+          [
+            "--tw-border-spacing-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-skew-x",
+            "0"
+          ],
+          [
+            "--tw-skew-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-pan-x",
+            ""
+          ],
+          [
+            "--tw-pan-y",
+            ""
+          ],
+          [
+            "--tw-pinch-zoom",
+            ""
+          ],
+          [
+            "--tw-scroll-snap-strictness",
+            "proximity"
+          ],
+          [
+            "--tw-gradient-from-position",
+            ""
+          ],
+          [
+            "--tw-gradient-via-position",
+            ""
+          ],
+          [
+            "--tw-gradient-to-position",
+            ""
+          ],
+          [
+            "--tw-ordinal",
+            ""
+          ],
+          [
+            "--tw-slashed-zero",
+            ""
+          ],
+          [
+            "--tw-numeric-figure",
+            ""
+          ],
+          [
+            "--tw-numeric-spacing",
+            ""
+          ],
+          [
+            "--tw-numeric-fraction",
+            ""
+          ],
+          [
+            "--tw-ring-inset",
+            ""
+          ],
+          [
+            "--tw-ring-offset-width",
+            "0px"
+          ],
+          [
+            "--tw-ring-offset-color",
+            "#fff"
+          ],
+          [
+            "--tw-ring-color",
+            "rgba(59,130,246,.5)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-blur",
+            ""
+          ],
+          [
+            "--tw-brightness",
+            ""
+          ],
+          [
+            "--tw-contrast",
+            ""
+          ],
+          [
+            "--tw-grayscale",
+            ""
+          ],
+          [
+            "--tw-hue-rotate",
+            ""
+          ],
+          [
+            "--tw-invert",
+            ""
+          ],
+          [
+            "--tw-saturate",
+            ""
+          ],
+          [
+            "--tw-sepia",
+            ""
+          ],
+          [
+            "--tw-drop-shadow",
+            ""
+          ],
+          [
+            "--tw-backdrop-blur",
+            ""
+          ],
+          [
+            "--tw-backdrop-brightness",
+            ""
+          ],
+          [
+            "--tw-backdrop-contrast",
+            ""
+          ],
+          [
+            "--tw-backdrop-grayscale",
+            ""
+          ],
+          [
+            "--tw-backdrop-hue-rotate",
+            ""
+          ],
+          [
+            "--tw-backdrop-invert",
+            ""
+          ],
+          [
+            "--tw-backdrop-opacity",
+            ""
+          ],
+          [
+            "--tw-backdrop-saturate",
+            ""
+          ],
+          [
+            "--tw-backdrop-sepia",
+            ""
+          ],
+          [
+            "--tw-contain-size",
+            ""
+          ],
+          [
+            "--tw-contain-layout",
+            ""
+          ],
+          [
+            "--tw-contain-paint",
+            ""
+          ],
+          [
+            "--tw-contain-style",
+            ""
+          ],
+          [
+            "--tw-border-spacing-x",
+            "0"
+          ],
+          [
+            "--tw-border-spacing-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-skew-x",
+            "0"
+          ],
+          [
+            "--tw-skew-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-pan-x",
+            ""
+          ],
+          [
+            "--tw-pan-y",
+            ""
+          ],
+          [
+            "--tw-pinch-zoom",
+            ""
+          ],
+          [
+            "--tw-scroll-snap-strictness",
+            "proximity"
+          ],
+          [
+            "--tw-gradient-from-position",
+            ""
+          ],
+          [
+            "--tw-gradient-via-position",
+            ""
+          ],
+          [
+            "--tw-gradient-to-position",
+            ""
+          ],
+          [
+            "--tw-ordinal",
+            ""
+          ],
+          [
+            "--tw-slashed-zero",
+            ""
+          ],
+          [
+            "--tw-numeric-figure",
+            ""
+          ],
+          [
+            "--tw-numeric-spacing",
+            ""
+          ],
+          [
+            "--tw-numeric-fraction",
+            ""
+          ],
+          [
+            "--tw-ring-inset",
+            ""
+          ],
+          [
+            "--tw-ring-offset-width",
+            "0px"
+          ],
+          [
+            "--tw-ring-offset-color",
+            "#fff"
+          ],
+          [
+            "--tw-ring-color",
+            "rgba(59,130,246,.5)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-blur",
+            ""
+          ],
+          [
+            "--tw-brightness",
+            ""
+          ],
+          [
+            "--tw-contrast",
+            ""
+          ],
+          [
+            "--tw-grayscale",
+            ""
+          ],
+          [
+            "--tw-hue-rotate",
+            ""
+          ],
+          [
+            "--tw-invert",
+            ""
+          ],
+          [
+            "--tw-saturate",
+            ""
+          ],
+          [
+            "--tw-sepia",
+            ""
+          ],
+          [
+            "--tw-drop-shadow",
+            ""
+          ],
+          [
+            "--tw-backdrop-blur",
+            ""
+          ],
+          [
+            "--tw-backdrop-brightness",
+            ""
+          ],
+          [
+            "--tw-backdrop-contrast",
+            ""
+          ],
+          [
+            "--tw-backdrop-grayscale",
+            ""
+          ],
+          [
+            "--tw-backdrop-hue-rotate",
+            ""
+          ],
+          [
+            "--tw-backdrop-invert",
+            ""
+          ],
+          [
+            "--tw-backdrop-opacity",
+            ""
+          ],
+          [
+            "--tw-backdrop-saturate",
+            ""
+          ],
+          [
+            "--tw-backdrop-sepia",
+            ""
+          ],
+          [
+            "--tw-contain-size",
+            ""
+          ],
+          [
+            "--tw-contain-layout",
+            ""
+          ],
+          [
+            "--tw-contain-paint",
+            ""
+          ],
+          [
+            "--tw-contain-style",
+            ""
+          ],
+          [
+            "--tw-content",
+            "\"\""
+          ],
+          [
+            "--tw-translate-x",
+            "-50%"
+          ],
+          [
+            "--tw-translate-y",
+            "-50%"
+          ],
+          [
+            "--tw-translate-x",
+            "0.25rem"
+          ],
+          [
+            "--tw-translate-x",
+            "0.75rem"
+          ],
+          [
+            "--tw-translate-y",
+            "1rem"
+          ],
+          [
+            "--tw-rotate",
+            "-12deg"
+          ],
+          [
+            "--tw-scale-x",
+            "1.05"
+          ],
+          [
+            "--tw-scale-y",
+            "1.05"
+          ],
+          [
+            "--tw-space-y-reverse",
+            "0"
+          ],
+          [
+            "--tw-space-y-reverse",
+            "0"
+          ],
+          [
+            "--tw-space-y-reverse",
+            "0"
+          ],
+          [
+            "--tw-divide-x-reverse",
+            "0"
+          ],
+          [
+            "--tw-divide-y-reverse",
+            "0"
+          ],
+          [
+            "--tw-border-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-gradient-from",
+            "#0a0a0a var(--tw-gradient-from-position)"
+          ],
+          [
+            "--tw-gradient-to",
+            "hsla(0,0%,4%,0) var(--tw-gradient-to-position)"
+          ],
+          [
+            "--tw-gradient-stops",
+            "var(--tw-gradient-from),var(--tw-gradient-to)"
+          ],
+          [
+            "--tw-gradient-from",
+            "hsla(0,0%,100%,.03) var(--tw-gradient-from-position)"
+          ],
+          [
+            "--tw-gradient-to",
+            "hsla(0,0%,100%,0) var(--tw-gradient-to-position)"
+          ],
+          [
+            "--tw-gradient-stops",
+            "var(--tw-gradient-from),var(--tw-gradient-to)"
+          ],
+          [
+            "--tw-gradient-to",
+            "rgba(239,68,68,0) var(--tw-gradient-to-position)"
+          ],
+          [
+            "--tw-gradient-stops",
+            "var(--tw-gradient-from),#ef4444 var(--tw-gradient-via-position),var(--tw-gradient-to)"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-shadow",
+            "0 25px 50px -12px rgba(0,0,0,.25)"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 25px 50px -12px var(--tw-shadow-color)"
+          ],
+          [
+            "--tw-shadow",
+            "0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1)"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)"
+          ],
+          [
+            "--tw-shadow",
+            "0 1px 2px 0 rgba(0,0,0,.05)"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 1px 2px 0 var(--tw-shadow-color)"
+          ],
+          [
+            "--tw-shadow-color",
+            "rgba(239,68,68,.05)"
+          ],
+          [
+            "--tw-shadow",
+            "var(--tw-shadow-colored)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)"
+          ],
+          [
+            "--tw-ring-shadow",
+            "var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)"
+          ],
+          [
+            "--tw-ring-shadow",
+            "var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color)"
+          ],
+          [
+            "--tw-ring-color",
+            "hsla(0,0%,100%,.1)"
+          ],
+          [
+            "--tw-blur",
+            "blur(8px)"
+          ],
+          [
+            "--tw-blur",
+            "blur(64px)"
+          ],
+          [
+            "--tw-blur",
+            "blur(0.5px)"
+          ],
+          [
+            "--tw-blur",
+            "blur(120px)"
+          ],
+          [
+            "--tw-blur",
+            "blur(50px)"
+          ],
+          [
+            "--tw-blur",
+            "blur(60px)"
+          ],
+          [
+            "--tw-blur",
+            "blur(90px)"
+          ],
+          [
+            "--tw-brightness",
+            "brightness(1.25)"
+          ],
+          [
+            "--tw-drop-shadow",
+            "drop-shadow(0 25px 25px rgba(0,0,0,.15))"
+          ],
+          [
+            "--tw-drop-shadow",
+            "drop-shadow(0 60px 120px rgba(0,0,0,.9))"
+          ],
+          [
+            "--tw-drop-shadow",
+            "drop-shadow(0 4px 3px rgba(0,0,0,.07)) drop-shadow(0 2px 2px rgba(0,0,0,.06))"
+          ],
+          [
+            "--tw-grayscale",
+            "grayscale(100%)"
+          ],
+          [
+            "--tw-hue-rotate",
+            "hue-rotate(180deg)"
+          ],
+          [
+            "--tw-saturate",
+            "saturate(2)"
+          ],
+          [
+            "--tw-backdrop-blur",
+            "blur(8px)"
+          ],
+          [
+            "--tw-backdrop-blur",
+            "blur(12px)"
+          ],
+          [
+            "--tw-backdrop-blur",
+            "blur(4px)"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-scale-x",
+            "0.99"
+          ],
+          [
+            "--tw-scale-y",
+            "0.99"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 40px -10px rgba(239,68,68,.15)"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 40px -10px var(--tw-shadow-color)"
+          ],
+          [
+            "--tw-border-opacity",
+            "1"
+          ],
+          [
+            "--tw-scale-x",
+            "0.98"
+          ],
+          [
+            "--tw-scale-y",
+            "0.98"
+          ],
+          [
+            "--tw-translate-x",
+            "0.25rem"
+          ],
+          [
+            "--tw-translate-x",
+            "0.5rem"
+          ],
+          [
+            "--tw-translate-y",
+            "0px"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-brightness",
+            "brightness(1.1)"
+          ],
+          [
+            "--tw-scale-x",
+            "1.1"
+          ],
+          [
+            "--tw-scale-y",
+            "1.1"
+          ],
+          [
+            "--tw-grayscale",
+            "grayscale(0)"
+          ]
+        ],
+        "rootVariables": [
+          [
+            "--tw-border-spacing-x",
+            "0"
+          ],
+          [
+            "--tw-border-spacing-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-skew-x",
+            "0"
+          ],
+          [
+            "--tw-skew-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-scroll-snap-strictness",
+            "proximity"
+          ],
+          [
+            "--tw-ring-offset-width",
+            "0px"
+          ],
+          [
+            "--tw-ring-offset-color",
+            "#fff"
+          ],
+          [
+            "--tw-ring-color",
+            "rgba(59,130,246,.5)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-border-spacing-x",
+            "0"
+          ],
+          [
+            "--tw-border-spacing-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-skew-x",
+            "0"
+          ],
+          [
+            "--tw-skew-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-scroll-snap-strictness",
+            "proximity"
+          ],
+          [
+            "--tw-ring-offset-width",
+            "0px"
+          ],
+          [
+            "--tw-ring-offset-color",
+            "#fff"
+          ],
+          [
+            "--tw-ring-color",
+            "rgba(59,130,246,.5)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-color",
+            "rgba(59,130,246,.5)"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ]
+        ],
+        "palette": {
+          "body": {
+            "backgroundColor": "rgb(10, 10, 10)",
+            "color": "rgb(229, 229, 229)",
+            "borderColor": "rgb(229, 231, 235)",
+            "fontFamily": "Inter, sans-serif",
+            "backgroundImage": ""
+          },
+          "header": {
+            "backgroundColor": "rgba(10, 10, 10, 0.8)",
+            "color": "rgb(229, 229, 229)",
+            "borderColor": "rgba(255, 255, 255, 0.1)",
+            "fontFamily": "Inter, sans-serif",
+            "backgroundImage": ""
+          },
+          "nav": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "color": "rgb(229, 229, 229)",
+            "borderColor": "rgb(229, 231, 235)",
+            "fontFamily": "Inter, sans-serif",
+            "backgroundImage": ""
+          },
+          "main": null,
+          "footer": {
+            "backgroundColor": "rgb(10, 10, 10)",
+            "color": "rgb(229, 229, 229)",
+            "borderColor": "rgba(255, 255, 255, 0.1)",
+            "fontFamily": "Inter, sans-serif",
+            "backgroundImage": ""
+          },
+          "buttons": [
+            {
+              "text": "",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(255, 255, 255)",
+              "borderColor": "rgb(229, 231, 235)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "Ver projetos",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgb(229, 231, 235)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "Iniciar projeto",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgb(229, 231, 235)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "01 // Design Marcus Thorne Arquiteto líd",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgba(255, 255, 255, 0.1)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "02 // Motion Ava Lin Diretora de motion ",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgba(255, 255, 255, 0.1)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "03 // Fullstack Noah Reed Conectando des",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgba(255, 255, 255, 0.1)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "04 // Data Elena Rossi Especialista em n",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgba(255, 255, 255, 0.1)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "05 // Web3 Elias Vance Engenheiro de pro",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgba(255, 255, 255, 0.1)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "Ver planos",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgb(229, 231, 235)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "Arquivo-03 // Corporativo Escala para ag",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgba(255, 255, 255, 0.1)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "Fale conosco",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgb(229, 231, 235)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "Iniciar projeto",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgb(229, 231, 235)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            }
+          ]
+        },
+        "motion": {
+          "htmlScrollBehavior": "auto",
+          "scrollSnapRules": 2,
+          "smoothScrollRules": 0,
+          "stickyOrFixedCount": 3
+        },
+        "fonts": [
+          "Inter",
+          "Syne"
+        ],
+        "fontFaces": [
+          {
+            "family": "Inter",
+            "weight": "300 700",
+            "style": "normal",
+            "srcUrls": [
+              "fonts.gstatic.com/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7-6ab57b19c6.woff2"
+            ],
+            "cssText": "@font-face { font-family: Inter; font-style: normal; font-weight: 300 700; font-display: swap; src: url(\"fonts.gstatic.com/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7-6ab57b19c6.woff2\") format(\"woff2\"); }",
+            "sheetHref": "http://127.0.0.1:8123/assets/fonts/local.css"
+          },
+          {
+            "family": "Syne",
+            "weight": "400 800",
+            "style": "normal",
+            "srcUrls": [
+              "fonts.gstatic.com/8vIH7w4qzmVxm2BL9A-c0b6673b7b.woff2"
+            ],
+            "cssText": "@font-face { font-family: Syne; font-style: normal; font-weight: 400 800; font-display: swap; src: url(\"fonts.gstatic.com/8vIH7w4qzmVxm2BL9A-c0b6673b7b.woff2\") format(\"woff2\"); }",
+            "sheetHref": "http://127.0.0.1:8123/assets/fonts/local.css"
+          }
+        ],
+        "resources": {
+          "images": [
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/96a71491-ccb5-4cb6-a369-be4b7a348c85_1600w-bb1691f8d6.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/f7438fab-4b42-40cb-a36a-fd1c3446a888_800w-79247a441e.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/74117bff-45d0-4c3e-ae97-12067641be39_800w-704b56827f.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/3dbd59c3-a7a5-4515-985e-788ba17917e2_800w-4fbf7f002e.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/92f770e8-08ad-4fb2-8858-2d9b385124a7_800w-2105644573.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/93dbb379-52e9-4ded-bc8a-c0f05aef82c0_320w-3d7d74f2ed.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/e6ac2623-ccad-4751-8c7d-782f07a9263d_320w-cbe7b0b7f1.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/30fed759-ea9f-42e9-8249-9ea7f44c811c_320w-0ba889d085.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/05d6b211-9e83-488c-8f3f-42a77b8e9532_1600w-02f7336b71.png",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/ea262fd9-14f0-4917-be69-86fd3b302ccd_1600w-213803d0fd.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/5daa544b-07e8-4fcd-98c6-1fb55bef2131_1600w-cc17a234dc.png",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/26beb5d6-9395-4655-bd45-0375a5af0ffb_1600w-c0fb334601.png",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/0ecb27cd-9dd3-4e8a-8f50-529e27caa666_1600w-9924d919c6.png",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/09dc0e81-3730-4910-9053-26ecec7a3816_800w-329aada512.webp",
+            "http://127.0.0.1:8123/assets/images/luminal-creative-studio.aura.build/favicon-ebea3aeb03.ico",
+            "https://assets.unicorn.studio/images/7b9RUDblFTeXAfGKWnhAYTv9FVO2/sourasith_httpss.mj.runybic1hpRC-k_A_glowing_blurring_cosmic__1c9c5892-99aa-4a73-ba0e-61372d715421_3.png",
+            "https://assets.unicorn.studio/media/glyphs/circles.png"
+          ],
+          "fonts": [
+            "http://127.0.0.1:8123/assets/fonts/fonts.gstatic.com/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7-6ab57b19c6.woff2",
+            "http://127.0.0.1:8123/assets/fonts/fonts.gstatic.com/8vIH7w4qzmVxm2BL9A-c0b6673b7b.woff2"
+          ],
+          "media": []
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/96a71491-ccb5-4cb6-a369-be4b7a348c85_1600w-bb1691f8d6.webp",
+            "srcset": "",
+            "alt": "Retrato de Marcus Thorne",
+            "width": 1600,
+            "height": 1600
+          },
+          {
+            "src": "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/f7438fab-4b42-40cb-a36a-fd1c3446a888_800w-79247a441e.webp",
+            "srcset": "",
+            "alt": "Retrato de Ava Lin",
+            "width": 800,
+            "height": 447
+          },
+          {
+            "src": "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/74117bff-45d0-4c3e-ae97-12067641be39_800w-704b56827f.webp",
+            "srcset": "",
+            "alt": "Retrato de Noah Reed",
+            "width": 800,
+            "height": 800
+          },
+          {
+            "src": "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/3dbd59c3-a7a5-4515-985e-788ba17917e2_800w-4fbf7f002e.webp",
+            "srcset": "",
+            "alt": "Retrato de Elena Rossi",
+            "width": 800,
+            "height": 1062
+          },
+          {
+            "src": "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/92f770e8-08ad-4fb2-8858-2d9b385124a7_800w-2105644573.webp",
+            "srcset": "",
+            "alt": "Retrato de Elias Vance",
+            "width": 800,
+            "height": 448
+          },
+          {
+            "src": "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/93dbb379-52e9-4ded-bc8a-c0f05aef82c0_320w-3d7d74f2ed.webp",
+            "srcset": "",
+            "alt": "Retrato de Alex Morgan",
+            "width": 320,
+            "height": 241
+          },
+          {
+            "src": "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/e6ac2623-ccad-4751-8c7d-782f07a9263d_320w-cbe7b0b7f1.webp",
+            "srcset": "",
+            "alt": "Retrato de Sarah Chen",
+            "width": 320,
+            "height": 320
+          },
+          {
+            "src": "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/30fed759-ea9f-42e9-8249-9ea7f44c811c_320w-0ba889d085.webp",
+            "srcset": "",
+            "alt": "Retrato de Marcus Thorne",
+            "width": 320,
+            "height": 571
+          }
+        ],
+        "canvases": [
+          {
+            "width": 1152,
+            "height": 1350,
+            "cssWidth": 768,
+            "cssHeight": 900
+          }
+        ]
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "screenshot": "screenshots\\clone-390.png",
+      "signals": {
+        "href": "http://127.0.0.1:8123/",
+        "title": "Luminal Studio - Experiências digitais",
+        "lang": "pt-BR",
+        "bodyTextChars": 5490,
+        "scrollHeight": 14076,
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "h1": [
+          "LUMINAL"
+        ],
+        "headings": [
+          {
+            "tag": "h1",
+            "text": "LUMINAL"
+          },
+          {
+            "tag": "h2",
+            "text": "Luminal Studio"
+          },
+          {
+            "tag": "h2",
+            "text": "Luminal Studio é uma agência de design criativo focada em ajudar marcas a se comunicar com clareza."
+          },
+          {
+            "tag": "h2",
+            "text": "Luminal Studio"
+          },
+          {
+            "tag": "h3",
+            "text": "Marca"
+          },
+          {
+            "tag": "h3",
+            "text": "Design web"
+          },
+          {
+            "tag": "h3",
+            "text": "Produto"
+          },
+          {
+            "tag": "h3",
+            "text": "Estratégia"
+          },
+          {
+            "tag": "h2",
+            "text": "11 anos em movimento"
+          },
+          {
+            "tag": "h2",
+            "text": "Luminal Studio"
+          },
+          {
+            "tag": "h3",
+            "text": "Design de experiências cinéticas"
+          },
+          {
+            "tag": "h3",
+            "text": "Sistemas de marca escaláveis"
+          },
+          {
+            "tag": "h3",
+            "text": "Criação orientada por performance"
+          },
+          {
+            "tag": "h2",
+            "text": "Do caos à clareza"
+          },
+          {
+            "tag": "h3",
+            "text": "Descoberta e estratégia"
+          },
+          {
+            "tag": "h3",
+            "text": "Design e prototipagem"
+          },
+          {
+            "tag": "h3",
+            "text": "Desenvolvimento"
+          },
+          {
+            "tag": "h3",
+            "text": "Lançamento e escala"
+          },
+          {
+            "tag": "h2",
+            "text": "Por que Luminal?"
+          },
+          {
+            "tag": "h2",
+            "text": "Desenhado com intenção"
+          },
+          {
+            "tag": "h2",
+            "text": "Luminal Studio é uma equipe criativa focada em excelência digital."
+          },
+          {
+            "tag": "h3",
+            "text": "Marcus Thorne"
+          },
+          {
+            "tag": "h3",
+            "text": "Ava Lin"
+          },
+          {
+            "tag": "h3",
+            "text": "Noah Reed"
+          },
+          {
+            "tag": "h3",
+            "text": "Elena Rossi"
+          },
+          {
+            "tag": "h3",
+            "text": "Elias Vance"
+          },
+          {
+            "tag": "h2",
+            "text": "O que nossos clientes dizem"
+          },
+          {
+            "tag": "h2",
+            "text": "Desenhado com intenção"
+          },
+          {
+            "tag": "h2",
+            "text": "Planos transparentes por design."
+          },
+          {
+            "tag": "h3",
+            "text": "Núcleo inicial"
+          },
+          {
+            "tag": "h3",
+            "text": "Operação premium"
+          },
+          {
+            "tag": "h3",
+            "text": "Escala para agências"
+          },
+          {
+            "tag": "h2",
+            "text": "Vamos construir juntos."
+          },
+          {
+            "tag": "h2",
+            "text": "Conecte-se"
+          }
+        ],
+        "metaDescription": "",
+        "counts": {
+          "links": 17,
+          "images": 8,
+          "video": 0,
+          "canvas": 1,
+          "sections": 20,
+          "forms": 1,
+          "buttons": 2,
+          "inputs": 1,
+          "interactive": 32,
+          "scripts": 2,
+          "stylesheets": 2
+        },
+        "frameworks": {
+          "react": false,
+          "next": false,
+          "vue": false,
+          "nuxt": false,
+          "svelte": false,
+          "astro": false,
+          "three": false,
+          "gsap": false,
+          "lenis": false
+        },
+        "scripts": [
+          "https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js",
+          "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js"
+        ],
+        "stylesheets": [
+          "http://127.0.0.1:8123/luminal-tailwind.css",
+          "http://127.0.0.1:8123/assets/fonts/local.css"
+        ],
+        "sections": [
+          {
+            "tag": "header",
+            "id": "",
+            "className": "fixed top-0 left-0 w-full z-50 bg-neutral-950/80 backdrop-blur-md border-b border-white/10 h-16 transition-all duration-300",
+            "text": "Luminal Projetos Serviços Sobre Planos Contato Iniciar projeto Projetos Serviços Sobre Contato",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 64
+            },
+            "style": {
+              "display": "block",
+              "position": "fixed",
+              "backgroundColor": "rgba(10, 10, 10, 0.8)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "nav",
+            "id": "",
+            "className": "hidden md:flex items-center gap-10",
+            "text": "Projetos Serviços Sobre Planos Contato",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "style": {
+              "display": "none",
+              "position": "static",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "z-20 overflow-hidden bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "+ + + Camadas Comando Módulos Energia Vértice Pulso Global Camadas Comando Módulos Energia Vértice Pulso Global",
+            "rect": {
+              "x": 0,
+              "y": 964,
+              "width": 390,
+              "height": 109
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "about",
+            "className": "z-20 bg-neutral-950 w-full border-t border-white/10 relative",
+            "text": "/// Sobre Luminal Studio Luminal Studio é uma agência de design criativo focada em ajudar marcas a se comunicar com clareza. Acreditamos que bom design não é apenas aparência: é como funciona, como se sente e como resolve problemas reais de",
+            "rect": {
+              "x": 0,
+              "y": 1073,
+              "width": 390,
+              "height": 1843
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "z-20 bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "/// Capacidades Luminal Studio Acreditamos que bom design não é apenas aparência: é como funciona. Sobre nós Produtos digitais @keyframes cube-reveal-left { 0%, 100% { opacity: 0; transform: translate(-15px, 0) scale(0.98); filter: blur(4px",
+            "rect": {
+              "x": 0,
+              "y": 2916,
+              "width": 390,
+              "height": 2112
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "overflow-hidden bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "+ + + 11 anos em movimento",
+            "rect": {
+              "x": 0,
+              "y": 5028,
+              "width": 390,
+              "height": 257
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "z-20 bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "/// PROJETOS EM DESTAQUE Luminal Studio Acreditamos que bom design não é apenas aparência: é como funciona. Ver todas as especialidades 01 — INTERATIVO Design de experiências cinéticas Criamos interfaces que não ficam paradas: elas reagem. ",
+            "rect": {
+              "x": 0,
+              "y": 5285,
+              "width": 390,
+              "height": 1718
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "z-20 bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "/// NOSSO PROCESSO Do caos à clareza Nossa metodologia transforma desafios complexos em soluções digitais elegantes e escaláveis por meio de quatro etapas rigorosas. Iniciar projeto 01 Descoberta e estratégia Mergulhamos nos objetivos do ne",
+            "rect": {
+              "x": 0,
+              "y": 7003,
+              "width": 390,
+              "height": 1383
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "z-20 overflow-hidden bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "/// Valores Por que Luminal? Não fazemos apenas design; construímos resultados. Nosso trabalho nasce da precisão. Nossos valores Confiança de líderes + + Desenhado com intenção",
+            "rect": {
+              "x": 0,
+              "y": 8385,
+              "width": 390,
+              "height": 257
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "z-20 selection:bg-red-500/30 bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "/// Equipe Luminal Studio é uma equipe criativa focada em excelência digital. Acreditamos que bom design não é só aparência: é funcionamento e solução de problemas. 05 Especialistas Sobre nós 01 // Design Marcus Thorne Arquiteto líder de si",
+            "rect": {
+              "x": 0,
+              "y": 8642,
+              "width": 390,
+              "height": 1090
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "className": "team-card active flex-[3] overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group lg:border-b-0 lg:border-r h-full b",
+            "text": "01 // Design Marcus Thorne Arquiteto líder de sistemas e especialista em interfaces.",
+            "rect": {
+              "x": 0,
+              "y": 9132,
+              "width": 390,
+              "height": 256
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "className": "team-card relative flex-1 h-full overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group border-b lg:border-b-0 lg:b",
+            "text": "02 // Motion Ava Lin Diretora de motion focada em experiências fluidas.",
+            "rect": {
+              "x": 0,
+              "y": 9389,
+              "width": 390,
+              "height": 86
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "className": "team-card relative flex-1 h-full overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group border-b lg:border-b-0 lg:b",
+            "text": "03 // Fullstack Noah Reed Conectando design e produção.",
+            "rect": {
+              "x": 0,
+              "y": 9475,
+              "width": 390,
+              "height": 86
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "className": "team-card relative flex-1 h-full overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group border-b lg:border-b-0 lg:b",
+            "text": "04 // Data Elena Rossi Especialista em narrativas interativas de dados.",
+            "rect": {
+              "x": 0,
+              "y": 9561,
+              "width": 390,
+              "height": 86
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "article",
+            "id": "",
+            "className": "team-card relative flex-1 h-full overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group border-b lg:border-b-0 last",
+            "text": "05 // Web3 Elias Vance Engenheiro de protocolos e auditor de contratos inteligentes.",
+            "rect": {
+              "x": 0,
+              "y": 9647,
+              "width": 390,
+              "height": 85
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "z-20 overflow-hidden bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "/// DEPOIMENTOS O que nossos clientes dizem Relatos reais de fundadores e equipes parceiras sobre como elevamos produtos, refinamos visões e entregamos resultados relevantes. 98% Taxa de retenção Ref: 001 // Apex \"A atenção aos detalhes e a",
+            "rect": {
+              "x": 0,
+              "y": 9732,
+              "width": 390,
+              "height": 890
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "",
+            "className": "z-20 overflow-hidden bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "+ + + Desenhado com intenção",
+            "rect": {
+              "x": 0,
+              "y": 10622,
+              "width": 390,
+              "height": 257
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "pricing",
+            "className": "z-20 bg-neutral-950 w-full border-white/10 border-t relative",
+            "text": "/// Planos Planos transparentes por design. Entregamos resultados tangíveis. Nossos pacotes são ecossistemas completos para marcas em crescimento. \"Bom design custa; design ruim custa uma fortuna.\" Ver planos Moeda USD / EUR Disponibilidade",
+            "rect": {
+              "x": 0,
+              "y": 10879,
+              "width": 390,
+              "height": 1912
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "section",
+            "id": "contact",
+            "className": "overflow-hidden flex bg-center md:py-48 w-full z-20 border-white/10 border-t pt-32 pb-32 relative items-center justify-center",
+            "text": "Vamos construir juntos. Transforme sua visão em realidade digital. Crie conosco experiências que definem o futuro. Iniciar projeto",
+            "rect": {
+              "x": 0,
+              "y": 12791,
+              "width": 390,
+              "height": 529
+            },
+            "style": {
+              "display": "flex",
+              "position": "relative",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          },
+          {
+            "tag": "footer",
+            "id": "",
+            "className": "relative z-20 w-full border-t border-white/10 bg-neutral-950",
+            "text": "/// Conecte-se Pronto para começar seu próximo projeto? Vamos criar algo extraordinário juntos. Fale conosco Mapa do site Início Projetos Agência Redes Instagram Twitter LinkedIn Novidades Seu e-mail Assinar © 2024 Luminal Studio. Todos os ",
+            "rect": {
+              "x": 0,
+              "y": 13320,
+              "width": 390,
+              "height": 756
+            },
+            "style": {
+              "display": "block",
+              "position": "relative",
+              "backgroundColor": "rgb(10, 10, 10)",
+              "color": "rgb(229, 229, 229)",
+              "fontFamily": "Inter, sans-serif",
+              "fontSize": "16px"
+            }
+          }
+        ],
+        "cssVariables": [
+          [
+            "--tw-border-spacing-x",
+            "0"
+          ],
+          [
+            "--tw-border-spacing-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-skew-x",
+            "0"
+          ],
+          [
+            "--tw-skew-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-pan-x",
+            ""
+          ],
+          [
+            "--tw-pan-y",
+            ""
+          ],
+          [
+            "--tw-pinch-zoom",
+            ""
+          ],
+          [
+            "--tw-scroll-snap-strictness",
+            "proximity"
+          ],
+          [
+            "--tw-gradient-from-position",
+            ""
+          ],
+          [
+            "--tw-gradient-via-position",
+            ""
+          ],
+          [
+            "--tw-gradient-to-position",
+            ""
+          ],
+          [
+            "--tw-ordinal",
+            ""
+          ],
+          [
+            "--tw-slashed-zero",
+            ""
+          ],
+          [
+            "--tw-numeric-figure",
+            ""
+          ],
+          [
+            "--tw-numeric-spacing",
+            ""
+          ],
+          [
+            "--tw-numeric-fraction",
+            ""
+          ],
+          [
+            "--tw-ring-inset",
+            ""
+          ],
+          [
+            "--tw-ring-offset-width",
+            "0px"
+          ],
+          [
+            "--tw-ring-offset-color",
+            "#fff"
+          ],
+          [
+            "--tw-ring-color",
+            "rgba(59,130,246,.5)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-blur",
+            ""
+          ],
+          [
+            "--tw-brightness",
+            ""
+          ],
+          [
+            "--tw-contrast",
+            ""
+          ],
+          [
+            "--tw-grayscale",
+            ""
+          ],
+          [
+            "--tw-hue-rotate",
+            ""
+          ],
+          [
+            "--tw-invert",
+            ""
+          ],
+          [
+            "--tw-saturate",
+            ""
+          ],
+          [
+            "--tw-sepia",
+            ""
+          ],
+          [
+            "--tw-drop-shadow",
+            ""
+          ],
+          [
+            "--tw-backdrop-blur",
+            ""
+          ],
+          [
+            "--tw-backdrop-brightness",
+            ""
+          ],
+          [
+            "--tw-backdrop-contrast",
+            ""
+          ],
+          [
+            "--tw-backdrop-grayscale",
+            ""
+          ],
+          [
+            "--tw-backdrop-hue-rotate",
+            ""
+          ],
+          [
+            "--tw-backdrop-invert",
+            ""
+          ],
+          [
+            "--tw-backdrop-opacity",
+            ""
+          ],
+          [
+            "--tw-backdrop-saturate",
+            ""
+          ],
+          [
+            "--tw-backdrop-sepia",
+            ""
+          ],
+          [
+            "--tw-contain-size",
+            ""
+          ],
+          [
+            "--tw-contain-layout",
+            ""
+          ],
+          [
+            "--tw-contain-paint",
+            ""
+          ],
+          [
+            "--tw-contain-style",
+            ""
+          ],
+          [
+            "--tw-border-spacing-x",
+            "0"
+          ],
+          [
+            "--tw-border-spacing-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-skew-x",
+            "0"
+          ],
+          [
+            "--tw-skew-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-pan-x",
+            ""
+          ],
+          [
+            "--tw-pan-y",
+            ""
+          ],
+          [
+            "--tw-pinch-zoom",
+            ""
+          ],
+          [
+            "--tw-scroll-snap-strictness",
+            "proximity"
+          ],
+          [
+            "--tw-gradient-from-position",
+            ""
+          ],
+          [
+            "--tw-gradient-via-position",
+            ""
+          ],
+          [
+            "--tw-gradient-to-position",
+            ""
+          ],
+          [
+            "--tw-ordinal",
+            ""
+          ],
+          [
+            "--tw-slashed-zero",
+            ""
+          ],
+          [
+            "--tw-numeric-figure",
+            ""
+          ],
+          [
+            "--tw-numeric-spacing",
+            ""
+          ],
+          [
+            "--tw-numeric-fraction",
+            ""
+          ],
+          [
+            "--tw-ring-inset",
+            ""
+          ],
+          [
+            "--tw-ring-offset-width",
+            "0px"
+          ],
+          [
+            "--tw-ring-offset-color",
+            "#fff"
+          ],
+          [
+            "--tw-ring-color",
+            "rgba(59,130,246,.5)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-blur",
+            ""
+          ],
+          [
+            "--tw-brightness",
+            ""
+          ],
+          [
+            "--tw-contrast",
+            ""
+          ],
+          [
+            "--tw-grayscale",
+            ""
+          ],
+          [
+            "--tw-hue-rotate",
+            ""
+          ],
+          [
+            "--tw-invert",
+            ""
+          ],
+          [
+            "--tw-saturate",
+            ""
+          ],
+          [
+            "--tw-sepia",
+            ""
+          ],
+          [
+            "--tw-drop-shadow",
+            ""
+          ],
+          [
+            "--tw-backdrop-blur",
+            ""
+          ],
+          [
+            "--tw-backdrop-brightness",
+            ""
+          ],
+          [
+            "--tw-backdrop-contrast",
+            ""
+          ],
+          [
+            "--tw-backdrop-grayscale",
+            ""
+          ],
+          [
+            "--tw-backdrop-hue-rotate",
+            ""
+          ],
+          [
+            "--tw-backdrop-invert",
+            ""
+          ],
+          [
+            "--tw-backdrop-opacity",
+            ""
+          ],
+          [
+            "--tw-backdrop-saturate",
+            ""
+          ],
+          [
+            "--tw-backdrop-sepia",
+            ""
+          ],
+          [
+            "--tw-contain-size",
+            ""
+          ],
+          [
+            "--tw-contain-layout",
+            ""
+          ],
+          [
+            "--tw-contain-paint",
+            ""
+          ],
+          [
+            "--tw-contain-style",
+            ""
+          ],
+          [
+            "--tw-content",
+            "\"\""
+          ],
+          [
+            "--tw-translate-x",
+            "-50%"
+          ],
+          [
+            "--tw-translate-y",
+            "-50%"
+          ],
+          [
+            "--tw-translate-x",
+            "0.25rem"
+          ],
+          [
+            "--tw-translate-x",
+            "0.75rem"
+          ],
+          [
+            "--tw-translate-y",
+            "1rem"
+          ],
+          [
+            "--tw-rotate",
+            "-12deg"
+          ],
+          [
+            "--tw-scale-x",
+            "1.05"
+          ],
+          [
+            "--tw-scale-y",
+            "1.05"
+          ],
+          [
+            "--tw-space-y-reverse",
+            "0"
+          ],
+          [
+            "--tw-space-y-reverse",
+            "0"
+          ],
+          [
+            "--tw-space-y-reverse",
+            "0"
+          ],
+          [
+            "--tw-divide-x-reverse",
+            "0"
+          ],
+          [
+            "--tw-divide-y-reverse",
+            "0"
+          ],
+          [
+            "--tw-border-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-gradient-from",
+            "#0a0a0a var(--tw-gradient-from-position)"
+          ],
+          [
+            "--tw-gradient-to",
+            "hsla(0,0%,4%,0) var(--tw-gradient-to-position)"
+          ],
+          [
+            "--tw-gradient-stops",
+            "var(--tw-gradient-from),var(--tw-gradient-to)"
+          ],
+          [
+            "--tw-gradient-from",
+            "hsla(0,0%,100%,.03) var(--tw-gradient-from-position)"
+          ],
+          [
+            "--tw-gradient-to",
+            "hsla(0,0%,100%,0) var(--tw-gradient-to-position)"
+          ],
+          [
+            "--tw-gradient-stops",
+            "var(--tw-gradient-from),var(--tw-gradient-to)"
+          ],
+          [
+            "--tw-gradient-to",
+            "rgba(239,68,68,0) var(--tw-gradient-to-position)"
+          ],
+          [
+            "--tw-gradient-stops",
+            "var(--tw-gradient-from),#ef4444 var(--tw-gradient-via-position),var(--tw-gradient-to)"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-shadow",
+            "0 25px 50px -12px rgba(0,0,0,.25)"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 25px 50px -12px var(--tw-shadow-color)"
+          ],
+          [
+            "--tw-shadow",
+            "0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1)"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)"
+          ],
+          [
+            "--tw-shadow",
+            "0 1px 2px 0 rgba(0,0,0,.05)"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 1px 2px 0 var(--tw-shadow-color)"
+          ],
+          [
+            "--tw-shadow-color",
+            "rgba(239,68,68,.05)"
+          ],
+          [
+            "--tw-shadow",
+            "var(--tw-shadow-colored)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)"
+          ],
+          [
+            "--tw-ring-shadow",
+            "var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)"
+          ],
+          [
+            "--tw-ring-shadow",
+            "var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color)"
+          ],
+          [
+            "--tw-ring-color",
+            "hsla(0,0%,100%,.1)"
+          ],
+          [
+            "--tw-blur",
+            "blur(8px)"
+          ],
+          [
+            "--tw-blur",
+            "blur(64px)"
+          ],
+          [
+            "--tw-blur",
+            "blur(0.5px)"
+          ],
+          [
+            "--tw-blur",
+            "blur(120px)"
+          ],
+          [
+            "--tw-blur",
+            "blur(50px)"
+          ],
+          [
+            "--tw-blur",
+            "blur(60px)"
+          ],
+          [
+            "--tw-blur",
+            "blur(90px)"
+          ],
+          [
+            "--tw-brightness",
+            "brightness(1.25)"
+          ],
+          [
+            "--tw-drop-shadow",
+            "drop-shadow(0 25px 25px rgba(0,0,0,.15))"
+          ],
+          [
+            "--tw-drop-shadow",
+            "drop-shadow(0 60px 120px rgba(0,0,0,.9))"
+          ],
+          [
+            "--tw-drop-shadow",
+            "drop-shadow(0 4px 3px rgba(0,0,0,.07)) drop-shadow(0 2px 2px rgba(0,0,0,.06))"
+          ],
+          [
+            "--tw-grayscale",
+            "grayscale(100%)"
+          ],
+          [
+            "--tw-hue-rotate",
+            "hue-rotate(180deg)"
+          ],
+          [
+            "--tw-saturate",
+            "saturate(2)"
+          ],
+          [
+            "--tw-backdrop-blur",
+            "blur(8px)"
+          ],
+          [
+            "--tw-backdrop-blur",
+            "blur(12px)"
+          ],
+          [
+            "--tw-backdrop-blur",
+            "blur(4px)"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-scale-x",
+            "0.99"
+          ],
+          [
+            "--tw-scale-y",
+            "0.99"
+          ],
+          [
+            "--tw-bg-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 40px -10px rgba(239,68,68,.15)"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 40px -10px var(--tw-shadow-color)"
+          ],
+          [
+            "--tw-border-opacity",
+            "1"
+          ],
+          [
+            "--tw-scale-x",
+            "0.98"
+          ],
+          [
+            "--tw-scale-y",
+            "0.98"
+          ],
+          [
+            "--tw-translate-x",
+            "0.25rem"
+          ],
+          [
+            "--tw-translate-x",
+            "0.5rem"
+          ],
+          [
+            "--tw-translate-y",
+            "0px"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-text-opacity",
+            "1"
+          ],
+          [
+            "--tw-brightness",
+            "brightness(1.1)"
+          ],
+          [
+            "--tw-scale-x",
+            "1.1"
+          ],
+          [
+            "--tw-scale-y",
+            "1.1"
+          ],
+          [
+            "--tw-grayscale",
+            "grayscale(0)"
+          ]
+        ],
+        "rootVariables": [
+          [
+            "--tw-border-spacing-x",
+            "0"
+          ],
+          [
+            "--tw-border-spacing-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-skew-x",
+            "0"
+          ],
+          [
+            "--tw-skew-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-scroll-snap-strictness",
+            "proximity"
+          ],
+          [
+            "--tw-ring-offset-width",
+            "0px"
+          ],
+          [
+            "--tw-ring-offset-color",
+            "#fff"
+          ],
+          [
+            "--tw-ring-color",
+            "rgba(59,130,246,.5)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-border-spacing-x",
+            "0"
+          ],
+          [
+            "--tw-border-spacing-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-skew-x",
+            "0"
+          ],
+          [
+            "--tw-skew-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-scroll-snap-strictness",
+            "proximity"
+          ],
+          [
+            "--tw-ring-offset-width",
+            "0px"
+          ],
+          [
+            "--tw-ring-offset-color",
+            "#fff"
+          ],
+          [
+            "--tw-ring-color",
+            "rgba(59,130,246,.5)"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-rotate",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-offset-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-ring-color",
+            "rgba(59,130,246,.5)"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-shadow",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-shadow-colored",
+            "0 0 #0000"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-x",
+            "0"
+          ],
+          [
+            "--tw-translate-y",
+            "0"
+          ],
+          [
+            "--tw-scale-x",
+            "1"
+          ],
+          [
+            "--tw-scale-y",
+            "1"
+          ]
+        ],
+        "palette": {
+          "body": {
+            "backgroundColor": "rgb(10, 10, 10)",
+            "color": "rgb(229, 229, 229)",
+            "borderColor": "rgb(229, 231, 235)",
+            "fontFamily": "Inter, sans-serif",
+            "backgroundImage": ""
+          },
+          "header": {
+            "backgroundColor": "rgba(10, 10, 10, 0.8)",
+            "color": "rgb(229, 229, 229)",
+            "borderColor": "rgba(255, 255, 255, 0.1)",
+            "fontFamily": "Inter, sans-serif",
+            "backgroundImage": ""
+          },
+          "nav": {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "color": "rgb(229, 229, 229)",
+            "borderColor": "rgb(229, 231, 235)",
+            "fontFamily": "Inter, sans-serif",
+            "backgroundImage": ""
+          },
+          "main": null,
+          "footer": {
+            "backgroundColor": "rgb(10, 10, 10)",
+            "color": "rgb(229, 229, 229)",
+            "borderColor": "rgba(255, 255, 255, 0.1)",
+            "fontFamily": "Inter, sans-serif",
+            "backgroundImage": ""
+          },
+          "buttons": [
+            {
+              "text": "",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(255, 255, 255)",
+              "borderColor": "rgb(229, 231, 235)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "Ver projetos",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgb(229, 231, 235)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "Iniciar projeto",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgb(229, 231, 235)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "01 // Design Marcus Thorne Arquiteto líd",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgba(255, 255, 255, 0.1)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "02 // Motion Ava Lin Diretora de motion ",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgba(255, 255, 255, 0.1)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "03 // Fullstack Noah Reed Conectando des",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgba(255, 255, 255, 0.1)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "04 // Data Elena Rossi Especialista em n",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgba(255, 255, 255, 0.1)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "05 // Web3 Elias Vance Engenheiro de pro",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgba(255, 255, 255, 0.1)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "Ver planos",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgb(229, 231, 235)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "Arquivo-03 // Corporativo Escala para ag",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgba(255, 255, 255, 0.1)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "Fale conosco",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgb(229, 231, 235)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            },
+            {
+              "text": "Iniciar projeto",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "color": "rgb(229, 229, 229)",
+              "borderColor": "rgb(229, 231, 235)",
+              "fontFamily": "Inter, sans-serif",
+              "backgroundImage": ""
+            }
+          ]
+        },
+        "motion": {
+          "htmlScrollBehavior": "auto",
+          "scrollSnapRules": 2,
+          "smoothScrollRules": 0,
+          "stickyOrFixedCount": 2
+        },
+        "fonts": [
+          "Inter",
+          "Syne"
+        ],
+        "fontFaces": [
+          {
+            "family": "Inter",
+            "weight": "300 700",
+            "style": "normal",
+            "srcUrls": [
+              "fonts.gstatic.com/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7-6ab57b19c6.woff2"
+            ],
+            "cssText": "@font-face { font-family: Inter; font-style: normal; font-weight: 300 700; font-display: swap; src: url(\"fonts.gstatic.com/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7-6ab57b19c6.woff2\") format(\"woff2\"); }",
+            "sheetHref": "http://127.0.0.1:8123/assets/fonts/local.css"
+          },
+          {
+            "family": "Syne",
+            "weight": "400 800",
+            "style": "normal",
+            "srcUrls": [
+              "fonts.gstatic.com/8vIH7w4qzmVxm2BL9A-c0b6673b7b.woff2"
+            ],
+            "cssText": "@font-face { font-family: Syne; font-style: normal; font-weight: 400 800; font-display: swap; src: url(\"fonts.gstatic.com/8vIH7w4qzmVxm2BL9A-c0b6673b7b.woff2\") format(\"woff2\"); }",
+            "sheetHref": "http://127.0.0.1:8123/assets/fonts/local.css"
+          }
+        ],
+        "resources": {
+          "images": [
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/96a71491-ccb5-4cb6-a369-be4b7a348c85_1600w-bb1691f8d6.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/f7438fab-4b42-40cb-a36a-fd1c3446a888_800w-79247a441e.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/74117bff-45d0-4c3e-ae97-12067641be39_800w-704b56827f.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/3dbd59c3-a7a5-4515-985e-788ba17917e2_800w-4fbf7f002e.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/92f770e8-08ad-4fb2-8858-2d9b385124a7_800w-2105644573.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/93dbb379-52e9-4ded-bc8a-c0f05aef82c0_320w-3d7d74f2ed.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/e6ac2623-ccad-4751-8c7d-782f07a9263d_320w-cbe7b0b7f1.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/30fed759-ea9f-42e9-8249-9ea7f44c811c_320w-0ba889d085.webp",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/05d6b211-9e83-488c-8f3f-42a77b8e9532_1600w-02f7336b71.png",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/5daa544b-07e8-4fcd-98c6-1fb55bef2131_1600w-cc17a234dc.png",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/26beb5d6-9395-4655-bd45-0375a5af0ffb_1600w-c0fb334601.png",
+            "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/0ecb27cd-9dd3-4e8a-8f50-529e27caa666_1600w-9924d919c6.png",
+            "http://127.0.0.1:8123/assets/images/luminal-creative-studio.aura.build/favicon-ebea3aeb03.ico",
+            "https://assets.unicorn.studio/images/7b9RUDblFTeXAfGKWnhAYTv9FVO2/sourasith_httpss.mj.runybic1hpRC-k_A_glowing_blurring_cosmic__1c9c5892-99aa-4a73-ba0e-61372d715421_3.png",
+            "https://assets.unicorn.studio/media/glyphs/circles.png"
+          ],
+          "fonts": [
+            "http://127.0.0.1:8123/assets/fonts/fonts.gstatic.com/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7-6ab57b19c6.woff2",
+            "http://127.0.0.1:8123/assets/fonts/fonts.gstatic.com/8vIH7w4qzmVxm2BL9A-c0b6673b7b.woff2"
+          ],
+          "media": []
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/96a71491-ccb5-4cb6-a369-be4b7a348c85_1600w-bb1691f8d6.webp",
+            "srcset": "",
+            "alt": "Retrato de Marcus Thorne",
+            "width": 1600,
+            "height": 1600
+          },
+          {
+            "src": "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/f7438fab-4b42-40cb-a36a-fd1c3446a888_800w-79247a441e.webp",
+            "srcset": "",
+            "alt": "Retrato de Ava Lin",
+            "width": 800,
+            "height": 447
+          },
+          {
+            "src": "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/74117bff-45d0-4c3e-ae97-12067641be39_800w-704b56827f.webp",
+            "srcset": "",
+            "alt": "Retrato de Noah Reed",
+            "width": 800,
+            "height": 800
+          },
+          {
+            "src": "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/3dbd59c3-a7a5-4515-985e-788ba17917e2_800w-4fbf7f002e.webp",
+            "srcset": "",
+            "alt": "Retrato de Elena Rossi",
+            "width": 800,
+            "height": 1062
+          },
+          {
+            "src": "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/92f770e8-08ad-4fb2-8858-2d9b385124a7_800w-2105644573.webp",
+            "srcset": "",
+            "alt": "Retrato de Elias Vance",
+            "width": 800,
+            "height": 448
+          },
+          {
+            "src": "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/93dbb379-52e9-4ded-bc8a-c0f05aef82c0_320w-3d7d74f2ed.webp",
+            "srcset": "",
+            "alt": "Retrato de Alex Morgan",
+            "width": 320,
+            "height": 241
+          },
+          {
+            "src": "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/e6ac2623-ccad-4751-8c7d-782f07a9263d_320w-cbe7b0b7f1.webp",
+            "srcset": "",
+            "alt": "Retrato de Sarah Chen",
+            "width": 320,
+            "height": 320
+          },
+          {
+            "src": "http://127.0.0.1:8123/assets/images/hoirqrkdgbmvpwutwuwj.supabase.co/30fed759-ea9f-42e9-8249-9ea7f44c811c_320w-0ba889d085.webp",
+            "srcset": "",
+            "alt": "Retrato de Marcus Thorne",
+            "width": 320,
+            "height": 571
+          }
+        ],
+        "canvases": [
+          {
+            "width": 585,
+            "height": 1350,
+            "cssWidth": 390,
+            "cssHeight": 900
+          }
+        ]
+      }
+    }
+  ]
+}

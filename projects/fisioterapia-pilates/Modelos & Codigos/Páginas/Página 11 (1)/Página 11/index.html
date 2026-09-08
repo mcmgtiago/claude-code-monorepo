@@ -1,0 +1,793 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operação Página no Ar — Sua página de vendas profissional hoje</title>
+  <meta name="description" content="Tenha uma página de vendas profissional no ar em menos de 2 horas. Sem gastar com ferramentas, sem ser designer e sem criar nada do zero.">
+
+  <!-- Fontes: preconnect para liberar handshake TLS cedo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fontes: 3 requests unificados em 1, carregamento assíncrono (não bloqueia FCP) -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Figtree:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Figtree:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"></noscript>
+
+  <!-- CSS crítico (bloqueia render — necessário para 1ª pintura: layout, tipografia, componentes) -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/typography.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/page.css">
+
+  <!-- CSS não-crítico: animações e efeitos (assíncrono — não está no caminho crítico) -->
+  <link rel="preload" as="style" href="assets/css/animations.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/animations.css"></noscript>
+  <link rel="preload" as="style" href="assets/css/effects.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/effects.css"></noscript>
+
+  <!-- Swiper CSS: carousel está abaixo do dobramento (assíncrono) -->
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
+
+  <!-- *** FIXES CRÍTICOS — últimas regras ganham sempre *** -->
+  <style>
+    /* Elementos animados iniciam invisíveis — regra crítica inline
+       (animations.css é async; sem isso haveria flash de conteúdo) */
+    [data-anim] { opacity: 0; }
+
+    /* ─── Swiper: paginação de pontos visível apenas no mobile ─── */
+    .swiper-pagination { display: none; }
+    @media (max-width: 767px) {
+      .swiper-pagination { display: block; }
+      /* Espaço abaixo do carrossel para acomodar os pontos */
+      [data-anim-swiper] { padding-bottom: 2rem; }
+    }
+
+    /* ─── Containment: seções abaixo do dobramento ─── */
+    /* O browser pula layout/paint dessas seções até estarem perto do viewport */
+    .kit-section-lazy {
+      content-visibility: auto;
+      contain-intrinsic-size: auto 600px;
+    }
+
+    /* ─── HERO: remover faixa preta (padding do .kit-section) ─── */
+    #tubes-section {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      overflow: visible !important;
+      /* Fundo com blob azul suave centralizado */
+      background:
+        radial-gradient(circle 520px at 50% -12%, rgba(10, 116, 255, 0.42) 0%, rgba(10, 116, 255, 0.16) 40%, rgba(10, 116, 255, 0) 72%),
+        var(--kit-bg-primary) !important;
+    }
+
+    /* ─── TRANSIÇÃO HERO → BLOCO 2: eliminar faixa de divisão ─── */
+    /* Causa: hero termina em #000000, bloco 2 é #0a0f1c — cores diferentes com borda hard clipada */
+    /* Solução: bloco 2 começa em preto e degrade para seu azul-escuro; margin-top fecha pixel gap */
+    #modelos {
+      background: linear-gradient(
+        to bottom,
+        #000000 0%,
+        #0a0f1c 180px
+      ) !important;
+      margin-top: -2px !important;
+    }
+
+    /* Glow line na base do hero: expandida e acima do conteúdo do bloco 2 */
+    #tubes-section .kit-glow-line {
+      position: absolute !important;
+      bottom: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      z-index: 5 !important;
+    }
+
+    /* ─── PROCESSO: corrigir deslocamento por `data-anim="fade-left"` ─── */
+    /* Agora animations.js usa fade-up no mobile — overflow-x já não é problema */
+    @media (max-width: 767px) {
+      #processo {
+        overflow-x: visible !important;
+      }
+      #processo .kit-container {
+        overflow: visible !important;
+      }
+      /* Zera qualquer transform residual do GSAP nos passos */
+      #processo .kit-process__step {
+        flex-direction: row !important;
+        gap: 0.875rem !important;
+        align-items: flex-start !important;
+        padding-left: 0 !important;
+      }
+      #processo .kit-process__number {
+        position: static !important;
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 0.875rem !important;
+        flex-shrink: 0 !important;
+      }
+      #processo .kit-process__content {
+        flex: 1 !important;
+        min-width: 0 !important;
+        overflow: visible !important;
+      }
+      #processo .kit-process__title,
+      #processo .kit-process__desc {
+        overflow-wrap: break-word !important;
+        word-break: break-word !important;
+      }
+      #processo .kit-process__timeline {
+        overflow: visible !important;
+      }
+
+      /* ─── "O QUE MUDA": corrigir desalinhamento ─── */
+      #o-que-muda .page-before-after__grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+      }
+      #o-que-muda .page-before-after__col {
+        width: 100% !important;
+        min-width: 0 !important;
+      }
+      #o-que-muda .page-before-after__box {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 1.25rem 1rem !important;
+        overflow: hidden !important;
+      }
+      #o-que-muda .page-before-after__item {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        gap: 0.625rem !important;
+        overflow: hidden !important;
+      }
+      #o-que-muda .page-before-after__item p {
+        flex: 1 !important;
+        min-width: 0 !important;
+        overflow-wrap: break-word !important;
+        word-break: break-word !important;
+        margin: 0 !important;
+      }
+      #o-que-muda .page-before-after__icon {
+        flex-shrink: 0 !important;
+        line-height: 1.5 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       BLOCO 1: Hero (kit)
+       ═══════════════════════════════════════════ -->
+  <section id="tubes-section" class="kit-section kit-hero kit-bg-dark">
+    <!-- Canvas TubesCursor (efeito de luz que acompanha o mouse) -->
+    <!-- canvas injetado via JS -->
+
+    <!-- Watermark background text -->
+    <div class="kit-hero__watermark kit-watermark" aria-hidden="true">
+      P.N.A
+    </div>
+
+    <div class="kit-container" style="position: relative; z-index: 2;">
+      <!-- Badge topo -->
+      <div class="kit-hero__badges" data-anim="fade-up" data-anim-delay="0.1">
+        <span class="kit-badge kit-badge-pulsating">
+          <span class="kit-badge__icon">⚡</span>
+          Sem ferramentas pagas
+        </span>
+        <span class="kit-badge kit-badge-pulsating">
+          <span class="kit-badge__icon">🎨</span>
+          Sem ser designer
+        </span>
+        <span class="kit-badge kit-badge-pulsating">
+          <span class="kit-badge__icon">🚀</span>
+          Sem criar do zero
+        </span>
+      </div>
+
+      <!-- Headline principal -->
+      <h1 class="kit-hero__headline kit-display" data-anim="fade-up" data-anim-delay="0.2">
+        Tenha uma página de vendas profissional no ar em <span class="kit-text-gradient-blue">menos de 2 horas</span>
+      </h1>
+
+      <!-- Subtítulo/Descrição -->
+      <p class="kit-hero__description kit-body-lg" data-anim="fade-up" data-anim-delay="0.35">
+        Com a <strong>Operação Página no Ar</strong>, você recebe modelos profissionais e validados, pede para a IA personalizar para o seu produto e coloca sua página no ar ainda hoje.
+      </p>
+
+      <!-- CTA Principal -->
+      <div class="kit-hero__cta" data-anim="fade-up" data-anim-delay="0.5">
+        <a href="#oferta" class="kit-btn-shiny">
+          Quero minha página profissional
+        </a>
+      </div>
+
+      <!-- Preço âncora -->
+      <p class="kit-caption" data-anim="fade-up" data-anim-delay="0.6" style="margin-top: var(--kit-gap-md); opacity: 0.7;">
+        Libere seu acesso por apenas <strong>R$ 49</strong>
+      </p>
+    </div>
+
+    <!-- Glow separator -->
+    <div class="kit-glow-line" style="position: absolute; bottom: 0;"></div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       BLOCO 2: Modelos / Carousel (kit: portfolio)
+       ═══════════════════════════════════════════ -->
+  <section id="modelos" class="kit-section kit-section-lazy kit-portfolio kit-bg-deep" data-anim="portfolio-section">
+    <div class="kit-container">
+      <!-- Cabeçalho -->
+      <div class="kit-section-header" data-anim="fade-up">
+        <span class="kit-label kit-label-alt">biblioteca de modelos</span>
+        <h2 class="kit-h1">Veja alguns modelos que <span class="kit-text-gradient-blue">você vai receber</span></h2>
+      </div>
+
+      <!-- Carousel -->
+      <div class="kit-portfolio__carousel swiper" data-anim-swiper data-anim="fade-up" data-anim-delay="0.2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide kit-portfolio__slide">
+            <div class="kit-card kit-img-hover-zoom">
+              <img class="kit-portfolio__image" src="assets/images/01.png" alt="Modelo de página de vendas 1" loading="lazy" width="1439" height="757" decoding="async" />
+              <div class="kit-portfolio__caption">
+                <h3 class="kit-h4">Modelo 01</h3>
+                <p class="kit-body-sm">Página de vendas para infoprodutos</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide kit-portfolio__slide">
+            <div class="kit-card kit-img-hover-zoom">
+              <img class="kit-portfolio__image" src="assets/images/01.png" alt="Modelo de página de vendas 2" loading="lazy" width="1439" height="757" decoding="async" />
+              <div class="kit-portfolio__caption">
+                <h3 class="kit-h4">Modelo 02</h3>
+                <p class="kit-body-sm">Landing page para serviços</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide kit-portfolio__slide">
+            <div class="kit-card kit-img-hover-zoom">
+              <img class="kit-portfolio__image" src="assets/images/01.png" alt="Modelo de página de vendas 3" loading="lazy" width="1439" height="757" decoding="async" />
+              <div class="kit-portfolio__caption">
+                <h3 class="kit-h4">Modelo 03</h3>
+                <p class="kit-body-sm">Página de captura premium</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide kit-portfolio__slide">
+            <div class="kit-card kit-img-hover-zoom">
+              <img class="kit-portfolio__image" src="assets/images/01.png" alt="Modelo de página de vendas 4" loading="lazy" width="1439" height="757" decoding="async" />
+              <div class="kit-portfolio__caption">
+                <h3 class="kit-h4">Modelo 04</h3>
+                <p class="kit-body-sm">Página de lançamento</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Paginação: visível apenas no mobile via CSS -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       BLOCO 3: Antes/Depois — O que muda (NOVO)
+       Base visual: benefits
+       ═══════════════════════════════════════════ -->
+  <!-- BLOCO GERADO: não existia no kit original -->
+  <section id="o-que-muda" class="kit-section kit-section-lazy kit-bg-navy page-before-after" data-anim="benefits-section">
+    <div class="kit-separator"></div>
+
+    <div class="kit-container">
+      <div class="kit-section-header" data-anim="fade-up">
+        <span class="kit-label kit-label-alt">transformação</span>
+        <h2 class="kit-h1">O que muda com a <span class="kit-text-gradient-blue">Operação P.N.A</span></h2>
+      </div>
+
+      <div class="page-before-after__grid">
+        <!-- Coluna ANTES (dor) -->
+        <div class="page-before-after__col page-before-after__col--before" data-anim="fade-left" data-anim-delay="0.1">
+          <h3 class="kit-h3 page-before-after__heading page-before-after__heading--before">Se você…</h3>
+          <div class="kit-card page-before-after__box page-before-after__box--before">
+            <ul class="page-before-after__list">
+              <li class="page-before-after__item">
+                <span class="page-before-after__icon">✕</span>
+                <p class="kit-body-sm">Já perdeu horas em tutoriais e terminou o dia com a sensação de <strong>"perdi tempo e não saiu nada"</strong>.</p>
+              </li>
+              <li class="page-before-after__item">
+                <span class="page-before-after__icon">✕</span>
+                <p class="kit-body-sm">Tentou usar Lovable, Canva ou Hotmart Pages e acabou travando sem créditos ou ficando com uma página <strong>"meia boca"</strong>.</p>
+              </li>
+              <li class="page-before-after__item">
+                <span class="page-before-after__icon">✕</span>
+                <p class="kit-body-sm">Já olhou pra sua oferta e pensou <strong>"meu produto é bom, mas a página não ajuda"</strong>.</p>
+              </li>
+              <li class="page-before-after__item">
+                <span class="page-before-after__icon">✕</span>
+                <p class="kit-body-sm">Vende um produto barato ou está começando e <strong>não quer investir R$1500 num designer agora</strong>.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Coluna DEPOIS (solução) -->
+        <div class="page-before-after__col page-before-after__col--after" data-anim="fade-right" data-anim-delay="0.2">
+          <h3 class="kit-h3 page-before-after__heading page-before-after__heading--after">Com a Operação P.N.A você vai</h3>
+          <div class="kit-card page-before-after__box page-before-after__box--after">
+            <ul class="page-before-after__list">
+              <li class="page-before-after__item">
+                <span class="page-before-after__icon">✅</span>
+                <p class="kit-body-sm">Ter uma página de vendas profissional <strong>sem precisar pensar no design</strong>.</p>
+              </li>
+              <li class="page-before-after__item">
+                <span class="page-before-after__icon">✅</span>
+                <p class="kit-body-sm">Parar de perder horas vendo tutoriais soltos no YouTube pra <strong>colocar sua página no ar</strong>.</p>
+              </li>
+              <li class="page-before-after__item">
+                <span class="page-before-after__icon">✅</span>
+                <p class="kit-body-sm">Usar <strong>IA gratuita</strong> para personalizar a página do jeito que você quiser em poucos comandos.</p>
+              </li>
+              <li class="page-before-after__item">
+                <span class="page-before-after__icon">✅</span>
+                <p class="kit-body-sm">Colocar no ar uma página que <strong>passa confiança e credibilidade</strong>.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div style="text-align: center; margin-top: var(--kit-gap-xl);" data-anim="fade-up" data-anim-delay="0.4">
+        <a href="#oferta" class="kit-btn-shiny">
+          Liberar meu acesso agora
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       BLOCO 4: Urgência (NOVO)
+       Base visual: cta-final
+       ═══════════════════════════════════════════ -->
+  <!-- BLOCO GERADO: não existia no kit original -->
+  <section id="urgencia" class="kit-section kit-section-lazy kit-cta kit-bg-dark page-urgencia" data-anim="cta-section">
+    <div class="kit-bokeh-container" data-anim-bokeh="10"></div>
+    <div class="kit-ambient-glow"></div>
+
+    <div class="kit-container" style="position: relative; z-index: 2; text-align: center;">
+      <h2 class="kit-cta__headline kit-h1" data-anim="fade-up" data-anim-delay="0.1">
+        Enquanto você dorme, sua página de vendas está <span class="kit-text-gradient-blue">expulsando clientes</span> que já estavam com o cartão na mão.
+      </h2>
+
+      <p class="kit-body-lg" data-anim="fade-up" data-anim-delay="0.25" style="margin-top: var(--kit-gap-lg);">
+        Cada vez que uma pessoa clica no seu link e encontra uma página com cara de improviso, é isso que acontece:
+      </p>
+
+      <div class="page-urgencia__flow" data-anim="fade-up" data-anim-delay="0.35">
+        <span class="page-urgencia__step">CLIQUE</span>
+        <span class="page-urgencia__arrow">→</span>
+        <span class="page-urgencia__step page-urgencia__step--danger">DESCONFIANÇA</span>
+        <span class="page-urgencia__arrow">→</span>
+        <span class="page-urgencia__step page-urgencia__step--danger">ABANDONO</span>
+      </div>
+
+      <p class="kit-h3 kit-text-gradient" data-anim="fade-up" data-anim-delay="0.5" style="margin-top: var(--kit-gap-xl);">
+        Não deixe para amanhã a página que você pode ter ainda hoje.
+      </p>
+    </div>
+
+    <div class="kit-glow-line" style="position: absolute; bottom: 0;"></div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       BLOCO 5: Processo / Como Funciona (kit)
+       ═══════════════════════════════════════════ -->
+  <section id="processo" class="kit-section kit-section-lazy kit-process kit-bg-navy" data-anim="process-section">
+    <div class="kit-container">
+      <!-- Cabeçalho -->
+      <div class="kit-section-header" data-anim="fade-up">
+        <span class="kit-label kit-label-alt">passo a passo</span>
+        <h2 class="kit-h1">Veja como funciona <span class="kit-text-gradient-blue">na prática</span></h2>
+        <p class="kit-body-lg">Eu já fiz o trabalho pesado para você: estrutura organizada, blocos estratégicos e um visual profissional. Sua única tarefa é pedir para a IA adaptar ao seu produto e publicar.</p>
+      </div>
+
+      <!-- Timeline -->
+      <div class="kit-process__timeline">
+        <div class="kit-process__line"></div>
+
+        <div class="kit-process__step" data-anim="fade-left" data-anim-delay="0.1">
+          <div class="kit-process__number kit-label">01</div>
+          <div class="kit-process__content kit-card">
+            <h3 class="kit-process__title kit-h3">Escolha um modelo</h3>
+            <p class="kit-process__desc kit-body">Acesse nossa biblioteca e escolha a página que faz mais sentido para a sua oferta.</p>
+          </div>
+        </div>
+
+        <div class="kit-process__step" data-anim="fade-left" data-anim-delay="0.25">
+          <div class="kit-process__number kit-label">02</div>
+          <div class="kit-process__content kit-card">
+            <h3 class="kit-process__title kit-h3">Deixe a IA personalizar</h3>
+            <p class="kit-process__desc kit-body">Abra a IA e mande ajustar os textos para a sua oferta. Se quiser, você também pode pedir mudanças em cores, blocos, detalhes visuais e outras personalizações.</p>
+          </div>
+        </div>
+
+        <div class="kit-process__step" data-anim="fade-left" data-anim-delay="0.4">
+          <div class="kit-process__number kit-label">03</div>
+          <div class="kit-process__content kit-card">
+            <h3 class="kit-process__title kit-h3">Revise e publique</h3>
+            <p class="kit-process__desc kit-body">Depois dos ajustes, você só faz a revisão final e publica sua página de forma simples e rápida.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       BLOCO 6: O que você recebe (kit: benefits)
+       ═══════════════════════════════════════════ -->
+  <section id="entregaveis" class="kit-section kit-section-lazy kit-benefits kit-bg-dark" data-anim="benefits-section">
+    <div class="kit-separator"></div>
+
+    <div class="kit-container">
+      <!-- Cabeçalho -->
+      <div class="kit-section-header" data-anim="fade-up">
+        <span class="kit-label kit-label-alt">// o que você recebe</span>
+        <h2 class="kit-h1">Tudo o que você precisa está <span class="kit-text-gradient-blue">aqui dentro</span>.</h2>
+      </div>
+
+      <!-- Grid de cards -->
+      <div class="kit-benefits__grid">
+        <div class="kit-benefits__card kit-card kit-hover-lift" data-anim="fade-up" data-anim-delay="0.1">
+          <div class="kit-benefits__glow"></div>
+          <div class="kit-benefits__icon kit-icon-wrapper">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3 class="kit-benefits__title kit-h4">Páginas de vendas profissionais e validadas</h3>
+          <p class="kit-benefits__desc kit-body-sm">Você recebe modelos prontos, estruturados e com aparência profissional para usar.</p>
+        </div>
+
+        <div class="kit-benefits__card kit-card kit-hover-lift" data-anim="fade-up" data-anim-delay="0.2">
+          <div class="kit-benefits__glow"></div>
+          <div class="kit-benefits__icon kit-icon-wrapper">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h3 class="kit-benefits__title kit-h4">Passo a passo para personalizar a página</h3>
+          <p class="kit-benefits__desc kit-body-sm">Te mostro exatamente como personalizar a página, adicionar blocos e alterar os textos de acordo com o seu produto usando IA gratuita.</p>
+        </div>
+
+        <div class="kit-benefits__card kit-card kit-hover-lift" data-anim="fade-up" data-anim-delay="0.3">
+          <div class="kit-benefits__glow"></div>
+          <div class="kit-benefits__icon kit-icon-wrapper">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <h3 class="kit-benefits__title kit-h4">O Guia de Publicação</h3>
+          <p class="kit-benefits__desc kit-body-sm">O método à prova de falhas para colocar sua página no ar usando hospedagem gratuita. Rápido, leve e simples.</p>
+        </div>
+
+        <div class="kit-benefits__card kit-card kit-hover-lift" data-anim="fade-up" data-anim-delay="0.4">
+          <div class="kit-benefits__glow"></div>
+          <div class="kit-benefits__icon kit-icon-wrapper">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3 class="kit-benefits__title kit-h4">Checklist 'anti-esquecimento'</h3>
+          <p class="kit-benefits__desc kit-body-sm">Todos os passos e links organizados para você não travar nem esquecer nada durante o processo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       BLOCO 7: Oferta / Pricing (NOVO)
+       Base visual: stats + cta-final
+       ═══════════════════════════════════════════ -->
+  <!-- BLOCO GERADO: não existia no kit original -->
+  <section id="oferta" class="kit-section kit-section-lazy kit-bg-deep page-pricing" data-anim="cta-section">
+    <div class="kit-bokeh-container" data-anim-bokeh="12"></div>
+
+    <div class="kit-container" style="position: relative; z-index: 2;">
+      <!-- Pricing Card -->
+      <div class="page-pricing__card kit-card-glass" data-anim="fade-up" data-anim-delay="0.2">
+        <!-- Header da oferta dentro do card -->
+        <div class="page-pricing__header">
+          <span class="kit-label kit-label-alt">oferta especial</span>
+          <h2 class="kit-h2">Hoje você pode ter uma página profissional com uma <span class="kit-text-gradient-blue">condição especial</span>:</h2>
+        </div>
+
+        <!-- Checklist -->
+        <ul class="page-pricing__checklist">
+          <li class="page-pricing__check-item kit-body">
+            <span class="page-pricing__check-icon">✓</span>
+            Páginas de vendas profissionais e validadas
+          </li>
+          <li class="page-pricing__check-item kit-body">
+            <span class="page-pricing__check-icon">✓</span>
+            Passo a passo para personalizar
+          </li>
+          <li class="page-pricing__check-item kit-body">
+            <span class="page-pricing__check-icon">✓</span>
+            Guia para publicar com hospedagem gratuita
+          </li>
+          <li class="page-pricing__check-item kit-body">
+            <span class="page-pricing__check-icon">✓</span>
+            Acesso durante 1 ano a todas as atualizações
+          </li>
+          <li class="page-pricing__check-item kit-body">
+            <span class="page-pricing__check-icon">✓</span>
+            7 dias de garantia
+          </li>
+        </ul>
+
+        <!-- Preço -->
+        <div class="page-pricing__price-wrapper">
+          <span class="page-pricing__price-from kit-body-sm">de <s>R$147</s></span>
+          <span class="page-pricing__price-label kit-label">POR APENAS</span>
+          <span class="page-pricing__price kit-display kit-text-gradient-blue">R$49</span>
+        </div>
+
+        <!-- CTA -->
+        <a href="#" class="kit-btn-shiny" style="width: 100%; text-align: center;">
+          Quero aproveitar essa oferta
+        </a>
+
+        <!-- Garantia -->
+        <div class="page-pricing__guarantee">
+          <div class="page-pricing__guarantee-icon">🛡️</div>
+          <div>
+            <strong class="kit-h4">Garantia total</strong>
+            <p class="kit-body-sm">Você tem 7 dias de garantia pra acessar tudo e ver com os seus próprios olhos. Se sentir que não é pra você, é só solicitar o reembolso e eu devolvo 100% do seu dinheiro.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       BLOCO 8: FAQ (kit)
+       ═══════════════════════════════════════════ -->
+  <section id="faq" class="kit-section kit-section-lazy kit-faq kit-bg-dark" data-anim="faq-section">
+    <div class="kit-container">
+      <!-- Cabeçalho -->
+      <div class="kit-section-header" data-anim="fade-up">
+        <span class="kit-label kit-label-alt">dúvidas</span>
+        <h2 class="kit-h1">Perguntas frequentes</h2>
+      </div>
+
+      <!-- Accordion -->
+      <div class="kit-faq__list">
+        <div class="kit-faq-item" data-anim="fade-up" data-anim-delay="0.05">
+          <button class="kit-faq-toggle" data-anim-faq aria-expanded="false">
+            <span class="kit-faq__question kit-h4">Eu preciso saber design ou programação para usar?</span>
+            <span class="kit-faq-toggle__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+          <div class="kit-faq-answer" >
+            <div class="kit-faq-answer__inner kit-body">
+              Não. A proposta da Operação Página no Ar é justamente te poupar dessa parte. A estrutura já vem pronta. O que você faz é adaptar a página para o seu produto com ajuda da IA, de um jeito muito mais simples, rápido e guiado.
+            </div>
+          </div>
+        </div>
+
+        <div class="kit-faq-item" data-anim="fade-up" data-anim-delay="0.1">
+          <button class="kit-faq-toggle" data-anim-faq aria-expanded="false">
+            <span class="kit-faq__question kit-h4">Já tentei usar IAs que criam sites (Lovable, Canva, etc) e ficou horrível. O que muda aqui?</span>
+            <span class="kit-faq-toggle__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+          <div class="kit-faq-answer" >
+            <div class="kit-faq-answer__inner kit-body">
+              A diferença é que aqui você não parte do zero nem depende da IA "inventar" uma página boa. Você recebe modelos prontos, profissionais e já estruturados, a IA entra só para adaptar ao seu produto.
+            </div>
+          </div>
+        </div>
+
+        <div class="kit-faq-item" data-anim="fade-up" data-anim-delay="0.15">
+          <button class="kit-faq-toggle" data-anim-faq aria-expanded="false">
+            <span class="kit-faq__question kit-h4">Preciso usar a página do jeito que ela já vem ou posso personalizar?</span>
+            <span class="kit-faq-toggle__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+          <div class="kit-faq-answer" >
+            <div class="kit-faq-answer__inner kit-body">
+              Você tem liberdade total. Através do chat da IA, você pode pedir para mudar cores, trocar fontes, adicionar novos botões ou até criar seções inteiras novas.
+            </div>
+          </div>
+        </div>
+
+        <div class="kit-faq-item" data-anim="fade-up" data-anim-delay="0.2">
+          <button class="kit-faq-toggle" data-anim-faq aria-expanded="false">
+            <span class="kit-faq__question kit-h4">Vou precisar assinar alguma ferramenta para usar?</span>
+            <span class="kit-faq-toggle__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+          <div class="kit-faq-answer" >
+            <div class="kit-faq-answer__inner kit-body">
+              Não. O processo foi pensado para ser simples e acessível, sem depender de assinatura para você conseguir personalizar e publicar sua página.
+            </div>
+          </div>
+        </div>
+
+        <div class="kit-faq-item" data-anim="fade-up" data-anim-delay="0.25">
+          <button class="kit-faq-toggle" data-anim-faq aria-expanded="false">
+            <span class="kit-faq__question kit-h4">Quanto tempo eu tenho de acesso?</span>
+            <span class="kit-faq-toggle__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+          <div class="kit-faq-answer" >
+            <div class="kit-faq-answer__inner kit-body">
+              Você tem 1 ano de acesso garantido. Isso inclui todas as atualizações e os novos modelos de páginas que eu adicionar ao acervo nesse período.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER (kit)
+       ═══════════════════════════════════════════ -->
+  <footer id="footer" class="kit-section kit-footer kit-bg-dark">
+    <div class="kit-container" style="text-align: center;">
+      <p class="kit-footer__copy kit-caption">
+        © 2026 Operação Página no Ar. Todos os direitos reservados.
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- ═══ Dependências CDN (defer: download em paralelo, execução após parse) ═══ -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@latest/dist/lenis.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+  <!-- ═══ Animações do Kit ═══ -->
+  <script src="assets/js/animations.js" defer></script>
+
+  <!-- ═══ TubesCursor — efeito de luz no hero (idêntico ao original) ═══ -->
+  <script type="module">
+    const section = document.getElementById("tubes-section");
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const allowTubes = !prefersReducedMotion;
+
+    let tubesStarted = false;
+
+    function scheduleIdle(task) {
+      if ("requestIdleCallback" in window) {
+        requestIdleCallback(task, { timeout: 1800 });
+      } else {
+        setTimeout(task, 350);
+      }
+    }
+
+    async function startTubes() {
+      if (!section || tubesStarted || !allowTubes) return;
+
+      try {
+        const testCanvas = document.createElement("canvas");
+        const gl = testCanvas.getContext("webgl2") || testCanvas.getContext("webgl");
+        if (!gl) return;
+        const ext = gl.getExtension("WEBGL_lose_context");
+        if (ext) ext.loseContext();
+      } catch (e) {
+        return;
+      }
+
+      tubesStarted = true;
+
+      try {
+        const { default: TubesCursor } = await import("./assets/js/tubes1.min.js");
+
+        const canvas = document.createElement("canvas");
+        canvas.id = "tubesCanvasSection";
+        canvas.style.cssText = "position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;";
+        section.prepend(canvas);
+
+        function sizeCanvas() {
+          const rect = section.getBoundingClientRect();
+          canvas.width = rect.width * devicePixelRatio;
+          canvas.height = rect.height * devicePixelRatio;
+        }
+        sizeCanvas();
+        window.addEventListener("resize", sizeCanvas, { passive: true });
+
+        TubesCursor(canvas, {
+          bloom: {
+            threshold: 0.08,
+            strength: 1.05,
+            radius: 0.28
+          },
+          tubes: {
+            count: 12,
+            minRadius: 0.004,
+            maxRadius: 0.032,
+            colors: [
+              "#0A74FF",
+              "#0C9BFF",
+              "#69C3FF"
+            ],
+            lights: {
+              intensity: 180,
+              colors: [
+                "#4FC3FF",
+                "#A8E4FF",
+                "#0A74FF",
+                "#0047FF"
+              ]
+            }
+          }
+        });
+
+        // Fallback mobile: transforma movimento de toque em pointermove
+        // para o TubesCursor reagir ao dedo como reage ao mouse.
+        if ("PointerEvent" in window) {
+          const forwardTouchToPointer = (event) => {
+            const touch = event.touches && event.touches[0];
+            if (!touch) return;
+
+            const pointerMove = new PointerEvent("pointermove", {
+              bubbles: true,
+              cancelable: true,
+              clientX: touch.clientX,
+              clientY: touch.clientY,
+              pointerType: "touch",
+              isPrimary: true
+            });
+
+            document.body.dispatchEvent(pointerMove);
+          };
+
+          section.addEventListener("touchstart", forwardTouchToPointer, { passive: true });
+          section.addEventListener("touchmove", forwardTouchToPointer, { passive: true });
+        }
+
+        canvas.style.filter = "blur(0.2px) brightness(1)";
+      } catch (error) {
+        console.warn("TubesCursor init skipped:", error);
+      }
+    }
+
+    if (section && allowTubes) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          const visible = entries.some((entry) => entry.isIntersecting);
+          if (!visible) return;
+          observer.disconnect();
+          scheduleIdle(startTubes);
+        },
+        { threshold: 0.2 }
+      );
+
+      observer.observe(section);
+    }
+  </script>
+
+</body>
+</html>
+
+
+

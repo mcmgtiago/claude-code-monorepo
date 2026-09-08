@@ -1,0 +1,649 @@
+# PROMPT MASTER: Landing Page Premium para Nutricionista - UI/UX Pro Max + Framer Motion + 21st.dev
+
+**REFERÊNCIAS TÉCNICAS OBRIGATÓRIAS:**
+1. UI/UX Pro Max Skill: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
+2. Framer Motion Dictionary: https://www.framer.com/dictionary/framer-motion
+3. 21st.dev Components: https://21st.dev/community/components
+4. Frontend Design: https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md
+5. impeccable: npx skills add pbakaus/impeccable
+
+Ative o modo [Frontend-Design-Pro-Max]. Siga estas regras estritas para qualquer interface, componente ou código UI gerado:
+
+1. [Anti-Generic]: Não use paletas de cinza padrão (como gray-100/500). Substitua por slates, zincs ou tons quentes/frios que combinem com a marca. Não use raios de curvatura padrão (rounded-md); prefira cantos retos cirúrgicos (rounded-sm) ou design orgânico fluido (rounded-2xl) dependendo do contexto.
+2. [Micro-Interactions]: Todo elemento interativo DEVE ter estados hover, focus-visible (com anel de outline visível), active e disabled explicitamente estilizados com transições suaves (transition-all duration-200).
+3. [Typography Hierarchy]: Use uma escala tipográfica rigorosa. Títulos devem ter tracking-tight e pesos bem definidos (font-bold ou font-black). Subtítulos e labels devem usar tracking-wide e text-muted.
+4. [Density & Breathing Room]: Respeite o espaço em branco. Use paddings generosos (p-6 a p-12 em seções grandes) e gaps consistentes (gap-4 ou gap-6). Nunca sufoque o conteúdo.
+5. [Realism over Placeholders]: Proibido usar "Lorem Ipsum", "Título 1" ou dados genéricos. Crie dados simulados ultra-realistas, com nomes, valores financeiros, datas e métricas que façam sentido para o modelo de negócios da aplicação.
+6. [Layout Flow]: Evite simetria repetitiva. Intercale layouts de grade (grid) com listas limpas e seções assimétricas para guiar o olho do usuário.
+7. [Visual Anchors]: Use badges de status discretos, ícones semanticamente corretos e bordas sutis (border-opacity baixa) para criar profundidade e separação, em vez de backgrounds pesados.
+
+
+## PAPEL
+Você é um time sênior composto por:
+- Diretor(a) de Arte Health & Wellness (editorial, acolhedor, premium)
+- UX/UI Designer especialista em conversão para área da saúde
+- Motion Designer para interfaces (microinterações que transmitem leveza e cuidado)
+- Especialista em Design System (tokens, acessibilidade AA)
+- UX Writer/Copywriter especialista em nutrição comportamental e alta performance
+
+Seu foco é criar uma landing page visualmente impecável, moderna, memorável e que transmita AUTORIDADE + ACOLHIMENTO + CIÊNCIA, sem terrorismo nutricional, com forte ênfase em hierarquia, respiro, componentes e experiência premium mobile-first.
+
+## 0) CONTEXTO E MATERIAIS DE ENTRADA
+Você receberá arquivos (zip ou lote), podendo incluir:
+- logo(s), variações e ícone
+- prints/export do Instagram (feed, bio, reels, destaques, legendas)
+- fotos da nutri, consultório, atendimentos, alimentos, rotina
+- textos comerciais (abordagens, planos, valores, localização, online/presencial, CRN)
+- referências visuais
+
+Regra: antes de qualquer layout, faça leitura completa dos materiais e extraia padrões de marca. Se não houver material, use placeholders premium e marque como [ENVIAR].
+
+## 1) OBJETIVO PRINCIPAL DA LANDING PAGE
+Construir uma landing page que:
+- Transmita autoridade técnica + humanidade (sai do clichê jaleco + maçã)
+- Comunique acolhimento, sem julgamento e ciência atualizada
+- Valorize o método e não só a dieta
+- Reduza objeções: efeito sanfona, medo de passar fome, de cortar tudo, de não conseguir manter, valor, online funciona?
+- Aumente agendamentos qualificados via WhatsApp / formulário
+- Respeite 100% o Código de Ética do CFN (sem antes/depois, sem promessa de peso, sem "emagreça X kg em Y dias")
+
+## 2) PRIORIZAÇÃO (ORDEM DE IMPORTÂNCIA)
+1. Design visual e direção de arte (premium acolhedor)
+2. UX/UI e arquitetura da informação
+3. Motion e microinterações
+4. Copy e conversão
+5. SEO local + performance
+
+## 3) MOTOR DE ANÁLISE DA MARCA (OBRIGATÓRIO)
+Gere evidências antes do layout:
+
+3.1 Leitura de identidade visual
+- Personalidade percebida do logo (minimal, editorial, orgânico, científico, pop)
+- Complexidade, legibilidade, peso, contraste
+- Oportunidades derivadas (formas orgânicas, carimbos, texturas de papel, ilustrações botânicas sutis)
+
+3.2 Leitura do Instagram
+- Paleta dominante do feed
+- Tipo de foto (estúdio, lifestyle, flatlay comida, infográfico)
+- Ritmo visual (clean x poluído)
+- Tom verbal (amiga, professora, técnica, leve, firme)
+- Conteúdos com maior prova social
+
+3.3 Leitura das fotos
+- Qualidade e consistência
+- Estética (clean, editorial Vogue Wellness, natural light, minimal)
+- Melhor uso: hero, sobre, método, planos
+
+3.4 Público e posicionamento
+- Persona principal e secundária (ex: mulher 28-45 que já tentou de tudo)
+- Nível de maturidade (iniciante x já faz dieta)
+- Tom ideal da marca
+
+Se faltar dado: preencha com [ENVIAR DADO] e justifique.
+
+## 4) FRAMEWORK TÉCNICO (3 PILARES)
+
+Pilar A — Design Intelligence (UI/UX Pro Max Skill)
+- Conceito visual macro: ex: "Editorial Wellness - calma que converte"
+- Sistema de cores por função: fundo quente, primária sage, acento terracota, texto
+- Tipografia: Display serif (Instrument Serif, Fraunces, Cormorant) + Sans interface (Plus Jakarta, Satoshi, General Sans)
+- Escala de espaçamento: base 4/8, respiro generoso entre seções (96px mobile, 160px desktop)
+- Estilo de componentes: cards 24px radius, borda suave 1px, sombra soft, fotos com grain sutil
+- Anti-padrões nicho nutri: EVITAR fotos de fita métrica apertando barriga, balança com pé, maçã + estetoscópio, verde limão neon, excesso de ícones de folha
+
+Pilar B — Motion Strategy (Framer Motion)
+- Linguagem de movimento: leve, orgânica, calma, sem bounce agressivo
+- Entradas: fade + y 16px, duração 0.5-0.7s, ease [0.25, 0.1, 0.25, 1]
+- Stagger nos cards: 0.08s
+- Microinterações: hover scale 1.02, botão com scale tap 0.98, input focus com borda animada
+- Feedback form: shake sutil no erro, check animado no sucesso
+- Regra acessibilidade: respeitar prefers-reduced-motion (desativar parallax e reduzir duração)
+
+Pilar C — Component Curation (21st.dev)
+Curadoria obrigatória para:
+- Hero com split + badge CRN + prova social
+- specialty cards (abordagens)
+- method timeline / steps
+- about com foto editorial
+- testimonial cards (sem antes/depois)
+- pricing/comparison table (online vs presencial)
+- FAQ accordion acessível
+- final CTA + form
+- modal form / drawer (formulário que abre ao clicar em qualquer botão)
+
+## 5) ESTRUTURA PADRÃO DA LANDING PAGE (11 SESSÕES)
+1. Header fixo (blur, logo, menu mobile drawer, CTA fixo)
+2. Hero premium (headline de transformação comportamental + sub + 2 CTAs + foto nutri + badges: CRN, +X pacientes, 5.0 avaliações)
+3. Especialidades / Abordagens (6 cards: Emagrecimento sustentável, Hipertrofia, Saúde intestinal, Comportamental, Saúde da mulher, Performance)
+4. Método / Como funciona (4 passos: 1.Avaliação 360º 2.Plano personalizado 3.Acompanhamento humano 4.Autonomia alimentar)
+5. Sobre a nutri (história, formação, valores, abordagem sem terrorismo)
+6. Prova social (3 depoimentos em texto + Google reviews, sem foto de corpo)
+7. Planos e formatos (O que inclui em cada: consultas, suporte WhatsApp, app, material)
+8. FAQ de objeções reais (8 itens: Preciso cortar pão? Atende plano? Funciona online? E se eu não gostar de cozinhar? etc)
+9. Localização, horários e canais (presencial + online, NAP)
+10. CTA final de alta intenção + FORMULÁRIO PRINCIPAL
+11. Footer funcional (CRN, links, Instagram, WhatsApp, política privacidade)
+
+## 6) ESPECIFICAÇÃO VISUAL OBRIGATÓRIA (DESIGN SYSTEM)
+
+6.1 Cores - Defina tokens em :root
+- bg: #FFFBF6, surface: #FFFFFF, surface-2: #F5F0EB
+- primary: #5B6B5A (sage), primary-hover: #4A5A49
+- accent: #D88C6A (terracota), accent-soft: #FBE9E0
+- text: #1A1D1A, text-muted: #6B706B, border: #E8E2DC
+- estados: success #4A7C59, error #C15B5B, info #6B8CA3
+
+6.2 Tipografia
+- Display: Instrument Serif ou similar, H1 40px/44px mobile, 72px/72px desktop, tracking -0.02em
+- Interface: Plus Jakarta Sans, body 16/26, caption 13, button 15 semibold
+- Pesos: 400, 500, 600
+
+6.3 Grid e espaçamento
+- Container max 1160px, padding 20px mobile, 32px desktop
+- Grid mobile 4 col, tablet 8, desktop 12
+- Gap 16/24/32
+- Respiro vertical entre blocos mínimo 96px
+
+6.4 Componentes
+- Botão primary: bg primary, texto branco, radius full, padding 16x28, hover darken
+- Botão secondary: borda 1px, fundo transparente
+- Input: altura 52px, radius 14px, borda #E8E2DC, focus ring primary
+- Cards: radius 24px, borda 1px, padding 24px
+- Accordion: animação height com motion
+
+6.5 Estados: default / hover / focus-visible / active / disabled / error
+
+## 7) MOTION SYSTEM DETALHADO
+Defina por seção: gatilho, tipo, duração, intensidade, objetivo UX. Ex:
+- Hero on load: fade + slide up, 0.6s
+- Cards on scroll: stagger fade, quando 20% visível
+- Modal: spring stiffness 300 damping 30
+- Nunca usar parallax pesado
+
+## 8) UX/UI E CONVERSÃO (CRO)
+- CTA primário acima da dobra com data-form="open"
+- Repetir CTA a cada 2 seções
+- Prova social próxima a CTA
+- Formulário curto: nome, WhatsApp, objetivo (select), como conheceu
+- Microcopy de confiança: "Resposta em até 2h úteis | Sem spam | Dados protegidos"
+- Botão abre modal E scroll para form final
+
+## 9) COPY E TOM DE VOZ
+- Humana, leve, confiante, sem clichê "reeducação alimentar é tudo"
+- Foco em autonomia, não em proibição
+- Entregar headlines, subheadlines, CTAs, microcopy de erro/sucesso
+- Ex Headlines: "Comer bem sem viver de dieta", "Um plano que cabe na sua rotina, não o contrário"
+- CTAs: "Quero minha avaliação", "Agendar conversa", "Começar agora"
+- Microcopy form erro: "Me diz seu WhatsApp com DDD?", sucesso: "Recebido! Te chamo no WhatsApp em breve com carinho."
+
+## 10) ACESSIBILIDADE, RESPONSIVIDADE E PERFORMANCE
+- Contraste AA mínimo
+- Foco visível, navegação teclado no modal
+- Toque mínimo 44px
+- Breakpoints: 375 / 768 / 1024 / 1440 mobile-first
+- Lazy load, imagens WebP, sem layout shift
+- Modal acessível com ESC para fechar e foco preso
+
+## 11) SEO LOCAL
+- Title: Nutricionista em [Cidade] | [Nome] | Emagrecimento sem terrorismo | Online e Presencial
+- Meta description 150 chars
+- H1 único
+- NAP consistente
+- Schema LocalBusiness + Nutritionist + FAQPage
+
+## 12) ENTREGA TÉCNICA OBRIGATÓRIA - index.html
+- Entregar em UM arquivo index.html único
+- Pode ser hospedado em SUBPASTA (ex: /nutri/), então PROIBIDO usar caminhos absolutos tipo /assets/ ou /img/. Use relativo./ ou CDN ou base64 ou inline
+- Mobile-first: CSS com min-width, não max-width desktop-first
+- Usar Tailwind CDN + Google Fonts + JS vanilla (sem build)
+- Ter 2 formulários: 1) Modal/drawer que abre ao clicar em qualquer elemento com [data-form="open"] 2) Formulário fixo na seção final antes do footer. Ambos com mesma validação e mesma ação (ex: enviar para WhatsApp com mensagem montada ou console.log)
+- Modal deve fechar com X, ESC e clique fora
+- Código limpo, comentado com tokens no topo
+
+## 13) FORMATO DE SAÍDA
+Responda em Markdown com:
+- Diagnóstico de Marca
+- Direção Criativa (principal + alternativa)
+- Design System (tokens + regras)
+- Arquitetura da Landing (11 seções detalhadas)
+- Blueprint de Componentes
+- Motion Plan
+- Copy Completa
+- Checklist UX/UI + Acessibilidade + Performance + SEO
+- Código index.html final em bloco separado
+
+## 14) CRITÉRIOS DE QUALIDADE
+Dê nota 0-10 para: Coerência, Sofisticação, Clareza navegação, Motion, Conversão, Prontidão implementação. Explique como elevar <9.
+
+## 15) RESTRIÇÕES
+- Não criar template genérico de saúde
+- Não usar antes/depois, promessa de peso, foto de balança
+- Não usar verde limão + laranja saturado
+- Não inventar CRN ou depoimentos sem base (usar [ENVIAR DADO])
+- Não quebrar consistência mobile/desktop
+- Não usar excesso de efeitos
+
+Resultado: landing premium, editorial, acolhedora, ética e pronta pra converter.PROMPT MASTER ULTRA CONVERSÃO — LANDING PAGE PREMIUM PARA NUTRICIONISTA
+PAPEL
+
+Você é uma equipe multidisciplinar de elite formada por:
+
+Estrategista de conversão (CRO) especializado em páginas de serviços premium
+Copywriter de resposta direta para saúde e bem-estar
+UX Researcher especialista em comportamento do consumidor
+Diretor de Arte Health & Wellness premium
+UX/UI Designer especialista em landing pages de alta conversão
+Especialista em neurociência aplicada a vendas éticas
+Desenvolvedor Front-end especialista em experiências digitais premium
+
+Sua missão é criar uma landing page que una:
+
+AUTORIDADE + CONEXÃO EMOCIONAL + CIÊNCIA + DESEJO + CONFIANÇA + CONVERSÃO
+
+A página não deve parecer uma simples página de nutricionista.
+
+Ela deve parecer uma experiência premium onde a pessoa pensa:
+
+"Essa profissional entende exatamente o que eu estou vivendo. Eu preciso conversar com ela."
+
+PRINCÍPIO CENTRAL DA PÁGINA
+
+Não venda consulta.
+
+Venda:
+
+uma nova relação com a alimentação
+uma solução para uma dor antiga
+uma mudança sustentável
+segurança de ter acompanhamento profissional
+
+A pessoa não compra uma dieta.
+
+Ela compra:
+
+esperança
+clareza
+confiança
+direção
+transformação.
+ESTRUTURA DE CONVERSÃO OBRIGATÓRIA
+1. HERO SECTION — PRIMEIRO IMPACTO (0-5 segundos)
+
+Objetivo:
+
+Prender atenção e criar identificação instantânea.
+
+Criar:
+
+Headline:
+
+Seguir a fórmula:
+
+PROBLEMA ATUAL + NOVA POSSIBILIDADE
+
+Exemplos:
+
+"Pare de viver começando uma dieta toda segunda-feira."
+
+"Aprenda a comer melhor sem transformar sua vida em uma lista de proibições."
+
+Subheadline:
+
+Explicar:
+
+para quem é
+qual transformação oferece
+como acontece
+Elementos:
+
+Adicionar:
+
+✓ Foto profissional humana
+✓ Pequena prova social
+✓ Badge de especialização
+✓ CTA principal
+✓ CTA secundário
+
+Exemplo:
+
+Botão:
+
+"Quero descobrir meu plano ideal"
+
+CTA secundário:
+
+"Como funciona?"
+
+2. BLOCO DE IDENTIFICAÇÃO EMOCIONAL
+
+Antes de apresentar solução, mostrar compreensão.
+
+Criar seção:
+
+Talvez você tenha chegado até aqui porque...
+
+Lista:
+
+Você tenta se alimentar melhor, mas não consegue manter
+Já fez várias dietas e sente que sempre volta ao início
+Tem dúvidas sobre o que realmente funciona
+Sente culpa ao comer determinados alimentos
+Sua rotina dificulta cuidar de você
+
+Objetivo psicológico:
+
+"A profissional entende minha realidade."
+
+3. QUEBRA DE CRENÇAS LIMITANTES
+
+Criar uma seção:
+
+O problema talvez nunca tenha sido falta de disciplina.
+
+Explicar:
+
+dietas extremas
+excesso de restrição
+falta de personalização
+estratégias impossíveis de manter
+
+Posicionar a nutricionista como guia.
+
+4. MECANISMO ÚNICO
+
+Criar um método próprio.
+
+Nunca vender apenas:
+
+"Consulta nutricional."
+
+Criar:
+
+Método [Nome da Nutricionista]
+
+Exemplo:
+
+Método Nutri Essência™
+
+Com 4 pilares:
+
+Diagnóstico individual
+
+Entender corpo, rotina, hábitos e objetivos.
+
+Estratégia personalizada
+
+Plano alimentar adaptado à vida real.
+
+Acompanhamento inteligente
+
+Ajustes conforme evolução.
+
+Autonomia alimentar
+
+Ensinar a pessoa a tomar decisões sozinha.
+
+5. APRESENTAÇÃO DA NUTRICIONISTA
+
+Não fazer apenas currículo.
+
+Criar storytelling.
+
+Estrutura:
+
+Antes de ser nutricionista, eu entendi que...
+
+Mostrar:
+
+propósito
+filosofia
+valores
+visão sobre alimentação
+
+Criar conexão humana.
+
+6. PROVA DE AUTORIDADE
+
+Adicionar:
+
+Formação
+Especializações
+Cursos
+Participações
+Experiência
+Número de atendimentos (somente se informado)
+
+Criar visual:
+
+"Por trás do acompanhamento existe ciência."
+
+7. SERVIÇOS / ESPECIALIDADES
+
+Criar cards premium:
+
+Exemplos:
+
+Emagrecimento sustentável
+
+Para quem deseja reduzir peso sem dietas extremas.
+
+Hipertrofia
+
+Para quem busca melhorar composição corporal.
+
+Saúde intestinal
+
+Para quem busca melhorar relação com alimentação e sintomas.
+
+Nutrição feminina
+
+Para diferentes fases da vida.
+
+8. COMO FUNCIONA
+
+Criar jornada visual:
+
+Do primeiro contato até sua evolução
+
+Etapa 1:
+Avaliação completa
+
+Etapa 2:
+Plano estratégico personalizado
+
+Etapa 3:
+Acompanhamento
+
+Etapa 4:
+Construção da autonomia
+
+9. PROVA SOCIAL DE ALTA CONVERSÃO
+
+Criar:
+
+Depoimentos emocionais.
+
+Estrutura:
+
+Antes:
+
+"Eu tinha dificuldade com..."
+
+Durante:
+
+"O acompanhamento me ajudou..."
+
+Depois:
+
+"Hoje consigo..."
+
+Nunca usar:
+
+promessa garantida
+números inventados
+antes/depois proibidos
+10. OFERTA / PLANOS
+
+Criar comparação clara.
+
+Exemplo:
+
+Escolha o acompanhamento ideal
+
+Plano Essencial
+
+Plano Completo
+
+Plano Premium
+
+Mostrar:
+
+consultas
+suporte
+materiais
+acompanhamento
+
+Não focar preço primeiro.
+
+Focar valor.
+
+11. REDUÇÃO DE RISCO
+
+Criar seção:
+
+Ainda tem dúvidas?
+
+Responder objeções:
+
+"Preciso cortar tudo que gosto?"
+
+"Minha rotina é corrida."
+
+"Já tentei várias vezes."
+
+"Consulta online funciona?"
+
+"Não sei se consigo seguir."
+
+12. CTA FINAL DE ALTA INTENÇÃO
+
+Criar fechamento emocional.
+
+Exemplo:
+
+Você não precisa tentar sozinho novamente.
+
+Comece com uma conversa e descubra o melhor caminho para sua realidade.
+
+Botão:
+
+"Quero começar minha transformação"
+
+ELEMENTOS DE CONVERSÃO EXTRAS
+
+Adicionar:
+
+Barra fixa mobile:
+
+"Agendar avaliação"
+
+WhatsApp estratégico:
+
+Botão abre conversa com mensagem automática:
+
+"Olá, gostaria de saber como funciona o acompanhamento nutricional."
+
+Formulário inteligente:
+
+Campos:
+
+Nome
+
+WhatsApp
+
+Objetivo principal:
+
+Emagrecimento
+Ganho de massa
+Saúde
+Organização alimentar
+
+Maior dificuldade:
+
+Falta de tempo
+Compulsão
+Falta de rotina
+Não sei por onde começar
+PSICOLOGIA VISUAL
+
+Aplicar:
+
+Sensação desejada:
+
+"Clínica boutique de nutrição."
+
+Evitar:
+
+❌ página hospitalar
+❌ excesso de verde
+❌ estética fitness agressiva
+❌ fotos genéricas
+
+Usar:
+
+✓ editorial wellness
+✓ luz natural
+✓ tons sofisticados
+✓ imagens humanas
+✓ sensação premium
+
+COPYWRITING
+
+Toda comunicação deve seguir:
+
+Fórmula:
+
+Dor → Identificação → Nova possibilidade → Método → Confiança → Ação
+
+Nunca usar:
+
+"Emagreça rápido"
+
+"Perca X kg"
+
+"Transformação garantida"
+
+Usar:
+
+"Construa uma alimentação que você consegue manter."
+
+MÉTRICAS DE SUCESSO
+
+Avaliar a página:
+
+Nota 0-10:
+
+Clareza da promessa
+Força do primeiro impacto
+Confiança
+Desejo
+Facilidade de ação
+Redução de objeções
+Qualidade visual
+Conversão mobile
+
+Nenhuma categoria pode ficar abaixo de 9.
+
+ENTREGA FINAL
+
+Entregar:
+
+Estratégia de conversão
+Persona
+Jornada psicológica do usuário
+Arquitetura completa da página
+Copy completa de cada seção
+Design system
+Motion system
+SEO local
+Código final responsivo

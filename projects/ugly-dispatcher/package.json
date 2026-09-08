@@ -1,0 +1,15 @@
+{
+  "name": "ugly-dispatcher",
+  "version": "1.0.0",
+  "description": "Despachador de emails feio com 4 templates que alterna entre si",
+  "main": "dispatcher.js",
+  "type": "module",
+  "scripts": {
+    "start": "node dispatcher.js",
+    "dispatch": "node dispatcher.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "resend": "^6.18.1"
+  }
+}

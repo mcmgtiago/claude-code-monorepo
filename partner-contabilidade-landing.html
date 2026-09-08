@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Partner Contabilidade e Assessoria Empresarial</title>
+  <meta name="description" content="Contabilidade consultiva e assessoria empresarial em Novo Hamburgo para empresas que querem crescer com clareza fiscal e segurança." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            partner: {
+              navy: '#060b35',
+              royal: '#0a2777',
+              accent: '#0271ae',
+              mist: '#eef6fb'
+            }
+          },
+          fontFamily: {
+            sans: ['Aptos', 'Segoe UI', 'Arial', 'sans-serif']
+          },
+          boxShadow: {
+            blue: '0 24px 80px rgba(2, 113, 174, 0.20)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      .reveal { animation: rise 0.75s cubic-bezier(.16,1,.3,1) both; }
+      .delay-1 { animation-delay: .08s; }
+      .delay-2 { animation-delay: .16s; }
+      .delay-3 { animation-delay: .24s; }
+      @keyframes rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+    }
+  </style>
+</head>
+<body class="bg-[#060b35] text-white antialiased">
+  <header class="fixed inset-x-0 top-0 z-40 border-b border-white/10 bg-[#060b35]/92 backdrop-blur-xl">
+    <nav class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8" aria-label="Navegação principal">
+      <a href="#inicio" class="flex items-center gap-3 text-white" aria-label="Partner Contabilidade início">
+        <span class="grid h-11 w-11 place-items-center rounded-2xl bg-white text-[#060b35] shadow-blue">
+          <i data-lucide="building-2" class="h-5 w-5" aria-hidden="true"></i>
+        </span>
+        <span class="leading-tight">
+          <span class="block text-base font-semibold tracking-tight">Partner</span>
+          <span class="block text-xs text-blue-100">Contabilidade e Assessoria</span>
+        </span>
+      </a>
+      <div class="hidden items-center gap-7 text-sm font-medium text-blue-100 lg:flex">
+        <a class="transition hover:text-white" href="#servicos">Serviços</a>
+        <a class="transition hover:text-white" href="#sobre">Sobre</a>
+        <a class="transition hover:text-white" href="#diferenciais">Diferenciais</a>
+        <a class="transition hover:text-white" href="#segmentos">Segmentos</a>
+        <a class="transition hover:text-white" href="#depoimentos">Depoimentos</a>
+      </div>
+      <a href="#contato" class="hidden rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#060b35] transition hover:bg-blue-50 active:translate-y-[1px] sm:inline-flex">Agendar consulta</a>
+      <button id="nav-toggle" class="rounded-full border border-white/20 p-3 text-white lg:hidden" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false">
+        <i data-lucide="menu" class="h-5 w-5" aria-hidden="true"></i>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden border-t border-white/10 px-4 pb-5 text-sm font-medium text-blue-100 lg:hidden">
+      <div class="mx-auto grid max-w-7xl gap-3 pt-4">
+        <a class="rounded-2xl px-3 py-2 transition hover:bg-white/10 hover:text-white" href="#servicos">Serviços</a>
+        <a class="rounded-2xl px-3 py-2 transition hover:bg-white/10 hover:text-white" href="#sobre">Sobre</a>
+        <a class="rounded-2xl px-3 py-2 transition hover:bg-white/10 hover:text-white" href="#diferenciais">Diferenciais</a>
+        <a class="rounded-2xl px-3 py-2 transition hover:bg-white/10 hover:text-white" href="#segmentos">Segmentos</a>
+        <a class="rounded-2xl px-3 py-2 transition hover:bg-white/10 hover:text-white" href="#depoimentos">Depoimentos</a>
+        <a class="mt-2 rounded-full bg-white px-5 py-3 text-center font-semibold text-[#060b35]" href="#contato">Agendar consulta</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="relative overflow-hidden bg-[#060b35] pt-24 text-white">
+      <div class="absolute inset-0 opacity-40" aria-hidden="true">
+        <div class="absolute -left-24 top-24 h-72 w-72 rounded-full bg-[#0271ae] blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#0a2777] blur-3xl"></div>
+      </div>
+      <div class="relative mx-auto grid min-h-[100dvh] max-w-7xl items-center gap-12 px-4 py-12 sm:px-6 lg:grid-cols-[1.05fr_.95fr] lg:px-8">
+        <div class="max-w-2xl reveal">
+          <p class="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-blue-200">Novo Hamburgo, RS</p>
+          <h1 class="text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">Contabilidade consultiva para empresas que precisam decidir melhor.</h1>
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-blue-100">Rotina fiscal, folha e estratégia tributária com atendimento próximo para empresas do Vale dos Sinos.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="#contato" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3.5 font-semibold text-[#060b35] shadow-blue transition hover:bg-blue-50 active:translate-y-[1px]">Agendar consulta</a>
+            <a href="#servicos" class="inline-flex items-center justify-center rounded-full border border-white/25 px-6 py-3.5 font-semibold text-white transition hover:border-white hover:bg-white/10 active:translate-y-[1px]">Ver serviços</a>
+          </div>
+        </div>
+        <div class="reveal delay-1">
+          <div class="relative rounded-[2rem] border border-white/12 bg-white/8 p-3 shadow-blue backdrop-blur">
+            <img class="aspect-[4/3] w-full rounded-[1.55rem] object-cover" src="https://picsum.photos/seed/partner-contabilidade-consultoria/1100/825" alt="Reunião de assessoria empresarial com documentos e notebook" />
+            <div class="absolute -bottom-7 left-6 right-6 rounded-3xl border border-white/15 bg-[#0a2777]/90 p-5 shadow-blue backdrop-blur">
+              <div class="grid grid-cols-3 gap-4 text-center">
+                <div>
+                  <p class="text-2xl font-semibold">Fiscal</p>
+                  <p class="text-xs text-blue-100">conformidade</p>
+                </div>
+                <div>
+                  <p class="text-2xl font-semibold">Folha</p>
+                  <p class="text-xs text-blue-100">rotina segura</p>
+                </div>
+                <div>
+                  <p class="text-2xl font-semibold">Gestão</p>
+                  <p class="text-xs text-blue-100">decisão clara</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos" class="bg-[#071046] px-4 py-24 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl">
+          <h2 class="text-3xl font-semibold tracking-tight text-white sm:text-4xl">Serviços para cada etapa da empresa.</h2>
+          <p class="mt-4 text-lg leading-relaxed text-blue-100">Da abertura ao planejamento tributário, a Partner organiza a rotina contábil e aproxima os números da gestão.</p>
+        </div>
+        <div class="mt-12 grid gap-5 md:grid-cols-6">
+          <article class="rounded-3xl bg-white p-7 shadow-sm ring-1 ring-slate-200 md:col-span-3 lg:col-span-2">
+            <i data-lucide="calculator" class="h-8 w-8 text-[#0271ae]" aria-hidden="true"></i>
+            <h3 class="mt-6 text-xl font-semibold text-[#060b35]">Contabilidade empresarial</h3>
+            <p class="mt-3 text-slate-600">Escrituração, demonstrativos e acompanhamento mensal com linguagem clara.</p>
+          </article>
+          <article class="rounded-3xl bg-[#060b35] p-7 text-white shadow-blue md:col-span-3 lg:col-span-2">
+            <i data-lucide="receipt-text" class="h-8 w-8 text-blue-200" aria-hidden="true"></i>
+            <h3 class="mt-6 text-xl font-semibold">Fiscal e tributário</h3>
+            <p class="mt-3 text-blue-100">Apurações, obrigações acessórias e revisão de enquadramento fiscal.</p>
+          </article>
+          <article class="overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-slate-200 md:col-span-6 lg:col-span-2">
+            <img class="h-36 w-full object-cover" src="https://picsum.photos/seed/partner-folha-pagamento/700/360" alt="Mesa de trabalho com planilhas e relatórios" />
+            <div class="p-7">
+              <i data-lucide="users" class="h-8 w-8 text-[#0271ae]" aria-hidden="true"></i>
+              <h3 class="mt-5 text-xl font-semibold text-[#060b35]">Departamento pessoal</h3>
+              <p class="mt-3 text-slate-600">Folha, admissões, férias, rescisões e suporte nas rotinas trabalhistas.</p>
+            </div>
+          </article>
+          <article class="rounded-3xl bg-white p-7 shadow-sm ring-1 ring-slate-200 md:col-span-2">
+            <i data-lucide="landmark" class="h-8 w-8 text-[#0271ae]" aria-hidden="true"></i>
+            <h3 class="mt-6 text-xl font-semibold text-[#060b35]">Abertura de empresas</h3>
+            <p class="mt-3 text-slate-600">Escolha de CNAE, regime tributário e formalização com menos retrabalho.</p>
+          </article>
+          <article class="rounded-3xl bg-[#eef6fb] p-7 shadow-sm ring-1 ring-blue-100 md:col-span-2">
+            <i data-lucide="line-chart" class="h-8 w-8 text-[#0271ae]" aria-hidden="true"></i>
+            <h3 class="mt-6 text-xl font-semibold text-[#060b35]">Consultoria gerencial</h3>
+            <p class="mt-3 text-slate-600">Indicadores, margens e análises para apoiar decisão de sócios e gestores.</p>
+          </article>
+          <article class="rounded-3xl bg-white p-7 shadow-sm ring-1 ring-slate-200 md:col-span-2">
+            <i data-lucide="shield-check" class="h-8 w-8 text-[#0271ae]" aria-hidden="true"></i>
+            <h3 class="mt-6 text-xl font-semibold text-[#060b35]">Regularização</h3>
+            <p class="mt-3 text-slate-600">Diagnóstico de pendências, certidões e plano de adequação fiscal.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="bg-[#060b35] px-4 py-24 sm:px-6 lg:px-8">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[.9fr_1.1fr]">
+        <div class="grid grid-cols-2 gap-4">
+          <img class="h-80 w-full rounded-3xl object-cover" src="https://picsum.photos/seed/novo-hamburgo-business-office/600/900" alt="Prédios comerciais em área urbana do sul do Brasil" />
+          <div class="space-y-4 pt-12">
+            <div class="rounded-3xl border border-white/10 bg-white/8 p-6 text-white">
+              <i data-lucide="map-pin" class="h-7 w-7 text-blue-200" aria-hidden="true"></i>
+              <p class="mt-5 text-2xl font-semibold">Novo Hamburgo</p>
+              <p class="mt-2 text-sm text-blue-100">Atendimento próximo no Vale dos Sinos.</p>
+            </div>
+            <img class="h-56 w-full rounded-3xl object-cover" src="https://picsum.photos/seed/accounting-advisory-meeting/600/700" alt="Profissionais analisando relatórios contábeis" />
+          </div>
+        </div>
+        <div>
+          <h2 class="text-3xl font-semibold tracking-tight text-white sm:text-4xl">Parceiros na rotina e nas decisões.</h2>
+          <p class="mt-5 text-lg leading-relaxed text-blue-100">A Partner Contabilidade e Assessoria Empresarial atende empresas que precisam de previsibilidade, organização e orientação técnica sem perder proximidade. O trabalho combina execução contábil, leitura de indicadores e conversa direta com quem toma decisão.</p>
+          <div class="mt-8 grid gap-4 sm:grid-cols-2">
+            <div class="rounded-3xl bg-white/8 p-6 ring-1 ring-white/10">
+              <p class="text-3xl font-semibold text-blue-200">Clareza</p>
+              <p class="mt-2 text-blue-100">Relatórios explicados em linguagem objetiva.</p>
+            </div>
+            <div class="rounded-3xl bg-white/8 p-6 ring-1 ring-white/10">
+              <p class="text-3xl font-semibold text-blue-200">Proximidade</p>
+              <p class="mt-2 text-blue-100">Contato recorrente, com retorno responsável.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="diferenciais" class="bg-[#060b35] px-4 py-24 text-white sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl">
+          <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">Por que escolher a Partner.</h2>
+          <p class="mt-4 text-lg leading-relaxed text-blue-100">Assessoria feita para reduzir incerteza, manter obrigações em dia e transformar contabilidade em ferramenta de gestão.</p>
+        </div>
+        <div class="mt-12 grid gap-5 lg:grid-cols-[1.15fr_.85fr]">
+          <div class="rounded-[2rem] bg-white p-8 text-[#060b35]">
+            <div class="grid gap-6 sm:grid-cols-2">
+              <div>
+                <i data-lucide="messages-square" class="h-8 w-8 text-[#0271ae]" aria-hidden="true"></i>
+                <h3 class="mt-5 text-xl font-semibold">Atendimento consultivo</h3>
+                <p class="mt-3 text-slate-600">Você fala com pessoas que entendem sua operação e acompanham seus próximos passos.</p>
+              </div>
+              <div>
+                <i data-lucide="calendar-check" class="h-8 w-8 text-[#0271ae]" aria-hidden="true"></i>
+                <h3 class="mt-5 text-xl font-semibold">Rotina organizada</h3>
+                <p class="mt-3 text-slate-600">Prazos, documentos e entregas monitorados para evitar surpresas.</p>
+              </div>
+              <div>
+                <i data-lucide="file-search" class="h-8 w-8 text-[#0271ae]" aria-hidden="true"></i>
+                <h3 class="mt-5 text-xl font-semibold">Visão preventiva</h3>
+                <p class="mt-3 text-slate-600">Pendências e riscos tratados antes que virem custo ou bloqueio.</p>
+              </div>
+              <div>
+                <i data-lucide="briefcase-business" class="h-8 w-8 text-[#0271ae]" aria-hidden="true"></i>
+                <h3 class="mt-5 text-xl font-semibold">Foco empresarial</h3>
+                <p class="mt-3 text-slate-600">Contabilidade conectada a margem, caixa, contratações e crescimento.</p>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-[2rem] border border-white/15 bg-white/10 p-8 backdrop-blur">
+            <h3 class="text-2xl font-semibold">Menos improviso. Mais previsão.</h3>
+            <p class="mt-4 text-blue-100">Empresas crescem melhor quando tributos, folha e indicadores deixam de ser urgência de última hora.</p>
+            <div class="mt-8 space-y-4">
+              <div class="rounded-2xl bg-white/10 p-5">
+                <p class="font-semibold">Calendário fiscal acompanhado</p>
+                <p class="mt-1 text-sm text-blue-100">Entregas controladas por rotina interna.</p>
+              </div>
+              <div class="rounded-2xl bg-white/10 p-5">
+                <p class="font-semibold">Análise antes da decisão</p>
+                <p class="mt-1 text-sm text-blue-100">Suporte para contratações, regime e expansão.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="segmentos" class="bg-[#071046] px-4 py-24 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <h2 class="max-w-3xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">Segmentos atendidos com critério técnico.</h2>
+        <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-3xl bg-white p-6 ring-1 ring-slate-200"><i data-lucide="store" class="h-7 w-7 text-[#0271ae]" aria-hidden="true"></i><p class="mt-5 font-semibold text-[#060b35]">Comércio</p><p class="mt-2 text-sm text-slate-600">Lojas, distribuidores e operações locais.</p></div>
+          <div class="rounded-3xl bg-[#eef6fb] p-6 ring-1 ring-blue-100"><i data-lucide="factory" class="h-7 w-7 text-[#0271ae]" aria-hidden="true"></i><p class="mt-5 font-semibold text-[#060b35]">Indústria</p><p class="mt-2 text-sm text-slate-600">Processos, folha e rotinas fiscais recorrentes.</p></div>
+          <div class="rounded-3xl bg-white p-6 ring-1 ring-slate-200"><i data-lucide="stethoscope" class="h-7 w-7 text-[#0271ae]" aria-hidden="true"></i><p class="mt-5 font-semibold text-[#060b35]">Saúde</p><p class="mt-2 text-sm text-slate-600">Clínicas, profissionais liberais e sociedades.</p></div>
+          <div class="rounded-3xl bg-white p-6 ring-1 ring-slate-200"><i data-lucide="laptop" class="h-7 w-7 text-[#0271ae]" aria-hidden="true"></i><p class="mt-5 font-semibold text-[#060b35]">Serviços</p><p class="mt-2 text-sm text-slate-600">Consultorias, agências e prestadores técnicos.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="depoimentos" class="bg-[#060b35] px-4 py-24 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-10 lg:grid-cols-[.85fr_1.15fr] lg:items-end">
+          <div>
+            <h2 class="text-3xl font-semibold tracking-tight text-white sm:text-4xl">Clientes valorizam previsibilidade.</h2>
+            <p class="mt-4 text-lg leading-relaxed text-blue-100">Relação contábil forte aparece na rotina: menos dúvida, menos atraso e mais segurança para decidir.</p>
+          </div>
+          <div class="grid gap-5 md:grid-cols-2">
+            <figure class="rounded-3xl bg-slate-50 p-7 ring-1 ring-slate-200">
+              <blockquote class="text-lg leading-relaxed text-slate-700">"A Partner trouxe ordem para nossa rotina fiscal e passou a explicar os números com clareza."</blockquote>
+              <figcaption class="mt-6 text-sm font-semibold text-[#060b35]">Marcelo Rech, diretor comercial</figcaption>
+            </figure>
+            <figure class="rounded-3xl border border-white/10 bg-[#0a2777] p-7 text-white shadow-blue">
+              <blockquote class="text-lg leading-relaxed text-blue-50">"O atendimento é próximo. Quando precisamos decidir, temos contexto e não apenas guias."</blockquote>
+              <figcaption class="mt-6 text-sm font-semibold text-white">Renata Azevedo, sócia administradora</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="bg-[#071046] px-4 py-24 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[#0a2777] text-white shadow-blue">
+        <div class="grid gap-0 lg:grid-cols-[1fr_.8fr]">
+          <div class="p-8 sm:p-12 lg:p-16">
+            <h2 class="max-w-2xl text-3xl font-semibold tracking-tight sm:text-5xl">Sua empresa precisa de uma contabilidade mais presente?</h2>
+            <p class="mt-5 max-w-2xl text-lg leading-relaxed text-blue-100">Converse com a Partner e entenda como organizar rotina fiscal, folha e gestão com mais segurança.</p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href="mailto:contato@partnercontabilidade.com.br" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3.5 font-semibold text-[#060b35] transition hover:bg-blue-50 active:translate-y-[1px]">Agendar consulta</a>
+              <a href="tel:+555135990000" class="inline-flex items-center justify-center rounded-full border border-white/25 px-6 py-3.5 font-semibold text-white transition hover:bg-white/10 active:translate-y-[1px]">Ligar agora</a>
+            </div>
+          </div>
+          <div class="min-h-80 bg-[#060b35] p-8 sm:p-12 lg:p-16">
+            <div class="h-full rounded-3xl border border-white/15 bg-white/8 p-7">
+              <i data-lucide="mail-check" class="h-9 w-9 text-blue-200" aria-hidden="true"></i>
+              <h3 class="mt-8 text-2xl font-semibold">Atendimento em Novo Hamburgo</h3>
+              <div class="mt-6 space-y-4 text-blue-100">
+                <p>Rua de referência empresarial, Centro, Novo Hamburgo, RS</p>
+                <p>contato@partnercontabilidade.com.br</p>
+                <p>+55 51 3599-0000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#060b35] px-4 py-12 text-white sm:px-6 lg:px-8">
+    <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.2fr_.8fr_.8fr]">
+      <div>
+        <div class="flex items-center gap-3">
+          <span class="grid h-11 w-11 place-items-center rounded-2xl bg-white text-[#060b35]"><i data-lucide="building-2" class="h-5 w-5" aria-hidden="true"></i></span>
+          <div>
+            <p class="font-semibold">Partner Contabilidade</p>
+            <p class="text-sm text-blue-100">Assessoria Empresarial</p>
+          </div>
+        </div>
+        <p class="mt-5 max-w-md text-sm leading-relaxed text-blue-100">Contabilidade consultiva para empresas de Novo Hamburgo e região que buscam clareza, regularidade e suporte próximo.</p>
+      </div>
+      <div>
+        <p class="font-semibold">Mapa</p>
+        <div class="mt-4 grid gap-3 text-sm text-blue-100">
+          <a href="#servicos" class="hover:text-white">Serviços</a>
+          <a href="#sobre" class="hover:text-white">Sobre</a>
+          <a href="#diferenciais" class="hover:text-white">Diferenciais</a>
+          <a href="#segmentos" class="hover:text-white">Segmentos</a>
+        </div>
+      </div>
+      <div>
+        <p class="font-semibold">Contato</p>
+        <div class="mt-4 grid gap-3 text-sm text-blue-100">
+          <a href="mailto:contato@partnercontabilidade.com.br" class="hover:text-white">contato@partnercontabilidade.com.br</a>
+          <a href="tel:+555135990000" class="hover:text-white">+55 51 3599-0000</a>
+          <a href="#contato" class="hover:text-white">Agendar consulta</a>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto mt-10 flex max-w-7xl flex-col gap-3 border-t border-white/10 pt-6 text-sm text-blue-100 sm:flex-row sm:items-center sm:justify-between">
+      <p>© 2026 Partner Contabilidade e Assessoria Empresarial.</p>
+      <p>Novo Hamburgo, Rio Grande do Sul.</p>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    navToggle?.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden', isOpen);
+      navToggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+    mobileMenu?.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        navToggle?.setAttribute('aria-expanded', 'false');
+      });
+    });
+    lucide.createIcons({ attrs: { 'stroke-width': 1.75 } });
+  </script>
+</body>
+</html>

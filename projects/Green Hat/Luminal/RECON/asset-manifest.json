@@ -1,0 +1,218 @@
+{
+  "url": "https://luminal-creative-studio.aura.build/",
+  "capturedVia": "browser-network+recon",
+  "total": 26,
+  "ok": 26,
+  "error": 0,
+  "fontsCss": "fonts/fonts.css",
+  "assets": [
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap",
+      "kind": "stylesheet",
+      "via": "network",
+      "status": "ok",
+      "bytes": 12355,
+      "localPath": "css/fonts.googleapis.com/css2-88538a5774.bin"
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/assets/index-Dm4uwV3Y.css",
+      "kind": "stylesheet",
+      "via": "network",
+      "status": "ok",
+      "bytes": 531800,
+      "localPath": "css/luminal-creative-studio.aura.build/index-Dm4uwV3Y-f52e9bdf66.css"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap",
+      "kind": "stylesheet",
+      "via": "network",
+      "status": "ok",
+      "bytes": 5575,
+      "localPath": "css/fonts.googleapis.com/css2-dea06366cb.bin"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap",
+      "kind": "stylesheet",
+      "via": "network",
+      "status": "ok",
+      "bytes": 9884,
+      "localPath": "css/fonts.googleapis.com/css2-ed3470f1ad.bin"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+      "kind": "font",
+      "via": "network",
+      "status": "ok",
+      "bytes": 48256,
+      "localPath": "fonts/fonts.gstatic.com/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7-6ab57b19c6.woff2"
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/logo-aura-gray.svg",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 20388,
+      "localPath": "images/luminal-creative-studio.aura.build/logo-aura-gray-3a12045b93.svg"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/preview-images/luminal-creative-studio.png",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 76852,
+      "localPath": "images/hoirqrkdgbmvpwutwuwj.supabase.co/luminal-creative-studio-231fe0fbdc.png"
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/logo-aura-128-light.png",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 2614,
+      "localPath": "images/luminal-creative-studio.aura.build/logo-aura-128-light-912057f3a2.png"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm2BL9A.woff2",
+      "kind": "font",
+      "via": "network",
+      "status": "ok",
+      "bytes": 34608,
+      "localPath": "fonts/fonts.gstatic.com/8vIH7w4qzmVxm2BL9A-c0b6673b7b.woff2"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/f7438fab-4b42-40cb-a36a-fd1c3446a888_800w.webp",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 12820,
+      "localPath": "images/hoirqrkdgbmvpwutwuwj.supabase.co/f7438fab-4b42-40cb-a36a-fd1c3446a888_800w-79247a441e.webp"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/96a71491-ccb5-4cb6-a369-be4b7a348c85_1600w.webp",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 125058,
+      "localPath": "images/hoirqrkdgbmvpwutwuwj.supabase.co/96a71491-ccb5-4cb6-a369-be4b7a348c85_1600w-bb1691f8d6.webp"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/74117bff-45d0-4c3e-ae97-12067641be39_800w.webp",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 29948,
+      "localPath": "images/hoirqrkdgbmvpwutwuwj.supabase.co/74117bff-45d0-4c3e-ae97-12067641be39_800w-704b56827f.webp"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/3dbd59c3-a7a5-4515-985e-788ba17917e2_800w.webp",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 34950,
+      "localPath": "images/hoirqrkdgbmvpwutwuwj.supabase.co/3dbd59c3-a7a5-4515-985e-788ba17917e2_800w-4fbf7f002e.webp"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/93dbb379-52e9-4ded-bc8a-c0f05aef82c0_320w.webp",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 10052,
+      "localPath": "images/hoirqrkdgbmvpwutwuwj.supabase.co/93dbb379-52e9-4ded-bc8a-c0f05aef82c0_320w-3d7d74f2ed.webp"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/30fed759-ea9f-42e9-8249-9ea7f44c811c_320w.webp",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 14014,
+      "localPath": "images/hoirqrkdgbmvpwutwuwj.supabase.co/30fed759-ea9f-42e9-8249-9ea7f44c811c_320w-0ba889d085.webp"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/92f770e8-08ad-4fb2-8858-2d9b385124a7_800w.webp",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 16558,
+      "localPath": "images/hoirqrkdgbmvpwutwuwj.supabase.co/92f770e8-08ad-4fb2-8858-2d9b385124a7_800w-2105644573.webp"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/e6ac2623-ccad-4751-8c7d-782f07a9263d_320w.webp",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 26536,
+      "localPath": "images/hoirqrkdgbmvpwutwuwj.supabase.co/e6ac2623-ccad-4751-8c7d-782f07a9263d_320w-cbe7b0b7f1.webp"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/05d6b211-9e83-488c-8f3f-42a77b8e9532_1600w.png",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 3405128,
+      "localPath": "images/hoirqrkdgbmvpwutwuwj.supabase.co/05d6b211-9e83-488c-8f3f-42a77b8e9532_1600w-02f7336b71.png"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/ea262fd9-14f0-4917-be69-86fd3b302ccd_1600w.webp",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 38760,
+      "localPath": "images/hoirqrkdgbmvpwutwuwj.supabase.co/ea262fd9-14f0-4917-be69-86fd3b302ccd_1600w-213803d0fd.webp"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/09dc0e81-3730-4910-9053-26ecec7a3816_800w.webp",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 7320,
+      "localPath": "images/hoirqrkdgbmvpwutwuwj.supabase.co/09dc0e81-3730-4910-9053-26ecec7a3816_800w-329aada512.webp"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/5daa544b-07e8-4fcd-98c6-1fb55bef2131_1600w.png",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 2724482,
+      "localPath": "images/hoirqrkdgbmvpwutwuwj.supabase.co/5daa544b-07e8-4fcd-98c6-1fb55bef2131_1600w-cc17a234dc.png"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/26beb5d6-9395-4655-bd45-0375a5af0ffb_1600w.png",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 2890990,
+      "localPath": "images/hoirqrkdgbmvpwutwuwj.supabase.co/26beb5d6-9395-4655-bd45-0375a5af0ffb_1600w-c0fb334601.png"
+    },
+    {
+      "url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/0ecb27cd-9dd3-4e8a-8f50-529e27caa666_1600w.png",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 2635219,
+      "localPath": "images/hoirqrkdgbmvpwutwuwj.supabase.co/0ecb27cd-9dd3-4e8a-8f50-529e27caa666_1600w-9924d919c6.png"
+    },
+    {
+      "url": "https://assets.unicorn.studio/media/glyphs/circles.png",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 1555,
+      "localPath": "images/assets.unicorn.studio/circles-1ccd33fdb4.png"
+    },
+    {
+      "url": "https://assets.unicorn.studio/images/7b9RUDblFTeXAfGKWnhAYTv9FVO2/sourasith_httpss.mj.runybic1hpRC-k_A_glowing_blurring_cosmic__1c9c5892-99aa-4a73-ba0e-61372d715421_3.png",
+      "kind": "image",
+      "via": "network",
+      "status": "ok",
+      "bytes": 208151,
+      "localPath": "images/assets.unicorn.studio/sourasith_httpss.mj.runybic1hpRC-k_A_glowing_blurring_cosmic__1c9c5892-99aa-4a73-7888f05ca8.png"
+    },
+    {
+      "url": "https://luminal-creative-studio.aura.build/favicon.ico",
+      "kind": "image",
+      "via": "recon",
+      "status": "ok",
+      "bytes": 696,
+      "localPath": "images/luminal-creative-studio.aura.build/favicon-ebea3aeb03.ico"
+    }
+  ]
+}

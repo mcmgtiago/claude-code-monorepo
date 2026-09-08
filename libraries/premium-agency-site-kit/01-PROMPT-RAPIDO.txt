@@ -1,0 +1,22 @@
+Use o ZIP “Kit Mestre — Sites Premium” como base obrigatória deste projeto. Leia primeiro CLAUDE.md e 00-LEIA-PRIMEIRO.md, depois 02-PROMPT-MESTRE-COMPLETO.md, 03-BRIEFING-CLIENTE.md, 04-CHECKLIST-DE-QUALIDADE.md e os arquivos relevantes da pasta references. Priorize motionsites_all_prompts.json; complemente com 21st_dev_prompts.json, horizonx_prompts.json e superdesign_prompts.json. Aplique as skills globais indicadas em CLAUDE.md sempre que o contexto pedir.
+
+Vou enviar em seguida o material do cliente e, quando houver, referências visuais. Organize tudo que eu enviar, identifique o que pode ser aproveitado e não invente informações comerciais.
+
+FASE 1 — PLANEJAMENTO, SEM DESENVOLVER:
+Antes de escrever código ou alterar o site, use as skills adequadas ao contexto — especialmente `/design-taste-frontend`, `/redesign-existing-projects` quando houver projeto existente, `/suggest-improvements` para fonte e `/find-animation-opportunities` para intenção de movimento — e apresente:
+1. objetivo e público percebido;
+2. conceito visual, paleta, tipografia e estilo de movimento;
+3. estrutura completa da página, explicando cada seção;
+4. quatro possibilidades de hero realmente distintas quando isso melhorar a decisão;
+5. ativos que serão usados e materiais realmente indispensáveis que ainda faltam;
+6. recomendações de copy e conversão.
+Depois, aguarde minha aprovação.
+
+FASE 2 — DESENVOLVIMENTO APÓS APROVAÇÃO:
+Construa primeiro nav + seletor de hero + 4 variantes de hero + 2ª seção, para validação de direção. Depois expanda o restante aprovado. Crie uma experiência premium e autoral, responsiva em 375 px, 768 px e 1440 px. Use React, TypeScript, Next.js, Motion e Lucide, salvo quando o projeto exigir outra tecnologia. Todas as seções importantes devem ter animações, transições e microinterações coerentes. Use `/apple-design` e `/emil-design-eng` para calibrar sensação de resposta, springs, gestures e detalhes invisíveis; use `/pick-ui-library` antes de escolher bibliotecas novas. Priorize qualidade visual, vídeo, composição, tipografia, profundidade e narrativa. Não entregue aparência de template genérico.
+
+Centralize o conteúdo para facilitar edição, mantenha o código modular, faça links e formulários funcionarem e implemente acessibilidade essencial. Finalize com SEO técnico, favicon, Open Graph, Twitter Card, sitemap, robots, manifesto, dados estruturados aplicáveis e revisão de compartilhamento.
+
+Não use placeholders na entrega. Não invente depoimentos ou resultados. Não copie marcas ou ativos sem autorização. Quando o projeto estiver pronto, valide o build, revise visualmente desktop e mobile, publique se o ambiente permitir e entregue também um ZIP organizado do código-fonte final.
+
+Agora aguarde o material do cliente.

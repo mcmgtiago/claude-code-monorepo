@@ -1,0 +1,1366 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edição Ninja — Aprenda a editar vídeos profissionais pelo celular</title>
+  <meta name="description" content="Aprenda a editar vídeos com qualidade profissional usando apenas o seu celular. Sem computador, sem equipamento caro e sem anos de experiência.">
+
+  <!-- Fontes: preconnect para liberar handshake TLS cedo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fontes: 3 requests unificados em 1, carregamento assíncrono (não bloqueia FCP) -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Figtree:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Figtree:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"></noscript>
+
+  <!-- CSS crítico (bloqueia render — necessário para 1ª pintura: layout, tipografia, componentes) -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/typography.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/page.css">
+
+  <!-- CSS não-crítico: animações e efeitos (assíncrono — não está no caminho crítico) -->
+  <link rel="preload" as="style" href="assets/css/animations.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/animations.css"></noscript>
+  <link rel="preload" as="style" href="assets/css/effects.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/effects.css"></noscript>
+
+  <!-- *** FIXES CRÍTICOS — últimas regras ganham sempre *** -->
+  <style>
+    /* Elementos animados iniciam invisíveis — regra crítica inline
+       (animations.css é async; sem isso haveria flash de conteúdo) */
+    [data-anim] { opacity: 0; }
+
+    /* ─── Containment: seções abaixo do dobramento ─── */
+    /* O browser pula layout/paint dessas seções até estarem perto do viewport */
+    .kit-section-lazy {
+      content-visibility: auto;
+      contain-intrinsic-size: auto 600px;
+    }
+
+    /* ─── HERO: remover faixa branca (padding do .kit-section) ─── */
+    #tubes-section {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      overflow: visible !important;
+      background: var(--kit-bg-primary) !important;
+    }
+
+    /* ─── TRANSIÇÃO HERO → BLOCO 2: eliminar faixa de divisão ─── */
+    #modelos {
+      background: linear-gradient(
+        to bottom,
+        var(--kit-bg-primary) 0%,
+        var(--kit-bg-deep) 180px
+      ) !important;
+      margin-top: -2px !important;
+    }
+
+    /* Glow line na base do hero: expandida e acima do conteúdo do bloco 2 */
+    #tubes-section .kit-glow-line {
+      position: absolute !important;
+      bottom: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      z-index: 5 !important;
+    }
+
+    /* ─── PROCESSO: corrigir deslocamento por `data-anim="fade-left"` ─── */
+    /* Agora animations.js usa fade-up no mobile — overflow-x já não é problema */
+    @media (max-width: 767px) {
+      #processo {
+        overflow-x: visible !important;
+      }
+      #processo .kit-container {
+        overflow: visible !important;
+      }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       BLOCO 1: Hero com efeito Gradient Bars
+       ═══════════════════════════════════════════ -->
+  <section id="tubes-section" class="kit-section kit-hero gbg"
+    data-gbg
+    data-gbg-bars="16"
+    data-gbg-from="rgba(10, 116, 255, 0.45)"
+    data-gbg-duration="2">
+
+    <!-- GBG: container das barras — preenchido pelo JS -->
+    <div class="gbg__bars" aria-hidden="true"></div>
+
+    <div class="kit-container" style="position: relative; z-index: 2;">
+
+      <!-- Headline principal -->
+      <h1 class="kit-hero__headline kit-display">
+        Aprenda a editar vídeos no celular e crie conteúdo que <span class="kit-text-gradient-blue">para o feed e chama atenção</span>
+      </h1>
+
+      <!-- Subtítulo/Descrição -->
+      <p class="kit-hero__description kit-body-lg">
+        <strong>Edição profissional</strong> está ao alcance do seu bolso. Com o <strong>Edição Ninja</strong>, você aprende a usar o celular que já tem no bolso para criar vídeos com corte afiado, trilha, legendas e efeitos — sem computador, sem câmera cara e <strong>sem complicação</strong>
+      </p>
+
+      <!-- CTA Principal -->
+      <div class="kit-hero__cta">
+        <a href="#oferta" class="kit-btn-shiny">
+          Quero aprender a editar no celular
+        </a>
+      </div>
+    </div>
+
+    <!-- Glow separator -->
+    <div class="kit-glow-line" style="position: absolute; bottom: 0;"></div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       BLOCO 2: Modelos / Carousel (kit: portfolio)
+       ═══════════════════════════════════════════ -->
+  <section id="modelos" class="kit-section kit-section-lazy kit-portfolio kit-bg-deep" data-anim="portfolio-section">
+    <div class="kit-container">
+      <!-- Cabeçalho -->
+      <div class="kit-section-header" data-anim="fade-up">
+        <span class="kit-label kit-label-alt">exemplos reais</span>
+        <h2 class="kit-h1">Veja alguns vídeos feitos <span class="kit-text-gradient-blue">100% pelo celular</span></h2>
+      </div>
+
+      <!-- Video Carousel -->
+      <div class="vid-carousel" id="vid-carousel" data-anim="fade-up" data-anim-delay="0.2">
+        <div class="vid-carousel__track" id="vid-track">
+          <div class="vid-carousel__item">
+            <img src="assets/images/carousel-01.svg" alt="Youtuber se gravando com o celular" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div class="vid-carousel__item">
+            <img src="assets/images/carousel-02.svg" alt="Vlogger falando para a câmera" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div class="vid-carousel__item">
+            <img src="assets/images/carousel-03.svg" alt="Editando vídeo no celular" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div class="vid-carousel__item">
+            <img src="assets/images/carousel-04.svg" alt="Vlogger gravando ao ar livre" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div class="vid-carousel__item">
+            <img src="assets/images/carousel-05.svg" alt="Conteúdo que engaja no celular" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       BLOCO 2.5: Diferencial Cinematic (tags flutuantes)
+       ═══════════════════════════════════════════ -->
+  <section id="cinematic-diff" class="kit-section kit-section-lazy kit-bg-deep page-cinematic-diff" data-anim="benefits-section">
+    <div class="kit-separator"></div>
+
+    <div class="kit-container">
+      <div class="kit-section-header" data-anim="fade-up">
+        <span class="kit-label kit-label-alt">por que funciona</span>
+        <h2 class="kit-h1">A maioria das pessoas desiste de criar conteúdo porque acha que editar é só para quem tem equipamento caro e anos de prática.</h2>
+      </div>
+
+      <div class="page-cinematic-diff__grid">
+
+        <!-- Card 1: Problema / dor -->
+        <div class="page-cinematic-diff__card page-cinematic-diff__card--pain" data-anim="fade-up" data-anim-delay="0.1">
+          <div class="page-cinematic-diff__card-head">
+            <span class="page-cinematic-diff__badge">
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M4.5 4.5l4 4M8.5 4.5l-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+              Você já viveu isso
+            </span>
+            <h3 class="page-cinematic-diff__title">Essa frustração é mais comum do que você imagina.</h3>
+          </div>
+          <div class="comp-tags-area" id="tags-pain">
+            <div class="comp-tag comp-tag--pain" data-px="4"  data-py="5"  data-rot="-11">
+              <span class="comp-tag__icon">📱</span>
+              <span>Tentou editar pelo celular e ficou perdido nos menus do app</span>
+            </div>
+            <div class="comp-tag comp-tag--pain" data-px="44" data-py="36" data-rot="7">
+              <span class="comp-tag__icon">⏰</span>
+              <span>Passou horas num vídeo e o resultado pareceu amador de qualquer jeito</span>
+            </div>
+            <div class="comp-tag comp-tag--pain" data-px="3"  data-py="63" data-rot="-5">
+              <span class="comp-tag__icon">📉</span>
+              <span>Postou, teve baixo engajamento e não entendeu o que fez errado</span>
+            </div>
+            <div class="comp-tag comp-tag--pain" data-px="42" data-py="76" data-rot="10">
+              <span class="comp-tag__icon">💭</span>
+              <span>Tentou replicar um efeito que viu no Instagram e não combinou com o vídeo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Solução Cinematic -->
+        <div class="page-cinematic-diff__card page-cinematic-diff__card--solution" data-anim="fade-up" data-anim-delay="0.2">
+          <div class="page-cinematic-diff__card-head">
+            <span class="page-cinematic-diff__badge page-cinematic-diff__badge--solution">
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M4 6.5l2 2 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              A diferença Edição Ninja
+            </span>
+            <h3 class="page-cinematic-diff__title">Com o método certo, o celular vira um estúdio no bolso.</h3>
+          </div>
+          <div class="comp-tags-area" id="tags-solution">
+            <div class="comp-tag comp-tag--solution" data-px="5"  data-py="8"  data-rot="-8">
+              <span class="comp-tag__icon">⚡</span>
+              <span>Aprende a dar cortes rápidos que prendem a atenção logo nos primeiros segundos</span>
+            </div>
+            <div class="comp-tag comp-tag--solution" data-px="46" data-py="44" data-rot="5">
+              <span class="comp-tag__icon">✨</span>
+              <span>Adiciona efeitos, trilha e legendas animadas sem sair do celular</span>
+            </div>
+            <div class="comp-tag comp-tag--solution" data-px="7"  data-py="71" data-rot="-4">
+              <span class="comp-tag__icon">🎯</span>
+              <span>Publica vídeos que parecem profissionais e geram engajamento real</span>
+            </div>
+            <div class="comp-tag comp-tag--solution" data-px="48" data-py="25" data-rot="8">
+              <span class="comp-tag__icon">🎬</span>
+              <span>Domina os apps gratuitos que os criadores de conteúdo profissionais usam</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Frase de fechamento do bloco -->
+      <div class="page-cinematic-diff__phrase" data-anim="fade-up" data-anim-delay="0.3">
+        <p>Enquanto todo mundo reclama que não sabe editar… <strong>Com o Edição Ninja você vai dominar a edição no celular, criar conteúdos que se destacam e crescer nas redes sem depender de ninguém.</strong></p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       BLOCO 3: Antes/Depois — O que muda (NOVO)
+       Base visual: benefits
+       ═══════════════════════════════════════════ -->
+  <section id="o-que-muda" class="kit-section kit-section-lazy kit-bg-navy page-before-after" data-anim="benefits-section">
+
+    <div class="kit-container">
+      <div class="kit-section-header" data-anim="fade-up">
+        <span class="kit-label kit-label-alt">transformação</span>
+        <h2 class="kit-h1">O que muda com o <span class="kit-text-gradient-blue">Edição Ninja</span></h2>
+      </div>
+
+        <div class="page-before-after__single" data-anim="fade-up" data-anim-delay="0.1">
+        <p class="pba-benefits__label">Com o Edição Ninja você vai:</p>
+        <ul class="pba-benefits">
+          <li class="pba-benefits__item" data-anim="fade-up" data-anim-delay="0.1">
+            <div class="pba-benefits__icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="pba-benefits__text">Editar vídeos <strong>com qualidade profissional</strong> usando só o celular que já tem.</p>
+          </li>
+          <li class="pba-benefits__item" data-anim="fade-up" data-anim-delay="0.2">
+            <div class="pba-benefits__icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="pba-benefits__text">Parar de perder seguidores por causa de um <strong>conteúdo com cara de amador</strong>.</p>
+          </li>
+          <li class="pba-benefits__item" data-anim="fade-up" data-anim-delay="0.3">
+            <div class="pba-benefits__icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="pba-benefits__text">Publicar seu primeiro vídeo editado pelo celular em <strong>menos de 1 hora</strong>.</p>
+          </li>
+          <li class="pba-benefits__item" data-anim="fade-up" data-anim-delay="0.4">
+            <div class="pba-benefits__icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="pba-benefits__text">Usar <strong>apps gratuitos</strong> para criar cortes, efeitos e legendas animadas em poucos toques.</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- CTA -->
+      <div class="page-before-after__cta" data-anim="fade-up" data-anim-delay="0.4">
+        <a href="#oferta" class="kit-btn-shiny">
+          Quero começar a editar agora
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       BLOCO 5: Processo / Como Funciona (kit)
+       ═══════════════════════════════════════════ -->
+  <section id="processo" class="kit-section kit-section-lazy kit-bg-navy" data-anim="process-section">
+    <div class="kit-container">
+      <div class="kit-section-header" data-anim="fade-up">
+        <span class="kit-label kit-label-alt">passo a passo</span>
+        <h2 class="kit-h1">Veja como funciona <span class="kit-text-gradient-blue">na prática</span></h2>
+        <p class="kit-body-lg">Já selecionei os melhores apps gratuitos, criei as aulas na ordem certa e mostrei cada recurso com a tela do celular. Você só precisa assistir, praticar e publicar.</p>
+      </div>
+
+      <div class="sfloat__grid">
+
+        <!-- Card 1: flutua direita ao rolar -->
+        <div class="sfloat__card" data-sfloat-tx="55" data-sfloat-rz="5" data-sfloat-dir="1">
+          <div class="sfloat__step-num">01</div>
+          <div class="sfloat__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="6" width="32" height="36" rx="4" stroke="currentColor" stroke-width="2.5"/>
+              <line x1="16" y1="16" x2="32" y2="16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="16" y1="24" x2="28" y2="24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="16" y1="32" x2="24" y2="32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="sfloat__card-title">Assista e aprenda</h3>
+          <p class="sfloat__card-text">Acesse as aulas em vídeo direto no celular. Cada aula mostra o passo a passo na tela do app, sem enrolação e sem precisar de computador.</p>
+        </div>
+
+        <!-- Card 2: entra com fadeInUp ao entrar no viewport -->
+        <div class="sfloat__card sfloat__card--center" data-sfloat-fadein>
+          <div class="sfloat__step-num">02</div>
+          <div class="sfloat__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M17 24l5 5 9-9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="sfloat__card-title">Pratique no seu próprio vídeo</h3>
+          <p class="sfloat__card-text">Aplique a técnica em tempo real enquanto assiste. Corte, trilha, legendas e transições — você vai dominando cada ferramenta com exercícios rápidos e objetivos.</p>
+        </div>
+
+        <!-- Card 3: flutua esquerda ao rolar -->
+        <div class="sfloat__card" data-sfloat-tx="55" data-sfloat-rz="5" data-sfloat-dir="-1">
+          <div class="sfloat__step-num">03</div>
+          <div class="sfloat__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M24 14v10l6 5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="sfloat__card-title">Publique e colha resultados</h3>
+          <p class="sfloat__card-text">Com o vídeo editado e pronto, é só exportar direto do celular e postar. Os próximos vídeos vão ficando mais rápidos e melhores a cada publicação.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       BLOCO 6: O que você recebe (kit: benefits)
+       ═══════════════════════════════════════════ -->
+  <section id="entregaveis" class="kit-section kit-section-lazy page-entrega" data-anim="benefits-section">
+    <div class="page-entrega__reveal-overlay" aria-hidden="true"></div>
+
+    <div class="kit-container" style="position:relative;z-index:2;">
+      <!-- Cabeçalho -->
+      <div class="kit-section-header" data-anim="fade-up">
+        <span class="kit-label kit-label-alt">// o que você recebe</span>
+        <h2 class="kit-h1">Tudo o que está <span class="kit-text-gradient-blue">dentro do curso</span></h2>
+      </div>
+
+      <!-- Bento Row 1: Modelos (2fr) + Guia IA (1fr) -->
+      <div class="page-entrega__bento">
+
+        <!-- Card: Modelos Prontos com vídeo P01 -->
+        <div class="page-entrega__card page-entrega__card--video" data-anim="fade-up" data-anim-delay="0.1">
+          <div class="page-entrega__video-wrap">
+            <img src="assets/images/entrega-modulos.svg" alt="Módulos de edição pelo celular" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div class="page-entrega__card-body">
+            <h3 class="page-entrega__title">Módulos de Edição pelo Celular</h3>
+            <p class="page-entrega__desc">Aulas gravadas mostrando a tela do celular do começo ao fim. Do corte básico ao efeito avançado, tudo organizado por nível para você evoluir no ritmo certo.</p>
+          </div>
+        </div>
+
+        <!-- Card: Guia IA -->
+        <div class="page-entrega__card" data-anim="fade-up" data-anim-delay="0.2">
+          <div class="page-entrega__visual">
+            <div class="page-entrega__visual-glow"></div>
+            <!-- Sliders de personalização -->
+            <div class="page-entrega__slider-demo">
+              <div class="ped-slider">
+                <div class="ped-slider__track">
+                  <div class="ped-slider__fill" style="width:62%"></div>
+                  <div class="ped-slider__thumb" style="left:62%"></div>
+                </div>
+              </div>
+              <div class="ped-slider">
+                <div class="ped-slider__track">
+                  <div class="ped-slider__fill" style="width:78%"></div>
+                  <div class="ped-slider__thumb" style="left:78%"></div>
+                </div>
+              </div>
+              <div class="ped-slider__swatches">
+                <span style="background:#ef4444"></span>
+                <span style="background:#f97316"></span>
+                <span style="background:#a8e63d"></span>
+              </div>
+            </div>
+          </div>
+          <div class="page-entrega__card-body">
+            <h3 class="page-entrega__title">Guia de Apps Gratuitos</h3>
+            <p class="page-entrega__desc">O mapa completo dos melhores apps de edição para celular. Saiba qual usar em cada situação, sem pagar nada e sem baixar aplicativo ineficiente.</p>
+          </div>
+        </div>
+
+      </div><!-- /bento row 1 -->
+
+      <!-- Card: Checklist (linha completa horizontal) -->
+      <div class="page-entrega__card page-entrega__card--horizontal" data-anim="fade-up" data-anim-delay="0.1">
+        <div class="page-entrega__visual page-entrega__visual--sm">
+          <div class="page-entrega__checklist-preview" id="entrega-anim-checklist">
+            <span class="page-entrega__anim-row">
+              <span class="page-entrega__anim-icon">
+                <svg class="ped-check-empty" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="rgba(255,255,255,0.15)"/></svg>
+                <svg class="ped-check-done" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" stroke="#4ade80" stroke-width="1.5" fill="rgba(74,222,128,0.12)"/><path d="M5 8l2 2 4-4" stroke="#4ade80" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="page-entrega__anim-label">Importar o clipe</span>
+            </span>
+            <span class="page-entrega__anim-row">
+              <span class="page-entrega__anim-icon">
+                <svg class="ped-check-empty" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="rgba(255,255,255,0.15)"/></svg>
+                <svg class="ped-check-done" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" stroke="#4ade80" stroke-width="1.5" fill="rgba(74,222,128,0.12)"/><path d="M5 8l2 2 4-4" stroke="#4ade80" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="page-entrega__anim-label">Cortar e ajustar o ritmo</span>
+            </span>
+            <span class="page-entrega__anim-row">
+              <span class="page-entrega__anim-icon">
+                <svg class="ped-check-empty" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="rgba(255,255,255,0.15)"/></svg>
+                <svg class="ped-check-done" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" stroke="#4ade80" stroke-width="1.5" fill="rgba(74,222,128,0.12)"/><path d="M5 8l2 2 4-4" stroke="#4ade80" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="page-entrega__anim-label">Adicionar trilha e legendas</span>
+            </span>
+            <span class="page-entrega__anim-row">
+              <span class="page-entrega__anim-icon">
+                <svg class="ped-check-empty" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="rgba(255,255,255,0.15)"/></svg>
+                <svg class="ped-check-done" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" stroke="#4ade80" stroke-width="1.5" fill="rgba(74,222,128,0.12)"/><path d="M5 8l2 2 4-4" stroke="#4ade80" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="page-entrega__anim-label">Exportar e publicar</span>
+            </span>
+          </div>
+        </div>
+        <div class="page-entrega__card-body">
+          <h3 class="page-entrega__title">Checklist <span style="font-style:italic;opacity:.7">'anti-travar'</span></h3>
+          <p class="page-entrega__desc">Todos os passos organizados para você editar seu vídeo sem parar no meio do caminho nem esquecer nenhum detalhe.</p>
+        </div>
+      </div>
+
+      <!-- Divider: E ainda tem mais -->
+      <div class="page-entrega__bonus-banner" data-anim="fade-up" data-anim-delay="0.1">
+        <div class="page-entrega__bonus-badge">E ainda tem mais</div>
+        <p class="page-entrega__bonus-text">Para quem entrar no curso hoje dia <strong id="entrega-bonus-date" class="page-entrega__bonus-date">--/--/----</strong> leva <strong>2 bônus gratuitos</strong></p>
+      </div>
+
+      <!-- Bento Row 2: Guia Publicação (1fr) + Arsenal / P02 -->
+      <div class="page-entrega__bento page-entrega__bento--bonus">
+
+        <!-- Card: Guia de Publicação -->
+        <div class="page-entrega__card" data-anim="fade-up" data-anim-delay="0.2">
+          <div class="page-entrega__visual">
+            <div class="page-entrega__visual-glow"></div>
+            <svg class="page-entrega__visual-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="48" r="10" stroke="currentColor" stroke-width="2" opacity="0.25"/>
+              <path d="M32 14v24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M22 24l10-12 10 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18 48h28" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+            </svg>
+          </div>
+          <div class="page-entrega__card-body">
+            <span class="page-entrega__bonus-chip">BÔNUS</span>
+            <h3 class="page-entrega__title">Pack de Músicas Livres de Direitos</h3>
+            <p class="page-entrega__desc">Coleção de trilhas selecionadas para usar nos seus vídeos sem medo de monetização. Faixas para Reels, Shorts e Stories já separadas por estilo e ritmo.</p>
+          </div>
+        </div>
+
+        <!-- Card: Arsenal de Impacto com vídeo P02 -->
+        <div class="page-entrega__card page-entrega__card--video page-entrega__card--video-sm" data-anim="fade-up" data-anim-delay="0.3">
+          <div class="page-entrega__video-wrap">
+            <img src="assets/images/entrega-bonus.svg" alt="Pack de efeitos e transições prontas" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div class="page-entrega__card-body">
+            <span class="page-entrega__bonus-chip">BÔNUS</span>
+            <h3 class="page-entrega__title">Pack de Efeitos e Transições Prontas</h3>
+            <p class="page-entrega__desc">Efeitos visuais e transições já configuradas para importar direto no seu app. Os mesmos recursos que editores profissionais usam — só escolher e aplicar com um toque.</p>
+          </div>
+        </div>
+
+      </div><!-- /bento row 2 -->
+
+      <!-- Preço: contexto de valor -->
+      <div class="page-entrega__price-tease" data-anim="fade-up" data-anim-delay="0.15">
+        <p class="page-entrega__price-lead">Quando finalizei o Edição Ninja, me disseram que eu deveria cobrar no mínimo <strong>R$&nbsp;197</strong>… e sendo sincero, faria todo o sentido. Afinal:</p>
+        <ul class="page-entrega__price-list">
+          <li>
+            <span class="page-entrega__price-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 12h6M12 9v6"/></svg>
+            </span>
+            <span>Um editor de vídeo freelancer cobra pelo menos <strong>R$&nbsp;300</strong> por vídeo editado</span>
+          </li>
+          <li>
+            <span class="page-entrega__price-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </span>
+            <span>Cursos presenciais de edição chegam a custar mais de <strong>R$&nbsp;600</strong> e ensinam em computador</span>
+          </li>
+          <li>
+            <span class="page-entrega__price-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4z"/></svg>
+            </span>
+            <span>Aprender sozinho no YouTube demanda <strong>semanas de tentativa e erro</strong> sem evolução real</span>
+          </li>
+        </ul>
+        <p class="page-entrega__price-close">Mas eu não queria que o preço fosse um obstáculo</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       BLOCO 7: Oferta / Pricing (NOVO)
+       Base visual: stats + cta-final
+       ═══════════════════════════════════════════ -->
+  <section id="oferta" class="kit-section kit-section-lazy kit-bg-deep page-pricing" data-anim="cta-section">
+    <div class="kit-bokeh-container" data-anim-bokeh="12"></div>
+
+    <div class="kit-container" style="position: relative; z-index: 2;">
+      <!-- Pricing Card -->
+      <div class="page-pricing__card kit-card-glass" data-anim="fade-up" data-anim-delay="0.2">
+        <!-- Header da oferta dentro do card -->
+        <div class="page-pricing__header">
+          <span class="kit-label kit-label-alt">oferta especial</span>
+          <h2 class="kit-h2">Hoje você pode ter acesso ao Edição Ninja com uma <span class="kit-text-gradient-blue">condição especial</span>:</h2>
+        </div>
+
+        <!-- Checklist -->
+        <ul class="page-pricing__checklist">
+          <li class="page-pricing__check-item kit-body">
+            <span class="page-pricing__check-icon">✓</span>
+            Módulos de edição de vídeo pelo celular
+          </li>
+          <li class="page-pricing__check-item kit-body">
+            <span class="page-pricing__check-icon">✓</span>
+            Guia completo de apps gratuitos
+          </li>
+          <li class="page-pricing__check-item kit-body">
+            <span class="page-pricing__check-icon">✓</span>
+            Checklist anti-travar
+          </li>
+          <li class="page-pricing__check-item kit-body">
+            <span class="page-pricing__check-icon">✓</span>
+            Bônus: Pack de Músicas Livres de Direitos
+          </li>
+          <li class="page-pricing__check-item kit-body">
+            <span class="page-pricing__check-icon">✓</span>
+            Bônus: Pack de Efeitos e Transições Prontas
+          </li>
+          <li class="page-pricing__check-item kit-body">
+            <span class="page-pricing__check-icon">✓</span>
+            Acesso a todas as atualizações e novas aulas
+          </li>
+          <li class="page-pricing__check-item kit-body">
+            <span class="page-pricing__check-icon">✓</span>
+            7 dias de garantia
+          </li>
+        </ul>
+
+        <!-- Preço -->
+        <div class="page-pricing__price-wrapper">
+          <span class="page-pricing__price-from kit-body-sm">De <s>R$149,00</s></span>
+          <span class="page-pricing__price-label kit-label">POR APENAS</span>
+          <span class="page-pricing__price kit-display kit-text-gradient-blue">R$49</span>
+        </div>
+
+        <!-- CTA -->
+        <a href="#" class="kit-btn-shiny" style="width: 100%; text-align: center;">
+          Quero aprender a editar no celular
+        </a>
+
+        <p class="page-pricing__footnote">Pagamento único. Sem mensalidade.</p>
+
+        <!-- Garantia -->
+        <div class="page-pricing__guarantee">
+          <div class="page-pricing__guarantee-icon">🛡️</div>
+          <div>
+            <strong class="kit-h4">Garantia total</strong>
+            <p class="kit-body-sm">Você tem 7 dias de garantia pra assistir tudo e ver com os seus próprios olhos. Se sentir que não é pra você, é só solicitar o reembolso e eu devolvo 100% do seu dinheiro.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       BLOCO 8: FAQ (kit)
+       ═══════════════════════════════════════════ -->
+  <section id="faq" class="kit-section kit-section-lazy kit-faq kit-bg-dark" data-anim="faq-section">
+    <div class="kit-container">
+      <!-- Cabeçalho -->
+      <div class="kit-section-header" data-anim="fade-up">
+        <span class="kit-label kit-label-alt">dúvidas</span>
+        <h2 class="kit-h1">Perguntas frequentes</h2>
+      </div>
+
+      <!-- Accordion -->
+      <div class="kit-faq__list">
+        <div class="kit-faq-item" data-anim="fade-up" data-anim-delay="0.05">
+          <button class="kit-faq-toggle" data-anim-faq aria-expanded="false">
+            <span class="kit-faq__question kit-h4">Preciso de algum equipamento especial?</span>
+            <span class="kit-faq-toggle__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+          <div class="kit-faq-answer">
+            <div class="kit-faq-answer__inner kit-body">
+              Não. Qualquer smartphone moderno com Android ou iPhone funciona. O curso foi pensado para quem tem apenas o celular e quer começar a criar conteúdo profissional.
+            </div>
+          </div>
+        </div>
+
+        <div class="kit-faq-item" data-anim="fade-up" data-anim-delay="0.1">
+          <button class="kit-faq-toggle" data-anim-faq aria-expanded="false">
+            <span class="kit-faq__question kit-h4">Preciso ter experiência com edição ou design?</span>
+            <span class="kit-faq-toggle__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+          <div class="kit-faq-answer">
+            <div class="kit-faq-answer__inner kit-body">
+              Não, as aulas partem do zero absoluto. Mesmo que você nunca tenha aberto um app de edição, vai conseguir acompanhar e editar seu primeiro vídeo desde a primeira aula.
+            </div>
+          </div>
+        </div>
+
+        <div class="kit-faq-item" data-anim="fade-up" data-anim-delay="0.15">
+          <button class="kit-faq-toggle" data-anim-faq aria-expanded="false">
+            <span class="kit-faq__question kit-h4">Os apps ensinados são gratuitos?</span>
+            <span class="kit-faq-toggle__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+          <div class="kit-faq-answer">
+            <div class="kit-faq-answer__inner kit-body">
+              Sim. Todos os apps e recursos ensinados têm versão 100% gratuita. Você já pode editar vídeos de qualidade profissional sem gastar nada além do investimento no curso.
+            </div>
+          </div>
+        </div>
+
+        <div class="kit-faq-item" data-anim="fade-up" data-anim-delay="0.2">
+          <button class="kit-faq-toggle" data-anim-faq aria-expanded="false">
+            <span class="kit-faq__question kit-h4">Funciona para o meu tipo de conteúdo?</span>
+            <span class="kit-faq-toggle__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+          <div class="kit-faq-answer">
+            <div class="kit-faq-answer__inner kit-body">
+              Sim. As técnicas ensinadas se aplicam a qualquer nicho: lifestyle, fitness, empreendedorismo, músicas, beleza, gastronomia e muito mais. É edição de vídeo, não depende do seu assunto.
+            </div>
+          </div>
+        </div>
+
+        <div class="kit-faq-item" data-anim="fade-up" data-anim-delay="0.25">
+          <button class="kit-faq-toggle" data-anim-faq aria-expanded="false">
+            <span class="kit-faq__question kit-h4">Em quanto tempo consigo editar meu primeiro vídeo?</span>
+            <span class="kit-faq-toggle__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+          <div class="kit-faq-answer">
+            <div class="kit-faq-answer__inner kit-body">
+              No mesmo dia. A maioria dos alunos finaliza e publica o primeiro vídeo editado nas primeiras horas após o acesso.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER (kit)
+       ═══════════════════════════════════════════ -->
+  <footer id="footer" class="kit-section kit-footer kit-bg-dark">
+    <div class="kit-container" style="text-align: center;">
+      <p class="kit-footer__copy kit-caption">
+        © 2026 Edição Ninja. Todos os direitos reservados.
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- ═══ Dependências CDN (defer: download em paralelo, execução após parse) ═══ -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@latest/dist/lenis.min.js" defer></script>
+
+  <!-- ═══ Animações do Kit ═══ -->
+  <script src="assets/js/animations.js" defer></script>
+
+  <!-- ═══ Gradient Bars Background (GBG) — efeito de barras pulsantes no hero ═══ -->  <script>
+    (function () {
+      'use strict';
+
+      function calcScale(index, total) {
+        var position         = index / (total - 1);
+        var maxHeight        = 100;
+        var minHeight        = 30;
+        var distFromCenter   = Math.abs(position - 0.5);
+        var heightPercentage = Math.pow(distFromCenter * 2, 1.2);
+        return (minHeight + (maxHeight - minHeight) * heightPercentage) / 100;
+      }
+
+      document.querySelectorAll('.gbg[data-gbg]').forEach(function (section) {
+        var numBars  = parseInt(section.dataset.gbgBars || '7', 10);
+        var from     = section.dataset.gbgFrom     || 'rgba(10, 116, 255, 0.45)';
+        var duration = parseFloat(section.dataset.gbgDuration || '2');
+
+        var container = section.querySelector('.gbg__bars');
+        if (!container) return;
+
+        var inner = document.createElement('div');
+        inner.className = 'gbg__bars-inner';
+
+        for (var i = 0; i < numBars; i++) {
+          var bar = document.createElement('div');
+          bar.className = 'gbg__bar';
+
+          var scale = calcScale(i, numBars);
+          bar.style.setProperty('--gbg-scale',    String(scale.toFixed(4)));
+          bar.style.setProperty('--gbg-from',     from);
+          bar.style.setProperty('--gbg-duration', duration + 's');
+          bar.style.animationDelay = (i * 0.1).toFixed(1) + 's';
+
+          inner.appendChild(bar);
+        }
+
+        container.appendChild(inner);
+      });
+    })();
+  </script>
+
+  <!-- ═══ Video Carousel — loop infinito com drag ═══ -->
+  <script>
+    (function () {
+      'use strict';
+
+      var GAP = 24; // deve bater com o gap do CSS em .vid-carousel__track
+
+      var carousel = document.getElementById('vid-carousel');
+      if (!carousel) return;
+
+      var track = document.getElementById('vid-track');
+      var originals = Array.from(track.querySelectorAll('.vid-carousel__item'));
+      var N = originals.length; // 5 vídeos reais
+
+      /* ─── Clona o conjunto completo em ambas as extremidades ─────────────────
+         Layout final: [V1c V2c V3c V4c V5c | V1 V2 V3 V4 V5 | V1c V2c V3c V4c V5c]
+         Índices:       0   1   2   3   4      5  6  7  8  9     10  11  12  13  14
+         Reais: 5 a 9; início da reprodução: cur = N = 5
+      ─────────────────────────────────────────────────────────────────────── */
+
+      // prepend: inserir em ordem reversa para que o DOM fique V1c…V5c
+      originals.slice().reverse().forEach(function (item) {
+        var c = item.cloneNode(true);
+        c.setAttribute('aria-hidden', 'true');
+        track.insertBefore(c, track.firstChild);
+      });
+
+      // append: inserir em ordem direta
+      originals.forEach(function (item) {
+        var c = item.cloneNode(true);
+        c.setAttribute('aria-hidden', 'true');
+        track.appendChild(c);
+      });
+
+      var items  = Array.from(track.querySelectorAll('.vid-carousel__item'));
+      var videos = items.map(function (el) { return el.querySelector('video'); });
+      var cur    = N; // aponta para o primeiro item real
+
+      /* ─── Helpers de posição ─── */
+      function itemW() { return items[0] ? items[0].offsetWidth : 0; }
+
+      function calcX(idx) {
+        var w = itemW();
+        return -(idx * (w + GAP)) + (carousel.offsetWidth - w) / 2;
+      }
+
+      function moveTrack(animated) {
+        track.style.transition = animated
+          ? 'transform 0.65s cubic-bezier(0.4, 0, 0.2, 1)'
+          : 'none';
+        track.style.transform = 'translateX(' + calcX(cur) + 'px)';
+      }
+
+      function syncActive() {
+        items.forEach(function (el, i) { el.classList.toggle('is-active', i === cur); });
+      }
+
+      function pauseOthers(keep) {
+        videos.forEach(function (v, i) {
+          if (v && i !== keep) { v.pause(); v.currentTime = 0; }
+        });
+      }
+
+      function playAt(idx) {
+        var v = videos[idx];
+        if (v) v.play().catch(function () {});
+      }
+
+      function goTo(idx, animated) {
+        animated = animated !== false;
+        pauseOthers(idx);
+        cur = idx;
+        syncActive();
+        moveTrack(animated);
+        playAt(idx);
+      }
+
+      /* ─── Salto silencioso quando entra na zona de clones ─── */
+      track.addEventListener('transitionend', function (e) {
+        if (e.propertyName !== 'transform') return;
+        var t = cur;
+        if      (cur >= N + N) t = cur - N; // passou para os clones do fim
+        else if (cur < N)      t = cur + N; // passou para os clones do início
+        else return;                         // ainda na zona real
+
+        // Sincroniza o playhead para que o salto seja imperceptível
+        var src = videos[cur], dst = videos[t];
+        if (src && dst) dst.currentTime = src.currentTime;
+
+        pauseOthers(t);
+        cur = t;
+        syncActive();
+        moveTrack(false); // instantâneo
+        playAt(t);
+      });
+
+      /* ─── Auto-avanço quando o vídeo ativo termina ─── */
+      videos.forEach(function (v, i) {
+        if (!v) return;
+        v.addEventListener('ended', function () {
+          if (i === cur) goTo(cur + 1);
+        });
+      });
+
+      /* ─── Drag / swipe (pointer events — funciona em mouse e touch) ─── */
+      var dragging = false, startX = 0, baseX = 0;
+
+      carousel.addEventListener('pointerdown', function (e) {
+        if (e.button !== 0) return;
+        dragging = true;
+        startX   = e.clientX;
+        baseX    = calcX(cur);
+        track.style.transition = 'none';
+        carousel.setPointerCapture(e.pointerId);
+        carousel.style.cursor = 'grabbing';
+      });
+
+      carousel.addEventListener('pointermove', function (e) {
+        if (!dragging) return;
+        track.style.transform = 'translateX(' + (baseX + (e.clientX - startX)) + 'px)';
+      });
+
+      carousel.addEventListener('pointerup', function (e) {
+        if (!dragging) return;
+        dragging = false;
+        carousel.style.cursor = 'grab';
+        var delta  = e.clientX - startX;
+        var thresh = itemW() * 0.2;
+        if      (delta < -thresh) goTo(cur + 1);
+        else if (delta >  thresh) goTo(cur - 1);
+        else moveTrack(true); // volta ao centro se o arrasto foi pequeno
+      });
+
+      carousel.addEventListener('pointercancel', function () {
+        dragging = false;
+        carousel.style.cursor = 'grab';
+        moveTrack(true);
+      });
+
+      /* ─── Resize ─── */
+      var rTimer;
+      window.addEventListener('resize', function () {
+        clearTimeout(rTimer);
+        rTimer = setTimeout(function () { moveTrack(false); }, 80);
+      }, { passive: true });
+
+      if (typeof ResizeObserver !== 'undefined') {
+        new ResizeObserver(function () { moveTrack(false); }).observe(carousel);
+      }
+
+      /* ─── Inicialização ─── */
+      syncActive();
+      moveTrack(false);
+
+      /* ─── Começa a reproduzir apenas quando entra na viewport ─── */
+      var started = false;
+      new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting && !started) {
+          started = true;
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              moveTrack(false);
+              playAt(cur);
+            });
+          });
+        }
+      }, { threshold: 0.15 }).observe(carousel);
+    })();
+  </script>
+
+  <!-- ═══ Floating Tags — Diferencial Cinematic ═══ -->
+  <script>
+    (function () {
+      'use strict';
+
+      function initFloatingTags() {
+        var areas = document.querySelectorAll('.comp-tags-area');
+
+        areas.forEach(function (area) {
+          var tags    = Array.from(area.querySelectorAll('.comp-tag'));
+          var states  = [];
+          var rafId   = null;
+          var ready   = false;
+          var entered = false;
+
+          /* ── Constantes de física ── */
+          var GRAVITY       = 0.38;
+          var FRICTION_X    = 0.965;
+          var FLOOR_BOUNCE  = 0.18;
+          var WALL_BOUNCE   = 0.30;
+          var ANGULAR_DAMP  = 0.92;
+          var ANGULAR_FLOOR = 0.45;
+          var ROT_SPRING    = 0.06;
+          var ROT_MAX       = 35;
+          var SLEEP_V       = 0.35;
+          var SLEEP_R       = 0.15;
+          var FLOOR_PAD     = 8;
+          var SIDE_PAD      = 6;
+          var MARGIN        = 4;
+          var ITERS         = 3;
+
+          /* ── Inicia física: tags começam acima para o efeito de queda ── */
+          function initPhysics() {
+            var aw = area.offsetWidth;
+            var ah = area.offsetHeight;
+            if (!aw || !ah) return false;
+
+            states = tags.map(function (tag, i) {
+              var w = tag.offsetWidth  || 220;
+              var h = tag.offsetHeight || 44;
+
+              var slot = aw / tags.length;
+              var cx   = slot * i + (slot - w) / 2;
+              cx = Math.max(0, Math.min(cx, aw - w));
+              var cy = -(h + i * (h + 18));
+
+              tag.style.left      = '0';
+              tag.style.top       = '0';
+              tag.style.transform = 'translate3d(' + cx.toFixed(1) + 'px,' + cy.toFixed(1) + 'px,0) rotate(0deg)';
+
+              return {
+                el: tag, w: w, h: h,
+                cx: cx, cy: cy,
+                vx: (Math.random() - 0.5) * 1.2,
+                vy: 0,
+                rot: 0,
+                vr:  (Math.random() - 0.5) * 0.8,
+                sleeping: false,
+                dragging: false,
+                pdx: 0, pdy: 0, pcx: 0, pcy: 0,
+                pvx: 0, pvy: 0,
+                lastMX: 0
+              };
+            });
+
+            return true;
+          }
+
+          /* ── Resolução AABB com impulso + torque ── */
+          function resolveAABB(a, b) {
+            var amx = a.w + MARGIN, amy = a.h + MARGIN;
+            var bmx = b.w + MARGIN, bmy = b.h + MARGIN;
+            if (a.cx + amx <= b.cx || b.cx + bmx <= a.cx ||
+                a.cy + amy <= b.cy || b.cy + bmy <= a.cy) return;
+
+            var ox  = Math.min(a.cx + amx - b.cx, b.cx + bmx - a.cx);
+            var oy  = Math.min(a.cy + amy - b.cy, b.cy + bmy - a.cy);
+            var ddx = (a.cx + a.w / 2) < (b.cx + b.w / 2) ? 1 : -1;
+            var ddy = (a.cy + a.h / 2) < (b.cy + b.h / 2) ? 1 : -1;
+
+            if (ox < oy) {
+              if (a.dragging) {
+                b.cx += ddx * ox;  b.vx = ddx * 3.0;
+                b.vr += ddx * 0.6;  b.sleeping = false;
+              } else if (b.dragging) {
+                a.cx -= ddx * ox;  a.vx = -ddx * 3.0;
+                a.vr -= ddx * 0.6;  a.sleeping = false;
+              } else {
+                a.cx -= ddx * ox * 0.5;  b.cx += ddx * ox * 0.5;
+                var rv = a.vx - b.vx;
+                a.vx -= rv * 0.42;  b.vx += rv * 0.42;
+                a.vr -= rv * 0.03;  b.vr += rv * 0.03;
+                a.sleeping = false;  b.sleeping = false;
+              }
+            } else {
+              if (a.dragging) {
+                b.cy += ddy * oy;  b.vy = ddy * 2.5;
+                b.vr += (a.vx || a.pvx || 0) * 0.04;  b.sleeping = false;
+              } else if (b.dragging) {
+                a.cy -= ddy * oy;  a.vy = -ddy * 2.5;
+                a.vr -= (b.vx || b.pvx || 0) * 0.04;  a.sleeping = false;
+              } else {
+                a.cy -= ddy * oy * 0.5;  b.cy += ddy * oy * 0.5;
+                var rv2 = a.vy - b.vy;
+                a.vy -= rv2 * 0.42;  b.vy += rv2 * 0.42;
+                var cross = a.vx - b.vx;
+                a.vr -= cross * 0.02;  b.vr += cross * 0.02;
+                a.sleeping = false;  b.sleeping = false;
+              }
+            }
+          }
+
+          /* ── Loop principal ── */
+          function tick() {
+            var aw = area.offsetWidth;
+            var ah = area.offsetHeight;
+
+            states.forEach(function (s) {
+              if (s.dragging || s.sleeping) return;
+
+              s.vy += GRAVITY;
+              s.vx *= FRICTION_X;
+              s.vr *= ANGULAR_DAMP;
+              /* mola de retorno: puxa rot → 0 naturalmente */
+              s.vr += -s.rot * ROT_SPRING;
+              s.cx += s.vx;
+              s.cy += s.vy;
+              s.rot += s.vr;
+              /* limita rotação máxima */
+              if (s.rot > ROT_MAX)  { s.rot = ROT_MAX;  s.vr *= -0.2; }
+              if (s.rot < -ROT_MAX) { s.rot = -ROT_MAX; s.vr *= -0.2; }
+
+              /* paredes */
+              if (s.cx < SIDE_PAD)            { s.cx = SIDE_PAD;            s.vx =  Math.abs(s.vx) * WALL_BOUNCE; s.vr -= s.vy * 0.015; }
+              if (s.cx + s.w > aw - SIDE_PAD) { s.cx = aw - s.w - SIDE_PAD; s.vx = -Math.abs(s.vx) * WALL_BOUNCE; s.vr += s.vy * 0.015; }
+
+              /* teto */
+              if (s.cy < 0) { s.cy = 0; s.vy = Math.abs(s.vy) * 0.15; }
+
+              /* chão */
+              if (s.cy + s.h >= ah - FLOOR_PAD) {
+                s.cy = ah - s.h - FLOOR_PAD;
+                s.vy = -Math.abs(s.vy) * FLOOR_BOUNCE;
+                s.vx *= 0.88;
+                s.vr *= ANGULAR_FLOOR;
+                if (Math.abs(s.vy) < SLEEP_V && Math.abs(s.vx) < SLEEP_V && Math.abs(s.vr) < SLEEP_R && Math.abs(s.rot) < 1.5) {
+                  s.vy = 0;  s.vx = 0;  s.vr = 0;  s.rot = 0;  s.sleeping = true;
+                }
+              }
+            });
+
+            for (var iter = 0; iter < ITERS; iter++) {
+              for (var i = 0; i < states.length; i++) {
+                for (var j = i + 1; j < states.length; j++) {
+                  resolveAABB(states[i], states[j]);
+                }
+              }
+            }
+
+            states.forEach(function (s) {
+              if (s.dragging) return;
+              s.cx = Math.max(SIDE_PAD, Math.min(s.cx, aw - s.w - SIDE_PAD));
+              s.cy = Math.max(0, Math.min(s.cy, ah - s.h - FLOOR_PAD));
+              s.el.style.transform = 'translate3d(' + s.cx.toFixed(1) + 'px,' + s.cy.toFixed(1) + 'px,0) rotate(' + s.rot.toFixed(1) + 'deg)';
+            });
+
+            var anyAwake = states.some(function (s) { return !s.sleeping || s.dragging; });
+            if (anyAwake) {
+              rafId = requestAnimationFrame(tick);
+            } else {
+              rafId = null;
+            }
+          }
+
+          function startAnim() { if (!rafId) { rafId = requestAnimationFrame(tick); } }
+          function stopAnim()  { if (rafId) { cancelAnimationFrame(rafId); rafId = null; } }
+
+          /* ── Drag ── */
+          function setupDrag(s) {
+            s.el.addEventListener('pointerdown', function (e) {
+              e.preventDefault();
+              e.stopPropagation();
+              s.dragging = true;
+              s.sleeping = false;
+              s.vx = 0;  s.vy = 0;  s.vr = 0;
+              s.el.style.zIndex    = '50';
+              s.el.style.cursor    = 'grabbing';
+              s.el.style.boxShadow = s.el.classList.contains('comp-tag--pain')
+                ? '0 14px 36px rgba(0,0,0,0.60)'
+                : '0 14px 36px rgba(0,60,200,0.45)';
+              s.pdx = e.clientX;  s.pdy = e.clientY;
+              s.pcx = s.cx;       s.pcy = s.cy;
+              s.pvx = 0;          s.pvy = 0;
+              s.lastMX = e.clientX;
+              s.el.setPointerCapture(e.pointerId);
+              startAnim();
+            });
+
+            s.el.addEventListener('pointermove', function (e) {
+              if (!s.dragging) return;
+              var aw = area.offsetWidth;
+              var ah = area.offsetHeight;
+              var nx = Math.max(SIDE_PAD, Math.min(s.pcx + (e.clientX - s.pdx), aw - s.w - SIDE_PAD));
+              var ny = Math.max(0, Math.min(s.pcy + (e.clientY - s.pdy), ah - s.h));
+
+              /* velocidade instantânea → rotação dinâmica (suave) */
+              var dx = e.clientX - s.lastMX;
+              s.lastMX = e.clientX;
+              s.pvx = (nx - s.cx) * 0.55;
+              s.pvy = (ny - s.cy) * 0.55;
+              var tilt = Math.min(12, Math.max(-12, dx * 0.35));
+              s.rot += tilt * 0.12;
+
+              s.cx = nx;  s.cy = ny;
+              s.el.style.transform = 'translate3d(' + nx.toFixed(1) + 'px,' + ny.toFixed(1) + 'px,0) rotate(' + s.rot.toFixed(1) + 'deg) scale(1.04)';
+
+              states.forEach(function (o) {
+                if (o === s || !o.sleeping) return;
+                if (Math.abs(o.cx - s.cx) < (s.w + o.w + 20) &&
+                    Math.abs(o.cy - s.cy) < (s.h + o.h + 20)) { o.sleeping = false; }
+              });
+            });
+
+            function onRelease() {
+              if (!s.dragging) return;
+              s.vx = s.pvx;
+              s.vy = s.pvy;
+              s.vr = s.pvx * 0.12;
+              s.dragging = false;
+              s.el.style.zIndex    = '';
+              s.el.style.cursor    = 'grab';
+              s.el.style.boxShadow = '';
+              startAnim();
+            }
+            s.el.addEventListener('pointerup',     onRelease);
+            s.el.addEventListener('pointercancel', onRelease);
+          }
+
+          /* ── IntersectionObserver ── */
+          new IntersectionObserver(function (entries) {
+            if (entries[0].isIntersecting) {
+              if (!ready) {
+                if (initPhysics()) { states.forEach(setupDrag); ready = true; }
+              }
+              if (!entered) { entered = true; startAnim(); }
+              else if (states.some(function (s) { return !s.sleeping && !s.dragging; })) startAnim();
+            } else {
+              stopAnim();
+            }
+          }, { threshold: 0.05 }).observe(area);
+
+          /* ── Resize ── */
+          var rTimer;
+          window.addEventListener('resize', function () {
+            clearTimeout(rTimer);
+            rTimer = setTimeout(function () {
+              if (!ready) return;
+              var aw = area.offsetWidth;
+              var ah = area.offsetHeight;
+              states.forEach(function (s) {
+                s.w = s.el.offsetWidth;  s.h = s.el.offsetHeight;
+                s.cx = Math.max(0, Math.min(s.cx, aw - s.w));
+                s.cy = Math.max(0, Math.min(s.cy, ah - s.h));
+                s.sleeping = false;
+              });
+              startAnim();
+            }, 150);
+          }, { passive: true });
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initFloatingTags);
+      } else {
+        setTimeout(initFloatingTags, 60);
+      }
+    })();
+  </script>
+
+  <!-- Scroll Float Cards — parallax + fadeInUp -->
+  <script>
+    (function () {
+      'use strict';
+      function initSfloat() {
+        var cards = document.querySelectorAll('.sfloat__card:not([data-sfloat-fadein])');
+        var centerCards = document.querySelectorAll('.sfloat__card[data-sfloat-fadein]');
+
+        /* Center card: fadeInUp via IntersectionObserver */
+        if ('IntersectionObserver' in window) {
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting) {
+                e.target.classList.add('sfloat--visible');
+                io.unobserve(e.target);
+              }
+            });
+          }, { threshold: 0.25 });
+          centerCards.forEach(function (c) { io.observe(c); });
+        } else {
+          centerCards.forEach(function (c) { c.classList.add('sfloat--visible'); });
+        }
+
+        /* Outer cards: parallax translateX + rotateZ tied to scroll */
+        if (!cards.length) return;
+        var ticking = false;
+        function update() {
+          ticking = false;
+          var scrollY = window.scrollY || window.pageYOffset;
+          var vh = window.innerHeight;
+          cards.forEach(function (card) {
+            var rect = card.getBoundingClientRect();
+            var centerY = scrollY + rect.top + rect.height / 2;
+            /* progress: -1 (above viewport) → 0 (center) → +1 (below viewport) */
+            var progress = (scrollY + vh / 2 - centerY) / (vh * 0.7);
+            progress = Math.max(-1, Math.min(1, progress));
+            var tx = parseFloat(card.dataset.sfloatTx || 4);
+            var rz = parseFloat(card.dataset.sfloatRz || 0.3);
+            var dir = parseFloat(card.dataset.sfloatDir || 1);
+            var x = tx * progress * dir;
+            var r = rz * progress * dir;
+            card.style.transform = 'translateX(' + x + 'px) rotateZ(' + r + 'deg)';
+          });
+        }
+        window.addEventListener('scroll', function () {
+          if (!ticking) { requestAnimationFrame(update); ticking = true; }
+        }, { passive: true });
+        update();
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSfloat);
+      } else {
+        initSfloat();
+      }
+    })();
+  </script>
+  <!-- Entregáveis: data de Brasília + transição para dark no scroll -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ── Data de Brasília no span ── */
+      function setBrasiliaDate() {
+        var el = document.getElementById('entrega-bonus-date');
+        if (!el) return;
+        try {
+          var fmt = new Intl.DateTimeFormat('pt-BR', {
+            timeZone: 'America/Sao_Paulo',
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric'
+          });
+          el.textContent = fmt.format(new Date());
+        } catch (e) {
+          /* fallback sem timezone */
+          var d = new Date();
+          el.textContent =
+            String(d.getDate()).padStart(2, '0') + '/' +
+            String(d.getMonth() + 1).padStart(2, '0') + '/' +
+            d.getFullYear();
+        }
+      }
+
+      /* ── Transição dark ao entrar no viewport ── */
+      function initEntregaDark() {
+        var section = document.getElementById('entregaveis');
+        if (!section) return;
+        if (!('IntersectionObserver' in window)) {
+          section.classList.add('page-entrega--dark');
+          return;
+        }
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              section.classList.add('page-entrega--dark');
+            } else {
+              /* remove apenas se a seção sair pelo topo (usuário subiu) */
+              if (entry.boundingClientRect.top > 0) {
+                section.classList.remove('page-entrega--dark');
+              }
+            }
+          });
+        }, { threshold: 0.05 });
+        io.observe(section);
+      }
+
+      /* ── Animação de check sequencial no checklist ── */
+      function initChecklistAnim() {
+        var rows = document.querySelectorAll('#entrega-anim-checklist .page-entrega__anim-row');
+        if (!rows.length) return;
+        var idx = 0;
+        var STEP = 1300;
+        var PAUSE = 2200;
+
+        function reset() {
+          rows.forEach(function (r) { r.classList.remove('page-entrega__anim-row--checked'); });
+          idx = 0;
+        }
+
+        function markNext() {
+          if (idx < rows.length) {
+            rows[idx].classList.add('page-entrega__anim-row--checked');
+            idx++;
+            setTimeout(markNext, STEP);
+          } else {
+            setTimeout(function () { reset(); setTimeout(markNext, 500); }, PAUSE);
+          }
+        }
+
+        /* Só inicia quando o card estiver visível */
+        if ('IntersectionObserver' in window) {
+          var card = document.getElementById('entrega-anim-checklist');
+          var started = false;
+          var cio = new IntersectionObserver(function (entries) {
+            if (entries[0].isIntersecting && !started) {
+              started = true;
+              setTimeout(markNext, 600);
+            }
+          }, { threshold: 0.5 });
+          if (card) cio.observe(card);
+        } else {
+          setTimeout(markNext, 1000);
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function () {
+          setBrasiliaDate();
+          initEntregaDark();
+          initChecklistAnim();
+        });
+      } else {
+        setBrasiliaDate();
+        initEntregaDark();
+        initChecklistAnim();
+      }
+    })();
+  </script>
+
+</body>
+</html>
+
+
+

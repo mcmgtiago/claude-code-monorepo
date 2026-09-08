@@ -1,0 +1,63 @@
+<svg width="900" height="1200" viewBox="0 0 900 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="80" x2="760" y2="1120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4A0F20"/>
+      <stop offset="0.52" stop-color="#250712"/>
+      <stop offset="1" stop-color="#13040C"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(690 320) rotate(127.694) scale(431.874 336.359)">
+      <stop stop-color="#FF6A93" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#FF6A93" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="215" y1="769" x2="640" y2="769" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF3F5"/>
+      <stop offset="1" stop-color="#EF4A79"/>
+    </linearGradient>
+    <filter id="shadow" x="120" y="102" width="548" height="776" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000000" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="1200" rx="34" fill="url(#bg)"/>
+  <rect width="900" height="1200" rx="34" fill="url(#glow)"/>
+
+  <g opacity="0.26" stroke="#C84A73" stroke-width="2">
+    <path d="M134 124C150 108 162 96 178 80"/>
+    <path d="M194 124C210 108 222 96 238 80"/>
+    <path d="M164 94H208"/>
+    <path d="M134 190C150 174 162 162 178 146"/>
+    <path d="M194 190C210 174 222 162 238 146"/>
+    <path d="M164 160H208"/>
+    <path d="M134 256C150 240 162 228 178 212"/>
+    <path d="M194 256C210 240 222 228 238 212"/>
+    <path d="M164 226H208"/>
+    <path d="M662 134C678 118 690 106 706 90"/>
+    <path d="M722 134C738 118 750 106 766 90"/>
+    <path d="M692 104H736"/>
+    <path d="M618 228C634 212 646 200 662 184"/>
+    <path d="M678 228C694 212 706 200 722 184"/>
+    <path d="M648 198H692"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="162" y="144" width="464" height="692" rx="28" fill="#6E1732"/>
+    <rect x="162" y="144" width="464" height="692" rx="28" fill="url(#glow)"/>
+    <path d="M494 204C434 216 370 266 334 338C294 416 286 508 302 586C314 648 344 700 392 742C304 710 244 626 234 522C220 390 280 256 392 198C426 180 460 170 494 167V204Z" fill="#F6D5D7" fill-opacity="0.92"/>
+    <path d="M488 206C540 210 588 250 608 312C626 366 614 426 576 466C544 500 500 518 454 518C442 518 432 516 420 514C472 496 514 452 530 394C544 346 538 292 512 248C504 234 496 220 488 206Z" fill="#E9B7B9" fill-opacity="0.82"/>
+    <rect x="162" y="144" width="464" height="692" rx="28" fill="url(#bg)" fill-opacity="0.42"/>
+  </g>
+
+  <circle cx="302" cy="902" r="146" fill="#5E0D27" opacity="0.38"/>
+  <circle cx="642" cy="870" r="168" fill="#A11748" opacity="0.18"/>
+
+  <path d="M215 769H640" stroke="#F6E7EA" stroke-opacity="0.48" stroke-width="2"/>
+  <circle cx="450" cy="769" r="8" fill="#F6E7EA" fill-opacity="0.8"/>
+
+  <text x="212" y="716" fill="url(#accent)" font-family="Cormorant Garamond, serif" font-size="110" letter-spacing="-4">Guia Vital</text>
+  <text x="215" y="782" fill="#F2DEE3" font-family="Mulish, Arial, sans-serif" font-size="28" font-weight="600">Estratégias práticas para fortalecer o corpo,</text>
+  <text x="215" y="820" fill="#F2DEE3" font-family="Mulish, Arial, sans-serif" font-size="28" font-weight="600">desinflamar o organismo e criar novos hábitos.</text>
+  <text x="215" y="1030" fill="#F2DEE3" fill-opacity="0.72" font-family="Mulish, Arial, sans-serif" font-size="24">Conteúdo educativo</text>
+
+  <rect x="215" y="878" width="210" height="52" rx="26" fill="#EA4F7D"/>
+  <text x="259" y="912" fill="#FFF8F8" font-family="Mulish, Arial, sans-serif" font-size="24" font-weight="700">Bem-estar</text>
+</svg>

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Painel local para enviar modelos aprovados da WhatsApp Cloud API a contatos com consentimento.">
+    <title>Envio WhatsApp</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+    <header class="topbar">
+      <div class="brand">
+        <p class="eyebrow">OPERAÇÃO LOCAL</p>
+        <h1>Envio WhatsApp</h1>
+      </div>
+      <div id="api-status" class="status-chip status-chip--pending" role="status">Verificando API</div>
+    </header>
+
+    <main id="main-content" class="shell">
+      <section class="intro" aria-labelledby="intro-title">
+        <div>
+          <p class="eyebrow">MODELOS APROVADOS</p>
+          <h2 id="intro-title">Envie com controle de consentimento.</h2>
+          <p>Cadastre apenas pessoas que autorizaram o contato, configure os modelos aprovados na Meta e acompanhe cada envio.</p>
+        </div>
+        <div class="notice" id="setup-notice">
+          <strong>Configuração necessária</strong>
+          <span>Adicione as credenciais da Cloud API no arquivo <code>.env</code> antes de iniciar uma campanha.</span>
+        </div>
+      </section>
+
+      <section class="metrics" aria-label="Resumo operacional">
+        <div class="metric"><span>Contatos aptos</span><strong id="eligible-count">0</strong></div>
+        <div class="metric"><span>Modelos ativos</span><strong id="template-count">0/5</strong></div>
+        <div class="metric"><span>Envios registrados</span><strong id="sent-count">0</strong></div>
+      </section>
+
+      <section class="panel" aria-labelledby="contacts-title">
+        <div class="section-heading">
+          <div>
+            <p class="step">01</p>
+            <h2 id="contacts-title">Contatos com opt-in</h2>
+          </div>
+          <p>Use o formato internacional: <code>+5511999999999</code>.</p>
+        </div>
+
+        <form id="contact-form" class="contact-form">
+          <div class="field">
+            <label for="contact-name">Nome</label>
+            <input id="contact-name" name="name" type="text" maxlength="120" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="contact-phone">WhatsApp</label>
+            <input id="contact-phone" name="phone" type="tel" inputmode="tel" placeholder="+5511999999999" autocomplete="tel" required>
+          </div>
+          <label class="consent-control" for="contact-consent">
+            <input id="contact-consent" name="consent" type="checkbox" required>
+            <span>Tenho o consentimento explícito desta pessoa para receber mensagens no WhatsApp.</span>
+          </label>
+          <button class="button button--primary" type="submit">Adicionar contato</button>
+        </form>
+
+        <div class="table-meta">
+          <p id="selection-summary">Nenhum contato selecionado.</p>
+          <button id="select-eligible" class="button button--text" type="button">Selecionar aptos</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col"><span class="sr-only">Selecionar</span></th>
+                <th scope="col">Contato</th>
+                <th scope="col">Telefone</th>
+                <th scope="col">Consentimento</th>
+                <th scope="col"><span class="sr-only">Ações</span></th>
+              </tr>
+            </thead>
+            <tbody id="contacts-body"></tbody>
+          </table>
+        </div>
+        <p id="empty-contacts" class="empty-state">Nenhum contato cadastrado ainda.</p>
+      </section>
+
+      <section class="panel" aria-labelledby="templates-title">
+        <div class="section-heading">
+          <div>
+            <p class="step">02</p>
+            <h2 id="templates-title">Cinco modelos da Meta</h2>
+          </div>
+          <p>O texto é criado e aprovado no WhatsApp Manager. Aqui você informa o nome exato do modelo.</p>
+        </div>
+        <div id="templates-grid" class="templates-grid"></div>
+      </section>
+
+      <section class="panel campaign-panel" aria-labelledby="campaign-title">
+        <div class="section-heading">
+          <div>
+            <p class="step">03</p>
+            <h2 id="campaign-title">Iniciar campanha</h2>
+          </div>
+          <p>Os envios são sequenciais. O sistema interrompe contatos que perderem o opt-in.</p>
+        </div>
+
+        <form id="campaign-form" class="campaign-form">
+          <fieldset>
+            <legend>Modelos para enviar</legend>
+            <div id="campaign-templates" class="model-options"></div>
+          </fieldset>
+          <div class="field delay-field">
+            <label for="delay-seconds">Intervalo entre envios</label>
+            <div class="input-suffix">
+              <input id="delay-seconds" name="delaySeconds" type="number" min="5" max="3600" step="1" required>
+              <span>segundos</span>
+            </div>
+          </div>
+          <div class="campaign-action">
+            <p id="campaign-summary">Selecione contatos aptos e pelo menos um modelo ativo.</p>
+            <button class="button button--primary" type="submit">Iniciar envio</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel" aria-labelledby="history-title">
+        <div class="section-heading">
+          <div>
+            <p class="step">04</p>
+            <h2 id="history-title">Histórico</h2>
+          </div>
+          <p id="history-copy">As campanhas recentes aparecem aqui.</p>
+        </div>
+        <div id="campaigns-list" class="campaigns-list"></div>
+        <p id="empty-campaigns" class="empty-state">Ainda não há campanhas registradas.</p>
+      </section>
+    </main>
+
+    <footer>Este painel roda somente em <code>127.0.0.1</code> e usa a API oficial da Meta.</footer>
+    <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+    <script src="/app.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,335 @@
+/* ═══════════════════════════════════════════════════════════
+   KIT: canadadsgn-infoproduto — COMPONENTES
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Layout base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--kit-bg-dark);
+  overflow-x: hidden;
+}
+
+.kit-container {
+  max-width: var(--kit-container-max);
+  margin: 0 auto;
+  padding: 0 var(--kit-section-px);
+}
+
+.kit-section {
+  padding: var(--kit-section-py) 0;
+  position: relative;
+}
+
+.kit-section--dark {
+  background-color: var(--kit-bg-dark);
+}
+
+.kit-section--dark-alt {
+  background-color: var(--kit-bg-dark-alt);
+}
+
+/* ── Caixa de destaque (texto com realce magenta) ── */
+.kit-caixa-destaque {
+  background: var(--kit-realce-fundo);
+  padding: var(--kit-espaco-vertical) var(--kit-espaco-horizontal);
+  position: relative;
+  border-left: var(--kit-espessura-bordas) solid var(--kit-cor-bordas);
+  border-right: var(--kit-espessura-bordas) solid var(--kit-cor-bordas);
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.kit-texto-gradiente {
+  background: var(--kit-gradient-accent-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.kit-caixa-destaque::before,
+.kit-caixa-destaque::after {
+  content: '';
+  position: absolute;
+  width: var(--kit-tamanho-marcadores);
+  height: var(--kit-tamanho-marcadores);
+  border-radius: 50%;
+  background-color: var(--kit-cor-marcadores);
+  pointer-events: none;
+}
+
+.kit-caixa-destaque::before {
+  top: -5px;
+  left: -5px;
+}
+
+.kit-caixa-destaque::after {
+  bottom: -5px;
+  right: -5px;
+}
+
+/* ── Botão principal (CTA) ── */
+.kit-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--kit-gap-sm);
+  background: var(--kit-gradient-btn);
+  color: var(--kit-text-primary);
+  font-family: var(--kit-font-heading);
+  font-size: var(--kit-fs-body);
+  font-weight: var(--kit-fw-bold);
+  letter-spacing: var(--kit-ls-label);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 16px 40px;
+  border: none;
+  border-radius: var(--kit-radius-md);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--kit-shadow-btn);
+  transition: all 0.5s ease;
+  white-space: nowrap;
+}
+
+.kit-btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: var(--kit-shadow-btn);
+}
+
+/* Efeito de brilho deslizante no botão */
+.kit-btn-primary::before {
+  content: '';
+  background: var(--kit-gradient-btn-shine);
+  width: 90px;
+  height: 160%;
+  position: absolute;
+  transform: translateX(-50%) skew(-25deg);
+  bottom: 0;
+  user-select: none;
+  pointer-events: none;
+  animation: kit-shinery 3s infinite ease-in-out;
+  filter: blur(4px);
+}
+
+/* ── Card genérico ── */
+.kit-card {
+  background: var(--kit-bg-card);
+  border: 1px solid var(--kit-border-subtle);
+  border-radius: var(--kit-radius-lg);
+  padding: var(--kit-card-padding);
+  transition: all 0.3s ease;
+}
+
+.kit-card:hover {
+  transform: scale(1.03);
+  border-color: var(--kit-primary);
+}
+
+/* ── Imagem com hover (grayscale container) ── */
+.kit-img-hover-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  overflow: hidden;
+}
+
+.kit-img-hover {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.kit-img-hover-container:hover .kit-img-hover {
+  filter: grayscale(100%) blur(1px);
+}
+
+.kit-img-hover:hover {
+  filter: grayscale(0) blur(0) !important;
+  transform: translateX(-10px) scale(1);
+  z-index: 2;
+}
+
+.kit-img-hover-container:hover .kit-img-hover:not(:hover) {
+  pointer-events: none;
+}
+
+/* Caption que aparece no hover */
+.kit-img-hover__caption {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  display: block;
+  font-weight: var(--kit-fw-light);
+  font-size: 1em;
+  font-family: var(--kit-font-body);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.19);
+  border: 1px solid rgba(211, 234, 255, 0.25);
+  color: var(--kit-text-accent);
+  border-radius: var(--kit-radius-pill);
+  top: -34px;
+  left: 50%;
+  padding: 2.5px 23px;
+  transition: all ease 0.5s;
+  width: max-content;
+  pointer-events: none;
+}
+
+.kit-img-hover__caption::before {
+  content: "";
+  height: 1px;
+  width: 85px;
+  position: absolute;
+  bottom: -1%;
+  left: 50%;
+  transform: translateX(-50%) scaleX(1);
+  background: var(--kit-gradient-caption-glow);
+  box-shadow: 0 9px 27.1px 0 #BEE0C3;
+  border-radius: var(--kit-radius-pill);
+}
+
+.kit-img-hover:hover .kit-img-hover__caption {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ── Efeito reflexo (imagens de depoimento/print) ── */
+.kit-efeito-reflexo {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--kit-radius-lg);
+}
+
+.kit-efeito-reflexo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--kit-radius-lg);
+}
+
+/* ── Grid flexível ── */
+.kit-grid {
+  display: grid;
+  gap: var(--kit-gap-lg);
+}
+
+.kit-grid--2 { grid-template-columns: repeat(2, 1fr); }
+.kit-grid--3 { grid-template-columns: repeat(3, 1fr); }
+.kit-grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 1024px) {
+  .kit-grid--4 { grid-template-columns: repeat(2, 1fr); }
+  .kit-grid--3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 767px) {
+  .kit-grid--2,
+  .kit-grid--3,
+  .kit-grid--4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Flex utilities ── */
+.kit-flex {
+  display: flex;
+  align-items: center;
+}
+
+.kit-flex--col {
+  flex-direction: column;
+}
+
+.kit-flex--center {
+  justify-content: center;
+  align-items: center;
+}
+
+.kit-flex--wrap {
+  flex-wrap: wrap;
+}
+
+/* ── Texto centrado ── */
+.kit-text-center {
+  text-align: center;
+}
+
+/* ── Scroll entrances (usado com IntersectionObserver no JS) ── */
+[data-anim="scroll-eb"] {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, filter 0.8s ease, transform 0.8s ease;
+}
+
+[data-anim="scroll-eb"].kit-visible {
+  opacity: 1 !important;
+  filter: blur(0px) !important;
+  transform: translateY(0px) !important;
+}
+
+/* Stagger children (filhos de containers com data-anim-stagger) */
+[data-anim-stagger] > * {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, filter 0.8s ease, transform 0.8s ease;
+}
+
+[data-anim-stagger] > *.kit-visible {
+  opacity: 1 !important;
+  filter: blur(0px) !important;
+  transform: translateY(0px) !important;
+}
+
+/* ── Icon box ── */
+.kit-icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--kit-gap-md);
+  padding: var(--kit-card-padding);
+}
+
+.kit-icon-box__icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kit-icon-box__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.kit-icon-box__title {
+  font-family: var(--kit-font-heading);
+  font-size: var(--kit-fs-h4);
+  font-weight: var(--kit-fw-semibold);
+  color: var(--kit-text-primary);
+}
+
+.kit-icon-box__desc {
+  font-size: var(--kit-fs-body);
+  color: var(--kit-text-muted);
+  line-height: var(--kit-lh-body);
+}
+
+/* ── Imagem responsiva ── */
+.kit-img-responsive {
+  width: 100%;
+  height: auto;
+  display: block;
+}

@@ -1,0 +1,967 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Assessoria contábil, fiscal e empresarial em Novo Hamburgo para empresas que querem crescer com segurança."
+    />
+    <meta name="theme-color" content="#060b35" />
+    <title>Partner Contabilidade e Assessoria Empresarial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              partner: {
+                navy: "#060b35",
+                royal: "#0a2777",
+                accent: "#0271ae",
+                light: "#f3f3f3",
+                text: "#333333",
+              },
+            },
+            fontFamily: { sans: ["Plus Jakarta Sans", "sans-serif"] },
+            boxShadow: {
+              soft: "0 16px 45px rgba(6, 11, 53, 0.09)",
+              lift: "0 24px 60px rgba(6, 11, 53, 0.15)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      body {
+        color: #333333;
+        background: #ffffff;
+      }
+      .hero-pattern {
+        background-image:
+          radial-gradient(
+            circle at 16% 16%,
+            rgba(2, 113, 174, 0.12),
+            transparent 24%
+          ),
+          linear-gradient(115deg, #ffffff 0%, #ffffff 48%, #f3f3f3 100%);
+      }
+      .dot-pattern {
+        background-image: radial-gradient(
+          rgba(255, 255, 255, 0.18) 1px,
+          transparent 1px
+        );
+        background-size: 18px 18px;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+        transition:
+          opacity 0.65s ease,
+          transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .focus-ring:focus-visible {
+        outline: 3px solid #0271ae;
+        outline-offset: 3px;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          transition-duration: 0.01ms !important;
+        }
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="overflow-x-hidden antialiased">
+    <header
+      class="sticky top-0 z-40 border-b border-partner-navy/5 bg-white/95 shadow-[0_8px_30px_rgba(6,11,53,.06)] backdrop-blur"
+    >
+      <nav
+        class="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
+        aria-label="Navegação principal"
+      >
+        <a
+          href="#inicio"
+          class="focus-ring flex shrink-0 items-center gap-3 rounded-xl"
+          aria-label="Partner, início"
+        >
+          <span
+            class="grid size-10 place-items-center rounded-xl bg-partner-navy text-lg font-extrabold text-white"
+            >P</span
+          >
+          <span class="leading-tight">
+            <strong class="block text-lg tracking-tight text-partner-navy"
+              >Partner</strong
+            >
+            <span
+              class="hidden text-[10px] font-semibold uppercase tracking-[.12em] text-partner-accent sm:block"
+              >Assessoria Empresarial</span
+            >
+          </span>
+        </a>
+
+        <div class="hidden items-center gap-7 lg:flex">
+          <a
+            class="focus-ring rounded-lg text-sm font-semibold text-partner-text transition-colors hover:text-partner-accent"
+            href="#inicio"
+            >Início</a
+          >
+          <a
+            class="focus-ring rounded-lg text-sm font-semibold text-partner-text transition-colors hover:text-partner-accent"
+            href="#sobre"
+            >Sobre Nós</a
+          >
+          <a
+            class="focus-ring rounded-lg text-sm font-semibold text-partner-text transition-colors hover:text-partner-accent"
+            href="#servicos"
+            >Serviços</a
+          >
+          <a
+            class="focus-ring rounded-lg text-sm font-semibold text-partner-text transition-colors hover:text-partner-accent"
+            href="#contato"
+            >Contato</a
+          >
+        </div>
+
+        <a
+          href="https://wa.me/5551996945089"
+          class="focus-ring hidden items-center gap-2 whitespace-nowrap rounded-xl border border-partner-navy/10 bg-white px-5 py-3 text-sm font-bold text-partner-royal shadow-soft transition hover:border-partner-accent hover:text-partner-accent active:scale-[.98] lg:flex"
+        >
+          <i
+            data-lucide="phone"
+            class="size-4 text-partner-royal"
+            aria-hidden="true"
+          ></i>
+          Fale Conosco
+        </a>
+        <button
+          id="menu-button"
+          class="focus-ring grid size-11 place-items-center rounded-xl border border-partner-navy/15 text-partner-navy lg:hidden"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <i data-lucide="menu" class="size-5" aria-hidden="true"></i>
+        </button>
+      </nav>
+      <div
+        id="mobile-menu"
+        class="hidden border-t border-partner-navy/10 bg-white px-4 py-5 lg:hidden"
+      >
+        <div class="mx-auto grid max-w-7xl gap-2">
+          <a
+            class="rounded-xl px-4 py-3 font-semibold hover:bg-partner-light"
+            href="#inicio"
+            >Início</a
+          >
+          <a
+            class="rounded-xl px-4 py-3 font-semibold hover:bg-partner-light"
+            href="#sobre"
+            >Sobre Nós</a
+          >
+          <a
+            class="rounded-xl px-4 py-3 font-semibold hover:bg-partner-light"
+            href="#servicos"
+            >Serviços</a
+          >
+          <a
+            class="rounded-xl px-4 py-3 font-semibold hover:bg-partner-light"
+            href="#contato"
+            >Contato</a
+          >
+          <a
+            class="mt-2 flex items-center justify-center gap-2 rounded-xl bg-partner-royal px-5 py-3 font-bold text-white"
+            href="https://wa.me/5551996945089"
+          >
+            <i data-lucide="phone" class="size-4" aria-hidden="true"></i> Fale
+            Conosco
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section
+        id="inicio"
+        class="hero-pattern relative min-h-[calc(100dvh-72px)] overflow-hidden"
+      >
+        <div
+          class="mx-auto grid min-h-[calc(100dvh-72px)] max-w-7xl items-center gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[1.05fr_.95fr] lg:px-8 lg:py-12"
+        >
+          <div class="relative z-10 max-w-2xl">
+            <p
+              class="mb-5 inline-flex items-center gap-2 rounded-xl border border-partner-accent/20 bg-white px-3 py-2 text-xs font-bold uppercase tracking-[.12em] text-partner-royal shadow-sm"
+            >
+              <i
+                data-lucide="landmark"
+                class="size-4 text-partner-accent"
+                aria-hidden="true"
+              ></i>
+              Contabilidade que orienta decisões
+            </p>
+            <h1
+              class="max-w-[16ch] text-4xl font-extrabold leading-[1.06] tracking-[-.045em] text-partner-navy sm:text-5xl lg:text-[3.45rem]"
+            >
+              Assessoria Contábil e Empresarial que Impulsiona seu Crescimento.
+            </h1>
+            <p
+              class="mt-6 max-w-[58ch] text-base leading-relaxed text-partner-text/80 lg:text-lg"
+            >
+              Soluções em contabilidade, consultoria fiscal e gestão empresarial
+              para seu negócio crescer com segurança.
+            </p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="https://wa.me/5551996945089?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta."
+                class="focus-ring inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-partner-royal px-6 py-3.5 font-bold text-white shadow-[0_14px_30px_rgba(10,39,119,.22)] transition hover:bg-partner-accent active:scale-[.98]"
+              >
+                Consulta Gratuita
+                <i
+                  data-lucide="arrow-right"
+                  class="size-4"
+                  aria-hidden="true"
+                ></i>
+              </a>
+              <a
+                href="#servicos"
+                class="focus-ring inline-flex items-center justify-center whitespace-nowrap rounded-xl border-2 border-partner-royal px-6 py-3.5 font-bold text-partner-royal transition hover:bg-partner-royal hover:text-white active:scale-[.98]"
+                >Nossos Serviços</a
+              >
+            </div>
+          </div>
+
+          <div class="relative mx-auto w-full max-w-[580px] lg:mr-0">
+            <div
+              class="relative aspect-[4/3] overflow-hidden rounded-2xl bg-partner-light shadow-lift"
+            >
+              <img
+                src="partner-hero-profissional.png"
+                alt="Empresário em escritório contemporâneo"
+                class="h-full w-full object-cover"
+                width="1536"
+                height="1024"
+                fetchpriority="high"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-partner-navy/35 via-transparent to-transparent"
+                aria-hidden="true"
+              ></div>
+            </div>
+            <div
+              class="absolute -bottom-5 left-3 flex items-center gap-3 rounded-xl border border-white/30 bg-partner-navy px-4 py-3 text-white shadow-lift sm:left-[-22px] sm:px-5"
+            >
+              <span
+                class="grid size-10 place-items-center rounded-xl bg-white/10"
+                ><i data-lucide="award" class="size-5" aria-hidden="true"></i
+              ></span>
+              <span
+                ><strong class="block text-xl">10+</strong
+                ><small class="text-white/75">Anos de experiência</small></span
+              >
+            </div>
+            <div
+              class="absolute -right-2 top-5 flex items-center gap-3 rounded-xl bg-white px-4 py-3 text-partner-navy shadow-lift sm:right-[-18px]"
+            >
+              <span
+                class="grid size-10 place-items-center rounded-xl bg-partner-accent/10 text-partner-accent"
+                ><i data-lucide="users" class="size-5" aria-hidden="true"></i
+              ></span>
+              <span
+                ><strong class="block text-xl">500+</strong
+                ><small class="text-partner-text/70"
+                  >Clientes atendidos</small
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicos" class="bg-white py-20 sm:py-24">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="reveal max-w-2xl">
+            <p class="mb-3 text-sm font-bold text-partner-accent">
+              Nossos Serviços
+            </p>
+            <h2
+              class="text-3xl font-extrabold tracking-[-.035em] text-partner-navy sm:text-4xl"
+            >
+              Soluções completas para sua empresa.
+            </h2>
+            <p class="mt-4 max-w-[60ch] leading-relaxed text-partner-text/75">
+              Cuidado técnico em cada área para você manter o foco no
+              crescimento do negócio.
+            </p>
+          </div>
+          <div
+            class="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3"
+          >
+            <article
+              class="reveal group rounded-2xl border border-partner-navy/8 bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-lift"
+            >
+              <span
+                class="grid size-12 place-items-center rounded-xl bg-partner-navy text-white"
+                ><i
+                  data-lucide="calculator"
+                  class="size-6"
+                  aria-hidden="true"
+                ></i
+              ></span>
+              <h3 class="mt-6 text-xl font-bold text-partner-navy">
+                Assessoria Contábil
+              </h3>
+              <p class="mt-2 leading-relaxed text-partner-text/70">
+                Escrituração precisa para decisões inteligentes.
+              </p>
+            </article>
+            <article
+              class="reveal group rounded-2xl border border-partner-navy/8 bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-lift"
+            >
+              <span
+                class="grid size-12 place-items-center rounded-xl bg-partner-navy text-white"
+                ><i
+                  data-lucide="file-check-2"
+                  class="size-6"
+                  aria-hidden="true"
+                ></i
+              ></span>
+              <h3 class="mt-6 text-xl font-bold text-partner-navy">
+                Consultoria Fiscal
+              </h3>
+              <p class="mt-2 leading-relaxed text-partner-text/70">
+                Estratégias fiscais para reduzir tributos.
+              </p>
+            </article>
+            <article
+              class="reveal group rounded-2xl border border-partner-navy/8 bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-lift"
+            >
+              <span
+                class="grid size-12 place-items-center rounded-xl bg-partner-navy text-white"
+                ><i data-lucide="users" class="size-6" aria-hidden="true"></i
+              ></span>
+              <h3 class="mt-6 text-xl font-bold text-partner-navy">
+                Gestão de Folha
+              </h3>
+              <p class="mt-2 leading-relaxed text-partner-text/70">
+                Folha de pagamento sem complicação.
+              </p>
+            </article>
+            <article
+              class="reveal group rounded-2xl border border-partner-navy/8 bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-lift"
+            >
+              <span
+                class="grid size-12 place-items-center rounded-xl bg-partner-navy text-white"
+                ><i
+                  data-lucide="building-2"
+                  class="size-6"
+                  aria-hidden="true"
+                ></i
+              ></span>
+              <h3 class="mt-6 text-xl font-bold text-partner-navy">
+                Legalizações
+              </h3>
+              <p class="mt-2 leading-relaxed text-partner-text/70">
+                Abertura e regularização de empresas.
+              </p>
+            </article>
+            <article
+              class="reveal group rounded-2xl border border-partner-navy/8 bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-lift"
+            >
+              <span
+                class="grid size-12 place-items-center rounded-xl bg-partner-navy text-white"
+                ><i
+                  data-lucide="briefcase-business"
+                  class="size-6"
+                  aria-hidden="true"
+                ></i
+              ></span>
+              <h3 class="mt-6 text-xl font-bold text-partner-navy">
+                Recursos Humanos
+              </h3>
+              <p class="mt-2 leading-relaxed text-partner-text/70">
+                Gestão completa do seu capital humano.
+              </p>
+            </article>
+            <article
+              class="reveal group rounded-2xl border border-partner-navy/8 bg-white p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-lift"
+            >
+              <span
+                class="grid size-12 place-items-center rounded-xl bg-partner-navy text-white"
+                ><i
+                  data-lucide="trending-up"
+                  class="size-6"
+                  aria-hidden="true"
+                ></i
+              ></span>
+              <h3 class="mt-6 text-xl font-bold text-partner-navy">
+                Planejamento Tributário
+              </h3>
+              <p class="mt-2 leading-relaxed text-partner-text/70">
+                Economia tributária com segurança.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre" class="bg-partner-light py-20 sm:py-24">
+        <div
+          class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 md:grid-cols-2 lg:gap-20 lg:px-8"
+        >
+          <div class="reveal relative">
+            <div class="aspect-[4/3] overflow-hidden rounded-2xl shadow-soft">
+              <img
+                src="partner-escritorio-equipe.png"
+                alt="Equipe de assessoria em reunião no escritório"
+                class="h-full w-full object-cover"
+                width="1536"
+                height="1024"
+                loading="lazy"
+              />
+            </div>
+            <div
+              class="absolute -bottom-6 right-4 rounded-xl bg-partner-navy px-6 py-4 text-white shadow-lift sm:right-[-20px]"
+            >
+              <strong class="block text-3xl">10+</strong
+              ><span class="text-sm text-white/75">Anos de experiência</span>
+            </div>
+          </div>
+          <div class="reveal pt-4 md:pt-0">
+            <span
+              class="inline-flex rounded-xl bg-partner-navy px-3 py-2 text-xs font-bold text-white"
+              >Sobre Nós</span
+            >
+            <h2
+              class="mt-5 text-3xl font-extrabold tracking-[-.035em] text-partner-navy sm:text-4xl"
+            >
+              Seu sucesso financeiro é nossa prioridade.
+            </h2>
+            <p class="mt-5 leading-relaxed text-partner-text/75">
+              Oferecemos soluções completas em assessoria contábil e
+              empresarial, garantindo conformidade, precisão e economia para o
+              seu negócio.
+            </p>
+            <ul class="mt-7 grid gap-4">
+              <li class="flex items-center gap-3 font-semibold">
+                <span
+                  class="grid size-7 shrink-0 place-items-center rounded-xl bg-partner-accent text-white"
+                  ><i
+                    data-lucide="check"
+                    class="size-4"
+                    aria-hidden="true"
+                  ></i></span
+                >Profissionais experientes e qualificados
+              </li>
+              <li class="flex items-center gap-3 font-semibold">
+                <span
+                  class="grid size-7 shrink-0 place-items-center rounded-xl bg-partner-accent text-white"
+                  ><i
+                    data-lucide="check"
+                    class="size-4"
+                    aria-hidden="true"
+                  ></i></span
+                >Atendimento personalizado e próximo
+              </li>
+              <li class="flex items-center gap-3 font-semibold">
+                <span
+                  class="grid size-7 shrink-0 place-items-center rounded-xl bg-partner-accent text-white"
+                  ><i
+                    data-lucide="check"
+                    class="size-4"
+                    aria-hidden="true"
+                  ></i></span
+                >Transparência e ética em tudo
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white py-20 sm:py-24">
+        <div
+          class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 md:grid-cols-[.9fr_1.1fr] lg:gap-20 lg:px-8"
+        >
+          <div class="reveal">
+            <p class="mb-3 text-sm font-bold text-partner-accent">
+              Por que nos escolher
+            </p>
+            <h2
+              class="text-3xl font-extrabold tracking-[-.035em] text-partner-navy sm:text-4xl"
+            >
+              Confiança. Experiência. Resultados.
+            </h2>
+            <div class="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-1">
+              <div class="flex items-center gap-3 font-semibold">
+                <span
+                  class="grid size-8 place-items-center rounded-xl bg-partner-accent/10 text-partner-accent"
+                  ><i
+                    data-lucide="check"
+                    class="size-5"
+                    aria-hidden="true"
+                  ></i></span
+                >Ética profissional
+              </div>
+              <div class="flex items-center gap-3 font-semibold">
+                <span
+                  class="grid size-8 place-items-center rounded-xl bg-partner-accent/10 text-partner-accent"
+                  ><i
+                    data-lucide="check"
+                    class="size-5"
+                    aria-hidden="true"
+                  ></i></span
+                >100% de precisão e confidencialidade
+              </div>
+              <div class="flex items-center gap-3 font-semibold">
+                <span
+                  class="grid size-8 place-items-center rounded-xl bg-partner-accent/10 text-partner-accent"
+                  ><i
+                    data-lucide="check"
+                    class="size-5"
+                    aria-hidden="true"
+                  ></i></span
+                >Entrega no prazo
+              </div>
+              <div class="flex items-center gap-3 font-semibold">
+                <span
+                  class="grid size-8 place-items-center rounded-xl bg-partner-accent/10 text-partner-accent"
+                  ><i
+                    data-lucide="check"
+                    class="size-5"
+                    aria-hidden="true"
+                  ></i></span
+                >Preços justos e acessíveis
+              </div>
+            </div>
+          </div>
+          <div
+            class="reveal relative overflow-hidden rounded-2xl bg-partner-navy shadow-lift"
+          >
+            <img
+              src="partner-hero-profissional.png"
+              alt="Profissional da Partner em ambiente corporativo"
+              class="h-[410px] w-full object-cover object-center opacity-55"
+              width="1536"
+              height="1024"
+              loading="lazy"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-partner-navy via-partner-navy/70 to-transparent"
+              aria-hidden="true"
+            ></div>
+            <div
+              class="absolute inset-y-0 left-0 flex max-w-xs flex-col justify-center p-8 text-white sm:p-10"
+            >
+              <strong class="text-6xl font-extrabold tracking-[-.06em]"
+                >500+</strong
+              >
+              <span class="mt-2 text-xl font-semibold"
+                >Clientes satisfeitos</span
+              >
+              <div
+                class="mt-6 flex -space-x-3"
+                aria-label="Grupo de clientes satisfeitos"
+              >
+                <span
+                  class="grid size-11 place-items-center rounded-full border-2 border-partner-navy bg-white font-bold text-partner-royal"
+                  >MS</span
+                >
+                <span
+                  class="grid size-11 place-items-center rounded-full border-2 border-partner-navy bg-partner-accent font-bold text-white"
+                  >RC</span
+                >
+                <span
+                  class="grid size-11 place-items-center rounded-full border-2 border-partner-navy bg-partner-light font-bold text-partner-royal"
+                  >LB</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-partner-light py-20 sm:py-24">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="reveal max-w-xl">
+            <h2
+              class="text-3xl font-extrabold tracking-[-.035em] text-partner-navy sm:text-4xl"
+            >
+              Segmentos que atendemos.
+            </h2>
+            <p class="mt-4 text-partner-text/75">
+              Conhecimento aplicado à rotina e às exigências de diferentes
+              mercados.
+            </p>
+          </div>
+          <div
+            class="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-7"
+          >
+            <div
+              class="reveal group rounded-2xl bg-white p-5 text-center shadow-sm transition hover:-translate-y-1"
+            >
+              <i
+                data-lucide="shopping-cart"
+                class="mx-auto size-7 text-partner-navy transition group-hover:scale-110"
+                aria-hidden="true"
+              ></i
+              ><span class="mt-3 block text-sm font-bold">E-commerce</span>
+            </div>
+            <div
+              class="reveal group rounded-2xl bg-white p-5 text-center shadow-sm transition hover:-translate-y-1"
+            >
+              <i
+                data-lucide="factory"
+                class="mx-auto size-7 text-partner-navy transition group-hover:scale-110"
+                aria-hidden="true"
+              ></i
+              ><span class="mt-3 block text-sm font-bold">Indústria</span>
+            </div>
+            <div
+              class="reveal group rounded-2xl bg-white p-5 text-center shadow-sm transition hover:-translate-y-1"
+            >
+              <i
+                data-lucide="monitor"
+                class="mx-auto size-7 text-partner-navy transition group-hover:scale-110"
+                aria-hidden="true"
+              ></i
+              ><span class="mt-3 block text-sm font-bold">Tecnologia</span>
+            </div>
+            <div
+              class="reveal group rounded-2xl bg-white p-5 text-center shadow-sm transition hover:-translate-y-1"
+            >
+              <i
+                data-lucide="store"
+                class="mx-auto size-7 text-partner-navy transition group-hover:scale-110"
+                aria-hidden="true"
+              ></i
+              ><span class="mt-3 block text-sm font-bold">Comércio</span>
+            </div>
+            <div
+              class="reveal group rounded-2xl bg-white p-5 text-center shadow-sm transition hover:-translate-y-1"
+            >
+              <i
+                data-lucide="heart-pulse"
+                class="mx-auto size-7 text-partner-navy transition group-hover:scale-110"
+                aria-hidden="true"
+              ></i
+              ><span class="mt-3 block text-sm font-bold">Saúde</span>
+            </div>
+            <div
+              class="reveal group rounded-2xl bg-white p-5 text-center shadow-sm transition hover:-translate-y-1"
+            >
+              <i
+                data-lucide="graduation-cap"
+                class="mx-auto size-7 text-partner-navy transition group-hover:scale-110"
+                aria-hidden="true"
+              ></i
+              ><span class="mt-3 block text-sm font-bold">Educação</span>
+            </div>
+            <div
+              class="reveal group rounded-2xl bg-white p-5 text-center shadow-sm transition hover:-translate-y-1"
+            >
+              <i
+                data-lucide="hard-hat"
+                class="mx-auto size-7 text-partner-navy transition group-hover:scale-110"
+                aria-hidden="true"
+              ></i
+              ><span class="mt-3 block text-sm font-bold">Construção</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-partner-navy py-20 text-white sm:py-24">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="reveal max-w-2xl">
+            <h2 class="text-3xl font-extrabold tracking-[-.035em] sm:text-4xl">
+              O que nossos clientes dizem.
+            </h2>
+            <p class="mt-4 text-white/70">
+              Parcerias construídas com proximidade, clareza e responsabilidade.
+            </p>
+          </div>
+          <div class="mt-12 grid gap-5 lg:grid-cols-5">
+            <figure
+              class="reveal rounded-2xl bg-white p-7 text-partner-text shadow-soft lg:col-span-3"
+            >
+              <div
+                class="flex gap-1 text-[#f4b740]"
+                aria-label="5 de 5 estrelas"
+              >
+                <i data-lucide="star" class="size-4 fill-current"></i
+                ><i data-lucide="star" class="size-4 fill-current"></i
+                ><i data-lucide="star" class="size-4 fill-current"></i
+                ><i data-lucide="star" class="size-4 fill-current"></i
+                ><i data-lucide="star" class="size-4 fill-current"></i>
+              </div>
+              <blockquote class="mt-5 text-lg font-medium leading-relaxed">
+                “A Partner transformou nossa gestão financeira. A equipe é
+                profissional, próxima e sempre disponível.”
+              </blockquote>
+              <figcaption class="mt-6">
+                <strong class="block text-partner-navy">Maria Silveira</strong
+                ><span class="text-sm text-partner-text/65"
+                  >CEO, TechNH Ltda.</span
+                >
+              </figcaption>
+            </figure>
+            <div class="grid gap-5 lg:col-span-2">
+              <figure
+                class="reveal rounded-2xl bg-white p-6 text-partner-text shadow-soft"
+              >
+                <div
+                  class="flex gap-1 text-[#f4b740]"
+                  aria-label="5 de 5 estrelas"
+                >
+                  <i data-lucide="star" class="size-4 fill-current"></i
+                  ><i data-lucide="star" class="size-4 fill-current"></i
+                  ><i data-lucide="star" class="size-4 fill-current"></i
+                  ><i data-lucide="star" class="size-4 fill-current"></i
+                  ><i data-lucide="star" class="size-4 fill-current"></i>
+                </div>
+                <blockquote class="mt-4 leading-relaxed">
+                  “Recebemos orientações claras e ganhamos segurança para
+                  crescer.”
+                </blockquote>
+                <figcaption class="mt-5">
+                  <strong class="block text-partner-navy">Rafael Costa</strong
+                  ><span class="text-sm text-partner-text/65"
+                    >Diretor, Costa Comércio</span
+                  >
+                </figcaption>
+              </figure>
+              <figure
+                class="reveal rounded-2xl bg-white p-6 text-partner-text shadow-soft"
+              >
+                <div
+                  class="flex gap-1 text-[#f4b740]"
+                  aria-label="5 de 5 estrelas"
+                >
+                  <i data-lucide="star" class="size-4 fill-current"></i
+                  ><i data-lucide="star" class="size-4 fill-current"></i
+                  ><i data-lucide="star" class="size-4 fill-current"></i
+                  ><i data-lucide="star" class="size-4 fill-current"></i
+                  ><i data-lucide="star" class="size-4 fill-current"></i>
+                </div>
+                <blockquote class="mt-4 leading-relaxed">
+                  “Atendimento ágil, cuidadoso e comprometido com cada prazo.”
+                </blockquote>
+                <figcaption class="mt-5">
+                  <strong class="block text-partner-navy">Luiza Becker</strong
+                  ><span class="text-sm text-partner-text/65"
+                    >Sócia, Becker Arquitetura</span
+                  >
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contato"
+        class="dot-pattern bg-gradient-to-br from-partner-royal to-partner-navy py-20 text-white sm:py-24"
+      >
+        <div
+          class="reveal mx-auto flex max-w-5xl flex-col items-start justify-between gap-8 px-4 sm:px-6 md:flex-row md:items-center lg:px-8"
+        >
+          <div>
+            <h2
+              class="max-w-[17ch] text-3xl font-extrabold tracking-[-.035em] sm:text-4xl"
+            >
+              Venha fazer uma parceria de sucesso!
+            </h2>
+            <p class="mt-4 max-w-[55ch] text-white/75">
+              Converse com nossa equipe e descubra o suporte ideal para sua
+              empresa.
+            </p>
+          </div>
+          <a
+            href="https://wa.me/5551996945089"
+            class="focus-ring inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-xl bg-white px-6 py-3.5 font-bold text-partner-royal shadow-soft transition hover:bg-partner-light active:scale-[.98]"
+            ><i
+              data-lucide="message-circle"
+              class="size-5"
+              aria-hidden="true"
+            ></i>
+            Fale Conosco</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-partner-navy text-white">
+      <div
+        class="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8"
+      >
+        <div>
+          <a
+            href="#inicio"
+            class="focus-ring inline-flex items-center gap-3 rounded-xl"
+            ><span
+              class="grid size-10 place-items-center rounded-xl bg-white text-lg font-extrabold text-partner-navy"
+              >P</span
+            ><strong class="text-xl">Partner</strong></a
+          >
+          <p class="mt-5 max-w-xs text-sm leading-relaxed text-white/65">
+            Contabilidade e assessoria empresarial para decisões seguras e
+            crescimento sustentável.
+          </p>
+          <div class="mt-6 flex gap-3">
+            <a
+              href="#"
+              class="focus-ring grid size-10 place-items-center rounded-xl border border-white/15 text-white transition hover:bg-partner-accent"
+              aria-label="Instagram"
+              ><i data-lucide="instagram" class="size-4"></i
+            ></a>
+            <a
+              href="#"
+              class="focus-ring grid size-10 place-items-center rounded-xl border border-white/15 text-white transition hover:bg-partner-accent"
+              aria-label="LinkedIn"
+              ><i data-lucide="linkedin" class="size-4"></i
+            ></a>
+            <a
+              href="https://wa.me/5551996945089"
+              class="focus-ring grid size-10 place-items-center rounded-xl border border-white/15 text-white transition hover:bg-partner-accent"
+              aria-label="WhatsApp"
+              ><i data-lucide="message-circle" class="size-4"></i
+            ></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-bold">Links Rápidos</h3>
+          <ul class="mt-5 grid gap-3 text-sm text-white/65">
+            <li><a class="hover:text-white" href="#inicio">Início</a></li>
+            <li><a class="hover:text-white" href="#sobre">Sobre</a></li>
+            <li><a class="hover:text-white" href="#servicos">Serviços</a></li>
+            <li><a class="hover:text-white" href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold">Serviços</h3>
+          <ul class="mt-5 grid gap-3 text-sm text-white/65">
+            <li>Contabilidade</li>
+            <li>Fiscal</li>
+            <li>Folha</li>
+            <li>Legalizações</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold">Contato</h3>
+          <ul class="mt-5 grid gap-4 text-sm text-white/65">
+            <li class="flex gap-3">
+              <i
+                data-lucide="map-pin"
+                class="mt-0.5 size-4 shrink-0 text-partner-accent"
+              ></i
+              ><span>Rua Tamandaré, 70<br />Novo Hamburgo, RS</span>
+            </li>
+            <li class="flex gap-3">
+              <i
+                data-lucide="phone"
+                class="size-4 shrink-0 text-partner-accent"
+              ></i
+              ><a class="hover:text-white" href="tel:+555132797776"
+                >(51) 3279-7776</a
+              >
+            </li>
+            <li class="flex gap-3">
+              <i
+                data-lucide="message-circle"
+                class="size-4 shrink-0 text-partner-accent"
+              ></i
+              ><a class="hover:text-white" href="https://wa.me/5551996945089"
+                >(51) 99694-5089</a
+              >
+            </li>
+            <li class="flex gap-3">
+              <i
+                data-lucide="mail"
+                class="size-4 shrink-0 text-partner-accent"
+              ></i
+              ><a
+                class="break-all hover:text-white"
+                href="mailto:atendimento@partnerempresarial.com.br"
+                >atendimento@partnerempresarial.com.br</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10">
+        <div
+          class="mx-auto max-w-7xl px-4 py-6 text-center text-xs text-white/50 sm:px-6 lg:px-8"
+        >
+          © 2026 Partner Contabilidade e Assessoria Empresarial. Todos os
+          direitos reservados.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons({ attrs: { "stroke-width": 1.8 } });
+
+      const menuButton = document.getElementById("menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuButton.addEventListener("click", () => {
+        const expanded = menuButton.getAttribute("aria-expanded") === "true";
+        menuButton.setAttribute("aria-expanded", String(!expanded));
+        menuButton.setAttribute(
+          "aria-label",
+          expanded ? "Abrir menu" : "Fechar menu",
+        );
+        mobileMenu.classList.toggle("hidden");
+      });
+      mobileMenu.querySelectorAll("a").forEach((link) =>
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          menuButton.setAttribute("aria-expanded", "false");
+          menuButton.setAttribute("aria-label", "Abrir menu");
+        }),
+      );
+
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.14 },
+        );
+        document
+          .querySelectorAll(".reveal")
+          .forEach((element) => observer.observe(element));
+      } else {
+        document
+          .querySelectorAll(".reveal")
+          .forEach((element) => element.classList.add("is-visible"));
+      }
+    </script>
+  </body>
+</html>

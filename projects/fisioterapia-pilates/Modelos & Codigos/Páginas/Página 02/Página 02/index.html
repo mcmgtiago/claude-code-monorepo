@@ -1,0 +1,2578 @@
+﻿<!DOCTYPE html><html lang="pt-BR" style="scroll-behavior: auto;"><head>
+<base href="./">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Anti-Cache Meta Tags: Força o navegador a verificar por novas versões -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- Preload Fonts Prioritário -->
+  <link rel="preload" href="assets/fonts/30a9f599069b49e4.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="assets/fonts/bf444c56a814a25c.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="assets/fonts/0f40c7ca5319a30c.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="assets/fonts/98dee2bacc112c12.woff2" as="font" type="font/woff2">
+
+  <!-- CSS de Reset Universal e Estabilidade -->
+  <style>
+    :root {
+      background-color: #0a0a0a;
+      color-scheme: dark;
+    }
+
+    html,
+    body {
+      background: #000;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      min-height: 100dvh;
+      overflow-x: hidden;
+      color: #fff;
+      font-family: sans-serif;
+      /* Fallback até carregar */
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Shield contra FOUC e elementos gigantes no carregamento */
+    #root {
+      background: transparent;
+      min-height: 100vh;
+      min-height: 100dvh;
+    }
+
+    @media (max-width: 768px) {
+      html, body, #root, .min-h-screen {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+      }
+
+      #initial-overlay,
+      .checkout-overlay {
+        display: none !important;
+      }
+
+      /* Defensive fix: hide unexpected injected fixed bars at the very top on mobile */
+      body > div[style*="position: fixed"][style*="top: 0"] {
+        display: none !important;
+      }
+    }
+
+    /* Critical Fonts Definition */
+    @font-face {
+      font-family: 'Space Grotesk';
+      src: url('assets/fonts/30a9f599069b49e4.woff2') format('woff2');
+      font-weight: 700;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Space Grotesk';
+      src: url('assets/fonts/bf444c56a814a25c.woff2') format('woff2');
+      font-weight: 400;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Sora';
+      src: url('assets/fonts/0f40c7ca5319a30c.woff2') format('woff2');
+      font-weight: 400;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Aldrich';
+      src: url('assets/fonts/98dee2bacc112c12.woff2') format('woff2');
+      font-weight: 400;
+      font-display: swap;
+    }
+
+    /* Fundo Preto Seco e Instantâneo */
+    #initial-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      z-index: 999999;
+      pointer-events: none;
+    }
+  </style>
+
+  <meta name="description" content="Aprenda a criar artes magnéticas com IA.">
+  <meta name="theme-color" content="#000000">
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/bca907ae4155d70a.svg">
+
+  <!-- CSS Principal -->
+  <!-- VTurb VSL Optimization -->
+  <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+  <link rel="preload" href="assets/js/5f6e19ce87fa20b5.js" as="script">
+  <link rel="preload" href="assets/js/3b1ef61dd28bac40.js" as="script">
+  <link rel="preload" href="assets/other/6af3f7a939b558fc.m3u8" as="fetch">
+  
+  
+  
+  
+
+  <!-- React entry removed (page pre-rendered) -->
+  <!-- modulepreload removed -->
+  <!-- modulepreload removed -->
+  <!-- modulepreload removed -->
+  <link rel="stylesheet" href="assets/css/ec05dd52eaffbaf8.css">
+<script src="assets/js/5f6e19ce87fa20b5.js" async=""></script><!-- tracking scripts removed (clarity + utmify) --><meta property="og:image" content="assets/placeholders/og-image.svg">
+<meta property="twitter:image" content="assets/placeholders/og-image.svg">
+<title>Pagina de Vendas</title>
+</head>
+
+<body>
+  <!-- Overlay de Segurança (Fundo Preto Puro) -->
+  
+
+  <div id="root"><div class="min-h-screen relative"><!-- SECTION: S01 -->
+<section class="hero-section relative z-20 overflow-hidden pt-0 pb-0 lg:py-0 bg-black"><style>
+        .pill-animated { position: relative; overflow: hidden; animation: pillPulse 3s ease-in-out infinite; }
+        @keyframes pillPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.02); } }
+        .gradient-green { color: #2AFF14; font-weight: 700; }
+        
+        /* Desktop base styles - Reduced size */
+        .hero-title-responsive { font-size: 40px; line-height: 1.2; }
+        .hero-subtitle-responsive { font-size: clamp(0.9rem, 1.5vw, 1.0rem); line-height: 1.5; }
+        
+          {/* Mobile styles */}
+        @media (max-width: 768px) {
+            .hero-mobile-title { 
+                font-size: clamp(20px, 6vw, 26px) !important; 
+                line-height: 1.25 !important;
+                text-wrap: balance;
+            }
+            .mobile-container-fluid {
+                padding-left: 5vw !important;
+                padding-right: 5vw !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .hero-section h1 span {
+                font-size: clamp(17px, 5.2vw, 22px) !important;
+                line-height: 1.2 !important;
+                letter-spacing: -0.01em;
+                white-space: normal;
+                text-wrap: balance;
+                margin-bottom: 8px !important;
+            }
+
+            .hero-section h1 span:last-child {
+                margin-bottom: 0 !important;
+            }
+
+            .hero-interactive-bg {
+                min-height: 500px !important;
+                padding-top: 0 !important;
+            }
+
+            .hero-desktop-container {
+                align-items: flex-start !important;
+                padding-top: 14px !important;
+            }
+
+            .hero-section h1 {
+                margin-bottom: 8px !important;
+            }
+
+            .hero-section .mb-10 {
+                margin-bottom: 4px !important;
+            }
+
+            .logos-ticker-section {
+                padding-top: 0 !important;
+                padding-bottom: 14px !important;
+            }
+
+            .hero-section .mb-4 > div {
+                font-size: 12px !important;
+                padding: 5px 14px !important;
+                margin-bottom: 4px !important;
+            }
+        }
+                              .hero-interactive-bg {
+            position: relative;
+            min-height: 860px;
+            isolation: isolate;
+            background:
+              radial-gradient(120% 100% at 50% 0%, rgba(255, 106, 0, 0.12) 0%, rgba(0, 0, 0, 0) 55%),
+              linear-gradient(180deg, #0f0f10 0%, #070707 65%, #000 100%);
+        }
+        .hero-base-texture {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            background:
+              repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 24px),
+              repeating-linear-gradient(0deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 22px),
+              radial-gradient(circle at 20% 15%, rgba(255,255,255,0.05) 0 1px, transparent 2px),
+              radial-gradient(circle at 78% 62%, rgba(255,255,255,0.04) 0 1px, transparent 2px);
+            background-size: auto, auto, 28px 28px, 36px 36px;
+            opacity: 0.35;
+            mix-blend-mode: screen;
+        }
+        .hero-snake-canvas {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 1;
+        }</style><div class="block relative w-full z-20 hero-interactive-bg"><div class="hero-base-texture" aria-hidden="true"></div><canvas class="hero-snake-canvas" aria-hidden="true"></canvas><div class="absolute inset-0 z-10 w-full h-full pointer-events-none"><div class="hero-desktop-container flex items-center justify-center h-full pointer-events-auto"><div class="w-full max-w-[920px] mx-auto px-4 text-center relative z-10"><div class="mb-4"><div style="display:inline-flex; align-items:center; background: linear-gradient(135deg, #FF6A00, #FAA429); color: #fff; font-family: Aldrich, sans-serif; font-size: 16px; font-weight: 700; padding: 8px 22px; border-radius: 40px; letter-spacing: 0.05em; text-transform: uppercase; border: 2px solid rgba(255,255,255,0.3); box-shadow: 0 4px 15px rgba(255,106,0,0.4); margin-bottom: 8px;">NOME DO PRODUTO</div></div><h1 class="w-full font-aldrich uppercase text-center mb-6 tracking-wide text-white" style="line-height: 1.2;"><span class="block text-2xl md:text-3xl lg:text-[48px]" style="margin-bottom: 16px;">DOMINE AS AUTOMAÇÕES QUE</span><span class="block text-2xl md:text-3xl lg:text-[48px]" style="margin-bottom: 16px;">VENDEM NAS REDES SOCIAIS</span><span class="block text-2xl md:text-3xl lg:text-[48px]" style="margin-bottom: 16px;">ENQUANTO VOCÊ DORME</span><span class="block text-2xl md:text-3xl lg:text-[48px] text-gradient-orange font-bold" style="margin-bottom: 0px; line-height: 1.2;">SEM CONHECIMENTO TÉCNICO</span><span class="block text-2xl md:text-3xl lg:text-[48px] text-gradient-orange font-bold" style="line-height: 1.2;">PARTINDO DO ZERO</span></h1><div class="flex flex-col items-center gap-4 mb-10"><div class="flex justify-center flex-wrap gap-3"><div class="pill-animated inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-black/30 backdrop-blur-sm relative overflow-hidden text-sm"><div class="flex gap-1"><img loading="lazy" data-edit="IMG_003" src="assets/images/0a28cc6c0e0f756d.svg" width="14" height="14" alt=""><img loading="lazy" data-edit="IMG_004" src="assets/images/e04b8ebd20db3d37.svg" width="14" height="14" alt=""></div><span class="text-white text-sm">WhatsApp  Instagram</span></div><div class="pill-animated inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-black/30 backdrop-blur-sm relative overflow-hidden text-sm"><img loading="lazy" data-edit="IMG_005" src="assets/images/cc64729169de5b66.svg" width="16" height="16" alt=""><span class="text-white text-sm">IA + Automação</span></div><div class="pill-animated inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-black/30 backdrop-blur-sm relative overflow-hidden text-sm"><div class="p-0.5 rounded-full bg-[#f60] w-4 h-4 flex items-center justify-center" style="width: 16px; height: 16px;"><svg data-edit="ICON_001" class="w-2.5 h-2.5 text-white" viewBox="0 0 24 24" fill="none" style="width: 10px; height: 10px;"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><span class="text-white text-sm">Curso Vitalício</span></div></div><p class="text-gray-300 text-sm">Acesso imediato a todos os módulos e bônus</p><div class="mt-6"><a href="#pricing" target="_self" class="framer-btn-container" style="touch-action: manipulation; -webkit-tap-highlight-color: transparent;"><div class="framer-btn-bevel"><div class="framer-btn-cap"><div class="absolute top-0 left-[-150%] w-[150%] h-full bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-[-25deg] animate-shine pointer-events-none" style="z-index: 5;"></div><div class="framer-btn-border"></div><div class="framer-text-container"><p class="framer-text" style="text-transform: uppercase; font-size: 15px;">QUERO GARANTIR MINHA VAGA</p></div><div class="framer-glow-wrap"><div class="framer-glow"></div></div><div class="framer-metal-button"><div class="framer-metal-bevel"><div class="framer-metal-cap"><div class="framer-metal-dot"></div><div class="framer-arrow-icon"><svg data-edit="ICON_033" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></div></div></div></div></div></div></a></div></div></div></div></div></div><style>
+        @media (max-width: 768px) {
+          .hero-mobile-pad {
+            padding-left: 6px !important;
+            padding-right: 6px !important;
+          }
+        }
+      </style><script>
+(function () {
+  var hero = document.querySelector('.hero-interactive-bg');
+  var canvas = hero ? hero.querySelector('.hero-snake-canvas') : null;
+  if (!hero || !canvas) return;
+
+  var ctx = canvas.getContext('2d', { alpha: true });
+  if (!ctx) return;
+
+  // Cap DPR lower to keep animation fluid.
+  var dpr = Math.max(1, Math.min(1.5, window.devicePixelRatio || 1));
+  var isCoarse = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+  if (isCoarse) {
+    // Keep the effect on touch devices with lower intensity/performance profile.
+    dpr = 1;
+  }
+  var rafId = null;
+  var t = 0;
+
+  var active = false;
+  var intensity = 0.85;
+  var intensityTarget = 0.85;
+  var motion = 0;
+
+  var center = { x: 0, y: 0 };
+  var target = { x: 0, y: 0 };
+
+  var SNAKE_LEN = 30;
+  var snake = [];
+  for (var _i = 0; _i < SNAKE_LEN; _i++) snake.push({ x: 0, y: 0 });
+
+  function createGlowSprite(size, inner, mid, outer) {
+    var c = document.createElement('canvas');
+    c.width = size;
+    c.height = size;
+    var cctx = c.getContext('2d');
+    var r = size * 0.5;
+    var g = cctx.createRadialGradient(r, r, 0, r, r, r);
+    g.addColorStop(0, inner);
+    g.addColorStop(0.34, mid);
+    g.addColorStop(1, outer);
+    cctx.fillStyle = g;
+    cctx.fillRect(0, 0, size, size);
+    return c;
+  }
+
+  // Head: bright warm core
+  var glowHead = createGlowSprite(180, 'rgba(255,230,180,0.95)', 'rgba(255,150,60,0.50)', 'rgba(255,80,20,0)');
+  // Body: medium segment
+  var glowBody = createGlowSprite(120, 'rgba(255,200,120,0.75)', 'rgba(255,120,40,0.32)', 'rgba(255,60,10,0)');
+  // Tail: small, dim vestige
+  var glowTail = createGlowSprite(72, 'rgba(255,160,80,0.55)',  'rgba(255,90,20,0.18)',  'rgba(255,40,0,0)');
+
+  function resizeCanvas() {
+    var rect = hero.getBoundingClientRect();
+    canvas.width = Math.max(1, Math.floor(rect.width * dpr));
+    canvas.height = Math.max(1, Math.floor(rect.height * dpr));
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  function resetState(x, y) {
+    center.x = x;
+    center.y = y;
+    target.x = x;
+    target.y = y;
+    for (var _j = 0; _j < SNAKE_LEN; _j++) { snake[_j].x = x; snake[_j].y = y; }
+  }
+
+  function setTarget(clientX, clientY) {
+    var rect = hero.getBoundingClientRect();
+    target.x = Math.max(0, Math.min(rect.width, clientX - rect.left));
+    target.y = Math.max(0, Math.min(rect.height, clientY - rect.top));
+  }
+
+  function drawSprite(sprite, x, y, size, alpha) {
+    if (alpha <= 0.001) return;
+    var s = size;
+    var hs = s * 0.5;
+    ctx.globalAlpha = alpha;
+    ctx.drawImage(sprite, x - hs, y - hs, s, s);
+  }
+
+  function render() {
+    var w = canvas.width / dpr;
+    var h = canvas.height / dpr;
+    t += 0.016;
+
+    intensity += (intensityTarget - intensity) * 0.07;
+
+    // Idle float — small radius so it doesn't look like a big circle
+    var idleX = center.x + Math.cos(t * 0.40) * (w * 0.04);
+    var idleY = center.y + Math.sin(t * 0.30) * (h * 0.03);
+
+    var tx = active ? target.x : idleX;
+    var ty = active ? target.y : idleY;
+
+    var prevHeadX = snake[0].x;
+    var prevHeadY = snake[0].y;
+
+    // HEAD — snappy enough to feel responsive
+    snake[0].x += (tx - snake[0].x) * 0.13;
+    snake[0].y += (ty - snake[0].y) * 0.13;
+    var speed = Math.hypot(snake[0].x - prevHeadX, snake[0].y - prevHeadY);
+    motion += (Math.min(1, speed / 4.5) - motion) * 0.22;
+
+    // Each body segment chases the one ahead (creates the snake chain)
+    for (var i = 1; i < SNAKE_LEN; i++) {
+      // Segments further back follow slower → stretches the tail
+      var lp = 0.20 - i * 0.003;
+      snake[i].x += (snake[i - 1].x - snake[i].x) * lp;
+      snake[i].y += (snake[i - 1].y - snake[i].y) * lp;
+    }
+
+    ctx.clearRect(0, 0, w, h);
+    ctx.globalCompositeOperation = 'lighter';
+
+    // Draw from TAIL to HEAD so the head renders on top
+    for (var j = SNAKE_LEN - 1; j >= 0; j--) {
+      var prog  = 1 - j / (SNAKE_LEN - 1); // 0 = tail, 1 = head
+      var prog2 = prog * prog;              // quadratic — sharper falloff at tail
+
+      if (prog < 0.35) {
+        // Tail: small faint vestiges
+        var tsz = 22 + prog * 72;
+        var ta  = (0.02 + prog * 0.18) * intensity;
+        drawSprite(glowTail, snake[j].x, snake[j].y, tsz, ta);
+      } else if (prog < 0.75) {
+        // Mid body: medium glow
+        var msz = 52 + prog2 * 86;
+        var ma  = (0.08 + prog2 * 0.22) * intensity;
+        drawSprite(glowBody, snake[j].x, snake[j].y, msz, ma);
+      } else {
+        // Head region: full bloom
+        var hsz = (70 + prog2 * 66) * (0.72 + motion * 0.55);
+        var ha  = (0.18 + prog2 * 0.42) * intensity * (0.58 + motion * 0.68);
+        drawSprite(glowHead, snake[j].x, snake[j].y, hsz, ha);
+      }
+    }
+
+    // Extra hot core right on the head tip
+    drawSprite(glowHead, snake[0].x, snake[0].y, 78 * (0.72 + motion * 0.52), (0.40 + motion * 0.42) * intensity);
+
+    ctx.globalAlpha = 1;
+    ctx.globalCompositeOperation = 'source-over';
+
+    rafId = window.requestAnimationFrame(render);
+  }
+
+  function ensure() {
+    if (rafId == null) rafId = window.requestAnimationFrame(render);
+  }
+
+  resizeCanvas();
+  resetState(hero.clientWidth * 0.5, hero.clientHeight * 0.45);
+  canvas.style.opacity = '1';
+  canvas.style.filter = 'blur(0.8px) brightness(1.35) saturate(1.2)';
+
+  hero.addEventListener('mouseenter', function (e) {
+    active = true;
+    intensityTarget = 1.0;
+    setTarget(e.clientX, e.clientY);
+  });
+
+  hero.addEventListener('mousemove', function (e) {
+    setTarget(e.clientX, e.clientY);
+  });
+
+  hero.addEventListener('touchstart', function (e) {
+    if (!e.touches || !e.touches[0]) return;
+    active = true;
+    intensityTarget = 0.95;
+    setTarget(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+
+  hero.addEventListener('touchmove', function (e) {
+    if (!e.touches || !e.touches[0]) return;
+    setTarget(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+
+  hero.addEventListener('touchend', function () {
+    active = false;
+    intensityTarget = 0.85;
+  }, { passive: true });
+
+  hero.addEventListener('mouseleave', function () {
+    active = false;
+    intensityTarget = 0.92;
+  });
+
+  window.addEventListener('resize', function () {
+    resizeCanvas();
+    resetState(hero.clientWidth * 0.5, hero.clientHeight * 0.45);
+  });
+
+  ensure();
+})();
+</script></section><!-- SECTION: S02 -->
+<section class="logos-ticker-section w-full overflow-hidden py-5 lg:py-[50px] bg-transparent"><div class="hidden md:block logo-ticker-desktop"><div class="logo-ticker-track-desktop"><div class="logo-ticker-row-desktop"><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div></div><div class="logo-ticker-row-desktop" aria-hidden="true"><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0 desktop-item-large"><div style="display:inline-flex;align-items:center;padding:8px 18px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:13px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div></div></div><div class="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-black to-transparent pointer-events-none z-10"></div><div class="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-black to-transparent pointer-events-none z-10"></div></div><div class="md:hidden logo-ticker-mobile"><div class="logo-ticker-track-mobile"><div class="logo-ticker-row-mobile"><div class="logo-ticker-item flex items-center justify-center flex-shrink-0" style="height: 50px;"><div style="display:inline-flex;align-items:center;padding:6px 14px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:11px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0" style="height: 50px;"><div style="display:inline-flex;align-items:center;padding:6px 14px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:11px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0" style="height: 50px;"><div style="display:inline-flex;align-items:center;padding:6px 14px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:11px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0" style="height: 50px;"><div style="display:inline-flex;align-items:center;padding:6px 14px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:11px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0" style="height: 50px;"><div style="display:inline-flex;align-items:center;padding:6px 14px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:11px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0" style="height: 50px;"><div style="display:inline-flex;align-items:center;padding:6px 14px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:11px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0" style="height: 50px;"><div style="display:inline-flex;align-items:center;padding:6px 14px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:11px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0" style="height: 50px;"><div style="display:inline-flex;align-items:center;padding:6px 14px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:11px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0" style="height: 50px;"><div style="display:inline-flex;align-items:center;padding:6px 14px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:11px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0" style="height: 50px;"><div style="display:inline-flex;align-items:center;padding:6px 14px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:11px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0" style="height: 50px;"><div style="display:inline-flex;align-items:center;padding:6px 14px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:11px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0" style="height: 50px;"><div style="display:inline-flex;align-items:center;padding:6px 14px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:11px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div></div><div class="logo-ticker-row-mobile" aria-hidden="true"><div class="logo-ticker-item flex items-center justify-center flex-shrink-0" style="height: 50px;"><div style="display:inline-flex;align-items:center;padding:6px 14px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:11px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0" style="height: 50px;"><div style="display:inline-flex;align-items:center;padding:6px 14px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:11px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0" style="height: 50px;"><div style="display:inline-flex;align-items:center;padding:6px 14px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:11px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0" style="height: 50px;"><div style="display:inline-flex;align-items:center;padding:6px 14px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:11px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0" style="height: 50px;"><div style="display:inline-flex;align-items:center;padding:6px 14px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:11px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0" style="height: 50px;"><div style="display:inline-flex;align-items:center;padding:6px 14px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:11px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0" style="height: 50px;"><div style="display:inline-flex;align-items:center;padding:6px 14px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:11px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0" style="height: 50px;"><div style="display:inline-flex;align-items:center;padding:6px 14px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:11px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0" style="height: 50px;"><div style="display:inline-flex;align-items:center;padding:6px 14px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:11px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0" style="height: 50px;"><div style="display:inline-flex;align-items:center;padding:6px 14px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:11px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0" style="height: 50px;"><div style="display:inline-flex;align-items:center;padding:6px 14px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:11px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div><div class="logo-ticker-item flex items-center justify-center flex-shrink-0" style="height: 50px;"><div style="display:inline-flex;align-items:center;padding:6px 14px;border:2px solid rgba(255,106,0,0.6);border-radius:40px;background:rgba(255,106,0,0.08);font-family:Aldrich,sans-serif;font-size:11px;font-weight:700;color:#FF6A00;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">NOME DO PRODUTO</div></div></div></div><div class="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-black to-transparent pointer-events-none z-10"></div><div class="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-black to-transparent pointer-events-none z-10"></div></div><style>
+        /* Desktop Ticker */
+        .logo-ticker-desktop {
+          overflow: hidden;
+          position: relative;
+          width: 100%;
+          height: 90px;
+          background: inherit;
+          touch-action: pan-y;
+          --ticker-speed: 40s;
+        }
+        
+        .logo-ticker-track-desktop {
+          display: flex;
+          gap: 100px;
+          width: max-content;
+          will-change: transform;
+          animation: logo-ticker var(--ticker-speed) linear infinite !important; /* Force continuous */
+          transform: translate3d(0,0,0);
+          height: 90px;
+          align-items: center;
+        }
+        
+        .logo-ticker-row-desktop {
+          display: flex;
+          gap: 100px;
+          flex: 0 0 auto;
+          align-items: center;
+          height: 110px;
+        }
+        
+        /* Desktop Item Size Control */
+        .desktop-item-large {
+           height: 70px;
+        }
+
+        .logo-ticker-row-desktop .logo-ticker-item {
+          flex: 0 0 auto;
+          /* height is controlled by .desktop-item-large class for desktop items */
+        }
+        
+        /* Mobile Ticker */
+        .logo-ticker-mobile {
+          overflow: hidden;
+          position: relative;
+          width: 100%;
+          height: 60px;
+          background: inherit;
+          touch-action: pan-y;
+          --ticker-speed-mobile: 22s;
+        }
+        
+        .logo-ticker-track-mobile {
+          display: flex;
+          gap: 50px;
+          width: max-content;
+          will-change: transform;
+          animation: logo-ticker var(--ticker-speed-mobile) linear infinite;
+          transform: translate3d(0,0,0);
+          height: 60px;
+          align-items: center;
+        }
+        
+        .logo-ticker-row-mobile {
+          display: flex;
+          gap: 50px;
+          flex: 0 0 auto;
+          align-items: center;
+          height: 50px;
+        }
+        
+        .logo-ticker-row-mobile .logo-ticker-item {
+          flex: 0 0 auto;
+          height: 50px;
+        }
+        
+        /* Seamless loop animation */
+        @keyframes logo-ticker {
+          from {
+            transform: translate3d(0, 0, 0);
+          }
+          to {
+            transform: translate3d(-50%, 0, 0);
+          }
+        }
+        
+        /* Pause on hover REMOVED as requested */
+        
+        /* Respect user motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+          .logo-ticker-track-desktop,
+          .logo-ticker-track-mobile {
+            animation: none !important;
+            transform: none !important;
+          }
+        }
+      </style></section><!-- SECTION: S05 -->
+<section data-edit="BG_018" class="clients-section relative overflow-hidden py-10 lg:py-[80px]" style="background: rgb(0, 0, 0);"><div class="mx-auto mobile-container-standard" style="max-width: 1200px; padding: 0px 16px;"><div class="clients-card-container group relative overflow-hidden rounded-[32px] border border-[#333333] bg-[#0A0A0A]"><div data-edit="BG_019" class="absolute top-0 left-1/2 transform -translate-x-1/2 transition-all ease-in-out group-hover:w-[75%] w-[35%]" style="height: 10px; border-radius: 100px; z-index: 20; background: linear-gradient(98deg, rgb(255, 106, 0), rgb(255, 158, 64), rgb(255, 106, 0)); box-shadow: rgb(255, 106, 0) 0px 0px 25px, rgba(255, 106, 0, 0.8) 0px 5px 40px, rgba(255, 106, 0, 0.5) 0px 15px 70px, rgba(255, 106, 0, 0.3) 0px 30px 120px; transition-duration: 1s;"></div><div class="relative z-20 py-12 md:py-16 px-4"><div class="hidden md:block text-center mb-12"><h2 class="uppercase leading-snug tracking-wide mobile-title-standard" style="font-family: var(--font-title); margin-bottom: 16px;"><span class="text-white">FECHE CONTRATOS </span><span class="text-gradient-orange" style="font-weight: bold;">EM MENOS DE 7 DIAS</span></h2><p style="font-family: var(--font-body); color: rgb(200, 200, 200); font-size: 18px; max-width: 800px; margin: 0px auto;">O método validado que já ajudou +2.000 alunos a criar automações que vendem todos os dias</p></div><div class="md:hidden mb-12"><h2 class="section-title-standard text-white clients-mobile-pad">FECHE CONTRATOS <span class="text-gradient-orange" style="font-weight: bold;">EM MENOS DE 7 DIAS</span></h2><p class="section-subtitle-standard clients-mobile-pad">O método validado que já ajudou +2.000 alunos a criar automações que vendem todos os dias</p></div><div class="testimonials-grid" style="display:grid; grid-template-columns:repeat(1,minmax(0,1fr)); gap:16px; max-width:980px; margin:0 auto;">
+  <div class="testimonial-card" style="background:#111; border:1px solid #333; border-radius:18px; padding:20px;">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;"><img src="assets/images/expert.png" alt="Depoimento" loading="lazy" style="width:52px; height:52px; border-radius:999px; object-fit:cover; border:1px solid #444;"><div><p style="color:#fff; font-weight:700; margin:0;">Ana Souza</p><p style="color:#aaa; font-size:13px; margin:0;">Social Media</p></div></div>
+    <p style="color:#d7d7d7; line-height:1.6; margin:0;">Em menos de 7 dias já fechei meus primeiros contratos com automações no Instagram e WhatsApp.</p>
+  </div>
+  <div class="testimonial-card" style="background:#111; border:1px solid #333; border-radius:18px; padding:20px;">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;"><img src="assets/images/expert.png" alt="Depoimento" loading="lazy" style="width:52px; height:52px; border-radius:999px; object-fit:cover; border:1px solid #444;"><div><p style="color:#fff; font-weight:700; margin:0;">Carlos Lima</p><p style="color:#aaa; font-size:13px; margin:0;">Gestor de Tráfego</p></div></div>
+    <p style="color:#d7d7d7; line-height:1.6; margin:0;">O método é direto: configurei o fluxo e comecei a receber leads qualificados no automático.</p>
+  </div>
+  <div class="testimonial-card" style="background:#111; border:1px solid #333; border-radius:18px; padding:20px;">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;"><img src="assets/images/expert.png" alt="Depoimento" loading="lazy" style="width:52px; height:52px; border-radius:999px; object-fit:cover; border:1px solid #444;"><div><p style="color:#fff; font-weight:700; margin:0;">Juliana Rocha</p><p style="color:#aaa; font-size:13px; margin:0;">Infoprodutora</p></div></div>
+    <p style="color:#d7d7d7; line-height:1.6; margin:0;">Consegui organizar todo o atendimento e reduzir meu tempo no direct em mais de 70%.</p>
+  </div>
+  <div class="testimonial-card" style="background:#111; border:1px solid #333; border-radius:18px; padding:20px;">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;"><img src="assets/images/expert.png" alt="Depoimento" loading="lazy" style="width:52px; height:52px; border-radius:999px; object-fit:cover; border:1px solid #444;"><div><p style="color:#fff; font-weight:700; margin:0;">Rafael Martins</p><p style="color:#aaa; font-size:13px; margin:0;">Empreendedor</p></div></div>
+    <p style="color:#d7d7d7; line-height:1.6; margin:0;">Já na primeira semana fechei 3 clientes aplicando exatamente o passo a passo das automações.</p>
+  </div>
+</div>
+<style>
+@media (min-width: 768px){ .testimonials-grid{ grid-template-columns:repeat(2,minmax(0,1fr)) !important; } }
+</style><style>
+        .clients-card-container {
+          box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 0 40px rgba(0,0,0,0.5);
+        }
+
+        .clients-carousel-item {
+          width: 260px;
+        }
+        
+        .clients-carousel-image {
+          width: 100%;
+          height: auto;
+          border-radius: 0;
+          box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+          border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        @media (max-width: 767px) {
+          .clients-carousel-item {
+            width: 200px;
+          }
+          .clients-card-container {
+            border-radius: 20px;
+            background: #0A0A0A;
+            border: 1px solid #333333;
+          }
+        }
+      </style></section><style>
+      @media (max-width: 768px) {
+        .clients-mobile-pad {
+          padding-left: 6px !important;
+          padding-right: 6px !important;
+        }
+      }
+    </style>
+
+<section data-edit="BG_009" id="independence-section" class="overflow-hidden before-after-tools-section py-10 lg:py-[50px] relative" style="background: repeating-linear-gradient(90deg, transparent, transparent 7px, rgba(255, 255, 255, 0.03) 7px, rgba(255, 255, 255, 0.03) 8px) rgb(0, 0, 0); opacity: 1; visibility: visible;"><div class="mx-auto mobile-container-standard" style="max-width: 1200px; position: relative;"><div class="hidden md:flex text-center mb-12 relative flex-col items-center"><h2 class="mobile-title-standard" style="font-family: var(--font-title); color: rgb(255, 255, 255); margin-bottom: 6px; white-space: pre-line;">SE VOCÊ ACHA QUE VENDER <br class="hidden md:block"> <span class="text-gradient-orange" style="font-weight: bold;">NAS REDES SOCIAIS</span> É <span class="text-gradient-orange" style="font-weight: bold;">DIFÍCIL</span></h2><p class="mobile-subtitle-standard" style="font-family: var(--font-body); color: rgb(200, 200, 200); max-width: 800px; margin: 0px auto; font-size: 18px;">é porque ainda não conhece automação.</p><div class="md:hidden w-full max-w-[90%] mx-auto mt-6 mb-8 text-center rounded-[12px] border border-[#333333] bg-[#111] p-4 relative overflow-hidden" style="box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 20px;"><p style="color: rgb(255, 255, 255); font-size: 18px; margin-bottom: 8px;">Você não precisa ficar <br> on-line o dia todo para</p><div class="bg-[#1a1a1a] rounded-[12px] p-2 border border-[#333]"><p class="text-gradient-orange font-bold uppercase text-lg">vender nas redes sociais</p></div></div></div><div class="md:hidden mb-8"><h2 class="section-title-standard text-white">SE VOCÊ ACHA QUE VENDER <span class="text-gradient-orange font-bold">NAS REDES SOCIAIS</span> É <span class="text-gradient-orange font-bold">DIFÍCIL</span></h2><p class="section-subtitle-standard">é porque ainda não conhece automação.</p></div><div class="md:px-0"><div class="tools-cards-grid mt-4" style="grid-template-columns: 1fr; max-width: 700px; margin: 16px auto 0 auto;"><div class="tools-card flex flex-col"><div class="text-center mb-4 md:mb-6"><span class="premium-badge">VOCÊ VAI CONQUISTAR!</span></div><div class="flex flex-row items-center justify-start gap-4 mb-2 md:mb-8 px-[6px] md:px-2 tool-header-row" style="margin-bottom: 26px;"><h3 style="font-family: var(--font-title); font-size: 22px; font-weight: bold; color: rgb(255, 255, 255); line-height: 1.3; text-align: left; margin-top: 0px; margin-bottom: 6px;">Vender usando automação é mais simples do que você imagina</h3></div><ul class="space-y-4 md:space-y-6"><li class="flex items-start"><div style="width: 8px; height: 8px; border-radius: 50%; background-color: rgb(255, 102, 0); margin-right: 10px; margin-top: 8px; flex-shrink: 0;"></div><div style="flex: 1 1 0%;"><div class="text-gradient-orange" style="font-family: var(--font-body); font-size: 17px; line-height: 1.4; margin-bottom: 2px; font-weight: bold;">Automação funciona para qualquer nicho</div><div style="font-family: var(--font-body); font-size: 13px; color: rgb(255, 255, 255); line-height: 1.4; font-weight: normal;">Já usamos o método em e-commerce, serviços, infoprodutos e muito mais</div></div></li><li class="flex items-start"><div style="width: 8px; height: 8px; border-radius: 50%; background-color: rgb(255, 102, 0); margin-right: 10px; margin-top: 8px; flex-shrink: 0;"></div><div style="flex: 1 1 0%;"><div class="text-gradient-orange" style="font-family: var(--font-body); font-size: 17px; line-height: 1.4; margin-bottom: 2px; font-weight: bold;">Configure uma vez, venda sempre</div><div style="font-family: var(--font-body); font-size: 13px; color: rgb(255, 255, 255); line-height: 1.4; font-weight: normal;">Seu fluxo trabalha 24h por dia enquanto você descansa ou faz outras coisas</div></div></li><li class="flex items-start"><div style="width: 8px; height: 8px; border-radius: 50%; background-color: rgb(255, 102, 0); margin-right: 10px; margin-top: 8px; flex-shrink: 0;"></div><div style="flex: 1 1 0%;"><div class="text-gradient-orange" style="font-family: var(--font-body); font-size: 17px; line-height: 1.4; margin-bottom: 2px; font-weight: bold;">Resposta imediata = mais conversão</div><div style="font-family: var(--font-body); font-size: 13px; color: rgb(255, 255, 255); line-height: 1.4; font-weight: normal;">Quem responde primeiro, vende mais. Sua automação nunca deixa um lead esperando</div></div></li><li class="flex items-start"><div style="width: 8px; height: 8px; border-radius: 50%; background-color: rgb(255, 102, 0); margin-right: 10px; margin-top: 8px; flex-shrink: 0;"></div><div style="flex: 1 1 0%;"><div class="text-gradient-orange" style="font-family: var(--font-body); font-size: 17px; line-height: 1.4; margin-bottom: 2px; font-weight: bold;">Sem precisar de programação</div><div style="font-family: var(--font-body); font-size: 13px; color: rgb(255, 255, 255); line-height: 1.4; font-weight: normal;">Se você sabe mexer no celular, consegue montar e rodar seu primeiro fluxo hoje</div></div></li><li class="flex items-start"><div style="width: 8px; height: 8px; border-radius: 50%; background-color: rgb(255, 102, 0); margin-right: 10px; margin-top: 8px; flex-shrink: 0;"></div><div style="flex: 1 1 0%;"><div class="text-gradient-orange" style="font-family: var(--font-body); font-size: 17px; line-height: 1.4; margin-bottom: 2px; font-weight: bold;">Escale sem aumentar custos</div><div style="font-family: var(--font-body); font-size: 13px; color: rgb(255, 255, 255); line-height: 1.4; font-weight: normal;">Uma automação bem feita substitui 3 atendentes e custa menos de R/mês</div></div></li></ul></div></div><div style="display:flex; justify-content:center; margin:22px 0 8px;"><a href="#promo-card-section" target="_self" class="framer-btn-container" style="touch-action: manipulation; -webkit-tap-highlight-color: transparent;"><div class="framer-btn-bevel"><div class="framer-btn-cap"><div class="absolute top-0 left-[-150%] w-[150%] h-full bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-[-25deg] animate-shine pointer-events-none" style="z-index: 5;"></div><div class="framer-btn-border"></div><div class="framer-text-container"><p class="framer-text" style="text-transform: uppercase; font-size: 15px;">QUERO APLICAR ESSA ESTRATÉGIA</p></div><div class="framer-glow-wrap"><div class="framer-glow"></div></div><div class="framer-metal-button"><div class="framer-metal-bevel"><div class="framer-metal-cap"><div class="framer-metal-dot"></div><div class="framer-arrow-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></div></div></div></div></div></div></a></div><style>
+        /* ===== ESCOPO ISOLADO: APENAS .before-after-tools-section ===== */
+        
+        /* Grid Layout */
+        .before-after-tools-section .tools-cards-grid {
+          display: grid;
+          gap: 24px;
+          width: 100%;
+          max-width: 100%;
+        }
+
+        /* Desktop: 2 colunas - mantém layout atual */
+        @media (min-width: 1024px) {
+          .before-after-tools-section .tools-cards-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            max-width: 1000px;
+            margin: 0 auto;
+          }
+        }
+
+        /* Mobile: 1 coluna - cards largos como na seção BÔNUS */
+        @media (max-width: 767px) {
+          .before-after-tools-section .tools-cards-grid {
+            grid-template-columns: 1fr;
+            gap: 24px;
+            padding: 0;
+            margin: 0;
+          }
+          
+          /* Mobile titles block removed to allow global standard */
+        }
+
+        /* Cards - Desktop mantém estilo atual */
+        .before-after-tools-section .tools-card {
+          background: linear-gradient(135deg, #111111 0%, #0A0A0A 100%);
+          background: linear-gradient(135deg, #111111 0%, #0A0A0A 100%);
+          border: 1px solid #333333;
+          border-radius: 12px;
+          padding: 32px;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+          width: 100%;
+        }
+
+        /* Mobile: cards largos como na seção BÔNUS */
+        @media (max-width: 767px) {
+          .before-after-tools-section .tools-card {
+            /* Replicar exatamente o estilo dos cards da seção BÔNUS */
+            background: #111111;
+            /* Replicar exatamente o estilo dos cards da seção BÔNUS */
+            background: #111111;
+            border: 1px solid #333333;
+            border-radius: 12px;
+            padding: 16px; /* Reduced padding from 24px */
+            margin: 0 auto;
+            width: 100%;
+            max-width: 100%;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            position: relative;
+            transition: all 0.3s ease;
+          }
+          
+          /* Ajustar espaçamentos internos no mobile */
+          .before-after-tools-section .tools-card h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+          }
+          
+          .before-after-tools-section .tools-card ul li div:first-child {
+            font-size: 15px;
+          }
+          
+          .before-after-tools-section .tools-card ul li div:last-child {
+            font-size: 12px;
+          }
+        }
+
+        /* Container adjustments para mobile */
+        @media (max-width: 767px) {
+          .before-after-tools-section .mx-auto {
+            padding-left: 20px;
+            padding-right: 20px;
+            max-width: 100%;
+          }
+          
+          .before-after-tools-section .tools-card {
+            padding: 16px; /* Explicit reduction */
+          }
+
+          .before-after-tools-section .tools-card .flex.items-center.gap-5 {
+            gap: 16px; /* Slightly more gap */
+          }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+          .before-after-tools-section .tools-card {
+            transition: border-color 0.2s ease;
+          }
+          
+          .before-after-tools-section .tools-card:hover {
+            transform: none;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+          }
+        }
+
+        /* ===== PREMIUM GLASS EFFECTS ===== */
+        
+        /* Premium Badge */
+        .before-after-tools-section .premium-badge {
+          display: inline-block;
+          background: linear-gradient(90deg, #FF6A00 0%, #FAA429 50%, #FF6A00 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          color: transparent;
+          font-family: var(--font-body);
+          font-size: 13px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0; /* REMOVED SPACING */
+        }
+
+        /* Glossy Icon Box */
+        .before-after-tools-section .glossy-icon-box {
+          width: 70px;
+          height: 70px;
+          position: relative;
+          background: #111111;
+          border-radius: 12px;
+          padding: 1px;
+          box-shadow: 
+          0 10px 25px -5px rgba(0,0,0,0.5),
+          0 0 0 1px rgba(255,255,255,0.05); /* Outer thin ring */
+          overflow: hidden;
+        }
+
+        .before-after-tools-section .glossy-icon-box::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          border-radius: 12px;
+          padding: 1px;
+          background: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, transparent 40%, transparent 60%, rgba(255,255,255,0.05) 100%);
+          -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          pointer-events: none;
+        }
+
+        .before-after-tools-section .glossy-icon-inner {
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(180deg, #1A1A1A 0%, #0D0D0D 100%);
+          border-radius: 11px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          overflow: hidden;
+          border: 1px solid rgba(255,255,255,0.03); /* Inner subtle border */
+        }
+
+        .before-after-tools-section .glossy-shine {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 50%;
+          background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, transparent 100%);
+          pointer-events: none;
+        }
+
+        .before-after-tools-section .glossy-shine::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 10%;
+          right: 10%;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+        }
+
+        .before-after-tools-section .tool-logo-img {
+          height: 44px;
+        }
+
+        @media (max-width: 767px) {
+          .before-after-tools-section .tool-logo-img {
+            height: 36px; /* Slightly smaller for mobile layout fit */
+          }
+          
+          .before-after-tools-section .custom-icon-box {
+            width: 70px;
+            height: 70px;
+          }
+          
+          .btn-anim-content {
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             width: 100%;
+          }
+        }
+        
+        .custom-icon-box {
+           width: 80px;
+           height: 80px;
+        }
+
+        @media (max-width: 768px) {
+          .before-after-mobile-pad {
+            padding-left: 6px !important;
+            padding-right: 6px !important;
+          }
+          .before-after-tools-section h2.section-title-standard {
+            font-size: 24px !important;
+          }
+        }
+      </style></section><!-- SECTION: S09 -->
+<section class="steps-section py-16 md:py-24 bg-black relative overflow-hidden"><div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none"><div class="absolute top-[10%] left-[20%] w-[50%] h-[50%] bg-[#f60] opacity-[0.04] blur-[150px] rounded-full"></div></div><div class="container mx-auto px-0 md:px-6 max-w-[1200px] relative z-10"><div class="hidden md:block text-center mb-8 md:mb-16 max-w-4xl mx-auto"><h2 class="text-white font-aldrich text-3xl md:text-5xl uppercase leading-tight mb-2">EXISTE UM MÉTODO QUE QUEM APRENDE, <span class="text-gradient-orange font-bold">VAI VENDER TODO DIA EM 2026</span></h2><p class="text-gray-300 font-inter text-[14px] md:text-lg leading-relaxed max-w-3xl mx-auto">O Método de Automação é um método validado que te ensina, passo a passo, a montar automações que vendem nas redes sociais no piloto automático. Do zero à máquina de vendas que trabalha por você 24 horas por dia.</p></div><div class="md:hidden mb-8"><div class="pt-4 px-[6px] text-center"><h2 class="section-title-standard text-white">EXISTE UM <span class="text-gradient-orange font-bold">MÉTODO</span> QUE QUEM <br>APRENDE, <span class="text-gradient-orange font-bold">VAI VENDER TODO <br><span class="text-gradient-orange font-bold">DIA EM 2026</span></h2><p class="section-subtitle-standard">O Método de Automação é um método validado que te ensina, passo a passo, a montar automações que vendem nas redes sociais no piloto automático. Do zero à máquina de vendas que trabalha por você 24 horas por dia.</p></div></div><div class="px-5 md:px-0"><div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"><div class="group relative rounded-[12px] overflow-hidden border border-[#333333] hover:border-[#f60] transition-colors duration-500 h-[450px] md:h-[550px]" style="background: linear-gradient(160deg, #110d00 0%, #1d1200 100%);">
+<div class="absolute top-0 left-0"><div class="bg-gradient-to-br from-[#FF8F3F] to-[#FF5500] w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-br-2xl shadow-lg z-30"><span class="text-white font-aldrich text-3xl md:text-4xl font-bold">1</span></div></div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none" style="opacity:0.15;">
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"></path><path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"></path></svg>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-[70%] bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 w-full p-6 md:p-8 z-20 flex flex-col items-center justify-end h-full text-center">
+<div class="w-full max-w-[200px] h-[1px] bg-white/20 mb-5"></div>
+<h3 class="text-gradient-orange font-aldrich text-xl md:text-2xl font-bold uppercase mb-3 leading-none whitespace-nowrap overflow-hidden text-ellipsis w-full">Configure Sua Automação</h3>
+<p class="text-gray-200 font-inter text-xs md:text-sm leading-relaxed opacity-90 w-full px-1">Monte seu primeiro fluxo usando ManyChat, Zapier e IA. Sem código. Em menos de 1 hora você já tem sua máquina rodando.</p>
+</div></div><div class="group relative rounded-[12px] overflow-hidden border border-[#333333] hover:border-[#f60] transition-colors duration-500 h-[450px] md:h-[550px]" style="background: linear-gradient(160deg, #110d00 0%, #1d1200 100%);">
+<div class="absolute top-0 left-0"><div class="bg-gradient-to-br from-[#FF8F3F] to-[#FF5500] w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-br-2xl shadow-lg z-30"><span class="text-white font-aldrich text-3xl md:text-4xl font-bold">2</span></div></div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none" style="opacity:0.15;">
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"></path></svg>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-[70%] bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 w-full p-6 md:p-8 z-20 flex flex-col items-center justify-end h-full text-center">
+<div class="w-full max-w-[200px] h-[1px] bg-white/20 mb-5"></div>
+<h3 class="text-gradient-orange font-aldrich text-xl md:text-2xl font-bold uppercase mb-3 leading-none whitespace-nowrap overflow-hidden text-ellipsis w-full">Programe e Publique</h3>
+<p class="text-gray-200 font-inter text-xs md:text-sm leading-relaxed opacity-90 w-full px-1">Crie e agende conteúdo em lote usando IA + automação. Publique uma semana inteira de posts em 30 minutos.</p>
+</div></div><div class="group relative rounded-[12px] overflow-hidden border border-[#333333] hover:border-[#f60] transition-colors duration-500 h-[450px] md:h-[550px]" style="background: linear-gradient(160deg, #110d00 0%, #1d1200 100%);">
+<div class="absolute top-0 left-0"><div class="bg-gradient-to-br from-[#FF8F3F] to-[#FF5500] w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-br-2xl shadow-lg z-30"><span class="text-white font-aldrich text-3xl md:text-4xl font-bold">3</span></div></div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none" style="opacity:0.15;">
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220" viewBox="0 0 24 24" fill="none" stroke="#FF6A00" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-[70%] bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 w-full p-6 md:p-8 z-20 flex flex-col items-center justify-end h-full text-center">
+<div class="w-full max-w-[200px] h-[1px] bg-white/20 mb-5"></div>
+<h3 class="text-gradient-orange font-aldrich text-xl md:text-2xl font-bold uppercase mb-3 leading-none whitespace-nowrap overflow-hidden text-ellipsis w-full">Feche Vendas no Automático</h3>
+<p class="text-gray-200 font-inter text-xs md:text-sm leading-relaxed opacity-90 w-full px-1">Configure respostas automáticas que qualificam leads, enviam propostas e fecham vendas — sem você precisar estar online.</p>
+</div></div></div></div></div></div></section><style>
+                @media (max-width: 768px) {
+                    .steps-section .section-title-standard, 
+                    .steps-section .section-subtitle-standard {
+                        padding: 0px 16px 0 16px !important; 
+                    }
+                    
+                    .steps-section h2.section-title-standard {
+                        font-size: 24px !important;
+                        line-height: 1.2 !important;
+                        width: 100% !important;
+                        max-width: 100% !important;
+                        display: block !important;
+                    }
+                }
+            </style><!-- SECTION: S06 -->
+<section class="modules-section py-10 lg:py-[50px]"><div class="modules-container mobile-container-standard md:px-6"><div class="hidden md:block"><h2 class="modules-title mobile-title-standard"><span class="modules-title-line">MÓDULOS E <span class="text-gradient-orange font-bold">AULAS</span></span><span class="modules-title-line">QUE VOCÊ <span class="text-gradient-orange font-bold">TERÁ ACESSO</span></span></h2></div><div class="md:hidden mb-8"><h2 class="section-title-standard text-white">MÓDULOS E AULAS QUE <br><span class="text-gradient-orange font-bold">VOCÊ TERÁ ACESSO</span></h2></div><div class="md:px-0"><div class="modules-cards-area"><div class="modules-cards-grid"><div class="modules-card"><div class="modules-card-bar"></div><button class="modules-card-header" style="touch-action: manipulation; -webkit-tap-highlight-color: transparent;"><div class="modules-card-info" style="min-height: 60px; display: flex; flex-direction: column; justify-content: center;"><div class="modules-card-number">MÓDULO 01</div><h4 class="modules-card-title">FUNDAMENTOS DAS AUTOMAÇÕES</h4></div><svg data-edit="ICON_008" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down modules-accordion-toggle" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><div class="modules-lessons-panel"><ul class="modules-lessons-list"><li class="modules-lesson-item"><span class="modules-lesson-number text-gradient-orange font-bold">AULA 01</span><span class="modules-lesson-title">O que é automação e por que ela muda tudo</span></li><li class="modules-lesson-item"><span class="modules-lesson-number text-gradient-orange font-bold">AULA 02</span><span class="modules-lesson-title">Ferramentas essenciais: ManyChat, Zapier e Make</span></li><li class="modules-lesson-item"><span class="modules-lesson-number text-gradient-orange font-bold">AULA 03</span><span class="modules-lesson-title">Sua primeira automação em 30 minutos</span></li><li class="modules-lesson-item"><span class="modules-lesson-number text-gradient-orange font-bold">AULA 04</span><span class="modules-lesson-title">Conectando Instagram, WhatsApp e e-mail</span></li><li class="modules-lesson-item"><span class="modules-lesson-number text-gradient-orange font-bold">AULA 05</span><span class="modules-lesson-title">Criando seu primeiro fluxo de vendas completo</span></li></ul></div></div><div class="modules-card"><div class="modules-card-bar"></div><button class="modules-card-header" style="touch-action: manipulation; -webkit-tap-highlight-color: transparent;"><div class="modules-card-info" style="min-height: 60px; display: flex; flex-direction: column; justify-content: center;"><div class="modules-card-number">MÓDULO 02</div><h4 class="modules-card-title">IA APLICADA ÀS VENDAS</h4></div><svg data-edit="ICON_009" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down modules-accordion-toggle" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><div class="modules-lessons-panel"><ul class="modules-lessons-list"><li class="modules-lesson-item"><span class="modules-lesson-number text-gradient-orange font-bold">AULA 01</span><span class="modules-lesson-title">IA para criar copy que converte</span></li><li class="modules-lesson-item"><span class="modules-lesson-number text-gradient-orange font-bold">AULA 02</span><span class="modules-lesson-title">Gerando até 30 posts em 10 minutos com IA</span></li><li class="modules-lesson-item"><span class="modules-lesson-number text-gradient-orange font-bold">AULA 03</span><span class="modules-lesson-title">Chatbot de vendas com GPT — do zero</span></li><li class="modules-lesson-item"><span class="modules-lesson-number text-gradient-orange font-bold">AULA 04</span><span class="modules-lesson-title">Respostas automáticas que vendem no DM</span></li><li class="modules-lesson-item"><span class="modules-lesson-number text-gradient-orange font-bold">AULA 05</span><span class="modules-lesson-title">Funil de DM: de seguidor a cliente em 5 mensagens</span></li></ul></div></div><div class="modules-card"><div class="modules-card-bar"></div><button class="modules-card-header" style="touch-action: manipulation; -webkit-tap-highlight-color: transparent;"><div class="modules-card-info" style="min-height: 60px; display: flex; flex-direction: column; justify-content: center;"><div class="modules-card-number">MÓDULO 03</div><h4 class="modules-card-title">AUTOMAÇÃO NA PRÁTICA</h4></div><svg data-edit="ICON_010" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down modules-accordion-toggle" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><div class="modules-lessons-panel"><ul class="modules-lessons-list"><li class="modules-lesson-item"><span class="modules-lesson-number text-gradient-orange font-bold">AULA 01</span><span class="modules-lesson-title">Automação de agendamento e publicação</span></li><li class="modules-lesson-item"><span class="modules-lesson-number text-gradient-orange font-bold">AULA 02</span><span class="modules-lesson-title">Case prático: do zero a R/mês em automação</span></li><li class="modules-lesson-item"><span class="modules-lesson-number text-gradient-orange font-bold">AULA 03</span><span class="modules-lesson-title">Integração com WhatsApp Business e Instagram</span></li><li class="modules-lesson-item"><span class="modules-lesson-number text-gradient-orange font-bold">AULA 04</span><span class="modules-lesson-title">Automação de respostas e qualificação de leads</span></li><li class="modules-lesson-item"><span class="modules-lesson-number text-gradient-orange font-bold">AULA 05</span><span class="modules-lesson-title">Métricas, otimização e escalada de resultados</span></li></ul></div></div></div></div></div></div><style>
+        /* ===== ESCOPO ISOLADO: APENAS .modules-section ===== */
+        .modules-section {
+          background: #000000;
+          padding: 32px 0;
+          overflow: hidden;
+        }
+
+        .modules-section .modules-container {
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 0 24px;
+        }
+
+
+
+        /* ===== TÍTULO DA SEfO ===== */
+        .modules-section .modules-card-title {
+          font-family: var(--font-title);
+          color: #FFFFFF; /* White by default */
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 1.2;
+          letter-spacing: 0.02em;
+          flex-grow: 1;
+          transition: color 0.3s ease;
+        }
+
+        /* Active Title Color */
+        .modules-section .modules-card-title-active {
+          background: linear-gradient(90deg, #FF6A00 0%, #FAA429 50%, #FF6A00 100%) !important;
+          -webkit-background-clip: text !important;
+          -webkit-text-fill-color: transparent !important;
+          background-clip: text !important;
+          color: transparent !important;
+        }
+        .modules-section .modules-title {
+          text-align: center;
+          color: #FFFFFF;
+          font-family: var(--font-title);
+          font-weight: normal;
+          letter-spacing: 0.02em;
+          text-transform: uppercase;
+          margin-bottom: 32px;
+        }
+        
+        @media (min-width: 768px) {
+          .modules-section .modules-title {
+            font-size: 48px; /* Standard size */
+            font-weight: 400; /* Normal weight for white text */
+            line-height: 1.1;
+            font-family: var(--font-title);
+          }
+        }
+
+        .modules-section .modules-title-line {
+          display: block;
+        }
+
+        /* ===== CARROSSEL DE IMAGENS ===== */
+        .modules-section .modules-image-area {
+          position: relative;
+          width: 100%;
+          margin-bottom: 20px; /* Adjusted spacing */
+        }
+
+        .modules-section .modules-image-container {
+          width: 100%;
+          overflow: hidden;
+        }
+
+        .modules-section .modules-image-grid {
+          display: grid;
+          gap: 20px;
+          width: 100%;
+          touch-action: pan-y;
+        }
+
+        /* Tablet: 2 colunas */
+        @media (min-width: 768px) and (max-width: 1023px) {
+          .modules-section .modules-image-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+          }
+        }
+
+        /* Desktop: 3 colunas */
+        @media (min-width: 1024px) {
+          .modules-section .modules-image-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+          }
+        }
+
+        /* Mobile: 1 coluna */
+        @media (max-width: 767px) {
+          .modules-section .modules-image-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 0; /* Padding controlado pelo container */
+          }
+        }
+
+        /* ===== SETAS DO CARROSSEL - DESKTOP ===== */
+        .modules-section .carousel-arrow {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 10;
+          width: 48px;
+          height: 48px;
+          background: rgba(0, 0, 0, 0.8);
+          border: 1px solid #666;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: all 0.2s ease;
+        }
+
+        .modules-section .carousel-arrow:hover:not(:disabled) {
+          background: rgba(0, 0, 0, 1);
+          border-color: #f60;
+        }
+
+        .modules-section .carousel-arrow:disabled {
+          opacity: 0.3;
+          cursor: not-allowed;
+        }
+
+        .modules-section .carousel-arrow-left {
+          left: 35px;
+        }
+
+        .modules-section .carousel-arrow-right {
+          right: 35px;
+        }
+
+        .modules-section .carousel-arrow-icon {
+          width: 20px;
+          height: 20px;
+          color: #FFFFFF;
+        }
+
+        /* ===== SETAS DE NAVEGAfO - MOBILE ===== */
+        .modules-section .carousel-arrow-mobile-left,
+        .modules-section .carousel-arrow-mobile-right {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 48px;
+          height: 48px;
+          min-width: 48px;
+          min-height: 48px;
+          border-radius: 50%;
+          background-color: rgba(11, 11, 11, 0.9);
+          border: 1.5px solid #FFFFFF;
+          backdrop-filter: blur(4px);
+          -webkit-backdrop-filter: blur(4px);
+          z-index: 30;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: background-color 0.2s ease, border-color 0.2s ease;
+          touch-action: manipulation;
+          -webkit-tap-highlight-color: transparent;
+          outline: none;
+          user-select: none;
+        }
+
+        .modules-section .carousel-arrow-mobile-left:disabled,
+        .modules-section .carousel-arrow-mobile-right:disabled {
+          opacity: 0.3;
+          cursor: not-allowed;
+        }
+
+        .modules-section .carousel-arrow-mobile-left:not(:disabled):active,
+        .modules-section .carousel-arrow-mobile-right:not(:disabled):active {
+          border-color: #22C55E;
+          background-color: rgba(34, 197, 94, 0.1);
+          transform: translateY(-50%) scale(0.95);
+        }
+
+        .modules-section .carousel-arrow-mobile-left {
+          left: 12px;
+        }
+
+        .modules-section .carousel-arrow-mobile-right {
+          right: 12px;
+        }
+
+        .modules-section .carousel-arrow-mobile-icon {
+          width: 24px;
+          height: 24px;
+          color: #FFFFFF;
+        }
+
+        .modules-section .carousel-arrow-mobile-left:not(:disabled):active .carousel-arrow-mobile-icon,
+        .modules-section .carousel-arrow-mobile-right:not(:disabled):active .carousel-arrow-mobile-icon {
+          color: #22C55E;
+        }
+
+        /* ===== CARDS DE IMAGEM ===== */
+        .modules-section .modules-image-item {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .modules-section .modules-image {
+          width: 100%;
+          height: auto;
+          display: block;
+          object-fit: contain;
+          user-select: none;
+          pointer-events: none;
+          border-radius: 0;
+        }
+
+        .modules-section .modules-image-wrapper {
+          min-height: auto;
+          background: #111111;
+        }
+
+        .modules-section .modules-image-placeholder {
+          width: 100%;
+          height: 300px;
+          background: #111111;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 0;
+        }
+
+        .modules-section .modules-loading-spinner {
+          width: 32px;
+          height: 32px;
+          border: 2px solid #333;
+          border-top: 2px solid #22C55E;
+          border-radius: 50%;
+          animation: modules-spin 1s linear infinite;
+        }
+
+        @keyframes modules-spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+
+        /* ===== ACORDEÃO DOS MÓDULOS ===== */
+        .modules-section .modules-cards-area {
+          width: 100%;
+        }
+
+        .modules-section .modules-cards-grid {
+          display: grid;
+          gap: 20px;
+          width: 100%;
+        }
+
+        /* Tablet: 2 colunas */
+        @media (min-width: 768px) and (max-width: 1023px) {
+          .modules-section .modules-cards-grid {
+            grid-template-columns: repeat(2, 1fr);
+            align-items: start;
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+          }
+        }
+
+        /* Desktop: 3 colunas */
+        @media (min-width: 1024px) {
+          .modules-section .modules-cards-grid {
+            grid-template-columns: repeat(3, 1fr);
+            align-items: start;
+            gap: 28px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+          }
+        }
+
+        /* Mobile: 1 coluna */
+        @media (max-width: 767px) {
+          .modules-section .modules-cards-grid {
+            grid-template-columns: 1fr;
+            gap: 16px;
+            padding: 0; /* Padding controlado pelo container */
+          }
+        }
+
+        /* ===== CARDS DOS MÓDULOS ===== */
+        .modules-section .modules-card {
+          background: #0E0E10;
+          border: 1px solid #333333;
+          border-radius: 12px;
+          overflow: hidden;
+          width: 100%;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+        }
+
+        /* ===== BARRA VERDE NO TOPO (50% da largura) ===== */
+        .modules-section .modules-card-bar {
+          height: 4px;
+          background: linear-gradient(90deg, #FF6A00 0%, #FAA429 50%, #FF6A00 100%);
+          width: 50%;
+          margin: 0;
+          padding: 0;
+          border-radius: 6px;
+        }
+
+        /* ===== HEADER CLICÁVEL ===== */
+        .modules-section .modules-card-header {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          transition: background-color 0.2s ease;
+          text-align: left;
+          padding: 20px 24px;
+          min-height: auto;
+        }
+
+        .modules-section .modules-card-header:hover {
+          background-color: #1a1a1a;
+        }
+
+        .modules-section .modules-card-info {
+          flex: 1;
+          min-width: 0;
+          display: flex;
+          flex-direction: column;
+          padding-right: 20px;
+        }
+
+        .modules-section .modules-card-number {
+          font-size: 12px;
+          font-weight: 600;
+          color: #888888;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          margin-bottom: 6px;
+        }
+
+        .modules-section .modules-card-title {
+          color: #FFFFFF;
+          font-weight: 600;
+          line-height: 1.3;
+          margin: 0;
+          word-break: break-word;
+          hyphens: auto;
+          white-space: normal;
+          overflow-wrap: break-word;
+          text-transform: uppercase;
+          max-width: 100%;
+          font-size: 17px;
+          transition: color 0.2s ease;
+        }
+
+        /* Estados do título */
+        @media (hover: hover) {
+          .modules-section .modules-card-header:hover .modules-card-title {
+            background: linear-gradient(90deg, #FF6A00 0%, #FAA429 50%, #FF6A00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+          }
+        }
+
+        .modules-section .modules-card-title-active {
+          background: linear-gradient(90deg, #FF6A00 0%, #FAA429 50%, #FF6A00 100%) !important;
+          -webkit-background-clip: text !important;
+          -webkit-text-fill-color: transparent !important;
+          background-clip: text !important;
+          color: transparent !important;
+        }
+
+        /* ===== TOGGLE DO ACORDEÃO (setinha mais à esquerda) ===== */
+        .modules-section .modules-accordion-toggle {
+          width: 20px;
+          height: 20px;
+          color: #FFFFFF;
+          flex-shrink: 0;
+          transition: transform 0.2s ease;
+          align-self: center;
+          margin-right: 12px;
+        }
+
+        .modules-section .modules-accordion-open {
+          transform: rotate(180deg);
+        }
+
+        /* ===== PAINEL DE AULAS - CORRIGIDO ===== */
+        .modules-section .modules-lessons-panel {
+          background: #0E0E10;
+          border-top: 1px solid #1B1B1F;
+          overflow: hidden;
+          max-height: 0;
+          opacity: 0;
+          transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+          padding: 0 24px 0 24px;
+        }
+
+        /* Estado expandido - CORRIGIDO */
+        .modules-section .modules-lessons-open {
+          max-height: 1000px;
+          opacity: 1;
+          padding: 16px 24px 20px 24px;
+        }
+
+        .modules-section .modules-lessons-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .modules-section .modules-lesson-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 12px;
+          margin-bottom: 12px;
+          padding-top: 0;
+        }
+
+        .modules-section .modules-lesson-item:last-child {
+          margin-bottom: 0;
+        }
+
+        .modules-section .modules-lesson-number {
+          background: linear-gradient(90deg, #FF6A00 0%, #FAA429 50%, #FF6A00 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          font-weight: 600;
+          font-size: 11px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          flex-shrink: 0;
+          margin-top: 2px;
+        }
+
+        .modules-section .modules-lesson-title {
+          color: #FFFFFF;
+          font-size: 14px;
+          line-height: 1.4;
+        }
+
+        /* ===== INDICADORES DO CARROSSEL - MOBILE ===== */
+        .modules-section .modules-indicators {
+          display: flex;
+          justify-content: center;
+          gap: 8px;
+          margin-top: 32px;
+          position: relative;
+          z-index: 1;
+        }
+
+
+
+        /* ===== RESPONSIVIDADE MOBILE ===== */
+        @media (max-width: 767px) {
+          .modules-section .modules-container {
+            max-width: 100% !important;
+            overflow-x: visible !important;
+          }
+          
+          .modules-section .modules-title {
+            margin-bottom: 32px !important;
+          }
+          
+          .modules-section .modules-card-header {
+            touch-action: manipulation !important;
+            -webkit-tap-highlight-color: transparent !important;
+            user-select: none !important;
+            padding: 24px 20px; /* Aumentado para não parecer achatado */
+            min-height: 80px; /* Garante altura mínima robusta */
+          }
+
+          .modules-section .modules-card-title {
+            font-size: 16px;
+            line-height: 1.3;
+          }
+
+          .modules-section .modules-accordion-toggle {
+            margin-right: 16px;
+          }
+
+          .modules-section .modules-lessons-panel {
+            padding: 0 20px 0 20px;
+          }
+
+          .modules-section .modules-lessons-open {
+            padding: 16px 20px 20px 20px;
+          }
+
+          .modules-section .modules-indicators {
+            display: flex;
+          }
+          
+          .modules-section .modules-image-wrapper {
+            min-height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+          }
+
+          .modules-section .modules-image {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important; /* Evita que a imagem pareça achatada/com bordas */
+            object-position: center !important;
+          }
+        }
+
+        /* Desktop adjustments */
+        @media (min-width: 768px) {
+          .modules-section .modules-indicators {
+            display: none;
+          }
+        }
+
+        /* Responsividade para títulos em telas intermediárias */
+        @media (min-width: 768px) and (max-width: 1200px) {
+          .modules-section .modules-card-title {
+            font-size: 15px;
+            line-height: 1.25;
+          }
+        }
+
+        /* ===== SUPORTE A MOVIMENTO REDUZIDO ===== */
+        @media (prefers-reduced-motion: reduce) {
+          .modules-section .carousel-arrow,
+          .modules-section .carousel-arrow-mobile-left,
+          .modules-section .carousel-arrow-mobile-right,
+          .modules-section .modules-accordion-toggle,
+          .modules-section .modules-indicator,
+          .modules-section .modules-card,
+          .modules-section .modules-lessons-panel,
+          .modules-section .modules-card-title {
+            transition: none !important;
+          }
+          
+          .modules-section .modules-loading-spinner {
+            animation: none !important;
+          }
+        }
+        @media (max-width: 768px) {
+          .modules-section h2.section-title-standard {
+            font-size: 24px !important;
+            text-wrap: wrap !important;
+          }
+        }
+      </style></section><!-- SECTION: S07 --><script>
+(function() {
+  function initModulesAccordion() {
+    var section = document.querySelector('.modules-section');
+    if (!section) return;
+    var headers = section.querySelectorAll('.modules-card-header');
+    headers.forEach(function(header) {
+      header.addEventListener('click', function(e) {
+        e.preventDefault();
+        var card = header.closest('.modules-card');
+        var panel = card.querySelector('.modules-lessons-panel');
+        var icon = header.querySelector('.modules-accordion-toggle');
+        var title = header.querySelector('.modules-card-title');
+        var isOpen = panel.classList.contains('modules-lessons-open');
+        section.querySelectorAll('.modules-lessons-panel').forEach(function(p) {
+          p.classList.remove('modules-lessons-open');
+        });
+        section.querySelectorAll('.modules-accordion-toggle').forEach(function(i) {
+          i.classList.remove('modules-accordion-open');
+        });
+        section.querySelectorAll('.modules-card-title').forEach(function(t) {
+          t.classList.remove('modules-card-title-active');
+        });
+        if (!isOpen) {
+          panel.classList.add('modules-lessons-open');
+          icon.classList.add('modules-accordion-open');
+          title.classList.add('modules-card-title-active');
+        }
+      }, { passive: false });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initModulesAccordion);
+  } else {
+    initModulesAccordion();
+  }
+})();
+</script>
+<section data-edit="BG_020" class="new-banner-section py-5 lg:py-[50px]" style="background: transparent; overflow: hidden; margin: 0px; padding: 0px; width: 100%;"><div style="width:100%; background:#ffffff; padding:40px 20px; text-align:center;"><p style="font-family: Aldrich, sans-serif; font-size: clamp(22px,4vw,40px); font-weight:700; color:#000; text-transform:uppercase; letter-spacing:0.05em; margin:0;">Ainda não acabou</p></div><!-- SECTION: S11 -->
+<section data-edit="BG_021" id="bonus-section" class="bonus-section section pt-[10px] pb-10 md:py-10 lg:py-[50px]" style="background: rgb(0, 0, 0);"><div class="container mobile-container-standard" style="max-width: 1200px; margin: 0px auto;"><h2 class="hidden md:block bonus-title-desktop"><span class="bonus-title-line">ADQUIRINDO O NOSSO CURSO HOJE,<br>VOCÊ LEVA <span class="text-gradient-orange font-bold" style="font-family: var(--font-title);">3 SUPER BÔNUS</span></span></h2><div class="hidden md:block bonus-subtitle-desktop" style="text-transform: none;">Que vão escalar suas vendas ainda mais</div><div class="md:hidden mb-8"><h2 class="text-white bonus-mobile-pad text-center" style="font-size: 26px; margin-bottom: 0px; line-height: 1.2; font-family: &quot;Space Grotesk&quot;, sans-serif; text-transform: uppercase; display: block; width: 100%;">ADQUIRINDO O NOSSO <br>CURSO HOJE, VOCÊ LEVA <br><span class="mobile-green-highlight text-gradient-orange font-bold">3 SUPER BÔNUS</span></h2><p class="section-subtitle-standard bonus-mobile-pad" style="margin-top: 8px;">Que vão escalar suas vendas ainda mais</p></div><div class="bonus-cards-container" style="max-width: 100%; margin-top: clamp(48px, 8vw, 64px);"><div class="
+                group bonus-card bonus-card-refined
+                w-full max-w-[1000px] mx-auto
+                p-8 rounded-[12px]
+                cursor-pointer
+                transition-all duration-300 ease-out
+                mb-[clamp(32px,5vw,40px)]
+              "><div class="hidden md:flex items-center" style="gap: 50px;"><div class="bonus-image-area flex-shrink-0" style="width: auto; max-width: 350px;"><img data-edit="IMG_206" src="assets/images/mockup01.png" alt="Bônus 01 - ACESSO VITALÍCIO" loading="lazy" decoding="async" class="bonus-image" style="width: auto; height: auto; max-height: 400px; object-fit: contain; object-position: center center; border-radius: 16px; border: 1px solid rgb(51, 51, 51); background: rgb(10, 10, 10); display: block;"></div><div class="bonus-content-area flex-1" style="text-align: left; display: flex; flex-direction: column; justify-content: center;"><div class="bonus-pill" style="margin-bottom: 18px;"><span style="font-size: 13px; line-height: 1; padding: 8px 16px; border-radius: 999px; color: rgb(255, 255, 255); background: linear-gradient(rgb(20, 20, 20), rgb(20, 20, 20)) padding-box padding-box, linear-gradient(135deg, rgb(255, 106, 0), rgb(250, 164, 41), rgb(255, 106, 0)) border-box border-box; border: 1px solid transparent; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; min-width: 90px; display: inline-block; text-align: center;"><span style="font-size: 15px;">BÔNUS 01</span></span></div><h3 class="bonus-title-card" style="font-family: var(--font-title); color: rgb(255, 255, 255); font-weight: 800; font-size: 32px; margin-bottom: 12px; line-height: 1.2; text-transform: uppercase; letter-spacing: 0.02em;">ACESSO VITALÍCIO AO MÉTODO</h3><p class="bonus-description" style="font-family: var(--font-body); color: rgb(184, 184, 184); font-size: 18px; line-height: 1.6; margin-bottom: 16px;">Tenha acesso vitalício ao treinamento e as atualizações sem custo adicional.</p></div></div><div class="md:hidden"><div class="bonus-pill-mobile absolute left-1/2 transform -translate-x-1/2 z-20" style="top: -14px;"><span style="font-size: 13px; line-height: 1; padding: 8px 16px; border-radius: 999px; color: rgb(255, 255, 255); background: linear-gradient(rgb(20, 20, 20), rgb(20, 20, 20)) padding-box padding-box, linear-gradient(135deg, rgb(255, 106, 0), rgb(250, 164, 41), rgb(255, 106, 0)) border-box border-box; border: 1px solid transparent; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; display: inline-block; text-align: center; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;">BÔNUS 01</span></div><div class="bonus-image-area mb-8" style="text-align: center; margin-top: 32px;"><img data-edit="IMG_209" src="assets/images/mockup01.png" alt="Bônus 01 - ACESSO VITALÍCIO" loading="lazy" decoding="async" class="bonus-image" style="width: 100%; height: auto; max-width: 100%; object-fit: contain; object-position: center center; border-radius: 16px; border: 1px solid rgb(51, 51, 51); background: rgb(10, 10, 10); display: block; margin: 0px auto;"></div><div class="bonus-content-area" style="text-align: center; margin-top: 8px;"><h3 class="bonus-title-card" style="font-family: var(--font-title); color: rgb(255, 255, 255); font-weight: 800; font-size: clamp(18px, 4vw, 22px); margin-bottom: 4px; line-height: 1.2; text-transform: uppercase; letter-spacing: 0.02em; display: block;">ACESSO VITALÍCIO AO MÉTODO</h3><p class="bonus-description" style="font-family: var(--font-body); color: rgb(184, 184, 184); font-size: clamp(15px, 3.5vw, 17px); line-height: 1.6; margin-bottom: 4px; display: block; max-width: 90%; margin-left: auto; margin-right: auto;">Tenha acesso vitalício ao treinamento e as atualizações sem custo adicional.</p></div></div></div><div class="
+                group bonus-card bonus-card-refined
+                w-full max-w-[1000px] mx-auto
+                p-8 rounded-[12px]
+                cursor-pointer
+                transition-all duration-300 ease-out
+                mb-[clamp(32px,5vw,40px)]
+              "><div class="hidden md:flex items-center" style="gap: 50px;"><div class="bonus-image-area flex-shrink-0" style="width: auto; max-width: 350px;"><img data-edit="IMG_210" src="assets/images/mockup01.png" alt="Bônus 02 - PROMPT CREATOR PRO" loading="lazy" decoding="async" class="bonus-image" style="width: auto; height: auto; max-height: 400px; object-fit: contain; object-position: center center; border-radius: 16px; border: 1px solid rgb(51, 51, 51); background: rgb(10, 10, 10); display: block;"></div><div class="bonus-content-area flex-1" style="text-align: left; display: flex; flex-direction: column; justify-content: center;"><div class="bonus-pill" style="margin-bottom: 18px;"><span style="font-size: 13px; line-height: 1; padding: 8px 16px; border-radius: 999px; color: rgb(255, 255, 255); background: linear-gradient(rgb(20, 20, 20), rgb(20, 20, 20)) padding-box padding-box, linear-gradient(135deg, rgb(255, 106, 0), rgb(250, 164, 41), rgb(255, 106, 0)) border-box border-box; border: 1px solid transparent; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; min-width: 90px; display: inline-block; text-align: center;"><span style="font-size: 15px;">BÔNUS 02</span></span></div><h3 class="bonus-title-card" style="font-family: var(--font-title); color: rgb(255, 255, 255); font-weight: 800; font-size: 32px; margin-bottom: 12px; line-height: 1.2; text-transform: uppercase; letter-spacing: 0.02em;">BIBLIOTECA DE AUTOMAÇÕES PRONTAS</h3><p class="bonus-description" style="font-family: var(--font-body); color: rgb(184, 184, 184); font-size: 18px; line-height: 1.6; margin-bottom: 16px;">Meu agente secreto de IA, capaz de gerar artes ultra realistas em poucos segundos</p></div></div><div class="md:hidden"><div class="bonus-pill-mobile absolute left-1/2 transform -translate-x-1/2 z-20" style="top: -14px;"><span style="font-size: 13px; line-height: 1; padding: 8px 16px; border-radius: 999px; color: rgb(255, 255, 255); background: linear-gradient(rgb(20, 20, 20), rgb(20, 20, 20)) padding-box padding-box, linear-gradient(135deg, rgb(255, 106, 0), rgb(250, 164, 41), rgb(255, 106, 0)) border-box border-box; border: 1px solid transparent; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; display: inline-block; text-align: center; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;">BÔNUS 02</span></div><div class="bonus-image-area mb-8" style="text-align: center; margin-top: 32px;"><img data-edit="IMG_213" src="assets/images/mockup01.png" alt="Bônus 02 - PROMPT CREATOR PRO" loading="lazy" decoding="async" class="bonus-image" style="width: 100%; height: auto; max-width: 100%; object-fit: contain; object-position: center center; border-radius: 16px; border: 1px solid rgb(51, 51, 51); background: rgb(10, 10, 10); display: block; margin: 0px auto;"></div><div class="bonus-content-area" style="text-align: center; margin-top: 8px;"><h3 class="bonus-title-card" style="font-family: var(--font-title); color: rgb(255, 255, 255); font-weight: 800; font-size: clamp(18px, 4vw, 22px); margin-bottom: 4px; line-height: 1.2; text-transform: uppercase; letter-spacing: 0.02em; display: block;">BIBLIOTECA DE AUTOMAÇÕES PRONTAS</h3><p class="bonus-description" style="font-family: var(--font-body); color: rgb(184, 184, 184); font-size: clamp(15px, 3.5vw, 17px); line-height: 1.6; margin-bottom: 4px; display: block; max-width: 90%; margin-left: auto; margin-right: auto;">Meu agente secreto de IA, capaz de gerar artes ultra realistas em poucos segundos</p></div></div></div><div class="
+                group bonus-card bonus-card-refined
+                w-full max-w-[1000px] mx-auto
+                p-8 rounded-[12px]
+                cursor-pointer
+                transition-all duration-300 ease-out
+                mb-[clamp(32px,5vw,40px)]
+              "><div class="hidden md:flex items-center" style="gap: 50px;"><div class="bonus-image-area flex-shrink-0" style="width: auto; max-width: 350px;"><img data-edit="IMG_214" src="assets/images/mockup01.png" alt="Bônus 03 - ROBÔ DE CLONES" loading="lazy" decoding="async" class="bonus-image" style="width: auto; height: auto; max-height: 400px; object-fit: contain; object-position: center center; border-radius: 16px; border: 1px solid rgb(51, 51, 51); background: rgb(10, 10, 10); display: block;"></div><div class="bonus-content-area flex-1" style="text-align: left; display: flex; flex-direction: column; justify-content: center;"><div class="bonus-pill" style="margin-bottom: 18px;"><span style="font-size: 13px; line-height: 1; padding: 8px 16px; border-radius: 999px; color: rgb(255, 255, 255); background: linear-gradient(rgb(20, 20, 20), rgb(20, 20, 20)) padding-box padding-box, linear-gradient(135deg, rgb(255, 106, 0), rgb(250, 164, 41), rgb(255, 106, 0)) border-box border-box; border: 1px solid transparent; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; min-width: 90px; display: inline-block; text-align: center;"><span style="font-size: 15px;">BÔNUS 03</span></span></div><h3 class="bonus-title-card" style="font-family: var(--font-title); color: rgb(255, 255, 255); font-weight: 800; font-size: 32px; margin-bottom: 12px; line-height: 1.2; text-transform: uppercase; letter-spacing: 0.02em;">BOT DE VENDAS NO DM</h3><p class="bonus-description" style="font-family: var(--font-body); color: rgb(184, 184, 184); font-size: 18px; line-height: 1.6; margin-bottom: 16px;">+50 referências e prompts prontos para criar ensaios que vendem.</p></div></div><div class="md:hidden"><div class="bonus-pill-mobile absolute left-1/2 transform -translate-x-1/2 z-20" style="top: -14px;"><span style="font-size: 13px; line-height: 1; padding: 8px 16px; border-radius: 999px; color: rgb(255, 255, 255); background: linear-gradient(rgb(20, 20, 20), rgb(20, 20, 20)) padding-box padding-box, linear-gradient(135deg, rgb(255, 106, 0), rgb(250, 164, 41), rgb(255, 106, 0)) border-box border-box; border: 1px solid transparent; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; display: inline-block; text-align: center; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;">BÔNUS 03</span></div><div class="bonus-image-area mb-8" style="text-align: center; margin-top: 32px;"><img data-edit="IMG_217" src="assets/images/mockup01.png" alt="Bônus 03 - ROBÔ DE CLONES" loading="lazy" decoding="async" class="bonus-image" style="width: 100%; height: auto; max-width: 100%; object-fit: contain; object-position: center center; border-radius: 16px; border: 1px solid rgb(51, 51, 51); background: rgb(10, 10, 10); display: block; margin: 0px auto;"></div><div class="bonus-content-area" style="text-align: center; margin-top: 8px;"><h3 class="bonus-title-card" style="font-family: var(--font-title); color: rgb(255, 255, 255); font-weight: 800; font-size: clamp(18px, 4vw, 22px); margin-bottom: 4px; line-height: 1.2; text-transform: uppercase; letter-spacing: 0.02em; display: block;">BOT DE VENDAS NO DM</h3><p class="bonus-description" style="font-family: var(--font-body); color: rgb(184, 184, 184); font-size: clamp(15px, 3.5vw, 17px); line-height: 1.6; margin-bottom: 4px; display: block; max-width: 90%; margin-left: auto; margin-right: auto;">+50 referências e prompts prontos para criar ensaios que vendem.</p></div></div></div></style></div></section><style>
+        @media (max-width: 768px) {
+          .bonus-mobile-pad {
+            padding-left: 6px !important;
+            padding-right: 6px !important;
+          }
+          
+          .bonus-section h2 {
+            font-size: 26px !important;
+            margin-bottom: 0px !important;
+            line-height: 1.2 !important;
+            font-family: 'Space Grotesk', sans-serif !important;
+          }
+        }
+      </style><!-- SECTION: S12 -->
+<section data-edit="BG_022" class="certificado-section relative overflow-hidden py-5 lg:py-[50px]" style="background: transparent;"><div class="mx-auto mobile-container-standard" style="max-width: 1200px;"><div class="lg:hidden"><div class="certificate-container-mobile" style="text-align: center; margin-bottom: 40px;"><img data-edit="IMG_243" src="assets/images/a8edd64ba06892f4.avif" alt="Certificado de Conclusão de Curso" loading="lazy" decoding="async" width="100%" height="auto" class="certificate-image-mobile" style="width: 100%; height: auto; border-radius: 20px; object-fit: contain; display: block; margin: 0px auto;"></div><div class="mobile-text-section" style="text-align: center; margin-bottom: 20px;"><a href="#pricing" class="seta-centralizada-mobile" style="cursor: pointer; text-decoration: none; touch-action: manipulation; -webkit-tap-highlight-color: transparent;"><svg data-edit="ICON_014" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(rgba(255, 255, 255, 0.3) 0px 0px 8px);"><path d="M12 5V19M12 19L19 12M12 19L5 12" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div></div></div><style>
+        /* ===== DESKTOP LAYOUT - DUAS COLUNAS ===== */
+        .certificado-content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 4rem;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .certificado-text {
+          flex: 1;
+          max-width: 500px;
+          color: white;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .certificado-imagem {
+          flex: 1;
+          max-width: 600px;
+          position: relative;
+        }
+
+        /* ===== ESTILOS DO TEXTO - DESKTOP ===== */
+        .preco-original {
+          font-family: 'Sora', sans-serif;
+          font-size: clamp(18px, 2.2vw, 24px);
+          font-weight: 600;
+          color: #FFFFFF;
+          text-transform: uppercase;
+          letter-spacing: 0.02em;
+          line-height: 1.1;
+          margin-bottom: 12px;
+        }
+
+        .valor-riscado {
+          font-family: 'Sora', sans-serif;
+          font-size: clamp(32px, 4vw, 48px);
+          font-weight: 400; /* Removed bold */
+          color: #FFFFFF; /* White */
+          text-decoration: line-through;
+          text-transform: uppercase;
+          letter-spacing: -1px; /* Remove espaçamento entre R$ e número */
+          line-height: 1.0;
+          margin-bottom: 24px;
+        }
+
+        .oferta-destaque {
+          font-family: 'Sora', sans-serif;
+          font-size: clamp(20px, 2.5vw, 28px);
+          font-weight: 600;
+          color: #FFFFFF;
+          text-transform: uppercase;
+          letter-spacing: 0.02em;
+          line-height: 1.1;
+          margin-bottom: 24px;
+          text-align: center;
+        }
+
+        .verde-degrade {
+          background: linear-gradient(90deg, #f60, #ff8962, #f60);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          font-weight: 700;
+        }
+
+        .seta-baixo {
+          display: flex;
+          justify-content: center;
+          animation: arrowBounce 2s ease-in-out infinite;
+          margin-top: 16px;
+        }
+
+        /* ===== ESTILOS DO TEXTO - MOBILE ===== */
+        .preco-original-mobile {
+          font-family: 'Sora', sans-serif;
+          font-size: clamp(16px, 4vw, 20px);
+          font-weight: 600;
+          color: #FFFFFF;
+          text-transform: uppercase;
+          letter-spacing: 0.02em;
+          line-height: 1.1;
+          margin-bottom: 12px;
+        }
+
+        .valor-riscado-mobile {
+          font-family: 'Sora', sans-serif;
+          font-size: clamp(28px, 6vw, 36px);
+          font-weight: 400; /* Removed bold */
+          color: #FFFFFF; /* White */
+          text-decoration: line-through;
+          text-transform: uppercase;
+          letter-spacing: -1px; /* Remove espaçamento entre R$ e número */
+          line-height: 1.0;
+          margin-bottom: 20px;
+        }
+
+        .oferta-destaque-mobile {
+          font-family: 'Sora', sans-serif;
+          font-size: clamp(18px, 4vw, 22px);
+          font-weight: 600;
+          color: #FFFFFF;
+          text-transform: uppercase;
+          letter-spacing: 0.02em;
+          line-height: 1.1;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+
+        .seta-centralizada-mobile {
+          display: flex;
+          justify-content: center;
+          animation: arrowBounce 2s ease-in-out infinite;
+          margin-top: 16px;
+        }
+
+        /* ===== ESTILOS DO CERTIFICADO ===== */
+        .efeito-certificado {
+          width: 100%;
+          height: auto;
+          border-radius: 24px;
+          object-fit: contain;
+          filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.1));
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          background: rgba(17, 17, 17, 0.3);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+        }
+
+        /* Certificado mobile - limpo, sem efeitos */
+        .certificate-image-mobile {
+          /* Sem sombras, glows ou efeitos especiais */
+          box-shadow: none !important;
+          filter: none !important;
+          border: none !important;
+          background: none !important;
+          backdrop-filter: none !important;
+          -webkit-backdrop-filter: none !important;
+        }
+
+        /* ===== ANIMA.ES ===== */
+        @keyframes arrowBounce {
+          0%, 20% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(8px);
+          }
+          80%, 100% {
+            transform: translateY(0);
+          }
+        }
+
+        /* ===== RESPONSIVIDADE ===== */
+        @media (max-width: 1023px) {
+          .certificado-section {
+            display: none !important;
+          }
+
+          .certificado-content {
+            flex-direction: column;
+            text-align: center;
+            gap: 2rem;
+          }
+
+          .certificado-text {
+            max-width: 100%;
+          }
+        }
+
+        /* Mobile responsive adjustments */
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+          .seta-baixo,
+          .seta-centralizada-mobile {
+            animation: none !important;
+          }
+        }
+      </style></section><!-- SECTION: S13 -->
+<section data-edit="BG_023" id="promo-card-section" class="promo-card-section mobile-container-standard" style="background: rgb(0, 0, 0); padding: 80px 0px 100px;"><div class="promo-card-container"><div class="plans-grid"><div class="card-vitalicio"><div data-edit="BG_024" class="absolute z-[100] font-space-grotesk tracking-wider text-white font-bold text-[14px] px-5 py-2 animate-float" style="top: -15px; right: 30px; background: linear-gradient(135deg, rgb(255, 106, 0) 0%, rgb(255, 143, 0) 100%); border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 25px -5px; text-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;">70% OFF</div><div class="plan-title-section" style="margin-bottom: 2px;"><h3 class="plan-subtitle-vitalicio">PLANO</h3><h3 class="plan-name-vitalicio">VITALÍCIO</h3></div><div class="plan-content-vitalicio"><div class="investment-block mb-4 p-4 rounded-2xl bg-transparent border border-[#888888]/30 text-center relative overflow-hidden"><div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#888888]/30 to-transparent"></div><div class="mx-auto flex justify-center w-full"><p id="recupere-text" class="text-[13px] md:text-[15px]" style="font-family: var(--font-body); color: rgb(224, 224, 224); line-height: 1.3; padding-left: 2px; padding-right: 2px;">Recupere <span class="text-[#00D930] font-extrabold uppercase tracking-wide">todo o seu investimento</span> <br> logo no primeiro projeto.</p></div><div class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#888888]/30 to-transparent"></div></div><div class="plan-items-vitalicio"><div class="plan-item-vitalicio"><span class="text-[16px]">✓</span><span class="plan-item-text-vitalicio">Acesso vitalício</span></div><div class="plan-item-vitalicio"><span class="text-[16px]">✓</span><span class="plan-item-text-vitalicio">Acesso a todos os fluxos de automação</span></div><div class="plan-item-vitalicio"><span class="text-[16px]">✓</span><span class="plan-item-text-vitalicio">Método para criar chatbots de vendas</span></div><div class="plan-item-vitalicio"><span class="text-[16px]">✓</span><span class="plan-item-text-vitalicio">IA aplicada às vendas nas redes sociais</span></div><div class="plan-item-vitalicio"><span class="text-[16px]">✓</span><span class="plan-item-text-vitalicio">Estratégia de automação e escala</span></div><div class="plan-item-vitalicio"><span class="text-[16px]">✓</span><span class="plan-item-text-vitalicio">Prospecção automática de clientes</span></div><div class="plan-item-vitalicio"><span class="text-[16px]">✓</span><span class="plan-item-text-vitalicio">Pack de +500 Fontes</span></div><div class="plan-item-vitalicio"><span class="text-[16px]">✓</span><span class="plan-item-text-vitalicio">Pack de Capas de impacto</span></div><div class="plan-item-vitalicio"><span class="text-[16px]">✓</span><span class="plan-item-text-vitalicio">Meus agentes de IA</span></div><div class="plan-item-vitalicio"><span class="text-[16px]">✓</span><span class="plan-item-text-vitalicio">Comunidade exclusiva de alunos</span></div><div class="plan-item-vitalicio"><span class="text-[16px]">✓</span><span class="plan-item-text-vitalicio">Atualizações constantes</span></div><div class="plan-item-vitalicio"><span class="text-[16px]">✓</span><span class="plan-item-text-vitalicio">Todos os Bônus</span></div></div></div><div class="price-block-vitalicio"><div class="price-strike-vitalicio">De R$497</div><div class="price-note-vitalicio">Por apenas 12x de</div><div class="price-main-vitalicio"><span class="currency-vitalicio">R$</span>6,93</div><div class="price-footnote-vitalicio">ou R$67,00 à vista</div></div><div class="plan-button-area-vitalicio"><a href="javascript:void(0)" target="_self" rel="noopener noreferrer" class="framer-btn-container" style="touch-action: manipulation; -webkit-tap-highlight-color: transparent;" onclick="return false;"><div class="framer-btn-bevel"><div class="framer-btn-cap"><div class="absolute top-0 left-[-150%] w-[150%] h-full bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-[-25deg] animate-shine pointer-events-none" style="z-index: 5;"></div><div class="framer-btn-border"></div><div class="framer-text-container"><p class="framer-text" style="text-transform: uppercase; font-size: 15px;">QUERO GARANTIR MINHA VAGA</p></div><div class="framer-glow-wrap"><div class="framer-glow"></div></div><div class="framer-metal-button"><div class="framer-metal-bevel"><div class="framer-metal-cap"><div class="framer-metal-dot"></div><div class="framer-arrow-icon"><svg data-edit="ICON_015" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></div></div></div></div></div></div></a></div><div class="kiwify-logo-vitalicio flex flex-col items-center mt-8"><div class="flex items-center justify-center mb-4"><img data-edit="IMG_244" src="assets/images/92a0bbca2510de44.svg" alt="Formas de Pagamento" loading="lazy" decoding="async" class="mx-auto opacity-80 w-[200px] md:w-[280px]" height="auto"></div><div class="flex items-center gap-2 bg-[#1A1A1A] px-4 py-2 rounded-full border border-white/10"><svg data-edit="ICON_016" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users text-[#FF6A00]" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg><span class="text-[12px] text-gray-300 font-medium">Junte-se aos <span class="text-white font-bold">+ de 2.000</span> alunos</span></div></div></div></div></div><style>
+        /* CHECKOUT OVERLAY STYLES */
+        .checkout-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: #050505;
+          z-index: 99999;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+
+        .checkout-content {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           gap: 40px;
+           width: 100%;
+           max-width: 320px;
+        }
+
+        .checkout-logo {
+          width: 80px;
+          height: auto;
+          margin-bottom: 20px;
+        }
+
+        .checkout-text {
+          font-family: 'Aldrich', sans-serif;
+          color: #fff;
+          font-size: 14px;
+          letter-spacing: 0.2em;
+          text-align: center;
+          margin-top: 10px;
+          opacity: 0.8;
+        }
+
+        .loading-container {
+          position: relative;
+          width: 100%;
+          height: 4px;
+          background: #1a1a1a;
+          border-radius: 2px;
+          overflow: hidden;
+        }
+
+        .loading-bar {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background: transparent;
+        }
+
+        .loading-progress {
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, #ff6a00, #ff9e00);
+          transform: translateX(-100%);
+          animation: progressSlide 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+          box-shadow: 0 0 20px rgba(255, 106, 0, 0.5);
+        }
+
+        .loading-glow {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          box-shadow: 0 0 10px rgba(255,106,0, 0.2);
+          pointer-events: none;
+        }
+
+        .animate-pulse-fast {
+          animation: pulseFast 1.5s ease-in-out infinite;
+        }
+
+        .blink-text {
+          animation: blink 1s infinite;
+        }
+
+        @keyframes progressSlide {
+          0% { transform: translateX(-100%); }
+          50% { transform: translateX(-20%); }
+          100% { transform: translateX(0%); }
+        }
+
+        @keyframes pulseFast {
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.8; transform: scale(0.95); }
+        }
+
+        @keyframes blink {
+          0%, 100% { opacity: 0.8; }
+          50% { opacity: 0.4; }
+        }
+
+        /* ===== ESCOPO DE ESTILOS NOVO LAYOUT ===== */
+        .promo-card-section {
+          width: 100%;
+          overflow: visible;
+          position: relative;
+          z-index: 20;
+        }
+
+        .promo-card-container {
+          max-width: 1200px; 
+          margin: 0 auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0 20px;
+        }
+
+        .plans-grid {
+          display: flex; /* Flex instead of grid for single card centering */
+          justify-content: center;
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        /* ===== CARD VITALÍCIO (Agora Preto - Estilo Básico) ===== */
+        .card-vitalicio {
+          background-color: #0E0E10;
+          border: 1px solid #333333;
+          border-radius: 20px 60px 20px 60px; /* Asymmetric corners */
+          padding: 60px 30px 32px 30px; /* Reduced bottom padding */
+          display: flex;
+          flex-direction: column;
+          height: fit-content;
+          box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+          position: relative;
+          color: #fff;
+          width: 100%;
+          max-width: 480px; /* Limiting width for single card */
+        }
+
+        .plan-title-section {
+          text-align: center;
+          margin-bottom: 32px;
+        }
+
+        .plan-subtitle-vitalicio {
+          color: #FFFFFF;
+          font-family: var(--font-title);
+          font-size: 18px; /* Increased from 14px */
+          letter-spacing: 2px;
+          text-transform: uppercase;
+        }
+
+        .plan-name-vitalicio {
+          background: linear-gradient(90deg, #FF6A00 0%, #FAA429 50%, #FF6A00 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          color: transparent;
+          font-family: var(--font-title);
+          font-size: 48px; /* High Impact */
+          font-weight: 700;
+          text-transform: uppercase;
+          line-height: 1.1;
+          margin-bottom: 16px; 
+        }
+
+        .plan-content-vitalicio {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          margin-bottom: 32px;
+        }
+
+        .plan-items-vitalicio, .plan-modules-vitalicio, .plan-bonus-vitalicio {
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+        }
+
+        .modules-title-vitalicio, .bonus-title-vitalicio {
+          color: #aaa;
+          font-size: 13px;
+          margin-top: 8px;
+          margin-bottom: 4px;
+          text-transform: uppercase;
+          font-weight: 700;
+        }
+
+        .plan-item-vitalicio {
+          display: flex;
+          align-items: flex-start;
+          gap: 12px;
+        }
+
+        .plan-check-vitalicio {
+          color: #f60; /* Orange */
+          width: 20px;
+          height: 20px;
+          flex-shrink: 0;
+          margin-top: 2px;
+        }
+
+        .plan-item-text-vitalicio {
+          color: #e5e5e5;
+          font-size: 14px;
+          line-height: 1.4;
+        }
+
+        .price-block-vitalicio {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: auto;
+          margin-bottom: 24px;
+        }
+
+        .price-strike-vitalicio {
+           background: linear-gradient(90deg, #FF3D2E, #E50914);
+           -webkit-background-clip: text;
+           -webkit-text-fill-color: transparent;
+           background-clip: text;
+           color: transparent;
+           text-decoration: line-through;
+           font-weight: 500;
+           font-size: 16px;
+           margin-bottom: 6px;
+           text-decoration-color: #FF3D2E; /* Restore strikethrough color */
+        }
+
+        .price-note-vitalicio {
+          color: #FFFFFF;
+          font-size: 16px;
+          margin-bottom: 6px;
+        }
+
+        .price-main-vitalicio {
+          background: linear-gradient(90deg, #FF6A00 0%, #FAA429 50%, #FF6A00 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          color: transparent;
+          font-size: 112px;
+          font-weight: 800;
+          line-height: 1;
+          font-family: var(--font-title);
+          display: flex;
+          align-items: baseline;
+          justify-content: center;
+        }
+
+        .currency-vitalicio {
+          font-size: 48px;
+          margin-right: 8px;
+        }
+
+        .price-footnote-vitalicio {
+          color: #FFFFFF;
+          font-size: 14px;
+          margin-top: 6px;
+        }
+        
+        .plan-button-area-vitalicio {
+           display: flex;
+           flex-direction: column;
+           gap: 40px; /* Increased gap */
+           align-items: center;
+           justify-content: center;
+           width: 100%;
+           margin-top: 9px;
+           margin-bottom: 9px;
+        }
+        
+        .framer-btn-container {
+          position: relative;
+          width: 100%;
+          max-width: 380px;
+          height: 72px;
+          background: #111;
+          border-radius: 100px; /* Pill shape */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          overflow: hidden; /* Contains shine */
+          transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+          box-shadow: 
+            0 10px 30px -10px rgba(0,0,0,0.8),
+            inset 0 1px 1px rgba(255,255,255,0.1);
+          border: 1px solid #333; /* Outer dark border */
+          cursor: pointer; /* Ensure pointer cursor */
+          -webkit-tap-highlight-color: transparent; /* Remove mobile tap highlight */
+        }
+
+        /* CLICK FEEDBACK - SINK & GLOW */
+        .framer-btn-container:active {
+          transform: scale(0.94); /* Sink effect */
+          filter: brightness(1.3); /* Glow effect */
+          box-shadow: 0 2px 10px -5px rgba(0,0,0,0.8); /* Reduce shadow */
+          transition: transform 0.05s ease-out, filter 0.05s ease-out;
+        }
+        
+        .secure-text-vitalicio {
+           color: #fff;
+           font-size: 12px;
+           text-transform: uppercase;
+           font-weight: 700;
+           letter-spacing: 0.5px;
+        }
+        
+        .kiwify-img-vitalicio {
+          height: 14px;
+          width: auto;
+        }
+
+        /* ===== RESPONSIVO ===== */
+        @media (max-width: 1024px) {
+          .promo-card-container {
+            padding: 0 !important;
+          }
+
+          .card-vitalicio {
+            width: 100% !important; 
+            max-width: 100% !important;
+            margin: 0 !important;
+            box-sizing: border-box !important;
+            padding: 20px 16px 40px 16px !important; /* INCREASED BOTTOM PADDING */
+          }
+
+          .plan-items-vitalicio, .plan-modules-vitalicio, .plan-bonus-vitalicio {
+            align-items: flex-start !important;
+            text-align: left !important;
+            width: 100%;
+            padding-left: 4px; /* Reduced indent on mobile */
+            gap: 4px !important; /* TIGHTER GAP */
+          }
+
+          .plan-item-vitalicio {
+            justify-content: flex-start;
+            text-align: left;
+            display: flex !important;
+            width: 100%;
+            max-width: 100%;
+          }
+          
+          .plan-title-section {
+            margin-bottom: 4px !important;
+            margin-top: 6px !important;
+            width: 100%;
+            text-align: center !important;
+            align-items: center !important;
+            display: flex;
+            flex-direction: column;
+          }
+          
+          .plan-name-vitalicio {
+            margin-bottom: 0px !important;
+          }
+
+          .plan-content-vitalicio {
+             gap: 8px !important;
+             margin-bottom: 8px !important;
+             margin-top: 0 !important; /* Ensure no top margin adds to the gap */
+          }
+
+          /* Fix for squashed button on mobile */
+          /* Fix for squashed button on mobile */
+          .framer-btn-container {
+            width: 100% !important;
+            max-width: 340px !important; /* Slightly larger on mobile */
+            height: 64px !important; /* Fixed height to prevent squashing */
+            margin: 0 auto !important;
+            background: linear-gradient(90deg, #FF6A00 0%, #FAA429 100%) !important; /* Orange Gradient Background */
+            border: none !important; /* Remove dark border to match solid look */
+          }
+          /* Mobile styling for text container */
+          .framer-text-container {
+             padding: 0 16px 0 50px !important;
+          }
+           
+          /* Adjust text size inside button for mobile if needed */
+          .framer-text {
+             font-size: 13px !important;
+             color: #582300 !important; /* Dark Brown Text */
+             font-weight: 800 !important; /* Extra Bold for contrast */
+          }
+
+          /* Mobile styling for metal button slider */
+          .framer-metal-button {
+             width: 30px !important;
+             height: 30px !important;
+             top: 50% !important;
+             left: 16px !important; /* Mobile Left Spacing */
+             transform: translateY(-50%) !important;
+          }
+
+          /* Mobile hover state */
+          .framer-btn-container:hover .framer-metal-button {
+             left: calc(100% - 46px) !important;
+             transform: translateY(-50%) rotate(360deg) !important;
+          }
+
+          .price-block-vitalicio {
+            margin-bottom: 12px !important;
+          }
+          
+          /* Price size adjustments for mobile */
+          .price-main-vitalicio {
+             font-size: 80px !important; /* Smaller on mobile */
+             line-height: 1 !important;
+             padding: 10px 0;
+           }
+
+          /* New Mobile Spacing Overrides */
+          .investment-block {
+             margin-bottom: 10px !important;
+             padding: 8px !important;
+          }
+          
+          .price-footnote-vitalicio {
+             margin-top: 0 !important;
+          }
+          
+          .price-note-vitalicio {
+             margin-bottom: 0 !important;
+          }
+          .price-strike-vitalicio {
+             margin-bottom: 0 !important;
+          }
+          
+          .plan-button-area-vitalicio {
+             gap: 16px !important; /* Tighter gap */
+             margin-top: 0 !important;
+             margin-bottom: 0 !important;
+             padding-top: 6px !important;
+             padding-bottom: 4px !important;
+          }
+
+          .kiwify-logo-vitalicio {
+             margin-top: 16px !important;
+          }
+        }
+
+        /* Default Button Text Style */
+        .framer-text {
+           color: #FFFFFF;
+           font-weight: bold;
+           transition: color 0.2s ease;
+        }
+
+        /* Hover/Active Effect for Button Text - changing to ORANGE GRADIENT */
+        .framer-btn-container:hover .framer-text,
+        .framer-btn-container:active .framer-text,
+        .framer-btn-container:focus .framer-text {
+           background: linear-gradient(90deg, #FF6A00 0%, #FAA429 100%) !important;
+           -webkit-background-clip: text !important;
+           -webkit-text-fill-color: transparent !important;
+           background-clip: text !important;
+           color: transparent !important;
+        }
+
+        /* Shine Animation */
+        @keyframes shine {
+            0% { left: -150%; }
+            20% { left: 150%; }
+            100% { left: 150%; }
+        }
+        .animate-shine {
+            animation: shine 3s infinite linear;
+        }
+
+        /* Float Animation for Badge */
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(3deg); }
+            50% { transform: translateY(-6px) rotate(3deg); }
+        }
+        .animate-float {
+            animation: float 5s ease-in-out infinite;
+        }
+      </style></section><!-- SECTION: S14 -->
+<section data-edit="BG_025" class="relative overflow-hidden py-5 lg:py-[50px]" style="background: transparent;"><div class="mx-auto mobile-container-standard" style="max-width: 1200px;"><div class="hidden md:flex justify-center items-center w-full max-w-[1000px] mx-auto bg-[#0e0e10] rounded-[80px_30px] border border-[#333333] p-12 gap-12"><div class="flex justify-center items-center"><div class="relative flex items-center justify-center w-[300px] h-[300px]"><img data-edit="IMG_245" src="assets/images/6b8e9ec333dc8102.svg" alt="Garantia Incondicional de 7 Dias" class="w-full h-full object-contain drop-shadow-[0_0_50px_rgba(255,102,0,0.3)]" loading="eager"></div></div><div class="flex flex-col justify-center"><h2 style="font-family: var(--font-title); font-weight: 900; font-size: 64px; line-height: 1.1; text-transform: uppercase; color: rgb(255, 255, 255); margin-bottom: 16px; white-space: nowrap;"><span class="text-gradient-orange" style="display: block;">GARANTIA TOTAL</span><span style="display: block; font-weight: 400;">SEM RISCOS</span> </h2></div></div><div class="md:hidden flex justify-center w-full mb-8"><div class="w-full bg-[#0e0e10] rounded-[40px_15px] border border-[#333333] p-8 flex flex-col items-center shadow-[0_0_40px_rgba(0,0,0,0.5)] relative overflow-hidden"><div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#f60]/30 to-transparent"></div><div class="relative mb-4 flex justify-center items-center" style="width: 180px; height: 180px;"><div class="absolute inset-0 bg-[#f60]/10 blur-[40px] rounded-full"></div><div class="relative z-10 w-[160px] h-[160px] drop-shadow-[0_10px_20px_rgba(0,0,0,0.4)]"><img loading="lazy" data-edit="IMG_246" src="assets/images/6b8e9ec333dc8102.svg" alt="Garantia Incondicional 7 Dias" width="160" height="160" class="w-full h-full object-contain"></div></div><div class="mb-0"><h2 class="section-title-standard text-white guarantee-mobile-pad"><span class="text-gradient-orange font-bold block">GARANTIA TOTAL</span>SEM RISCOS</h2></div></div></div></div></section><style>
+      @media (max-width: 768px) {
+        .guarantee-mobile-pad {
+          padding-left: 6px !important;
+          padding-right: 6px !important;
+        }
+      }
+    </style><!-- SECTION: S15 -->
+<section data-edit="BG_026" class="relative overflow-hidden py-5 lg:py-[50px]" style="background: #0d0d0d; min-height: 600px;"><style>
+        @media (max-width: 768px) {
+          section {
+            background-image: none !important;
+            padding-top: 20px !important;
+            padding-bottom: 20px !important;
+          }
+        }
+        
+        /* Animação de onda para os botões */
+        @keyframes wave {
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(100%);
+          }
+        }
+        
+        /* Animação do ícone para a direita */
+        @keyframes iconSlide {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(8px);
+          }
+        }
+        
+        /* Animação do stroke circular */
+        @keyframes strokeRotate {
+          0% {
+            stroke-dashoffset: 0;
+          }
+          100% {
+            stroke-dashoffset: -62.83; /* Circunferência do círculo */
+          }
+        }
+        
+        .cta-button {
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .cta-button::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+          transform: translateX(-100%);
+          animation: wave 2s ease-in-out infinite;
+        }
+        
+        .icon-container {
+          position: relative;
+          transition: all 0.3s ease;
+        }
+        
+        .icon-circle {
+          transition: all 0.3s ease;
+        }
+        
+        .icon-stroke {
+          stroke-dasharray: 62.83;
+          stroke-dashoffset: 0;
+          transition: all 0.3s ease;
+        }
+        
+        .hover-text {
+          opacity: 0;
+          transform: translateX(-10px);
+          transition: all 0.3s ease;
+          pointer-events: none;
+        }
+        
+        .cta-button:hover .icon-container {
+          animation: iconSlide 0.3s ease forwards;
+        }
+        
+        .cta-button:hover .icon-stroke {
+          animation: strokeRotate 0.3s ease forwards;
+        }
+        
+        .cta-button:hover .hover-text {
+          opacity: 1;
+          transform: translateX(0);
+        }
+        
+        .cta-button:hover .play-icon {
+          opacity: 0;
+        }
+        
+        .arrow-icon {
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+        
+        .cta-button:hover .arrow-icon {
+          opacity: 1;
+        }
+      </style><div class="mx-auto relative z-10 mobile-container-standard" style="max-width: 1200px;"><div class="hidden lg:grid lg:grid-cols-12 gap-14 items-start"><div class="lg:col-span-6"><h2 class="mobile-title-standard" style="font-family: var(--font-title); letter-spacing: 0.02em; text-transform: uppercase; color: rgb(255, 255, 255); margin-bottom: 24px;"><span style="display: block;">QUEM ESTÁ POR</span><span style="display: block;">TRÁS DO <span class="text-gradient-orange font-bold" style="font-family: inherit;">CRIADOR</span></span><span style="display: block;"><span class="text-gradient-orange font-bold" style="font-family: inherit;">DO FUTURO?</span></span></h2><div style="max-width: 540px;"><p style="font-family: Sora, sans-serif; font-size: 18px; line-height: 1.65; color: rgb(230, 230, 230); margin-bottom: 16px;">Sou Pedro Henrique, especialista em automações, com foco em ajudar alunos e negócios a vender no automático com processos simples e eficientes.</p><p style="font-family: Sora, sans-serif; font-size: 18px; line-height: 1.65; color: rgb(230, 230, 230); margin-bottom: 16px;">Hoje vivo 100% do mercado de automações, implementando fluxos que captam, qualificam e fecham clientes todos os dias.</p><p style="font-family: Sora, sans-serif; font-size: 18px; line-height: 1.65; color: rgb(230, 230, 230);">Minha missão? Ensinar você a dominar um método prático de automações com IA para escalar vendas com previsibilidade, sem depender de atendimento manual o dia inteiro.</p></div></div><div class="lg:col-span-6 flex justify-center lg:justify-end"><img src="assets/images/expert.png" alt="Pedro Henrique - Criador do Futuro" loading="lazy" decoding="async" style="width: 100%; max-width: 460px; height: auto; object-fit: contain; border-radius: 18px; border: 1px solid rgb(51, 51, 51); background: rgb(10, 10, 10);"></div></div><div class="lg:hidden text-center"><div class="mb-6"><h2 class="section-title-standard text-white about-mobile-pad">QUEM ESTÁ POR TRÁS DO <span class="mobile-green-highlight font-bold">CRIADOR DO FUTURO?</span></h2></div><img data-edit="IMG_247" src="assets/images/expert.png" alt="Pedro Henrique - Criador do Futuro" loading="lazy" decoding="async" style="display: block; width: 100vw; max-width: 390px; height: auto; object-fit: cover; margin-bottom: 24px; margin-left: 50%; transform: translateX(-50%);"><div class="mobile-text-section about-mobile-description" style="padding-left: 20px; padding-right: 20px;"><p style="font-family: Sora, sans-serif; font-size: 16px; line-height: 1.65; color: rgb(230, 230, 230); margin-bottom: 14px;">Sou Pedro Henrique, especialista em automações e fundador do Criador do Futuro, com foco em ajudar alunos e negócios a vender no automático com processos simples e eficientes.</p><p style="font-family: Sora, sans-serif; font-size: 16px; line-height: 1.65; color: rgb(230, 230, 230); margin-bottom: 14px;">Hoje vivo 100% do mercado de automações, implementando fluxos que captam, qualificam e fecham clientes todos os dias.</p><p style="font-family: Sora, sans-serif; font-size: 16px; line-height: 1.65; color: rgb(230, 230, 230);">Minha missão? Ensinar você a dominar um método prático de automações com IA para escalar vendas com previsibilidade, sem depender de atendimento manual o dia inteiro.</p></div></div></div></section><style>
+      @media (max-width: 768px) {
+        .about-mobile-pad {
+          padding-left: 6px !important;
+          padding-right: 6px !important;
+        }
+      }
+    </style><!-- SECTION: S16 -->
+<section class="faq-section py-5 lg:py-[50px]"><div class="container-custom mx-auto mobile-container-standard"><div class="md:hidden mb-8"><h2 class="faq-main-title text-gradient-orange faq-mobile-pad text-center" style="font-family: var(--font-title); font-size: 24px; font-weight: 700; text-transform: uppercase; line-height: 1.2;">PERGUNTAS FREQUENTES</h2></div><div class="hidden md:block text-center mb-12"><h2 class="faq-main-title text-gradient-orange" style="font-family: var(--font-title); font-size: clamp(32px, 5vw, 48px); font-weight: 700; text-transform: uppercase; line-height: 1.1;">PERGUNTAS FREQUENTES</h2></div><div class="faq-grid"><div class="faq-item"><button class="faq-button" style="touch-action: manipulation; -webkit-tap-highlight-color: transparent;"><span class="faq-question">O que é esse método de automação?</span><svg data-edit="ICON_017" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down faq-chevron" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><div class="faq-answer" style="display: none;"><p>É um método completo que ensina a criar automações nas redes sociais usando IA e ferramentas simples. Você aprende a montar fluxos que respondem, qualificam e vendem para clientes automaticamente, sem você precisar estar online.</p></div></div><div class="faq-item"><button class="faq-button" style="touch-action: manipulation; -webkit-tap-highlight-color: transparent;"><span class="faq-question">Preciso saber programar para fazer automações?</span><svg data-edit="ICON_018" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down faq-chevron" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><div class="faq-answer" style="display: none;"><p>Não! Todas as ferramentas ensinadas são no-code ou low-code. Se você sabe usar WhatsApp e Instagram, consegue seguir o método. Não precisa de programação, código ou conhecimento técnico avançado.</p></div></div><div class="faq-item"><button class="faq-button" style="touch-action: manipulation; -webkit-tap-highlight-color: transparent;"><span class="faq-question">E se eu já tenho um negócio? Serve para mim?</span><svg data-edit="ICON_019" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down faq-chevron" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><div class="faq-answer" style="display: none;"><p>Sim! O método foi desenvolvido para quem já tem negócio e quer escalar vendas usando automação. Independente do seu nicho — e-commerce, serviços, infoproduto — você vai encontrar aplicações práticas imediatamente.</p></div></div><div class="faq-item"><button class="faq-button" style="touch-action: manipulation; -webkit-tap-highlight-color: transparent;"><span class="faq-question">Quando verei os primeiros resultados?</span><svg data-edit="ICON_020" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down faq-chevron" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><div class="faq-answer" style="display: none;"><p>Nossos alunos costumam implementar a primeira automação no dia 1 e ver aumento nas mensagens e vendas já na primeira semana. Os resultados mais expressivos aparecem entre 15 e 30 dias de uso consistente.</p></div></div><div class="faq-item"><button class="faq-button" style="touch-action: manipulation; -webkit-tap-highlight-color: transparent;"><span class="faq-question">Quais ferramentas são usadas no método?</span><svg data-edit="ICON_021" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down faq-chevron" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></button><div class="faq-answer" style="display: none;"><p>Ensinamos ManyChat, Zapier, Make (ex-Integromat), ChatGPT, Instagram API e ferramentas de agendamento. A maioria tem plano gratuito para você começar sem custo extra.</p></div></div></div></div></div></div><style>
+        /* ===== FAQ SECTION STYLES - SCOPED ===== */
+        .faq-section {
+          background: transparent;
+          overflow: hidden;
+        }
+
+        .faq-section h2.faq-main-title {
+          font-weight: 700 !important;
+          -webkit-font-smoothing: antialiased;
+        }
+
+        /* Enforce bold on mobile strictly */
+        .faq-section .mobile-title-standard {
+          font-weight: 800 !important;
+        }
+
+        .faq-section .faq-title,
+        .faq-section .mobile-title-standard {
+          font-family: var(--font-title);
+          font-size: clamp(28px, 5vw, 42px);
+          font-weight: 700; /* Bold */
+          letter-spacing: 0.02em;
+          line-height: 1.2;
+          text-transform: uppercase;
+          background: linear-gradient(90deg, #FF6A00 0%, #FAA429 50%, #FF6A00 100%) !important;
+          -webkit-background-clip: text !important;
+          -webkit-text-fill-color: transparent !important;
+          background-clip: text !important;
+          color: transparent !important;
+          text-align: center;
+          margin-bottom: 48px;
+        }
+
+        .faq-section .mobile-text-wrapper {
+          margin-bottom: 28px !important;
+          display: block; 
+        }
+
+        .faq-section .faq-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 16px;
+          max-width: 1280px;
+          margin: 0 auto;
+          width: 100%;
+        }
+
+        .faq-section .faq-item {
+          background: #0E0E10;
+          border: 1px solid #1B1B1F;
+          border-radius: 12px;
+          overflow: hidden;
+          width: 100%;
+        }
+
+        .faq-section .faq-button {
+          width: 100%;
+          padding: 20px 24px;
+          text-align: left;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          transition: background-color 0.2s ease;
+          min-height: auto;
+        }
+
+        .faq-section .faq-button:hover {
+          background-color: #1a1a1a;
+        }
+
+        .faq-section .faq-question {
+          color: #FFFFFF;
+          font-family: var(--font-body);
+          font-size: clamp(15px, 2vw, 17px);
+          font-weight: 500;
+          line-height: 1.4;
+          word-break: break-word;
+          hyphens: none;
+          overflow-wrap: break-word;
+          flex: 1;
+          padding-right: 8px;
+          transition: color 0.2s ease;
+        }
+
+        /* Hover and active states for question text - ORANGE GRADIENT */
+        .faq-section .faq-button:hover .faq-question {
+          background: linear-gradient(90deg, #f60, #ff8962, #f60);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+
+        .faq-section .faq-question-active {
+          background: linear-gradient(90deg, #f60, #ff8962, #f60) !important;
+          -webkit-background-clip: text !important;
+          -webkit-text-fill-color: transparent !important;
+          background-clip: text !important;
+        }
+
+        .faq-section .faq-chevron {
+          width: 20px;
+          height: 20px;
+          color: #FFFFFF;
+          flex-shrink: 0;
+          transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        /* Chevron hover and active states - ORANGE COLOR */
+        .faq-section .faq-button:hover .faq-chevron {
+          color: #f60;
+        }
+
+        .faq-section .faq-chevron-open {
+          transform: rotate(180deg);
+          color: #f60 !important;
+        }
+
+        .faq-section .faq-answer {
+          background: #0E0E10;
+          border-top: 1px solid #1B1B1F;
+          color: #C8C8C8;
+          font-size: 14px;
+          line-height: 1.6;
+          padding: 20px 24px 20px 24px;
+          margin-top: 0;
+        }
+
+        .faq-section .faq-answer p {
+          margin: 0;
+        }
+
+        @media (max-width: 767px) {
+          .faq-section .faq-grid {
+            grid-template-columns: 1fr;
+            gap: 16px;
+          }
+          
+          .faq-section .faq-button {
+            padding: 16px 20px;
+          }
+          
+          .faq-section .mobile-title-standard {
+            margin-bottom: 60px !important;
+            padding-bottom: 20px !important;
+          }
+          
+          .faq-section .faq-question {
+            font-size: 15px;
+            word-break: break-word;
+            hyphens: none;
+            overflow-wrap: break-word;
+          }
+          
+          .faq-section .faq-answer {
+            padding: 16px 20px 20px 20px;
+          }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+          .faq-section .faq-question,
+          .faq-section .faq-chevron {
+            transition: none !important;
+          }
+        }
+      </style></section><script>
+(function () {
+  function initFaqAccordion() {
+    var section = document.querySelector('.faq-section');
+    if (!section) return;
+
+    var items = section.querySelectorAll('.faq-item');
+    items.forEach(function (item) {
+      var button = item.querySelector('.faq-button');
+      var answer = item.querySelector('.faq-answer');
+      var chevron = item.querySelector('.faq-chevron');
+      var question = item.querySelector('.faq-question');
+
+      if (!button || !answer) return;
+
+      button.addEventListener('click', function (e) {
+        e.preventDefault();
+        var isOpen = answer.style.display === 'block';
+
+        items.forEach(function (other) {
+          var otherAnswer = other.querySelector('.faq-answer');
+          var otherChevron = other.querySelector('.faq-chevron');
+          var otherQuestion = other.querySelector('.faq-question');
+          if (otherAnswer) otherAnswer.style.display = 'none';
+          if (otherChevron) otherChevron.classList.remove('faq-chevron-open');
+          if (otherQuestion) otherQuestion.classList.remove('faq-question-active');
+        });
+
+        if (!isOpen) {
+          answer.style.display = 'block';
+          if (chevron) chevron.classList.add('faq-chevron-open');
+          if (question) question.classList.add('faq-question-active');
+        }
+      }, { passive: false });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFaqAccordion);
+  } else {
+    initFaqAccordion();
+  }
+})();
+</script><style>
+      @media (max-width: 768px) {
+        .faq-mobile-pad {
+          padding-left: 6px !important;
+          padding-right: 6px !important;
+        }
+      }
+    </style><!-- SECTION: S17 -->
+<section class="final-call-section py-10 lg:py-20 bg-black relative overflow-hidden"><div class="container mx-auto px-4 max-w-lg"><div class="relative bg-[#0A0A0A] border border-[#333333] rounded-3xl p-8 lg:p-12 text-center overflow-hidden" style="box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 40px;"><div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_top,_rgba(255,106,0,0.08)_0%,_transparent_50%)] pointer-events-none"></div><h2 class="text-3xl lg:text-4xl font-bold mb-3 leading-tight uppercase" style="font-family: var(--font-title); color: rgb(255, 255, 255);">Sua concorrência já está <br><span class="text-gradient-orange font-bold">vendendo no automático</span></h2><p class="text-gray-400 text-sm lg:text-base mb-8" style="font-family: var(--font-body);">Enquanto você não toma uma decisão:</p><div class="flex flex-col gap-4 mb-10 text-left mx-auto max-w-xs"><div class="flex items-center gap-3"><div class="flex-shrink-0 w-5 h-5 lg:w-6 lg:h-6 rounded bg-gradient-to-r from-[#FF6A00] via-[#FAA429] to-[#FF6A00] flex items-center justify-center text-black" style="box-shadow: rgba(255, 106, 0, 0.4) 0px 0px 10px;"><svg data-edit="ICON_027" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-3.5 h-3.5 lg:w-4 lg:h-4" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></div><span class="text-gray-200 font-medium text-sm lg:text-base" style="font-family: var(--font-body);">Seu concorrente já configurou a automação</span></div><div class="flex items-center gap-3"><div class="flex-shrink-0 w-5 h-5 lg:w-6 lg:h-6 rounded bg-gradient-to-r from-[#FF6A00] via-[#FAA429] to-[#FF6A00] flex items-center justify-center text-black" style="box-shadow: rgba(255, 106, 0, 0.4) 0px 0px 10px;"><svg data-edit="ICON_028" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-3.5 h-3.5 lg:w-4 lg:h-4" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></div><span class="text-gray-200 font-medium text-sm lg:text-base" style="font-family: var(--font-body);">Está vendendo 24h por dia</span></div><div class="flex items-center gap-3"><div class="flex-shrink-0 w-5 h-5 lg:w-6 lg:h-6 rounded bg-gradient-to-r from-[#FF6A00] via-[#FAA429] to-[#FF6A00] flex items-center justify-center text-black" style="box-shadow: rgba(255, 106, 0, 0.4) 0px 0px 10px;"><svg data-edit="ICON_029" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-3.5 h-3.5 lg:w-4 lg:h-4" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></div><span class="text-gray-200 font-medium text-sm lg:text-base" style="font-family: var(--font-body);">Cobrando R$150 por Arte</span></div><div class="flex items-center gap-3"><div class="flex-shrink-0 w-5 h-5 lg:w-6 lg:h-6 rounded bg-gradient-to-r from-[#FF6A00] via-[#FAA429] to-[#FF6A00] flex items-center justify-center text-black" style="box-shadow: rgba(255, 106, 0, 0.4) 0px 0px 10px;"><svg data-edit="ICON_030" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-3.5 h-3.5 lg:w-4 lg:h-4" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></div><span class="text-gray-200 font-medium text-sm lg:text-base" style="font-family: var(--font-body);">Com a agenda lotada de clientes</span></div><div class="flex items-center gap-3"><div class="flex-shrink-0 w-5 h-5 lg:w-6 lg:h-6 rounded bg-gradient-to-r from-[#FF6A00] via-[#FAA429] to-[#FF6A00] flex items-center justify-center text-black" style="box-shadow: rgba(255, 106, 0, 0.4) 0px 0px 10px;"><svg data-edit="ICON_031" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-3.5 h-3.5 lg:w-4 lg:h-4" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></div><span class="text-gray-200 font-medium text-sm lg:text-base" style="font-family: var(--font-body);">E você ainda respondendo DM manualmente</span></div></div><a href="#promo-card-section" target="_self" class="group relative w-full flex items-center justify-center gap-2 bg-gradient-to-r from-[#FF6A00] via-[#FAA429] to-[#FF6A00] hover:brightness-110 text-white hover:text-black font-black py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(255,106,0,0.5)] overflow-hidden" style="text-decoration: none; font-family: var(--font-title); touch-action: manipulation; -webkit-tap-highlight-color: transparent;"><div class="absolute top-0 left-[-150%] w-[150%] h-full bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-[-25deg] animate-shine pointer-events-none"></div><span class="uppercase tracking-wide text-sm lg:text-lg relative z-10">QUERO VENDER NO AUTOMÁTICO</span><svg data-edit="ICON_032" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right w-4 h-4 lg:w-5 lg:h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 relative z-10" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a></div></div><style>
+                @keyframes shine {
+                    0% { left: -150%; }
+                    20% { left: 150%; }
+                    100% { left: 150%; }
+                }
+                .animate-shine {
+                    animation: shine 3s infinite linear;
+                }
+            </style></section><!-- SECTION: S18 -->
+<section data-edit="BG_027" class="py-5 lg:py-[50px]" style="background: rgb(0, 0, 0); overflow: hidden;"><div class="container-custom px-4"><div class="flex justify-center"><a href="{{WHATSAPP_LINK}}https://wa.me/5511972060622?text=O%E2%81%AC%E2%81%AD%E2%81%AC%E2%81%AD%E2%81%A3%E2%80%AC%E2%81%A6%E2%81%A4%E2%81%A4%E2%80%8D%E2%81%A4%E2%80%8C%E2%80%8B%E2%80%AA%E2%80%8B%E2%80%8C%E2%81%AA%E2%80%AC%E2%80%AC%E2%81%A3%E2%81%A0%E2%81%AB%E2%81%A0%E2%81%A2%E2%80%8D%E2%81%A4%E2%81%A3%CD%8F%E2%81%AC%E2%81%AD%E2%81%AC%E2%81%ADl%C3%A1%2C+tenho+uma+d%C3%BAvida+sobre+o+Criador+do+Futuro. target="_blank" rel="noopener noreferrer" class="focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-black hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_35px_rgba(37,211,102,0.6)] active:scale-95 transition-all duration-300" aria-label="Chamar no WhatsApp (+55 11 97206-0622) - Ainda tem dúvidas?" style="background: rgb(37, 211, 102); border-radius: 9999px; color: rgb(255, 255, 255); text-decoration: none; box-shadow: rgba(37, 211, 102, 0.25) 0px 0px 24px; height: 56px; padding-left: 20px; padding-right: 24px; min-width: 240px; gap: 12px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 16px; touch-action: manipulation; -webkit-tap-highlight-color: transparent;"><img data-edit="IMG_248" src="assets/images/0c3ee1417537752e.svg" alt="" width="24" height="24" loading="eager" decoding="async" style="width: 24px; height: 24px; filter: brightness(0) invert(1); flex-shrink: 0;"><span style="white-space: nowrap;">Ainda tem dúvidas?</span></a></div></div></section><footer class="footer-section py-5 lg:py-[50px]"><div class="container-custom px-4"><div style="text-align:center; color:#bdbdbd; font-size:14px;">Copyright 2026 - Todos os direitos reservados</div></div></footer></div></div>
+
+
+  <!-- TRACKING & UTMS (Execução Otimizada) -->
+  
+
+
+
+<style>
+  @media (max-width: 768px) {
+    .mobile-container-standard h1,
+    .mobile-container-standard h2,
+    .mobile-container-standard h3,
+    .mobile-container-standard h4,
+    .mobile-container-standard p,
+    .mobile-container-standard span,
+    .plan-item-text-vitalicio,
+    .faq-question,
+    .section-title-standard,
+    .mobile-title-standard,
+    .bonus-title-card {
+      word-break: break-word;
+      overflow-wrap: anywhere;
+      white-space: normal;
+    }
+    .plan-name-vitalicio {
+      font-size: clamp(36px, 11vw, 52px) !important;
+      line-height: 1.05 !important;
+    }
+    .price-main-vitalicio {
+      font-size: clamp(56px, 17vw, 80px) !important;
+    }
+
+    .bonus-section .bonus-card {
+      position: relative;
+    }
+
+    .bonus-section .bonus-card .bonus-pill-mobile {
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+</style>
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
