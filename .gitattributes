@@ -1,0 +1,57 @@
+# .gitattributes — força LF em código, CRLF em scripts Windows
+# Evita warnings de CRLF/LF toda vez que commita
+
+# Detecção automática
+* text=auto
+
+# Código sempre LF (cross-platform padrão da indústria)
+*.js        text eol=lf
+*.jsx       text eol=lf
+*.ts        text eol=lf
+*.tsx       text eol=lf
+*.mjs       text eol=lf
+*.cjs       text eol=lf
+*.json      text eol=lf
+*.css       text eol=lf
+*.scss      text eol=lf
+*.sass      text eol=lf
+*.less      text eol=lf
+*.html      text eol=lf
+*.md        text eol=lf
+*.mdx       text eol=lf
+*.yml       text eol=lf
+*.yaml      text eol=lf
+*.xml       text eol=lf
+*.svg       text eol=lf
+*.py        text eol=lf
+*.rb        text eol=lf
+*.go        text eol=lf
+*.rs        text eol=lf
+*.java      text eol=lf
+*.kt        text eol=lf
+*.swift     text eol=lf
+*.c         text eol=lf
+*.cpp       text eol=lf
+*.h         text eol=lf
+*.hpp       text eol=lf
+*.sh        text eol=lf
+
+# Scripts PowerShell e batch — CRLF (Windows exige)
+*.ps1       text eol=crlf
+*.bat       text eol=crlf
+*.cmd       text eol=crlf
+
+# SQL — manter como escrito
+*.sql       text eol=lf
+
+# Binários (não tocar)
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.ico       binary
+*.webp      binary
+*.woff      binary
+*.woff2     binary
+*.ttf       binary
+*.eot       binary
