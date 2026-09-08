@@ -1,0 +1,107 @@
+# =========================================================
+# .gitignore — D:\Claude Code (multi-projeto)
+# Gerado em 2026-09-07
+# =========================================================
+
+# ----- Dependências (causam 99% do peso do repo) -----
+node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# ----- Variáveis de ambiente (NUNCA versionar — chaves/segredos) -----
+.env
+.env.*
+!.env.example
+
+# ----- Builds e artefatos -----
+dist/
+build/
+out/
+.next/
+.nuxt/
+.svelte-kit/
+.vercel/
+.turbo/
+*.tsbuildinfo
+next-env.d.ts
+
+# ----- Logs -----
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+logs/
+.open-design-logs/
+
+# ----- Temporários e caches -----
+tmp/
+temp/
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+
+# ----- Backups e arquivos antigos -----
+_archive/
+backups/
+legacy-scripts/
+nova-pasta/
+*.bak
+*.tmp
+*.swp
+*~
+*.zip
+*.mp4
+
+# ----- Configuração local do Claude (não compartilhar) -----
+.claude/settings.local.json
+.claude/launch.json
+.agents/
+
+# ----- IDEs e editores -----
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+
+# ----- Bun -----
+bun.lockb
+
+# ----- Misc -----
+.skills-lock.json
+.cleanup-residual.sh
+
+# ----- Sub-repositórios Git aninhados -----
+# Cada pasta abaixo já é um repo independente (tem .git próprio).
+# Versionadas separadamente — não duplicar no repo raiz.
+# A exceção é o conteúdo-fonte de cada uma que está fora do .git interno.
+# Se quiser versionar o fonte delas aqui, remova a linha correspondente.
+
+# barbearia/, cora-webapp/, open-lovable/, themes/pulse/ → VERSIONAR O FONTE (só o .git interno ignora)
+barbearia/.git/
+cora-webapp/.git/
+open-lovable/.git/
+themes/pulse/.git/
+
+# Estes já são repos no GitHub por conta própria — não duplicar
+projects/a-beauty-house/
+projects/aika-clinic-react/
+projects/chat-rp/
+projects/github-projects/
+projects/Green Hat/landing/
+projects/Roxmidia/
+projects/template-gallery/
+projects/velo/CRM/
+projects/vh-corretor/
+projects/wbclone/
